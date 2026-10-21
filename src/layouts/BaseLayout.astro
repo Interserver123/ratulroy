@@ -1,0 +1,71 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/plus-jakarta-sans/wght.css";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Absolute or root-relative image for social sharing (1200x630 recommended). */
+  ogImage?: string;
+  ogType?: "website" | "article";
+  noindex?: boolean;
+  /** JSON-LD objects; they are merged into one @graph. */
+  schema?: Record<string, unknown>[];
+}
+
+const { title, description, ogImage, ogType = "website", noindex = false, schema = [] } =
+  Astro.props;
+
+// Canonical without trailing slash, matching the live URLs.
+const path =
+  Astro.url.pathname
+    .replace(/\.html$/, "")
+    .replace(/(^|\/)index$/, "")
+    .replace(/\/$/, "") || "/";
+const canonical = new URL(path, site.url).href;
+const ogImageUrl = ogImage ? new URL(ogImage, site.url).href : undefined;
+const jsonLd = schema.length
+  ? JSON.stringify({ "@context": "https://schema.org", "@graph": schema })
+  : null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
+    <meta name="theme-color" content="#0b1b3a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+    <meta name="twitter:card" content={ogImageUrl ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+
+    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

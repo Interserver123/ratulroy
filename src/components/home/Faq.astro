@@ -1,0 +1,95 @@
+---
+import { faqs } from "../../data/home";
+import { site } from "../../data/site";
+const answered = faqs.filter((f) => f.a.trim());
+---
+
+<section class="section section--soft" aria-labelledby="faq-title">
+  <div class="container faq">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Frequently Asked Questions</p>
+      <h2 id="faq-title">Everything You Need to Know About Local SEO &amp; Google Maps Ranking</h2>
+    </div>
+
+    <div class="faq__list">
+      {
+        answered.map((f, i) => (
+          <details class="faq__item" open={i === 0}>
+            <summary>
+              <h3>{f.q}</h3>
+            </summary>
+            <p>{f.a}</p>
+          </details>
+        ))
+      }
+    </div>
+
+    <div class="faq__cta card">
+      <h3>Still Have Questions?</h3>
+      <p><strong>Book a free Local SEO audit or strategy call.</strong></p>
+      <p>
+        Get a personalized review of your Google Maps visibility, Local SEO performance, and inbound
+        call opportunities.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/book-strategy-call">Get Free Local SEO Audit</a>
+        <a class="btn btn--accent" href={site.whatsapp} rel="noopener" target="_blank"
+          >Chat on WhatsApp</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    max-width: 880px;
+  }
+  .faq__list {
+    display: grid;
+    gap: 12px;
+  }
+  .faq__item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 0 20px;
+  }
+  .faq__item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+  }
+  .faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq__item summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--brand);
+    flex-shrink: 0;
+  }
+  .faq__item[open] summary::after {
+    content: "–";
+  }
+  .faq__item h3 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .faq__item p {
+    padding-bottom: 18px;
+    margin: 0;
+  }
+  .faq__cta {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .faq__cta .btn-row {
+    justify-content: center;
+  }
+</style>

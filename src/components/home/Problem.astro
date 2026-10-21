@@ -1,0 +1,129 @@
+---
+import { problems } from "../../data/home";
+---
+
+<section class="section section--dark" aria-labelledby="problem-title">
+  <div class="container">
+    <div class="problem">
+      <div>
+        <p class="eyebrow">The Local Visibility Problem</p>
+        <h2 id="problem-title">
+          Your competitors are <span class="hl">getting the calls</span> before you even know the
+          customer searched.
+        </h2>
+        <p>
+          When someone searches for your service in your city, Google Maps decides who gets the
+          call. If your business is not visible, optimized, and trusted, your competitor wins before
+          you even get a chance.
+        </p>
+        <p class="problem__em">
+          Most local businesses do not have a traffic problem. They have a visibility problem.
+        </p>
+        <a class="btn btn--accent" href="#contact">Show Me What's Blocking My Rankings</a>
+      </div>
+      <ul class="grid grid--2">
+        {
+          problems.map((p, i) => (
+            <li class="card">
+              <span class="num">0{i + 1}</span>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <p class="problem__goal">
+      The goal is not just to rank higher. The goal is to become the obvious choice when local
+      buyers are ready to call.
+    </p>
+  </div>
+</section>
+
+<section id="free-audit" class="section audit" aria-labelledby="audit-title">
+  <div class="container audit__grid">
+    <div>
+      <p class="eyebrow">Free Visibility Audit · No Obligation</p>
+      <h2 id="audit-title">Get a Free SEO Visibility Audit of Your Website.</h2>
+      <p class="lead">
+        I'll personally review your website, Google Business Profile and top competitors, and send a
+        prioritized action plan to your inbox.
+      </p>
+      <ul class="chips">
+        <li class="chip">48h turnaround</li>
+        <li class="chip">100% confidential</li>
+        <li class="chip">No sales pitch</li>
+      </ul>
+    </div>
+    <form class="card" data-lead-form="audit" novalidate>
+      <div class="field">
+        <label for="audit-url">Website URL</label>
+        <input id="audit-url" name="website" type="url" inputmode="url" placeholder="https://yourbusiness.com" required autocomplete="url" />
+      </div>
+      <div class="field">
+        <label for="audit-email">Email address</label>
+        <input id="audit-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+      </div>
+      <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
+      <button class="btn btn--primary" type="submit" style="width:100%">Get My Free SEO Audit</button>
+      <p class="note">Private. Never shared.</p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .problem {
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 1024px) {
+    .problem {
+      grid-template-columns: 1fr 1.1fr;
+      align-items: start;
+    }
+  }
+  .hl {
+    color: #86efac;
+  }
+  .problem__em {
+    color: #fff;
+    font-weight: 600;
+    margin: 20px 0 28px;
+  }
+  .num {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #f87171;
+    margin-bottom: 8px;
+  }
+  .card p {
+    margin: 0;
+  }
+  .problem__goal {
+    margin: 48px auto 0;
+    max-width: 720px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .audit {
+    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  }
+  .audit__grid {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .audit__grid {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+  .audit form .note {
+    text-align: center;
+    margin: 10px 0 0;
+  }
+</style>

@@ -1,0 +1,81 @@
+---
+import { industries } from "../../data/home";
+---
+
+<section class="section section--soft" aria-labelledby="industries-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Industries We Serve</p>
+      <h2 id="industries-title">Built for local businesses that depend on calls.</h2>
+      <p>
+        Every local industry has different search behavior, competition, and trust signals. I build
+        Local SEO systems around how your customers actually search, compare, and choose a business.
+      </p>
+    </div>
+
+    <ul class="grid grid--4">
+      {
+        industries.map((i) => (
+          <li class="card ind">
+            <h3>{i.title}</h3>
+            <p>{i.text}</p>
+          </li>
+        ))
+      }
+      <li class="card ind ind--more">
+        <h3><a href="#contact">More Local Service Niches</a></h3>
+        <p>If your business depends on local search, the system can be adapted.</p>
+      </li>
+    </ul>
+
+    <div class="ind__cta">
+      <p>
+        Don't see your industry? If your business relies on local visibility and inbound calls,
+        Local SEO can still work for you.
+      </p>
+      <a class="btn btn--primary" href="#contact">Check My Local SEO Opportunity</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ind {
+    padding: 22px;
+  }
+  .ind h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .ind p {
+    margin: 0;
+    font-size: 0.925rem;
+  }
+  .ind--more {
+    background: var(--bg-dark);
+    border: 0;
+    color: #cbd5e1;
+    position: relative;
+  }
+  .ind--more a {
+    color: #fff;
+  }
+  .ind--more a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .ind__cta {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ind__cta p {
+    margin: 0;
+    max-width: 640px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+</style>

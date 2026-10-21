@@ -1,0 +1,119 @@
+---
+import { services } from "../../data/home";
+---
+
+<section id="services" class="section section--soft" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Search Visibility Services</p>
+      <h2 id="services-title">
+        Services that help you win in Google Maps, organic search, and AI answers
+      </h2>
+      <p>
+        I do not offer generic SEO packages. I build focused search visibility systems designed to
+        help local businesses rank higher, look more trusted, and get discovered across Google Maps,
+        organic search, AI Overviews, ChatGPT, Gemini, and Perplexity.
+      </p>
+    </div>
+
+    <ul class="grid grid--4 services">
+      {
+        services.map((s) => (
+          <li class={`card service${s.featured ? " service--featured" : ""}`}>
+            {s.featured && <span class="service__flag">Most Requested</span>}
+            <span class="badge">{s.badge}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <ul class="checklist">
+              {s.points.map((p) => (
+                <li>{p}</li>
+              ))}
+            </ul>
+            <a class="text-link" href="#contact">
+              {s.cta}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="start card">
+      <div>
+        <p class="eyebrow">Start Here</p>
+        <h3>Not sure which SEO service you need first?</h3>
+        <p>
+          Start with a visibility audit. I will review your Google Business Profile, website SEO,
+          competitors, content gaps, technical issues, citations, and AI search readiness so you
+          know exactly what is holding your rankings back.
+        </p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#contact">Get Free SEO Visibility Audit</a>
+        <a class="btn btn--ghost" href="#results">See Results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 24px;
+  }
+  .service h3 {
+    font-size: 1.1rem;
+  }
+  .service p {
+    font-size: 0.95rem;
+  }
+  .service .checklist {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .service .text-link {
+    margin-top: auto;
+  }
+  .service--featured {
+    border: 2px solid var(--brand);
+  }
+  .service__flag {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: var(--brand);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .start {
+    margin-top: 40px;
+    display: grid;
+    gap: 24px;
+    align-items: center;
+    background: var(--bg-dark);
+    color: #cbd5e1;
+    border: 0;
+  }
+  .start h3 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .start .eyebrow {
+    color: #86efac;
+  }
+  .start .btn--ghost {
+    background: transparent;
+    color: #fff;
+    border-color: rgb(255 255 255 / 30%);
+  }
+  @media (min-width: 1024px) {
+    .start {
+      grid-template-columns: 1.5fr auto;
+      padding: 40px;
+    }
+  }
+</style>

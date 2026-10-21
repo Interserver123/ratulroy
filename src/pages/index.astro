@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import About from "../components/home/About.astro";
+import Problem from "../components/home/Problem.astro";
+import Services from "../components/home/Services.astro";
+import AiSearch from "../components/home/AiSearch.astro";
+import Strategy from "../components/home/Strategy.astro";
+import Results from "../components/home/Results.astro";
+import CaseStudies from "../components/home/CaseStudies.astro";
+import Industries from "../components/home/Industries.astro";
+import Guides from "../components/home/Guides.astro";
+import Faq from "../components/home/Faq.astro";
+import Contact from "../components/home/Contact.astro";
+import { site } from "../data/site";
+import { faqs, services } from "../data/home";
+
+const title = "Local SEO Expert in Bangladesh | Ratul Roy";
+const description =
+  "Local SEO expert in Bangladesh. Ratul Roy helps businesses rank in Google Maps, optimize Google Business Profile and turn near-me searches into booked jobs.";
+
+const url = `${site.url}/`;
+const personId = `${site.url}/#person`;
+const businessId = `${site.url}/#business`;
+const websiteId = `${site.url}/#website`;
+
+const schema = [
+  {
+    "@type": "WebSite",
+    "@id": websiteId,
+    url,
+    name: site.name,
+    inLanguage: "en",
+    publisher: { "@id": businessId },
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    isPartOf: { "@id": websiteId },
+    about: { "@id": businessId },
+    inLanguage: "en",
+  },
+  {
+    "@type": "Person",
+    "@id": personId,
+    name: "Ratul Roy",
+    url,
+    jobTitle: "Local SEO Expert",
+    email: `mailto:${site.email}`,
+    telephone: site.phone,
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Islamic University" },
+    worksFor: { "@id": businessId },
+    knowsAbout: [
+      "Local SEO",
+      "Google Business Profile optimization",
+      "Google Maps ranking",
+      "Technical SEO",
+      "Generative Engine Optimization",
+    ],
+  },
+  {
+    "@type": "ProfessionalService",
+    "@id": businessId,
+    name: "Ratul Roy · Local SEO Bangladesh",
+    url,
+    description,
+    email: site.email,
+    telephone: site.phone,
+    priceRange: "From $299",
+    founder: { "@id": personId },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: site.locality,
+      addressCountry: site.countryCode,
+    },
+    hasMap: site.mapsUrl,
+    areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
+    sameAs: [site.mapsUrl],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Search Visibility Services",
+      itemListElement: services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: s.title, description: s.text },
+      })),
+    },
+  },
+  {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: faqs
+      .filter((f) => f.a.trim())
+      .map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+  },
+];
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero />
+  <About />
+  <Problem />
+  <Services />
+  <AiSearch />
+  <Strategy />
+  <Results />
+  <CaseStudies />
+  <Industries />
+  <Guides />
+  <Faq />
+  <Contact />
+</BaseLayout>
+
+<script>
+  import "../scripts/forms";
+</script>

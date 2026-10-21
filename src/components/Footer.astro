@@ -1,0 +1,143 @@
+---
+import { site, footerColumns } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="footer__logo" href="/">Ratul Roy</a>
+        <p>
+          This is Ratul Roy helping service businesses improve Google Maps rankings, strengthen
+          Google Business Profile visibility, and turn local searches into qualified inbound calls.
+        </p>
+        <ul class="footer__badges">
+          <li>Fiverr Level 2 Seller</li>
+          <li>4.9★ Rated</li>
+          <li>243 Reviews</li>
+        </ul>
+        <p class="footer__small">Built for local businesses that want visibility, trust, and real growth.</p>
+        <p class="footer__small">Based in Bangladesh · Serving local businesses worldwide</p>
+      </div>
+
+      {
+        footerColumns.map((col) => (
+          <nav aria-label={col.title}>
+            <h2 class="footer__title">{col.title}</h2>
+            <ul>
+              {col.links.map((l) => (
+                <li>
+                  <a href={l.href}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+
+      <div>
+        <h2 class="footer__title">Contact</h2>
+        <ul>
+          <li><a href={site.phoneHref}>{site.phone}</a></li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><a href={site.whatsapp} rel="noopener" target="_blank">Chat on WhatsApp</a></li>
+        </ul>
+        <p class="footer__small">Prefer WhatsApp for faster replies.</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© {year} Ratul Roy. All rights reserved.</p>
+      <p>Built for the new era of Google Maps, Local SEO, and AI-driven search visibility.</p>
+      <p class="footer__legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-dark);
+    color: #94a3b8;
+    padding: 72px 0 32px;
+    font-size: 0.925rem;
+  }
+  .footer__grid {
+    display: grid;
+    gap: 36px;
+  }
+  @media (min-width: 640px) {
+    .footer__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .footer__grid {
+      grid-template-columns: 1.6fr repeat(4, 1fr);
+    }
+  }
+  .footer__logo {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .footer__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .footer__badges li {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    border: 1px solid rgb(255 255 255 / 15%);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+  .footer__title {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .footer li {
+    margin-bottom: 8px;
+  }
+  .footer a {
+    color: #cbd5e1;
+  }
+  .footer a:hover {
+    color: #fff;
+  }
+  .footer__small {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  .footer__bottom {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  .footer__bottom p {
+    margin: 0;
+  }
+  .footer__legal {
+    display: flex;
+    gap: 16px;
+  }
+</style>

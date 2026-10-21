@@ -1,0 +1,187 @@
+---
+import { caseStudies } from "../../data/home";
+const featuredHref = "/case-studies/gbp-calls-growth";
+---
+
+<section class="section" aria-labelledby="cases-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Local SEO Case Studies</p>
+      <h2 id="cases-title">Local SEO Results That Turned Rankings Into Real Leads</h2>
+      <p>
+        Real Google Maps ranking, Google Business Profile, and local lead growth, built through
+        clear, repeatable systems for service-area businesses.
+      </p>
+    </div>
+
+    <article class="featured">
+      <div>
+        <p class="featured__cat">Local Service Business</p>
+        <h3>
+          <a href={featuredHref}>From Weak Maps Visibility to Consistent Call Growth</a>
+        </h3>
+        <p>
+          A Local SEO case study on turning an under-optimized Google Business Profile into a steady
+          source of qualified inbound calls.
+        </p>
+        <a class="text-link" href={featuredHref} aria-hidden="true" tabindex="-1">Read the case study</a>
+      </div>
+      <dl class="featured__stats">
+        <div><dt>Calls from GBP</dt><dd>461</dd></div>
+        <div><dt>Profile Interactions</dt><dd>+62%</dd></div>
+        <div><dt>Map Pack for Core Terms</dt><dd>Top 3</dd></div>
+      </dl>
+    </article>
+
+    <ul class="grid grid--2 cases">
+      {
+        caseStudies.map((c) => (
+          <li class="card case">
+            <p class="case__cat">{c.category}</p>
+            <p class="case__value">
+              <strong>{c.value}</strong> <span>{c.label}</span>
+            </p>
+            <h3>
+              <a href={c.href}>{c.title}</a>
+            </h3>
+            <p>{c.text}</p>
+            <span class="text-link" aria-hidden="true">
+              View result
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="cases__cta">
+      <div>
+        <h3>Want Similar Local SEO Growth?</h3>
+        <p>
+          I'll review your Google Business Profile, Maps ranking, citations, and local landing pages,
+          and show exactly where the lead gaps are.
+        </p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#free-audit">Get Free SEO Audit</a>
+        <a class="btn btn--ghost" href="/case-studies">See all case studies</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured {
+    display: grid;
+    gap: 28px;
+    background: var(--bg-dark);
+    color: #cbd5e1;
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 1024px) {
+    .featured {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      padding: 44px;
+    }
+  }
+  .featured h3 {
+    font-size: 1.6rem;
+  }
+  .featured h3 a {
+    color: #fff;
+  }
+  .featured__cat,
+  .case__cat {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #86efac;
+    margin-bottom: 10px;
+  }
+  .featured .text-link {
+    color: #93c5fd;
+  }
+  .featured__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0;
+  }
+  .featured__stats > div {
+    display: flex;
+    flex-direction: column-reverse;
+    background: rgb(255 255 255 / 6%);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .featured__stats dd {
+    margin: 0;
+    font-family: var(--font-head);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #fff;
+  }
+  .featured__stats dt {
+    font-size: 0.8rem;
+  }
+  .case {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .case__cat {
+    color: var(--brand);
+  }
+  .case__value strong {
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    line-height: 1.1;
+  }
+  .case__value span {
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  .case h3 a {
+    color: var(--ink);
+  }
+  /* Whole card is clickable via the heading link. */
+  .case h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+  }
+  .case:hover h3 a {
+    color: var(--brand);
+  }
+  .case p {
+    font-size: 0.95rem;
+  }
+  .case .text-link {
+    margin-top: auto;
+  }
+  .cases__cta {
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    padding: 32px;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+  }
+  .cases__cta p {
+    margin: 0;
+  }
+  @media (min-width: 1024px) {
+    .cases__cta {
+      grid-template-columns: 1.4fr auto;
+    }
+  }
+</style>

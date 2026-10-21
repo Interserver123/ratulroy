@@ -1,0 +1,322 @@
+---
+import { heroPoints, proofBadges } from "../../data/home";
+const caseHref = "/case-studies/gbp-calls-growth";
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">This is Ratul Roy</p>
+      <h1 id="hero-title">Local SEO Expert in Bangladesh</h1>
+      <p class="hero__sub">
+        Google Maps ranking, GBP optimization and local search visibility that turns near-me searches
+        into booked jobs.
+      </p>
+      <p class="hero__strap">
+        Map Pack visibility. More qualified calls. Revenue-first Local SEO for Bangladesh.
+      </p>
+      <p>
+        I'm Ratul Roy, a Local SEO expert in Bangladesh. I help local businesses dominate Google Maps
+        in every service area and turn near-me searches into booked jobs.
+      </p>
+      <p>
+        Not an agency. A dedicated SEO specialist in Bangladesh focused on Map Pack rankings, trust
+        signals, and call-driving local visibility.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#contact">Apply for Strategy Call</a>
+        <a class="btn btn--ghost" href="#results">See Results</a>
+      </div>
+      <ul class="hero__points">
+        {
+          heroPoints.map((p) => (
+            <li>
+              <strong>{p.title}</strong>
+              <span>{p.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <div class="map-card" aria-hidden="true">
+        <div class="map-card__map">
+          <span class="pin pin--1"></span>
+          <span class="pin pin--2"></span>
+          <span class="pin pin--3"></span>
+        </div>
+        <div class="map-card__row">
+          <span class="map-card__rank">1</span>
+          <div>
+            <strong>Top 3 Map Pack</strong>
+            <span class="stars">★★★★★</span> <span class="muted">4.9★ · 243 reviews</span>
+          </div>
+        </div>
+        <div class="map-card__chip">461 GBP calls</div>
+      </div>
+
+      <a class="result-card" href={caseHref}>
+        <span class="result-card__label">Client result</span>
+        <span class="result-card__big">461</span>
+        <span class="result-card__desc">calls from Google Business Profile</span>
+        <span class="result-card__stats">
+          <span><small>Profile interactions</small><b>+62%</b><small>interactions</small></span>
+          <span><small>Map Pack position</small><b>Top 3</b><small>map pack</small></span>
+        </span>
+        <span class="text-link">Read the case study</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container proof">
+    <div class="proof__head">
+      <h2 class="proof__title">Proof, not promises</h2>
+      <p>Receipts from 5+ years of ranking local businesses on Google Maps.</p>
+    </div>
+    <ul class="proof__list">
+      {
+        proofBadges.map((b) => (
+          <li>
+            <strong>{b.title}</strong>
+            <span>{b.text}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: clamp(48px, 7vw, 88px) 0 48px;
+    background:
+      radial-gradient(1000px 500px at 85% -10%, #dbeafe 0%, transparent 60%),
+      radial-gradient(700px 400px at -10% 10%, #dcfce7 0%, transparent 55%),
+      var(--bg);
+  }
+  .hero__grid {
+    display: grid;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .hero__grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+  }
+  .hero__sub {
+    font-size: 1.25rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hero__strap {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .hero .btn-row {
+    margin: 28px 0;
+  }
+  .hero__points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .hero__points {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .hero__points li {
+    display: grid;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: rgb(255 255 255 / 70%);
+  }
+  .hero__points strong {
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+  .hero__points span {
+    font-size: 0.825rem;
+    color: var(--muted);
+  }
+
+  .hero__visual {
+    display: grid;
+    gap: 16px;
+  }
+  .map-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    position: relative;
+  }
+  .map-card__map {
+    height: 170px;
+    border-radius: 12px;
+    background:
+      linear-gradient(90deg, rgb(255 255 255 / 70%) 2px, transparent 2px) 0 0 / 48px 48px,
+      linear-gradient(0deg, rgb(255 255 255 / 70%) 2px, transparent 2px) 0 0 / 48px 48px,
+      linear-gradient(135deg, #e0f2fe, #dcfce7);
+    position: relative;
+  }
+  .pin {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: #94a3b8;
+  }
+  .pin--1 {
+    left: 46%;
+    top: 30%;
+    background: #ef4444;
+    width: 30px;
+    height: 30px;
+  }
+  .pin--2 {
+    left: 20%;
+    top: 55%;
+  }
+  .pin--3 {
+    left: 72%;
+    top: 58%;
+  }
+  .map-card__row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 14px;
+  }
+  .map-card__row strong {
+    display: block;
+    color: var(--ink);
+  }
+  .map-card__rank {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+  }
+  .stars {
+    color: var(--star);
+    letter-spacing: 1px;
+  }
+  .muted {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  .map-card__chip {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background: var(--bg-dark);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+
+  .result-card {
+    display: grid;
+    gap: 6px;
+    background: var(--bg-dark);
+    color: #cbd5e1;
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .result-card:hover {
+    color: #cbd5e1;
+    background: var(--bg-dark-2);
+  }
+  .result-card__label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #86efac;
+  }
+  .result-card__big {
+    font-family: var(--font-head);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+  .result-card__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .result-card__stats > span {
+    display: grid;
+    background: rgb(255 255 255 / 6%);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .result-card__stats b {
+    color: #fff;
+    font-size: 1.35rem;
+  }
+  .result-card__stats small {
+    font-size: 0.75rem;
+  }
+  .result-card .text-link {
+    color: #93c5fd;
+  }
+
+  .proof {
+    margin-top: 56px;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .proof {
+      grid-template-columns: 0.8fr 1.2fr;
+    }
+  }
+  .proof__title {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+  }
+  .proof__head p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .proof__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .proof__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .proof__list li {
+    display: grid;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+  }
+  .proof__list strong {
+    color: var(--ink);
+  }
+  .proof__list span {
+    font-size: 0.825rem;
+    color: var(--muted);
+  }
+</style>

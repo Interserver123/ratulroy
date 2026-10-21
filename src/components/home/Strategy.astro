@@ -1,0 +1,193 @@
+---
+import { strategy, systemTags, whyPoints } from "../../data/home";
+---
+
+<section class="section section--soft" aria-labelledby="strategy-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why My Strategy Is Different</p>
+      <h2 id="strategy-title">
+        Local SEO is no longer just about rankings. It is about becoming the trusted choice.
+      </h2>
+      <ul class="chips" aria-label="Principles">
+        <li class="chip">E-E-A-T</li>
+        <li class="chip">White-Hat</li>
+        <li class="chip">AI-Ready</li>
+        <li class="chip">Local-First</li>
+      </ul>
+      <p style="margin-top:20px">
+        Most businesses still treat SEO like a checklist - keywords, backlinks, and random blog
+        posts. I build Local SEO systems that help Google, AI platforms, and real customers
+        understand who you are, what you do, where you serve, and why your business deserves trust.
+      </p>
+      <p>
+        <strong>
+          The goal is not vanity traffic. The goal is stronger visibility, better trust signals, and
+          more qualified inbound calls.
+        </strong>
+      </p>
+    </div>
+
+    <ol class="grid grid--3 steps">
+      {
+        strategy.map((s, i) => (
+          <li class="card">
+            <span class="step-num">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <ul class="checklist">
+              {s.points.map((p) => (
+                <li>{p}</li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="system">
+      <div>
+        <p class="eyebrow">The System</p>
+        <h3>Built for how local search works now.</h3>
+        <p>
+          Google Maps, organic search, and AI discovery are connected. Your business needs a clear
+          entity, optimized profile, strong website, trusted citations, helpful content, and real
+          authority signals. That is the system I build.
+        </p>
+        <ul class="chips">
+          {systemTags.map((t) => <li class="chip">{t}</li>)}
+        </ul>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--accent" href="#contact">Get Free SEO Visibility Audit</a>
+        <a class="btn btn--ghost" href="#results">See Real Results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="why-title">
+  <div class="container why">
+    <div>
+      <p class="eyebrow">Why Choose Ratul Roy</p>
+      <h2 id="why-title">Why Choose Ratul Roy The Youngest SEO Expert in Bangladesh.</h2>
+      <p class="lead">
+        With years of hands-on experience starting from the age of 16, I combine youth, creativity,
+        and proven SEO expertise to help local service businesses dominate Google Maps, optimize
+        their Google Business Profile, and increase qualified inbound calls. My data-driven and
+        personalized approach ensures measurable growth for every client.
+      </p>
+      <div class="why__cta">
+        <a class="btn btn--primary" href="/book-strategy-call">Book Free Strategy Call</a>
+        <span class="note">Trusted by service businesses across Bangladesh &amp; beyond</span>
+      </div>
+      <p class="why__rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>4.9</strong> · 243 reviews <span class="chip">Fiverr L2</span>
+      </p>
+    </div>
+    <ul class="why__list">
+      {
+        whyPoints.map((w) => (
+          <li class="card">
+            <h3>{w.title}</h3>
+            <p>{w.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .steps {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .step-num {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #bfdbfe;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .steps p {
+    font-size: 0.95rem;
+  }
+  .steps .checklist {
+    font-size: 0.9rem;
+  }
+  .system {
+    margin-top: 40px;
+    display: grid;
+    gap: 24px;
+    align-items: center;
+    background: var(--bg-dark);
+    color: #cbd5e1;
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .system h3 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .system .eyebrow {
+    color: #86efac;
+  }
+  .system .chip {
+    background: rgb(255 255 255 / 6%);
+    color: #e2e8f0;
+    border-color: rgb(255 255 255 / 12%);
+  }
+  .system .btn--ghost {
+    background: transparent;
+    color: #fff;
+    border-color: rgb(255 255 255 / 30%);
+  }
+  @media (min-width: 1024px) {
+    .system {
+      grid-template-columns: 1.5fr auto;
+      padding: 40px;
+    }
+  }
+  .why {
+    display: grid;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .why {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+  .why__cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0 16px;
+  }
+  .why__rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .why__rating strong {
+    color: var(--ink);
+  }
+  .stars {
+    color: var(--star);
+    letter-spacing: 1px;
+  }
+  .why__list {
+    display: grid;
+    gap: 16px;
+  }
+  .why__list p {
+    margin: 0;
+  }
+</style>

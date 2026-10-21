@@ -1,0 +1,78 @@
+---
+import { guides } from "../../data/home";
+---
+
+<section class="section" aria-labelledby="guides-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Local SEO Guides</p>
+      <h2 id="guides-title">Answers to the questions local businesses ask first</h2>
+      <p>
+        Practical guides on Local SEO in Bangladesh, Google Maps ranking, Google Business Profile,
+        citations, and AI search visibility. No theory, just what moves local rankings.
+      </p>
+    </div>
+
+    <ul class="grid grid--4">
+      {
+        guides.map((g) => (
+          <li class="card guide">
+            <span class="badge">Local SEO</span>
+            <h3>
+              <a href={g.href}>{g.title}</a>
+            </h3>
+            <p>{g.text}</p>
+            <p class="guide__meta">
+              <span>{g.minutes} min read</span>
+              <span class="text-link" aria-hidden="true">
+                Read guide
+              </span>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="guides__all">
+      <a class="btn btn--ghost" href="/blog">All Local SEO resources · Browse the blog</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .guide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .guide h3 {
+    font-size: 1.05rem;
+  }
+  .guide h3 a {
+    color: var(--ink);
+  }
+  .guide h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+  }
+  .guide:hover h3 a {
+    color: var(--brand);
+  }
+  .guide p {
+    font-size: 0.9rem;
+  }
+  .guide__meta {
+    margin: auto 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .guides__all {
+    margin-top: 32px;
+    text-align: center;
+  }
+</style>
