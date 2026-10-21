@@ -32,7 +32,7 @@ export const relatedLinks: Record<string, { title: string; text: string; href: s
   },
   book: {
     title: "Book a Free Strategy Call",
-    text: "30-min Local SEO audit & action plan tailored to your business.",
+    text: "A free 30-minute call: your Maps visibility reviewed and the next three fixes named.",
     href: "/book-strategy-call",
   },
   contact: {
