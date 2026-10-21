@@ -14,7 +14,11 @@
     "format": "prettier --write .",
     "seo:check": "node scripts/seo-check.mjs",
     "og:cards": "node scripts/og-cards.mjs",
-    "test": "astro build && node scripts/seo-check.mjs"
+    "test": "astro build && node scripts/seo-check.mjs",
+    "backend:migrate:local": "npx wrangler d1 migrations apply ratulroy-leads --local -c wrangler.backend.toml",
+    "backend:migrate:remote": "npx wrangler d1 migrations apply ratulroy-leads --remote -c wrangler.backend.toml",
+    "backend:dev": "npx wrangler pages dev dist --port 8788 --compatibility-date 2026-09-01 --d1 DB=00000000-0000-0000-0000-000000000000 --binding IP_SALT=local-dev-salt",
+    "backend:test": "node scripts/backend-test.mjs"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

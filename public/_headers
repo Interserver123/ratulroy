@@ -22,3 +22,13 @@
   Cache-Control: public, max-age=3600
 /llms.txt
   Cache-Control: public, max-age=3600
+
+# Private dashboard: never indexed, cached or framed (see docs/BACKEND.md).
+/admin
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+  X-Frame-Options: DENY
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: no-store
+  X-Frame-Options: DENY

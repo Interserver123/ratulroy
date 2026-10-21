@@ -189,4 +189,22 @@ if (header) {
   onScroll();
 }
 
+// 7. First-touch attribution for lead forms (no cookies; this tab's session only).
+try {
+  if (!sessionStorage.getItem("rr_attr")) {
+    const q = new URLSearchParams(location.search);
+    const attr: Record<string, string> = {};
+    for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"]) {
+      const v = q.get(k);
+      if (v) attr[k] = v.slice(0, 200);
+    }
+    const ref = document.referrer && !document.referrer.startsWith(location.origin) ? document.referrer : "";
+    if (ref) attr.referrer = ref.slice(0, 500);
+    attr.landing = location.pathname;
+    sessionStorage.setItem("rr_attr", JSON.stringify(attr));
+  }
+} catch {
+  /* storage blocked: forms fall back to the current URL */
+}
+
 export {};

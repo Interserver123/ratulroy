@@ -6,5 +6,7 @@
 
 User-agent: *
 Allow: /
+# JSON endpoints for forms and the private dashboard; nothing to index.
+Disallow: /api/
 
 Sitemap: https://ratulroy.com/sitemap.xml

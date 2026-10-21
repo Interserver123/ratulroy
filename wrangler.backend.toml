@@ -1,0 +1,13 @@
+# Local-dev + migrations config for the leads backend (see docs/BACKEND.md).
+# Named wrangler.backend.toml on purpose: a root wrangler.toml would override the Pages
+# dashboard settings on every Git deploy. Production bindings are set in the dashboard.
+name = "ratulroy"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ratulroy-leads"
+# Replace with the id printed by `npx wrangler d1 create ratulroy-leads`.
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"

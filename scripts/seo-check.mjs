@@ -42,7 +42,20 @@ const resolves = (href) => {
   return routes.has(path) || assets.has(path) || path === "/sitemap.xml" || path === "/llms.txt";
 };
 
+// Private routes (dashboard): must be noindex, unlinked, and absent from sitemap/llms.
+const isPrivate = (r) => r === "/admin" || r.startsWith("/admin/");
+const privateRoutes = [...routes.keys()].filter(isPrivate);
+const headersFile = existsSync(join(DIST, "_headers")) ? readFileSync(join(DIST, "_headers"), "utf8") : "";
+
 for (const [route, html] of routes) {
+  if (isPrivate(route)) {
+    const robots = attr(metas(html, "name", "robots")[0] ?? "", "content") ?? "";
+    if (!/noindex/.test(robots)) err(route, "private route must have <meta name=robots content=noindex>");
+    if (/application\/ld\+json/.test(html)) err(route, "private route must not output JSON-LD");
+    if (!new RegExp(`^${route}\\s*$[\\s\\S]*?X-Robots-Tag: noindex`, "m").test(headersFile))
+      err(route, "missing X-Robots-Tag: noindex rule in public/_headers");
+    continue;
+  }
   const is404 = route === "/404";
   if (!/<html[^>]*\blang="[a-z-]+"/i.test(html)) err(route, "missing <html lang>");
   if (!/<meta charset="utf-8"/i.test(html)) err(route, "missing charset");
@@ -119,6 +132,7 @@ for (const [route, html] of routes) {
   // Internal links
   for (const [, href] of html.matchAll(/<a\b[^>]*href="(\/[^"]*)"/g)) {
     if (href.startsWith("//")) continue;
+    if (isPrivate(href.split(/[?#]/)[0].replace(/\/$/, ""))) err(route, `public page links to private route ${href}`);
     if (!resolves(href)) err(route, `broken internal link ${href}`);
   }
 }
@@ -138,6 +152,8 @@ for (const r of indexable) if (!smUrls.has(r)) err("sitemap.xml", `indexable pag
 for (const [, lm] of sm.matchAll(/<lastmod>([^<]+)<\/lastmod>/g))
   if (new Date(lm) > new Date(Date.now() + 864e5)) err("sitemap.xml", `lastmod in the future: ${lm}`);
 
+for (const r of privateRoutes) if (smUrls.has(r)) err("sitemap.xml", `lists private route ${r}`);
+
 // robots.txt
 const robots = existsSync(join(DIST, "robots.txt")) ? readFileSync(join(DIST, "robots.txt"), "utf8") : "";
 if (!robots) err("robots.txt", "missing");
@@ -149,9 +165,10 @@ const llms = existsSync(join(DIST, "llms.txt")) ? readFileSync(join(DIST, "llms.
 if (llms) {
   if (!/^\s*#\s+.+/m.test(llms)) err("llms.txt", "missing H1");
   if (!/\[.+\]\(.+\)/.test(llms)) err("llms.txt", "no markdown links");
+  if (/\/admin\b|\/api\//.test(llms)) err("llms.txt", "mentions a private route");
 }
 
-console.log(`SEO check: ${routes.size} pages, ${indexable.size} indexable, ${smUrls.size} in sitemap`);
+console.log(`SEO check: ${routes.size} pages (${privateRoutes.length} private), ${indexable.size} indexable, ${smUrls.size} in sitemap`);
 if (warnings.length) console.log(`\nWarnings (${warnings.length}):\n  ` + warnings.join("\n  "));
 if (errors.length) {
   console.log(`\nErrors (${errors.length}):\n  ` + errors.join("\n  "));
