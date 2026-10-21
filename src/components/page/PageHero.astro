@@ -15,6 +15,7 @@ interface Props {
   heroStats?: { value: string; label: string }[];
   heroImage?: string;
   ctas?: { label: string; href: string; style?: string }[];
+  heroForm?: boolean;
 }
 const p = Astro.props;
 
@@ -85,11 +86,49 @@ const portrait = img("people/ratul-roy-portrait.jpg");
       }
     </div>
 
+    {p.heroForm ? (
+    <aside class="hform card" id="free-audit" data-reveal style="--d:2" aria-labelledby="hform-title">
+      <div class="hform__who">
+        <Image src={portrait} alt="" width={96} height={96} class="proof__face" loading="eager" />
+        <div>
+          <p class="proof__name">Ratul Roy</p>
+          <p class="hform__stars"><span aria-hidden="true">★★★★★</span> 4.9 · 243 reviews</p>
+        </div>
+        <span class="proof__live"><span class="dotg" aria-hidden="true"></span>2 spots open</span>
+      </div>
+      <h2 id="hform-title" class="hform__title">Get your free Map Pack audit</h2>
+      <p class="hform__sub">I'll personally check your profile, pin, categories, reviews and the competitors above you, then send a prioritized action plan.</p>
+      <form class="hform__form" data-lead-form="audit" novalidate>
+        <div class="field">
+          <label for="hf-site">Website or Google Maps link*</label>
+          <input id="hf-site" name="website" inputmode="url" placeholder="yourbusiness.com" required autocomplete="url" />
+        </div>
+        <div class="hform__row">
+          <div class="field">
+            <label for="hf-email">Email*</label>
+            <input id="hf-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="hf-wa">WhatsApp</label>
+            <input id="hf-wa" name="phone" type="tel" placeholder="Optional" autocomplete="tel" />
+          </div>
+        </div>
+        <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
+        <button class="btn btn--dark hform__btn" type="submit"><span class="disc" aria-hidden="true">↗</span>Send my free audit</button>
+        <ul class="hform__ticks" role="list">
+          <li>Personally reviewed</li>
+          <li>Within 48 hours</li>
+          <li>Confidential</li>
+        </ul>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </aside>
+    ) : (
     <aside class="proof card" data-reveal style="--d:2" aria-label="About the specialist">
       {
         p.heroImage ? (
           <div class="proof__shot">
-            <Image src={img(p.heroImage)} alt="" widths={[400, 640]} sizes="(min-width: 1024px) 420px, 90vw" loading="eager" class="proof__shotimg" />
+            <Image src={img(p.heroImage)} alt="" widths={[400, 640]} sizes="(min-width: 1024px) 420px, 90vw" loading="eager" fetchpriority="high" class="proof__shotimg" />
           </div>
         ) : null
       }
@@ -120,10 +159,118 @@ const portrait = img("people/ratul-roy-portrait.jpg");
       </div>
       <p class="proof__note">Map Pack focus · White-hat · Direct access</p>
     </aside>
+    )}
   </div>
 </section>
 
+<script>
+  import "../../scripts/forms";
+</script>
+
 <style>
+  .hform {
+    position: relative;
+    align-self: center;
+    display: grid;
+    gap: 14px;
+    padding: clamp(20px, 2.6vw, 28px);
+    box-shadow: var(--shadow-lg);
+    background:
+      radial-gradient(90% 50% at 100% 0%, rgb(15 157 99 / 10%), transparent 60%),
+      var(--paper);
+  }
+  .hform::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--accent) 80%, transparent 90%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: hformSpin 6s linear infinite;
+    pointer-events: none;
+  }
+  @property --a {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @keyframes hformSpin {
+    to {
+      --a: 360deg;
+    }
+  }
+  .hform__who {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hform__who .proof__live {
+    position: absolute;
+    top: -13px;
+    right: 22px;
+    box-shadow: var(--shadow);
+    background: var(--paper);
+  }
+  .hform__stars {
+    white-space: nowrap;
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .hform__stars span {
+    color: var(--warn);
+    letter-spacing: 1px;
+  }
+  .hform__title {
+    margin: 4px 0 0;
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+  .hform__sub {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .hform__form {
+    display: grid;
+    gap: 12px;
+  }
+  .hform__row {
+    display: grid;
+    gap: 12px;
+  }
+  @media (min-width: 480px) {
+    .hform__row {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  }
+  .hform__btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hform__ticks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 14px;
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .hform__ticks li::before {
+    content: "✓ ";
+    color: var(--good);
+    font-weight: 700;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hform::before {
+      animation: none;
+    }
+  }
+
   .phero {
     position: relative;
     overflow: hidden;

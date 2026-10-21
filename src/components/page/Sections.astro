@@ -189,6 +189,16 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
                   </div>
                 ))}
               </div>
+              {s.bullets && (
+                <ul class="passure" data-reveal role="list" style={`--n:${s.bullets.length}`}>
+                  {s.bullets.map((b) => (
+                    <li>
+                      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="currentColor" opacity=".14" /><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                      <span set:html={md(b)} />
+                    </li>
+                  ))}
+                </ul>
+              )}
               {s.note && <p class="pnote" set:html={md(s.note)} />}
             </>
           )}
@@ -233,6 +243,7 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
           {/* ---- timeline: phases on a route ---- */}
           {s.type === "timeline" && (
             <ol class={`ptl ptl--${s.items?.length ?? 3}`} data-route>
+              <span class="route__line ptl__line" aria-hidden="true"><span /></span>
               {s.items?.map((it, i) => (
                 <li class="ptl__item" data-reveal style={`--d:${i}`}>
                   <span class="ptl__dot" aria-hidden="true" />
@@ -286,6 +297,64 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
                   </li>
                 ))}
               </ol>
+            </div>
+          )}
+
+          {/* ---- journey: scroll-driven Map Pack climb (illustration) ---- */}
+          {s.type === "journey" && (
+            <div class="jy" data-journey data-stage="0">
+              <ol class="jy__steps" style={`--n:${s.items?.length ?? 4}`}>
+                {s.items?.map((it, i) => (
+                  <li class="jy__step" data-step={i}>
+                    <button type="button" class="jy__tab" data-go={i}>
+                      <span class="jy__n num">{pad(i)}</span>
+                      <span>{it.label ?? it.title}</span>
+                    </button>
+                    <div class="jy__body">
+                      <h3>{it.title}</h3>
+                      {it.text && <p set:html={md(it.text)} />}
+                      {it.bullets && (
+                        <ul class="checklist">
+                          {it.bullets.map((b) => <li set:html={md(b)} />)}
+                        </ul>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <div class="jy__stage">
+                <div class="jy__phone" aria-hidden="true">
+                  <div class="jy__search">
+                    <svg viewBox="0 0 24 24" width="14" height="14"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4" /><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" /></svg>
+                    <span>{s.note ?? "plumber near me"}</span>
+                  </div>
+                  <div class="jy__map">
+                    <div class="jy__grid">
+                      {Array.from({ length: 49 }, (_, i) => {
+                        const x = i % 7, y = Math.floor(i / 7);
+                        return <span style={`--d:${Math.hypot(x - 3, y - 3).toFixed(2)}`} data-d={Math.hypot(x - 3, y - 3).toFixed(2)} />;
+                      })}
+                    </div>
+                    <span class="jy__pin jy__pin--a"><i>A</i></span>
+                    <span class="jy__pin jy__pin--b"><i>B</i></span>
+                    <span class="jy__pin jy__pin--c"><i>C</i></span>
+                    <span class="jy__me"><span /></span>
+                  </div>
+                  <ul class="jy__pack">
+                    <li class="jy__row jy__row--you">
+                      <span class="jy__rank num" data-rank>#9</span>
+                      <span class="jy__info"><b>Your business</b><small>★★★★★ · Open now</small></span>
+                      <span class="jy__call">Call</span>
+                    </li>
+                    <li class="jy__row" style="--o:1"><span class="jy__rank jy__rank--pin num">A</span><span class="jy__info"><b>Competitor A</b><small>★★★★☆ · Open now</small></span></li>
+                    <li class="jy__row" style="--o:2"><span class="jy__rank jy__rank--pin num">B</span><span class="jy__info"><b>Competitor B</b><small>★★★★☆ · Closes 8 pm</small></span></li>
+                    <li class="jy__row" style="--o:3"><span class="jy__rank jy__rank--pin num">C</span><span class="jy__info"><b>Competitor C</b><small>★★★☆☆ · Open now</small></span></li>
+                  </ul>
+                  <p class="jy__status"><span data-status>{s.items?.[0]?.meta}</span></p>
+                </div>
+                <p class="jy__label">Illustration of a typical campaign path, not client data</p>
+              </div>
+              <script type="application/json" data-journey-data set:html={JSON.stringify(s.items?.map((it) => ({ rank: Number(it.value ?? 9), meta: it.meta ?? "" })) ?? [])} />
             </div>
           )}
 
@@ -347,6 +416,52 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
 }
 
 <script>
+  // Journey: the active step drives the phone mock-up (rank, pack position, geo-grid ripple).
+  document.querySelectorAll<HTMLElement>("[data-journey]").forEach((root) => {
+    const data: { rank: number; meta: string }[] = JSON.parse(root.querySelector("[data-journey-data]")?.textContent || "[]");
+    const steps = [...root.querySelectorAll<HTMLElement>("[data-step]")];
+    const cells = [...root.querySelectorAll<HTMLElement>(".jy__grid span")];
+    const rankEl = root.querySelector<HTMLElement>("[data-rank]");
+    const status = root.querySelector<HTMLElement>("[data-status]");
+    const n = data.length;
+    let cur = -1;
+    const go = (i: number) => {
+      if (i === cur || !data[i]) return;
+      cur = i;
+      const { rank, meta } = data[i];
+      root.dataset.stage = String(i);
+      root.style.setProperty("--slot", String(Math.min(rank, 4) - 1));
+      root.classList.toggle("is-in", rank <= 3);
+      if (rankEl) rankEl.textContent = rank <= 3 ? String(rank) : `#${rank}`;
+      if (status) status.textContent = meta;
+      // visibility spreads outward from the business as the stages progress
+      const p = n > 1 ? i / (n - 1) : 1;
+      const g = 0.6 + p * 3.2,
+        m = g + 1.3;
+      cells.forEach((c) => {
+        const d = Number(c.dataset.d);
+        c.className = d <= g ? "g" : d <= m ? "m" : "";
+      });
+      steps.forEach((s, k) => s.classList.toggle("is-on", k === i));
+    };
+    root.querySelectorAll<HTMLButtonElement>("[data-go]").forEach((b) => b.addEventListener("click", () => { go(Number(b.dataset.go)); stop(); }));
+    const wide = window.matchMedia("(min-width: 960px)");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let timer = 0;
+    const stop = () => window.clearInterval(timer);
+    // Desktop: scroll position picks the step. Mobile: auto-advance while visible.
+    const io = new IntersectionObserver(
+      (es) => es.forEach((e) => e.isIntersecting && wide.matches && go(steps.indexOf(e.target as HTMLElement))),
+      { rootMargin: "-45% 0px -45% 0px" },
+    );
+    steps.forEach((s) => io.observe(s));
+    new IntersectionObserver(([e]) => {
+      stop();
+      if (e.isIntersecting && !wide.matches && !reduce) timer = window.setInterval(() => go((cur + 1) % n), 3200);
+    }, { threshold: 0.4 }).observe(root);
+    go(0);
+  });
+
   // Self-audit checklist: live score ring + verdict.
   document.querySelectorAll<HTMLElement>("[data-audit]").forEach((root) => {
     const total = Number(root.dataset.total) || 1;
@@ -865,6 +980,40 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
     text-underline-offset: 3px;
   }
 
+  .pnote :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .passure {
+    display: grid;
+    gap: 10px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 760px) {
+    .passure {
+      grid-template-columns: repeat(var(--n, 4), 1fr);
+    }
+  }
+  .passure li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--good-soft);
+    color: var(--good);
+    font-size: 0.9rem;
+  }
+  .passure li span {
+    color: var(--ink);
+  }
+  .passure svg {
+    flex: none;
+  }
+
   /* compare */
   .pcmp {
     padding: 0;
@@ -950,6 +1099,36 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
   }
   .ptl__item {
     position: relative;
+  }
+  .ptl__line {
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    pointer-events: none;
+  }
+  .ptl__line span {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--accent), var(--good));
+    transform-origin: 50% 0;
+    transform: scaleY(var(--p, 1));
+  }
+  @media (min-width: 960px) {
+    .ptl__line {
+      left: 10px;
+      right: 10px;
+      top: 9px;
+      bottom: auto;
+      width: auto;
+      height: 2px;
+    }
+    .ptl__line span {
+      background: linear-gradient(90deg, var(--accent), var(--good));
+      transform-origin: 0 50%;
+      transform: scaleX(var(--p, 1));
+    }
   }
   .ptl__dot {
     position: absolute;
@@ -1050,6 +1229,34 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
       transform 0.5s var(--ease);
     transform-box: fill-box;
     transform-origin: center;
+  }
+  :global(.js) .pfac__viz .pfac__ring {
+    stroke-dasharray: 553;
+    stroke-dashoffset: 553;
+    fill-opacity: 0;
+    transition:
+      stroke-dashoffset 1.4s var(--ease) calc(var(--r, 0) * 0.25s),
+      fill-opacity 0.8s var(--ease) calc(0.9s + var(--r, 0) * 0.25s),
+      transform 0.5s var(--ease);
+  }
+  :global(.js) .pfac__viz.is-in .pfac__ring {
+    stroke-dashoffset: 0;
+    fill-opacity: 0.12;
+  }
+  .pfac__ring--1 {
+    --r: 1;
+  }
+  .pfac__ring--2 {
+    --r: 2;
+  }
+  :global(.js) .pfac__viz .pfac__pin,
+  :global(.js) .pfac__viz .pfac__mid {
+    opacity: 0;
+    transition: opacity 0.5s 1.4s;
+  }
+  :global(.js) .pfac__viz.is-in .pfac__pin,
+  :global(.js) .pfac__viz.is-in .pfac__mid {
+    opacity: 1;
   }
   .pfac__ring--0 {
     fill: var(--accent);
@@ -1316,6 +1523,385 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
   }
   @media (prefers-reduced-motion: reduce) {
     .pfac__pin {
+      animation: none;
+    }
+  }
+  /* journey */
+  .jy {
+    display: grid;
+    gap: 28px;
+  }
+  @media (min-width: 960px) {
+    .jy {
+      grid-template-columns: 1fr 400px;
+      gap: 64px;
+      align-items: start;
+    }
+  }
+  .jy__steps {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 960px) {
+    .jy__steps {
+      order: 0;
+    }
+    .jy__step {
+      min-height: 62vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .jy__step:first-child {
+      min-height: 40vh;
+      justify-content: flex-start;
+    }
+    .jy__step:last-child {
+      min-height: 50vh;
+    }
+  }
+  .jy__tab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .jy__n {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--line-2);
+    background: var(--paper);
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    transition: all 0.35s var(--ease);
+  }
+  .jy__step.is-on .jy__tab {
+    color: var(--accent);
+  }
+  .jy__step.is-on .jy__n {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 0 6px rgb(232 64 47 / 14%);
+  }
+  .jy__body {
+    padding: 12px 0 0 46px;
+    opacity: 0.35;
+    transition: opacity 0.4s var(--ease);
+  }
+  .jy__step.is-on .jy__body {
+    opacity: 1;
+  }
+  .jy__body h3 {
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    margin-bottom: 8px;
+  }
+  .jy__body p {
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  @media (max-width: 959px) {
+    .jy__steps {
+      grid-template-columns: repeat(var(--n, 4), auto);
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .jy__step {
+      display: contents;
+    }
+    .jy__tab {
+      grid-row: 1;
+      padding: 8px 12px 8px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      white-space: nowrap;
+    }
+    .jy__n {
+      width: 26px;
+      height: 26px;
+      font-size: 0.72rem;
+    }
+    .jy__body {
+      display: none;
+      grid-row: 2;
+      grid-column: 1 / -1;
+      position: sticky;
+      left: 0;
+      width: calc(100vw - 40px);
+      padding: 14px 2px 0;
+      opacity: 1;
+    }
+    .jy__step.is-on .jy__body {
+      display: block;
+      min-height: 13.5em;
+    }
+    .jy__phone {
+      width: min(100%, 330px);
+    }
+  }
+  .jy__stage {
+    position: sticky;
+    top: 160px;
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+  }
+  @media (max-width: 959px) {
+    .jy__stage {
+      position: static;
+    }
+  }
+  .jy__phone {
+    width: min(100%, 360px);
+    padding: 14px;
+    border-radius: 34px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow:
+      0 0 0 8px #0f1a1c,
+      0 40px 80px -30px rgb(15 26 28 / 45%);
+  }
+  .jy__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: var(--bg);
+    font-size: 0.85rem;
+    color: var(--ink-2);
+  }
+  .jy__map {
+    position: relative;
+    margin: 12px 0;
+    aspect-ratio: 1.55;
+    border-radius: 18px;
+    overflow: hidden;
+    background:
+      url("/topo.svg") center / 500px auto,
+      linear-gradient(135deg, #eef3f1, #e3ebe8);
+  }
+  .jy__grid {
+    position: absolute;
+    inset: 8% 22%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .jy__grid span {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgb(232 64 47 / 22%);
+    transition: background-color 0.5s var(--ease) calc(var(--d) * 80ms);
+  }
+  .jy__grid span.m {
+    background: rgb(242 165 22 / 70%);
+  }
+  .jy__grid span.g {
+    background: rgb(15 157 99 / 85%);
+  }
+  .jy__pin {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: #6b7a78;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+  }
+  .jy__pin i {
+    display: block;
+    transform: rotate(45deg);
+    font-style: normal;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    color: #fff;
+  }
+  .jy__rank--pin {
+    border-radius: 50%;
+    background: #6b7a78;
+    color: #fff;
+  }
+  .jy__pin--a {
+    left: 22%;
+    top: 26%;
+  }
+  .jy__pin--b {
+    left: 70%;
+    top: 20%;
+  }
+  .jy__pin--c {
+    left: 64%;
+    top: 66%;
+  }
+  .jy__me {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 26px;
+    height: 26px;
+    margin: -26px 0 0 -13px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg) scale(0.7);
+    background: var(--accent);
+    border: 3px solid #fff;
+    box-shadow: 0 6px 14px rgb(232 64 47 / 45%);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .jy.is-in .jy__me {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  .jy__me span {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    opacity: 0;
+  }
+  .jy.is-in .jy__me span {
+    animation: jyPing 1.8s var(--ease) infinite;
+  }
+  @keyframes jyPing {
+    0% {
+      opacity: 0.7;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.6);
+    }
+  }
+  .jy__pack {
+    position: relative;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 210px;
+  }
+  .jy__row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transform: translateY(calc(var(--pos) * 54px));
+    top: 0;
+    transition:
+      transform 0.7s var(--ease),
+      opacity 0.5s,
+      box-shadow 0.4s,
+      border-color 0.4s;
+    --pos: var(--o);
+  }
+  /* Rivals shift down one slot once "you" take a place at or above theirs. */
+  .jy__row:not(.jy__row--you) {
+    --pos: calc(var(--o) - 1 + clamp(0, var(--o) - var(--slot, 3), 1));
+  }
+  .jy__row--you {
+    --pos: var(--slot, 3);
+    z-index: 1;
+    border-color: var(--line-2);
+  }
+  .jy:not(.is-in) .jy__row--you {
+    opacity: 0.55;
+    border-style: dashed;
+  }
+  .jy.is-in .jy__row--you {
+    border-color: var(--good);
+    box-shadow: 0 10px 24px -10px rgb(15 157 99 / 55%);
+  }
+  .jy__rank {
+    flex: none;
+    display: grid;
+    place-items: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 6px;
+    border-radius: 9px;
+    background: var(--bg);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .jy.is-in .jy__row--you .jy__rank {
+    background: var(--good);
+    color: #fff;
+  }
+  .jy__info {
+    display: grid;
+    min-width: 0;
+    line-height: 1.25;
+  }
+  .jy__info b {
+    font-size: 0.88rem;
+  }
+  .jy__info small {
+    font-size: 0.72rem;
+    color: var(--warn);
+  }
+  .jy__call {
+    margin-left: auto;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .jy.is-in .jy__call {
+    background: var(--accent);
+    color: #fff;
+  }
+  .jy__status {
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 0.82rem;
+    text-align: center;
+    min-height: 2.6em;
+  }
+  .jy__label {
+    margin: 4px 0 0;
+    font-size: 0.75rem;
+    color: var(--dim);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .jy__row,
+    .jy__grid span,
+    .jy__me {
+      transition: none;
+    }
+    .jy.is-in .jy__me span {
       animation: none;
     }
   }

@@ -18,9 +18,17 @@ heroStats:
   - { value: "243", label: "Reviews" }
   - { value: "$299", label: "Packages from" }
 ctas:
-  - { label: Get a Free Local SEO Audit, href: "/#free-audit" }
+  - { label: Book a strategy call, href: /book-strategy-call }
   - { label: See pricing, href: "#pricing", style: ghost }
 jumpNav: true
+heroForm: true
+trustBar: true
+stickyCta: true
+updated: 2026-10-21
+entities:
+  - { name: Local search engine optimisation, sameAs: "https://en.wikipedia.org/wiki/Local_search_engine_optimisation" }
+  - { name: Google Business Profile, sameAs: "https://en.wikipedia.org/wiki/Google_Business_Profile" }
+  - { name: Google Maps, sameAs: "https://en.wikipedia.org/wiki/Google_Maps" }
 intro:
   - "**What are local SEO services?** Local SEO services are the work that makes a business appear, and look like the obvious choice, when someone nearby searches Google or Google Maps for what it sells. That means optimizing the Google Business Profile, keeping name, address and phone consistent across the web, earning reviews, and building website pages that confirm what you do and where."
 sections:
@@ -44,6 +52,41 @@ sections:
         label: Prominence
         text: "How well known and trusted the business is, online and off. Reviews, citations, links and mentions are what move it."
         bullets: ["Steady flow of genuine reviews, all answered", "Consistent citations on the platforms that matter", "Local links, partners and press"]
+  - type: journey
+    nav: Process
+    id: process
+    alt: true
+    eyebrow: How I work
+    heading: "How a Local SEO campaign moves you into the Map Pack"
+    intro: "Four stages, in this order, with roughly when each one tends to show. Nobody can guarantee a position, and Google says you cannot pay for a better local ranking, so what is promised is the work."
+    note: "dentist near me"
+    items:
+      - label: "Week 1–2"
+        title: "Audit & baseline"
+        text: "Profile, website, citations, reviews and competitors checked, plus a geo-grid scan of where you rank across your area today."
+        bullets: ["Geo-grid baseline", "Competitor gap list", "Prioritised fix plan"]
+        value: "9"
+        meta: "Ranking #9: outside the pack, invisible beyond your street"
+      - label: "Month 1"
+        title: "Fix the foundation"
+        text: "Categories, services, pin, hours and photos corrected. Duplicates merged. Website pages and technical issues that undercut the profile fixed."
+        bullets: ["GBP optimization", "NAP and duplicate clean-up", "On-page and technical fixes"]
+        value: "6"
+        meta: "Errors gone. Quick wins when a category or pin was the problem"
+      - label: "Months 2–3"
+        title: "Build relevance"
+        text: "Citations on the platforms that matter, service and area pages, a review routine your team actually follows, first local links."
+        bullets: ["Citations & NAP", "Service + area pages", "Review routine"]
+        value: "4"
+        meta: "Visibility spreading out from your address on the grid"
+      - label: "Months 4–6"
+        title: "Grow prominence & hold"
+        text: "Review velocity, links and mentions, and content aimed at the weak zones of the grid. Then defend the positions and expand."
+        bullets: ["Reviews & replies", "Local links & mentions", "Monthly geo-grid report"]
+        value: "2"
+        meta: "In the Map Pack: calls and direction requests start to climb"
+    body:
+      - "Crowded categories in big cities take longer than a quiet category in a smaller town. The month-by-month detail is in [how long Local SEO takes](/blog/how-long-local-seo-takes-bangladesh)."
   - type: cards
     nav: "What's included"
     id: whats-included
@@ -100,7 +143,7 @@ sections:
         text: "The profile, the listings and the on-page basics fixed in one go. A good start if you have never had Local SEO done."
         bullets: ["Full Local SEO audit", "Google Business Profile optimization", "Citation audit and NAP fixes", "Review request setup", "On-page fixes for your main pages", "Geo-grid baseline report"]
         receive: "Optimized profile, clean listings, and a prioritised plan"
-        cta: { label: Start with the audit, href: "/#free-audit" }
+        cta: { label: Start with the audit, href: "#free-audit" }
       - name: Local Growth
         price: Custom
         unit: monthly, scoped after audit
@@ -118,45 +161,12 @@ sections:
         bullets: ["Everything in Local Growth", "Per-location profiles and pages", "Location-level geo-grid tracking", "Consistent NAP across all branches", "Roll-up report across locations"]
         receive: "One system across every location, reported per branch"
         cta: { label: Get a quote, href: /book-strategy-call }
-    note: "No lock-in contracts. Final scope and price are agreed in writing before any work starts. See [what Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh) for how pricing is worked out."
-  - type: steps
-    nav: Process
-    id: process
-    eyebrow: How I work
-    heading: "How a Local SEO engagement runs, step by step"
-    items:
-      - { title: Audit, text: "Profile, website, citations, reviews and competitors, plus a geo-grid scan to see where you rank across your area today." }
-      - { title: "Keyword & area research", text: "The searches worth winning, mapped to the profile and to pages, and the areas where you can realistically compete." }
-      - { title: "Profile & on-site fixes", text: "Categories, services, pin, hours, photos, then the website pages and technical issues holding the profile back." }
-      - { title: "Citations & NAP clean-up", text: "Duplicates merged, wrong details corrected, then consistent listings built on the platforms that matter for you." }
-      - { title: "Reviews, links & content", text: "The prominence work: a review routine, local links and mentions, and posts that keep the profile active." }
-      - { title: "Report & refine", text: "Monthly geo-grid, calls and direction requests. Weak areas get the next month's attention." }
-  - type: timeline
-    nav: Timeline
-    id: timeline
-    alt: true
-    eyebrow: What to expect
-    heading: "A realistic Local SEO timeline"
-    intro: "Nobody can guarantee a Map Pack position, and Google says you cannot pay for a better local ranking. What can be promised is the work, and roughly when it tends to show."
-    items:
-      - label: Month 1
-        title: Fix the foundation
-        text: "Audit, profile optimization, pin and category fixes, duplicate clean-up."
-        meta: "Errors gone. Quick wins appear when a wrong category or pin was the problem."
-      - label: Months 2–3
-        title: Build relevance
-        text: "Citations, service and area pages, review routine running, first local links."
-        meta: "Visibility starts spreading out from your address on the geo-grid."
-      - label: Months 4–6
-        title: Grow prominence
-        text: "Review velocity, links and mentions, content for the weak areas of the grid."
-        meta: "In most categories this is when stable Map Pack positions and call growth show."
-      - label: "6 months +"
-        title: Compound and defend
-        text: "Hold positions, expand to new services or areas, keep the profile active."
-        meta: "Rankings that hold because the signals behind them are real."
-    body:
-      - "Crowded categories in big cities take longer than a quiet category in a smaller town. The full picture is in [how long Local SEO takes](/blog/how-long-local-seo-takes-bangladesh)."
+    bullets:
+      - "**No lock-in** contracts"
+      - "**Scope & price** agreed in writing first"
+      - "**Direct access** to the person doing the work"
+      - "**White-hat only**, nothing that risks a suspension"
+    note: "See [what Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh) for how pricing is worked out."
   - type: problems
     nav: Not on Maps?
     id: not-on-maps
@@ -172,6 +182,13 @@ sections:
       - { title: "A website that doesn't back it up", text: "No page for the service, slow on mobile, or details that differ from the profile." }
     body:
       - "More detail, with how to fix each one, in [why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps)."
+  - type: cta
+    eyebrow: Free audit · 48h turnaround
+    heading: "Not sure which one is holding you back?"
+    intro: "Send your website or Google Maps link. I'll check all six, personally, and send a prioritized plan within 48 hours."
+    buttons:
+      - { label: Get my free audit, href: "#free-audit" }
+      - { label: Chat on WhatsApp, href: "https://wa.me/8801866820758" }
   - type: list
     nav: Reporting
     id: reporting
@@ -288,7 +305,7 @@ finalCta:
   heading: "Find out what's keeping you out of the Map Pack"
   text: "Get a free Local SEO audit: your profile, pin, categories, citations, reviews and website, checked against the businesses outranking you."
   buttons:
-    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Get Free Local SEO Audit, href: "#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call }
 card:
   title: Local SEO Services

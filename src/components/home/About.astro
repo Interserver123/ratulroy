@@ -1,18 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import { img } from "../../lib/img";
+import { trustedLogos as logos } from "../../data/logos";
 
-const trustedLogos = [
-  ["dallas-heating-and-ac.png", "Dallas Heating and AC"],
-  ["amz-sellers-attorney.png", "AMZ Sellers Attorney"],
-  ["lpma-primary-care-medicine.png", "LPMA Primary Care Medicine"],
-  ["pediatric-pod.png", "Pediatric Pod"],
-  ["shiridi-sai-packers-and-movers.png", "Shiridi Sai Packers and Movers"],
-  ["edoxi-training-institute.svg", "EDOXI Training Institute"],
-  ["logoinhours-dallas.jpg", "LogoinHours Dallas"],
-  ["qs-health-care-service.png", "QS Health Care Service"],
-  ["chococraving.webp", "ChocoCraving"],
-].map(([file, alt]) => ({ src: img(`logos/${file}`), alt }));
+const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), alt }));
 ---
 
 {

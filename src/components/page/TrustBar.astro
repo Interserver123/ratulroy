@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+import { img } from "../../lib/img";
+import { trustedLogos } from "../../data/logos";
+
+// Compact proof strip under a hero: rating + client logo marquee.
+const logos = trustedLogos.map(([file, name]) => ({ src: img(`logos/${file}`), name }));
+---
+
+<section class="tbar" aria-label="Proof and clients">
+  <div class="container tbar__inner" data-reveal>
+    <div class="tbar__score">
+      <span class="tbar__stars" aria-hidden="true">★★★★★</span>
+      <p><b>4.9</b> from 243 reviews <span>· Fiverr Level 2 seller</span></p>
+    </div>
+    <div class="tbar__logos">
+      {
+        [0, 1].map((copy) => (
+          <ul class="tbar__track" aria-hidden={copy === 1 ? "true" : undefined} role="list">
+            {logos.map((l) => (
+              <li>
+                <Image src={l.src} alt={copy === 1 ? "" : `${l.name} logo`} height={72} loading="lazy" />
+              </li>
+            ))}
+          </ul>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .tbar {
+    padding: 0 0 clamp(32px, 5vw, 56px);
+  }
+  .tbar__inner {
+    display: grid;
+    gap: 18px;
+    align-items: center;
+  }
+  @media (min-width: 960px) {
+    .tbar__inner {
+      grid-template-columns: auto 1fr;
+      gap: 36px;
+    }
+  }
+  .tbar__score {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+  }
+  .tbar__stars {
+    color: var(--warn);
+    letter-spacing: 2px;
+    font-size: 1.05rem;
+  }
+  .tbar__score p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+  }
+  .tbar__score b {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--ink);
+  }
+  .tbar__score span {
+    color: var(--muted);
+  }
+  .tbar__logos {
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .tbar__track {
+    display: flex;
+    flex-shrink: 0;
+    gap: 12px;
+    padding-right: 12px;
+    animation: tbar-x 40s linear infinite;
+  }
+  .tbar__logos:hover .tbar__track {
+    animation-play-state: paused;
+  }
+  @keyframes tbar-x {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .tbar__track li {
+    display: grid;
+    place-items: center;
+    height: 60px;
+    padding: 0 18px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+  }
+  .tbar__track :global(img) {
+    height: 34px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.75;
+    transition:
+      filter 0.3s,
+      opacity 0.3s;
+  }
+  .tbar__track li:hover :global(img) {
+    filter: none;
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tbar__track {
+      animation: none;
+    }
+  }
+</style>
