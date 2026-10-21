@@ -89,17 +89,17 @@ strong {
 /* Emphasis: red words with a hand-drawn route underline that draws in on reveal */
 .em {
   color: var(--accent);
-  padding-bottom: 0.12em;
+  padding-bottom: 0.24em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background: var(--route) no-repeat left bottom / 100% 0.28em;
+  background: var(--route) no-repeat left bottom / 100% 0.2em;
   transition: background-size 1.2s var(--ease) 0.3s;
 }
 .js [data-reveal] .em {
-  background-size: 0% 0.28em;
+  background-size: 0% 0.2em;
 }
 .js [data-reveal].is-in .em {
-  background-size: 100% 0.28em;
+  background-size: 100% 0.2em;
 }
 
 a {

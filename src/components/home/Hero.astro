@@ -18,8 +18,8 @@ const marquee = [...proofBadges, ...heroPoints];
 
 // Rank dots orbiting the portrait: a circular geo-grid, best ranks on the inner ring.
 const rings = [
-  { r: 41, n: 10, rank: [1, 1, 2, 1, 1, 2, 1, 1, 2, 1] },
-  { r: 48.5, n: 14, rank: [2, 3, 2, 3, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3] },
+  { r: 38, n: 8, rank: [1, 1, 2, 1, 1, 2, 1, 1] },
+  { r: 46, n: 11, rank: [2, 3, 2, 3, 2, 3, 2, 3, 3, 2, 3] },
 ];
 const dots = rings.flatMap((ring, ri) =>
   Array.from({ length: ring.n }, (_, i) => {
@@ -349,7 +349,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     color: var(--muted);
   }
   .hero h1 {
-    font-size: clamp(2.7rem, 7.4vw, 6.2rem);
+    font-size: clamp(2.4rem, 5.4vw, 4.5rem);
     letter-spacing: -0.045em;
     line-height: 0.98;
     margin-bottom: 14px;
@@ -402,14 +402,14 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   /* ---------- Stage: lens + portrait + floating cards ---------- */
   .stage {
     position: relative;
-    margin-top: -6px;
-    height: clamp(420px, 50vw, 660px);
+    margin-top: 28px;
+    height: clamp(380px, 40vw, 520px);
   }
   .lens {
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: min(640px, 100vw);
+    width: min(480px, 88vw);
     aspect-ratio: 1;
     translate: calc(-50% + var(--lx, 0px)) var(--ly, 0px);
     transition: translate 0.6s var(--ease);
@@ -431,12 +431,12 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     inset: 4%;
     border-radius: 50%;
     border: 1.5px dashed rgb(232 64 47 / 35%);
-    animation: spin 60s linear infinite;
+    animation: spin 90s linear infinite;
   }
   .lens__orbit {
     position: absolute;
     inset: 0;
-    animation: spin 120s linear infinite;
+    animation: spin 180s linear infinite;
   }
   @keyframes spin {
     to {
@@ -445,7 +445,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   }
   .odot {
     position: absolute;
-    width: clamp(20px, 3vw, 30px);
+    width: clamp(18px, 2.2vw, 24px);
     aspect-ratio: 1;
     display: grid;
     place-items: center;
@@ -476,7 +476,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: min(540px, 92vw);
+    width: min(400px, 78vw);
     translate: -50% 0;
     z-index: 2;
     display: grid;
@@ -531,26 +531,26 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     animation: float 7s ease-in-out infinite;
   }
   .par--chip1 {
-    left: 21%;
-    top: 12%;
+    left: 22%;
+    top: 16%;
   }
   .par--chip2 {
-    right: 20%;
-    top: 26%;
+    right: 21%;
+    top: 34%;
   }
   .par--chip2 > * {
     animation-delay: -3s;
   }
   .par--result {
-    left: 0;
-    top: 40%;
+    left: 2%;
+    top: 30%;
   }
   .par--result > * {
     animation-delay: -1.5s;
   }
   .par--scan {
-    right: 0;
-    top: 46%;
+    right: 2%;
+    top: 26%;
   }
   .par--scan > * {
     animation-delay: -4.5s;
@@ -591,8 +591,8 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   .resultcard {
     display: grid;
     gap: 3px;
-    width: 250px;
-    padding: 18px 20px;
+    width: 230px;
+    padding: 16px 18px;
     color: var(--muted);
   }
   .resultcard:hover {
@@ -607,14 +607,15 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   }
   .resultcard__big {
     font-family: var(--font-display);
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     font-weight: 700;
     letter-spacing: -0.05em;
     line-height: 1;
     color: var(--ink);
   }
   .resultcard__desc {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
   .resultcard__row {
     display: grid;
@@ -628,15 +629,16 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     display: grid;
   }
   .resultcard__row small {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
+    line-height: 1.3;
   }
   .resultcard__row b {
     color: var(--good);
   }
 
   .scan {
-    width: 250px;
-    padding: 14px;
+    width: 230px;
+    padding: 13px;
   }
   .scan__head {
     display: flex;
@@ -649,7 +651,8 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     margin: 0;
     font-family: var(--font-display);
     font-weight: 650;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
+    white-space: nowrap;
     color: var(--ink);
   }
   .scan__toggle {
@@ -829,7 +832,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     .stage__art {
       position: relative;
       width: 100%;
-      height: min(620px, 100vw);
+      height: min(460px, 92vw);
     }
     .par--chip1 {
       left: 4%;
