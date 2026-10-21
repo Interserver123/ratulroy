@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Real 404 page: Cloudflare Pages serves this with a 404 status for unknown URLs
+// (without it, every missing URL returned the homepage with 200 = soft 404s).
+const links = [
+  { href: "/local-seo-service", label: "Local SEO services" },
+  { href: "/google-business-profile-optimization", label: "Google Business Profile optimization" },
+  { href: "/case-studies", label: "Case studies" },
+  { href: "/blog", label: "Local SEO guides" },
+  { href: "/contact", label: "Contact Ratul" },
+];
+---
+
+<BaseLayout title="Page not found" description="This page does not exist. Find Local SEO services, case studies and guides from Ratul Roy." noindex>
+  <section class="nf">
+    <div class="container nf__inner">
+      <div class="nf__pin" aria-hidden="true">
+        <span></span>
+      </div>
+      <p class="eyebrow">Error 404</p>
+      <h1>This pin is off the map</h1>
+      <p class="lead">The page you were looking for has moved or never existed. These are the places most people head to next:</p>
+      <ul class="nf__links" role="list">
+        {
+          links.map((l) => (
+            <li>
+              <a href={l.href}>
+                {l.label} <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="btn btn--dark" href="/"><span class="disc" aria-hidden="true">↗</span>Back to the homepage</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf {
+    padding: clamp(80px, 12vw, 140px) 0;
+    background: url("/topo.svg") center / 1100px auto;
+  }
+  .nf__inner {
+    max-width: 680px;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+  }
+  .nf__pin {
+    width: 64px;
+    height: 64px;
+    border-radius: 50% 50% 50% 6px;
+    transform: rotate(-45deg);
+    background: var(--accent);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 16px 30px -8px rgb(232 64 47 / 45%);
+    margin-bottom: 8px;
+  }
+  .nf__pin span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .nf h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+  }
+  .nf__links {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    margin: 10px 0 18px;
+    padding: 0;
+    list-style: none;
+  }
+  .nf__links a {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .nf__links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+</style>

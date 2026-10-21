@@ -1,4 +1,4 @@
-// Homepage copy, kept verbatim from the live site.
+// Homepage copy. Services carry an href so each card links to its own page.
 
 export const heroPoints = [
   { title: "From $299", text: "Transparent pricing" },
@@ -17,19 +17,19 @@ export const proofBadges = [
 export const problems = [
   {
     title: "Invisible on Google Maps",
-    text: "Your business may exist, but if it does not appear in the map pack or local results, high-intent buyers never see you.",
+    text: "Your business exists, but it never shows in the Map Pack or the Local Finder for \"near me\" searches, so the people ready to call never see your name.",
   },
   {
     title: "Weak Google Business Profile",
-    text: "Wrong categories, missing services, poor photos, weak descriptions, and incomplete sections can quietly reduce your visibility.",
+    text: "A primary category set to the wrong trade, empty services, old photos, a thin description and missing hours quietly lower your relevance on Google Maps.",
   },
   {
     title: "Competitors Look More Trusted",
-    text: "More reviews, better responses, stronger authority, and cleaner local signals make competitors look like the safer choice.",
+    text: "More recent reviews, owner replies to every one, consistent citations and local mentions make a competitor look like the safer call, even when your work is better.",
   },
   {
     title: "Website Signals Are Too Weak",
-    text: "Google uses your website, service pages, schema, and local relevance to understand when and where to rank your business.",
+    text: "Google reads your service pages, location pages, title tags, LocalBusiness schema and NAP to decide when and where to rank you. A thin site holds the profile back.",
   },
 ];
 
@@ -38,98 +38,106 @@ export const services = [
     badge: "Core Service",
     featured: true,
     title: "Local SEO & Google Maps Ranking",
-    text: "Improve your visibility in local search and Google Maps using relevance, proximity, prominence, geo-grid insights, and service-area optimization.",
+    text: "Map Pack and Local Finder rankings built on Google's three local factors: relevance, distance and prominence. I track progress with geo-grid scans across each service area.",
     points: [
-      "Map pack ranking strategy",
+      "Map Pack ranking strategy",
       "Geo-grid visibility tracking",
-      "Local keyword targeting",
+      "Near-me and city keyword targeting",
       "Competitor gap analysis",
     ],
-    cta: "Explore Local SEO",
+    cta: "See the Local SEO service",
+    href: "/local-seo-service",
   },
   {
     badge: "High Impact",
     title: "Google Business Profile Optimization",
-    text: "Turn your Google Business Profile into a stronger ranking and conversion asset with optimized categories, services, posts, and trust signals.",
+    text: "The right primary and additional categories, a full services list, products, photos, posts and review replies, so your profile ranks and turns views into calls.",
     points: [
-      "Primary & secondary categories",
-      "Services and product setup",
-      "GBP posts and photo strategy",
-      "Conversion-focused profile fixes",
+      "Primary & additional categories",
+      "Services and products setup",
+      "GBP posts and photo plan",
+      "Review request and reply process",
     ],
-    cta: "Optimize My GBP",
+    cta: "See GBP optimization",
+    href: "/google-business-profile-optimization",
   },
   {
     badge: "Foundation",
     title: "Website SEO & On-Page Optimization",
-    text: "Build pages that match search intent, support Maps rankings, and convert visitors into leads with optimized titles, headings, and structure.",
+    text: "Service and area pages that match what people actually type, with clear title tags, H1s and internal links that support your Maps rankings and convert visitors.",
     points: [
       "Keyword and intent mapping",
       "Title tags and meta descriptions",
-      "H1-H3 content structure",
+      "H1 to H3 content structure",
       "Internal linking & conversion copy",
     ],
-    cta: "Improve Website SEO",
+    cta: "View all services",
+    href: "/services",
   },
   {
     badge: "Advanced",
     title: "Technical SEO & Schema Architecture",
-    text: "Make your website easier for Google and AI systems to crawl, understand, and trust with clean foundations and structured data.",
+    text: "Crawling, indexing, Core Web Vitals (LCP, INP, CLS) and structured data fixed, so Google and AI systems can read your site and trust what it says about you.",
     points: [
       "LocalBusiness schema",
       "Service and FAQ schema",
       "Core Web Vitals improvements",
       "Crawlability & indexation fixes",
     ],
-    cta: "Fix Technical SEO",
+    cta: "See technical SEO",
+    href: "/technical-seo",
   },
   {
     badge: "Growth Layer",
     title: "Content Strategy & Topical Authority",
-    text: "Create content that builds topical authority, answers buyer intent, and strengthens your business entity across local and organic search.",
+    text: "Pages and FAQs that answer the questions buyers ask before they call, grouped by topic so Google sees your business as the clear expert on its services.",
     points: [
       "Service page content",
       "Location page strategy",
       "FAQ and buyer-intent content",
       "Semantic SEO & entity coverage",
     ],
-    cta: "Build Authority",
+    cta: "How content supports Maps rankings",
+    href: "/blog/local-seo-helps-businesses-rank-google-maps",
   },
   {
     badge: "Trust Signals",
     title: "Citations, NAP Cleanup & Authority Signals",
-    text: "Strengthen your local trust signals with consistent listings, NAP cleanup, local directories, brand mentions, and ethical authority building.",
+    text: "The same name, address and phone on Bing Places, Apple Business Connect, Facebook and the directories that matter in your country and trade, plus honest local mentions.",
     points: [
       "Citation building",
       "NAP consistency cleanup",
       "Local directory optimization",
       "Brand mention & authority signals",
     ],
-    cta: "Strengthen Trust",
+    cta: "How citations and NAP work",
+    href: "/blog/local-citations-nap-consistency-guide",
   },
   {
     badge: "Future-Ready",
     title: "AI Search, GEO & AIO Optimization",
-    text: "Prepare your business for AI-powered discovery across Google AI Overviews, ChatGPT, Gemini, and Perplexity with entity and schema clarity.",
+    text: "Clear entity data, schema and citations on trusted sources, so Google AI Overviews, Gemini, ChatGPT search and Perplexity can name your business in their answers.",
     points: [
       "Generative Engine Optimization",
       "AI Overview readiness",
       "LLM visibility signals",
       "Entity & Knowledge Graph optimization",
     ],
-    cta: "Get AI Search Ready",
+    cta: "See GEO and AI search",
+    href: "/generative-engine-optimization",
   },
   {
     badge: "Full System",
     title: "SEO Audit, Strategy & Monthly Growth",
-    text: "Get a full search visibility roadmap covering technical SEO, local SEO, content gaps, competitors, GBP performance, and monthly execution.",
+    text: "A full review of your profile, website, citations, reviews and competitors, turned into a ranked list of fixes, then monthly work and reporting against calls and rankings.",
     points: [
       "Full website SEO audit",
       "Local visibility audit",
       "Ranking & competitor tracking",
       "Monthly growth reporting",
     ],
-    cta: "Start With an Audit",
+    cta: "Start with a free audit",
+    href: "/#free-audit",
   },
 ];
 
@@ -145,26 +153,26 @@ export const platforms = [
 export const aiPillars = [
   {
     title: "GEO, Generative Engine Optimization",
-    text: "Optimize your business entity, service pages, and authority signals so AI-powered answer engines can better understand what you do and where you serve.",
+    text: "Make your business entity, service pages and authority signals easy for AI answer engines to read, so they know what you do and which areas you serve.",
   },
   {
     title: "AIO, AI Overview Optimization",
-    text: "Structure your content, schema, FAQs, and topical signals to support visibility in Google's AI-powered search experiences.",
+    text: "Structure content, schema, FAQs and topics so your pages can be used as sources when Google shows an AI Overview for a local question.",
   },
   {
     title: "LLM Visibility Signals",
-    text: "Improve brand clarity for platforms like ChatGPT, Gemini, and Perplexity through consistent business information, strong content structure, and trusted mentions.",
+    text: "Give ChatGPT, Gemini and Perplexity one consistent version of your business: same name, same services, same locations, backed by mentions on trusted sites.",
   },
   {
     title: "Entity & Schema Architecture",
-    text: "Use LocalBusiness schema, service schema, FAQ schema, citations, reviews, and internal links to create stronger machine-readable trust signals.",
+    text: "LocalBusiness and Service schema, FAQPage markup, sameAs links, citations, reviews and internal links that describe your business in a machine-readable way.",
   },
 ];
 
 export const strategy = [
   {
     title: "Local-First SEO, Not Generic SEO",
-    text: "Your customers search by city, service, trust, and urgency. My strategy focuses on Google Maps visibility, near-me intent, and service-area relevance.",
+    text: "Your customers search by city, area, service and urgency (\"AC repair near me\", \"dentist in Dhanmondi\"). I plan for Google Maps, near-me intent and service-area relevance first.",
     points: [
       "Google Maps visibility",
       "Service-area targeting",
@@ -174,7 +182,7 @@ export const strategy = [
   },
   {
     title: "Entity SEO for Google and AI",
-    text: "Modern search engines need to clearly understand your business entity. I strengthen brand signals through structured data, consistent info, and trusted mentions.",
+    text: "Search engines rank businesses they can identify with confidence. I make your name, address, phone, services and links match everywhere, then confirm it with structured data.",
     points: [
       "Entity optimization",
       "Knowledge Graph signals",
@@ -184,7 +192,7 @@ export const strategy = [
   },
   {
     title: "GEO, AIO & LLM Visibility",
-    text: "Customers now discover businesses through AI Overviews, ChatGPT, Gemini, and Perplexity. I structure content so AI systems can understand your business.",
+    text: "People now ask AI Overviews, ChatGPT, Gemini and Perplexity which business to call. I structure your content so those systems can understand and cite it.",
     points: [
       "Generative Engine Optimization",
       "AI Overview readiness",
@@ -194,7 +202,7 @@ export const strategy = [
   },
   {
     title: "Technical SEO That Supports Trust",
-    text: "A weak technical foundation limits rankings. I improve crawlability, indexation, speed, schema, and structure so search engines read your site clearly.",
+    text: "A slow or badly indexed site caps how far a profile can climb. I fix crawling, indexing, mobile speed, schema and site structure so Google reads your pages clearly.",
     points: [
       "Crawlability & indexation",
       "Core Web Vitals",
@@ -204,7 +212,7 @@ export const strategy = [
   },
   {
     title: "Topical Authority With Buyer Intent",
-    text: "I do not create random content. I build service pages, location pages, and FAQs around real buyer questions, local intent, and semantic SEO coverage.",
+    text: "No random blog posts. I build service pages, location pages and FAQs around the questions buyers ask, in English, Bangla or the market you serve.",
     points: [
       "Service page strategy",
       "Location page structure",
@@ -214,7 +222,7 @@ export const strategy = [
   },
   {
     title: "Transparent Reporting & Growth",
-    text: "SEO should not feel like a mystery. I track rankings, visibility, traffic, Google Business Profile performance, and call-focused growth signals.",
+    text: "You see what changed and why. I report geo-grid rankings, GBP Performance (calls, direction requests, website clicks), Search Console data and next month's priorities.",
     points: [
       "Ranking tracking",
       "GBP performance review",
@@ -229,15 +237,15 @@ export const systemTags = ["White-Hat SEO", "E-E-A-T Focused", "AI Search Ready"
 export const whyPoints = [
   {
     title: "More Qualified Calls",
-    text: "Ranking systems built to convert searchers into real inbound leads, not vanity traffic.",
+    text: "Rankings are measured by the calls and bookings they bring in, not by traffic that never converts.",
   },
   {
-    title: "Google Maps Domination",
-    text: "Map pack visibility in your service area so your business is the first one customers tap.",
+    title: "Map Pack Visibility",
+    text: "Top 3 Map Pack positions across your service area, so yours is the business customers tap first.",
   },
   {
     title: "Measurable ROI",
-    text: "Transparent reporting tied to rankings, calls, and revenue, never guesswork.",
+    text: "Reports tied to rankings, calls and revenue, with the screenshots to back every number.",
   },
 ];
 
@@ -420,7 +428,7 @@ export const caseStudies = [
     title: "Improving Local Visibility Across Service Areas",
     href: "/case-studies/map-pack-service-areas",
     image: "cases/geo-grid-ranking.jpg",
-    text: "A Local SEO case study on expanding map pack visibility across multiple nearby service areas.",
+    text: "How geo-grid tracking and service-area work raised Map Pack visibility by 38% and put the business in the Top 3 across five times as many nearby areas.",
   },
   {
     category: "Organic SEO · eCommerce Growth",
@@ -429,7 +437,7 @@ export const caseStudies = [
     title: "Hamper Story, From Low Organic Traffic to $72,412 in Monthly Sales",
     href: "/case-studies/hamper-story",
     image: "cases/hamper-shopify-overview.png",
-    text: "Hamper Story is a Singapore-based Shopify store selling premium hampers online. They came to us for organic growth, we shipped a full SEO campaign that turned search visibility into real revenue, scaling sales by +206% and orders by +294%.",
+    text: "Hamper Story is a Singapore-based Shopify store selling premium hampers. The brief was organic growth. A full SEO campaign turned search visibility into revenue: sales up 206% and orders up 294%.",
   },
   {
     category: "Organic SEO · Full-Funnel",
@@ -447,23 +455,23 @@ export const caseStudies = [
     title: "From Zero to 3.93K Clicks, Data-Driven Organic SEO Growth in 6 Months",
     href: "/case-studies/data-driven-organic-growth",
     image: "cases/data-driven-gsc.png",
-    text: "How a near-invisible website went from almost zero organic traffic to 3.93K clicks, 47.4K impressions and an 8.3% CTR in just 6 months, through disciplined, data-driven SEO.",
+    text: "How a near-invisible website went from almost zero organic traffic to 3.93K clicks, 47.4K impressions and an 8.3% CTR in 6 months, using Search Console data to decide every fix.",
   },
 ];
 
 export const industries = [
-  { title: "HVAC Companies", href: "/industries/hvac-seo", text: "Rank for emergency, repair, and installation searches." },
-  { title: "Plumbing Businesses", href: "/industries/plumbing-seo", text: "Capture urgent local searches and service-area calls." },
-  { title: "Roofing Contractors", href: "/industries/roofing-seo", text: "Build local authority for high-value roofing leads." },
-  { title: "Towing Companies", href: "/industries/towing-seo", text: "Show up when customers need help immediately." },
-  { title: "Pest Control Services", href: "/industries/pest-control-seo", text: "Win local searches for treatment and inspection intent." },
-  { title: "Electricians", href: "/industries/electrician-seo", text: "Improve visibility for repair, installation, and emergency jobs." },
-  { title: "Cleaning Companies", href: "/industries/cleaning-seo", text: "Get discovered for residential and commercial cleaning demand." },
-  { title: "Moving Companies", href: "/industries/moving-seo", text: "Rank for city-based moving and relocation searches." },
-  { title: "Construction Companies", href: "/industries/construction-seo", text: "Build trust for local contractor and project searches." },
-  { title: "Dental Clinics", href: "/industries/dental-seo", text: "Improve local visibility for treatment and appointment searches." },
-  { title: "Healthcare Clinics", href: "/industries/healthcare-seo", text: "Strengthen trust and discovery for local patient searches." },
-  { title: "Legal Services", href: "/industries/legal-seo", text: "Compete for high-intent local legal search visibility." },
+  { title: "HVAC Companies", href: "/industries/hvac-seo", text: "Rank for AC repair, AC servicing, installation and 24-hour emergency searches." },
+  { title: "Plumbing Businesses", href: "/industries/plumbing-seo", text: "Win \"emergency plumber near me\", leak and drain searches across your service area." },
+  { title: "Roofing Contractors", href: "/industries/roofing-seo", text: "Rank for roof repair, replacement and storm damage jobs worth the most." },
+  { title: "Towing Companies", href: "/industries/towing-seo", text: "Show up for roadside assistance, flatbed, jump start and lockout calls, day or night." },
+  { title: "Pest Control Services", href: "/industries/pest-control-seo", text: "Win searches for termite, cockroach and rodent treatment and inspections." },
+  { title: "Electricians", href: "/industries/electrician-seo", text: "Get found for wiring, panel upgrades, installations and emergency electrician calls." },
+  { title: "Cleaning Companies", href: "/industries/cleaning-seo", text: "Get booked for house cleaning, deep cleaning and office cleaning in your area." },
+  { title: "Moving Companies", href: "/industries/moving-seo", text: "Rank for house shifting, office moves and \"movers near me\" in each city you serve." },
+  { title: "Construction Companies", href: "/industries/construction-seo", text: "Earn trust on high-value build, renovation and general contractor searches." },
+  { title: "Dental Clinics", href: "/industries/dental-seo", text: "Fill the chair with root canal, scaling, braces, implant and emergency dentist searches." },
+  { title: "Healthcare Clinics", href: "/industries/healthcare-seo", text: "Help patients find your clinic, doctors and opening hours when they search nearby." },
+  { title: "Legal Services", href: "/industries/legal-seo", text: "Rank by practice area and city so people book a consultation with your firm." },
 ];
 
 export const guides = [
@@ -518,17 +526,50 @@ export const guides = [
 ];
 
 // Only FAQs with an answer are shown on the page and in FAQPage schema.
-// TODO: fill in the remaining answers from the live site.
+// Answers are plain text (no inline markdown): the FAQ component and schema print them as-is.
 export const faqs: { q: string; a: string }[] = [
   {
     q: "What is Local SEO and why do I need it for my business?",
-    a: "Local SEO helps your business appear in Google Maps, local searches, and near-me searches across Bangladesh, driving qualified phone calls, direction requests, and walk-in customers from people who are ready to buy in your service area.",
+    a: "Local SEO is the work that gets your business into Google Maps, the Map Pack and near-me results for the areas you serve. It matters because these searchers want to call, book or visit now, so better local visibility turns into phone calls, direction requests and walk-in customers.",
   },
-  { q: "How long does it take to see results from Local SEO services?", a: "" },
-  { q: "Do you provide Google Business Profile optimization?", a: "" },
-  { q: "Can you guarantee top Google Maps ranking?", a: "" },
-  { q: "Do you handle citations, reviews, and technical SEO?", a: "" },
-  { q: "Do you provide reports or tracking?", a: "" },
-  { q: "Can your service work for multiple locations?", a: "" },
-  { q: "What makes you the best Local SEO expert in Bangladesh?", a: "" },
+  {
+    q: "Who is Ratul Roy?",
+    a: "Ratul Roy is an independent Local SEO expert based in Bagerhat, Khulna division, Bangladesh, and the founder of DigiPolli. He is a Fiverr Level 2 seller rated 4.9 from 243 reviews and works directly with service businesses in Bangladesh and worldwide on Google Maps, Google Business Profile and AI search visibility.",
+  },
+  {
+    q: "How long does it take to see results from Local SEO services?",
+    a: "Some fixes, such as correcting your primary category or completing your Google Business Profile, can show within weeks. Competitive areas and new businesses take months, because reviews, citations and content build prominence over time. Your market, competition and starting point decide the pace, and I show you the trend every month.",
+  },
+  {
+    q: "Do you provide Google Business Profile optimization?",
+    a: "Yes. I set the right primary and additional categories, write the services list and description, add products, photos and regular posts, check hours and service areas, and build a review request and reply process. I also help with verification problems, duplicate listings and unwanted suggested edits.",
+  },
+  {
+    q: "Can you guarantee top Google Maps ranking?",
+    a: "No. Google states there is no way to pay for or request a better local ranking, and anyone promising a guaranteed #1 is guessing or breaking the rules. What I commit to is clear work on relevance, distance and prominence, white-hat methods only, and honest reporting of calls and rankings.",
+  },
+  {
+    q: "Do you handle citations, reviews, and technical SEO?",
+    a: "Yes. I clean up NAP (name, address, phone) across directories, Bing Places, Apple Business Connect and Facebook, set up a policy-safe review request process with no incentives or gating, and fix technical issues such as indexing, Core Web Vitals and LocalBusiness schema.",
+  },
+  {
+    q: "Do you provide reports or tracking?",
+    a: "Yes. You get geo-grid ranking screenshots, Google Business Profile Performance data (calls, direction requests, website clicks) and Google Search Console results, with a short note on what changed and what comes next. No inflated dashboards.",
+  },
+  {
+    q: "Can your service work for multiple locations?",
+    a: "Yes. Each location needs its own verified Business Profile, its own location page with consistent NAP and an embedded map, and its own review flow. Service-area businesses without a storefront can hide their address and list up to 20 service areas instead.",
+  },
+  {
+    q: "How much does Local SEO cost?",
+    a: "My Local SEO packages start from $299, with no lock-in contracts. The final price depends on how many locations you have, how competitive your area and trade are, and how much of the profile, website and citation work is already done. The free audit shows what you actually need.",
+  },
+  {
+    q: "Do you work with businesses outside Bangladesh?",
+    a: "Yes. I am based in Bangladesh and take on businesses anywhere in the country, from Dhaka to Khulna, as well as service companies abroad, such as a home service business in Dallas. Local SEO principles are the same; the directories, languages and competitors change by market.",
+  },
+  {
+    q: "What makes you the best Local SEO expert in Bangladesh?",
+    a: "You can judge that from the evidence: 461 calls from one client's Business Profile in five months, Map Pack visibility up 38% for another, and a 4.9 rating from 243 Fiverr reviews. You work with me directly, the methods are white-hat, and there is no lock-in contract.",
+  },
 ];

@@ -1,5 +1,5 @@
-title: "Improving Local Visibility Across Service Areas | Ratul Roy"
-description: "A Local SEO case study on expanding map pack visibility across multiple nearby service areas: +38% Map Pack visibility and 5x areas ranking in the Top 3."
+title: "Map Pack Case Study: +38% Visibility Across Service Areas"
+description: "Geo-grid Local SEO case study for a home service business: +38% Map Pack visibility, 5x more areas in the Top 3 and +27% direction requests across nearby areas."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Case Studies, href: /case-studies }
@@ -7,7 +7,7 @@ breadcrumb:
 eyebrow: "Case Study · Home Service Business"
 h1: "Improving Local Visibility Across Service Areas"
 em: "Across Service Areas"
-lead: "A Local SEO case study on expanding map pack visibility across multiple nearby service areas."
+lead: "How I used geo-grid rank tracking and service-area optimization to take a home service business from ranking in one zone to Top 3 Map Pack positions across 5x as many nearby areas."
 heroChips: ["Geo-Grid", "Map Pack", "Service-Area SEO"]
 heroStats:
   - { value: "+38%", label: "Map Pack visibility" }
@@ -18,31 +18,31 @@ ctas:
   - { label: Get Free SEO Audit, href: "/#free-audit" }
   - { label: Return to homepage, href: /, style: ghost }
 intro:
-  - "**Client:** a home service business. **Focus:** Google Maps ranking across nearby service areas. **Key result:** +38% Map Pack visibility."
+  - "**Client:** a home service business serving several nearby areas. **Focus:** Google Maps ranking across the whole service area, not just the office location. **Key result:** +38% Map Pack visibility, 5x more areas ranking in the Top 3 and +27% direction requests."
 sections:
   - type: problems
     eyebrow: "01 · Problem"
-    heading: The Challenge
-    intro: "Inconsistent visibility across important nearby locations and service-area searches, with strong rankings in only one zone."
+    heading: "Strong in one zone, invisible in the next"
+    intro: "Distance is one of Google's three local ranking factors, so a business usually ranks well close to its address and fades further out. This client ranked well in its home zone only. Customers searching from nearby neighbourhoods saw competitors in the Map Pack instead."
     items:
-      - { title: "One-zone visibility", text: "Visible in the home zone, invisible in nearby areas." }
-      - { title: "No geo-grid view", text: "No geo-grid view of local rankings." }
+      - { title: "One-zone visibility", text: "Visible in the home zone, invisible in nearby areas it actually served." }
+      - { title: "No geo-grid view", text: "Rankings were checked from one spot, so nobody could see where visibility dropped off." }
       - { title: "Weak service-area targeting", text: "Service-area pages weren't targeting the right places." }
       - { title: "Misaligned citations", text: "Citations not aligned with target areas." }
   - type: steps
     alt: true
     eyebrow: "02 · Approach"
-    heading: The Strategy
-    intro: "A geo-aware Local SEO approach focused on mapping coverage gaps and closing them with targeted ranking signals."
+    heading: "How I mapped and closed the coverage gaps"
+    intro: "I measured visibility point by point across the service area first, then strengthened relevance and prominence signals for the specific areas where the business was weakest. This is the core of my [Local SEO service](/local-seo-service) for service-area businesses."
     items:
-      - { title: Geo-Grid Tracking, text: "Implemented geo-grid rank tracking to visualize map pack visibility across the service area." }
-      - { title: Local Keyword Mapping, text: "Mapped target keywords to specific areas to align on-page and GBP signals." }
-      - { title: Service-Area Optimization, text: "Optimized GBP service areas, service categories, and supporting pages." }
-      - { title: Citation Cleanup, text: "Audited and cleaned citations for consistency and relevance." }
+      - { title: Geo-Grid Tracking, text: "Set up geo-grid rank tracking: the same keyword checked from a grid of points across the service area, so every gap shows up on a map." }
+      - { title: Local Keyword Mapping, text: "Mapped each target keyword to a specific area and page, so the website and the Google Business Profile sent matching signals." }
+      - { title: Service-Area Optimization, text: "Updated the GBP service areas and categories through [Google Business Profile optimization](/google-business-profile-optimization), and rebuilt the supporting service-area pages." }
+      - { title: Citation Cleanup, text: "Audited and cleaned citations so the business name, address and phone matched everywhere and listings pointed at the right areas." }
   - type: stats
     eyebrow: "03 · Outcome"
-    heading: The Result
-    intro: "Stronger local search visibility and noticeably better map pack coverage across the most important nearby service areas."
+    heading: "Results across the service area"
+    intro: "Map Pack coverage spread from one zone into the most important nearby areas, and more searchers asked Google Maps for directions to the business."
     items:
       - { title: "Map Pack visibility", value: "+38%" }
       - { title: "Areas ranking Top 3", value: "5x" }
@@ -55,16 +55,17 @@ sections:
       - { title: "Geo-grid rank map", text: "A geo-grid scan across a service area north of Dallas, near Plano: every grid point ranks in positions 1 to 3, with a solid block of #1 positions through the middle and south.", image: "cases/geo-grid-ranking.jpg" }
   - type: list
     eyebrow: "04 · Learnings"
-    heading: Key Takeaways
+    heading: "What this case study shows"
     bullets:
-      - "Local visibility is geographical: rankings must be tracked by area, not just keyword."
-      - "Service-area businesses benefit most from a geo-grid SEO approach."
-      - "Closing coverage gaps compounds long-term local growth."
+      - "Local visibility is geographical. Track rankings by area, not just by keyword."
+      - "Service-area businesses (plumbers, HVAC, cleaners, movers) gain the most from a geo-grid approach."
+      - "Each area you close compounds, because reviews and calls from it feed prominence everywhere."
     body:
-      - "Want a similar strategy for your business? Explore the [Local SEO services](/local-seo-service) or [return to the homepage](/)."
+      - "For the wider ranking picture, read [how Local SEO helps businesses rank higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps). If you run a trade, see my [SEO for home services](/seo-for-home-services) page."
 showCases: true
 pricing: none
-related: [cases, local-seo-service, gbp, home-services, book]
+related: [local-seo-service, gbp, home-services, cases, book]
+updated: 2026-10-21
 finalCta:
   heading: "See how your business can achieve similar results."
   text: "Get a free Local SEO audit covering your Google Business Profile, map pack visibility, competitors, citations, and ranking gaps."

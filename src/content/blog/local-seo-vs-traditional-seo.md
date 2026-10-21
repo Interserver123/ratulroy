@@ -12,14 +12,18 @@ faqs:
   - q: "Is Local SEO part of SEO?"
     a: "Yes. Local SEO is a branch of SEO focused on searches with local intent. It shares techniques such as content, links and technical health, and adds its own, such as Google Business Profile optimisation, reviews and citation consistency."
   - q: "Can my business rank locally and nationally at the same time?"
-    a: "Yes. Your Business Profile competes in local results while your website's pages compete in ordinary results. Strong pages help the profile, and a strong profile brings brand searches that help the site."
+    a: "Yes. Your Business Profile competes in local results while your website's pages compete in ordinary results. Strong pages help the profile, and a strong profile brings brand searches that help the site. Most local businesses end up running both side by side."
   - q: "Which is cheaper, Local SEO or traditional SEO?"
-    a: "Local SEO is usually cheaper for a single-location business, because the competition is limited to an area. Traditional SEO for competitive national terms generally needs more content and link building over a longer period."
+    a: "Local SEO is usually cheaper for a single-location business, because the competition is limited to an area. Traditional SEO for competitive national terms generally needs more content and link building over a longer period, so the monthly effort and total cost are usually higher."
   - q: "Do I need a website for traditional SEO?"
-    a: "Yes. Traditional SEO ranks web pages, so there is nothing to rank without one. Local SEO can work partly without a website, though a site makes it considerably stronger."
+    a: "Yes. Traditional SEO ranks web pages, so there is nothing to rank without one. Local SEO can work partly without a website, though a site makes it considerably stronger because it confirms your services and location."
+  - q: "Are 'near me' searches part of Local SEO or traditional SEO?"
+    a: "They are Local SEO. A search like 'dentist near me' or 'laptop repair near me' tells Google to use the searcher's location, so it shows the map pack and ranks Business Profiles by relevance, distance and prominence. Traditional SEO only affects the website results below the map."
 ---
 
-Business owners often hear 'SEO' and 'Local SEO' used as if they were the same service. They overlap, but they rank different things, in different places, for different kinds of search. Choosing the wrong one wastes months. This guide sets out the differences plainly and helps you decide which your business needs first.
+Local SEO ranks a business, mainly through its Google Business Profile, in the map pack and on Google Maps for searches tied to a place, such as 'dentist in Uttara' or 'AC repair near me'. Traditional SEO ranks web pages in the ordinary results for searches with no location attached. Most local businesses in Bangladesh need Local SEO first.
+
+Business owners often hear 'SEO' and 'Local SEO' used as if they were the same service. They overlap, but they rank different things, in different places, for different kinds of search. Choosing the wrong one wastes months. This guide, part 5 of the [Local SEO in Bangladesh series](/blog/local-seo-bangladesh-guide), sets out the differences plainly and helps you decide which your business needs first.
 
 ## The core difference
 
@@ -49,9 +53,11 @@ Local SEO ranks listings. Your Google Business Profile is one entity, tied to on
 | Google Business Profile | The main asset | Not a factor |
 | Reviews | A major signal | Minor |
 | Citations and NAP consistency | Important | Barely relevant |
-| Content depth | Important | Dominant |
+| Content depth | Important | The main factor |
 | Backlinks | Important, with local relevance counting for more | Important |
 | Technical health | Important; a broken site hurts | Important; a broken site hurts |
+| Structured data | LocalBusiness schema and subtypes such as Dentist | Article, Product and FAQPage schema |
+| Main measurement | Calls and direction requests in GBP Performance | Clicks and impressions in Google Search Console |
 
 ## Keywords: with and without a place
 
@@ -68,7 +74,7 @@ Mixing these up leads to bad decisions. A local business judged only on website 
 
 ## Timelines and cost
 
-Local SEO tends to show movement sooner, because the competition is limited to an area and profile fixes take effect relatively quickly. Traditional SEO is usually slower, because you compete nationally or globally and content needs time to earn links and trust.
+Local SEO tends to show movement sooner, because the competition is limited to an area and profile fixes take effect relatively quickly. Traditional SEO is usually slower, because you compete nationally or globally and content needs time to earn links and trust. The [data-driven organic growth case study](/case-studies/data-driven-organic-growth) shows a realistic pace: a near-invisible site taken from almost zero to 3.93K clicks and 47.4K impressions over six months.
 
 Cost follows scope in both cases. The local side is covered in detail in [How Much Does Local SEO Cost in Bangladesh?](/blog/local-seo-cost-bangladesh) and [How Long Does Local SEO Take to Work in Bangladesh?](/blog/how-long-local-seo-takes-bangladesh)
 
@@ -76,16 +82,16 @@ Cost follows scope in both cases. The local side is covered in detail in [How Mu
 
 - **Clinics, restaurants, salons, repair services, showrooms and coaching centres:** Local SEO first
 - **Home service businesses that visit customers:** Local SEO first, set up as a service-area business
-- **E-commerce shops delivering nationwide:** traditional SEO first
+- **E-commerce shops delivering nationwide across Dhaka, Chattogram and beyond:** traditional SEO first
 - **Software, IT and export businesses selling abroad:** traditional SEO first
 - **Businesses with branches in several cities:** Local SEO for each branch, plus traditional SEO for the brand
 - **Professional firms such as lawyers and accountants:** both, with Local SEO usually paying back sooner
 
 ## Why most need both
 
-The two support each other. Google has said that a business's position in ordinary web results contributes to its local prominence, so a stronger website helps the profile. And content written for traditional SEO, answering customers' questions, brings in people earlier in their decision who later search locally.
+Part 4, [Why Local SEO Is Important](/blog/why-local-seo-important-bangladesh), covers the business case for the local side. The two disciplines support each other. Google has said that a business's position in ordinary web results contributes to its local prominence, so a stronger website helps the profile. And content written for traditional SEO, answering customers' questions, brings in people earlier in their decision who later search locally.
 
-The right order for most local businesses is Local SEO first, because it produces calls soonest, followed by website content and technical work that strengthen both. The [complete Local SEO in Bangladesh guide](/blog/local-seo-bangladesh-guide) covers the local side, and the [technical SEO service](/technical-seo) covers the website foundations.
+The right order for most local businesses is Local SEO first, because it produces calls soonest, followed by website content and technical work that strengthen both. The [Local SEO service](/local-seo-service) covers the local side, and the [technical SEO service](/technical-seo) covers the website foundations: crawling, indexing and Core Web Vitals.
 
 ## A quick decision checklist
 

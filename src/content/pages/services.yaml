@@ -1,105 +1,148 @@
-title: "SEO Services in Bangladesh | Ratul Roy"
-description: "Professional SEO service in Bangladesh: Local SEO, Google Maps ranking, GBP optimization, website SEO, technical SEO & AI search visibility by Ratul Roy."
+title: "SEO Services: Local SEO, GBP, Technical SEO & GEO"
+description: "Local SEO, Google Business Profile optimization, technical SEO and AI search (GEO) services by Ratul Roy, an independent specialist. From $299, no lock-in."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
-eyebrow: Our Services
-h1: "Elite Local SEO & Digital Services for Service Businesses"
-em: "Local SEO & Digital Services"
-lead: "From Google Maps ranking to website SEO and AI search visibility, these services are designed to generate qualified inbound calls and measurable growth."
-sub: "No generic packages. Only focused search visibility systems for serious local businesses."
+eyebrow: SEO services
+h1: "Local SEO & Search Services for Businesses That Depend on Calls"
+em: "Local SEO & Search Services"
+lead: "Google Maps rankings, Google Business Profile work, technical fixes and AI search visibility, run as one system so the profile, the website and the rest of the web all say the same thing about your business."
+sub: "Every engagement is scoped after an audit, so you only pay for the work your profile and website actually need."
 heroChips: ["4.9★ on Fiverr · 243 reviews", "Local SEO Specialist", "Google Maps Ranking Expert"]
+updated: 2026-10-21
+entities:
+  - { name: Local search engine optimisation, sameAs: "https://en.wikipedia.org/wiki/Local_search_engine_optimisation" }
+  - { name: Google Business Profile, sameAs: "https://en.wikipedia.org/wiki/Google_Business_Profile" }
+  - { name: Search engine optimization, sameAs: "https://en.wikipedia.org/wiki/Search_engine_optimization" }
+  - { name: Generative engine optimization, sameAs: "https://en.wikipedia.org/wiki/Generative_engine_optimization" }
+intro:
+  - "**What SEO services do I offer?** Four connected services that get a local business found and chosen on Google: Local SEO for the Map Pack and organic results, Google Business Profile optimization, technical SEO for crawling, indexing and speed, and generative engine optimization (GEO) so AI Overviews, ChatGPT and Gemini can describe and recommend you accurately."
 sections:
   - type: cards
     columns: 3
-    eyebrow: SEO services by category
-    heading: "Every service, built around qualified calls"
+    eyebrow: Core services
+    heading: "Pick the service that matches your problem"
+    intro: "Most local businesses start with the first one. The others either sit inside it or support it, and each has its own page with scope, process and pricing."
     items:
-      - { title: Local SEO Services, href: /local-seo-service, cta: Explore this service, featured: true, meta: "3.2x avg. call increase", text: "End-to-end local search optimization built to rank your business in the map pack and organic results for your target city.", bullets: ["Map pack ranking strategy", "Geo-grid visibility tracking", "Local keyword targeting", "Competitor gap analysis"] }
-      - { title: Google Maps Ranking, href: /google-business-profile-optimization, cta: Explore this service, meta: "Top 3 map pack target", text: "Dedicated Google Maps optimization to move your business into the top 3 map pack positions and stay there.", bullets: ["Proximity & relevance signals", "Category optimization", "Map pack tracking & reporting", "Competitor map analysis"] }
-      - { title: Google Business Profile Optimization, href: /google-business-profile-optimization, cta: Explore this service, meta: "4.9★ rating maintenance", text: "Transform your GBP into a high-converting ranking asset with optimized categories, services, posts, and trust signals.", bullets: ["Primary & secondary categories", "Services and product setup", "GBP posts and photo strategy", "Conversion-focused profile fixes"] }
-      - { title: "GBP Ranking & Review Strategy", meta: "120+ reviews / quarter", text: "Build review velocity and rating quality as core ranking signals while protecting your reputation.", bullets: ["Review generation systems", "Response strategy & templates", "Rating recovery for bad reviews", "Review schema integration"] }
-      - { title: "Website SEO & On-Page Optimization", meta: "85%+ on-page score", text: "Optimize your website to match local search intent, support Maps rankings, and convert visitors into leads.", bullets: ["Keyword and intent mapping", "Title tags and meta descriptions", "H1-H3 content structure", "Internal linking & conversion copy"] }
-      - { title: "Technical SEO & Schema Architecture", href: /technical-seo, cta: Explore this service, meta: "100% schema coverage", text: "Make your site easy for Google and AI systems to crawl, understand, and trust with clean technical foundations.", bullets: ["LocalBusiness & Service schema", "FAQ and HowTo structured data", "Core Web Vitals improvements", "Crawlability & indexation fixes"] }
-      - { title: "Schema & Entity SEO", href: /technical-seo, cta: Explore this service, meta: "12+ schema types", text: "Build entity clarity with structured data that helps Google and AI systems understand your business.", bullets: ["Entity markup & sameAs links", "Knowledge Graph alignment", "Organization & Person schema", "Breadcrumb & navigation markup"] }
-      - { title: "Citation Building & NAP Consistency", meta: "50+ citations built", text: "Strengthen local trust signals with consistent Name, Address, Phone listings across high-authority directories.", bullets: ["Citation audit & cleanup", "NAP consistency fixes", "Local directory optimization", "Brand mention & authority signals"] }
-      - { title: "Review & Reputation Signals", meta: "4.8★ avg. client rating", text: "Turn customer feedback into a competitive advantage with systems that generate, manage, and showcase reviews.", bullets: ["Review request automation", "Multi-platform monitoring", "Negative review response strategy", "Reputation dashboard setup"] }
-      - { title: "AI Search Visibility & GEO / AIO / LLM", href: /generative-engine-optimization, cta: Explore this service, featured: true, meta: "AI-ready visibility score", text: "Prepare your business for AI-powered discovery across Google AI Overviews, ChatGPT, Gemini, and Perplexity.", bullets: ["Generative Engine Optimization", "AI Overview readiness audit", "LLM visibility signal building", "Entity & Knowledge Graph clarity"] }
-      - { title: "Topical Authority & Semantic SEO", meta: "3x content coverage", text: "Create content that builds topical authority, answers buyer intent, and strengthens your entity across search.", bullets: ["Service page content clusters", "Location & FAQ page strategy", "Buyer-intent content mapping", "Semantic SEO & entity coverage"] }
-      - { title: Full SEO Strategy Consultation, href: /book-strategy-call, cta: Book a call, featured: true, meta: "6-12 month programs", text: "Get a comprehensive visibility roadmap covering technical SEO, local SEO, content gaps, competitors, and growth.", bullets: ["Full website + local SEO audit", "Ranking & competitor tracking", "Monthly growth reporting", "Quarterly strategy reviews"] }
+      - { title: Local SEO Services, href: /local-seo-service, cta: "See the Local SEO service", featured: true, meta: "Pillar service · from $299", text: "The full system for ranking in the Google Maps 3-pack and local organic results: profile, citations, reviews, service and area pages, and technical fixes.", bullets: ["Map Pack and Local Finder rankings", "Geo-grid tracking across your service area", "Service + area keyword mapping", "Monthly report on calls and direction requests"] }
+      - { title: Google Business Profile Optimization, href: /google-business-profile-optimization, cta: "See GBP optimization", meta: "Essential package $299", text: "Every field of your Google Business Profile (formerly Google My Business) set up the way Google reads it, plus suspension, verification and duplicate listing fixes.", bullets: ["Primary and additional categories", "Services, products, attributes and hours", "Photos, Google Posts and review replies", "Video verification and reinstatement help"] }
+      - { title: Technical SEO, href: /technical-seo, cta: "See the technical SEO service", meta: "Audit from $299", text: "Crawling, indexing, Core Web Vitals, structured data and site architecture fixed so the website behind your profile can rank.", bullets: ["robots.txt, XML sitemaps and canonical tags", "LCP, INP and CLS on mobile", "LocalBusiness and Service schema", "Search Console errors cleared and verified"] }
+      - { title: "Generative Engine Optimization (GEO)", href: /generative-engine-optimization, cta: "See the GEO service", featured: true, meta: "AI Overviews, ChatGPT, Gemini", text: "Making your business easy for AI assistants to identify, describe and cite when someone asks for a recommendation in your area.", bullets: ["Entity consistency across the web", "Question-led content AI can quote", "Citations on sources AI tools trust", "Schema with sameAs links"] }
+      - { title: Local SEO in Dhaka, href: /local-seo-dhaka, cta: "See Local SEO in Dhaka", meta: "Area-level targeting", text: "The same system applied to Dhaka's crowded areas, from Gulshan and Banani to Dhanmondi, Uttara and Mirpur, where pin accuracy and landmark addresses decide a lot.", bullets: ["Area-level keyword sets", "English, Bangla and Banglish searches", "Landmark-style address handling", "Mobile-first page speed"] }
+      - { title: Free strategy call, href: /book-strategy-call, cta: Book a call, meta: "1-to-1, no hard pitch", text: "Not sure which service fits? Send your website or Maps link and we go through what is holding your visibility back, then agree a scope in writing.", bullets: ["Profile and website reviewed first", "Competitor gaps named", "Clear scope and price", "No lock-in contracts"] }
   - type: cards
     alt: true
     columns: 3
-    eyebrow: Why Work With Me
-    heading: "Built for serious businesses that want real results"
-    intro: "I work with a limited number of clients each month to ensure every business gets the attention and strategy it deserves."
+    eyebrow: Workstreams inside each engagement
+    heading: "What actually gets worked on, and why each part matters"
+    intro: "Google cross-checks your Business Profile against your website and the rest of the web. These workstreams are how that agreement is built. Most run inside the Local SEO service rather than being sold separately."
     items:
-      - { title: Focused on Local, text: "I don't do global enterprise SEO. Every strategy is built for local service businesses that need calls, not clicks." }
-      - { title: Results-Driven, text: "Rankings and visibility are tracked monthly. You see exactly what's improving and what we're fixing next." }
-      - { title: White-Hat Only, text: "No shortcuts, no black-hat tricks. Sustainable growth through proper technical foundations and quality signals." }
-      - { title: Direct Access, text: "You work directly with me, no account managers, no junior teams. Every recommendation comes from hands-on experience." }
-      - { title: "Bangladesh + Global", text: "Based in Bangladesh with clients worldwide. I understand local markets and international search landscapes." }
-      - { title: AI-Ready, text: "Every service now includes GEO and AIO preparation. Your business will be visible in AI-powered search results." }
+      - { title: "Reviews & reputation", text: "Review velocity, recency and rating are prominence signals, and they are what customers read before they call.", bullets: ["Review request links and QR codes", "Replies to every review, good and bad", "Monitoring on Google, Facebook and directories", "No incentivised or gated reviews"] }
+      - { title: "Citations & NAP consistency", href: /blog/local-citations-nap-consistency-guide, cta: "How citations and NAP work", text: "One business name, address and phone number everywhere it appears, so Google trusts which listing is real.", bullets: ["Bing Places and Apple Business Connect", "Facebook Page and industry directories", "Duplicate and outdated listing clean-up", "Bangladesh and country-specific directories"] }
+      - { title: "On-page SEO & local content", text: "Service pages and location pages that confirm what the profile claims, with title tags, H1s and internal links that match how people search.", bullets: ["One page per core service", "Area pages for places you really cover", "Near-me and service + city intent", "NAP and embedded map in the footer"] }
+      - { title: "Schema & entity SEO", text: "Structured data that states who you are, where you are and what you do, linked to your real profiles with sameAs.", bullets: ["LocalBusiness and the right subtype", "Organization and Person markup", "Service, FAQPage and BreadcrumbList", "Knowledge Graph alignment"] }
+      - { title: "Geo-grid rank tracking", text: "Rankings checked from points across your service area instead of one spot, so weak zones are visible and get fixed.", bullets: ["Baseline before any work", "Monthly re-scans", "Per-location grids for branches", "Paired with calls and direction requests"] }
+      - { title: "Measurement & reporting", text: "GBP Performance, Google Search Console and GA4 read together, so you see calls, clicks and bookings rather than vanity rankings.", bullets: ["Calls, direction requests, website clicks", "Organic rankings and conversions", "Reviews gained and replies sent", "Next month's plan in plain language"] }
+  - type: cards
+    columns: 3
+    eyebrow: Industries
+    heading: "Local SEO by industry"
+    intro: "The ranking factors are the same everywhere. The categories, services, search terms and trust signals are not, so each vertical has its own page."
+    items:
+      - { title: Home services, href: /seo-for-home-services, cta: "Home services SEO", text: "HVAC, plumbing, roofing, electricians, cleaning, pest control, moving and towing, where most calls go to the first three Maps results." }
+      - { title: Dental clinics, href: /industries/dental-seo, cta: "Dental SEO", text: "New-patient searches for scaling, root canal, braces, implants and emergency dentist near me." }
+      - { title: HVAC companies, href: /industries/hvac-seo, cta: "HVAC SEO", text: "AC repair, AC servicing, gas refill and 24-hour emergency searches, mostly from service-area businesses." }
+      - { title: Law firms, href: /industries/legal-seo, cta: "Legal SEO", text: "Practice-area pages and consultation searches, where reviews and credentials decide who gets the call." }
+      - { title: Wholesale distributors, href: /seo-for-wholesale-distributors, cta: "SEO for distributors", text: "B2B buyers searching by product, brand and region, with a different funnel from walk-in local businesses." }
+      - { title: All industries, href: /industries, cta: "Browse every industry", text: "Auto repair, healthcare, real estate, construction, contractors and more, each with its own categories and service vocabulary." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: Proof
+    heading: "Results these services have produced"
+    intro: "Real client numbers, each with the full story behind it."
+    items:
+      - { title: "461 calls from a Business Profile", href: /case-studies/gbp-calls-growth, cta: "GBP calls case study", meta: "+205% calls vs prior year", text: "An under-optimized profile turned into a steady source of calls between April and August 2024, with profile interactions up 62%." }
+      - { title: "Map Pack visibility across service areas", href: /case-studies/map-pack-service-areas, cta: "Service-area case study", meta: "+38% Map Pack visibility", text: "Five times as many areas ranking in the Top 3 on the geo-grid, and direction requests up 27%." }
+      - { title: "$72,412 in monthly Shopify sales", href: /case-studies/hamper-story, cta: "Hamper Story case study", meta: "+206% sales · +294% orders", text: "E-commerce SEO for a hamper store, turning organic visibility into orders." }
+      - { title: "976K organic clicks for a new site", href: /case-studies/techictalk-organic-growth, cta: "TechicTalk case study", meta: "30M+ impressions · DR 45+", text: "A tech media site taken from zero organic traffic through technical foundations, content and links." }
+      - { title: "From near zero to 3.93K clicks", href: /case-studies/data-driven-organic-growth, cta: "Data-driven SEO case study", meta: "8.3% average CTR", text: "47.4K impressions in six months from disciplined, data-led organic SEO." }
+      - { title: Every case study, href: /case-studies, cta: "See all case studies", text: "1.4M+ organic clicks generated and 68M+ search impressions earned for clients, with the method behind each result." }
+  - type: cards
+    columns: 3
+    eyebrow: Why work with me
+    heading: "How I work with clients"
+    intro: "I take on a limited number of clients each month so every account gets direct, hands-on attention."
+    items:
+      - { title: Focused on local, text: "I don't do global enterprise SEO. The work is built for businesses whose customers are nearby and pick up the phone." }
+      - { title: Measured monthly, text: "Rankings, calls and direction requests are tracked every month. You see what moved and what I am fixing next." }
+      - { title: White-hat only, text: "No keyword-stuffed business names, fake addresses, fake reviews or link networks. They work briefly, then get listings suspended." }
+      - { title: Direct access, text: "You work with me, not an account manager passing notes to a junior. Every recommendation comes from hands-on work." }
+      - { title: "Bangladesh + worldwide", text: "Based in Khulna division, Bangladesh, working with clients here and abroad. The ranking system is the same in any country; the search terms and directories change." }
+      - { title: Ready for AI search, text: "Clean entity data, schema and consistent citations help Google AI Overviews and assistants like ChatGPT describe your business correctly." }
   - type: prose
-    eyebrow: Services in Detail
-    heading: "Local SEO, website SEO, and AI search visibility: what each engagement covers"
-    intro: "A full breakdown of every workstream, signal, and deliverable included across Local SEO, Google Maps ranking, GBP optimization, technical SEO, and GEO / AIO / LLM search visibility."
+    eyebrow: Services in detail
+    heading: "What each engagement covers"
+    intro: "A plain breakdown of the work inside Local SEO, technical SEO and AI search visibility, and how the three fit together."
     blocks:
-      - heading: How my SEO services are structured
+      - heading: How the work is structured
         body:
-          - "Every engagement is built around a clear outcome, usually more qualified inbound calls, more booked jobs, or more pipeline-quality leads, and is broken into three coordinated workstreams: **Local SEO** (Google Business Profile + Maps), **Website SEO** (on-page + technical + content), and **AI Search Visibility** (GEO + AIO + LLM). You can hire any of them individually, but the strongest results come from running all three in parallel."
-          - "The reason is simple. Google's local algorithm cross-checks your GBP against your website, and AI search engines pull from both. Working on one in isolation is like training one leg at the gym: you'll move forward, just slower and with a limp."
-      - heading: Local SEO services in detail
+          - "Every engagement is built around one outcome, usually more qualified calls, bookings or direction requests, and split into three workstreams: **Local SEO** (Google Business Profile and Maps), **website SEO** (on-page, technical and content) and **AI search visibility** (GEO). You can hire any of them on its own, but they work best together."
+          - "The reason is how Google ranks local results: on [relevance, distance and prominence](https://support.google.com/business/answer/7091). The profile, the website and your citations all feed relevance and prominence, and AI tools pull from the same sources. If you want the background first, the [Local SEO guide for Bangladesh businesses](/blog/local-seo-bangladesh-guide) explains it from the start."
+      - heading: What Local SEO work includes
         bullets:
-          - "**Google Business Profile optimization**: categories, services, description, photos, posts, Q&A, products, attributes."
-          - "**Google Maps ranking**: geo-grid analysis, proximity engineering, service-area expansion, map pack tracking."
-          - "**GBP ranking maintenance**: weekly posts, photo cadence, owner Q&A, performance reporting on calls and directions."
-          - "**Citation building and NAP consistency**: Apple Maps, Bing Places, Yelp, Facebook, Yellow Pages, industry directories."
-          - "**Review and reputation strategy**: automated review requests, owner responses, sentiment monitoring."
-          - "**Local landing pages**: one optimized page per city, neighbourhood or service area, with unique copy and schema."
-      - heading: Website SEO and technical SEO
+          - "**Google Business Profile**: primary and additional categories, services, products, description, attributes, regular and special hours, photos and Google Posts. My [GBP optimization checklist](/blog/google-business-profile-optimization-checklist) lists every field."
+          - "**Google Maps ranking**: geo-grid baselines, accurate pin placement, service-area setup (up to 20 areas for a service-area business) and Map Pack tracking."
+          - "**Profile health**: verification (including live video verification), suspension appeals, duplicate listings and unwanted suggested edits."
+          - "**Citations and NAP**: Bing Places, Apple Business Connect, Facebook, Yelp and industry or country directories."
+          - "**Reviews**: request links, replies to every review and monitoring, within Google's rules on incentivised and gated reviews."
+          - "**Location and service pages**: one useful page per real service and area, with LocalBusiness schema."
+      - heading: Website and technical SEO
         body:
-          - "A website that ranks in 2026 has to be fast, semantically rich, and structured so both Google and LLMs can read it without guessing. That means clean information architecture, real Core Web Vitals work, proper schema, and content written for both humans and the new generation of AI answer engines."
+          - "A site that supports local rankings has to load fast on mobile data, be crawlable and indexable, and state its business facts in structured data. That means clean architecture, real Core Web Vitals work and schema that matches what the page shows."
         bullets:
-          - "**Technical SEO audit**: crawlability, indexation, canonicals, sitemaps, robots.txt, hreflang where relevant."
-          - "**Core Web Vitals**: LCP, CLS, INP tuned to green on mobile and desktop."
-          - "**On-page SEO**: titles, descriptions, headings, internal linking, image alts, semantic HTML."
-          - "**Schema markup**: LocalBusiness, Service, FAQPage, Article, BreadcrumbList, Review, Product where applicable."
-          - "**Content optimization**: search-intent matched copy, topic clusters, semantic SEO, content refresh cadence."
-      - heading: "AI search visibility: GEO, AIO and LLM optimization"
+          - "**Crawling and indexing**: robots.txt, meta robots, XML sitemaps, canonical tags, hreflang where a site has language versions."
+          - "**Core Web Vitals**: LCP, INP and CLS fixed on mobile first."
+          - "**On-page SEO**: title tags, meta descriptions, H1s, internal links, image alt text."
+          - "**Structured data**: LocalBusiness (or Dentist, Plumber, HVACBusiness and other subtypes), Service, FAQPage, BreadcrumbList, Article, Product where relevant."
+      - heading: "AI search visibility (GEO)"
         body:
-          - "Generative Engine Optimization (GEO) and AI Overview Optimization (AIO) are the new front door. When a prospect asks ChatGPT or Gemini for the best Local SEO expert in Bangladesh, you want your business to be the one quoted, not your competitor. The mechanics are different from classic SEO: entity clarity, structured data, citation hygiene on the sources these models actually trust, and content written in clean question-and-answer blocks."
+          - "When someone asks ChatGPT, Gemini, Perplexity or Bing Copilot for a recommendation, those tools lean on consistent facts from trusted sources. GEO makes your business easy to identify and quote: the same name, address, services and areas on your site, your profile and the directories they read. The [guide to AI search visibility for local businesses](/blog/ai-search-visibility-local-business) covers it in depth."
         bullets:
-          - "Entity consolidation across website, GBP, Wikipedia-grade sources, and major directories."
-          - "Schema enrichment to give LLMs unambiguous structured facts to quote."
-          - "FAQ and Q&A content engineered to be extracted into AI answers."
-          - "Brand citation building on the publications and aggregators LLMs train on."
-      - heading: "Reporting, transparency, and what you actually get"
+          - "Entity details made consistent across website, Business Profile and major directories."
+          - "Schema with sameAs links so assistants can connect your profiles."
+          - "Question-and-answer content that can be lifted into AI answers."
+          - "Mentions on publications and directories that AI tools cite."
+      - heading: "Reporting and what you get"
         body:
-          - "Every client receives a monthly report covering geo-grid rankings, calls and direction requests from GBP, organic traffic and keyword movements, technical SEO health, and a clear next-month plan. No jargon, no inflated screenshots, just the numbers that map to revenue. You can see the kind of results this produces on the [case studies page](/case-studies)."
+          - "Every client gets a monthly report: geo-grid rankings, calls and direction requests from the Business Profile, organic traffic and keyword movement from Search Console, technical health, and next month's plan. The proof section above shows what that reporting has looked like for real clients."
   - type: cta
-    heading: "Ready to grow your local visibility?"
-    intro: "Book a free strategy call and we'll map out exactly how to rank your business on Google Maps and bring in qualified inbound calls."
-faqHeading: "Everything You Need to Know About SEO Services"
+    heading: "Not sure where to start?"
+    intro: "Book a free strategy call and I'll tell you which service fits, what it would cost, and what is holding your Maps rankings back."
+faqHeading: "SEO Services: Frequently Asked Questions"
 faqs:
   - q: "Which SEO service should I start with?"
-    a: "Most local service businesses should start with Local SEO and Google Business Profile optimization, because that is where near-me searches and map pack calls come from. Website and technical SEO matter, but they compound the local work rather than replacing it."
+    a: "Most local service businesses should start with Local SEO and Google Business Profile optimization, because near-me searches and Map Pack calls come from there. Technical SEO and GEO add to that work rather than replacing it. If your site has indexing problems, those get fixed first."
+  - q: "What is the difference between Local SEO and GBP optimization?"
+    a: "Google Business Profile optimization works on the profile itself: categories, services, photos, posts and reviews. Local SEO includes that, plus citations, website pages, technical fixes, links and tracking, which is what wins competitive areas where a good profile alone is not enough."
   - q: "Do you work with businesses outside Bangladesh?"
-    a: "Yes. The Local SEO system is not country-specific, and past work covers clients in several markets. What matters is that you serve a defined geographic area, not where the business is registered."
+    a: "Yes. Google's local ranking system is the same in every country, and past work covers clients in several markets, including an e-commerce client in Singapore. What matters is that you serve a defined area, not where the business is registered. Calls run on WhatsApp or Zoom."
   - q: "Can I hire you for a one-off audit instead of ongoing work?"
-    a: "Yes. A standalone audit covers your Google Business Profile, map pack visibility, website structure, citations, and the specific gaps holding rankings back. Many clients start there before deciding on ongoing work."
+    a: "Yes. A standalone audit covers your Google Business Profile, Map Pack visibility on a geo-grid, website structure, citations and the specific gaps holding rankings back. Many clients start there before deciding on ongoing work."
   - q: "Do you handle the implementation or only the strategy?"
-    a: "Both are available. Some clients want the profile, citations, and on-page work done for them. Others have an in-house team and want the strategy, priorities, and review process. Say which you need on the call."
-  - q: "How much does it cost?"
-    a: "Packages start from $299. The final figure depends on how competitive your area is, how many locations or service areas you need to cover, and how much groundwork your profile and website still need. You get a specific number on the strategy call, not a range."
+    a: "Both are available. Some clients want the profile, citations and on-page work done for them. Others have an in-house team or developer and want the strategy, priorities and review of their work. Say which you need on the call."
+  - q: "How much do your SEO services cost?"
+    a: "Packages start from $299. The final figure depends on how competitive your category and area are, how many locations you cover, and how much groundwork your profile and website need. You get a specific number after the audit. See [what Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh)."
   - q: "How is this different from hiring an agency?"
-    a: "You work directly with the person doing the work. There is no account manager relaying instructions to a junior executor, and the focus stays on Local SEO rather than spreading across paid ads, social, and design."
+    a: "You work directly with the person doing the work. There is no account manager relaying instructions, and the focus stays on local search instead of spreading across ads, social and design. The trade-offs are covered in [SEO specialist vs agency](/blog/seo-specialist-vs-agency-bangladesh)."
+  - q: "Can you guarantee first place on Google Maps?"
+    a: "No. Google states there is no way to pay for or request a better local ranking, and distance from the searcher is outside anyone's control. What I commit to is the work, done within Google's guidelines, and honest reporting on calls and rankings."
   - q: "What do you need from me to get started?"
-    a: "Access to your Google Business Profile, your website, and any analytics or Search Console you already have. If some of that is missing or you have lost access, that gets sorted during onboarding."
-related: [gbp, local-seo-service, cases, about, book, contact]
+    a: "Manager access to your Google Business Profile, access to your website, and Google Search Console and GA4 if you have them. If some of that is missing or you have lost access, it gets sorted during onboarding."
+related: [local-seo-service, gbp, technical, industries, cases, book]
 finalCta:
-  heading: "Ready to Boost Your Local Search Visibility?"
-  text: "Whether you need Google Maps ranking, GBP optimization, website SEO, or AI search visibility, start with a free consultation or audit. No spam. No hard pitch. Just a focused, useful conversation."
+  heading: "Find out what is holding your local visibility back"
+  text: "Start with a free audit of your Business Profile and website, or book a call to talk it through. No spam and no hard pitch."
   buttons:
     - { label: Get Free Local SEO Audit, href: "/#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call }

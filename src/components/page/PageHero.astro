@@ -63,10 +63,10 @@ const sc = p.heroShowcase;
         )
       }
       {p.eyebrow && <p class="eyebrow" data-reveal>{p.eyebrow}</p>}
-      <h1 id="page-title" data-reveal style="--d:1">
+      <h1 id="page-title">
         {h1Parts ? (<>{h1Parts[0]}<span class="em">{p.em}</span>{h1Parts.slice(1).join(p.em)}</>) : p.h1}
       </h1>
-      {p.lead && <p class="lead" data-reveal style="--d:2" set:html={md(p.lead)} />}
+      {p.lead && <p class="lead" set:html={md(p.lead)} />}
       {p.sub && <p class="phero__sub" data-reveal style="--d:2" set:html={md(p.sub)} />}
       {
         p.heroBullets && (
@@ -120,12 +120,12 @@ const sc = p.heroShowcase;
     <div class="show" data-reveal style="--d:2" data-tilt>
       <a class="show__main" href={sc.href ?? "/case-studies"} aria-label={`${sc.mainLabel}: open the case study`}>
         <span class="show__bar" aria-hidden="true"><i /><i /><i /><b>{sc.mainLabel}</b></span>
-        <Image src={img(sc.main)} alt={sc.mainLabel} widths={[480, 720, 960]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" fetchpriority="high" class="show__img" />
+        <Image src={img(sc.main)} alt={sc.mainLabel} widths={[400, 560, 800]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" decoding="async" class="show__img" />
       </a>
       {
         sc.side && (
           <figure class="show__side">
-            <Image src={img(sc.side)} alt={sc.sideLabel ?? ""} width={320} height={320} loading="eager" />
+            <Image src={img(sc.side)} alt={sc.sideLabel ?? ""} width={240} height={240} loading="lazy" decoding="async" />
             {sc.sideLabel && <figcaption>{sc.sideLabel}</figcaption>}
           </figure>
         )
@@ -239,22 +239,16 @@ const sc = p.heroShowcase;
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: conic-gradient(from var(--a, 0deg), transparent 0 72%, var(--accent) 82%, transparent 92%);
+    background: linear-gradient(110deg, transparent 30%, rgb(200 48 29 / 55%) 60%, transparent 85%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: qSpin 6s linear infinite;
     pointer-events: none;
   }
-  @property --a {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-  }
-  @keyframes qSpin {
-    to {
-      --a: 360deg;
-    }
+  .qform__bar:focus-within {
+    box-shadow:
+      0 0 0 4px rgb(200 48 29 / 12%),
+      var(--shadow-lg);
   }
   @media (min-width: 640px) {
     .qform__bar {
@@ -526,7 +520,6 @@ const sc = p.heroShowcase;
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    .qform__bar::before,
     .show__side,
     .show__chip {
       animation: none;

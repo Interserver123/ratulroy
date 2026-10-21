@@ -1,50 +1,65 @@
-title: "Blog | Local SEO Resources by Ratul Roy"
-description: "Read Local SEO, Google Maps ranking, GBP optimization, website SEO, and AI search visibility insights from Ratul Roy, Local SEO Expert in Bangladesh."
+title: "Local SEO Blog: Google Maps, GBP and AI Search Guides"
+description: "Local SEO guides by Ratul Roy: Google Business Profile, Google Maps ranking, citations, SEO costs in Bangladesh and AI search. Written from real client work."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Blog, href: /blog }
 eyebrow: SEO Resources
 h1: "Local SEO Insights, Google Maps Strategies & AI Search Resources"
 em: "Local SEO Insights"
-lead: "Actionable guides, case breakdowns, and expert insights on Local SEO, Google Maps ranking, Google Business Profile optimization, website SEO, and AI-driven search visibility."
+lead: "Practical guides on Local SEO, Google Maps ranking, Google Business Profile optimization, website SEO and AI search visibility, written from the work I do for service businesses every week."
 heroChips: ["Local SEO", "Google Maps Ranking", "GBP Optimization", "AI Search Visibility", "Website SEO"]
 ctas:
   - { label: Read the complete guide, href: /blog/local-seo-bangladesh-guide }
   - { label: Get Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "This blog is a library of Local SEO guides for business owners in Bangladesh and beyond. It explains how Google ranks businesses in the Map Pack (relevance, distance and prominence), how to optimize a Google Business Profile, what SEO costs, how long it takes and how to get cited in AI answers from Google, ChatGPT and Gemini."
 sections:
   - type: prose
     alt: true
     eyebrow: About This Blog
-    heading: "A practical resource hub for Local SEO, Google Maps, and AI search"
-    intro: "Field-tested guides on Local SEO, Google Maps ranking, Google Business Profile optimisation, website SEO, technical SEO, and AI search visibility, written for service-business owners and marketing leads in Bangladesh."
+    heading: "Where to start, by the question you have"
+    intro: "Every article is written for one reader: a service-business owner or marketing lead who wants the phone to ring more often. Pick the question closest to yours."
     blocks:
-      - heading: "What you'll find on this blog"
+      - heading: "New to Local SEO?"
         body:
-          - "Every article here is written for one reader: a service-business owner or marketing lead in Bangladesh who wants their phone to ring more often. No keyword stuffing, no SEO theatre, just practical, field-tested guides on Local SEO, Google Maps ranking, Google Business Profile optimisation, website SEO, technical SEO, and the rapidly emerging world of AI search visibility (GEO, AIO, and LLM citations)."
-          - "If you've ever wondered why a competitor with a worse offer keeps showing up above you on Google Maps, or why your beautifully designed website still doesn't bring in calls, the answer is almost certainly hiding inside one of these posts."
+          - "Start with the 8-part series, opening with [Local SEO in Bangladesh: the complete guide](/blog/local-seo-bangladesh-guide). It moves from [what Local SEO is](/blog/what-is-local-seo-bangladesh) to how it works, why it matters, how it compares with Google Ads, what it costs and how long it takes. Read it in order and each part builds on the last."
+      - heading: "Not showing on Google Maps?"
+        body:
+          - "If a competitor with a weaker offer keeps appearing above you, the cause is usually in your profile, your citations or your reviews. Begin with [why your business is not showing up on Google Maps](/blog/why-my-business-not-showing-google-maps), then work through the [Google Business Profile optimization checklist](/blog/google-business-profile-optimization-checklist) and the guide to [local citations and NAP consistency](/blog/local-citations-nap-consistency-guide)."
+      - heading: "Hiring an SEO specialist?"
+        body:
+          - "Read [how to choose an SEO specialist in Bangladesh](/blog/how-to-choose-seo-specialist-bangladesh) and the honest breakdown of [what SEO costs in Bangladesh](/blog/seo-cost-bangladesh) before you compare quotes."
+      - heading: "Worried about AI search?"
+        body:
+          - "Google AI Overviews, ChatGPT search, Gemini and Perplexity now answer local questions directly. The guide to [AI search visibility for local businesses](/blog/ai-search-visibility-local-business) covers how to get your business cited."
       - heading: "Topics covered in depth"
         bullets:
-          - "**Local SEO fundamentals:** relevance, distance, prominence, and how Google's local algorithm actually works."
-          - "**Google Maps ranking:** geo-grid tracking, proximity engineering, service-area optimisation."
-          - "**Google Business Profile:** categories, services, posts, photos, Q&A, products, attributes."
-          - "**Website SEO:** on-page, content, internal linking, semantic SEO, and topical authority."
-          - "**Technical SEO:** Core Web Vitals, crawlability, indexation, schema markup, and structured data."
-          - "**AI search visibility:** GEO, AIO, LLM citation building, and how to be quoted by ChatGPT, Gemini, and Perplexity."
-          - "**Case studies:** real growth curves, real GSC screenshots, real lessons."
-      - heading: "How to use these articles"
+          - "**Local SEO fundamentals:** relevance, distance, prominence, and how Google's local algorithm works."
+          - "**Google Maps ranking:** geo-grid tracking, service-area optimization, Map Pack and Local Finder visibility."
+          - "**Google Business Profile:** categories, services, products, posts, photos, attributes, reviews and owner replies."
+          - "**Website SEO:** on-page, content, internal linking, semantic SEO and topical authority."
+          - "**Technical SEO:** Core Web Vitals, crawlability, indexing, schema markup and structured data."
+          - "**AI search visibility:** GEO, AI Overviews and how to be quoted by ChatGPT, Gemini and Perplexity."
+      - heading: "Want it done for you?"
         body:
-          - "Read the post that maps to your biggest current problem, ship the fixes, then come back for the next one. If you'd rather have someone do the work for you, every article links back to the relevant service and to the [strategy call](/book-strategy-call)."
+          - "Read the post that matches your biggest problem, ship the fixes, then come back for the next one. If you would rather hand the work over, see my [Local SEO service](/local-seo-service), browse [real case studies](/case-studies) or [book a strategy call](/book-strategy-call)."
   - type: cta
-    heading: "Need Help Turning SEO Knowledge Into Real Local Growth?"
-    intro: "If you want a clear strategy for Google Maps ranking, Google Business Profile optimization, website SEO, and AI search visibility, start with a free audit."
+    heading: "Need help turning SEO knowledge into local growth?"
+    intro: "If you want a clear plan for Google Maps ranking, Google Business Profile optimization, website SEO and AI search visibility, start with a free audit."
     buttons:
       - { label: Get Free Local SEO Audit, href: "/#free-audit" }
       - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
+faqHeading: "Questions About These Local SEO Guides"
+faqs:
+  - { q: "Who writes the articles on this blog?", a: "I do. I'm Ratul Roy, an independent Local SEO specialist based in Bangladesh, and every article comes from client work on Google Business Profiles, Google Maps rankings and websites. Nothing is outsourced or auto-generated." }
+  - { q: "Are these guides only for businesses in Bangladesh?", a: "Many examples use Dhaka, Chattogram and other Bangladeshi cities, but Google's local ranking factors are the same worldwide. The GBP checklist, citation guide and Maps troubleshooting apply to any local business." }
+  - { q: "Where should I start if I know nothing about Local SEO?", a: "Start with [the complete Local SEO guide](/blog/local-seo-bangladesh-guide), the first part of an 8-part series. It explains what Local SEO is, how Google ranks local businesses, and what to fix first, in plain English." }
 pricing: none
-related: [services, local-seo-service, cases, about, book, contact]
+related: [guide, local-seo-service, gbp, cases, about, book]
+updated: 2026-10-21
 finalCta:
   heading: "Ready to grow your local visibility?"
-  text: "Book a free strategy call and we'll map out exactly how to rank your business on Google Maps and bring in qualified inbound calls."
+  text: "Book a free strategy call and I'll map out how to rank your business on Google Maps and bring in more qualified inbound calls."
   buttons:
     - { label: Book strategy call, href: /book-strategy-call }
     - { label: Get free SEO audit, href: "/#free-audit", style: ghost }

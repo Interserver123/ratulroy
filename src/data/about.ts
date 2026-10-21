@@ -7,6 +7,7 @@ export const quickFacts = [
   "243 reviews",
   "2 years at Netmark",
   "Founder of DigiPolli",
+  "Based in Bagerhat, Bangladesh",
 ];
 
 export const factSheet = [
@@ -20,12 +21,12 @@ export const journey = [
   {
     label: "Step 1",
     title: "Started SEO at age 16",
-    text: "Began testing how search engines rank businesses, pages, and local results while still in school.",
+    text: "Began testing why some businesses, pages and local listings rank on Google while others never appear, while still in school.",
   },
   {
     label: "Step 2",
     title: "Gov PC College",
-    text: "Balanced education with hands-on SEO learning, freelance projects, and real client work.",
+    text: "Balanced college studies with hands-on SEO, freelance projects and real client work.",
   },
   {
     label: "Step 3",
@@ -35,17 +36,17 @@ export const journey = [
   {
     label: "Step 4",
     title: "Netmark",
-    text: "Two years as an SEO Strategist, working on competitive campaigns and ranking systems.",
+    text: "Two years as an SEO Strategist at an agency, working on competitive campaigns and ranking systems.",
   },
   {
     label: "Step 5",
     title: "DigiPolli",
-    text: "Founded DigiPolli to focus on Local SEO, Google Maps visibility, and search growth for service businesses.",
+    text: "Founded DigiPolli to focus on Local SEO, Google Business Profile optimization and Google Maps visibility for service businesses in Bangladesh and abroad.",
   },
   {
     label: "Now",
     title: "Islamic University (ICT)",
-    text: "Continuing academic growth while applying analytical thinking to local ranking systems and AI search visibility.",
+    text: "Studying ICT while applying the same analytical thinking to local rankings and AI search visibility for clients.",
   },
 ];
 
@@ -53,12 +54,12 @@ export const credentials = [
   {
     value: "Level 2",
     title: "Fiverr Level 2 Seller",
-    text: "Verified freelance credibility earned through consistent SEO delivery and client satisfaction.",
+    text: "A seller level Fiverr awards for consistent on-time delivery and client ratings over time.",
   },
   {
     value: "4.9★",
     title: "Average rating",
-    text: "Trusted by clients for communication, execution quality, and SEO strategy.",
+    text: "Clients rate the communication, the quality of execution and the strategy behind it.",
   },
   {
     value: "243",
@@ -78,22 +79,22 @@ export const credentials = [
   {
     value: "Local",
     title: "SEO specialist",
-    text: "Focused on visibility, trust signals, and qualified inbound calls for local businesses.",
+    text: "One specialty: Google Maps visibility, trust signals and qualified inbound calls for local businesses.",
   },
 ];
 
 export const method = [
   {
     title: "Local-first strategy",
-    text: "Built around how people search for services: by city, area, urgency, trust, and “near me” intent.",
+    text: "Built around how people search for services: by city, area, urgency, trust and “near me” intent, in English, Bangla or the local language of your market.",
   },
   {
     title: "Maps + website connection",
-    text: "Your Google Business Profile and website support each other through categories, service pages, local content, schema, and internal links.",
+    text: "Your Google Business Profile and website should say the same thing: matching categories and service pages, consistent NAP, LocalBusiness schema and internal links.",
   },
   {
     title: "Entity & trust signals",
-    text: "Google and AI platforms need clear signals about who you are, what you offer, where you serve, and why you can be trusted.",
+    text: "Google, ChatGPT and Gemini need clear, consistent signals about who you are, what you offer, where you serve and why you can be trusted.",
   },
   {
     title: "Revenue-focused SEO",
@@ -193,26 +194,30 @@ export const expectations = [
 export const aboutFaqs = [
   {
     q: "Who is Ratul Roy?",
-    a: "Ratul Roy is a Local SEO specialist in Bangladesh and the founder of DigiPolli. He helps local service businesses improve Google Maps visibility, strengthen website SEO, and turn local searches into qualified inbound calls.",
+    a: "Ratul Roy is a Local SEO specialist based in Bagerhat, Khulna division, Bangladesh, and the founder of DigiPolli. He helps local service businesses in Bangladesh and worldwide improve Google Maps visibility, optimize their Google Business Profile, strengthen website SEO and turn local searches into qualified inbound calls.",
   },
   {
     q: "What experience does Ratul have?",
-    a: "Ratul started SEO at age 16, spent two years as an SEO Strategist at Netmark, and is a Fiverr Level 2 Seller with a 4.9★ rating across 243 reviews.",
+    a: "Ratul started SEO at age 16, spent two years as an SEO Strategist at Netmark, and is a Fiverr Level 2 Seller with a 4.9★ rating across 243 reviews. He studied at Gov PC College and is studying ICT at Islamic University, and now runs DigiPolli.",
+  },
+  {
+    q: "Where is Ratul Roy based, and does he work with clients abroad?",
+    a: "Ratul works from Bagerhat in Bangladesh's Khulna division. He takes on businesses across Bangladesh, including Dhaka, and service companies in other countries. All work is done remotely, with reporting from Google Business Profile, Search Console and geo-grid rank tracking.",
   },
   {
     q: "Will I work with Ratul directly?",
-    a: "Yes. Clients work with Ratul directly, not through an account manager.",
+    a: "Yes. Clients work with Ratul directly, not through an account manager passing notes. The person who audits your Google Business Profile and website is the same person who does the work and explains the results to you.",
   },
   {
     q: "Are there long-term contracts?",
-    a: "No. Engagements are month-to-month, with written deliverables, timelines, and KPIs tied to revenue.",
+    a: "No. Engagements are month-to-month, with written deliverables, timelines and KPIs tied to revenue. The work has to keep earning the relationship, so you can stop at any time without a lock-in period.",
   },
   {
     q: "Which businesses is Ratul the best fit for?",
-    a: "Local service businesses that depend on local trust, service-area visibility, phone calls, appointment bookings, and high-intent searches.",
+    a: "Local service businesses that depend on phone calls, appointment bookings and walk-ins: home services such as plumbing, HVAC and electrical work, plus dental clinics, healthcare practices, law firms and other businesses that win or lose on high-intent local searches.",
   },
   {
     q: "How do we get started?",
-    a: "Start with a free Local SEO audit or book a strategy call. The audit reviews your Google Business Profile, website SEO, Google Maps visibility, competitors, citations, reviews, and AI search readiness.",
+    a: "Start with a free Local SEO audit or book a strategy call. The audit reviews your Google Business Profile, website SEO, Google Maps visibility, competitors, citations, reviews and AI search readiness, and ends with a prioritized list of fixes.",
   },
 ];

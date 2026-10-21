@@ -26,9 +26,9 @@ const groups = [
         <p class="eyebrow">Verified SEO Results · Client-Approved Previews</p>
         <h2 id="results-title">Real Ranking Screenshots. <span class="em">Real Search Visibility Growth.</span></h2>
         <p>
-          Selected website SEO and Google Business Profile ranking results pulled directly from
-          Google Search Console, GBP Insights and geo-grid trackers. Brand details are masked to
-          protect client confidentiality, the data is real.
+          Website SEO and Google Business Profile results taken straight from Google Search Console,
+          GBP Insights and geo-grid trackers. Brand details are masked to protect clients; the
+          numbers are real.
         </p>
         <ul class="chips">
           <li class="chip">Verified GSC &amp; GBP data</li>
@@ -79,14 +79,8 @@ const groups = [
 
     {
       groups.map((g, gi) => (
-        <ul
-          id={`rpanel-${g.key}`}
-          class="res-track"
-          role="tabpanel"
-          aria-labelledby={`rtab-${g.key}`}
-          hidden={gi !== 0}
-          data-rpanel={g.key}
-        >
+        <div id={`rpanel-${g.key}`} role="tabpanel" aria-labelledby={`rtab-${g.key}`} hidden={gi !== 0} data-rpanel={g.key}>
+        <ul class="res-track">
           {g.items.map((r) => (
             <li class="card result">
               {r.thumb && (
@@ -99,7 +93,7 @@ const groups = [
                 <span class="chip">{r.period}</span>
                 <span class="result__src">Source: {r.source ?? "Google Search Console"}</span>
               </div>
-              <h4>{r.title}</h4>
+              <h3 class="result__title">{r.title}</h3>
               <p class="result__metric">{r.metric}</p>
               <p>{r.text}</p>
               <ul class="chips">
@@ -110,6 +104,7 @@ const groups = [
             </li>
           ))}
         </ul>
+        </div>
       ))
     }
 
@@ -186,7 +181,8 @@ const groups = [
     panels.forEach((p, k) => {
       p.hidden = k !== i;
       if (k === i) {
-        p.scrollLeft = 0;
+        const t = p.querySelector<HTMLElement>(".res-track");
+        if (t) t.scrollLeft = 0;
         p.animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }], {
           duration: 400,
           easing: "cubic-bezier(.22,1,.36,1)",
@@ -205,7 +201,7 @@ const groups = [
   });
   document.querySelectorAll<HTMLButtonElement>(".res-btn").forEach((b) =>
     b.addEventListener("click", () => {
-      const track = current();
+      const track = current()?.querySelector<HTMLElement>(".res-track");
       const card = track?.querySelector("li");
       const step = (card?.getBoundingClientRect().width ?? 320) + 18;
       track?.scrollBy({ left: step * Number(b.dataset.dir), behavior: "smooth" });
@@ -465,7 +461,7 @@ const groups = [
     color: var(--dim);
     text-align: right;
   }
-  .result h4 {
+  .result .result__title {
     font-size: 1.08rem;
   }
   .result__metric {

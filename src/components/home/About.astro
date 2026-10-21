@@ -13,8 +13,8 @@ const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), al
         <p class="eyebrow">Trusted By</p>
         <h2 id="trusted-title">Brands That Count on Us</h2>
         <p>
-          Selected businesses and projects that trusted Ratul Roy's SEO execution, Local SEO
-          systems, and search visibility strategy.
+          Businesses and projects that hired Ratul Roy for Local SEO, Google Business Profile work
+          and organic search growth.
         </p>
         <div class="logos">
           {[0, 1].map((copy) => (
@@ -43,8 +43,8 @@ const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), al
       My fascination with how businesses get found online started in school, testing what makes one
       show up and another disappear. That curiosity carried through my ICT studies at Islamic
       University, sharpened over two years at Netmark, and proved itself on Fiverr as a Level 2
-      seller. Today I run DigiPolli, focused on one thing: helping local businesses dominate Maps,
-      organic, and AI search with a singular focus on revenue.
+      seller. Today I run DigiPolli from Bagerhat with one job: getting local businesses found on
+      Google Maps, in organic results and in AI answers, and judging the work by revenue.
     </p>
 
     <div class="cred card" data-reveal>
@@ -153,7 +153,8 @@ const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), al
     text-align: center;
   }
   :global(.statement.is-live) :global(.hl-word) {
-    color: #c4ccc9;
+    /* dimmed but still readable (WCAG AA 4.5:1 on --bg) until highlighted */
+    color: #66726f;
     transition: color 0.35s;
   }
   :global(.statement.is-live) :global(.hl-word.on) {

@@ -45,7 +45,11 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
               )}
               {s.blocks?.map((b, bi) => (
                 <div class="prose__block">
-                  <h3><span class="prose__n num">{pad(bi)}</span>{b.heading}</h3>
+                  {s.heading ? (
+                    <h3><span class="prose__n num">{pad(bi)}</span>{b.heading}</h3>
+                  ) : (
+                    <h2 class="prose__h"><span class="prose__n num">{pad(bi)}</span>{b.heading}</h2>
+                  )}
                   {b.body?.map((p) => <p set:html={md(p)} />)}
                   {b.bullets && (
                     <ul class="checklist">
@@ -522,7 +526,8 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
     padding-top: 26px;
     border-top: 1px solid var(--line);
   }
-  .prose__block h3 {
+  .prose__block h3,
+  .prose__block .prose__h {
     display: flex;
     align-items: center;
     gap: 12px;

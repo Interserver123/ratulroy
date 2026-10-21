@@ -12,28 +12,28 @@ faqs:
   - q: "Is Local SEO cheaper than Google Ads?"
     a: "Over time, usually yes. Local SEO has an up-front cost in time or fees but no per-click charge, so the cost per customer tends to fall as results build. Ads charge for every click, indefinitely."
   - q: "Can I run Google Ads from Bangladesh?"
-    a: "Yes. You need a Google Ads account and a payment method Google accepts, usually a credit or debit card. Some local cards need international transactions enabled before they work."
+    a: "Yes. You need a Google Ads account and a payment method Google accepts, usually a credit or debit card. Some local cards need international transactions enabled before they work, so check with your bank before launching a campaign around a deadline."
   - q: "Do Google Ads improve my Google Maps ranking?"
-    a: "No. Paid ads and organic local rankings are separate systems. Ads can bring more people to your business, but paying for ads does not raise your map pack position."
+    a: "No. Paid ads and organic local rankings are separate systems. Ads can bring more people to your business, but paying for ads does not raise your map pack position. Google states plainly that there is no way to pay for a better local ranking."
   - q: "Should a new business start with ads or Local SEO?"
-    a: "Often both: ads for immediate customers while the profile is set up, verified and starts collecting reviews, then shifting budget toward Local SEO as organic visibility builds."
+    a: "Often both. Use ads for immediate customers while the Google Business Profile is set up, verified and starts collecting reviews, then shift budget toward Local SEO as organic visibility builds and the map pack starts producing calls on its own."
+  - q: "Can I stop Google Ads once my Local SEO is working?"
+    a: "Often you can reduce them. Once your Business Profile holds a Top 3 map pack position in an area, paying for clicks on the same searches there adds less. Many businesses keep a smaller budget for areas, services or seasons where organic visibility is still weak."
 ---
 
-When a business in Bangladesh wants more customers from Google, it faces a choice: pay for ads and appear tomorrow, or invest in Local SEO and appear without paying per click, but later. Both have their place. This guide compares them on the things that actually matter to a business owner: cost, speed, trust, control, and what you are left with when you stop.
+Google Ads is better when you need customers immediately, are testing demand or have a short-term offer. Local SEO is better for steady, long-term customer flow at a lower cost per customer, because map pack calls have no per-click charge. For most local businesses in Bangladesh, Local SEO is the foundation and ads go selectively on top.
 
-## The short answer
-
-> Google Ads is better when you need customers immediately, are testing demand, or have a short-term offer. Local SEO is better for steady, long-term customer flow at a lower cost per customer. For most local businesses the strongest position is Local SEO as the foundation, with ads used selectively on top.
+When a business here wants more customers from Google, it faces a choice: pay for ads and appear tomorrow, or invest in Local SEO and appear without paying per click, but later. Both have their place. This guide, part 6 of the [Local SEO in Bangladesh series](/blog/local-seo-bangladesh-guide), compares them on the things that actually matter to a business owner: cost, speed, trust, control, and what you are left with when you stop.
 
 ## How Google Ads works locally
 
-With Google Ads you bid to appear in the sponsored positions for chosen searches, usually above the map pack. You pay each time someone clicks. You can target by location, time of day and device, and you can switch campaigns on the same day. Results are fast and measurable, and they stop the moment the budget does.
+With Google Ads you bid to appear in the sponsored positions for chosen searches, usually above the map pack. You pay each time someone clicks. You can target by location, time of day and device, link your Business Profile as a location asset so ads show your address and distance, and switch campaigns on the same day. Results are fast and measurable, and they stop the moment the budget does.
 
 Google also offers a pay-per-lead format called Local Services Ads in some countries, but it is not available in Bangladesh, so for local businesses here paid search means standard search ads.
 
 ## How Local SEO compares
 
-Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in [How Local SEO Works in Bangladesh](/blog/how-local-seo-works-bangladesh).
+Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in [How Local SEO Works in Bangladesh](/blog/how-local-seo-works-bangladesh), and the wider SEO comparison in part 5, [Local SEO vs Traditional SEO](/blog/local-seo-vs-traditional-seo).
 
 ## Cost: renting versus owning
 
@@ -47,9 +47,9 @@ Ads win on speed without question. A campaign can be running within a day. Local
 
 ## Trust and attention
 
-Many searchers recognise sponsored results, and some deliberately scroll past them to the map and the reviews. A map listing with strong reviews carries a credibility an ad cannot buy, because customers know it was earned. That said, ads appear first, and for urgent needs some people simply call the first number they see.
+Many searchers recognise sponsored results, and some deliberately scroll past them to the map and the reviews. A map listing with strong reviews carries a credibility an ad cannot buy, because customers know it was earned. That said, ads appear first, and for urgent needs some people simply call the first number they see. Google also states that there is no way to pay for a better local ranking, so ad spend never buys you a place in the map pack itself.
 
-The map pack also shows more at a glance: star rating, number of reviews, opening hours, distance and photos. An ad shows a headline and a line of text. For a customer choosing between local providers, that difference matters.
+The map pack also shows more at a glance: star rating, number of reviews, opening hours, distance and photos. An ad shows a headline and a line of text. For a customer choosing between local providers, that difference matters. In the [GBP calls growth case study](/case-studies/gbp-calls-growth), an optimised profile produced 461 calls in five months without a per-click cost.
 
 ## Bangladesh-specific considerations
 
@@ -76,7 +76,7 @@ The map pack also shows more at a glance: star rating, number of reviews, openin
 
 ## Using both together
 
-The two work well in combination. Ads can cover the searches and areas where your organic visibility is still weak while Local SEO builds. Ads data shows which searches actually convert, which guides the Local SEO work. And as the map listing strengthens, you can reduce ad spend in the areas where you already rank, rather than paying for clicks you would have received anyway.
+The two work well in combination. Ads can cover the searches and areas where your organic visibility is still weak while Local SEO builds. Ads data shows which searches actually convert, which guides the Local SEO work. And as the map listing strengthens, you can reduce ad spend in the areas where you already rank, rather than paying for clicks you would have received anyway. If you would rather have the organic side handled while you run the ads, see the [Local SEO service](/local-seo-service).
 
 ## Mistakes to avoid
 

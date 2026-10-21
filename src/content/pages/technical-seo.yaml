@@ -1,5 +1,5 @@
-title: "Technical SEO Service | Crawl, Index & Speed Fixes"
-description: "Technical SEO service that fixes crawling, indexing, Core Web Vitals, structured data and site architecture so your pages can rank. Audit or done-for-you. From $299."
+title: "Technical SEO Service: Crawling, Indexing & Core Web Vitals"
+description: "Technical SEO service that fixes crawling, indexing, canonicals, Core Web Vitals and LocalBusiness schema, verified in Search Console. Audits from $299."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
@@ -7,7 +7,7 @@ breadcrumb:
 eyebrow: Technical SEO
 h1: "Technical SEO Service That Removes What Is Blocking Your Rankings"
 em: "Removes What Is Blocking"
-lead: "A technical SEO service that fixes crawling, indexing, Core Web Vitals, structured data and site architecture, so the content and local signals you already have can actually count."
+lead: "Crawling, indexing, Core Web Vitals, structured data and site architecture fixed, so the content and local signals you already have can actually count. Diagnosed by me, fixed directly or specified for your developer."
 heroChips: ["Audit or done-for-you", "Developer-ready specs", "From $299"]
 heroImage: "results/website/website-result-3.png"
 heroStats:
@@ -17,39 +17,79 @@ heroStats:
 ctas:
   - { label: Get a technical SEO audit, href: /book-strategy-call }
   - { label: See all SEO services, href: /services, style: ghost }
+updated: 2026-10-21
+entities:
+  - { name: Search engine optimization, sameAs: "https://en.wikipedia.org/wiki/Search_engine_optimization" }
+  - { name: Web crawler, sameAs: "https://en.wikipedia.org/wiki/Web_crawler" }
+  - { name: robots.txt, sameAs: "https://en.wikipedia.org/wiki/Robots.txt" }
+  - { name: Schema.org, sameAs: "https://en.wikipedia.org/wiki/Schema.org" }
+intro:
+  - "**What is technical SEO?** Technical SEO is the work that lets Google crawl, render, index and understand a website: robots.txt, XML sitemaps, canonical tags, redirects, internal links, Core Web Vitals (LCP, INP, CLS), mobile rendering and structured data. It does not write content or earn reviews. It removes the faults that stop both from counting."
 sections:
   - type: problems
     eyebrow: Does this sound familiar
-    heading: "Most people search for this because something already broke"
+    heading: "Why are my pages not ranking, or not in Google at all?"
     intro: "You rarely go looking for technical SEO in the abstract. You go looking because a page vanished, traffic dropped, or the site feels slow. Here is what usually sits behind each of those."
     items:
-      - { title: "Pages are live but missing from Google", text: "**Usual cause:** blocked in robots.txt, marked noindex, orphaned with no internal links, or the canonical points somewhere else." }
-      - { title: "The site is slow, especially on phones", text: "**Usual cause:** unoptimised images, render-blocking scripts, layout that shifts while loading. Core Web Vitals fail and mobile users leave first." }
-      - { title: "Traffic fell without a content change", text: "**Usual cause:** a migration broke redirects, a plugin changed output sitewide, or duplicate URLs started competing with each other." }
+      - { title: "Pages are live but missing from Google", text: "**Usual cause:** blocked in robots.txt, a stray noindex tag, orphaned with no internal links, or a canonical tag pointing to a different URL. Search Console shows it as \"Crawled, currently not indexed\" or \"Excluded by noindex\"." }
+      - { title: "The site is slow, especially on phones", text: "**Usual cause:** oversized images, render-blocking scripts, heavy page builders and layout that shifts while loading. Core Web Vitals fail, and visitors on mobile data leave first." }
+      - { title: "Traffic fell without a content change", text: "**Usual cause:** a migration broke redirects, a plugin changed output sitewide, or duplicate URLs (www and non-www, http and https, tracking parameters) started competing with each other." }
       - { title: "Rich results never appear", text: "**Usual cause:** structured data missing, invalid, or describing something the page does not visibly contain." }
+      - { title: "Location pages exist but never rank", text: "**Usual cause:** near-identical city pages with the name swapped, no internal links pointing to them, or left out of the XML sitemap." }
+      - { title: "Content only appears after JavaScript runs", text: "**Usual cause:** service text, links or prices injected client-side, so the HTML Google first receives is close to empty." }
   - type: cards
     alt: true
     columns: 3
     eyebrow: What is covered
-    heading: "Six areas, worked in order of impact"
+    heading: "Six areas of technical SEO, worked in order of impact"
     intro: "Crawling and indexing come first, because nothing else matters until your pages are eligible to rank at all."
     items:
-      - { title: "Crawling & indexing", text: "Making sure Google can reach every page you want ranked, and none you do not.", bullets: ["robots.txt and meta robots audit", "XML sitemap accuracy and coverage", "Index bloat and orphan page detection", "Search Console coverage error resolution"] }
-      - { title: "Core Web Vitals & speed", text: "Fixing what actually moves LCP, CLS and INP rather than chasing a score.", bullets: ["Largest Contentful Paint diagnosis", "Layout shift and render-blocking fixes", "Image format, sizing and lazy loading", "JavaScript and CSS payload reduction"] }
-      - { title: "Site architecture & redirects", text: "So authority flows to the pages that should rank, and nothing is stranded.", bullets: ["Internal linking structure and depth", "Redirect chains and broken link cleanup", "Canonical and duplicate URL handling", "Pagination and faceted URL control"] }
-      - { title: Structured data, text: "Stating your business facts in a form machines can read without guessing.", bullets: ["LocalBusiness, Service and Organization markup", "FAQ, Breadcrumb and Article schema", "Validation and rich-result eligibility", "Parity between schema and visible content"] }
-      - { title: "Mobile & rendering", text: "Checking what Google actually receives, not what your desktop browser shows.", bullets: ["Mobile-first rendering verification", "Content parity between mobile and desktop", "JavaScript rendering and hydration checks", "Viewport, tap target and readability issues"] }
-      - { title: "Security & hygiene", text: "The basics that quietly cost trust when they are wrong.", bullets: ["HTTPS and mixed content", "Single canonical hostname (www vs apex)", "Correct 404 and 410 status codes", "Soft 404 and thin page detection"] }
+      - { title: "Crawling & indexing", text: "Making sure Googlebot can reach every page you want ranked, and spends no time on the ones you don't.", bullets: ["robots.txt and meta robots audit", "XML sitemap accuracy and coverage", "Crawl budget waste on large or faceted sites", "Search Console Page indexing report resolved"] }
+      - { title: "Core Web Vitals & speed", text: "Fixing what actually moves LCP, INP and CLS for real users, rather than chasing a lab score.", bullets: ["Largest Contentful Paint diagnosis", "Interaction to Next Paint and long tasks", "Layout shift and render-blocking fixes", "Image format, sizing and lazy loading"] }
+      - { title: "Site architecture & redirects", text: "So authority flows to the pages that should rank, and nothing is stranded.", bullets: ["Internal linking structure and click depth", "301 redirects, chains and broken links", "Canonical tags and duplicate URL handling", "Pagination and faceted URL control"] }
+      - { title: Structured data, text: "Your business facts stated in schema.org markup, in JSON-LD, so machines read them without guessing.", bullets: ["LocalBusiness subtype, Service, Organization", "FAQPage, BreadcrumbList and Article", "Validation and rich-result eligibility", "Parity between schema and visible content"] }
+      - { title: "Mobile & JavaScript rendering", text: "Checking what Google actually renders with mobile-first indexing, not what your desktop browser shows.", bullets: ["Rendered HTML checked with URL Inspection", "Content parity between mobile and desktop", "JavaScript rendering and hydration checks", "Viewport, tap targets and readability"] }
+      - { title: "International, security & hygiene", text: "The basics that quietly cost trust when they are wrong.", bullets: ["hreflang for English and Bangla versions", "HTTPS, mixed content, one canonical hostname", "Correct 404, 410 and 301 status codes", "Soft 404 and thin page detection"] }
+  - type: cards
+    columns: 3
+    eyebrow: Technical SEO for local businesses
+    heading: "How technical SEO supports Google Maps rankings"
+    intro: "Google reads the website linked from your Business Profile when it judges relevance and trust. For a local business, these are the technical checks that matter most, and they are part of every [Local SEO campaign](/local-seo-service) I run."
+    items:
+      - { title: "LocalBusiness schema that matches the profile", text: "The right subtype (Dentist, Plumber, HVACBusiness, AutoRepair, LegalService and so on) with name, address, geo, areaServed, openingHoursSpecification, hasMap and sameAs, all identical to your Google Business Profile." }
+      - { title: "Location and service-area pages that get indexed", text: "Each real area page linked from the navigation or a hub, listed in the XML sitemap, self-canonical and different enough from its siblings to be worth indexing." }
+      - { title: "The GBP website link lands on the right page", text: "The URL in your profile resolves in one hop, returns 200, carries a UTM tag for GA4 and is the canonical version. A multi-location brand points each profile to its own location page." }
+      - { title: "NAP as crawlable text", text: "Business name, address and phone in the footer and contact page as real HTML text, not an image, matching your citations character for character." }
+      - { title: "Fast on mobile data", text: "Most local searches in Bangladesh happen on phones over mobile data. Pages are tested at that speed, with LCP and INP fixed for the slowest likely visitor." }
+      - { title: "Embedded map and clean contact page", text: "A Google Maps embed of your verified listing, click-to-call phone links and directions that work, so a visitor from the Map Pack can act in one tap." }
+    body:
+      - "If the profile itself needs work, that is a separate job: see [Google Business Profile optimization](/google-business-profile-optimization). For the full list of reasons a business stays off the map, read [why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps)."
   - type: steps
     eyebrow: How it runs
     heading: "Diagnose, fix, then prove it cleared"
     intro: "Technical work is verifiable in a way most SEO is not. Errors either clear in Search Console or they do not."
     items:
-      - { title: "Crawl & audit", text: "Full crawl of the site plus Search Console analysis, producing a list of faults ordered by impact rather than by severity label." }
+      - { title: "Crawl & audit", text: "Full crawl of the site plus Google Search Console analysis (Page indexing, Core Web Vitals, enhancements), producing faults ordered by impact rather than by severity label." }
       - { title: Prioritise, text: "Separate what blocks indexing from what merely tidies. Blockers first, because nothing else counts until pages are eligible." }
       - { title: "Fix or specify", text: "Implement the changes directly, or write a developer-ready specification with exact instructions if you have an in-house team." }
-      - { title: Validate, text: "Re-crawl, re-test rendering, validate structured data, and confirm in Search Console that the errors actually cleared." }
+      - { title: Validate, text: "Re-crawl, re-test rendering with URL Inspection, validate structured data with the Rich Results Test, and confirm in Search Console that the errors actually cleared." }
       - { title: Monitor, text: "Periodic checks, because redirects break and sites accumulate faults as they grow. Regressions get caught before they cost traffic." }
+  - type: prose
+    eyebrow: Common questions, answered properly
+    heading: "Crawl budget, Core Web Vitals and JavaScript: what matters for your site"
+    blocks:
+      - heading: Does crawl budget matter for a small site?
+        body:
+          - "Usually not. Crawl budget is how many URLs Googlebot will crawl on your site in a given period, and a 30-page local business site rarely hits it. It matters on large sites: e-commerce stores and catalogues with filters, where faceted navigation can create thousands of near-duplicate URLs. That is a common problem for [wholesale distributors with large product catalogues](/seo-for-wholesale-distributors)."
+      - heading: What are good Core Web Vitals scores?
+        body:
+          - "Google's thresholds for a \"good\" experience are an LCP of 2.5 seconds or less, an INP of 200 milliseconds or less, and a CLS of 0.1 or less, measured on real users at the 75th percentile. Page experience is one signal among many. A fast page with weak content will not outrank a relevant one, but a slow page loses visitors before they call."
+      - heading: Can Google index a JavaScript website?
+        body:
+          - "Yes, Google renders JavaScript, but rendering can be delayed and things go wrong: links built without real anchor tags, content loaded only after a click, or errors that leave the page blank. Server-side rendering or static HTML for the important content removes the risk."
+      - heading: What does good technical SEO look like over time?
+        body:
+          - "The [TechicTalk case study](/case-studies/techictalk-organic-growth) shows a new site built on clean technical foundations growing to 976K organic clicks and 30M+ impressions. A smaller example is the [data-driven growth case study](/case-studies/data-driven-organic-growth): 3.93K clicks and an 8.3% CTR in six months."
   - type: cards
     alt: true
     columns: 3
@@ -57,9 +97,9 @@ sections:
     heading: "Technical SEO is a floor, not a growth lever"
     intro: "Worth being straight about this. Technical work removes ceilings. It does not create demand. If your foundations are already sound, the gains come from elsewhere, and you should be told that rather than sold an audit."
     items:
-      - { title: Pairs with Local SEO, href: /local-seo-service, cta: Local SEO service, text: "Google reads the site behind your Business Profile. Crawl errors and slow mobile performance weaken the profile they support." }
-      - { title: Pairs with GBP work, href: /google-business-profile-optimization, cta: GBP optimization, text: "Profile optimization moves faster when the linked website is sound, because on-site signals reinforce the listing." }
-      - { title: Underpins AI visibility, href: /generative-engine-optimization, cta: GEO service, text: "Assistants reason over structured, crawlable facts. Broken markup and blocked pages remove you from that pool entirely." }
+      - { title: Pairs with Local SEO, text: "Crawl errors and slow mobile performance weaken the Business Profile the website supports. Technical fixes are usually month one of a local campaign." }
+      - { title: Pairs with GBP work, text: "Profile optimization moves faster when the linked website is sound, because on-site signals reinforce the listing." }
+      - { title: Underpins AI visibility, href: /generative-engine-optimization, cta: "AI search visibility (GEO)", text: "Google AI Overviews, ChatGPT and Perplexity work from crawlable, structured facts. Blocked pages and broken markup take you out of that pool." }
     body:
       - "New to the topic? Start with [what an SEO specialist actually does](/blog/what-does-seo-specialist-do), or see [what SEO costs in Bangladesh](/blog/seo-cost-bangladesh)."
   - type: pricing
@@ -71,7 +111,7 @@ sections:
         price: "From $299"
         unit: one-off
         for: "You suspect something is wrong but do not know what"
-        text: "A full diagnosis with no implementation. You get the fault list and the order to fix it in, whether you use me or your own developer."
+        text: "A full diagnosis with no implementation. You get the fault list and the order to fix it in, to hand to me or to your own developer."
         bullets: ["Full site crawl and Search Console analysis", "Crawling and indexing fault list", "Core Web Vitals diagnosis with named causes", "Structured data validation", "Redirect, canonical and duplicate URL check", "Mobile rendering and content parity check", "Findings ordered by impact, not severity label"]
         receive: "Prioritised fix list plus a developer-ready specification"
         cta: { label: Get a quote, href: /book-strategy-call }
@@ -92,14 +132,20 @@ sections:
         bullets: ["Monthly crawl and Search Console review", "Regression detection after site changes", "Core Web Vitals monitoring", "Structured data kept valid as pages change", "Quarterly full re-audit", "Fixes for issues found, within scope", "Reporting you can read in two minutes"]
         receive: "Ongoing monitoring with issues fixed as they appear"
         cta: { label: Get a quote, href: /book-strategy-call }
-    note: "Project and retainer pricing depends on site size, how many faults the audit surfaces, and whether you want the fixes applied or specified for your own developer. That is why they are quoted after the audit rather than before. No lock-in contracts on the retainer."
+    note: "Project and retainer pricing depends on site size, how many faults the audit surfaces, and if you want the fixes applied or specified for your own developer. That is why they are quoted after the audit rather than before. No lock-in contracts on the retainer."
 pricing: none
-faqHeading: "Everything You Need to Know About Technical SEO"
+faqHeading: "Technical SEO: Frequently Asked Questions"
 faqs:
   - q: "What is technical SEO, in plain terms?"
     a: "Technical SEO is the work that lets search engines reach, read and trust your website: crawling, indexing, site speed, mobile rendering, structured data, redirects and site architecture. It does not write your content or build your reputation; it removes the obstacles stopping both from counting."
   - q: "How do I know if I need technical SEO?"
-    a: "Common signals: pages missing from Google despite being live, traffic that fell without a content change, a slow or unstable site on mobile, duplicate versions of the same page ranking against each other, or Search Console reporting coverage errors you do not understand."
+    a: "Common signals: pages missing from Google despite being live, traffic that fell without a content change, a slow or unstable site on mobile, duplicate versions of the same page ranking against each other, or Search Console reporting indexing errors you do not understand."
+  - q: "What is the difference between crawling and indexing?"
+    a: "Crawling is Googlebot fetching a page. Indexing is Google deciding to store it so it can appear in results. A page can be crawled and still not indexed, usually because it is a duplicate, thin, canonicalised elsewhere or marked noindex."
+  - q: "Do Core Web Vitals affect rankings?"
+    a: "Yes, as part of Google's page experience signals, but modestly. Relevance and content quality matter more. The bigger effect is on people: a page that loads slowly on mobile data or jumps around while loading loses visitors before they call or book."
+  - q: "Do I need hreflang tags?"
+    a: "Only if you publish the same content in more than one language or for more than one country, for example English and Bangla versions of your service pages. Each version then references the others with hreflang so Google shows the right one."
   - q: "Is technical SEO a one-off project or ongoing?"
     a: "Mostly a project, then maintenance. The audit and the fixes are finite work. After that it needs periodic checks, because redirects break, plugins change output, and sites accumulate faults as they grow."
   - q: "Will technical SEO alone increase my rankings?"
@@ -107,10 +153,10 @@ faqs:
   - q: "Do you fix the issues or just report them?"
     a: "Both are available. Some clients want the fixes implemented directly, others have a developer and want a prioritised specification they can hand over. Say which you need and the engagement is scoped that way."
   - q: "Will you need access to my website and hosting?"
-    a: "For implementation, yes: CMS access at minimum, and often hosting or DNS depending on what needs changing. For an audit alone, Search Console and a crawl of the public site are usually enough."
-  - q: "How does this relate to Local SEO?"
-    a: "Google reads the website linked from your Business Profile to judge relevance and trust. A site with crawl errors, slow mobile performance or missing structured data weakens the profile it supports, which is why technical work sits underneath the local work rather than beside it."
+    a: "For implementation, yes: CMS access at minimum, and often hosting or DNS depending on what needs changing. For an audit alone, Search Console access and a crawl of the public site are usually enough."
+  - q: "How does technical SEO relate to Local SEO?"
+    a: "Google reads the website linked from your Business Profile to judge relevance and trust. A site with crawl errors, slow mobile performance or missing LocalBusiness schema weakens the profile it supports, which is why technical work sits underneath [Local SEO](/local-seo-service) rather than beside it."
   - q: "How much does technical SEO cost?"
     a: "It is bought three ways. A technical audit starts from $299 and gives you the fault list and a developer-ready specification. Implementation as a one-off project, and an ongoing retainer for monitoring, are both quoted after the audit, because site size and the number of faults found decide the work."
-related: [local-seo-service, gbp, services, cases, book, contact]
+related: [local-seo-service, gbp, services, cases, guide, book]
 order: 3

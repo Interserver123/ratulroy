@@ -1,5 +1,5 @@
-title: "Hamper Story: $72K/mo Shopify Sales via SEO | Ratul Roy"
-description: "How a Singapore Shopify hamper brand grew to 9.79K organic clicks, 379K impressions and $72,412 in monthly sales with a 16-month SEO campaign."
+title: "Hamper Story: Shopify SEO to $72,412 in Monthly Sales"
+description: "Shopify SEO case study: Singapore hamper store Hamper Story reached 9.79K organic clicks, 379K impressions and $72,412 monthly sales (+206%) over 16 months."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Case Studies, href: /case-studies }
@@ -7,7 +7,7 @@ breadcrumb:
 eyebrow: "Case Study · eCommerce · Singapore · Shopify"
 h1: "Hamper Story, From Low Organic Traffic to $72,412 in Monthly Sales"
 em: "$72,412 in Monthly Sales"
-lead: "Hamper Story is a Singapore-based Shopify store selling premium hampers online. They came to us for organic growth, and we shipped a full SEO campaign that turned search visibility into real revenue, scaling sales by +206% and orders by +294%."
+lead: "Hamper Story is a Singapore Shopify store selling premium gift hampers online. It depended on paid ads for sales. Over 16 months of e-commerce SEO, organic search became a real revenue channel: sales up 206% and orders up 294% in a 30-day period."
 heroChips: ["eCommerce SEO", "Shopify", "Singapore", "Organic Growth"]
 heroStats:
   - { value: "$72,412", label: "Monthly Shopify sales (+206%)" }
@@ -18,12 +18,12 @@ ctas:
   - { label: Get Free SEO Audit, href: "/#free-audit" }
   - { label: Return to homepage, href: /, style: ghost }
 intro:
-  - "**Client:** Hamper Story, a Singapore-based Shopify store selling premium hampers online. **Goal:** organic growth that turns search visibility into revenue. **Timeline:** 16 months."
+  - "**Client:** Hamper Story, a Singapore-based Shopify store selling premium hampers online. **Goal:** organic growth that turns search visibility into revenue, so sales no longer depend on paid ads. **Work:** keyword research, Shopify on-page SEO, technical fixes, content and link building. **Timeline:** 16 months."
 sections:
   - type: problems
     eyebrow: "01 · Problem"
-    heading: The Challenge
-    intro: "Hamper Story was leaning almost entirely on paid ads to drive sales. Organic search was barely contributing: minimal visibility, no structured SEO strategy, weak rankings for high-intent hamper and gifting queries in Singapore, and product pages that weren't optimized to convert the traffic that did land."
+    heading: "Why organic search was not selling hampers"
+    intro: "Hamper Story was leaning almost entirely on paid ads to drive sales. Organic search barely contributed: there was no SEO plan, rankings were weak for buying searches like hampers and gift delivery in Singapore, and the product pages that did get traffic weren't built to convert it."
     items:
       - { title: "Low organic traffic", text: "Minimal search visibility for a store with real demand." }
       - { title: "No structured SEO strategy", text: "No plan in place to grow organic search as a channel." }
@@ -33,16 +33,16 @@ sections:
   - type: steps
     alt: true
     eyebrow: "02 · Approach"
-    heading: The Strategy
-    intro: "We deployed a full-funnel SEO campaign built specifically for a Singapore Shopify store, combining keyword research, technical SEO, on-page optimization, content, and link building to compound organic growth month after month."
+    heading: "The Shopify SEO campaign, step by step"
+    intro: "I ran a full-funnel SEO campaign built for a Singapore Shopify store, combining keyword research, [technical SEO](/technical-seo), on-page optimization, content and link building, then reviewed Google Search Console every week to decide the next change."
     items:
-      - { title: Keyword Research, text: "Mapped high-intent hamper and gifting queries across Singapore, prioritizing terms with clear buying intent and realistic ranking potential." }
-      - { title: "On-Page & Shopify SEO", text: "Optimized every product and category page: titles, metas, internal links, schema, and conversion-focused copy to lift both rankings and CTR." }
-      - { title: "Technical & Content", text: "Fixed site speed, crawlability, and schema markup. Shipped seasonal gifting guides and hamper-focused blog content to capture top-of-funnel demand." }
+      - { title: Keyword Research, text: "Mapped high-intent hamper and gifting searches across Singapore, prioritizing terms with clear buying intent and realistic ranking potential." }
+      - { title: "On-Page & Shopify SEO", text: "Optimized every product and collection page: title tags, meta descriptions, internal links, Product schema and conversion-focused copy to lift both rankings and click-through rate." }
+      - { title: "Technical & Content", text: "Fixed site speed, crawlability and schema markup. Published seasonal gifting guides and hamper-focused blog posts to reach shoppers earlier in their search." }
       - { title: "Authority & Iteration", text: "Built links from Singapore-focused directories and gift blogs, then iterated weekly on Search Console data to compound rankings and revenue." }
   - type: stats
     eyebrow: "03 · Outcome"
-    heading: The Result
+    heading: "Results: traffic, sales and orders"
     intro: "In 16 months the store went from near-invisible in organic search to a serious revenue channel: 9.79K organic clicks, 379K impressions, 19,139 monthly sessions (+92%), $72,412 in monthly Shopify sales (+206%), and 319 orders in 30 days (+294%)."
     items:
       - { title: "Organic clicks (16 mo)", value: "9.79K" }
@@ -64,21 +64,22 @@ sections:
       - { title: "Shopify · Orders", text: "319 orders (+294%) and 364 ordered items (+219%) in the last 30 days, with a steady run of paid orders each day.", image: "cases/hamper-orders-30days.png" }
   - type: list
     eyebrow: "04 · Learnings"
-    heading: Key Takeaways
+    heading: "What this case study shows"
     bullets:
-      - "**SEO compounds.** 16 months of disciplined execution turned a paid-ads-only store into an organic revenue engine."
-      - "**On-page and Shopify-level optimization** moves both rankings and conversion at the same time."
-      - "**Local intent wins.** A Singapore-focused keyword and link strategy outperformed generic gifting SEO."
+      - "**SEO compounds.** 16 months of steady work turned a store that lived on paid ads into one with a strong organic revenue channel."
+      - "**On-page and Shopify-level optimization** moves rankings and conversion rate at the same time."
+      - "**Local intent wins.** A Singapore-focused keyword and link plan beat generic gifting SEO."
     body:
-      - "Want a similar strategy for your business? Explore the [Local SEO services](/local-seo-service) or [return to the homepage](/)."
+      - "Organic SEO for a store follows the same discipline as my [TechicTalk content growth project](/case-studies/techictalk-organic-growth). To see how I split the work week to week, read [what an SEO specialist actually does](/blog/what-does-seo-specialist-do), or browse [all my SEO services](/services)."
 showCases: true
 pricing: none
-related: [cases, local-seo-service, technical, book]
+related: [technical, services, cases, book]
+updated: 2026-10-21
 finalCta:
   heading: "See how your business can achieve similar results."
-  text: "Get a free Local SEO audit covering your Google Business Profile, map pack visibility, competitors, citations, and ranking gaps."
+  text: "Get a free SEO audit covering your website, rankings, technical issues, competitors and the pages closest to producing sales."
   buttons:
-    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Get Free SEO Audit, href: "/#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call }
 card:
   title: "Hamper Story, From Low Organic Traffic to $72,412 in Monthly Sales"

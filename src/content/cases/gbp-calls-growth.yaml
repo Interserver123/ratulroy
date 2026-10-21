@@ -1,5 +1,5 @@
-title: "Weak Maps Visibility to Steady Call Growth | Ratul Roy"
-description: "A Local SEO case study on turning an under-optimized Google Business Profile into a steady source of qualified inbound calls: 461 calls from the profile."
+title: "GBP Case Study: 461 Calls From Google Maps in 5 Months"
+description: "Google Business Profile case study: 461 calls from the profile between April and August 2024, +205.3% year on year, from category, citation and review fixes."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Case Studies, href: /case-studies }
@@ -7,7 +7,7 @@ breadcrumb:
 eyebrow: "Case Study · Local Service Business"
 h1: "From Weak Maps Visibility to Consistent Call Growth"
 em: "Consistent Call Growth"
-lead: "A Local SEO case study on turning an under-optimized Google Business Profile into a steady source of qualified inbound calls."
+lead: "How I turned an under-optimized Google Business Profile into a steady source of qualified phone calls: 461 calls from the profile between April and August 2024, up 205.3% on the same months a year earlier."
 heroChips: ["GBP Optimization", "Google Maps", "Local SEO"]
 heroStats:
   - { value: "461", label: "Calls from GBP" }
@@ -18,31 +18,31 @@ ctas:
   - { label: Get Free SEO Audit, href: "/#free-audit" }
   - { label: Return to homepage, href: /, style: ghost }
 intro:
-  - "**Client:** a local service business. **Focus:** Google Business Profile optimization. **Key result:** 461 calls from the Business Profile."
+  - "**Client:** a local service business that relies on phone calls. **Focus:** Google Business Profile optimization, supported by the local landing page, citations and reviews. **Key result:** 461 calls from the Business Profile (April to August 2024), +62% profile interactions and Top 3 Map Pack positions for core service terms."
 sections:
   - type: problems
     eyebrow: "01 · Problem"
-    heading: The Challenge
-    intro: "An under-optimized Google Business Profile with weak local relevance, missing service signals, and limited Google Maps visibility. The business was invisible in the map pack for high-intent local searches."
+    heading: "Why the profile was not getting calls"
+    intro: "The business had a Google Business Profile, but Google had little reason to show it. The categories and services did not describe what the business actually did, the website gave the profile weak support, and reviews were thin. For high-intent local searches it sat outside the Map Pack, so the phone stayed quiet."
     items:
-      - { title: "Incomplete GBP setup", text: "Incomplete GBP categories and services." }
-      - { title: "Weak landing page relevance", text: "The local landing page did little to support the profile." }
-      - { title: "Inconsistent citations", text: "Inconsistent citations and NAP signals across the web." }
-      - { title: "Thin review signals", text: "Few recent reviews and poor response patterns." }
+      - { title: "Incomplete GBP setup", text: "Primary and additional categories were incomplete, and the services list was missing core jobs." }
+      - { title: "Weak landing page relevance", text: "The local landing page linked from the profile did little to confirm the services or the area served." }
+      - { title: "Inconsistent citations", text: "Name, address and phone (NAP) details differed across directories." }
+      - { title: "Thin review signals", text: "Few recent reviews, and older reviews had no owner replies." }
   - type: steps
     alt: true
     eyebrow: "02 · Approach"
-    heading: The Strategy
-    intro: "A complete [Google Business Profile optimization](/google-business-profile-optimization) aligned with local search intent and the website's on-page relevance."
+    heading: "What I changed, in order"
+    intro: "I ran a full [Google Business Profile optimization](/google-business-profile-optimization) and lined the website up behind it, working on the three things Google says drive local ranking: relevance, distance and prominence."
     items:
-      - { title: GBP Optimization, text: "Refined categories, services, business description, photos, and Q&A to match real local search intent." }
-      - { title: Local Landing Page, text: "Improved on-page relevance, internal links, and location signals to support the GBP." }
-      - { title: "Citations & NAP", text: "Cleaned up directory citations and aligned NAP across the web for consistency." }
-      - { title: Review Signals, text: "Built a review request and response loop to compound trust over time." }
+      - { title: GBP Optimization, text: "Reset the primary category, added the additional categories that genuinely applied, rebuilt the services list, rewrote the business description and added real photos and regular posts that match how local customers search." }
+      - { title: Local Landing Page, text: "Rewrote the landing page the profile points to around the same services and area, with clear internal links and location signals so the website confirms what the profile says." }
+      - { title: "Citations & NAP", text: "Cleaned up directory listings so the business name, address and phone number read the same everywhere Google looks." }
+      - { title: Review Signals, text: "Set up a simple review request link and a reply routine, so new reviews kept arriving and every review got an owner response." }
   - type: stats
     eyebrow: "03 · Outcome"
-    heading: The Result
-    intro: "Stronger Google Maps visibility, more profile engagement, and a steady stream of inbound calls from the Business Profile."
+    heading: "Results: calls, interactions and Map Pack positions"
+    intro: "The profile moved into the Map Pack for core service searches and started producing calls every week. These figures come from Google Business Profile Performance."
     items:
       - { title: "Calls from GBP", value: "461" }
       - { title: "Profile interactions", value: "+62%" }
@@ -55,16 +55,17 @@ sections:
       - { title: "Google Business Profile · Calls", text: "April to August 2024: 461 calls made from the Business Profile, +205.3% vs April to August 2023, rising to 207 calls in August 2024 alone.", image: "cases/gbp-calls-performance.jpeg" }
   - type: list
     eyebrow: "04 · Learnings"
-    heading: Key Takeaways
+    heading: "What this case study shows"
     bullets:
-      - "A well-optimized GBP often outperforms paid ads for local intent."
-      - "Service-area businesses win when GBP and website signals reinforce each other."
-      - "Reviews and response patterns are ranking and trust signals."
+      - "For local intent searches, a well-optimized Google Business Profile often brings in more calls than paid ads for the same budget."
+      - "Service-area businesses rank best when the profile and the website say the same thing about services and areas."
+      - "Recent reviews and owner replies help both ranking (prominence) and the customer's decision to call."
     body:
-      - "Want a similar strategy for your business? Explore the [Local SEO services](/local-seo-service) or [return to the homepage](/)."
+      - "The full method is in my [Google Business Profile optimization checklist](/blog/google-business-profile-optimization-checklist), and the citation side is covered in the [guide to local citations and NAP consistency](/blog/local-citations-nap-consistency-guide). If you run a trade or a clinic, see [how the approach changes by industry](/industries), or start with my [Local SEO service](/local-seo-service)."
 showCases: true
 pricing: none
-related: [cases, gbp, local-seo-service, book]
+related: [gbp, local-seo-service, cases, home-services, book]
+updated: 2026-10-21
 finalCta:
   heading: "See how your business can achieve similar results."
   text: "Get a free Local SEO audit covering your Google Business Profile, map pack visibility, competitors, citations, and ranking gaps."

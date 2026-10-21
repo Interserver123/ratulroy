@@ -1,5 +1,5 @@
-title: "SEO for Wholesale Distributors | Ratul Roy"
-description: "SEO for wholesale distributors that ranks your catalog, attracts B2B buyers, and turns search traffic into qualified bulk-order inquiries."
+title: "SEO for Wholesale Distributors and B2B Suppliers"
+description: "SEO for wholesale distributors: category pages, Product schema, RFQ pages and Google Business Profiles for showrooms that turn B2B searches into bulk enquiries."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
@@ -7,76 +7,93 @@ breadcrumb:
 eyebrow: "Wholesale Distributor SEO"
 h1: "SEO for Wholesale Distributors that wins B2B buyers"
 em: "wins B2B buyers"
-lead: "Rank for the bulk-order, supplier, and distributor keywords your B2B buyers actually search, and turn that traffic into qualified inquiries, RFQs, and recurring purchase orders."
+lead: "Rank for the bulk, supplier and distributor searches your B2B buyers make, and turn that traffic into qualified enquiries, RFQs and repeat purchase orders."
 heroChips: ["Fiverr Level 2 Seller", "4.9★ Rating", "243+ Reviews"]
 ctas:
   - { label: Book Strategy Call, href: /book-strategy-call }
   - { label: Get Free Catalog SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "**SEO for wholesale distributors** is search optimization for businesses that sell in bulk to retailers, contractors and other companies. It covers catalog and category pages built around trade searches, Product schema, RFQ and quote pages, a distributor locator, and Google Business Profiles for showrooms and trade counters, so buyers find you while shortlisting suppliers."
+updated: 2026-10-21
+entities:
+  - { name: Wholesaling, sameAs: "https://en.wikipedia.org/wiki/Wholesaling" }
+  - { name: Business-to-business, sameAs: "https://en.wikipedia.org/wiki/Business-to-business" }
+  - { name: Search engine optimization, sameAs: "https://en.wikipedia.org/wiki/Search_engine_optimization" }
 sections:
   - type: list
-    eyebrow: Built for B2B Buyers
-    heading: "Why distributors need a specialist wholesale SEO"
+    eyebrow: Built for B2B buyers
+    heading: "How do B2B buyers search for a wholesale supplier?"
     body:
-      - "Wholesale distribution is a search-driven industry. Procurement managers, resellers, and buyers Google their next supplier instead of waiting for a sales call. If your catalog isn't ranking for wholesale, bulk, distributor, and supplier queries, you're invisible exactly when a serious B2B order is ready to be placed."
+      - "Procurement managers, shop owners and contractors search for a supplier before they ever call one. Their searches look like \"PVC pipe wholesale supplier Chattogram\", \"bulk A4 paper distributor\", \"tiles wholesale near me\" or a manufacturer's part number. If your category pages don't match those searches, the buyer's shortlist is built without you."
+      - "Wholesale search is mostly a catalog problem first and a local problem second. Category pages and product pages bring the research traffic; a [Google Business Profile](/google-business-profile-optimization) for each showroom or trade counter catches the buyers who want to see stock or collect the same day."
     bullets:
-      - "Rank for \"wholesale supplier\" and \"distributor near me\" queries"
-      - "Catalog, category & product pages built for B2B search intent"
-      - "Technical SEO for large catalogs, facets, and PDF spec sheets"
-      - "Local SEO + GBP tuned for every warehouse and depot location"
+      - "Rank for \"wholesale\", \"bulk\", \"supplier\" and \"distributor\" searches in your product categories"
+      - "Category and product pages written for trade buyers, not retail shoppers"
+      - "Technical SEO for large catalogs, filters and PDF spec sheets"
+      - "Local SEO for warehouses, showrooms and trade counters that serve customers in person"
   - type: cards
     alt: true
     columns: 3
-    eyebrow: "What's Inside"
+    eyebrow: "What's inside"
     heading: "Wholesale SEO, built layer by layer"
-    intro: "A complete B2B SEO system covering catalog architecture, category & product pages, schema, local depots, link authority, and AI search readiness, designed for serious wholesale distributors."
+    intro: "Catalog structure, category and product pages, schema, RFQ flow, local locations, links and AI search, in the order that usually moves enquiries fastest."
     items:
-      - { title: "B2B Keyword & Intent Research", text: "Map every wholesale, bulk, supplier, distributor, importer, and RFQ-intent keyword in your category, then assign each to the right catalog, category, or product page.", bullets: ["Wholesale + city keyword sets", "RFQ & buyer-intent mapping", "Category gap analysis"] }
-      - { title: "Category & Product Page Optimization", text: "Rewrite category and product pages for B2B search: pricing tiers, MOQ, lead times, certifications, and trust signals procurement teams need to inquire.", bullets: ["MOQ & tiered pricing copy", "Spec sheets & datasheets", "B2B trust signals"] }
-      - { title: "Technical SEO for Large Catalogs", text: "Clean faceted navigation, canonical strategy, XML sitemaps split by category, indexable PDF spec sheets, and crawl architecture built for thousands of SKUs.", bullets: ["Facet & canonical rules", "Sitemap segmentation", "Indexable PDF specs"], href: /technical-seo }
-      - { title: "Schema for Products & Catalogs", text: "Product, Offer, AggregateOffer, Organization, and LocalBusiness schema so Google understands pricing tiers, stock, brand relationships, and your distributor identity.", bullets: ["Product & Offer schema", "Brand & Organization", "LocalBusiness per depot"] }
-      - { title: "Local SEO for Warehouses & Depots", text: "One optimized Google Business Profile per physical location with location pages, citations, and reviews tuned for B2B trust.", bullets: ["GBP per warehouse", "Location service-area pages", "Local citations & reviews"], href: /google-business-profile-optimization }
-      - { title: "Link Building & Supplier Authority", text: "Earn links from industry directories, manufacturer pages, trade associations, and B2B marketplaces that move category-level rankings, not just brand searches.", bullets: ["Trade directory placements", "Manufacturer link assets", "B2B marketplace presence"] }
-      - { title: "Core Web Vitals & Catalog Speed", text: "Heavy catalogs need clean technical foundations (LCP, CLS, mobile UX) so your site supports rankings instead of holding them back at scale.", bullets: ["LCP & CLS optimization", "Image & faceted page perf", "Mobile-first catalog UX"] }
-      - { title: "AI Search Readiness for B2B", text: "Prepare your distributor catalog for AI-powered discovery across Google AI Overviews, ChatGPT, Gemini, and Perplexity, the next visibility layer for procurement.", bullets: ["Generative Engine Optimization", "AI Overview readiness audit", "LLM B2B visibility signals"], href: /generative-engine-optimization }
-      - { title: "Metrics, Tracking & Reporting", text: "Transparent monthly reporting on rankings, qualified inquiries, RFQs, and pipeline impact, so you always know what your SEO investment is producing.", bullets: ["Rank & inquiry tracking", "GA4 & GSC dashboards", "Monthly growth reports"] }
+      - { title: "B2B keyword and intent research", text: "I map wholesale, bulk, supplier, distributor, importer and part-number searches in your category, then assign each to one catalog, category or product page so pages don't compete with each other.", bullets: ["Wholesale plus city keyword sets", "RFQ and buyer-intent mapping", "Category gap analysis"] }
+      - { title: "Category and product page optimization", text: "Category pages are where most wholesale rankings come from. I rewrite them with what trade buyers check: minimum order quantity (MOQ), pack sizes, price tiers if you publish them, lead times, brands carried and certifications.", bullets: ["MOQ and pack-size copy", "Spec sheets and datasheets", "Trust signals for procurement"] }
+      - { title: "Technical SEO for large catalogs", text: "Faceted navigation rules, canonical tags, XML sitemaps split by category, indexable PDF spec sheets and crawl paths that reach every SKU worth ranking.", bullets: ["Facet and canonical rules", "Sitemap segmentation", "Indexable PDF specs"], href: /technical-seo }
+      - { title: "Product schema and structured data", text: "Product, Offer, Brand and Organization markup, plus LocalBusiness or Store for each location. Google's product rich results expect a price, review or rating, so quote-only items won't show price snippets, but the markup still describes what you stock.", bullets: ["Product and Offer schema", "Brand and Organization", "LocalBusiness per location"] }
+      - { title: "RFQ and quote request pages", text: "A short request-for-quote form on every category and product page, with fields for quantity, delivery location and timeline, so research visits turn into enquiries your sales team can price.", bullets: ["RFQ form on key pages", "Quantity and delivery fields", "Enquiry tracking in GA4"] }
+      - { title: "Distributor and dealer locator", text: "If you supply through dealers or have several branches, a locator page with a crawlable page per location (address, hours, map, stock focus) helps buyers find the nearest point and gives Google a clear location structure.", bullets: ["Crawlable location pages", "Embedded map and hours", "Consistent NAP per branch"] }
+      - { title: "Google Business Profile for showrooms and warehouses", text: "One profile per location that serves customers in person during stated hours, such as a showroom, trade counter or collection point. A warehouse with no customer contact is not eligible, so I won't create a listing for one.", bullets: ["GBP per eligible location", "Correct wholesale categories", "Reviews from trade customers"], href: /local-seo-service }
+      - { title: "Links and supplier authority", text: "Mentions and links from manufacturer \"where to buy\" pages, trade associations, industry directories and B2B marketplaces, the sources that move category rankings and corroborate who you are. More on the directory side in this [citations and NAP consistency guide](/blog/local-citations-nap-consistency-guide).", bullets: ["Manufacturer dealer listings", "Trade association pages", "Industry directories"] }
+      - { title: "AI search for B2B", text: "Buyers increasingly ask Google AI Overviews, ChatGPT search, Gemini and Perplexity to suggest suppliers. Clear category pages, consistent entity data and third-party mentions decide whether you are named.", bullets: ["Generative Engine Optimization", "Entity consistency", "Citable product facts"], href: /generative-engine-optimization }
+  - type: prose
+    heading: "Does a wholesale distributor need Google Merchant Center?"
+    body:
+      - "Only in some cases. Merchant Center feeds Google Shopping and free product listings, which are built for products a shopper can buy at a listed price. If you sell online with visible prices and checkout, including to trade customers, a product feed can add visibility. If your catalog is quote-only, Merchant Center is usually not the right channel, and the effort is better spent on category pages and RFQ flow."
+      - "The same goes for showrooms that sell to walk-in customers: Google's local inventory options exist, but they need accurate stock and price data. I'll tell you honestly whether a feed is worth setting up for your catalog."
   - type: cards
     columns: 3
-    eyebrow: Why Work With Me
-    heading: "Why distributors trust Ratul Roy"
+    eyebrow: Why work with me
+    heading: "Why distributors work with Ratul Roy"
+    intro: "Most of my work is Local SEO for businesses that depend on calls and enquiries. Wholesale adds catalog scale, and the same principles apply: clear pages, consistent business data and measurement that counts enquiries, not traffic. The closest proof is the catalog SEO behind [Hamper Story's growth to $72,412 in monthly sales](/case-studies/hamper-story)."
     items:
-      - { title: Focused B2B SEO Specialist, text: "Not a generalist agency juggling 40 clients, a dedicated SEO consultant who lives inside wholesale and B2B catalog work." }
-      - { title: Built for Large Catalogs, text: "Deep experience with thousands of SKUs, faceted navigation, PDF spec sheets, and the technical SEO that unlocks them." }
-      - { title: Multi-Depot Local SEO, text: "Google Maps and GBP expertise for every warehouse and depot, so each location wins its own local pack." }
-      - { title: "AI & GEO-Ready Strategies", text: "Future-proofed for AI Overviews, ChatGPT, Gemini, and Perplexity, the next layer of B2B discovery." }
-      - { title: Pipeline-Focused Reporting, text: "Strategy measured in qualified RFQs, inquiries, and revenue, not vanity traffic or generic ranking screenshots." }
-      - { title: Transparent Process, text: "Monthly reports on rankings, indexed SKUs, traffic, and inquiries, so you always know exactly what's happening." }
+      - { title: Direct specialist, text: "You work with me, not an account manager passing notes to a junior. One person who knows your catalog." }
+      - { title: Catalog-aware technical work, text: "Faceted navigation, canonical tags, PDF spec sheets and sitemap structure handled before content, because on a large catalog they decide what Google can even see." }
+      - { title: Multi-location Local SEO, text: "Google Business Profiles and location pages for every showroom and trade counter that serves customers in person." }
+      - { title: AI search ready, text: "Entity and schema work that helps AI Overviews, ChatGPT search, Gemini and Perplexity describe your business correctly." }
+      - { title: Enquiry-focused reporting, text: "Reporting on RFQs, enquiries and calls by category, not ranking screenshots for keywords nobody searches." }
+      - { title: Transparent process, text: "Monthly reports on rankings, indexed pages, traffic and enquiries, so you know what the work produced." }
   - type: quotes
     alt: true
     eyebrow: Client Voices
-    heading: "Real results from real wholesale brands"
+    heading: "What wholesale clients say"
     quotes:
       - { quote: "Our category pages were invisible. Six months in, we're ranking for the supplier and bulk queries that actually bring RFQs. Our pipeline finally compounds.", name: "Tanvir A.", meta: "Industrial Supplies Distributor · Dhaka" }
       - { quote: "Ratul understands B2B catalogs in a way most SEOs don't. The technical and schema work alone unlocked thousands of indexed SKUs.", name: "Nadia I.", meta: "FMCG Wholesale · Chattogram" }
       - { quote: "Each depot now ranks in its own local pack. The depot-level GBP strategy was a game changer for our regional sales teams.", name: "Rafiq M.", meta: "Building Materials Distributor · Sylhet" }
+    body:
+      - "Many distributors sell to trades and contractors. If that is your market, see how your buyers search on the [home services SEO page](/seo-for-home-services). Distributors in Old Dhaka's wholesale markets can also read the notes on [Local SEO in Dhaka](/local-seo-dhaka)."
 faqHeading: "Everything You Need to Know About Wholesale Distributor SEO"
 faqs:
-  - { q: "Why is SEO important for wholesale distributors specifically?", a: "B2B buyers, procurement managers, and resellers now research and shortlist suppliers through Google before contacting sales. If your catalog and category pages don't rank for wholesale, bulk, and supplier queries, you're invisible at the exact moment a buyer is ready to place an order, and competitors win the RFQ by default." }
-  - { q: "How is wholesale SEO different from regular e-commerce SEO?", a: "Wholesale SEO targets B2B intent (bulk, MOQ, supplier, distributor, RFQ) instead of single-unit retail intent. Pages have to communicate pricing tiers, lead times, certifications, and minimum order quantities. Technical setup also has to handle far larger catalogs, faceted navigation, and PDF spec sheets, challenges most retail SEO playbooks ignore." }
-  - { q: "How long does it take to see results from wholesale distributor SEO?", a: "Most distributors see meaningful ranking and inquiry improvements within 3-6 months. Catalog SEO compounds: as more category and product pages start ranking, B2B inquiries grow steadily month over month rather than spiking and dropping." }
-  - { q: "Do you handle technical SEO for large product catalogs?", a: "Yes. Crawl architecture, canonical strategy, faceted navigation rules, XML sitemap splitting, indexable spec sheets, page speed, and Core Web Vitals are core to every wholesale engagement, because for a large catalog, [technical SEO](/technical-seo) is what unlocks rankings, not on-page copy alone." }
-  - { q: "Can you help with Local SEO for our warehouses and depots?", a: "Absolutely. Each physical location gets its own optimized Google Business Profile, dedicated service-area page, local citations, and reviews strategy, so buyers searching for a wholesale distributor near them in a specific city actually find you in the Google Maps 3-pack." }
-  - { q: "Do you work with distributors outside Bangladesh?", a: "Yes. The wholesale SEO playbook works for distributors in any market. I work with B2B distributors across Bangladesh and internationally; the principles around catalog SEO, B2B intent, and supplier authority are universal." }
+  - { q: "Why is SEO important for wholesale distributors?", a: "Because B2B buyers shortlist suppliers through Google before contacting sales. If your category pages don't rank for wholesale, bulk and supplier searches in your products, you miss the buyer at the moment they are building a shortlist, and the RFQ goes to whoever they found." }
+  - { q: "How is wholesale SEO different from e-commerce SEO?", a: "Wholesale SEO targets trade intent (bulk, MOQ, supplier, distributor, RFQ) instead of single-unit retail. Pages need pack sizes, lead times, certifications and a quote path rather than a basket. Catalogs are usually larger too, so faceted navigation and PDF spec sheets need careful technical handling." }
+  - { q: "How long does wholesale distributor SEO take?", a: "Most distributors see meaningful ranking and enquiry gains in 3 to 6 months. Catalog SEO builds over time: as more category and product pages rank, B2B enquiries grow month over month rather than spiking and dropping." }
+  - { q: "Do you handle technical SEO for large product catalogs?", a: "Yes. Crawl paths, canonical tags, faceted navigation rules, XML sitemap splitting, indexable spec sheets and Core Web Vitals are part of every wholesale project, because on a large catalog [technical SEO](/technical-seo) decides which pages can rank at all." }
+  - { q: "Can a warehouse have a Google Business Profile?", a: "Only if it serves customers in person during its stated hours, for example as a trade counter, showroom or collection point. A warehouse that only ships orders is not eligible. Each eligible location gets its own profile, location page and citations." }
+  - { q: "Should product pages show prices if we quote every order?", a: "Not necessarily. You can rank without public prices. Show what you can (MOQ, pack sizes, price from, or tier bands) and make the quote request easy. Without a price, Google won't show price rich results, but the pages can still rank for product and supplier searches." }
+  - { q: "Do you work with distributors outside Bangladesh?", a: "Yes. I work with distributors in Bangladesh and internationally. The principles around catalog SEO, trade search intent and supplier authority hold in any market; the directories, languages and local search habits change from country to country." }
 showResults: true
 showCases: true
 pricing: default
 related: [services, technical, gbp, geo, cases, book]
 finalCta:
-  heading: "Turn your catalog into a B2B inquiry engine"
-  text: "Book a free catalog SEO audit or strategy call to see how your distributor business can dominate B2B search, and convert it into qualified RFQs and recurring purchase orders."
+  heading: "Turn your catalog into a source of B2B enquiries"
+  text: "Book a free catalog SEO audit or strategy call to see which category pages, schema gaps and location listings are costing you RFQs, and what to fix first."
   buttons:
     - { label: Get Free Catalog SEO Audit, href: "/#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
 card:
   title: SEO for Wholesale Distributors
-  text: "Catalog, category and depot-level SEO that ranks for supplier and bulk queries and turns B2B search into qualified RFQs."
+  text: "Catalog, category and location-level SEO that ranks for supplier and bulk queries and turns B2B search into qualified RFQs."
 order: 9

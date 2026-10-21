@@ -41,7 +41,8 @@ entities:
   - { name: Google Business Profile, sameAs: "https://en.wikipedia.org/wiki/Google_Business_Profile" }
   - { name: Google Maps, sameAs: "https://en.wikipedia.org/wiki/Google_Maps" }
 intro:
-  - "**What are local SEO services?** Local SEO services are the work that makes a business appear, and look like the obvious choice, when someone nearby searches Google or Google Maps for what it sells. That means optimizing the Google Business Profile, keeping name, address and phone consistent across the web, earning reviews, and building website pages that confirm what you do and where."
+  - "**What are local SEO services?** Local SEO services are the work that makes a business appear, and get chosen, when someone nearby searches Google or Google Maps for what it sells. That means optimizing the Google Business Profile, keeping name, address and phone consistent across the web, earning reviews, and building website pages that confirm what you do and where."
+  - "Those results appear in three places: the Map Pack (the 3-pack of listings above the organic results), the Local Finder you see after tapping \"More places\", and the Google Maps app. AI Overviews and assistants such as Gemini and ChatGPT increasingly draw on the same profile, review and citation data. New to all of this? The [complete guide to Local SEO in Bangladesh](/blog/local-seo-bangladesh-guide) starts from the basics."
 sections:
   - type: factors
     nav: How ranking works
@@ -97,7 +98,7 @@ sections:
         value: "2"
         meta: "In the Map Pack: calls and direction requests start to climb"
     body:
-      - "Crowded categories in big cities take longer than a quiet category in a smaller town. The month-by-month detail is in [how long Local SEO takes](/blog/how-long-local-seo-takes-bangladesh)."
+      - "Crowded categories in big cities take longer than a quiet category in a smaller town. The month-by-month detail is in [how long Local SEO takes](/blog/how-long-local-seo-takes-bangladesh), and the geo-grid side of it is shown in [this service-area case study](/case-studies/map-pack-service-areas), where five times as many areas reached the Top 3."
   - type: cards
     nav: "What's included"
     id: whats-included
@@ -114,13 +115,15 @@ sections:
         bullets: ["Primary & secondary categories", "Services and products with real descriptions", "Posting and photo routine"]
       - title: Local keyword & area research
         text: "The exact service + area phrases your customers search, mapped to the profile and to the right page on your site."
-        bullets: ["Service + city and near-me sets", "Area-level terms (e.g. Dhanmondi, Uttara)", "Competitor gap analysis"]
+        bullets: ["Service + city, near-me and open-now sets", "Area-level terms (e.g. Dhanmondi, Uttara) in English, Bangla and Banglish", "Competitor gap analysis"]
       - title: Citations & NAP consistency
+        href: /blog/local-citations-nap-consistency-guide
+        cta: How citations and NAP work
         text: "One name, address and phone everywhere it appears. Wrong and duplicate listings are found and cleaned up first."
         bullets: ["Bing Places, Apple Business Connect, Facebook", "Yelp and industry or country directories", "Duplicate listing clean-up"]
       - title: Reviews & reputation
-        text: "A request routine your staff will actually follow, replies to every review, and no fake or incentivised reviews, ever."
-        bullets: ["Review request links and scripts", "Reply templates in your voice", "Monitoring across platforms"]
+        text: "A request routine your staff will actually follow, so review velocity and recency stay up, replies to every review, and no fake, incentivised or gated reviews, ever."
+        bullets: ["Review request links, QR codes and scripts", "Reply templates in your voice", "Monitoring across platforms"]
       - title: Location & service-area pages
         text: "Pages that confirm each service and each area you cover, written to be useful rather than the same template with the city swapped."
         bullets: ["Service pages per core offer", "Area pages for real coverage", "Internal links to and from the profile"]
@@ -131,7 +134,7 @@ sections:
         bullets: ["Core Web Vitals on mobile", "Crawl and indexing fixes", "On-page structure"]
       - title: LocalBusiness schema & entity signals
         text: "Structured data that states your business facts plainly for Google and AI assistants."
-        bullets: ["LocalBusiness, Service, FAQ schema", "sameAs links to your real profiles", "Consistent entity details"]
+        bullets: ["LocalBusiness subtype (Dentist, Plumber, HVACBusiness)", "Service, FAQPage and BreadcrumbList", "sameAs links to your real profiles"]
       - title: Local links & mentions
         text: "Links and mentions from local partners, associations, suppliers and press. No link farms or paid networks."
         bullets: ["Partner and supplier links", "Local associations and events", "Unlinked mention reclaim"]
@@ -185,7 +188,7 @@ sections:
     heading: "Why your business isn't showing on Google Maps"
     intro: "When a business is missing from the map pack, it is almost always one of these. The free audit checks every one."
     items:
-      - { title: "Profile unverified, suspended or incomplete", text: "An unverified profile does not show at all, and a thin one rarely beats a complete competitor." }
+      - { title: "Profile unverified, suspended or incomplete", text: "An unverified profile does not show at all, and a thin one rarely beats a complete competitor. Duplicates and unwanted suggested edits cause the same trouble." }
       - { title: Wrong primary category, text: "The single most common cause. A dentist listed as *Medical clinic* competes for the wrong searches." }
       - { title: "NAP mismatches and duplicates", text: "Two listings for one business split reviews and confuse Google about which one is real." }
       - { title: Pin in the wrong place, text: "A pin dropped on the wrong side of a busy road changes who sees you. Common in Bangladesh, where addresses are written by landmark." }
@@ -207,7 +210,7 @@ sections:
     eyebrow: Reporting
     heading: "What you'll see in your monthly report"
     body:
-      - "Numbers that map to revenue, not a single flattering ranking screenshot. Every report ends with what I am doing next month and why."
+      - "Numbers that map to revenue, not a single flattering ranking screenshot. Data comes from GBP Performance, Google Search Console, GA4 and geo-grid scans, and every report ends with what I am doing next month and why. For one client that meant [461 calls from the profile in five months](/case-studies/gbp-calls-growth), up 205% on the year before."
     bullets:
       - "**Geo-grid rankings** across your service area, month on month"
       - "**Calls** from your Google Business Profile"
@@ -227,7 +230,7 @@ sections:
       - { title: Home & trade services, href: /seo-for-home-services, cta: Home services SEO, text: "Plumbers, electricians, HVAC, roofers, cleaners, pest control, movers and towing, where the first three Maps results take most of the calls." }
       - { title: Clinics & professionals, href: /industries, cta: All industries, text: "Dentists, clinics, diagnostic centres, lawyers and real estate, where trust signals and reviews decide who gets chosen." }
       - { title: "Shops, showrooms & restaurants", href: /local-seo-dhaka, cta: Local SEO in Dhaka, text: "Walk-in businesses competing in crowded areas, where pin accuracy and photos matter most." }
-      - { title: Service-area businesses, text: "No storefront? The profile is set up as a service-area business, with pages for the areas you really cover, and no fake addresses." }
+      - { title: Service-area businesses, text: "No storefront? The profile is set up as a service-area business with the address hidden and up to 20 service areas, with pages for the areas you really cover, and no fake addresses." }
       - { title: Multi-location brands, text: "Each real branch gets its own verified profile, pages and tracking, reported per location." }
       - { title: Clients outside Bangladesh, text: "The ranking system is the same in any country. I work remotely with clients worldwide, in English, with calls on WhatsApp or Zoom at a time that suits your time zone." }
   - type: compare
@@ -298,6 +301,8 @@ faqs:
     a: "Yes. The system is the same in any country. Clients abroad work with me remotely in English, with calls on WhatsApp or Zoom at a time that fits their time zone."
   - q: "What happens if my Google Business Profile gets suspended?"
     a: "Suspensions are appealed with the evidence Google asks for, usually proof of the premises and your right to operate there. Nobody can guarantee reinstatement, so the work is designed never to cause one."
+  - q: "Does local SEO help my business show up in AI search?"
+    a: "Yes, indirectly. Google AI Overviews, Gemini and ChatGPT draw on the same signals: a complete Business Profile, consistent citations, reviews and clear website pages. Consistent entity details make your business easier to cite. More in [AI search visibility for local businesses](/blog/ai-search-visibility-local-business)."
   - q: "How is local SEO different from regular SEO?"
     a: "Regular SEO competes for rankings anywhere. Local SEO competes for searches with local intent, where the Map Pack and Google Business Profile matter as much as the website. Full comparison in [Local SEO vs traditional SEO](/blog/local-seo-vs-traditional-seo)."
 related: [guide, gbp, technical, home-services, cases, book]

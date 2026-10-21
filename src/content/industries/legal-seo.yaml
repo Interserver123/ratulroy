@@ -1,5 +1,5 @@
-title: "Legal SEO Services | Local SEO for Law Firms | Ratul Roy"
-description: "Legal SEO and Local SEO for law firms. Rank in Google Maps for high-intent practice-area searches and earn qualified case leads."
+title: "Law Firm SEO: Rank for Lawyer Near Me by Practice Area"
+description: "Local SEO for law firms and lawyers: practice-area categories, LegalService schema and pages that rank for divorce, criminal and property lawyer searches."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Industries, href: /industries }
@@ -7,82 +7,111 @@ breadcrumb:
 eyebrow: "Legal SEO"
 h1: "Local SEO for Law Firms Going After Real Case Leads"
 em: "Real Case Leads"
-lead: "Rank in the Google Maps 3-pack and top organic results for high-intent practice-area searches (personal injury, criminal defense, family, immigration, business, and more) with E-E-A-T-first content built specifically for legal buyers."
+lead: "Appear in Google Maps and local results when someone searches \"divorce lawyer near me\", \"criminal lawyer in Dhaka\" or \"property lawyer consultation\", and give them the credibility to book a consultation."
 heroBullets:
-  - "Top-3 Maps ranking for practice-area + city queries"
-  - "Attorney and practice-area pages built for E-E-A-T"
-  - "Schema (Attorney, LegalService, Person, FAQ) done properly"
-  - "Reviews, authority signals, and citations specific to legal"
+  - "Firm and lawyer profiles with practice-area categories that match your actual caseload"
+  - "One page per practice area, written with the depth Google expects for legal topics"
+  - "Review replies that protect client confidentiality"
+  - "LegalService and Attorney schema tied to your lawyers' real credentials"
 ctas:
   - { label: Book a Free Strategy Call, href: /book-strategy-call }
   - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
 intro:
-  - "Legal is the most competitive Local SEO category in the world. Personal injury alone has CPCs above $1,000 per click in many markets. The firms that win don't outspend their competitors, they outrank them."
-  - "They have dominant Google Business Profiles, deep practice-area pages, attorney bios that actually communicate expertise, and a steady drumbeat of reviews and authority signals. Most firms have a beautiful website that doesn't rank for anything. That's the gap."
+  - "Legal SEO is Local SEO for law firms and individual lawyers: getting your firm's Google Business Profile and practice-area pages in front of people nearby who search for a lawyer by problem, such as divorce, bail, land disputes or company registration, and turning that search into a booked consultation."
+  - "Legal searches are high-stakes and personal. People are worried, they want someone qualified and close by, and they read reviews and credentials closely before they call. My [Local SEO service](/local-seo-service) for law firms builds the relevance and trust signals Google looks for, within the advertising rules your bar council or state bar sets."
 sections:
   - type: problems
     eyebrow: The problem
-    heading: "Why legal SEO matters for your business"
-    intro: "The specific problems Local SEO solves for businesses in your industry."
+    heading: "Why good law firms stay invisible in local search"
+    intro: "Legal is competitive and tightly regulated. These are the problems I find most often."
     items:
-      - { title: "You're paying $200+ per click and not closing leads", text: "PPC has become unsustainable for legal. Local SEO and organic are the only channels with compounding returns and qualified intent." }
-      - { title: "Your practice areas are buried", text: "Most firm sites list practice areas as a dropdown menu. Each one needs its own deep page, written for the way clients actually search." }
-      - { title: "Your attorney bios don't help you rank", text: "Attorney pages are usually a photo and a paragraph. Done right, they're some of the most powerful E-E-A-T pages on the site." }
-      - { title: "GBP isn't optimized for legal specifics", text: "Wrong primary category, missing secondary categories, weak service list, no posts, no Q&A. Competing firms are taking advantage of all of it." }
+      - title: "A generic \"Law firm\" listing for everything"
+        text: "If your firm mostly handles family law but your profile only says \"Law firm\", you are competing on the broadest term instead of matching \"Divorce lawyer\" or \"Family law attorney\" searches where you'd actually win."
+      - title: "Directories outrank your own site"
+        text: "Legal directories and lawyer marketplaces often hold the top organic spots for \"lawyer in [city]\". Your own practice-area pages need real depth, and your directory profiles need to match your firm's details exactly."
+      - title: "Lawyer and firm profiles competing"
+        text: "Each partner may have a practitioner listing alongside the firm's, sometimes with old phone numbers or addresses. Unmanaged, they split reviews and confuse Google about which listing to show."
+      - title: "Thin content on a YMYL topic"
+        text: "Legal pages are \"Your Money or Your Life\" content. A 200-word page with no named author, no jurisdiction and no real explanation won't rank against firms that show genuine expertise."
   - type: cards
     alt: true
     columns: 3
     eyebrow: What's included
-    heading: "What's included in this engagement"
-    intro: "Every legal SEO project covers the full Local SEO stack, tuned for your industry."
+    heading: "What law firm SEO includes"
+    intro: "Work begins with [Google Business Profile optimization for law firms](/google-business-profile-optimization), then moves to practice-area pages and the credibility signals that support them."
     items:
-      - { title: "GBP optimization for law firms", text: "Primary category specific to practice area (Personal injury attorney, Criminal justice attorney, Family law attorney, Immigration attorney, etc.), secondary categories, full service list, attorney photos, GBP posts, and Q&A." }
-      - { title: "Deep practice-area pages", text: "Each practice area gets its own page (e.g. car accidents, slip and fall, divorce, custody, DUI, deportation defense) with LegalService schema, FAQs, case-result mentions, and clear consultation CTAs." }
-      - { title: "Attorney bio pages built for E-E-A-T", text: "Each attorney gets a real bio page with Person schema, credentials, bar admissions, cases, recognitions, publications, and clear authority signals." }
-      - { title: "City and venue pages", text: "Pages for each city, county, or courthouse where you actually practice, built around local context, not templated." }
-      - { title: "Authority content and topical depth", text: "Articles answering the questions clients Google before contacting an attorney: cost, process, timelines, what to do first. This is the strongest E-E-A-T signal you can build." }
-      - { title: "Reviews and reputation", text: "Review acquisition framework that respects state bar rules, response strategy, and reputation cleanup." }
+      - title: "Profiles set by practice area"
+        text: "A primary category matching your main caseload, such as Lawyer, Law firm, Divorce lawyer, Family law attorney, Criminal justice attorney, Immigration attorney or Estate planning attorney, with others added only for areas you actively practise. Consultation booking link, office hours and accurate chamber or office address."
+      - title: "Practice-area pages with real depth"
+        text: "One page per practice area and, where useful, per common matter: divorce and custody, bail and criminal defence, land and property disputes, company formation, immigration, employment. Each explains the process, documents needed, typical timelines and what a first consultation covers."
+      - title: "Lawyer bios and E-E-A-T"
+        text: "Named lawyers with enrolment or bar admission, courts they appear in, education and years of practice. Practice-area pages authored or reviewed by the lawyer, which Google and AI answer engines treat as a strong trust signal."
+      - title: "LegalService and Attorney schema"
+        text: "LocalBusiness markup with the LegalService subtype for the firm and Attorney or Person markup for lawyers, with areaServed, openingHoursSpecification, sameAs links to bar and directory profiles, and FAQPage markup on practice-area pages."
+      - title: "Confidential review handling"
+        text: "A review request after a matter closes, sent to every client. Replies that thank the reviewer without confirming they were a client or mentioning their case. I also check your jurisdiction's rules on testimonials before anything is published on the website."
+      - title: "Photos that build confidence"
+        text: "The office or chamber exterior and entrance, meeting room, reception and professional headshots of each lawyer. People booking a consultation want to know who they'll meet and where."
+  - type: list
+    eyebrow: Search behaviour
+    heading: "How people search for a lawyer"
+    intro: "Legal searches start with the problem, not the profession. Your pages need to meet people there."
+    bullets:
+      - "**Problem-led:** \"how to file for divorce in Bangladesh\", \"bail for a family member\", \"land dispute what to do\". Informational pages that answer clearly earn trust and the consultation."
+      - "**Practice area plus place:** \"family lawyer in Dhanmondi\", \"criminal lawyer near me\", \"immigration lawyer Chattogram\". These are Map Pack searches where category and distance matter."
+      - "**Consultation and cost:** \"free legal consultation\", \"lawyer fees for divorce\", \"consultation fee\". Say clearly how your first consultation works and what it costs."
+      - "**Urgent:** \"lawyer for police arrest\", \"emergency bail lawyer\". If you take urgent calls, your hours and phone must say so."
+      - "**Terminology:** people in Bangladesh search \"lawyer\", \"advocate\" and the Bangla \"ukil\" interchangeably, often in Banglish. Pages should use all three naturally."
   - type: steps
     eyebrow: Ranking factors
-    heading: "The ranking factors that decide this niche"
-    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    heading: "What decides law firm rankings"
+    intro: "Relevance, distance and prominence, plus the higher trust bar Google applies to legal content."
     items:
-      - { title: "E-E-A-T (the dominant factor in legal)", text: "Legal is YMYL. Google weights real expertise signals (credentials, bar admissions, named authors, case results) heavily; generic content from anonymous authors won't rank." }
-      - { title: "Topical depth per practice area", text: "Firms that cover one practice area deeply outrank firms that list 12 practice areas shallowly. Depth beats breadth in legal SEO." }
-      - { title: "Backlinks from authoritative sources", text: "Bar associations, legal directories (Justia, Avvo, Martindale, FindLaw), local news, and law school links carry significant weight." }
-      - { title: "Review credibility", text: "Legal review systems are heavily scrutinized. Quality, recency, and natural language matter more than raw volume." }
+      - title: "Practice-area relevance"
+        text: "Categories, services and dedicated pages tell Google which legal problems you handle. Specific beats general for almost every firm."
+      - title: "Distance to courts and clients"
+        text: "Map results lean on proximity. Firms with offices near the courts or business districts their clients use rank best around those areas."
+      - title: "Prominence from reviews and citations"
+        text: "Reviews, bar association listings, legal directories and local press mentions all add prominence. Consistent firm details across them matter."
+      - title: "Expertise signals"
+        text: "Author credentials, detailed answers and accurate jurisdiction-specific information help practice-area pages rank and get cited by AI search tools."
   - type: prose
     alt: true
+    eyebrow: Proof
     heading: "What this looks like in practice"
     body:
-      - "Legal cases are high-value enough that even modest ranking improvements compound into real revenue fast. One qualified personal-injury or family-law case typically covers months of SEO investment several times over."
-    stat: { value: "5-10x", label: "ROI per closed case from organic Maps leads" }
+      - "For a law firm, success means consultation calls and booking-link clicks, tracked through GBP Performance and call tracking. I haven't published a legal case study, so here is the method in action on another call-driven business: [461 calls from a Google Business Profile in five months](/case-studies/gbp-calls-growth), up 205% year on year, after category, citation and review fixes."
+      - "Law firms often share clients with property professionals, so [real estate SEO](/industries/real-estate-seo) is a natural referral partner for conveyancing and land-dispute work. Every vertical I cover is listed on the [industries hub](/industries). Legal answers are increasingly given by AI tools, and [getting cited by ChatGPT and Gemini](/blog/ai-search-visibility-local-business) depends on the same expertise and consistency signals."
+    stat: { value: "+205%", label: "calls year on year in a GBP-led case study" }
   - type: list
-    heading: "Why work with Ratul Roy on this"
+    heading: "Why law firms work with me"
     bullets:
-      - "Pure Local SEO focus, not generic legal marketing"
-      - "E-E-A-T-first content and schema strategy"
-      - "Hands-on practice-area and attorney-page builds"
-      - "Reporting tied to qualified case leads, not impressions"
-faqHeading: "Frequently asked questions"
+      - "Local SEO specialist who works within legal advertising and confidentiality rules"
+      - "Hands-on with practitioner listings, schema and practice-area content"
+      - "Reporting on consultation calls, booking clicks and practice-area rankings"
+      - "No fake reviews, no stuffed business names and no lock-in contracts"
+faqHeading: "Law firm SEO questions"
 faqs:
-  - { q: "How long does legal SEO take to produce case leads?", a: "Legal is competitive and slower than easier niches. Most firms see meaningful Maps and organic improvements within 4-6 months, and steady case-lead growth within 6-9 months." }
-  - { q: "Do I need a separate page for every practice area?", a: "Yes, and ideally for every sub-practice (e.g. \"car accidents\", \"truck accidents\", \"motorcycle accidents\" under personal injury). Each one targets different queries." }
-  - { q: "Can I rank for multiple practice areas?", a: "Yes, but the strategy depends on focus. Firms that go deep on 2-3 practice areas usually outperform firms that go shallow on 10." }
-  - { q: "How important are attorney bios?", a: "Critical. Attorney pages with Person schema, real credentials, and content depth are some of the strongest E-E-A-T signals you can build for legal SEO." }
-  - { q: "Does Local SEO work for boutique or solo firms?", a: "Yes, often better than for big firms, because solos can build genuine topical authority and personal E-E-A-T faster." }
-  - { q: "Do you handle bar-rule compliance in marketing copy?", a: "All content is written conservatively and reviewed for typical state bar advertising norms, but final compliance review with your own counsel is always recommended." }
-related: [local-seo-service, gbp, cases, book, contact]
+  - q: "How long does SEO take for a law firm?"
+    a: "Profile and category fixes can lift visibility within weeks, but practice-area pages in competitive cities usually take 3 to 6 months or more to rank well. Legal is one of the more competitive local niches, so steady work matters more than quick wins."
+  - q: "Can individual lawyers have their own Google Business Profile?"
+    a: "Yes. Google allows practitioner listings for lawyers who serve clients directly. They can help well-known lawyers, but they need managing so they don't split reviews or show outdated details. A solo practitioner should have one profile, not two."
+  - q: "Are client reviews allowed for lawyers?"
+    a: "Google reviews from genuine clients are allowed, but your bar council or state bar may restrict how you ask for or use testimonials. In some jurisdictions advocates face strict limits on advertising. I check those rules before setting up any review process."
+  - q: "Should I list consultation fees online?"
+    a: "If your rules allow it, yes. \"Consultation fee\" and \"free consultation\" are common searches, and clarity helps people decide. Explain what the first meeting covers, which documents to bring and what happens after it, so people arrive prepared."
+  - q: "Which Google category should a law firm choose?"
+    a: "Choose the category that matches most of your caseload, such as Divorce lawyer or Criminal justice attorney, rather than only the generic Law firm or Lawyer. Add other practice-area categories only for work you actively take on."
+related: [local-seo-service, gbp, industries, cases, book]
 finalCta:
-  heading: "Ready to own the Google Maps 3-pack in your market?"
-  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  heading: "Find out which practice areas you could be ranking for"
+  text: "Book a free 30-minute strategy call. I'll review your firm and lawyer profiles, practice-area pages and competitors, and name the first fixes."
   buttons:
     - { label: Book Strategy Call, href: /book-strategy-call }
     - { label: Get Free Audit, href: "/#free-audit", style: ghost }
 card:
   title: "Legal"
-  text: "Rank law firms in Google Maps and top organic results for high-intent practice-area searches with E-E-A-T-first content."
-  value: "5-10x"
-  label: "ROI per closed case"
+  text: "Rank law firms in Google Maps and local results for practice-area searches like divorce, criminal and property lawyer, with expertise-first content."
   category: "Professional"
 order: 5
+updated: 2026-10-21

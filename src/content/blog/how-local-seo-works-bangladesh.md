@@ -12,16 +12,24 @@ faqs:
   - q: "How does Google decide which three businesses appear in the map pack?"
     a: "Google weighs relevance to the search, distance from the searcher or the named area, and prominence, meaning how well known and trusted the business is. The balance changes with each search and each location, which is why the three businesses shown can differ from one street to the next."
   - q: "Why do I rank well near my shop but not in other parts of the city?"
-    a: "Distance is part of the ranking calculation, so every business ranks best close to its own location. To rank further out you need stronger relevance and prominence than the competitors nearer to those searchers."
+    a: "Distance is part of the ranking calculation, so every business ranks best close to its own location. To rank further out you need stronger relevance and prominence than the competitors nearer to those searchers. A geo-grid scan shows exactly where that edge sits."
   - q: "Does posting on my Google Business Profile improve ranking?"
     a: "Posts keep the profile active and give customers current information, which helps them choose you. Google has not said posts are a direct ranking factor, so treat them as a conversion tool rather than a ranking lever."
   - q: "How long does Google Business Profile verification take in Bangladesh?"
     a: "It varies from a few days to several weeks, depending on the method Google offers and whether the first attempt is accepted. A clear video showing signage, premises and proof of management gives the best chance of passing first time."
+  - q: "Does LocalBusiness schema help my business rank on Google Maps?"
+    a: "Not directly. Schema.org LocalBusiness markup, or a subtype such as Dentist or AutoRepair, helps Google read your name, address, hours and service area from your website without guessing. That supports the consistency Google looks for, but the Business Profile itself remains the main local ranking asset."
+  - q: "Do Bangla reviews count as much as English reviews?"
+    a: "Yes. Google reads reviews in Bangla, English and romanised Bangla, and a genuine review in any of them adds to your prominence. Let customers write in the language they are comfortable with rather than asking them to switch to English."
 ---
 
-Knowing that Local SEO matters is one thing; knowing what actually happens between a customer typing a search and your phone ringing is another. This guide walks through the process step by step as it applies to businesses in Bangladesh, including the parts that work differently here: verification, addresses, and searches that switch between Bangla and English.
+Local SEO works in Bangladesh the same way it works everywhere: Google ranks local results on relevance, distance and prominence, using your Google Business Profile, your website, your reviews and how consistently your details appear across the web. Local SEO strengthens each of those signals so that your business makes it into the map pack and gets the call.
+
+Knowing that much is one thing; knowing what actually happens between a customer typing a search and your phone ringing is another. This guide, part 3 of the series that starts with the [complete Local SEO in Bangladesh guide](/blog/local-seo-bangladesh-guide), walks through the process step by step as it applies to businesses in Bangladesh, including the parts that work differently here: verification, addresses, and searches that switch between Bangla and English.
 
 ## The short version
+
+If you are new to the subject, part 2, [What Is Local SEO?](/blog/what-is-local-seo-bangladesh), covers the basic terms first.
 
 Google keeps a database of local businesses built mainly from Google Business Profiles. When someone searches with local intent, Google picks the businesses it considers most relevant to the search, close enough to the searcher, and prominent enough to trust, then orders them. Local SEO is the work of strengthening each of those judgements in your favour.
 
@@ -35,7 +43,7 @@ Google keeps a database of local businesses built mainly from Google Business Pr
 
 It starts with a Google Business Profile. Many businesses in Bangladesh already have one they never created: the listing was added from Maps data or by a user, and it sits unclaimed with whatever details someone once entered. Before creating anything, search for your business on Google Maps and claim the existing listing if there is one.
 
-Then comes verification. Google decides which methods to offer, and video verification, where you record the signage, the premises and something proving you manage the business, has become common. Until verification is complete, many edits will not go live and the profile will not perform properly. Unverified or suspended profiles are among the main reasons a business is missing from Maps entirely.
+Then comes verification. Google decides which methods to offer, and video verification (including live video calls with Google support), where you record the signage, the premises and something proving you manage the business, has become common. Until verification is complete, many edits will not go live and the profile will not perform properly. Unverified or suspended profiles are among the main reasons a business is missing from Maps entirely. A suspended profile needs the cause fixed and a reinstatement request, not a fresh listing. This is the stage where a [Google Business Profile optimization service](/google-business-profile-optimization) usually starts: confirming ownership, verification and the core fields before anything else.
 
 ## Step 2: Google works out what you are
 
@@ -46,7 +54,7 @@ Searches in Bangladesh arrive in English, Bangla and romanised Bangla. Google is
 - **Primary category:** the most specific one that describes your core business
 - **Secondary categories:** only those that genuinely apply
 - **Services:** every service listed, with plain descriptions
-- **Website:** a dedicated page for each main service
+- **Website:** a dedicated page for each main service, with LocalBusiness schema confirming the details
 - **Reviews:** customers describing what you did for them, in their own words
 
 ## Step 3: Where you are, and where the searcher is
@@ -62,7 +70,7 @@ Distance also explains why rankings vary so much across a city. A business can h
 Prominence is Google's estimate of how well known and reliable a business is. It draws on the number, recency and quality of your reviews, how often your business is mentioned and linked to elsewhere on the web, and how consistent your details are across those places. Google has also said that a business's position in ordinary web results contributes, which is one reason your website matters.
 
 - **Reviews:** a steady stream of genuine, recent reviews, with owner replies
-- **Citations:** consistent listings on Facebook, Bing Places and relevant directories
+- **Citations:** consistent NAP (name, address, phone) on Facebook, Bing Places, Apple Business Connect and relevant directories
 - **Mentions and links:** local news, associations, suppliers and partners
 - **Website strength:** a site that ranks in normal results for your services
 
@@ -76,7 +84,7 @@ Google has not published exactly how much customer behaviour influences rankings
 
 Because distance is part of the calculation, there is no single ranking for your business. Checking your position from your office shows you the best case. A geo-grid tool checks the same search from dozens of points across your area and shows where you rank strongly, where you slip and where you vanish.
 
-It is the most honest way to measure local visibility, and it shows where to focus next: the parts of your area where you are close to breaking into the top three are usually the cheapest wins.
+It is the most honest way to measure local visibility, and it shows where to focus next. The [service-area Map Pack case study](/case-studies/map-pack-service-areas) used exactly this approach to move a home service business into the Top 3 across 5x as many areas. Start with the parts of your area where you are close to breaking into the top three, because they are usually the cheapest wins.
 
 ## What actually moves rankings
 
@@ -98,6 +106,6 @@ In practice, the changes that most often produce movement are, roughly in order:
 - The address is written differently on every platform
 - Nobody owns the profile day to day, so reviews go unanswered and hours go stale
 
-Ownership is worth stressing: make sure the business owner, not a staff member or agency, is the primary owner of the profile. The [complete guide](/blog/local-seo-bangladesh-guide) covers the full setup, and [How Local SEO Helps Businesses Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps) goes further into each ranking signal.
+Ownership is worth stressing: make sure the business owner, not a staff member or agency, is the primary owner of the profile. The [GBP optimization checklist](/blog/google-business-profile-optimization-checklist) covers the full setup, and [How Local SEO Helps Businesses Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps) goes further into each ranking signal.
 
 > Local SEO works through a chain: Google has to find you, understand you, place you and trust you, and then the customer has to choose you. A weak link anywhere caps your results, which is why fixing the basics in order beats any single clever tactic. Next in the series: [Why Local SEO Is Important for Businesses in Bangladesh](/blog/why-local-seo-important-bangladesh). To have the chain checked for your business, [book a strategy call](/book-strategy-call).

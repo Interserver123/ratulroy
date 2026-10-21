@@ -77,7 +77,7 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
               <a class="cs card" href={it.href} data-spot>
                 {it.image && (
                   <span class="cs__shot">
-                    <Image src={img(it.image)} alt="" widths={[480, 760, 1100]} sizes="(min-width: 1024px) 560px, 100vw" loading={i < 2 ? "eager" : "lazy"} />
+                    <Image src={img(it.image)} alt="" widths={[480, 760, 1100]} sizes="(min-width: 1024px) 560px, 100vw" loading="lazy" />
                   </span>
                 )}
                 <span class="cs__body">
