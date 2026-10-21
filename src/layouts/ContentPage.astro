@@ -8,7 +8,8 @@ import Related from "../components/page/Related.astro";
 import FinalCta from "../components/page/FinalCta.astro";
 import Results from "../components/home/Results.astro";
 import CaseStudies from "../components/home/CaseStudies.astro";
-import { md, plain } from "../lib/md";
+import JumpNav from "../components/page/JumpNav.astro";
+import { md, plain, slugify } from "../lib/md";
 import { site } from "../data/site";
 import type { CollectionEntry } from "astro:content";
 
@@ -19,6 +20,13 @@ interface Props {
 }
 const { data: d, path, kind = "page" } = Astro.props;
 const url = `${site.url}${path}`;
+
+const jump = d.jumpNav
+  ? [
+      ...d.sections.filter((s) => s.nav).map((s) => ({ id: s.id ?? slugify(s.nav), label: s.nav! })),
+      ...(d.faqs.length ? [{ id: "faq", label: "FAQ" }] : []),
+    ]
+  : [];
 
 const crumbs = d.breadcrumb ?? [
   { label: "Home", href: "/" },
@@ -96,6 +104,7 @@ if (d.faqs.length) {
     )
   }
 
+  {jump.length > 0 && <JumpNav items={jump} />}
   <slot name="before" />
   <Sections sections={d.sections} />
   <slot />

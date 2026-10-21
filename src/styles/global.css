@@ -37,7 +37,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 150px;
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
 }

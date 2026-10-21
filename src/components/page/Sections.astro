@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { img } from "../../lib/img";
-import { md } from "../../lib/md";
+import { md, slugify } from "../../lib/md";
 import type { CollectionEntry } from "astro:content";
 
 type Section = CollectionEntry<"pages">["data"]["sections"][number];
@@ -10,6 +10,13 @@ interface Props {
 }
 const { sections } = Astro.props;
 const pad = (n: number) => String(n + 1).padStart(2, "0");
+const cell = (c: string) =>
+  /^yes$/i.test(c)
+    ? '<span class="pcmp__y" role="img" aria-label="Yes">✓</span>'
+    : /^no$/i.test(c)
+      ? '<span class="pcmp__n" role="img" aria-label="No">✕</span>'
+      : md(c);
+const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.length ?? 0), 0) ?? 0;
 ---
 
 {
@@ -17,10 +24,10 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
     const cols = s.columns ?? (s.items && s.items.length % 3 === 0 ? 3 : s.items && s.items.length >= 4 ? (s.items.length % 4 === 0 ? 4 : 2) : 2);
     const headId = `sec-${si}`;
     return (
-      <section class={`section${s.alt ? " wash" : ""} psec psec--${s.type}`} id={s.id} aria-labelledby={s.heading ? headId : undefined}>
+      <section class={`section${s.alt ? " wash" : ""} psec psec--${s.type}`} id={s.id ?? (s.nav ? slugify(s.nav) : undefined)} aria-labelledby={s.heading ? headId : undefined}>
         <div class="container">
           {(s.eyebrow || s.heading || s.intro) && s.type !== "cta" && (
-            <div class={`section-head${["stats", "quotes", "images"].includes(s.type) ? " section-head--center" : ""}`} data-reveal>
+            <div class={`section-head${["stats", "quotes", "images", "factors"].includes(s.type) ? " section-head--center" : ""}`} data-reveal>
               {s.eyebrow && <p class="eyebrow">{s.eyebrow}</p>}
               {s.heading && <h2 id={headId} set:html={md(s.heading)} />}
               {s.intro && <p set:html={md(s.intro)} />}
@@ -199,6 +206,121 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
             </div>
           )}
 
+          {/* ---- compare: a real table (snippet friendly) ---- */}
+          {s.type === "compare" && s.table && (
+            <div class="pcmp card" data-reveal>
+              <div class="pcmp__scroll" tabindex="0" role="region" aria-label={s.heading ?? "Comparison"}>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col"><span class="sr-only">Feature</span></th>
+                      {s.table.columns.map((c, i) => <th scope="col" class={i === s.table!.highlight ? "is-hl" : undefined}>{c}</th>)}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {s.table.rows.map((r) => (
+                      <tr>
+                        <th scope="row" set:html={md(r.label)} />
+                        {r.cells.map((c, i) => <td class={i === s.table!.highlight ? "is-hl" : undefined} set:html={cell(c)} />)}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* ---- timeline: phases on a route ---- */}
+          {s.type === "timeline" && (
+            <ol class={`ptl ptl--${s.items?.length ?? 3}`} data-route>
+              {s.items?.map((it, i) => (
+                <li class="ptl__item" data-reveal style={`--d:${i}`}>
+                  <span class="ptl__dot" aria-hidden="true" />
+                  <p class="ptl__when">{it.label ?? `Phase ${i + 1}`}</p>
+                  <div class="card">
+                    <h3>{it.title}</h3>
+                    {it.text && <p set:html={md(it.text)} />}
+                    {it.bullets && (
+                      <ul class="checklist">
+                        {it.bullets.map((b) => <li set:html={md(b)} />)}
+                      </ul>
+                    )}
+                    {it.meta && <p class="ptl__out"><b>Outcome</b>{it.meta}</p>}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          )}
+
+          {/* ---- factors: three overlapping rings (relevance / distance / prominence) ---- */}
+          {s.type === "factors" && (
+            <div class="pfac">
+              <div class="pfac__viz" data-reveal aria-hidden="true">
+                <svg viewBox="0 0 320 300">
+                  <circle class="pfac__ring pfac__ring--0" cx="118" cy="110" r="88" />
+                  <circle class="pfac__ring pfac__ring--1" cx="202" cy="110" r="88" />
+                  <circle class="pfac__ring pfac__ring--2" cx="160" cy="184" r="88" />
+                  {s.items?.slice(0, 3).map((it, i) => (
+                    <text class={`pfac__lbl pfac__lbl--${i}`} x={[78, 242, 160][i]} y={[86, 86, 248][i]} text-anchor="middle">{it.label ?? it.title}</text>
+                  ))}
+                  <g class="pfac__pin">
+                    <path d="M160 116c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z" />
+                    <circle cx="160" cy="132" r="5.5" fill="#fff" />
+                  </g>
+                </svg>
+                <p class="pfac__mid">{s.stat?.label ?? "Map Pack"}</p>
+              </div>
+              <ol class="pfac__list">
+                {s.items?.map((it, i) => (
+                  <li class={`card pfac__item pfac__item--${i}`} data-reveal style={`--d:${i}`} tabindex="0">
+                    <span class="pfac__key" aria-hidden="true" />
+                    <div>
+                      <h3>{it.title}</h3>
+                      {it.text && <p set:html={md(it.text)} />}
+                      {it.bullets && (
+                        <ul class="checklist">
+                          {it.bullets.map((b) => <li set:html={md(b)} />)}
+                        </ul>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* ---- audit: interactive self-check ---- */}
+          {s.type === "audit" && (
+            <div class="paud" data-audit data-total={auditTotal(s)}>
+              <div class="paud__groups">
+                {s.blocks?.map((b, bi) => (
+                  <fieldset class="card paud__group" data-reveal style={`--d:${bi % 2}`}>
+                    <legend><span class="num">{pad(bi)}</span>{b.heading}</legend>
+                    {b.bullets?.map((x, xi) => (
+                      <label class="paud__row">
+                        <input type="checkbox" name={`a-${si}-${bi}-${xi}`} />
+                        <span class="paud__box" aria-hidden="true" />
+                        <span set:html={md(x)} />
+                      </label>
+                    ))}
+                  </fieldset>
+                ))}
+              </div>
+              <aside class="paud__score card" aria-live="polite">
+                <div class="paud__ring">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle cx="60" cy="60" r="50" class="paud__track" />
+                    <circle cx="60" cy="60" r="50" class="paud__bar" pathLength="100" />
+                  </svg>
+                  <p><b class="num" data-audit-n>0</b><span>/ {auditTotal(s)}</span></p>
+                </div>
+                <p class="paud__msg" data-audit-msg>Tick everything your profile already has.</p>
+                <a class="btn btn--dark" href={s.buttons?.[0]?.href ?? "/#free-audit"}><span class="disc" aria-hidden="true">↗</span>{s.buttons?.[0]?.label ?? "Get a free audit"}</a>
+                {s.note && <p class="paud__note" set:html={md(s.note)} />}
+              </aside>
+            </div>
+          )}
+
           {/* ---- inline CTA banner ---- */}
           {s.type === "cta" && (
             <div class="pcta" data-reveal>
@@ -223,6 +345,36 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
     );
   })
 }
+
+<script>
+  // Self-audit checklist: live score ring + verdict.
+  document.querySelectorAll<HTMLElement>("[data-audit]").forEach((root) => {
+    const total = Number(root.dataset.total) || 1;
+    const n = root.querySelector<HTMLElement>("[data-audit-n]");
+    const msg = root.querySelector<HTMLElement>("[data-audit-msg]");
+    const update = () => {
+      const done = root.querySelectorAll("input:checked").length;
+      const pct = Math.round((done / total) * 100);
+      root.style.setProperty("--p", String(pct));
+      if (n) n.textContent = String(done);
+      if (msg)
+        msg.textContent =
+          done === 0
+            ? "Tick everything your profile already has."
+            : pct < 40
+              ? "Big gaps. Most of your Maps visibility is being left on the table."
+              : pct < 75
+                ? "A solid base. The remaining gaps are exactly what competitors win on."
+                : pct < 100
+                  ? "Strong profile. The gains left come from reviews, links and prominence."
+                  : "Everything ticked. Now it is about prominence: reviews, links and mentions.";
+      root.classList.toggle("is-low", done > 0 && pct < 40);
+      root.classList.toggle("is-high", pct >= 75);
+    };
+    root.addEventListener("change", update);
+    update();
+  });
+</script>
 
 <style>
   .psec + .psec:not(.wash) {
@@ -706,5 +858,459 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
   .btn--outline:hover {
     color: #fff;
     border-color: #fff;
+  }
+  /* compare */
+  .pcmp {
+    padding: 0;
+    overflow: hidden;
+  }
+  .pcmp__scroll {
+    overflow-x: auto;
+  }
+  .pcmp table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .pcmp th,
+  .pcmp td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  .pcmp thead th {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .pcmp tbody th {
+    font-weight: 600;
+    color: var(--ink);
+    width: 30%;
+    position: sticky;
+    left: 0;
+    background: var(--paper);
+  }
+  .pcmp td {
+    color: var(--ink-2);
+  }
+  .pcmp tbody tr:last-child > * {
+    border-bottom: 0;
+  }
+  .pcmp .is-hl {
+    background: rgb(232 64 47 / 6%);
+    color: var(--ink);
+  }
+  .pcmp thead .is-hl {
+    background: var(--ink);
+    color: #fff;
+  }
+  .pcmp :global(.pcmp__y),
+  .pcmp :global(.pcmp__n) {
+    display: inline-grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .pcmp :global(.pcmp__y) {
+    background: var(--good-soft);
+    color: var(--good);
+  }
+  .pcmp :global(.pcmp__n) {
+    background: var(--bg-2);
+    color: var(--dim);
+  }
+
+  /* timeline */
+  .ptl {
+    position: relative;
+    display: grid;
+    gap: 22px;
+    padding-left: 30px;
+  }
+  .ptl::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    bottom: 8px;
+    border-left: 2px dashed var(--line-2);
+  }
+  .ptl__item {
+    position: relative;
+  }
+  .ptl__dot {
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 5px solid var(--accent);
+    box-shadow: 0 0 0 5px rgb(232 64 47 / 14%);
+  }
+  .ptl__when {
+    margin: 0 0 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .ptl .card {
+    height: calc(100% - 32px);
+  }
+  .ptl h3 {
+    font-size: 1.15rem;
+  }
+  .ptl .card > p {
+    font-size: 0.94rem;
+  }
+  .ptl .checklist li {
+    font-size: 0.9rem;
+  }
+  .ptl__out {
+    margin: 14px 0 0;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line-2);
+    font-size: 0.9rem;
+    color: var(--ink);
+  }
+  .ptl__out b {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--good);
+    margin-bottom: 2px;
+  }
+  @media (min-width: 960px) {
+    .ptl {
+      grid-template-columns: repeat(var(--cols, 3), 1fr);
+      padding-left: 0;
+      padding-top: 30px;
+    }
+    .ptl--4 {
+      --cols: 4;
+    }
+    .ptl::before {
+      left: 10px;
+      right: 10px;
+      top: 9px;
+      bottom: auto;
+      border-left: 0;
+      border-top: 2px dashed var(--line-2);
+    }
+    .ptl__dot {
+      left: 0;
+      top: -30px;
+    }
+  }
+
+  /* factors */
+  .pfac {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (min-width: 960px) {
+    .pfac {
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+    }
+  }
+  .pfac__viz {
+    position: relative;
+    max-width: 440px;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .pfac__viz svg {
+    width: 100%;
+    overflow: visible;
+  }
+  .pfac__ring {
+    fill-opacity: 0.12;
+    stroke-width: 2;
+    transition:
+      fill-opacity 0.35s var(--ease),
+      transform 0.5s var(--ease);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .pfac__ring--0 {
+    fill: var(--accent);
+    stroke: var(--accent);
+  }
+  .pfac__ring--1 {
+    fill: var(--good);
+    stroke: var(--good);
+  }
+  .pfac__ring--2 {
+    fill: var(--warn);
+    stroke: var(--warn);
+  }
+  .pfac__lbl {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    fill: var(--ink);
+  }
+  .pfac__pin path {
+    fill: var(--ink);
+  }
+  .pfac__pin {
+    animation: pfacBob 3s var(--ease) infinite;
+  }
+  @keyframes pfacBob {
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  .pfac__mid {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    translate: -50% 0;
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pfac:has(.pfac__item--0:hover, .pfac__item--0:focus) .pfac__ring--0,
+  .pfac:has(.pfac__item--1:hover, .pfac__item--1:focus) .pfac__ring--1,
+  .pfac:has(.pfac__item--2:hover, .pfac__item--2:focus) .pfac__ring--2 {
+    fill-opacity: 0.32;
+    transform: scale(1.04);
+  }
+  .pfac__list {
+    display: grid;
+    gap: 14px;
+  }
+  .pfac__item {
+    display: grid;
+    grid-template-columns: 14px 1fr;
+    gap: 16px;
+    transition:
+      border-color 0.25s,
+      transform 0.35s var(--ease);
+    outline: none;
+  }
+  .pfac__item:hover,
+  .pfac__item:focus-visible {
+    transform: translateX(6px);
+    border-color: var(--line-2);
+  }
+  .pfac__key {
+    width: 14px;
+    height: 14px;
+    margin-top: 6px;
+    border-radius: 50%;
+  }
+  .pfac__item--0 .pfac__key {
+    background: var(--accent);
+  }
+  .pfac__item--1 .pfac__key {
+    background: var(--good);
+  }
+  .pfac__item--2 .pfac__key {
+    background: var(--warn);
+  }
+  .pfac__item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  .pfac__item p {
+    font-size: 0.94rem;
+    margin: 0;
+  }
+  .pfac__item .checklist {
+    margin-top: 10px;
+  }
+  .pfac__item .checklist li {
+    font-size: 0.88rem;
+  }
+
+  /* audit */
+  .paud {
+    display: grid;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (min-width: 1024px) {
+    .paud {
+      grid-template-columns: 1fr 320px;
+    }
+  }
+  .paud__groups {
+    display: grid;
+    gap: 16px;
+  }
+  @media (min-width: 720px) {
+    .paud__groups {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .paud__group {
+    margin: 0;
+    padding: 22px;
+    border: 1px solid var(--line);
+    min-width: 0;
+  }
+  .paud__group legend {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: var(--ink);
+  }
+  .paud__group legend .num {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 0.72rem;
+  }
+  .paud__row {
+    clear: both;
+    position: relative;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .paud__row input {
+    position: absolute;
+    opacity: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+  }
+  .paud__box {
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    border: 2px solid var(--line-2);
+    background: var(--paper);
+    transition: all 0.2s var(--ease);
+  }
+  .paud__row input:focus-visible + .paud__box {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .paud__row input:checked + .paud__box {
+    background: var(--good)
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      center / 16px no-repeat;
+    border-color: var(--good);
+  }
+  .paud__row:has(input:checked) {
+    color: var(--ink);
+  }
+  .paud__row :global(strong) {
+    color: var(--ink);
+  }
+  .paud__score {
+    position: sticky;
+    top: 100px;
+    display: grid;
+    gap: 16px;
+    justify-items: center;
+    text-align: center;
+    padding: 28px 24px;
+    background:
+      radial-gradient(80% 60% at 50% 0%, rgb(15 157 99 / 10%), transparent 70%),
+      var(--paper);
+    box-shadow: var(--shadow-lg);
+  }
+  .paud__ring {
+    position: relative;
+    width: 150px;
+  }
+  .paud__ring svg {
+    width: 100%;
+    transform: rotate(-90deg);
+  }
+  .paud__track,
+  .paud__bar {
+    fill: none;
+    stroke-width: 10;
+  }
+  .paud__track {
+    stroke: var(--bg-2);
+  }
+  .paud__bar {
+    stroke: var(--warn);
+    stroke-linecap: round;
+    stroke-dasharray: calc(var(--p, 0) * 1) 100;
+    transition:
+      stroke-dasharray 0.5s var(--ease),
+      stroke 0.3s;
+  }
+  .paud.is-low .paud__bar {
+    stroke: var(--accent);
+  }
+  .paud.is-high .paud__bar {
+    stroke: var(--good);
+  }
+  .paud__ring p {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    line-height: 1;
+  }
+  .paud__ring b {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    color: var(--ink);
+  }
+  .paud__ring span {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .paud__msg {
+    margin: 0;
+    min-height: 3em;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .paud__note {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pfac__pin {
+      animation: none;
+    }
   }
 </style>

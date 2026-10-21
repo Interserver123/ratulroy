@@ -1,0 +1,156 @@
+---
+// Sticky "on this page" bar for long service pages.
+interface Props {
+  items: { id: string; label: string }[];
+}
+const { items } = Astro.props;
+---
+
+<nav class="jnav" aria-label="On this page" data-jnav>
+  <div class="container jnav__inner">
+    <span class="jnav__label">On this page</span>
+    <ol class="jnav__list">
+      {
+        items.map((it) => (
+          <li>
+            <a href={`#${it.id}`} data-jnav-link={it.id}>
+              {it.label}
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+    <a class="jnav__cta" href="/book-strategy-call">Book a call <span aria-hidden="true">→</span></a>
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector<HTMLElement>("[data-jnav]");
+  if (nav) {
+    const links = [...nav.querySelectorAll<HTMLAnchorElement>("[data-jnav-link]")];
+    const targets = links.map((a) => document.getElementById(a.dataset.jnavLink!)).filter(Boolean) as HTMLElement[];
+    const list = nav.querySelector<HTMLElement>(".jnav__list");
+    let current = "";
+    const set = (id: string) => {
+      if (id === current) return;
+      current = id;
+      links.forEach((a) => {
+        const on = a.dataset.jnavLink === id;
+        a.classList.toggle("is-on", on);
+        if (on) {
+          a.setAttribute("aria-current", "true");
+          // keep the active chip in view without moving the page
+          if (list) list.scrollTo({ left: a.offsetLeft - list.offsetWidth / 2 + a.offsetWidth / 2, behavior: "smooth" });
+        } else a.removeAttribute("aria-current");
+      });
+    };
+    let ticking = false;
+    const onScroll = () => {
+      ticking = false;
+      let id = "";
+      for (const t of targets) if (t.getBoundingClientRect().top < 200) id = t.id;
+      set(id);
+      nav.classList.toggle("is-stuck", nav.getBoundingClientRect().top <= 96);
+    };
+    addEventListener("scroll", () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(onScroll);
+      }
+    }, { passive: true });
+    onScroll();
+  }
+</script>
+
+<style>
+  .jnav {
+    position: sticky;
+    top: 88px;
+    z-index: 40;
+    margin: 0 0 8px;
+  }
+  .jnav__inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 8px 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgb(255 255 255 / 82%);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
+    box-shadow: var(--shadow);
+    max-width: calc(var(--container) - 40px);
+    transition: box-shadow 0.3s;
+  }
+  .jnav.is-stuck .jnav__inner {
+    box-shadow: var(--shadow-lg);
+  }
+  .jnav__label {
+    flex: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  @media (max-width: 720px) {
+    .jnav {
+      top: 82px;
+    }
+    .jnav__label,
+    .jnav__cta {
+      display: none;
+    }
+    .jnav__inner {
+      padding-left: 8px;
+      margin-inline: 12px;
+    }
+  }
+  .jnav__list {
+    flex: 1;
+    display: flex;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 24px), transparent);
+  }
+  .jnav__list::-webkit-scrollbar {
+    display: none;
+  }
+  .jnav__list a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--muted);
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .jnav__list a:hover {
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .jnav__list a.is-on {
+    background: var(--ink);
+    color: #fff;
+  }
+  .jnav__cta {
+    flex: none;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  .jnav__cta:hover {
+    background: var(--ink);
+  }
+</style>

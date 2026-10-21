@@ -34,7 +34,8 @@ const tier = z.object({
 
 // A page is a list of sections; each section type has its own designed layout.
 const section = z.object({
-  type: z.enum(["cards", "steps", "list", "prose", "stats", "problems", "pricing", "quotes", "cta", "images", "links"]),
+  type: z.enum(["cards", "steps", "list", "prose", "stats", "problems", "pricing", "quotes", "cta", "images", "links", "compare", "timeline", "factors", "audit"]),
+  nav: z.string().optional(), // short label for the sticky in-page nav
   id: z.string().optional(),
   eyebrow: z.string().optional(),
   heading: z.string().optional(),
@@ -50,6 +51,14 @@ const section = z.object({
   columns: z.number().optional(),
   stat: z.object({ value: z.string(), label: z.string() }).optional(),
   alt: z.boolean().optional(), // tinted background
+  // compare: a real <table>; cells "yes" / "no" render as icons
+  table: z
+    .object({
+      columns: z.array(z.string()),
+      rows: z.array(z.object({ label: z.string(), cells: z.array(z.string()) })),
+      highlight: z.number().optional(), // index into columns (0-based, excluding the label column)
+    })
+    .optional(),
 });
 
 const page = z.object({
@@ -78,6 +87,7 @@ const page = z.object({
   // Listing info (hubs)
   card: z.object({ title: z.string(), text: z.string(), value: z.string().optional(), label: z.string().optional(), category: z.string().optional(), image: z.string().optional() }).optional(),
   order: z.number().default(100),
+  jumpNav: z.boolean().default(false),
 });
 
 export const collections = {

@@ -16,3 +16,8 @@ export function md(s = ""): string {
 export function plain(s = ""): string {
   return s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*?([^*]+)\*\*?/g, "$1");
 }
+
+/** URL-safe id from a label, e.g. "How it works" -> "how-it-works". */
+export function slugify(s = ""): string {
+  return s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
