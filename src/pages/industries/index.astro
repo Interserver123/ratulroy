@@ -1,0 +1,34 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import ContentPage from "../../layouts/ContentPage.astro";
+import HubGrid from "../../components/page/HubGrid.astro";
+
+const page = await getEntry("pages", "industries");
+if (!page) throw new Error("Missing src/content/pages/industries.yaml");
+const industries = (await getCollection("industries")).sort((a, b) => a.data.order - b.data.order);
+
+const items = [
+  ...industries.map((e) => ({
+    href: `/industries/${e.id}`,
+    title: e.data.card?.title ?? e.data.eyebrow ?? e.data.h1,
+    text: e.data.card?.text ?? e.data.description,
+    category: e.data.card?.category,
+  })),
+  {
+    href: "/seo-for-home-services",
+    title: "Home Services",
+    text: "Contractors and trades that win near-me searches, map pack calls and booked jobs.",
+    category: "Home services",
+  },
+  {
+    href: "/seo-for-wholesale-distributors",
+    title: "Wholesale Distributors",
+    text: "Catalog, category and B2B search visibility that turns buyers into inquiries.",
+    category: "B2B",
+  },
+];
+---
+
+<ContentPage data={page.data} path="/industries">
+  <HubGrid slot="before" items={items} variant="industry" eyebrow="Industries" heading="Pick your industry" />
+</ContentPage>

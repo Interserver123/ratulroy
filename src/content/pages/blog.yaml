@@ -1,0 +1,51 @@
+title: "Blog | Local SEO Resources by Ratul Roy"
+description: "Read Local SEO, Google Maps ranking, GBP optimization, website SEO, and AI search visibility insights from Ratul Roy, Local SEO Expert in Bangladesh."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Blog, href: /blog }
+eyebrow: SEO Resources
+h1: "Local SEO Insights, Google Maps Strategies & AI Search Resources"
+em: "Local SEO Insights"
+lead: "Actionable guides, case breakdowns, and expert insights on Local SEO, Google Maps ranking, Google Business Profile optimization, website SEO, and AI-driven search visibility."
+heroChips: ["Local SEO", "Google Maps Ranking", "GBP Optimization", "AI Search Visibility", "Website SEO"]
+ctas:
+  - { label: Read the complete guide, href: /blog/local-seo-bangladesh-guide }
+  - { label: Get Free Local SEO Audit, href: "/#free-audit", style: ghost }
+sections:
+  - type: prose
+    alt: true
+    eyebrow: About This Blog
+    heading: "A practical resource hub for Local SEO, Google Maps, and AI search"
+    intro: "Field-tested guides on Local SEO, Google Maps ranking, Google Business Profile optimisation, website SEO, technical SEO, and AI search visibility, written for service-business owners and marketing leads in Bangladesh."
+    blocks:
+      - heading: "What you'll find on this blog"
+        body:
+          - "Every article here is written for one reader: a service-business owner or marketing lead in Bangladesh who wants their phone to ring more often. No keyword stuffing, no SEO theatre, just practical, field-tested guides on Local SEO, Google Maps ranking, Google Business Profile optimisation, website SEO, technical SEO, and the rapidly emerging world of AI search visibility (GEO, AIO, and LLM citations)."
+          - "If you've ever wondered why a competitor with a worse offer keeps showing up above you on Google Maps, or why your beautifully designed website still doesn't bring in calls, the answer is almost certainly hiding inside one of these posts."
+      - heading: "Topics covered in depth"
+        bullets:
+          - "**Local SEO fundamentals:** relevance, distance, prominence, and how Google's local algorithm actually works."
+          - "**Google Maps ranking:** geo-grid tracking, proximity engineering, service-area optimisation."
+          - "**Google Business Profile:** categories, services, posts, photos, Q&A, products, attributes."
+          - "**Website SEO:** on-page, content, internal linking, semantic SEO, and topical authority."
+          - "**Technical SEO:** Core Web Vitals, crawlability, indexation, schema markup, and structured data."
+          - "**AI search visibility:** GEO, AIO, LLM citation building, and how to be quoted by ChatGPT, Gemini, and Perplexity."
+          - "**Case studies:** real growth curves, real GSC screenshots, real lessons."
+      - heading: "How to use these articles"
+        body:
+          - "Read the post that maps to your biggest current problem, ship the fixes, then come back for the next one. If you'd rather have someone do the work for you, every article links back to the relevant service and to the [strategy call](/book-strategy-call)."
+  - type: cta
+    heading: "Need Help Turning SEO Knowledge Into Real Local Growth?"
+    intro: "If you want a clear strategy for Google Maps ranking, Google Business Profile optimization, website SEO, and AI search visibility, start with a free audit."
+    buttons:
+      - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+      - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
+pricing: none
+related: [services, local-seo-service, cases, about, book, contact]
+finalCta:
+  heading: "Ready to grow your local visibility?"
+  text: "Book a free strategy call and we'll map out exactly how to rank your business on Google Maps and bring in qualified inbound calls."
+  buttons:
+    - { label: Book strategy call, href: /book-strategy-call }
+    - { label: Get free SEO audit, href: "/#free-audit", style: ghost }
+order: 100

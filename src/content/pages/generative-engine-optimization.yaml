@@ -1,0 +1,145 @@
+title: "GEO Service in Bangladesh | Generative Engine Optimization"
+description: "Get GEO service in Bangladesh with Ratul Roy. Improve AI search visibility across ChatGPT, Gemini, Perplexity, Google AI Overviews, and LLM-powered discovery."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Services, href: /services }
+  - { label: GEO, href: /generative-engine-optimization }
+eyebrow: Generative Engine Optimization
+h1: "GEO Service in Bangladesh for AI Search Visibility"
+em: "AI Search Visibility"
+lead: "I help businesses become easier for AI platforms like ChatGPT, Gemini, Perplexity, Bing Copilot, and Google AI Overviews to understand, trust, and recommend through entity SEO, structured content, schema, topical authority, and brand signal optimization."
+sub: "Search is changing. Your next customer may not type a keyword into Google, they may ask an AI assistant for the best service, expert, or company. GEO helps your brand become part of that answer ecosystem."
+heroChips: ["GEO / AIO Ready", "Entity SEO", "LLM Visibility", "Schema Architecture", "Local SEO + AI Search"]
+heroStats:
+  - { value: "5", label: "AI platforms" }
+  - { value: "10", label: "Service layers" }
+  - { value: "4", label: "Framework levels" }
+ctas:
+  - { label: Get Free AI Search Visibility Audit, href: "/#free-audit" }
+  - { label: See How GEO Works, href: "#geo-process", style: ghost }
+sections:
+  - type: cards
+    columns: 2
+    eyebrow: What is GEO?
+    heading: "Generative Engine Optimization is SEO for AI-powered answers"
+    intro: "Generative Engine Optimization, or GEO, is the process of improving how AI search engines and large language models understand your brand, services, expertise, location, authority, and trust signals. Traditional SEO helps you rank in search results. GEO helps your business become more understandable and recommendable inside AI-generated answers."
+    items:
+      - { label: Then, title: Traditional SEO, bullets: ["Google rankings", "Organic clicks", "Search snippets", "Keyword-based discovery", "Website traffic"] }
+      - { label: Now, title: Generative Engine Optimization, featured: true, bullets: ["AI-generated answers", "Entity-based discovery", "LLM visibility", "Brand mention signals", "Answer engine inclusion", "AI Overview readiness"] }
+  - type: cards
+    alt: true
+    columns: 4
+    eyebrow: Why it matters
+    heading: "Your customers are no longer searching in one place"
+    intro: "People now discover businesses through Google Search, Google Maps, Google AI Overviews, ChatGPT, Gemini, Perplexity, Bing Copilot, and voice assistants. If your brand is not clearly structured, trusted, and connected across the web, AI systems may not understand why you should be included in answers."
+    items:
+      - { title: AI answers are replacing some clicks, text: "AI platforms summarize options before users visit websites. Your brand needs signals strong enough to be understood inside those summaries." }
+      - { title: Entity clarity matters more, text: "AI systems need to know who you are, what you do, where you serve, and why you can be trusted." }
+      - { title: Trust signals influence visibility, text: "Reviews, citations, schema, content depth, author signals, brand mentions, and topical authority support AI understanding." }
+      - { title: Local SEO and GEO are connected, text: "For service businesses, Google Maps signals, GBP optimization, website SEO, and entity SEO all support AI search visibility." }
+  - type: cards
+    columns: 3
+    eyebrow: Who needs GEO?
+    heading: "GEO is built for brands that want to be found beyond Google rankings"
+    items:
+      - { label: "01", title: Local Service Businesses, text: "Businesses that want to appear when users ask AI tools for the best service provider in a city or area." }
+      - { label: "02", title: SEO Agencies, text: "Agencies that need advanced GEO, AIO, schema, and entity optimization support for clients." }
+      - { label: "03", title: Consultants and Experts, text: "Personal brands that want AI platforms to understand their expertise, services, credentials, and authority." }
+      - { label: "04", title: SaaS and B2B Brands, text: "Companies that need visibility in problem-aware, comparison, and recommendation-based AI queries." }
+      - { label: "05", title: "Healthcare, Legal & Professional Services", text: "Trust-heavy industries where E-E-A-T, content accuracy, and entity clarity are essential." }
+      - { label: "06", title: Not sure yet?, href: "/#free-audit", cta: Get an AI visibility audit, text: "Start with an audit of how AI platforms currently describe your business, then decide." }
+  - type: cards
+    alt: true
+    columns: 2
+    eyebrow: GEO service stack
+    heading: "What's included in my Generative Engine Optimization service"
+    items:
+      - { title: AI Search Visibility Audit, text: "I review how your brand appears across Google, AI Overviews, ChatGPT, Gemini, Perplexity, branded searches, and entity-based discovery.", tags: ["AI visibility audit", "LLM visibility", "AI search presence"] }
+      - { title: Entity SEO Optimization, text: "I strengthen your business entity so search engines and AI systems clearly understand your name, expertise, services, location, and authority.", tags: ["Entity SEO", "Knowledge Graph", "Brand entity"] }
+      - { title: "Schema & Structured Data Architecture", text: "I implement structured data such as LocalBusiness, Person, Organization, Service, FAQ, Article, and Breadcrumb schema to make your website machine-readable.", tags: ["Schema markup", "Structured data", "JSON-LD"] }
+      - { title: Google AI Overview Readiness, text: "I structure content, FAQs, service pages, and authority signals to support visibility in Google AI-powered search experiences.", tags: ["AIO", "AI Overview Optimization", "Answer-ready content"] }
+      - { title: LLM Visibility Optimization, text: "I optimize brand clarity, topical coverage, and trusted references so LLMs can better understand your expertise.", tags: ["LLM SEO", "ChatGPT visibility", "Perplexity visibility"] }
+      - { title: Topical Authority Mapping, text: "I build topic clusters, buyer-intent content, supporting pages, and semantic coverage around your core services.", tags: ["Topical authority", "Semantic SEO", "Content hubs"] }
+      - { title: "RAG & Query Fan-Out Optimization", text: "I optimize content for related question patterns, comparison queries, follow-up prompts, and answer retrieval behavior.", tags: ["RAG optimization", "Query fan-out", "Answer engine optimization"] }
+      - { title: "Brand Mention & Citation Signal Building", text: "I improve your brand's trust footprint through citations, mentions, profiles, directories, and consistent business information.", tags: ["Brand mentions", "Citation signals", "NAP consistency"] }
+      - { title: "E-E-A-T and Trust Signal Optimization", text: "I improve expertise, experience, author identity, testimonials, case studies, proof, reviews, and trust elements across your website.", tags: ["E-E-A-T", "Trust signals", "Authority building"] }
+      - { title: "GEO Reporting & Improvement Plan", text: "I provide clear reporting on AI search readiness, entity gaps, content opportunities, schema coverage, and next-step priorities.", tags: ["GEO reporting", "AI search tracking", "Optimization roadmap"] }
+  - type: cards
+    columns: 4
+    eyebrow: The GEO framework
+    heading: "From basic AI readiness to advanced LLM visibility"
+    items:
+      - { label: Level 1, title: Foundation, bullets: ["Clean website structure", "Indexable content", "Clear service pages", "Basic schema", "Brand consistency"] }
+      - { label: Level 2, title: Entity Clarity, bullets: ["Organization / Person / LocalBusiness schema", "SameAs links", "About page authority", "Contact details consistency", "Author and expert signals"] }
+      - { label: Level 3, title: Answer Engine Optimization, bullets: ["FAQ content", "Conversational queries", "Comparison content", "Problem-solution pages", "AI Overview-ready formatting"] }
+      - { label: Level 4, title: Advanced LLM Visibility, featured: true, bullets: ["Semantic SEO", "Topical authority", "Query fan-out optimization", "RAG-friendly content", "Brand mentions", "Trust and citation signals"] }
+  - type: steps
+    id: geo-process
+    alt: true
+    eyebrow: Process
+    heading: "My GEO process for AI search visibility"
+    items:
+      - { title: AI Search Discovery Audit, text: "I check your current visibility across Google, AI Overviews, ChatGPT, Gemini, Perplexity, branded search, and entity results." }
+      - { title: Entity and Trust Signal Mapping, text: "I map your business entity, services, expertise, social profiles, citations, schema, reviews, and brand mentions." }
+      - { title: Content and Intent Gap Analysis, text: "I identify missing pages, FAQs, service content, comparison queries, and topic clusters that AI systems may need to understand your brand." }
+      - { title: Schema and Technical Implementation, text: "I improve structured data, internal links, crawlability, page architecture, and machine-readable content." }
+      - { title: Answer-Ready Content Optimization, text: "I optimize content for AI answers, conversational queries, Google AI Overviews, and LLM retrieval patterns." }
+      - { title: Monitoring and Continuous Improvement, text: "I track visibility signals, branded search presence, content gaps, schema coverage, and future GEO opportunities." }
+  - type: cards
+    columns: 3
+    eyebrow: Why Ratul Roy
+    heading: "Why work with Ratul Roy for GEO and AI search optimization?"
+    intro: "GEO is not separate from SEO. It connects [Local SEO](/local-seo-service), technical SEO, website structure, entity signals, schema, E-E-A-T, and content strategy. My advantage is that I already build Local SEO systems around visibility, trust, and qualified inbound calls, the same signals AI platforms need to understand and recommend a business."
+    items:
+      - { title: "Local SEO + GEO combination", text: "I understand both Google Maps visibility and AI search visibility, which is powerful for service businesses." }
+      - { title: Entity-first SEO thinking, text: "I build clear business entities with schema, citations, service pages, social profiles, and trust signals." }
+      - { title: Technical SEO foundation, text: "GEO needs crawlable, structured, fast, and machine-readable websites." }
+      - { title: Content built for human and AI understanding, text: "I structure content for buyers, search engines, and LLM-powered answer systems." }
+      - { title: E-E-A-T focused strategy, text: "I help strengthen trust through expertise, experience, proof, reviews, case studies, and brand authority." }
+      - { title: Revenue-focused execution, text: "Visibility is not enough. The goal is more qualified leads, inbound calls, and business growth." }
+  - type: list
+    alt: true
+    eyebrow: Local GEO
+    heading: "Generative Engine Optimization for local businesses"
+    body:
+      - "For local service businesses, GEO should not replace Local SEO. It should strengthen it. When your Google Business Profile, website, citations, reviews, service pages, schema, and brand entity are aligned, your business becomes easier for Google and AI platforms to understand."
+    bullets: ["Google Business Profile", "Google Maps ranking", "LocalBusiness schema", "NAP consistency", "Reviews", "Citations", "Service-area pages", "Location relevance", "Local entity signals", "Case studies", "Brand mentions", "AI search readiness"]
+  - type: steps
+    eyebrow: AI discovery preview
+    heading: "How GEO helps AI understand and recommend a business"
+    intro: "A conceptual journey for the query *best GEO expert in Bangladesh*. It is not a live AI platform result or a ranking guarantee."
+    items:
+      - { title: AI reads structured website content }
+      - { title: AI connects entity signals }
+      - { title: AI checks trust signals }
+      - { title: AI understands services and expertise }
+      - { title: AI generates an answer }
+  - type: list
+    alt: true
+    eyebrow: Deliverables
+    heading: "What you receive with a GEO project"
+    bullets: ["AI Search Visibility Audit", "Entity SEO Report", "Schema Implementation Plan", "Content Gap Map", "AI Overview Readiness Recommendations", "LLM Visibility Optimization Plan", "Topical Authority Roadmap", "FAQ and Answer Content Strategy", "Brand Mention and Citation Recommendations", "E-E-A-T Improvement Checklist", "Monthly GEO Improvement Priorities"]
+  - type: cta
+    heading: "Proof-driven SEO systems, now built for AI search"
+    intro: "GEO is new, but the foundation is the same: strong SEO, clean structure, clear entities, trusted content, and measurable visibility. Explore selected SEO results and case studies that show how structured search systems improve visibility."
+    buttons:
+      - { label: View Case Studies, href: /case-studies }
+      - { label: See SEO Results, href: "/#results" }
+faqHeading: "Frequently Asked Questions About Generative Engine Optimization"
+faqs:
+  - { q: "What is GEO in SEO?", a: "GEO stands for Generative Engine Optimization. It helps your brand become easier for AI search engines and large language models to understand, cite, and recommend in AI-generated answers." }
+  - { q: "Is GEO different from SEO?", a: "Yes and no. SEO focuses on search rankings and organic visibility. GEO builds on SEO by improving entity clarity, structured content, schema, E-E-A-T, and answer-ready signals for AI platforms." }
+  - { q: "Can you guarantee that ChatGPT or Perplexity will recommend my business?", a: "No honest GEO expert can guarantee AI platform recommendations. GEO improves the signals that help AI systems understand and trust your business, but final answers depend on many external factors." }
+  - { q: "Does GEO help local businesses?", a: "Yes. Local businesses can benefit when their Google Business Profile, website, citations, reviews, schema, and local entity signals are aligned for both Google and AI-powered discovery." }
+  - { q: "What platforms does GEO target?", a: "GEO can support visibility across Google AI Overviews, ChatGPT, Gemini, Perplexity, Bing Copilot, and other AI-powered answer engines." }
+  - { q: "What is AIO?", a: "AIO means AI Overview Optimization. It focuses on structuring content, schema, FAQs, and authority signals to support visibility in Google's AI-powered search experiences." }
+  - { q: "What is LLM visibility?", a: "LLM visibility means making your brand, services, expertise, and content easier for large language models to understand, retrieve, and mention in relevant answers." }
+  - { q: "How long does GEO take?", a: "GEO is a long-term visibility strategy. Foundational improvements can be made quickly, but stronger AI search visibility usually depends on content depth, entity authority, citations, trust signals, and ongoing optimization." }
+related: [local-seo-service, technical, services, gbp, cases, book]
+finalCta:
+  heading: "Want to Know If Your Business Is Ready for AI Search?"
+  text: "Get a GEO and AI Search Visibility Audit. I'll review your website structure, schema, entity signals, content depth, Local SEO foundation, and AI search readiness so you know what needs to improve next."
+  buttons:
+    - { label: Get Free AI Search Visibility Audit, href: "/#free-audit" }
+    - { label: Book Strategy Call, href: /book-strategy-call }
+order: 4

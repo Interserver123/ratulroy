@@ -1,0 +1,125 @@
+title: Real Estate Local SEO | Rank Agents in Google Maps
+description: Real estate SEO that ranks your agency in Google Maps for realtor, property and neighborhood searches. More buyer and seller leads without relying on portals.
+breadcrumb:
+- label: Home
+  href: /
+- label: Industries
+  href: /industries
+- label: Real Estate SEO
+  href: /industries/real-estate-seo
+eyebrow: Real Estate SEO
+h1: Local SEO for Real Estate Agents and Agencies That Need More Leads
+em: More Leads
+lead: Rank in the Google Maps 3-pack for "realtor near me", "real estate agent" and property searches, connecting you with buyers and sellers ready to transact.
+heroBullets:
+- Top-3 Maps ranking for realtor and real estate keywords
+- GBP optimized for real estate agency and agent services
+- Neighborhood and property-type pages that capture searches
+- Reviews and authority signals that build client trust
+ctas:
+- label: Book a Free Strategy Call
+  href: /book-strategy-call
+- label: Get a Free Local SEO Audit
+  href: /#free-audit
+  style: ghost
+intro:
+- Real estate is the ultimate local business. Buyers and sellers search by neighborhood, city, and property type, and they almost always start with Google Maps. If your real estate agency or personal brand isn't in the top 3 for "realtor near me" or "real estate agent [city]", you're not even in the running for the biggest transactions in your market. I build Local SEO systems for real estate professionals that generate consistent buyer and seller leads.
+sections:
+- type: problems
+  eyebrow: Why it matters
+  heading: Why real estate SEO matters for your business
+  intro: The specific problems Local SEO solves for businesses in your industry.
+  items:
+  - title: Big brokerages dominate search with brand power
+    text: Keller Williams, RE/MAX, and Coldwell Banker have massive brand authority and marketing budgets. Individual agents and smaller agencies need precision to compete.
+  - title: Your website lacks neighborhood content
+    text: Generic agent bios and listing pages don't rank for "homes for sale in [neighborhood]" or "best schools in [city]". Neighborhood authority is everything in real estate SEO.
+  - title: Zillow and Realtor.com outrank you for everything
+    text: National portals own the organic results for most real estate keywords. The opportunity is in local Maps and hyperlocal neighborhood searches where you can win.
+  - title: Lead quality from portals is poor
+    text: 'Zillow leads are often unqualified lookers. Local SEO brings direct inquiries from people actively searching in your farm area: higher intent, higher conversion.'
+- type: cards
+  alt: true
+  columns: 3
+  eyebrow: What's included
+  heading: What's included in this engagement
+  intro: Every real estate SEO project covers the full Local SEO stack, tuned for your industry.
+  items:
+  - title: GBP optimization for real estate
+    text: Categories for real estate agency, real estate agent, and property management company. Complete service list, service area, professional photos, and regular market updates.
+  - title: Neighborhood and farm-area pages
+    text: Dedicated pages for each neighborhood, subdivision, and school district you serve, with market stats, local insights, and property listings to capture hyperlocal searches.
+  - title: Buyer and seller service pages
+    text: Separate pages for home buyers, home sellers, first-time buyers, investors, and relocation clients, each optimized for search intent and conversion.
+  - title: Review and testimonial strategy
+    text: Post-closing review requests from happy clients, with professional response templates that reinforce neighborhood names and service keywords.
+  - title: Local citations and agent directories
+    text: Consistent NAP across real estate directories, local business listings, and MLS-associated platforms to strengthen your local authority.
+  - title: Schema and technical optimization
+    text: LocalBusiness + RealEstateAgent schema, fast mobile performance, FAQ schema, and clean architecture for optimal indexation and ranking.
+- type: steps
+  eyebrow: Ranking factors
+  heading: The ranking factors that decide this niche
+  intro: Not every Local SEO signal matters equally. These are the ones that move the needle in your industry.
+  items:
+  - title: Neighborhood content depth
+    text: Agents with detailed neighborhood pages, market stats, and local insights outrank those with generic bios. Hyperlocal authority is the real estate SEO moat.
+  - title: Agent and agency category precision
+    text: '"Real estate agent" vs "Real estate agency" vs "Property management company" each trigger different searches. The right combination unlocks more visibility.'
+  - title: Client review volume and recency
+    text: Real estate is referral-heavy. Strong review presence on Google reinforces trust and directly impacts Maps ranking for agent searches.
+  - title: Content freshness and market updates
+    text: Regularly updated market reports, new listing alerts, and neighborhood news signal an active, engaged agent, a ranking factor Google rewards.
+- type: prose
+  alt: true
+  eyebrow: In practice
+  heading: What this looks like in practice
+  body:
+  - Real estate agents I work with typically see their Google Business Profile ranking improve for core neighborhood and agent keywords within 3-6 months, with buyer and seller inquiries growing steadily.
+  stat:
+    value: 2-3x
+    label: more qualified buyer and seller leads from local search
+- type: list
+  heading: Why work with Ratul Roy on this
+  bullets:
+  - Local SEO specialist with real estate market experience
+  - Neighborhood and farm-area content strategy
+  - Focus on high-intent leads, not portal-dependent volume
+  - Direct consultant access, no junior account managers
+faqHeading: Frequently asked questions
+faqs:
+- q: How long does real estate SEO take?
+  a: Real estate is competitive but high-reward. Most agents see ranking improvements within 3-6 months, with meaningful lead growth by month 6-9.
+- q: Should I focus on my personal brand or my brokerage?
+  a: Both. The strategy optimizes your personal GBP and website while leveraging your brokerage's brand authority. Personal branding often converts better.
+- q: Can I compete with Zillow and Realtor.com?
+  a: In organic results, it's hard. But in local Maps and neighborhood searches, yes. That's where individual agents and local agencies can win decisively.
+- q: How important are neighborhood pages?
+  a: Critical. Neighborhood pages are the single highest-ROI content in real estate SEO. They capture hyperlocal searches that national portals can't match.
+- q: Do I need to blog regularly?
+  a: Market updates and neighborhood news are more valuable than generic blog posts. Quality, locally focused content beats frequent generic publishing.
+- q: What metrics do you track?
+  a: Maps rankings by neighborhood and keyword, organic traffic, buyer/seller inquiry volume, and review growth, all reported with clear trends.
+showResults: false
+showCases: false
+pricing: default
+related:
+- local-seo-service
+- gbp
+- cases
+- book
+- contact
+finalCta:
+  heading: Ready to own the Google Maps 3-pack in your market?
+  text: Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry.
+  buttons:
+  - label: Book Strategy Call
+    href: /book-strategy-call
+  - label: Get Free Audit
+    href: /#free-audit
+    style: ghost
+card:
+  title: Real estate
+  text: Rank agents and agencies in the Google Maps 3-pack for realtor and neighborhood searches, and win buyer and seller leads the portals can't reach.
+  category: Professional
+order: 14

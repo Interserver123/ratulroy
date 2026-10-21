@@ -1,0 +1,89 @@
+title: "Plumbing SEO Services | Local SEO Expert | Ratul Roy"
+description: "Plumbing SEO that ranks your business in Google Maps for emergency plumber, drain cleaning, and water heater searches. More calls, fewer ads."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: Plumbing SEO, href: /industries/plumbing-seo }
+eyebrow: "Plumbing SEO"
+h1: "Local SEO for Plumbing Businesses That Live on Inbound Calls"
+em: "Live on Inbound Calls"
+lead: "Rank in the Google Maps 3-pack for \"plumber near me\", \"emergency plumber\", and drain, leak, and water heater searches, capturing urgent local intent at the exact moment people need help."
+heroBullets:
+  - "Top-3 Google Maps ranking for urgent plumbing queries"
+  - "GBP rebuilt around plumbing service categories and intent"
+  - "Emergency / 24-7 trust signals throughout the site"
+  - "Reviews and citations tuned for high-velocity plumbing searches"
+heroImage: "results/home/plumber-near-me-serp.png"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "Plumbing is pure local intent. Nobody searches \"plumber near me\" while bored; they search it because water is on the floor right now. That urgency makes Google Maps the highest-leverage marketing channel for any plumbing business, but it also makes it brutally competitive."
+  - "Most plumbing companies are losing the click within 5 seconds because their GBP, reviews, response time, and service pages don't communicate urgency or trust fast enough. I build Local SEO systems for plumbers that win those moments at scale."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why plumbing SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "Competitors are stealing emergency calls", text: "The 3 companies in the Maps pack get 70%+ of the clicks for emergency plumbing searches. If you're number 4, you might as well be invisible." }
+      - { title: "Your service pages don't match search intent", text: "Generic \"Our Services\" pages don't rank for \"slab leak detection\" or \"sewer line repair\". Each service needs its own page built around the exact way customers search." }
+      - { title: "Your reviews don't include the right keywords", text: "Reviews that say \"great service\" don't help rankings. Reviews that say \"fast emergency drain cleaning in [city]\" do. There's a system for getting that." }
+      - { title: "Your GBP categories are wrong", text: "Picking just \"Plumber\" leaves money on the table. Drain cleaning service, water heater installation, plumbing contractor, emergency plumber: each one opens up different searches." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every plumbing SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "GBP optimization for plumbing", text: "Categories tuned for plumber + drainage + water heater + emergency services, complete service list, accurate service area, fresh photos, regular GBP posts, and Q&A seeded with high-intent questions." }
+      - { title: "Plumbing service pages built for intent", text: "Dedicated pages for emergency plumbing, drain cleaning, water heater repair/installation, leak detection, sewer line, repiping, and sump pumps, each with Service schema and clear conversion paths." }
+      - { title: "City and neighborhood landing pages", text: "Hyperlocal pages for the cities and neighborhoods where you want to win, written uniquely, not templated, with local proof and routing instructions." }
+      - { title: "Review acquisition system", text: "Post-job review requests with light prompts that naturally encourage keyword-rich reviews, and a response strategy that does the same." }
+      - { title: "Local citations and NAP cleanup", text: "Plumbing-specific directories, local citations, and aggregator data, all aligned to a single NAP to stop ranking decay." }
+      - { title: "Technical SEO and schema", text: "Fast mobile load (critical for emergency searches), LocalBusiness + Plumber + Service + FAQ schema, internal linking, and crawl health." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "Urgent intent signals", text: "24/7, same-day, emergency availability, both as on-page content and as GBP attributes. Google reads these and matches them against urgent queries." }
+      - { title: "Mobile speed", text: "Plumbing searches happen on phones in a panic. A site that loads slowly loses both rankings and the actual call." }
+      - { title: "Review volume + velocity", text: "Plumbing is one of the niches where review velocity matters most. Steady new reviews (not bursts) signal a real, busy operation." }
+      - { title: "Service category depth", text: "GBP attributes and a deep service list (not just \"Plumbing\") help Google match your business to long-tail emergency queries." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "Plumbing clients usually see a clear ranking jump within 60-90 days as GBP categories, service list, and review velocity start signaling correctly, and call volume usually follows within the same window because the queries are already high-intent."
+    stat: { value: "2-3x", label: "more emergency calls within 6 months" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Local SEO specialization, not a generalist agency"
+      - "Plumbing-specific GBP and category strategy"
+      - "Reporting tied to calls, bookings, and Maps rank, not impressions"
+      - "Direct communication with the person doing the work (me)"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How fast can plumbing SEO start producing calls?", a: "Because plumbing search intent is so urgent, ranking improvements convert to calls almost immediately. Most clients see meaningful call growth within 90 days of starting work." }
+  - { q: "Do I need a brand new website?", a: "Usually not. Most plumbing sites just need restructuring, better service pages, schema, technical fixes, and a real Local SEO strategy layered on top of what already exists." }
+  - { q: "Can I rank in multiple cities?", a: "Yes, but each city needs unique content, local proof, and a real reason for Google to associate you with it. Thin templated city pages will hurt you, not help." }
+  - { q: "How important are reviews for plumbing SEO?", a: "Extremely. Review volume, velocity, recency, and keyword content are some of the strongest Local SEO ranking signals for plumbers." }
+  - { q: "Do you handle GBP suspension issues?", a: "Yes. Reinstatement, duplicate cleanup, and category corrections are routine work for plumbing accounts." }
+  - { q: "How do you measure results?", a: "Geo-grid Maps ranking, organic search traffic, call tracking, and form submissions, reported monthly with clear before/after comparisons." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "Plumbing"
+  text: "Win the Google Maps 3-pack for \"plumber near me\", emergency, drain, leak, and water heater searches at the moment people need help."
+  value: "2-3x"
+  label: "more emergency calls"
+  category: "Home services"
+order: 2

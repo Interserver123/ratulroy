@@ -1,0 +1,103 @@
+title: "Local SEO Specialist Job in Bangladesh | Junior Role at Ratul Roy"
+description: "Apply for a full-time Junior Local SEO Specialist job in Bangladesh. Beginner to intermediate level, real client projects, ৳10,000–12,000/month. Practical application, no CV-only screening."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Careers, href: /careers/local-seo-specialist }
+  - { label: Local SEO Specialist, href: /careers/local-seo-specialist }
+eyebrow: "Full-time · Junior / Beginner–Intermediate"
+h1: "Join Our SEO Team"
+em: "SEO Team"
+lead: "We are looking for a Junior Local SEO Specialist who is ready to learn, work hard, and grow with real client projects."
+sub: "We are not looking for an expert. We are looking for someone who is serious about becoming one."
+heroChips: ["Full-time", "Remote", "৳10,000 – ৳12,000 / month", "Beginner to Intermediate"]
+heroStats:
+  - { value: "৳10–12K", label: "Monthly salary" }
+  - { value: "Remote", label: "Work type" }
+  - { value: "15–20 min", label: "Application time" }
+ctas:
+  - { label: Start Application, href: "#apply" }
+  - { label: Contact, href: /contact, style: ghost }
+sections:
+  - type: cards
+    id: overview
+    columns: 4
+    eyebrow: The role
+    heading: "Job overview"
+    items:
+      - { label: Position, title: Junior Local SEO Specialist }
+      - { label: Job type, title: Full-time }
+      - { label: Experience, title: Beginner to Intermediate }
+      - { label: Salary, title: "৳10,000 – ৳12,000 / month" }
+      - { label: Work type, title: Remote }
+    body:
+      - "Salary depends on your current skill level, practical ability, commitment and performance."
+  - type: steps
+    alt: true
+    eyebrow: Responsibilities
+    heading: "What you will work on"
+    items:
+      - { title: Local SEO, text: "Google Business Profile optimization, local rankings, citations, competitor research and day-to-day local SEO tasks." }
+      - { title: On-Page SEO, text: "Content optimization, internal linking, metadata, service pages and website improvements." }
+      - { title: WordPress, text: "Working with WordPress and Elementor to implement SEO recommendations." }
+      - { title: Content, text: "Optimizing existing content and creating useful, search-focused content." }
+      - { title: "AI + SEO", text: "Learning modern AI-assisted SEO workflows and tools." }
+      - { title: Real Client Projects, text: "You will work on actual SEO campaigns, not only theoretical exercises." }
+  - type: prose
+    eyebrow: Requirements
+    heading: "Who we are looking for"
+    blocks:
+      - heading: You should have
+        bullets:
+          - "Basic to intermediate Local SEO knowledge"
+          - "Google Business Profile optimization knowledge"
+          - "On-page and content optimization basics"
+          - "WordPress working knowledge"
+          - "Familiarity with Elementor"
+          - "Familiarity with Canva"
+          - "Basic keyword research"
+          - "Basic competitor analysis"
+          - "Good written English communication"
+      - heading: More important than experience
+        bullets:
+          - "Strong learning mentality"
+          - "Hardworking"
+          - "Disciplined"
+          - "Takes responsibility"
+          - "Can follow instructions carefully"
+          - "Willing to learn new tools"
+          - "Interested in SEO as a career"
+          - "Comfortable receiving feedback"
+          - "Can work independently after training"
+    body:
+      - "**Expert-level experience is NOT required.**"
+  - type: list
+    alt: true
+    eyebrow: "What's offered"
+    heading: "What you get"
+    bullets:
+      - "Full-time, remote position"
+      - "৳10,000 – ৳12,000 per month, depending on skill level, practical ability, commitment and performance"
+      - "Work on real client SEO campaigns, not only theoretical exercises"
+      - "Training, after which you work independently"
+      - "Hands-on experience with modern AI-assisted SEO workflows and tools"
+  - type: steps
+    id: apply
+    eyebrow: How to apply
+    heading: "How the application works"
+    intro: "Five short steps, estimated time 15–20 minutes. Your answers are saved on your device as you go, so you can finish later. Your CV (PDF or Word, up to 5 MB) is required."
+    items:
+      - { title: Basic Information, text: "Who you are and how to reach you." }
+      - { title: "Skills & Experience", text: "What you have actually worked with so far." }
+      - { title: Practical SEO Assessment, text: "Real scenarios, answered in your own words. We read your thinking, not your vocabulary; pasted answers score lower." }
+      - { title: "Shortlisting & Verification", text: "A short call where shortlisted candidates talk through their answers." }
+    body:
+      - "We use practical questions and real-world scenarios to understand how you think. Some shortlisted candidates may be asked to explain their answers in a short verification call."
+  - type: cta
+    alt: true
+    heading: "Think you are a good fit?"
+    intro: "Do not worry if you do not know everything. If you are serious about SEO, willing to learn and ready to work hard, apply."
+    buttons:
+      - { label: Start Application, href: "#apply" }
+pricing: none
+related: [about, contact]
+order: 100

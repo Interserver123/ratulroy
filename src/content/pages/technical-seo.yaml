@@ -1,0 +1,116 @@
+title: "Technical SEO Service | Crawl, Index & Speed Fixes"
+description: "Technical SEO service that fixes crawling, indexing, Core Web Vitals, structured data and site architecture so your pages can rank. Audit or done-for-you. From $299."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Services, href: /services }
+  - { label: Technical SEO, href: /technical-seo }
+eyebrow: Technical SEO
+h1: "Technical SEO Service That Removes What Is Blocking Your Rankings"
+em: "Removes What Is Blocking"
+lead: "A technical SEO service that fixes crawling, indexing, Core Web Vitals, structured data and site architecture, so the content and local signals you already have can actually count."
+heroChips: ["Audit or done-for-you", "Developer-ready specs", "From $299"]
+heroImage: "results/website/website-result-3.png"
+heroStats:
+  - { value: "6", label: "Areas covered" }
+  - { value: "5", label: "Step process" }
+  - { value: "$299", label: "Audit from" }
+ctas:
+  - { label: Get a technical SEO audit, href: /book-strategy-call }
+  - { label: See all SEO services, href: /services, style: ghost }
+sections:
+  - type: problems
+    eyebrow: Does this sound familiar
+    heading: "Most people search for this because something already broke"
+    intro: "You rarely go looking for technical SEO in the abstract. You go looking because a page vanished, traffic dropped, or the site feels slow. Here is what usually sits behind each of those."
+    items:
+      - { title: "Pages are live but missing from Google", text: "**Usual cause:** blocked in robots.txt, marked noindex, orphaned with no internal links, or the canonical points somewhere else." }
+      - { title: "The site is slow, especially on phones", text: "**Usual cause:** unoptimised images, render-blocking scripts, layout that shifts while loading. Core Web Vitals fail and mobile users leave first." }
+      - { title: "Traffic fell without a content change", text: "**Usual cause:** a migration broke redirects, a plugin changed output sitewide, or duplicate URLs started competing with each other." }
+      - { title: "Rich results never appear", text: "**Usual cause:** structured data missing, invalid, or describing something the page does not visibly contain." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What is covered
+    heading: "Six areas, worked in order of impact"
+    intro: "Crawling and indexing come first, because nothing else matters until your pages are eligible to rank at all."
+    items:
+      - { title: "Crawling & indexing", text: "Making sure Google can reach every page you want ranked, and none you do not.", bullets: ["robots.txt and meta robots audit", "XML sitemap accuracy and coverage", "Index bloat and orphan page detection", "Search Console coverage error resolution"] }
+      - { title: "Core Web Vitals & speed", text: "Fixing what actually moves LCP, CLS and INP rather than chasing a score.", bullets: ["Largest Contentful Paint diagnosis", "Layout shift and render-blocking fixes", "Image format, sizing and lazy loading", "JavaScript and CSS payload reduction"] }
+      - { title: "Site architecture & redirects", text: "So authority flows to the pages that should rank, and nothing is stranded.", bullets: ["Internal linking structure and depth", "Redirect chains and broken link cleanup", "Canonical and duplicate URL handling", "Pagination and faceted URL control"] }
+      - { title: Structured data, text: "Stating your business facts in a form machines can read without guessing.", bullets: ["LocalBusiness, Service and Organization markup", "FAQ, Breadcrumb and Article schema", "Validation and rich-result eligibility", "Parity between schema and visible content"] }
+      - { title: "Mobile & rendering", text: "Checking what Google actually receives, not what your desktop browser shows.", bullets: ["Mobile-first rendering verification", "Content parity between mobile and desktop", "JavaScript rendering and hydration checks", "Viewport, tap target and readability issues"] }
+      - { title: "Security & hygiene", text: "The basics that quietly cost trust when they are wrong.", bullets: ["HTTPS and mixed content", "Single canonical hostname (www vs apex)", "Correct 404 and 410 status codes", "Soft 404 and thin page detection"] }
+  - type: steps
+    eyebrow: How it runs
+    heading: "Diagnose, fix, then prove it cleared"
+    intro: "Technical work is verifiable in a way most SEO is not. Errors either clear in Search Console or they do not."
+    items:
+      - { title: "Crawl & audit", text: "Full crawl of the site plus Search Console analysis, producing a list of faults ordered by impact rather than by severity label." }
+      - { title: Prioritise, text: "Separate what blocks indexing from what merely tidies. Blockers first, because nothing else counts until pages are eligible." }
+      - { title: "Fix or specify", text: "Implement the changes directly, or write a developer-ready specification with exact instructions if you have an in-house team." }
+      - { title: Validate, text: "Re-crawl, re-test rendering, validate structured data, and confirm in Search Console that the errors actually cleared." }
+      - { title: Monitor, text: "Periodic checks, because redirects break and sites accumulate faults as they grow. Regressions get caught before they cost traffic." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: Where it fits
+    heading: "Technical SEO is a floor, not a growth lever"
+    intro: "Worth being straight about this. Technical work removes ceilings. It does not create demand. If your foundations are already sound, the gains come from elsewhere, and you should be told that rather than sold an audit."
+    items:
+      - { title: Pairs with Local SEO, href: /local-seo-service, cta: Local SEO service, text: "Google reads the site behind your Business Profile. Crawl errors and slow mobile performance weaken the profile they support." }
+      - { title: Pairs with GBP work, href: /google-business-profile-optimization, cta: GBP optimization, text: "Profile optimization moves faster when the linked website is sound, because on-site signals reinforce the listing." }
+      - { title: Underpins AI visibility, href: /generative-engine-optimization, cta: GEO service, text: "Assistants reason over structured, crawlable facts. Broken markup and blocked pages remove you from that pool entirely." }
+    body:
+      - "New to the topic? Start with [what an SEO specialist actually does](/blog/what-does-seo-specialist-do), or see [what SEO costs in Bangladesh](/blog/seo-cost-bangladesh)."
+  - type: pricing
+    eyebrow: Pricing
+    heading: "Three ways to buy technical SEO"
+    intro: "Technical work is not bought in monthly service levels. It is bought as a diagnosis, a project, or ongoing maintenance. Pick the one that matches where you actually are."
+    tiers:
+      - name: Technical Audit
+        price: "From $299"
+        unit: one-off
+        for: "You suspect something is wrong but do not know what"
+        text: "A full diagnosis with no implementation. You get the fault list and the order to fix it in, whether you use me or your own developer."
+        bullets: ["Full site crawl and Search Console analysis", "Crawling and indexing fault list", "Core Web Vitals diagnosis with named causes", "Structured data validation", "Redirect, canonical and duplicate URL check", "Mobile rendering and content parity check", "Findings ordered by impact, not severity label"]
+        receive: "Prioritised fix list plus a developer-ready specification"
+        cta: { label: Get a quote, href: /book-strategy-call }
+      - name: "Audit + Implementation"
+        price: Scoped
+        unit: one-off project
+        featured: true
+        for: "You want it diagnosed and fixed, not handed to you"
+        text: "Everything in the audit, then the fixes applied and verified. Priced on site size and the state it is in, because those decide the work."
+        bullets: ["Everything in the Technical Audit", "Indexing and crawl blockers fixed first", "Core Web Vitals work implemented", "Structured data written and validated", "Redirect chains and broken links cleaned", "Internal linking structure corrected", "Re-crawl and Search Console verification"]
+        receive: "Fixes live, errors cleared, verified in Search Console"
+        cta: { label: Get a quote, href: /book-strategy-call }
+      - name: Technical Retainer
+        price: Scoped
+        unit: monthly
+        for: "Your site changes often and you want faults caught early"
+        text: "Sites accumulate faults as they grow. Redirects break, plugins change output, migrations go wrong. This catches regressions before they cost traffic."
+        bullets: ["Monthly crawl and Search Console review", "Regression detection after site changes", "Core Web Vitals monitoring", "Structured data kept valid as pages change", "Quarterly full re-audit", "Fixes for issues found, within scope", "Reporting you can read in two minutes"]
+        receive: "Ongoing monitoring with issues fixed as they appear"
+        cta: { label: Get a quote, href: /book-strategy-call }
+    note: "Project and retainer pricing depends on site size, how many faults the audit surfaces, and whether you want the fixes applied or specified for your own developer. That is why they are quoted after the audit rather than before. No lock-in contracts on the retainer."
+pricing: none
+faqHeading: "Everything You Need to Know About Technical SEO"
+faqs:
+  - q: "What is technical SEO, in plain terms?"
+    a: "Technical SEO is the work that lets search engines reach, read and trust your website: crawling, indexing, site speed, mobile rendering, structured data, redirects and site architecture. It does not write your content or build your reputation; it removes the obstacles stopping both from counting."
+  - q: "How do I know if I need technical SEO?"
+    a: "Common signals: pages missing from Google despite being live, traffic that fell without a content change, a slow or unstable site on mobile, duplicate versions of the same page ranking against each other, or Search Console reporting coverage errors you do not understand."
+  - q: "Is technical SEO a one-off project or ongoing?"
+    a: "Mostly a project, then maintenance. The audit and the fixes are finite work. After that it needs periodic checks, because redirects break, plugins change output, and sites accumulate faults as they grow."
+  - q: "Will technical SEO alone increase my rankings?"
+    a: "Rarely on its own. Technical work removes ceilings rather than creating demand. If crawling and indexing are broken it can produce a sharp gain, because pages that were invisible become eligible. If the foundations are already sound, the gain comes from content and local signals instead."
+  - q: "Do you fix the issues or just report them?"
+    a: "Both are available. Some clients want the fixes implemented directly, others have a developer and want a prioritised specification they can hand over. Say which you need and the engagement is scoped that way."
+  - q: "Will you need access to my website and hosting?"
+    a: "For implementation, yes: CMS access at minimum, and often hosting or DNS depending on what needs changing. For an audit alone, Search Console and a crawl of the public site are usually enough."
+  - q: "How does this relate to Local SEO?"
+    a: "Google reads the website linked from your Business Profile to judge relevance and trust. A site with crawl errors, slow mobile performance or missing structured data weakens the profile it supports, which is why technical work sits underneath the local work rather than beside it."
+  - q: "How much does technical SEO cost?"
+    a: "It is bought three ways. A technical audit starts from $299 and gives you the fault list and a developer-ready specification. Implementation as a one-off project, and an ongoing retainer for monitoring, are both quoted after the audit, because site size and the number of faults found decide the work."
+related: [local-seo-service, gbp, services, cases, book, contact]
+order: 3

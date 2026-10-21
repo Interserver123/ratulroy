@@ -1,0 +1,132 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PageHero from "../components/page/PageHero.astro";
+import Sections from "../components/page/Sections.astro";
+import PageFaq from "../components/page/PageFaq.astro";
+import Pricing from "../components/page/Pricing.astro";
+import Related from "../components/page/Related.astro";
+import FinalCta from "../components/page/FinalCta.astro";
+import Results from "../components/home/Results.astro";
+import CaseStudies from "../components/home/CaseStudies.astro";
+import { md, plain } from "../lib/md";
+import { site } from "../data/site";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  data: CollectionEntry<"pages">["data"];
+  path: string; // e.g. "/technical-seo"
+  kind?: "service" | "industry" | "case" | "page";
+}
+const { data: d, path, kind = "page" } = Astro.props;
+const url = `${site.url}${path}`;
+
+const crumbs = d.breadcrumb ?? [
+  { label: "Home", href: "/" },
+  { label: d.eyebrow ?? d.h1, href: path },
+];
+
+const schema: Record<string, unknown>[] = [
+  {
+    "@type": kind === "case" ? "Article" : "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: d.title,
+    ...(kind === "case" ? { headline: d.h1, author: { "@id": `${site.url}/#person` } } : {}),
+    description: d.description,
+    inLanguage: "en",
+    isPartOf: { "@id": `${site.url}/#website` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.label,
+      item: `${site.url}${c.href === "/" ? "/" : c.href}`,
+    })),
+  },
+];
+if (kind === "service" || kind === "industry") {
+  schema.push({
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: d.eyebrow ?? d.h1,
+    description: d.description,
+    serviceType: d.eyebrow ?? d.h1,
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
+    offers: { "@type": "Offer", priceCurrency: "USD", price: "299", description: "Packages start from $299" },
+  });
+}
+if (d.faqs.length) {
+  schema.push({
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: d.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: plain(f.a) } })),
+  });
+}
+---
+
+<BaseLayout title={d.title} description={d.description} schema={schema} ogType={kind === "case" ? "article" : "website"}>
+  <PageHero
+    breadcrumb={crumbs}
+    eyebrow={d.eyebrow}
+    h1={d.h1}
+    em={d.em}
+    lead={d.lead}
+    sub={d.sub}
+    heroBullets={d.heroBullets}
+    heroChips={d.heroChips}
+    heroStats={d.heroStats}
+    heroImage={d.heroImage}
+    ctas={d.ctas}
+  />
+
+  {
+    d.intro && (
+      <section class="section pintro">
+        <div class="container">
+          <div class="pintro__box" data-reveal>
+            {d.intro.map((p) => <p set:html={md(p)} />)}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <slot name="before" />
+  <Sections sections={d.sections} />
+  <slot />
+  {d.showResults && <Results />}
+  {d.showCases && <CaseStudies />}
+  <PageFaq heading={d.faqHeading} faqs={d.faqs} />
+  {d.pricing === "default" && <Pricing />}
+  <Related keys={d.related} />
+  <FinalCta {...(d.finalCta ?? {})} />
+</BaseLayout>
+
+<style>
+  .pintro {
+    padding-top: 0;
+  }
+  .pintro__box {
+    max-width: 880px;
+    padding: clamp(22px, 3.5vw, 36px) clamp(22px, 3.5vw, 40px);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--paper);
+    box-shadow: var(--shadow);
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: var(--ink-2);
+  }
+  .pintro__box p:last-child {
+    margin: 0;
+  }
+  .pintro__box :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>

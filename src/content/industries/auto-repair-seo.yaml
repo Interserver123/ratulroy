@@ -1,0 +1,88 @@
+title: "Auto Repair Shop SEO Services | Ratul Roy"
+description: "Auto repair SEO that ranks your shop in Google Maps for brake repair, oil change, and mechanic near me searches. Get more service bookings."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: Auto Repair SEO, href: /industries/auto-repair-seo }
+eyebrow: "Auto Repair SEO"
+h1: "Local SEO for Auto Repair Shops That Need More Service Bay Bookings"
+em: "Service Bay Bookings"
+lead: "Rank in the Google Maps 3-pack for \"mechanic near me\", \"brake repair\", \"oil change\", and transmission searches, turning local car owners into loyal repeat customers."
+heroBullets:
+  - "Top-3 Maps ranking for auto repair and maintenance keywords"
+  - "GBP optimized for shop hours, services, and appointments"
+  - "Service pages for brakes, oil changes, diagnostics, and more"
+  - "Reviews and citations tuned for automotive trust signals"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "Auto repair is hyper-local. When someone's check engine light comes on, they search \"mechanic near me\" and call the first shop in the Maps pack. If your auto repair shop isn't in those top 3 positions, you're losing service bay revenue to competitors every day."
+  - "I build Local SEO systems specifically for auto repair shops that want to own the local search results and keep bays full."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why auto repair SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "Chain shops outrank your independent garage", text: "Big brands like Jiffy Lube, Midas, and Firestone dominate Maps with multi-location authority. Without targeted Local SEO, independent shops get buried." }
+      - { title: "Your website doesn't match service searches", text: "Homepages with generic \"auto repair\" text don't rank for \"brake pad replacement\" or \"transmission flush\". Each service needs its own optimized page." }
+      - { title: "Review volume is too low", text: "Auto repair is trust-heavy. Customers check reviews before handing over their keys. A low review count means lost clicks even if you rank." }
+      - { title: "Appointments come from ads, not organic", text: "Paying for every Google Ads click gets expensive fast for low-margin services. Local SEO builds sustainable, compounding inbound calls." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every auto repair SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "GBP optimization for auto repair", text: "Categories tuned for auto repair shop, brake shop, oil change service, and transmission shop. Complete service list, hours, photos of your bays, and regular posts." }
+      - { title: "Service-specific landing pages", text: "Dedicated pages for brake repair, oil change, transmission service, engine diagnostics, AC repair, and tire services, each with Service schema." }
+      - { title: "Local citation building", text: "Consistent NAP across automotive directories, local chambers, and data aggregators to strengthen your local authority signal." }
+      - { title: "Review generation system", text: "Post-repair review requests that encourage keyword-rich feedback about specific services, building trust and Maps ranking simultaneously." }
+      - { title: "Schema and technical SEO", text: "LocalBusiness + AutoRepair schema, fast mobile load times, FAQ schema, and internal linking to help Google understand your full service scope." }
+      - { title: "Competitor gap analysis", text: "Deep audit of what's working for the top 3 Maps competitors in your area (categories, reviews, content, and citations) so we can reverse-engineer their success." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "Primary GBP category precision", text: "\"Auto repair shop\" vs \"Car repair and maintenance service\" trigger different searches. Category choice is the single biggest ranking lever." }
+      - { title: "Service page depth", text: "Shops with individual pages for each service (brakes, oil, transmission) outrank those with a single generic services page." }
+      - { title: "Review velocity and response", text: "A steady flow of new reviews with service mentions signals an active, trusted business. Response strategy reinforces keywords." }
+      - { title: "Proximity to searcher", text: "Google Maps weights distance heavily. A citation and content strategy that expands your perceived service footprint helps you rank in surrounding neighborhoods." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "Auto repair clients typically move from page 2 or lower Maps positions into the top 3 within 3-5 months. That visibility shift usually translates to 30-50% more service bay bookings."
+    stat: { value: "30-50%", label: "more service bookings after top-3 Maps ranking" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Focused exclusively on Local SEO, not general digital marketing"
+      - "Hands-on with GBP, schema, and automotive-specific content"
+      - "Reporting tied to calls, bookings, and bay utilization, not vanity metrics"
+      - "Direct access to the person doing the work (me)"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How long does auto repair SEO take?", a: "Most auto repair shops see ranking improvements within 60-90 days and meaningful call growth within 3-5 months. Competitive markets may take a bit longer." }
+  - { q: "Can I rank without a huge marketing budget?", a: "Yes. Local SEO is about precision and consistency, not spend. A well-optimized GBP, targeted pages, and steady reviews can outrank bigger-budget competitors." }
+  - { q: "Do I need separate pages for every service?", a: "For your core services (brakes, oil changes, transmission), yes. These pages capture the specific searches that drive the most revenue." }
+  - { q: "How important are reviews for auto repair SEO?", a: "Critical. Auto repair is high-trust. Review count, recency, and content all directly impact Maps ranking and click-through rate." }
+  - { q: "Can you help with appointment booking integration?", a: "I focus on SEO and visibility. Booking integrations are best handled by your web developer, but I can recommend schema and UX improvements that support conversion." }
+  - { q: "Do you work with both independent shops and franchises?", a: "Yes. The strategy adapts to single-location independents and multi-location chains, though single-location shops often see the fastest results." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "Auto Repair"
+  text: "Rank your shop in the Google Maps 3-pack for mechanic near me, brake repair, oil change, and transmission searches."
+  value: "30-50%"
+  label: "more service bookings"
+  category: "Automotive"
+order: 7

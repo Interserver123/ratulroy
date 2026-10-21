@@ -1,0 +1,124 @@
+title: "Terms & Conditions | Ratul Roy"
+description: "Read the Terms & Conditions for using Ratul Roy's website, Local SEO services, audit requests, strategy calls, and related website content."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Terms & Conditions, href: /terms }
+eyebrow: "Terms & Conditions"
+h1: "Terms & Conditions"
+em: "Conditions"
+lead: "These terms explain how you may use this website, request services, submit forms, book strategy calls, and interact with Ratul Roy's content and offers. Last updated: May 20, 2026."
+ctas:
+  - { label: Contact, href: /contact }
+sections:
+  - type: prose
+    id: terms
+    blocks:
+      - heading: "1. Introduction"
+        body:
+          - "These Terms & Conditions govern your use of ratulroy.com and services offered by Ratul Roy - Local SEO Expert in Bangladesh. By using this website, submitting a form, requesting an audit, booking a strategy call, or communicating through this website, you agree to these terms."
+      - heading: "2. Services"
+        body:
+          - "Ratul Roy may provide:"
+        bullets:
+          - "Local SEO services"
+          - "Google Maps ranking strategy"
+          - "Google Business Profile optimization"
+          - "Website SEO"
+          - "Technical SEO"
+          - "Citation building"
+          - "Review and reputation guidance"
+          - "AI search / GEO / AIO visibility strategy"
+          - "SEO audits and consultations"
+          - "Strategy calls and related advisory services"
+      - heading: "3. Website Use"
+        body:
+          - "Users agree not to:"
+        bullets:
+          - "Misuse the website"
+          - "Submit false or misleading information"
+          - "Attempt to hack or disrupt the site"
+          - "Copy protected portfolio or case study images"
+          - "Use website content for unauthorized commercial purposes"
+          - "Spam forms or booking systems"
+      - heading: "4. No Guaranteed Rankings"
+        body:
+          - "SEO results depend on many factors, including competition, business location, website quality, Google Business Profile condition, reviews, citations, technical SEO, market demand, search engine updates, and implementation quality. Ratul Roy does not guarantee specific rankings, top 3 Google Maps placement, traffic numbers, leads, calls, revenue, or AI search visibility."
+      - heading: "5. Audit and Strategy Call Terms"
+        bullets:
+          - "Free audits are offered for initial review and may be limited"
+          - "Strategy calls are subject to availability"
+          - "Submitted information should be accurate"
+          - "Ratul Roy may decline requests that are not a good fit"
+          - "Booking a call does not guarantee client acceptance"
+          - "Audit advice is based on available data at the time of review"
+      - heading: "6. Payments and Service Agreements"
+        body:
+          - "If a paid service is agreed upon, pricing, scope, timeline, deliverables, payment terms, and cancellation terms will be provided separately in a written proposal, invoice, or agreement."
+      - heading: "7. Client Responsibilities"
+        body:
+          - "Clients may need to provide:"
+        bullets:
+          - "Website access"
+          - "Google Business Profile access"
+          - "Analytics / Search Console access"
+          - "Business information"
+          - "Service details"
+          - "Photos or brand assets"
+          - "Timely feedback"
+          - "Accurate contact and business details"
+      - heading: "8. Content and Intellectual Property"
+        bullets:
+          - "Website design, text, graphics, structure, case study presentation, and branding belong to Ratul Roy unless otherwise stated"
+          - "Users may not copy, reproduce, or republish content without permission"
+          - "Portfolio screenshots and case study images are protected client result previews"
+          - "Some brand names, logos, or platform names belong to their respective owners"
+      - heading: "9. Portfolio, Case Studies, and Results"
+        bullets:
+          - "Portfolio screenshots and case studies are shown for proof and education"
+          - "Results vary by business, market, competition, and implementation"
+          - "No result should be treated as a guarantee of future performance"
+          - "Sensitive client information may be blurred, watermarked, or summarized"
+      - heading: "10. Third-Party Tools and Platforms"
+        body:
+          - "Ratul Roy is not responsible for changes, outages, policies, rankings, or decisions made by third-party platforms. Services may involve or reference third-party platforms such as:"
+        bullets:
+          - "Google"
+          - "Google Business Profile"
+          - "Google Search Console"
+          - "Google Analytics"
+          - "WhatsApp"
+          - "Facebook"
+          - "LinkedIn"
+          - "X / Twitter"
+          - "Instagram"
+          - "AI platforms such as ChatGPT, Gemini, and Perplexity"
+      - heading: "11. External Links"
+        body:
+          - "The website may contain links to external websites and social platforms. Ratul Roy is not responsible for the content, privacy practices, or policies of third-party websites."
+      - heading: "12. Limitation of Liability"
+        body:
+          - "To the maximum extent permitted by applicable law, Ratul Roy will not be liable for indirect, incidental, special, or consequential damages arising from website use, service inquiries, SEO performance, third-party platform changes, or business outcomes."
+      - heading: "13. Indemnification"
+        body:
+          - "Users agree not to hold Ratul Roy responsible for claims resulting from misuse of the website, false information submitted, unauthorized access, or violation of these terms."
+      - heading: "14. Changes to Terms"
+        body:
+          - "These Terms & Conditions may be updated from time to time. Continued use of the website after changes means users accept the updated terms."
+      - heading: "15. Contact Information"
+        body:
+          - "Ratul Roy - Local SEO Expert in Bangladesh"
+          - "Address: Bagerhat 9300, Bangladesh"
+          - "Phone: [+8801866820758](tel:+8801866820758)"
+          - "Email: [hello@ratulroy.com](mailto:hello@ratulroy.com)"
+          - "WhatsApp: [https://wa.me/8801866820758](https://wa.me/8801866820758)"
+    body:
+      - "*This policy is provided for transparency and general information. It should not be considered legal advice.* See also the [Privacy Policy](/privacy-policy)."
+pricing: none
+related: []
+finalCta:
+  heading: "Questions About These Terms?"
+  text: "For questions about these Terms & Conditions or service policies, contact Ratul Roy directly."
+  buttons:
+    - { label: Email Us, href: "mailto:hello@ratulroy.com" }
+    - { label: Chat on WhatsApp, href: "https://wa.me/8801866820758", style: ghost }
+order: 100

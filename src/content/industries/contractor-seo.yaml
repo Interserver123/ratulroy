@@ -1,0 +1,125 @@
+title: General Contractor SEO | Local SEO for Remodelers
+description: Contractor SEO that ranks your business in Google Maps for home remodeling, renovation and general contractor searches. More project leads you don't share.
+breadcrumb:
+- label: Home
+  href: /
+- label: Industries
+  href: /industries
+- label: Contractor SEO
+  href: /industries/contractor-seo
+eyebrow: Contractor SEO
+h1: Local SEO for General Contractors Who Want Serious Project Leads
+em: Serious Project Leads
+lead: Rank in the Google Maps 3-pack for "general contractor near me", "home remodeling" and renovation searches, connecting you with homeowners ready to start projects.
+heroBullets:
+- Top-3 Maps ranking for contractor and remodeling keywords
+- GBP optimized for remodeling, renovation, and build services
+- Project and service pages that convert high-intent visitors
+- Reviews and citations that build homeowner trust
+ctas:
+- label: Book a Free Strategy Call
+  href: /book-strategy-call
+- label: Get a Free Local SEO Audit
+  href: /#free-audit
+  style: ghost
+intro:
+- 'General contracting is competitive and high-ticket. Homeowners don''t hire contractors lightly: they research, compare, and almost always start with Google Maps. If your contracting business isn''t in the top 3 for "general contractor near me" or "home remodeling [city]", you''re not even in the conversation. I build Local SEO systems for contractors that put you in front of homeowners at the exact moment they''re ready to hire.'
+sections:
+- type: problems
+  eyebrow: Why it matters
+  heading: Why contractor SEO matters for your business
+  intro: The specific problems Local SEO solves for businesses in your industry.
+  items:
+  - title: Lead-gen sites resell your leads
+    text: Angi, Thumbtack, and HomeAdvisor charge you for leads they also sell to 3-5 competitors. You end up in a race to the bottom on price.
+  - title: Your website doesn't show your work
+    text: Homeowners want to see before/after photos, project details, and proof of quality. A generic site with no portfolio doesn't convert or rank.
+  - title: You can't rank for remodeling keywords
+    text: Without dedicated pages for kitchen remodeling, bathroom renovation, and home additions, you have no chance of ranking for those high-value searches.
+  - title: Paid ads eat your project margins
+    text: Google Ads for contractor keywords cost $15-$50+ per click. Local SEO builds sustainable visibility that compounds instead of draining your budget.
+- type: cards
+  alt: true
+  columns: 3
+  eyebrow: What's included
+  heading: What's included in this engagement
+  intro: Every contractor SEO project covers the full Local SEO stack, tuned for your industry.
+  items:
+  - title: GBP optimization for contractors
+    text: Categories for general contractor, remodeling contractor, and home improvement service. Full service list, accurate service area, project photos, and regular GBP posts.
+  - title: Project-type landing pages
+    text: Dedicated pages for kitchen remodeling, bathroom renovation, home additions, basement finishing, and whole-home remodeling, each with Service schema and portfolio proof.
+  - title: City and service-area expansion
+    text: Hyperlocal pages for each city and neighborhood you serve, with unique project references and local details that prove you actually work there.
+  - title: Review generation system
+    text: Post-project follow-up that encourages reviews from satisfied homeowners, with response templates that naturally reinforce service keywords.
+  - title: Local citations and NAP consistency
+    text: Alignment across contractor directories, local business listings, and data aggregators to eliminate the confusion that kills local rankings.
+  - title: Technical SEO and schema markup
+    text: LocalBusiness + Contractor schema, fast load times, mobile optimization, FAQ schema, and internal linking to maximize indexation and ranking.
+- type: steps
+  eyebrow: Ranking factors
+  heading: The ranking factors that decide this niche
+  intro: Not every Local SEO signal matters equally. These are the ones that move the needle in your industry.
+  items:
+  - title: Portfolio and project proof
+    text: Contractors with detailed project pages, before/after photos, and case studies outrank generic competitors. Depth signals expertise to both Google and customers.
+  - title: Service category precision
+    text: '"General contractor" vs "Remodeling contractor" vs "Home improvement service" each unlock different search volumes. The right combination matters.'
+  - title: Homeowner review trust
+    text: Contracting is high-trust. Review volume, recency, and detailed project mentions directly impact Maps ranking and homeowner decision-making.
+  - title: Local content depth
+    text: Pages that reference local neighborhoods, building codes, and project types specific to your city help Google associate you with those searches.
+- type: prose
+  alt: true
+  eyebrow: In practice
+  heading: What this looks like in practice
+  body:
+  - Contractor clients I work with typically see their Google Business Profile move into the top 3 for core remodeling and renovation keywords within 3-6 months, leading to a steady increase in project inquiries.
+  stat:
+    value: 2-3x
+    label: more qualified project leads from local search
+- type: list
+  heading: Why work with Ratul Roy on this
+  bullets:
+  - Local SEO specialist with contractor industry focus
+  - Project-page content strategy that converts homeowners
+  - Reporting on leads and inquiries, not impressions
+  - Direct access, no account managers or junior staff
+faqHeading: Frequently asked questions
+faqs:
+- q: How long until contractors see SEO results?
+  a: Most contractors see Maps ranking improvements within 3-5 months and a meaningful increase in project inquiries by month 6. Competitive markets may take longer.
+- q: Do I need a portfolio on my website?
+  a: Yes. Project photos and case studies are critical for both ranking and conversion. They signal real work to Google and build trust with homeowners.
+- q: Can I rank for both remodeling and new construction?
+  a: Yes. The strategy includes separate service pages, GBP services, and content for each, capturing both renovation and new-build searches.
+- q: How do you measure success for contractors?
+  a: Maps ranking positions, organic traffic, call volume, form submissions, and the quality of project inquiries, all reported monthly with clear trends.
+- q: Should I still use lead-gen sites?
+  a: They're fine as a supplement, but Local SEO builds your own direct inquiry channel, one you own and don't share with competitors.
+- q: What if my market is very competitive?
+  a: Competitive markets require more depth and consistency, but the fundamentals work everywhere. The key is out-executing competitors on content, reviews, and citations.
+showResults: false
+showCases: false
+pricing: default
+related:
+- local-seo-service
+- gbp
+- cases
+- book
+- contact
+finalCta:
+  heading: Ready to own the Google Maps 3-pack in your market?
+  text: Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry.
+  buttons:
+  - label: Book Strategy Call
+    href: /book-strategy-call
+  - label: Get Free Audit
+    href: /#free-audit
+    style: ghost
+card:
+  title: General contractors
+  text: Rank in the Google Maps 3-pack for general contractor and home remodeling searches, and win project leads you don't share with competitors.
+  category: Home services
+order: 10

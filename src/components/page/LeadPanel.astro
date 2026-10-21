@@ -1,0 +1,281 @@
+---
+import { Image } from "astro:assets";
+import { img } from "../../lib/img";
+import { site } from "../../data/site";
+
+// Form panel used on /contact and /book-strategy-call.
+interface Props {
+  variant: "contact" | "book";
+}
+const { variant } = Astro.props;
+const book = variant === "book";
+const id = (s: string) => `${variant}-${s}`;
+const portrait = img("people/ratul-roy-portrait.jpg");
+
+const methods = [
+  { label: "WhatsApp", value: site.phone, href: site.whatsapp, ext: true },
+  { label: "Email", value: site.email, href: `mailto:${site.email}` },
+  { label: "Phone", value: site.phone, href: site.phoneHref },
+  { label: "Google Maps", value: `${site.locality}, ${site.country}`, href: site.mapsUrl, ext: true },
+];
+---
+
+<section class="section lead-panel" id={book ? "book" : "message"} aria-labelledby={id("title")}>
+  <div class="container">
+    <div class="lp card" data-reveal>
+      <aside class="lp__side">
+        <div class="lp__who">
+          <Image src={portrait} alt="Ratul Roy" width={112} height={112} class="lp__face" />
+          <div>
+            <p class="lp__name">Ratul Roy</p>
+            <p class="lp__role">Local SEO Specialist · {site.country}</p>
+          </div>
+        </div>
+        <p class="lp__note">
+          {
+            book
+              ? "You talk to me directly, not a sales rep. Share your website and the area you serve, and I'll come to the call with a first look at your Maps visibility."
+              : "Questions, project briefs or a quick sanity check on your Google Business Profile. Every message is read and answered by me."
+          }
+        </p>
+        <ul class="lp__methods" role="list">
+          {
+            methods.map((m) => (
+              <li>
+                <a href={m.href} {...(m.ext ? { target: "_blank", rel: "noopener" } : {})}>
+                  <span>{m.label}</span>
+                  <b>{m.value}</b>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="lp__live"><span class="lp__dot" aria-hidden="true"></span>WhatsApp replies usually within 2 hours on working days (GMT+6)</p>
+      </aside>
+
+      <form class="lp__form" data-lead-form={book ? "strategy-call" : "contact"} novalidate>
+        <h2 id={id("title")}>{book ? "Request your strategy call" : "Send a message"}</h2>
+        <p class="lp__sub">{book ? "Takes a minute. I'll confirm a time on WhatsApp or email." : "Tell me about your business and the result you want."}</p>
+        <div class="lp__row">
+          <div class="field">
+            <label for={id("name")}>Your name*</label>
+            <input id={id("name")} name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for={id("email")}>Email*</label>
+            <input id={id("email")} name="email" type="email" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="lp__row">
+          <div class="field">
+            <label for={id("site")}>Website or Google profile link</label>
+            <input id={id("site")} name="website" inputmode="url" autocomplete="url" />
+          </div>
+          <div class="field">
+            <label for={id("phone")}>{book ? "WhatsApp / phone*" : "WhatsApp / phone"}</label>
+            <input id={id("phone")} name="phone" type="tel" autocomplete="tel" required={book} />
+          </div>
+        </div>
+        {
+          book && (
+            <div class="lp__row">
+              <div class="field">
+                <label for={id("area")}>City / service area</label>
+                <input id={id("area")} name="service_area" placeholder="e.g. Dhaka, Gulshan" />
+              </div>
+              <div class="field">
+                <label for={id("goal")}>Main goal</label>
+                <select id={id("goal")} name="goal">
+                  <option>Rank in the Google Maps 3-pack</option>
+                  <option>More calls and leads</option>
+                  <option>Fix a suspended or duplicate listing</option>
+                  <option>Website / technical SEO</option>
+                  <option>AI search visibility</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for={id("time")}>Preferred time (Bangladesh, GMT+6)</label>
+              <select id={id("time")} name="preferred_time">
+                {["10:00 AM", "11:00 AM", "12:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "07:00 PM", "09:00 PM"].map((t) => <option>{t}</option>)}
+              </select>
+            </div>
+          )
+        }
+        <div class="field">
+          <label for={id("msg")}>{book ? "Anything I should know before the call?" : "Message*"}</label>
+          <textarea id={id("msg")} name="message" rows="5" required={!book}></textarea>
+        </div>
+        <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
+        <button class="btn btn--dark" type="submit"><span class="disc" aria-hidden="true">↗</span>{book ? "Request strategy call" : "Send message"}</button>
+        <p class="lp__fine">No spam, no hard pitch. Your details are only used to reply to you.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "../../scripts/forms";
+</script>
+
+<style>
+  .lead-panel {
+    padding-top: 0;
+  }
+  .lp {
+    display: grid;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: var(--shadow-lg);
+  }
+  @media (min-width: 960px) {
+    .lp {
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+  }
+  .lp__side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: clamp(24px, 4vw, 44px);
+    background:
+      radial-gradient(70% 60% at 0% 0%, rgb(232 64 47 / 22%), transparent 60%),
+      var(--ink);
+    color: #fff;
+  }
+  .lp__who {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .lp__face {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(255 255 255 / 30%);
+  }
+  .lp__name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .lp__role {
+    margin: 0;
+    font-size: 0.88rem;
+    color: rgb(255 255 255 / 65%);
+  }
+  .lp__note {
+    margin: 0;
+    color: rgb(255 255 255 / 80%);
+    line-height: 1.65;
+  }
+  .lp__methods {
+    display: grid;
+    gap: 8px;
+  }
+  .lp__methods a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    padding: 13px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgb(255 255 255 / 14%);
+    background: rgb(255 255 255 / 5%);
+    color: #fff;
+    transition:
+      background 0.2s,
+      border-color 0.2s,
+      transform 0.3s var(--ease);
+  }
+  .lp__methods a:hover {
+    background: rgb(255 255 255 / 10%);
+    border-color: var(--accent-2);
+    transform: translateX(4px);
+  }
+  .lp__methods span {
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 55%);
+  }
+  .lp__methods b {
+    font-weight: 600;
+    word-break: break-word;
+    text-align: right;
+  }
+  .lp__live {
+    margin: auto 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgb(255 255 255 / 70%);
+  }
+  .lp__dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--good);
+    box-shadow: 0 0 0 0 rgb(15 157 99 / 60%);
+    animation: lpPulse 2s infinite;
+  }
+  @keyframes lpPulse {
+    70% {
+      box-shadow: 0 0 0 10px rgb(15 157 99 / 0%);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgb(15 157 99 / 0%);
+    }
+  }
+  .lp__form {
+    display: grid;
+    gap: 16px;
+    padding: clamp(24px, 4vw, 44px);
+    align-content: start;
+  }
+  .lp__form h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin: 0;
+  }
+  .lp__sub {
+    margin: -6px 0 4px;
+    color: var(--muted);
+  }
+  .lp__row {
+    display: grid;
+    gap: 16px;
+  }
+  @media (min-width: 640px) {
+    .lp__row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .lp__form select {
+    width: 100%;
+    font: inherit;
+    padding: 13px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line-2);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .lp__form .btn {
+    justify-self: start;
+  }
+  .lp__fine {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--dim);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lp__dot {
+      animation: none;
+    }
+  }
+</style>

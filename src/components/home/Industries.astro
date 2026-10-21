@@ -40,7 +40,7 @@ const queries = [
         industries.map((i, n) => (
           <li class="card card--hover" data-reveal style={`--d:${n % 4}`} data-spot data-q={queries[n]}>
             <span class="ind__n num">{String(n + 1).padStart(2, "0")}</span>
-            <h3>{i.title}</h3>
+            <h3><a class="ind__link" href={i.href}>{i.title}</a></h3>
             <p>{i.text}</p>
           </li>
         ))
@@ -49,14 +49,14 @@ const queries = [
 
     <div class="ind__more" data-reveal>
       <p class="ind__line">
-        <a href="#contact"><strong>More Local Service Niches</strong></a>
+        <a href="/industries"><strong>All industries →</strong></a>
         <span>If your business depends on local search, the system can be adapted.</span>
       </p>
       <p class="note">
         Don't see your industry? If your business relies on local visibility and inbound calls,
         Local SEO can still work for you.
       </p>
-      <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Check My Local SEO Opportunity</a>
+      <a class="btn btn--dark" href="/#contact"><span class="disc" aria-hidden="true">↗</span>Check My Local SEO Opportunity</a>
     </div>
   </div>
 </section>
@@ -221,5 +221,14 @@ const queries = [
   .ind__more .note {
     max-width: 52ch;
     margin: 0 0 6px;
+  }
+  .ind__link {
+    color: inherit;
+  }
+  .ind__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
   }
 </style>

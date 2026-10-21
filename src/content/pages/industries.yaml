@@ -1,0 +1,58 @@
+title: "Industries Served | Local SEO for Service Businesses"
+description: "Explore the industries Ratul Roy helps with Local SEO, Google Maps ranking, Google Business Profile optimization, website SEO, and qualified inbound calls."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+eyebrow: "Industries We Serve"
+h1: "Local SEO for Service Businesses That Depend on Calls"
+em: "Depend on Calls"
+lead: "Every local industry has different search behavior, competition, trust signals, and buyer intent. I build Local SEO systems around how your customers search, compare, and choose a business."
+sub: "Whether you run an HVAC company, plumbing business, roofing company, clinic, law firm, towing service, or local contractor brand, the goal is the same: stronger **Google Maps visibility**, better local trust, and more qualified inbound calls."
+heroChips: ["Google Maps SEO", "GBP Optimization", "Local Service Businesses", "Qualified Inbound Calls", "AI Search Ready"]
+ctas:
+  - { label: Find My Industry, href: "#industries" }
+  - { label: Get Free Local SEO Audit, href: "/#free-audit", style: ghost }
+sections:
+  - type: cards
+    alt: true
+    columns: 4
+    eyebrow: Industry-Specific SEO
+    heading: "Your Industry Needs More Than a Generic SEO Checklist"
+    intro: "A plumber, dentist, lawyer, roofer, towing company, and clinic do not compete the same way. Each industry has different customer urgency, review expectations, Google Business Profile categories, service pages, content needs, and local ranking signals."
+    items:
+      - { title: Search Intent, text: "Some industries depend on emergency searches, while others rely on trust, comparison, and appointment intent." }
+      - { title: Google Business Profile Signals, text: "Categories, services, photos, reviews, Q&A, posts, and conversion elements must match how buyers choose in your industry." }
+      - { title: "Website & Service Pages", text: "Your website needs pages that match your services, locations, buyer questions, and local search intent." }
+      - { title: "Trust & Authority", text: "Reviews, citations, schema, E-E-A-T, case studies, and brand mentions help search engines and customers trust your business." }
+    body:
+      - "See [Local SEO services](/services) or [recent case studies](/case-studies)."
+  - type: list
+    eyebrow: Local Ranking Signals
+    heading: "The Signals I Build Around Every Local Business"
+    body:
+      - "The industry may change, but the ranking system always needs clear signals across Google Maps, your website, your brand entity, and your customer trust profile."
+    bullets: ["Google Business Profile categories", "Service-area relevance", "Local keyword mapping", "Map pack visibility", "Geo-grid tracking", "NAP consistency", "Local citations", "Review velocity", "Review response strategy", "LocalBusiness schema", "Service schema", "FAQ schema", "Internal linking", "Service page structure", "Location page strategy", "Entity SEO", "E-E-A-T signals", "AI search readiness", "GEO / AIO / LLM visibility", "Qualified inbound calls"]
+  - type: cta
+    alt: true
+    eyebrow: "Not Sure Where You Fit?"
+    heading: "If Your Business Depends on Local Searches, Local SEO Can Help"
+    intro: "Even if your industry is not listed, the process starts the same way: audit your Google Business Profile, website SEO, local competitors, citations, reviews, and ranking gaps. Then build a system around your market and customer intent."
+    buttons:
+      - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+      - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
+faqHeading: "Common Questions About Local SEO for Different Industries"
+faqs:
+  - { q: "Does Local SEO work for all service businesses?", a: "Local SEO works best for businesses that serve a specific city, area, or region and depend on calls, appointments, bookings, or local leads." }
+  - { q: "Is Google Maps ranking different for each industry?", a: "Yes. Different industries have different competition, categories, review expectations, urgency, service intent, and trust signals." }
+  - { q: "Do emergency service businesses need a different strategy?", a: "Yes. Towing, plumbing, HVAC, electricians, and similar businesses need stronger mobile visibility, urgent-intent keywords, fast conversion paths, and service-area signals." }
+  - { q: "Can healthcare and legal businesses use Local SEO?", a: "Yes, but they need stronger E-E-A-T, trust signals, accurate information, reviews, compliant content, and clear service pages." }
+  - { q: "What if my industry is not listed?", a: "If your business depends on local search visibility, Google Maps, and qualified inbound calls, a custom Local SEO strategy can still be built. Still curious? Browse [SEO resources](/blog) or [contact Ratul](/contact)." }
+pricing: none
+related: [local-seo-service, services, gbp, cases, book]
+finalCta:
+  heading: "Want to Know What's Blocking Your Local Rankings?"
+  text: "Get a clear Local SEO audit covering your Google Business Profile, Google Maps visibility, website SEO, citations, reviews, competitors, and AI search readiness."
+  buttons:
+    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Chat on WhatsApp, href: "https://wa.me/8801866820758", style: ghost }
+order: 100

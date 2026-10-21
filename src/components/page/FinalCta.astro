@@ -1,0 +1,84 @@
+---
+import { site } from "../../data/site";
+interface Props {
+  heading?: string;
+  text?: string;
+  buttons?: { label: string; href: string }[];
+}
+const {
+  heading = "Want to Know What's Blocking Your Local Rankings?",
+  text = "Get a clear Local SEO audit covering your Google Business Profile, Google Maps visibility, website SEO, citations, reviews, competitors, and AI search readiness.",
+  buttons = [
+    { label: "Get Free Local SEO Audit", href: "/#free-audit" },
+    { label: "Chat on WhatsApp", href: site.whatsapp },
+  ],
+} = Astro.props;
+---
+
+<section class="fcta" aria-labelledby="fcta-title">
+  <div class="container fcta__inner" data-reveal>
+    <div>
+      <p class="eyebrow">Ready to Grow?</p>
+      <h2 id="fcta-title">{heading}</h2>
+      <p>{text}</p>
+      <ul class="chips">
+        <li class="chip">Google Maps SEO</li>
+        <li class="chip">GBP Optimization</li>
+        <li class="chip">Website SEO</li>
+        <li class="chip">AI Search Ready</li>
+      </ul>
+    </div>
+    <div class="fcta__btns">
+      {
+        buttons.map((b, i) =>
+          i === 0 ? (
+            <a class="btn btn--dark" href={b.href}><span class="disc" aria-hidden="true">↗</span>{b.label}</a>
+          ) : (
+            <a class="btn btn--ghost" href={b.href} {...(/^https?:/.test(b.href) ? { rel: "noopener", target: "_blank" } : {})}>{b.label}</a>
+          ),
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .fcta {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(64px, 9vw, 112px) 0;
+    border-top: 1px solid var(--line);
+    background:
+      url("/topo.svg") 50% 50% / 1400px auto,
+      radial-gradient(50% 80% at 85% 50%, rgb(232 64 47 / 12%), transparent 70%),
+      var(--bg);
+  }
+  .fcta__inner {
+    display: grid;
+    gap: 32px;
+    align-items: end;
+  }
+  @media (min-width: 1024px) {
+    .fcta__inner {
+      grid-template-columns: 1.4fr auto;
+      gap: 56px;
+    }
+  }
+  .fcta h2 {
+    font-size: clamp(2rem, 4.4vw, 3.4rem);
+  }
+  .fcta p:not(.eyebrow) {
+    max-width: 58ch;
+    font-size: 1.05rem;
+  }
+  .fcta__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  @media (min-width: 1024px) {
+    .fcta__btns {
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,104 @@
+---
+import { md } from "../../lib/md";
+interface Props {
+  heading?: string;
+  faqs: { q: string; a: string }[];
+}
+const { heading = "Frequently asked questions", faqs } = Astro.props;
+---
+
+{
+  faqs.length > 0 && (
+    <section class="section wash" aria-labelledby="pfaq-title">
+      <div class="container pfaq">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2 id="pfaq-title">{heading}</h2>
+        </div>
+        <div class="pfaq__list">
+          {faqs.map((f, i) => (
+            <details class="pfaq__item card" open={i === 0} data-reveal style={`--d:${i % 4}`}>
+              <summary>
+                <h3>{f.q}</h3>
+                <span class="pfaq__icon" aria-hidden="true" />
+              </summary>
+              <p set:html={md(f.a)} />
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .pfaq {
+    max-width: 860px;
+  }
+  .pfaq__list {
+    display: grid;
+    gap: 12px;
+  }
+  .pfaq__item {
+    padding: 0 24px;
+  }
+  .pfaq__item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .pfaq__item summary::-webkit-details-marker {
+    display: none;
+  }
+  .pfaq__item h3 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .pfaq__icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg);
+    transition:
+      background 0.3s,
+      transform 0.4s var(--ease);
+  }
+  .pfaq__icon::before,
+  .pfaq__icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 1.8px;
+    border-radius: 2px;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .pfaq__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .pfaq__item[open] .pfaq__icon {
+    background: var(--accent);
+    transform: rotate(45deg);
+  }
+  .pfaq__item[open] .pfaq__icon::before,
+  .pfaq__item[open] .pfaq__icon::after {
+    background: #fff;
+  }
+  .pfaq__item p {
+    margin: 0;
+    padding-bottom: 20px;
+    max-width: 66ch;
+  }
+  .pfaq__item p :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,710 @@
+---
+import { Image } from "astro:assets";
+import { img } from "../../lib/img";
+import { md } from "../../lib/md";
+import type { CollectionEntry } from "astro:content";
+
+type Section = CollectionEntry<"pages">["data"]["sections"][number];
+interface Props {
+  sections: Section[];
+}
+const { sections } = Astro.props;
+const pad = (n: number) => String(n + 1).padStart(2, "0");
+---
+
+{
+  sections.map((s, si) => {
+    const cols = s.columns ?? (s.items && s.items.length % 3 === 0 ? 3 : s.items && s.items.length >= 4 ? (s.items.length % 4 === 0 ? 4 : 2) : 2);
+    const headId = `sec-${si}`;
+    return (
+      <section class={`section${s.alt ? " wash" : ""} psec psec--${s.type}`} id={s.id} aria-labelledby={s.heading ? headId : undefined}>
+        <div class="container">
+          {(s.eyebrow || s.heading || s.intro) && s.type !== "cta" && (
+            <div class={`section-head${["stats", "quotes", "images"].includes(s.type) ? " section-head--center" : ""}`} data-reveal>
+              {s.eyebrow && <p class="eyebrow">{s.eyebrow}</p>}
+              {s.heading && <h2 id={headId} set:html={md(s.heading)} />}
+              {s.intro && <p set:html={md(s.intro)} />}
+            </div>
+          )}
+
+          {/* ---- prose: paragraphs, then optional sub-blocks ---- */}
+          {s.type === "prose" && (
+            <div class="prose" data-reveal>
+              {s.body?.map((p) => <p set:html={md(p)} />)}
+              {s.bullets && (
+                <ul class="checklist">
+                  {s.bullets.map((b) => <li set:html={md(b)} />)}
+                </ul>
+              )}
+              {s.blocks?.map((b, bi) => (
+                <div class="prose__block">
+                  <h3><span class="prose__n num">{pad(bi)}</span>{b.heading}</h3>
+                  {b.body?.map((p) => <p set:html={md(p)} />)}
+                  {b.bullets && (
+                    <ul class="checklist">
+                      {b.bullets.map((x) => <li set:html={md(x)} />)}
+                    </ul>
+                  )}
+                </div>
+              ))}
+              {s.stat && (
+                <div class="prose__stat card">
+                  <span class="prose__statv num">{s.stat.value}</span>
+                  <span>{s.stat.label}</span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ---- list: a single checklist, optionally with paragraphs ---- */}
+          {s.type === "list" && (
+            <div class="plist card" data-reveal>
+              {s.body?.map((p) => <p set:html={md(p)} />)}
+              <ul class="checklist plist__items">
+                {s.bullets?.map((b) => <li set:html={md(b)} />)}
+              </ul>
+            </div>
+          )}
+
+          {/* ---- cards ---- */}
+          {s.type === "cards" && (
+            <ul class={`grid grid--${cols} pcards`}>
+              {s.items?.map((it, i) => (
+                <li class={`card card--hover pcard${it.featured ? " pcard--featured" : ""}`} data-reveal style={`--d:${i % cols}`} data-spot>
+                  {it.featured && <span class="pcard__flag">Featured</span>}
+                  {it.image && (
+                    <div class="pcard__img">
+                      <Image src={img(it.image)} alt="" widths={[400, 640]} sizes="(min-width: 1024px) 360px, 90vw" loading="lazy" />
+                    </div>
+                  )}
+                  {it.label && <p class="tag">{it.label}</p>}
+                  <h3>{it.href ? <a href={it.href}>{it.title}</a> : it.title}</h3>
+                  {it.text && <p set:html={md(it.text)} />}
+                  {it.bullets && (
+                    <ul class="checklist">
+                      {it.bullets.map((b) => <li set:html={md(b)} />)}
+                    </ul>
+                  )}
+                  {it.tags && (
+                    <ul class="chips pcard__tags">
+                      {it.tags.map((t) => <li class="chip chip--line">{t}</li>)}
+                    </ul>
+                  )}
+                  {(it.meta || it.cta) && (
+                    <div class="pcard__foot">
+                      {it.meta && <span class="pcard__meta">{it.meta}</span>}
+                      {it.href && it.cta && <span class="text-link">{it.cta}</span>}
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* ---- problems: "usual cause" style cards ---- */}
+          {s.type === "problems" && (
+            <ul class="grid grid--2 pprob">
+              {s.items?.map((it, i) => (
+                <li class="card" data-reveal style={`--d:${i % 2}`}>
+                  <span class="pprob__icon" aria-hidden="true">!</span>
+                  <div>
+                    <h3>{it.title}</h3>
+                    {it.text && <p set:html={md(it.text)} />}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* ---- steps: numbered route ---- */}
+          {s.type === "steps" && (
+            <ol class="psteps">
+              {s.items?.map((it, i) => (
+                <li class="psteps__item" data-reveal style={`--d:${i % 4}`}>
+                  <span class="psteps__pin num" aria-hidden="true"><span>{it.label ?? pad(i)}</span></span>
+                  <div class="card">
+                    <h3>{it.title}</h3>
+                    {it.text && <p set:html={md(it.text)} />}
+                    {it.bullets && (
+                      <ul class="checklist">
+                        {it.bullets.map((b) => <li set:html={md(b)} />)}
+                      </ul>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          )}
+
+          {/* ---- stats ---- */}
+          {s.type === "stats" && (
+            <dl class="pstats">
+              {s.items?.map((it, i) => (
+                <div class="card" data-reveal style={`--d:${i}`}>
+                  <dt>{it.title}</dt>
+                  <dd class="num" data-count={/\d/.test(it.value ?? "") && !/–|-\d/.test(it.value ?? "") ? "" : undefined}>{it.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {/* ---- images (screenshots with captions) ---- */}
+          {s.type === "images" && (
+            <div class="pimgs">
+              {s.items?.map((it, i) => (
+                <figure class="card" data-reveal style={`--d:${i % 2}`}>
+                  {it.image && <Image src={img(it.image)} alt={it.text ?? it.title} widths={[480, 800, 1200]} sizes="(min-width: 1024px) 560px, 92vw" loading="lazy" class="pimgs__img" />}
+                  <figcaption>
+                    <b>{it.title}</b>
+                    {it.text && <span> · {it.text}</span>}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
+
+          {/* ---- pricing tiers ---- */}
+          {s.type === "pricing" && (
+            <>
+              <div class={`ptiers ptiers--${s.tiers?.length ?? 3}`}>
+                {s.tiers?.map((t, i) => (
+                  <div class={`card ptier${t.featured ? " ptier--featured" : ""}`} data-reveal style={`--d:${i}`}>
+                    {t.featured && <span class="pcard__flag">Most chosen</span>}
+                    <h3>{t.name}</h3>
+                    <p class="ptier__price"><span>{t.price}</span>{t.unit && <small>{t.unit}</small>}</p>
+                    {t.for && <p class="ptier__for">{t.for}</p>}
+                    {t.text && <p class="ptier__text">{t.text}</p>}
+                    <ul class="checklist">
+                      {t.bullets.map((b) => <li>{b}</li>)}
+                    </ul>
+                    {t.receive && <p class="ptier__receive"><b>You receive</b>{t.receive}</p>}
+                    <a class={`btn ${t.featured ? "btn--dark" : "btn--ghost"}`} href={t.cta?.href ?? "/book-strategy-call"}>{t.cta?.label ?? "Get started"}</a>
+                  </div>
+                ))}
+              </div>
+              {s.note && <p class="pnote" set:html={md(s.note)} />}
+            </>
+          )}
+
+          {/* ---- quotes ---- */}
+          {s.type === "quotes" && (
+            <div class="grid grid--3 pquotes">
+              {s.quotes?.map((q, i) => (
+                <figure class="card" data-reveal style={`--d:${i}`}>
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <blockquote><p>“{q.quote}”</p></blockquote>
+                  <figcaption><b>{q.name}</b>{q.meta && <span>{q.meta}</span>}</figcaption>
+                </figure>
+              ))}
+            </div>
+          )}
+
+          {/* ---- inline CTA banner ---- */}
+          {s.type === "cta" && (
+            <div class="pcta" data-reveal>
+              <div>
+                {s.eyebrow && <p class="pcta__eyebrow">{s.eyebrow}</p>}
+                {s.heading && <h2 id={headId} set:html={md(s.heading)} />}
+                {s.intro && <p set:html={md(s.intro)} />}
+              </div>
+              <div class="pcta__btns">
+                {(s.buttons ?? [{ label: "Book strategy call", href: "/book-strategy-call" }, { label: "Get free SEO audit", href: "/#free-audit" }]).map((b, i) => (
+                  <a class={`btn ${i === 0 ? "btn--light" : "btn--outline"}`} href={b.href}>{b.label}</a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {s.type !== "prose" && s.type !== "list" && s.body && (
+            <div class="prose psec__after" data-reveal>{s.body.map((p) => <p set:html={md(p)} />)}</div>
+          )}
+        </div>
+      </section>
+    );
+  })
+}
+
+<style>
+  .psec + .psec:not(.wash) {
+    padding-top: 0;
+  }
+  .wash + .psec:not(.wash),
+  .psec:not(.wash) + .wash {
+    padding-top: clamp(80px, 10vw, 128px);
+  }
+
+  /* prose */
+  .prose {
+    max-width: 72ch;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+  .prose :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose .checklist {
+    margin: 8px 0 20px;
+  }
+  .prose .checklist li {
+    font-size: 1rem;
+  }
+  .prose__block {
+    margin-top: 34px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+  }
+  .prose__block h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .prose__n {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 0.75rem;
+  }
+  .prose__stat {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 24px;
+    padding: 20px 24px;
+    background:
+      radial-gradient(80% 140% at 0% 0%, rgb(15 157 99 / 14%), transparent 60%),
+      var(--paper);
+  }
+  .prose__statv {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--good);
+  }
+  .psec__after {
+    margin-top: 32px;
+  }
+
+  /* list */
+  .plist {
+    padding: clamp(22px, 3vw, 32px);
+    max-width: 880px;
+  }
+  .plist__items {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  /* cards */
+  .pcard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .pcard h3 {
+    font-size: 1.1rem;
+  }
+  .pcard h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .pcard > p {
+    font-size: 0.92rem;
+  }
+  .pcard .checklist {
+    margin-bottom: 16px;
+  }
+  .pcard .checklist li {
+    font-size: 0.86rem;
+  }
+  .pcard__tags {
+    margin-top: auto;
+    padding-top: 6px;
+  }
+  .pcard__foot {
+    margin-top: auto;
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px dashed var(--line-2);
+  }
+  .pcard__meta {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--good);
+  }
+  .pcard--featured {
+    border: 1.5px solid var(--accent);
+    box-shadow:
+      0 0 0 4px rgb(232 64 47 / 8%),
+      var(--shadow-lg);
+  }
+  .pcard__flag {
+    position: absolute;
+    top: -11px;
+    right: 18px;
+    padding: 3px 11px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .pcard__img {
+    margin: -8px -8px 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .pcard__img :global(img) {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+
+  /* problems */
+  .pprob .card {
+    display: flex;
+    gap: 16px;
+    padding: 22px;
+  }
+  .pprob__icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 800;
+  }
+  .pprob h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .pprob p {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+
+  /* steps */
+  .psteps {
+    position: relative;
+    display: grid;
+    gap: 16px;
+  }
+  .psteps::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: repeating-linear-gradient(180deg, var(--accent-2) 0 8px, transparent 8px 14px);
+    opacity: 0.6;
+  }
+  .psteps__item {
+    position: relative;
+    padding-left: 64px;
+  }
+  .psteps__pin {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 50% 50% 50% 6px;
+    transform: rotate(-45deg);
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 0 0 6px var(--bg);
+  }
+  .psteps__pin > span {
+    transform: rotate(45deg);
+  }
+  .psteps .card {
+    padding: 20px 24px;
+  }
+  .psteps h3 {
+    font-size: 1.08rem;
+    margin-bottom: 6px;
+  }
+  .psteps p {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  @media (min-width: 1024px) {
+    .psteps {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .psteps::before {
+      left: 22px;
+      right: 22px;
+      top: 22px;
+      bottom: auto;
+      width: auto;
+      height: 3px;
+      background: repeating-linear-gradient(90deg, var(--accent-2) 0 8px, transparent 8px 14px);
+    }
+    .psteps__item {
+      padding: 64px 0 0;
+    }
+    .psteps__pin {
+      top: 0;
+    }
+    .psteps .card {
+      height: 100%;
+    }
+  }
+
+  /* stats */
+  .pstats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 0;
+  }
+  @media (min-width: 900px) {
+    .pstats {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+  }
+  .pstats > div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 6px;
+    padding: 22px;
+  }
+  .pstats dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .pstats > div:first-child dd {
+    color: var(--accent);
+  }
+  .pstats > div:nth-child(2) dd {
+    color: var(--good);
+  }
+  .pstats dt {
+    font-size: 0.85rem;
+  }
+
+  /* images */
+  .pimgs {
+    display: grid;
+    gap: 18px;
+  }
+  @media (min-width: 900px) {
+    .pimgs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .pimgs figure {
+    margin: 0;
+    padding: 12px;
+  }
+  .pimgs__img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .pimgs figcaption {
+    padding: 12px 6px 4px;
+    font-size: 0.9rem;
+  }
+  .pimgs figcaption b {
+    color: var(--ink);
+  }
+
+  /* pricing */
+  .ptiers {
+    display: grid;
+    gap: 18px;
+    align-items: stretch;
+  }
+  @media (min-width: 1024px) {
+    .ptiers--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .ptiers--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .ptier {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+  }
+  .ptier--featured {
+    border: 1.5px solid var(--accent);
+    box-shadow:
+      0 0 0 5px rgb(232 64 47 / 8%),
+      var(--shadow-lg);
+  }
+  .ptier h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .ptier__price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+  .ptier__price span {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+  }
+  .ptier__price small {
+    font-size: 0.82rem;
+    color: var(--dim);
+  }
+  .ptier__for {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 0.92rem;
+  }
+  .ptier__text {
+    font-size: 0.9rem;
+  }
+  .ptier .checklist {
+    margin-bottom: 18px;
+  }
+  .ptier .checklist li {
+    font-size: 0.88rem;
+  }
+  .ptier__receive {
+    margin-top: auto;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: var(--bg);
+    font-size: 0.86rem;
+    display: grid;
+  }
+  .ptier__receive b {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .ptier .btn {
+    margin-top: 16px;
+  }
+  .pnote {
+    margin-top: 22px;
+    font-size: 0.88rem;
+    max-width: 80ch;
+  }
+
+  /* quotes */
+  .pquotes figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .pquotes blockquote {
+    margin: 10px 0 16px;
+  }
+  .pquotes blockquote p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .pquotes figcaption {
+    margin-top: auto;
+    display: grid;
+    font-size: 0.85rem;
+  }
+  .pquotes figcaption b {
+    color: var(--ink);
+  }
+
+  /* cta */
+  .pcta {
+    display: grid;
+    gap: 24px;
+    align-items: center;
+    padding: clamp(26px, 4vw, 44px);
+    border-radius: var(--radius);
+    background:
+      radial-gradient(60% 120% at 100% 0%, rgb(232 64 47 / 35%), transparent 60%),
+      var(--ink);
+    color: #c3cccb;
+  }
+  .pcta h2 {
+    color: #fff;
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  }
+  .pcta p {
+    margin: 0;
+    max-width: 62ch;
+  }
+  .pcta__eyebrow {
+    margin: 0 0 8px !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+  }
+  .pcta__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  @media (min-width: 1024px) {
+    .pcta {
+      grid-template-columns: 1.5fr auto;
+    }
+    .pcta__btns {
+      flex-direction: column;
+    }
+  }
+  .btn--light {
+    background: #fff;
+    color: var(--ink);
+  }
+  .btn--light:hover {
+    color: var(--ink);
+  }
+  .btn--outline {
+    color: #fff;
+    border-color: rgb(255 255 255 / 30%);
+  }
+  .btn--outline:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+</style>

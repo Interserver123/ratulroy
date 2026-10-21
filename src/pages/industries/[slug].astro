@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import ContentPage from "../../layouts/ContentPage.astro";
+
+export async function getStaticPaths() {
+  const items = await getCollection("industries");
+  return items.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+---
+
+<ContentPage data={entry.data} path={`/industries/${entry.id}`} kind="industry" />

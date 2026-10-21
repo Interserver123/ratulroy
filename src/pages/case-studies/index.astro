@@ -1,0 +1,23 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import ContentPage from "../../layouts/ContentPage.astro";
+import HubGrid from "../../components/page/HubGrid.astro";
+
+const page = await getEntry("pages", "case-studies");
+if (!page) throw new Error("Missing src/content/pages/case-studies.yaml");
+const cases = (await getCollection("cases")).sort((a, b) => a.data.order - b.data.order);
+
+const items = cases.map((e) => ({
+  href: `/case-studies/${e.id}`,
+  title: e.data.card?.title ?? e.data.h1,
+  text: e.data.card?.text ?? e.data.description,
+  category: e.data.card?.category,
+  value: e.data.card?.value,
+  label: e.data.card?.label,
+  image: e.data.card?.image ?? e.data.heroImage,
+}));
+---
+
+<ContentPage data={page.data} path="/case-studies">
+  <HubGrid slot="before" items={items} variant="case" eyebrow="Case studies" heading="Real campaigns, real screenshots" />
+</ContentPage>

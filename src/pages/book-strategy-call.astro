@@ -1,0 +1,12 @@
+---
+import { getEntry } from "astro:content";
+import ContentPage from "../layouts/ContentPage.astro";
+import LeadPanel from "../components/page/LeadPanel.astro";
+
+const page = await getEntry("pages", "book-strategy-call");
+if (!page) throw new Error("Missing src/content/pages/book-strategy-call.yaml");
+---
+
+<ContentPage data={page.data} path="/book-strategy-call">
+  <LeadPanel slot="before" variant="book" />
+</ContentPage>

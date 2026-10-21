@@ -1,0 +1,71 @@
+---
+import { relatedLinks } from "../../data/links";
+interface Props {
+  keys: string[];
+  heading?: string;
+  intro?: string;
+}
+const { keys, heading = "Keep exploring", intro } = Astro.props;
+const items = keys.map((k) => relatedLinks[k]).filter(Boolean);
+---
+
+{
+  items.length > 0 && (
+    <section class="section rel" aria-labelledby="rel-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Keep exploring</p>
+          <h2 id="rel-title">{heading}</h2>
+          {intro && <p>{intro}</p>}
+        </div>
+        <ul class="rel__grid">
+          {items.map((l, i) => (
+            <li class="card card--hover" data-reveal style={`--d:${i % 3}`} data-spot>
+              <h3><a href={l.href}>{l.title}</a></h3>
+              <p>{l.text}</p>
+              <span class="text-link" aria-hidden="true">Open</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .rel__grid {
+    display: grid;
+    gap: 14px;
+  }
+  @media (min-width: 640px) {
+    .rel__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .rel__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .rel__grid li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .rel__grid h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .rel__grid h3 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .rel__grid p {
+    font-size: 0.9rem;
+  }
+  .rel__grid .text-link {
+    margin-top: auto;
+  }
+</style>

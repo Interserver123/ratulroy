@@ -1,0 +1,88 @@
+title: "HVAC SEO Services | Local SEO Expert | Ratul Roy"
+description: "HVAC SEO that ranks your business in Google Maps for AC repair, furnace, and emergency HVAC searches. Get more qualified service calls."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: HVAC SEO, href: /industries/hvac-seo }
+eyebrow: "HVAC SEO"
+h1: "Local SEO for HVAC Companies That Need Real Service Calls"
+em: "Real Service Calls"
+lead: "Rank in the Google Maps 3-pack for AC repair, furnace installation, and emergency HVAC searches in your service area, and turn those searches into booked jobs, not wasted clicks."
+heroBullets:
+  - "Google Maps top-3 visibility for HVAC keywords"
+  - "Optimized Google Business Profile (categories, services, photos)"
+  - "Service-area pages that convert near-me searches into calls"
+  - "Reviews, citations, and trust signals tuned for HVAC buyers"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "HVAC is one of the most competitive Local SEO niches on the planet. Homeowners search at the worst possible moment: the AC dies in July, the furnace dies in January, and they call whoever appears first in Google Maps. If your business isn't in the top 3 for queries like \"AC repair near me\", \"emergency HVAC\", or \"furnace replacement [city]\", you're losing real jobs to competitors every single day."
+  - "I build Local SEO systems specifically for HVAC companies that want consistent inbound calls instead of paying ad networks for every lead."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why HVAC SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "You're invisible in Google Maps", text: "Your Google Business Profile shows up on brand searches only. For high-intent queries like \"AC repair\" or \"HVAC near me\", you're nowhere, and the same 3 competitors keep taking every call." }
+      - { title: "Your website doesn't rank for service keywords", text: "Your homepage talks about your company instead of the services and cities you serve. Google has no idea what to rank you for, so it ranks you for nothing." }
+      - { title: "Your reviews aren't pulling weight", text: "Reviews are old, sparse, or not strategically responded to. Google reads review velocity, keywords, and freshness as ranking signals, and right now yours are flat." }
+      - { title: "Paid ads cost too much per call", text: "Google Ads for HVAC keywords run $30-$150+ per click. Without strong organic and Maps visibility, you're stuck renting traffic forever instead of owning it." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every HVAC SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "Google Business Profile optimization for HVAC", text: "Full audit and rebuild of your GBP: primary and secondary categories (HVAC contractor, air conditioning repair service, furnace repair service, heating contractor), service list, service-area definitions, business description rewritten for keyword relevance, photo strategy, GBP posts, and Q&A seeding." }
+      - { title: "Geo-targeted service pages", text: "Dedicated pages for each core service (AC repair, AC installation, furnace repair, heat pump installation, ductwork, maintenance plans) and each priority city, written for search intent, with proper Service and LocalBusiness schema." }
+      - { title: "Map pack and geo-grid ranking", text: "Geo-grid tracking across your service area so we can see exactly where you rank in every neighborhood, and a campaign built to expand that ranking grid outward month over month." }
+      - { title: "Local citations and NAP consistency", text: "Manual cleanup of your name, address, and phone across HVAC directories, local citations, and data aggregators. Inconsistent NAP is one of the top reasons local rankings stall." }
+      - { title: "Review acquisition and response strategy", text: "A repeatable system for getting new reviews from real jobs, with response templates that work in keywords (\"AC repair\", neighborhood names) naturally. Both contribute to Maps ranking." }
+      - { title: "Technical SEO and Core Web Vitals", text: "Speed, mobile, schema (LocalBusiness, Service, FAQ, Breadcrumb), internal linking, and crawl health, so the strong content actually gets indexed and ranked." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "Primary category accuracy", text: "HVAC GBPs that pick the wrong primary category lose ranking instantly. \"HVAC contractor\" vs \"Air conditioning repair service\" vs \"Heating contractor\" are not interchangeable; they each trigger different searches." }
+      - { title: "Service-area proximity", text: "Google Maps weights proximity heavily for HVAC. If you can't physically rank citywide from one address, you need a strategy that uses service-area signals, hyperlocal pages, and citation footprint instead." }
+      - { title: "Review keywords", text: "When customers mention services in reviews (\"furnace replacement\", \"AC tune-up\"), those reviews boost rankings for those exact queries. A response strategy that includes these terms compounds the effect." }
+      - { title: "Emergency / urgent intent signals", text: "Pages that signal 24/7 availability, same-day service, and emergency response convert better and get clicked more, and click-through rate is a real ranking signal in the local pack." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "HVAC clients I've worked with typically see their Google Business Profile move from outside the top 10 to a stable top-3 position for core service + city queries within 3-6 months, and that move alone usually doubles or triples qualified inbound calls."
+    stat: { value: "3x", label: "more qualified service calls after top-3 Maps ranking" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Focused on Local SEO, not generic SEO, not a 50-service agency"
+      - "Hands-on with GBP, schema, and technical SEO (not just reports)"
+      - "Built specifically around inbound calls, not vanity rankings"
+      - "Transparent monthly reporting tied to calls and ranking, not impressions"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How long does HVAC SEO take to show results?", a: "Most HVAC clients see measurable Google Maps ranking improvements within 90 days and meaningful call volume growth within 3-6 months. Citation cleanup and review velocity compound over time, so results usually accelerate after month 4." }
+  - { q: "Do I need a separate page for every city I serve?", a: "Not for every city, but for every priority city. Thin city pages with copy-pasted content get penalized. We build deep, unique location pages only for cities where you actually do work and want to rank." }
+  - { q: "Can I rank in Google Maps without a physical office in the city?", a: "Yes, service-area businesses can rank in cities they serve, but it's harder. The strategy relies on service-area definition, hyperlocal content, citations, reviews, and proximity to your real address." }
+  - { q: "How is HVAC SEO different from general SEO?", a: "HVAC is high-urgency, emergency-driven, and Maps-dominated. The ranking factors that matter most (categories, reviews, proximity, GBP signals) are different from a typical content site, and the keywords carry strong commercial intent." }
+  - { q: "Do you also run Google Ads for HVAC companies?", a: "No, I focus only on Local SEO. The goal is to reduce your dependency on paid ads by building organic and Maps visibility that compounds over time." }
+  - { q: "What if my GBP has been suspended or has issues?", a: "GBP suspension reinstatement, duplicate listing cleanup, and category fixes are all part of a normal HVAC engagement. These are common in the niche and have to be solved before ranking work even starts." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "HVAC"
+  text: "Rank in the Google Maps 3-pack for AC repair, furnace installation, and emergency HVAC searches, and turn them into booked jobs."
+  value: "3x"
+  label: "more qualified service calls"
+  category: "Home services"
+order: 1

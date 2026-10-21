@@ -452,18 +452,18 @@ export const caseStudies = [
 ];
 
 export const industries = [
-  { title: "HVAC Companies", text: "Rank for emergency, repair, and installation searches." },
-  { title: "Plumbing Businesses", text: "Capture urgent local searches and service-area calls." },
-  { title: "Roofing Contractors", text: "Build local authority for high-value roofing leads." },
-  { title: "Towing Companies", text: "Show up when customers need help immediately." },
-  { title: "Pest Control Services", text: "Win local searches for treatment and inspection intent." },
-  { title: "Electricians", text: "Improve visibility for repair, installation, and emergency jobs." },
-  { title: "Cleaning Companies", text: "Get discovered for residential and commercial cleaning demand." },
-  { title: "Moving Companies", text: "Rank for city-based moving and relocation searches." },
-  { title: "Construction Companies", text: "Build trust for local contractor and project searches." },
-  { title: "Dental Clinics", text: "Improve local visibility for treatment and appointment searches." },
-  { title: "Healthcare Clinics", text: "Strengthen trust and discovery for local patient searches." },
-  { title: "Legal Services", text: "Compete for high-intent local legal search visibility." },
+  { title: "HVAC Companies", href: "/industries/hvac-seo", text: "Rank for emergency, repair, and installation searches." },
+  { title: "Plumbing Businesses", href: "/industries/plumbing-seo", text: "Capture urgent local searches and service-area calls." },
+  { title: "Roofing Contractors", href: "/industries/roofing-seo", text: "Build local authority for high-value roofing leads." },
+  { title: "Towing Companies", href: "/industries/towing-seo", text: "Show up when customers need help immediately." },
+  { title: "Pest Control Services", href: "/industries/pest-control-seo", text: "Win local searches for treatment and inspection intent." },
+  { title: "Electricians", href: "/industries/electrician-seo", text: "Improve visibility for repair, installation, and emergency jobs." },
+  { title: "Cleaning Companies", href: "/industries/cleaning-seo", text: "Get discovered for residential and commercial cleaning demand." },
+  { title: "Moving Companies", href: "/industries/moving-seo", text: "Rank for city-based moving and relocation searches." },
+  { title: "Construction Companies", href: "/industries/construction-seo", text: "Build trust for local contractor and project searches." },
+  { title: "Dental Clinics", href: "/industries/dental-seo", text: "Improve local visibility for treatment and appointment searches." },
+  { title: "Healthcare Clinics", href: "/industries/healthcare-seo", text: "Strengthen trust and discovery for local patient searches." },
+  { title: "Legal Services", href: "/industries/legal-seo", text: "Compete for high-intent local legal search visibility." },
 ];
 
 export const guides = [

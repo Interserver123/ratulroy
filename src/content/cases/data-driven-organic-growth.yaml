@@ -1,0 +1,82 @@
+title: "0 to 3.93K Clicks: Data-Driven SEO in 6 Months | Ratul Roy"
+description: "How a near-invisible site grew from ~0 to 3.93K organic clicks, 47.4K impressions and an 8.3% CTR in 6 months with data-driven SEO."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Case Studies, href: /case-studies }
+  - { label: Data-Driven Organic Growth, href: /case-studies/data-driven-organic-growth }
+eyebrow: "Case Study · Multi-Industry / Website SEO"
+h1: "From Zero to 3.93K Clicks, Data-Driven Organic SEO Growth in 6 Months"
+em: "3.93K Clicks"
+lead: "How a near-invisible website went from almost zero organic traffic to 3.93K clicks, 47.4K impressions and an 8.3% CTR in just 6 months, through disciplined, data-driven SEO."
+heroChips: ["Organic SEO", "Website SEO", "Content Strategy", "Technical SEO"]
+heroStats:
+  - { value: "3.93K", label: "Organic clicks in 6 months" }
+  - { value: "47.4K", label: "Impressions" }
+  - { value: "8.3%", label: "Average CTR" }
+heroImage: "cases/data-driven-gsc.png"
+ctas:
+  - { label: Get Free SEO Audit, href: "/#free-audit" }
+  - { label: Return to homepage, href: /, style: ghost }
+intro:
+  - "**Client:** a legitimate business with real market demand whose website was effectively invisible in Google. **Focus:** website SEO, content and technical fixes. **Timeline:** 6 months."
+sections:
+  - type: problems
+    eyebrow: "01 · Problem"
+    heading: The Challenge
+    intro: "The client came to us with a website that was effectively invisible in Google, generating almost zero organic clicks despite a legitimate business with real market demand. There was no keyword strategy, outdated and unfocused content, serious technical SEO debt and a poor mobile experience dragging down every ranking signal."
+    items:
+      - { title: "Near-zero organic traffic", text: "Not ranking for any meaningful keywords." }
+      - { title: "No keyword strategy", text: "Content existed but ignored search intent." }
+      - { title: "Technical SEO debt", text: "Slow speeds, mobile issues and crawlability blockers." }
+      - { title: "Content gaps", text: "High-intent topics with zero coverage on the site." }
+  - type: steps
+    alt: true
+    eyebrow: "02 · Approach"
+    heading: The Strategy
+    intro: "We deployed a systematic, data-driven SEO framework designed to build organic momentum from the ground up, fixing the technical foundation first, then aligning content with real search intent and iterating weekly on Search Console data."
+    items:
+      - { title: "Audit & Gap Analysis", text: "Full technical, on-page and off-page audit. Every underperforming page and missed keyword opportunity catalogued and prioritized." }
+      - { title: Keyword Architecture, text: "Rebuilt the keyword map: head terms paired with long-tail variations, each matched to a specific page with clear intent alignment." }
+      - { title: Content Optimization, text: "Rewrote existing pages around target keywords and search intent, then shipped new pages to close the highest-value content gaps." }
+      - { title: "Meta & CTR Testing", text: "Rewrote every title and meta description, A/B tested formats and pushed average CTR to 8.3%, well above industry benchmarks." }
+  - type: stats
+    eyebrow: "03 · Outcome"
+    heading: The Result
+    intro: "In 6 months organic clicks went from near-zero to 3.93K, impressions exploded to 47.4K, average CTR landed at 8.3%, and average position improved from 50+ to 26.8 with a clear upward trajectory toward page one."
+    items:
+      - { title: "Total clicks", value: "3.93K" }
+      - { title: "Impressions", value: "47.4K" }
+      - { title: "Average CTR", value: "8.3%" }
+      - { title: "Average position (from 50+)", value: "26.8" }
+  - type: images
+    alt: true
+    eyebrow: Real Screenshot
+    heading: "The data behind the result"
+    items:
+      - { title: "Google Search Console", text: "May to November 2020: 3.93K clicks, 47.4K impressions, 8.3% average CTR and 26.8 average position, with clicks lifting off near-zero from late September.", image: "cases/data-driven-gsc.png" }
+  - type: list
+    eyebrow: "04 · Learnings"
+    heading: Key Takeaways
+    bullets:
+      - "**Data-driven iteration wins.** Small weekly improvements compound into massive growth."
+      - "**Content is the foundation.** Keyword-aligned content drove the biggest ranking lifts."
+      - "**Technical SEO is non-negotiable.** No content strategy can outrun a broken crawl."
+    body:
+      - "Want a similar strategy for your business? Explore the [Local SEO services](/local-seo-service) or [return to the homepage](/)."
+showCases: true
+pricing: none
+related: [cases, technical, local-seo-service, book]
+finalCta:
+  heading: "See how your business can achieve similar results."
+  text: "Get a free Local SEO audit covering your Google Business Profile, map pack visibility, competitors, citations, and ranking gaps."
+  buttons:
+    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Book Strategy Call, href: /book-strategy-call }
+card:
+  title: "From Zero to 3.93K Clicks, Data-Driven Organic SEO Growth in 6 Months"
+  text: "A near-invisible website reached 3.93K organic clicks, 47.4K impressions and an 8.3% CTR in 6 months."
+  value: "3.93K"
+  label: "organic clicks in 6 months"
+  category: "Organic growth"
+  image: "cases/data-driven-gsc.png"
+order: 3

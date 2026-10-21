@@ -1,0 +1,92 @@
+title: "Local SEO Services in Dhaka | Google Maps Ranking"
+description: "Local SEO services in Dhaka for clinics, showrooms, restaurants and service businesses. Rank in the Google Maps 3-pack across Gulshan, Dhanmondi, Uttara and Mirpur. From $299."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Services, href: /services }
+  - { label: Local SEO in Dhaka, href: /local-seo-dhaka }
+eyebrow: "Dhaka, Bangladesh"
+h1: "Local SEO services in Dhaka"
+em: "in Dhaka"
+lead: "Dhaka is the hardest local market in the country and the most valuable one. Competitors sit in the same plaza, addresses defeat the map pin, and a good share of the listings in any category are duplicates nobody has claimed. This is the work that gets your business into the Google Maps three-pack for the areas you actually serve, and keeps it there."
+heroBullets: ["From $299", "No lock-in", "Work direct, not through an agency", "White-hat only"]
+heroImage: "cases/geo-grid-ranking.jpg"
+heroStats:
+  - { value: "12", label: "Dhaka areas" }
+  - { value: "5", label: "Step method" }
+  - { value: "$299", label: "From" }
+ctas:
+  - { label: Get a Dhaka visibility review, href: /book-strategy-call }
+  - { label: See results, href: /case-studies, style: ghost }
+sections:
+  - type: problems
+    eyebrow: The local problem
+    heading: "Why ranking in Dhaka is not like ranking anywhere else"
+    intro: "Four things cause most of the trouble here. Each one is fixable, and each one is missed by the generic checklists sold as Local SEO packages."
+    items:
+      - { title: Proximity is decided in hundreds of metres, text: "Competing businesses sit in the same plaza, let alone the same road. A profile can hold the top spot around Dhanmondi 27 and disappear by Jigatola. One rank check from your own shop tells you almost nothing, which is why the work is tracked on a grid of points across the area you actually serve." }
+      - { title: Addresses Google cannot place, text: "House and road numbers, block letters, plaza floor and shop numbers, directions given by landmark. Google often cannot resolve that to a precise point, and a pin dropped on the wrong side of a busy road changes who ever sees you. The pin belongs on your entrance, and the floor or shop detail where Google can read it." }
+      - { title: Duplicate and unclaimed listings, text: "Most established businesses here already have a listing someone else created: a former staff member, an agency, or Google itself from map data. Two or three entries for one shop split your reviews and confuse ranking. These get claimed, merged or removed before anything else is worth doing." }
+      - { title: "Mixed-language, mobile-first searching", text: "The same customer searches in English, Bangla and romanised Bangla, almost always on a phone and often on mobile data. That shapes how the profile is written, and it is why a slow website quietly loses the customers your listing just earned." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: Coverage
+    heading: "Areas of Dhaka, and how each one behaves"
+    intro: "These are not separate landing pages repeating one template with the area name swapped. They are notes on what genuinely differs between them, because the strategy does change."
+    items:
+      - { title: "Gulshan, Banani, Baridhara", text: "Corporate offices, clinics and fine dining, where high review counts are already normal. Review velocity and photo quality do most of the separating." }
+      - { title: Dhanmondi, text: "Clinics, coaching centres, salons and restaurants packed into a handful of roads. Pin accuracy and correct opening hours decide who wins the near-me searches." }
+      - { title: Uttara, text: "Sectors behave like separate markets. A profile that leads in Sector 7 often fades by Sector 13, so visibility is tracked sector by sector rather than city-wide." }
+      - { title: Mirpur, text: "Heavy near-me demand for repair, tuition and diagnostics across Mirpur 1, 2, 10, 11 and 12, Kazipara and Shewrapara. Spelling variants such as Mirpur 10 and Mirpur-10 need handling consistently." }
+      - { title: "Bashundhara R/A", text: "Gated blocks and long internal roads. For delivery and home services a properly configured service area usually beats relying on a single pin." }
+      - { title: "Mohammadpur, Adabor, Shyamoli", text: "Dense residential demand for home services, diagnostics and coaching, with competitors whose profiles are frequently left incomplete." }
+      - { title: "Motijheel, Paltan, Dilkusha", text: "Office-hours demand for B2B services, printers, travel agents and chambers. Accurate hours and a phone number that is answered matter more here than anywhere." }
+      - { title: Old Dhaka, text: "Chawkbazar, Islampur and Bangshal trade from multi-storey plazas, where the floor and shop number belong in the address line so customers can actually find you." }
+      - { title: "Tejgaon, Farmgate, Karwan Bazar", text: "Mixed commercial and industrial, with strong brand searches but patchy map visibility for the service terms that bring new customers." }
+      - { title: "Badda, Rampura, Banasree", text: "Fast-growing residential areas full of newer businesses with thin review histories, where a consistent review routine moves things quickly." }
+      - { title: "Khilgaon, Malibagh, Mugda", text: "Clinics, diagnostic centres and pharmacies dominate near-me searching, so category accuracy and the services list carry most of the weight." }
+      - { title: Savar and Ashulia, text: "Factories, suppliers and support services spread over a wide radius, usually better served as a service-area business than a single storefront listing." }
+    body:
+      - "Outside the capital the same system applies in Chattogram, Sylhet, Khulna, Rajshahi and the district towns, usually against lighter competition. The country-wide picture is on the [Local SEO expert in Bangladesh](/) homepage."
+  - type: list
+    heading: "Dhaka businesses that gain the most from map visibility"
+    body:
+      - "Anywhere customers search with urgency, or compare a few nearby options before calling, the three businesses in the map pack take most of the enquiries."
+    bullets: ["Clinics, dentists and diagnostic centres", "Restaurants, cafes and bakeries", "Salons, parlours and gyms", "Coaching centres and IELTS institutes", "Home services and repairs", "AC, electronics and mobile repair", "Showrooms: furniture, tiles, electronics", "Real estate, law and accounting firms", "Wholesale and distribution"]
+  - type: steps
+    alt: true
+    eyebrow: The work
+    heading: "What running Local SEO for a Dhaka business involves"
+    items:
+      - { title: Baseline across your areas, text: "A geo-grid scan from points across the parts of Dhaka you actually serve, plus a look at the categories, review counts and profile quality of whoever currently ranks above you." }
+      - { title: Fix the profile itself, text: "Primary and secondary categories, the full services list, attributes, hours including Friday and holiday hours, and real photos. The business name stays exactly as your signage reads." }
+      - { title: Clean up the location signals, text: "Pin moved to your entrance, floor and shop details placed where Google reads them, duplicate listings claimed and merged, and one address format used on the website, the Facebook page and every directory." }
+      - { title: Give the profile something to stand on, text: "Service and area content on the website that matches what the profile claims, structured data, and a site that loads on mobile data rather than only on office wifi." }
+      - { title: "Reviews, then measure honestly", text: "A review request routine your staff can actually follow, replies to every review, and monthly reporting on calls, direction requests and geo-grid movement rather than a single flattering screenshot." }
+    body:
+      - "The full method, month by month, is on the [Local SEO service page](/local-seo-service), and the profile side in detail on the [Google Business Profile optimization page](/google-business-profile-optimization)."
+      - "The number that matters is not rank, it is what the profile produces: calls, direction requests and booked work. Real examples are on the [case studies page](/case-studies)."
+  - type: prose
+    heading: "One thing to be clear about: I am not based in Dhaka"
+    body:
+      - "I work from Bagerhat, and Dhaka clients are handled remotely. That makes no difference to your rankings, because Google ranks your business location, not your consultant's. It does change two practical things, so they are worth stating up front."
+    bullets:
+      - "**Verification needs someone at your premises.** Google usually asks for a video showing your signage, the inside of the business and something proving you run it. I write the shot list; you or your staff record it."
+      - "**Photos have to come from you.** Real pictures of your shop, team and work outperform stock images, and they cannot be produced from a distance."
+      - "**Everything else** (audits, profile work, duplicate clean-up, website changes, reviews and reporting) is done remotely, with calls on WhatsApp or Zoom whenever you want to talk it through."
+    blocks:
+      - heading: What will never happen
+        body:
+          - "A fake Dhaka address added to your profile to make it look local. That is a guidelines violation, and it gets listings suspended rather than ranked."
+faqHeading: "Everything You Need to Know About Local SEO in Dhaka"
+faqs:
+  - { q: "Do you have an office in Dhaka?", a: "No. I work from Bagerhat and handle Dhaka clients remotely. That changes nothing about results, because Google ranks your business location, not your consultant's. The steps that need someone physically present, mainly video verification and real photos of your premises, are done by you or your staff with instructions from me." }
+  - { q: "Can one Google Business Profile rank across several areas of Dhaka?", a: "It ranks strongest near its own address and fades with distance. Wider coverage is earned through prominence, reviews and website content for the areas you serve, not by adding addresses you do not occupy. If you genuinely have a second branch, that branch gets its own verified profile." }
+  - { q: "How long does Local SEO take in Dhaka?", a: "Fixing a wrong category or a misplaced pin can move things within weeks. In crowded Dhaka categories such as dentists, diagnostic centres or mobile repair, stable results usually take three to six months of consistent work. The month-by-month view is in [how long Local SEO takes in Bangladesh](/blog/how-long-local-seo-takes-bangladesh)." }
+  - { q: "How much does Local SEO cost for a Dhaka business?", a: "Packages start from $299, and the final figure depends on how competitive your category and area are, how many locations you need covered, and the current state of your profile and website. The full breakdown is in [how much Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh)." }
+  - { q: "My competitors put keywords in their business name. Should I?", a: "No. Names like 'Best Dental Care Dhanmondi' break Google's guidelines even when they work for a while. Profiles get suspended for it, and you can report competitors who do it. The safer path is a correct primary category, a complete services list and reviews that mention what you actually do." }
+  - { q: "Should my profile and website be in Bangla or English?", a: "The business name should match your signage exactly. For everything else, use the language your customers search in. In most Dhaka commercial categories that is English with Bangla terms where people genuinely use them. Reviews left in Bangla count just as much as English ones." }
+  - { q: "Do I need a website, or is the Google profile enough?", a: "You can rank on Maps without one, but the profile is much stronger when a website confirms the same services, area and contact details. If your site is slow on mobile data or has crawling problems, that work sits under everything else. See the [technical SEO service](/technical-seo)." }
+  - { q: "My listing is suspended or duplicated. Can that be fixed?", a: "Usually. Duplicates are claimed and merged or removed, and suspensions are appealed with the evidence Google asks for, which is normally proof of the premises and of your right to operate there. Nobody can guarantee reinstatement, so the honest answer is that it depends on why the listing was actioned." }
+related: [local-seo-service, gbp, guide, technical, cases, book]
+order: 7

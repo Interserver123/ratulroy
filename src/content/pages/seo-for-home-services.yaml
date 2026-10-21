@@ -1,0 +1,123 @@
+title: "SEO Company for Home Services | Local SEO for Contractors"
+description: "Get found when homeowners search for your trade. Local SEO, Google Maps ranking and service-area pages built to fill your calendar with booked jobs."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Services, href: /services }
+  - { label: SEO for Home Services, href: /seo-for-home-services }
+eyebrow: "SEO for Home Service Businesses"
+h1: "SEO Company for Home Services That Helps Contractors Get More Local Leads"
+em: "Get More Local Leads"
+lead: "Local SEO for home service companies built around one outcome: more qualified phone calls from your service area. Google Maps ranking, Google Business Profile optimization, service-area pages and review systems, designed specifically for plumbers, HVAC, roofers, electricians and other contractors."
+heroChips: ["Fiverr Level 2 Seller", "4.9★ Rating · 243+ reviews", "Contractor-Tested"]
+heroImage: "results/home/plumber-near-me-serp.png"
+heroStats:
+  - { value: "461", label: "Calls from GBP" }
+  - { value: "+62%", label: "Profile interactions" }
+  - { value: "Top 3", label: "Map pack for core terms" }
+ctas:
+  - { label: Book Free SEO Audit, href: "/#free-audit" }
+  - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
+sections:
+  - type: problems
+    eyebrow: The Problem
+    heading: "Why Home Service Businesses Struggle to Rank Locally"
+    intro: "Home services is one of the most competitive local search categories on the planet. If any of these sound familiar, your SEO is leaking leads to the contractor at the top of the map pack."
+    items:
+      - { title: "Your GBP is set up but you're not in the local 3-pack" }
+      - { title: "Competitors with worse reviews outrank you on Google Maps" }
+      - { title: "Website gets traffic but barely any calls from your service area" }
+      - { title: "Service-area pages either don't exist or read like thin duplicates" }
+      - { title: "No real review system", text: "Leads forget to leave a review after the job." }
+      - { title: "Past 'SEO agencies' delivered reports, not phone calls" }
+  - type: cards
+    alt: true
+    columns: 4
+    eyebrow: The Solution
+    heading: "Local SEO for Home Service Companies Built to Generate Calls"
+    intro: "A focused Local SEO system for contractors, not a generic agency retainer. Every lever pulled connects back to one number: qualified phone calls from your service area."
+    items:
+      - { title: Google Maps Ranking, text: "Push your business into the local 3-pack for the searches that actually drive calls: service + city, service + 'near me', and emergency intent." }
+      - { title: GBP Optimization, text: "Categories, services, attributes, photos, posts, Q&A and review velocity tuned to how Google's local algorithm actually scores home service businesses." }
+      - { title: Service-Area Pages, text: "Genuinely unique pages per city or neighborhood with local signals, schema and CRO blocks, so one website ranks in many service areas without doorway-page risk." }
+      - { title: Conversion to Calls, text: "Click-to-call CRO, sticky mobile bars, emergency-intent messaging and trust blocks, turning local rankings into measurable phone calls." }
+  - type: cards
+    columns: 2
+    eyebrow: Services
+    heading: "Everything Inside the Home Service SEO System"
+    intro: "A complete SEO service for home service businesses, every piece designed to compound into Google Maps ranking and qualified calls."
+    items:
+      - { title: Google Business Profile Optimization, text: "Deep GBP optimization: categories, services, attributes, photos, posts, Q&A and weekly maintenance, the #1 lever for home service map pack ranking.", href: /google-business-profile-optimization }
+      - { title: Google Maps Ranking, text: "Map pack ranking strategy aligned to commercial intent: service + city queries, emergency keywords, and near-me searches that actually convert." }
+      - { title: Service-Area Page SEO, text: "Unique, locally relevant pages for each city or neighborhood, with schema, internal linking and CRO included, and no doorway-page risk." }
+      - { title: "Citation Cleanup & Local Listings", text: "NAP consistency, duplicate suppression, and high-authority contractor citations across the directories Google actually trusts." }
+      - { title: Review Strategy for Contractors, text: "Review request systems, response templates and review velocity that compounds, fueling both ranking and conversion." }
+      - { title: Technical SEO, text: "Core Web Vitals, mobile UX, crawlability, schema (LocalBusiness, Service, FAQ) and internal architecture tuned for contractor sites.", href: /technical-seo }
+      - { title: Content Strategy, text: "Service pages, city pages, emergency landing pages and helpful blog content mapped to the queries your future customers are typing right now." }
+      - { title: Conversion Optimization, text: "Click-to-call buttons, sticky mobile bars, trust blocks and emergency messaging, so rankings translate into actual phone calls and booked jobs." }
+  - type: stats
+    alt: true
+    eyebrow: Case Studies
+    heading: "Home Service SEO Results That Turned Rankings Into Calls"
+    intro: "Real Local SEO campaigns for service-area businesses: Google Maps ranking, GBP optimization and service-area visibility that converted into qualified calls."
+    items:
+      - { title: "Calls from GBP (local service business)", value: "461" }
+      - { title: "Profile interactions", value: "+62%" }
+      - { title: "Map pack for core terms", value: "Top 3" }
+      - { title: "Map pack visibility (home service business)", value: "+38%" }
+      - { title: "More areas ranking top 3", value: "5x" }
+      - { title: "Direction requests", value: "+27%" }
+    body:
+      - "Two campaigns: *From Weak Maps Visibility to Consistent Call Growth*, turning an under-optimized Google Business Profile into a steady source of qualified inbound calls, and *Improving Local Visibility Across Service Areas*, expanding map pack visibility across multiple nearby service areas. See all [Local SEO case studies](/case-studies)."
+  - type: images
+    eyebrow: Real Proof
+    heading: "Real Home Service SEO Wins Captured From Google"
+    intro: "Live Google search results and Google Search Console data from real home service contractor campaigns: Google Maps ranking, local impressions and clicks growing month over month."
+    items:
+      - { title: "Ranked in the Map Pack + #1 Organic for “plumber near me”", text: "Real Google search result for a home service client, visible in the local 3-pack on Google Maps and ranking #1 organically below it. This is exactly the kind of dual local visibility built for plumbers, HVAC, roofers and electricians.", image: "results/home/plumber-near-me-serp.png" }
+      - { title: "12.2K clicks · 436K impressions for an electrician SEO campaign", text: "Google Search Console data from a home service contractor showing a clear inflection point after on-page SEO, service-area pages and GBP optimization went live, turning local impressions into qualified clicks and calls. Average position 5.9.", image: "results/home/electrician-seo-growth.png" }
+  - type: list
+    alt: true
+    eyebrow: Industries Served
+    heading: "SEO for Home Service Contractors Across Every Trade"
+    body:
+      - "Specialized SEO for home service businesses, from emergency plumbing and HVAC to landscaping, remodeling and pest control. See [all industries](/industries)."
+    bullets: ["Plumbers", "Roofers", "HVAC", "Electricians", "Landscapers", "Cleaners", "Pest Control", "Garage Door Companies", "Remodelers", "Painters"]
+  - type: steps
+    eyebrow: Process
+    heading: "A Repeatable System: Audit → Fix → Optimize → Rank → Convert"
+    items:
+      - { title: Audit, text: "Deep audit of your GBP, Google Maps ranking, website SEO, citations and reviews. You see exactly where the lead gaps are." }
+      - { title: Fix, text: "Resolve technical SEO debt, NAP inconsistencies, citation gaps, schema issues and broken conversion blocks." }
+      - { title: Optimize, text: "Full GBP optimization, service-area pages, on-page SEO, internal linking and review strategy rollout." }
+      - { title: Rank, text: "Map pack ranking, local keyword coverage, and geo-grid visibility across every priority service area." }
+      - { title: Convert, text: "CRO and call-tracking dialed in so every ranking translates into measurable, qualified phone calls." }
+  - type: cta
+    alt: true
+    eyebrow: Free Audit
+    heading: "Get a Free Home Service SEO Audit"
+    intro: "I'll review your Google Business Profile, Maps ranking, citations, service-area pages and reviews, and show you exactly where the lead gaps are. No sales pitch, no automation, personally reviewed. Prioritized fix list you can act on this week, delivered within 48 hours, 100% confidential."
+    buttons:
+      - { label: Book Free SEO Audit, href: "/#free-audit" }
+      - { label: Book Strategy Call, href: /book-strategy-call, style: ghost }
+faqHeading: "Everything You Need to Know About SEO for Home Service Businesses"
+faqs:
+  - { q: "What is SEO for home service businesses and how does it work?", a: "SEO for home service businesses is a Local SEO strategy that gets contractors found on Google Maps, Google Search, and 'near me' queries. It combines Google Business Profile optimization, service-area pages, local citations, reviews, and on-site SEO so people in your service area find you when they need a plumber, roofer, HVAC tech, electrician, cleaner, or any home service, and convert into calls." }
+  - { q: "Why do I need an SEO company for home services instead of running it myself?", a: "A specialist SEO company for home services already knows what ranks for contractor keywords, how Google's local algorithm scores GBPs, which citations matter for trades, and how to build service-area pages that don't get flagged as doorway pages. That experience compresses 12 months of trial and error into a focused, contractor-tested system." }
+  - { q: "How much does Local SEO for home service companies cost?", a: "Pricing depends on your service area size, number of services, and how competitive your trade is in your city. Most home service SEO engagements range from a focused one-time GBP and on-page audit to ongoing monthly Local SEO retainers. You'll get a clear scope and price after the free home service SEO audit, with no surprises and no long lock-ins." }
+  - { q: "How long until I see Google Maps ranking and lead growth?", a: "Most home service contractors see early movement in 30-60 days (GBP impressions, calls, direction requests) and meaningful map pack ranking lifts in 3-6 months. Competitive trades like HVAC, roofing and plumbing in big metros take longer; smaller service areas often move faster." }
+  - { q: "Do you build dedicated service-area pages for each city or neighborhood?", a: "Yes. Each priority service area gets its own page with genuinely unique content, local intent signals, schema, internal links and conversion blocks. This is what lets one website rank in multiple cities without tripping Google's doorway-page filters." }
+  - { q: "Will this work for emergency service keywords like '24/7 plumber near me'?", a: "Yes. Emergency intent is some of the highest-converting traffic in home services. GBP, service pages and schema are optimized specifically for emergency, same-day and 24/7 queries, and paired with click-to-call CRO so emergency searches become live phone calls." }
+  - { q: "How does Google Business Profile optimization fit into home service SEO?", a: "GBP is the single biggest lever for home service businesses. It controls map pack ranking, calls, direction requests and trust. Every engagement includes deep [GBP optimization](/google-business-profile-optimization): correct categories, services, attributes, photos, posts, Q&A, review strategy and weekly maintenance." }
+  - { q: "What if I already have an SEO agency but rankings are stuck?", a: "That's the most common scenario. Start with the free home service SEO audit. You'll see exactly which GBP signals, citations, service-area pages, technical issues and review gaps are holding you back, plus a prioritized fix list you can run yourself or hand over." }
+pricing: default
+related: [local-seo-service, gbp, technical, cases, services, book, contact]
+finalCta:
+  heading: "Want to Know What's Blocking Your Local Rankings?"
+  text: "Get a clear Local SEO audit covering your Google Business Profile, Google Maps visibility, website SEO, citations, reviews, competitors, and AI search readiness."
+  buttons:
+    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Chat on WhatsApp, href: "https://wa.me/8801866820758", style: ghost }
+card:
+  title: SEO for Home Services
+  text: "Google Maps ranking, GBP optimization and service-area pages for plumbers, HVAC, roofers, electricians and other contractors."
+order: 8

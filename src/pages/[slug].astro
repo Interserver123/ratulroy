@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import ContentPage from "../layouts/ContentPage.astro";
+
+// Pages with their own route files (forms, listings) are excluded here.
+const custom = new Set(["contact", "book-strategy-call", "industries", "case-studies", "blog"]);
+const serviceIds = new Set([
+  "services",
+  "local-seo-service",
+  "google-business-profile-optimization",
+  "technical-seo",
+  "generative-engine-optimization",
+  "local-seo-dhaka",
+  "seo-for-home-services",
+  "seo-for-wholesale-distributors",
+]);
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages
+    .filter((p) => !["contact", "book-strategy-call", "industries", "case-studies", "blog"].includes(p.id) && !p.id.startsWith("careers-"))
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+void custom;
+---
+
+<ContentPage data={entry.data} path={`/${entry.id}`} kind={serviceIds.has(entry.id) ? "service" : "page"} />

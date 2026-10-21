@@ -1,0 +1,62 @@
+---
+// The site-wide pricing note that sits on most service and industry pages.
+const points = [
+  "Google Business Profile optimization",
+  "Map pack and geo-grid tracking",
+  "On-page and technical fixes",
+  "Monthly reporting",
+];
+---
+
+<section class="section" aria-labelledby="price-title">
+  <div class="container">
+    <div class="price card" data-reveal>
+      <div>
+        <p class="eyebrow">Pricing</p>
+        <h2 id="price-title">Packages start from <span class="em">$299</span></h2>
+        <p>
+          Where you land above that depends on how competitive your area is, how many service areas
+          you need to rank in, and how much groundwork your profile and website still need. You get
+          a specific figure on the call, not a range.
+        </p>
+      </div>
+      <div class="price__side">
+        <ul class="checklist">
+          {points.map((p) => <li>{p}</li>)}
+        </ul>
+        <a class="btn btn--dark" href="/book-strategy-call"><span class="disc" aria-hidden="true">↗</span>Get your exact price</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .price {
+    display: grid;
+    gap: 28px;
+    align-items: center;
+    padding: clamp(24px, 4vw, 44px);
+    box-shadow: var(--shadow-lg);
+    background:
+      url("/topo.svg") 100% 50% / 900px auto no-repeat,
+      var(--paper);
+  }
+  @media (min-width: 900px) {
+    .price {
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 56px;
+    }
+  }
+  .price p:not(.eyebrow) {
+    margin: 0;
+    max-width: 58ch;
+  }
+  .price__side {
+    display: grid;
+    gap: 20px;
+    padding: 22px;
+    border-radius: 18px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+  }
+</style>

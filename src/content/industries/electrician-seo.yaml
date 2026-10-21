@@ -1,0 +1,89 @@
+title: "Electrician SEO Services | Local SEO Expert | Ratul Roy"
+description: "Electrician SEO that ranks your business in Google Maps for emergency electrician, panel upgrade, and wiring searches. More qualified service calls."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: Electrician SEO, href: /industries/electrician-seo }
+eyebrow: "Electrician SEO"
+h1: "Local SEO for Electricians That Want Steady, Qualified Service Calls"
+em: "Qualified Service Calls"
+lead: "Rank in the Google Maps 3-pack for \"electrician near me\", emergency electrical, panel upgrade, EV charger install, and rewiring searches, and own the moment when homeowners and businesses actually need help."
+heroBullets:
+  - "Top-3 Maps ranking for electrician + city queries"
+  - "GBP rebuilt for electrical contractor and emergency intent"
+  - "Service pages for high-value jobs (panels, EV chargers, rewires)"
+  - "Reviews and citations tuned for electrical buyer intent"
+heroImage: "results/home/electrician-seo-growth.png"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "Electrical work is shifting fast. EV charger installs, smart-home wiring, panel upgrades, solar tie-ins, and code-update work are all high-margin jobs, and they're driven almost entirely by local search."
+  - "Most electricians still have a one-page site and a half-finished Google Business Profile. The ones who treat Local SEO seriously dominate the Maps pack for both emergency calls and big-ticket installs at the same time."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why electrician SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "Emergency calls go to the top 3, not you", text: "Late-night and weekend electrical searches go to whoever ranks first in Google Maps. If you're not in the 3-pack, the call doesn't reach you." }
+      - { title: "Panel upgrade and EV charger leads slip away", text: "These are the highest-margin jobs in the trade, but you have no dedicated pages targeting how customers actually search for them." }
+      - { title: "Your GBP is generic", text: "Just \"Electrician\" as the category. No service list. No EV / panel / smart-home secondary categories. Competitors with proper categorization are stealing the long-tail." }
+      - { title: "Reviews aren't pulling weight", text: "Reviews are old or sparse, and they don't mention specific services or neighborhoods, both of which would boost rankings." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every electrician SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "GBP optimization for electricians", text: "Primary category (Electrician), secondary categories (Electrical installation service, Electrical repair shop, Solar energy contractor where relevant), full service list, photo strategy, GBP posts, and Q&A." }
+      - { title: "Service pages by job type", text: "Dedicated pages for emergency electrical, panel upgrade / replacement, EV charger installation, whole-home rewire, generator install, smart-home wiring, lighting, and code corrections, each with Service schema and clear CTAs." }
+      - { title: "City and service-area pages", text: "Hyperlocal pages for priority cities and neighborhoods, written with real local context (older homes needing rewires, new builds needing EV-ready wiring, etc.)." }
+      - { title: "Reviews and reputation", text: "Post-job review acquisition with prompts that naturally surface services and neighborhoods, plus a response strategy that doubles as ranking content." }
+      - { title: "Local citations and NAP cleanup", text: "Electrical-specific directories, local citations, and aggregator data, all aligned to one NAP." }
+      - { title: "Technical SEO and schema", text: "Electrician + LocalBusiness + Service + FAQ schema, performance, mobile, internal linking, and crawl health." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "Service-category depth", text: "GBP secondary categories and a deep on-site service list let Google match you to long-tail queries (\"EV charger installer\", \"panel upgrade\", \"electrical inspection\") instead of just brand searches." }
+      - { title: "Emergency / 24-7 signals", text: "On-page content and GBP attributes that signal urgent availability win the moment when homeowners panic-search." }
+      - { title: "Review keyword content", text: "Reviews that mention specific services and neighborhoods compound rankings for those exact queries." }
+      - { title: "Photo / project signals", text: "Real install photos (panels, EV chargers, lighting jobs) on GBP outperform stock photography in both ranking and CTR." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "Electricians who invest in Local SEO typically see balanced call growth within 3-6 months: steady emergency calls plus a meaningful increase in high-margin install leads (panels, EV chargers)."
+    stat: { value: "2-3x", label: "more qualified calls within 6 months" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Pure Local SEO focus"
+      - "Hands-on GBP, schema, and technical work"
+      - "Reporting tied to calls and bookings, not impressions"
+      - "Specific electrical category and service-page playbook"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How long does electrician SEO take?", a: "Most electricians see Maps ranking improvements within 90 days and meaningful call growth within 3-6 months. High-margin install leads (panels, EV chargers) tend to compound more slowly but also have higher lifetime value." }
+  - { q: "Do I need separate pages for panel upgrades, EV chargers, etc.?", a: "Yes. These are high-intent searches that need dedicated pages with their own content, schema, and CTAs. Without them, you can't rank for the queries that matter most." }
+  - { q: "Can I rank in multiple cities?", a: "Yes, with proper service-area definition, hyperlocal pages, and consistent NAP / citation work. Templated city pages will hurt, not help." }
+  - { q: "How important are reviews for electrician SEO?", a: "Very important. Review volume, recency, and keyword content are core Local SEO ranking factors for trades." }
+  - { q: "Do you handle GBP suspensions?", a: "Yes. Reinstatement, duplicate cleanup, and category fixes are part of normal scope." }
+  - { q: "Do you also run ads for electricians?", a: "No. Local SEO only. The goal is to reduce dependency on paid ads by owning organic and Maps." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "Electrician"
+  text: "Rank in the Google Maps 3-pack for emergency electrical, panel upgrade, EV charger, and rewiring searches."
+  value: "2-3x"
+  label: "more qualified calls"
+  category: "Home services"
+order: 6

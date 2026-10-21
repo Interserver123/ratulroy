@@ -1,0 +1,126 @@
+title: "Privacy Policy | Ratul Roy"
+description: "Read the Privacy Policy for Ratul Roy's website, including how contact forms, audit requests, bookings, and website data are collected and used."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Privacy Policy, href: /privacy-policy }
+eyebrow: Privacy Policy
+h1: "Privacy Policy"
+em: "Privacy"
+lead: "Your privacy matters. This page explains what information may be collected when you use this website, submit a form, request an audit, or book a strategy call. Last updated: May 20, 2026."
+ctas:
+  - { label: Contact, href: /contact }
+sections:
+  - type: prose
+    id: policy
+    blocks:
+      - heading: "1. Introduction"
+        body:
+          - "This Privacy Policy explains how Ratul Roy - Local SEO Expert in Bangladesh collects, uses, stores, and protects information submitted through this website. By using this website, submitting a form, requesting a Local SEO audit, or booking a strategy call, you agree to the practices described in this policy."
+      - heading: "2. Information We Collect"
+        body:
+          - "The website may collect the following types of information:"
+        bullets:
+          - "Full name"
+          - "Business name"
+          - "Email address"
+          - "Phone or WhatsApp number"
+          - "Website URL"
+          - "Google Business Profile URL"
+          - "Target city or service area"
+          - "Service interest"
+          - "Message or inquiry details"
+          - "Preferred date and time for strategy calls"
+          - "Technical information such as browser type, device type, IP address, referrer, and analytics data"
+      - heading: "3. How We Collect Information"
+        body:
+          - "Data may be collected when users:"
+        bullets:
+          - "Submit a contact form"
+          - "Request a free Local SEO audit"
+          - "Book a strategy call"
+          - "Submit a service inquiry"
+          - "Click WhatsApp, email, or call buttons"
+          - "Browse the website"
+          - "Interact with portfolio, case study, or service pages"
+      - heading: "4. How We Use Your Information"
+        body:
+          - "Information may be used to:"
+        bullets:
+          - "Respond to inquiries"
+          - "Provide Local SEO audit feedback"
+          - "Schedule strategy calls"
+          - "Understand business needs"
+          - "Improve website experience"
+          - "Manage leads and communication"
+          - "Send relevant follow-up messages"
+          - "Improve services and website performance"
+          - "Protect the website from spam or misuse"
+      - heading: "5. Legal Basis / Consent"
+        body:
+          - "When you submit a form, request an audit, or book a strategy call, you voluntarily provide your information so we can respond to your request. You may contact us at [hello@ratulroy.com](mailto:hello@ratulroy.com) if you want to update or request deletion of your submitted information."
+      - heading: "6. Cookies and Analytics"
+        body:
+          - "This website may use cookies, analytics tools, and similar technologies to understand website traffic, page performance, visitor behavior, and conversion activity. These tools help improve the website and marketing experience."
+          - "Users can control cookies through their browser settings."
+      - heading: "7. WhatsApp, Email, and Third-Party Links"
+        body:
+          - "If users contact through WhatsApp, email, or external social links, those platforms may process data under their own privacy policies. External platforms that may be linked from this site include:"
+        bullets:
+          - "Facebook"
+          - "LinkedIn"
+          - "X / Twitter"
+          - "Instagram"
+          - "WhatsApp"
+          - "Email provider"
+      - heading: "8. Data Storage and Security"
+        body:
+          - "Submitted information may be stored securely in the website database, CRM, email inbox, or admin dashboard. Reasonable technical and organizational measures are used to protect submitted information."
+          - "No method of online transmission or storage is 100% secure, but reasonable steps are taken to protect your information."
+      - heading: "9. Data Sharing"
+        body:
+          - "Personal information is not sold. Information may be shared only when necessary with:"
+        bullets:
+          - "Website hosting provider"
+          - "Database or backend provider"
+          - "Email or communication tools"
+          - "Analytics providers"
+          - "Legal or regulatory authorities if required"
+      - heading: "10. Data Retention"
+        body:
+          - "Information may be retained as long as needed to respond to inquiries, manage client communication, keep business records, and improve services. Users may request deletion by contacting [hello@ratulroy.com](mailto:hello@ratulroy.com)."
+      - heading: "11. Your Rights"
+        body:
+          - "Users may request:"
+        bullets:
+          - "Access to submitted information"
+          - "Correction of inaccurate information"
+          - "Deletion of submitted information"
+          - "Withdrawal from follow-up communication"
+          - "Questions about how data is used"
+      - heading: "12. Children's Privacy"
+        body:
+          - "This website is intended for business users and is not designed for children. We do not knowingly collect information from children."
+      - heading: "13. International Visitors"
+        body:
+          - "This website may be accessed by visitors outside Bangladesh. By submitting information, users understand that their data may be processed in Bangladesh or through third-party services used to operate the website."
+      - heading: "14. Changes to This Privacy Policy"
+        body:
+          - "This Privacy Policy may be updated from time to time. The updated date will be changed when updates are made."
+      - heading: "15. Contact Information"
+        body:
+          - "Ratul Roy - Local SEO Expert in Bangladesh"
+          - "Address: Bagerhat 9300, Bangladesh"
+          - "Phone: [+8801866820758](tel:+8801866820758)"
+          - "Email: [hello@ratulroy.com](mailto:hello@ratulroy.com)"
+          - "WhatsApp: [https://wa.me/8801866820758](https://wa.me/8801866820758)"
+    body:
+      - "*This policy is provided for transparency and general information. It should not be considered legal advice.*"
+pricing: none
+related: []
+finalCta:
+  heading: "Have a Privacy Question?"
+  text: "If you have questions about this Privacy Policy or your submitted information, contact Ratul Roy directly."
+  buttons:
+    - { label: Email Us, href: "mailto:hello@ratulroy.com" }
+    - { label: Chat on WhatsApp, href: "https://wa.me/8801866820758", style: ghost }
+order: 100

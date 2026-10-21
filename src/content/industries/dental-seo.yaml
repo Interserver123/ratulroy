@@ -1,0 +1,88 @@
+title: "Dental SEO Services | Local SEO Expert | Ratul Roy"
+description: "Dental SEO that ranks your clinic in Google Maps for dentist, implants, Invisalign, and emergency dental searches. More appointments, better patients."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: Dental SEO, href: /industries/dental-seo }
+eyebrow: "Dental SEO"
+h1: "Local SEO for Dental Clinics That Want More New-Patient Bookings"
+em: "New-Patient Bookings"
+lead: "Rank in the Google Maps 3-pack for \"dentist near me\", implants, Invisalign, cosmetic dentistry, and emergency dental searches, and convert that traffic into booked appointments, not just clicks."
+heroBullets:
+  - "Top-3 Maps ranking for dental + procedure queries"
+  - "GBP rebuilt for dentist + specialty categories"
+  - "Service pages for high-value procedures (implants, Invisalign, cosmetic)"
+  - "Review strategy that earns trust and ranking simultaneously"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "Dental is one of the most predictable Local SEO niches when it's done correctly. Patients almost always pick from the first 3 results in Google Maps, they read reviews carefully, and they call clinics that look modern, trustworthy, and close."
+  - "The clinics that consistently win are the ones with strong GBPs, well-built service pages for each procedure, and a real review acquisition system. Most dental websites are still built like brochures. That's the opportunity."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why dental SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "You're losing implant and Invisalign leads", text: "These are your highest-value procedures, but your site has one generic \"Services\" page instead of dedicated pages that can rank for the actual searches." }
+      - { title: "Reviews are uneven or stale", text: "Your competitors have 200+ recent reviews and you have 40. Patients see the gap immediately, and so does Google's ranking algorithm." }
+      - { title: "Your GBP looks generic", text: "Same primary category as every other clinic, no secondary categories, no service list, no posts, no photos. Patients can't tell you apart from anyone else." }
+      - { title: "Emergency dental searches go elsewhere", text: "\"Emergency dentist\", \"toothache near me\", \"weekend dentist\": high-intent, high-margin searches that you're not capturing." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every dental SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "GBP optimization for dental clinics", text: "Primary category (Dentist) plus relevant specialties (Cosmetic dentist, Pediatric dentist, Dental implants periodontist, Orthodontist, Emergency dental service), full service list, photo strategy, GBP posts, and Q&A seeded with patient questions." }
+      - { title: "Procedure-specific service pages", text: "Dedicated pages for implants, Invisalign / clear aligners, veneers, cosmetic dentistry, teeth whitening, root canal, crowns, and emergency dental, each with Service schema, FAQ schema, and clear booking CTAs." }
+      - { title: "Patient-trust content", text: "Pricing guidance, financing, insurance, and what-to-expect content that builds E-E-A-T and reduces friction before a patient even calls." }
+      - { title: "Review system", text: "Post-appointment review acquisition with friendly prompts, response templates that surface procedures and neighborhoods naturally, and reputation monitoring." }
+      - { title: "Technical SEO and schema", text: "MedicalBusiness / Dentist schema, FAQ schema, Service schema, performance, mobile booking flow, internal linking: everything that lets the content actually rank." }
+      - { title: "Local citations and authority", text: "Dental-specific directories, healthcare aggregators, NAP consistency, and trustworthy local backlinks." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "E-E-A-T (experience, expertise, authority, trust)", text: "Dental is YMYL (Your Money Your Life). Google weights expertise signals (credentials, doctor bios with schema, real photos, accurate medical content) more heavily than in other niches." }
+      - { title: "Review depth and recency", text: "Patients filter clinics by review count and recency before they even read the reviews. Both are ranking signals and conversion signals." }
+      - { title: "Specialty categorization", text: "Clinics that list secondary categories matching the procedures they actually offer (implants, cosmetic, ortho, emergency) rank far better for those high-value searches." }
+      - { title: "Booking signals", text: "Easy online booking, click-to-call prominence, and clear hours improve both ranking and conversion in the local pack." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "Dental clinics typically see new-patient bookings double within 4-6 months of a real Local SEO engagement, driven by Maps ranking, procedure-specific pages, and a steady review velocity rebuild."
+    stat: { value: "2x", label: "new-patient bookings within 6 months" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Local SEO specialization, not generic healthcare marketing"
+      - "Procedure-level page strategy, not just brand pages"
+      - "Reporting tied to new patients and bookings"
+      - "Direct, single-point-of-contact execution"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How long until dental SEO produces new patients?", a: "Most dental clinics see meaningful ranking improvements within 90 days and a clear uptick in new-patient calls within 4-6 months. Implants and Invisalign rankings usually take a little longer because the competition is heavier." }
+  - { q: "Do I need separate pages for implants, Invisalign, etc.?", a: "Yes. These are high-value, high-intent searches that need dedicated pages with their own content, schema, and conversion paths. A single \"Services\" page won't rank for them." }
+  - { q: "How important are reviews for dental SEO?", a: "Very. Dental is one of the niches where review count, velocity, recency, and content matter most. A consistent review acquisition system is non-negotiable." }
+  - { q: "Will SEO comply with patient privacy and ad rules?", a: "Yes. Everything is built around publicly available marketing content, with no PHI, no patient data, and within standard healthcare advertising norms." }
+  - { q: "Can I rank for multiple locations?", a: "Yes. Each location needs its own GBP, its own location page, and its own review strategy. Multi-location dental SEO is a normal scope." }
+  - { q: "Do you also run ads for dental clinics?", a: "No. Local SEO only. The goal is to reduce paid-ad dependency by owning Maps and organic results." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "Dental"
+  text: "Rank in the Google Maps 3-pack for dentist, implants, Invisalign, and emergency dental searches, and turn them into booked appointments."
+  value: "2x"
+  label: "new-patient bookings"
+  category: "Healthcare"
+order: 4

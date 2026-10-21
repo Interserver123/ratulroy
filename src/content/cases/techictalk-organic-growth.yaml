@@ -1,0 +1,86 @@
+title: "TechicTalk: 976K Organic Clicks in 18 Months | Ratul Roy"
+description: "How a brand-new tech media site went from zero organic traffic to 976K Google clicks and 30M+ impressions in 18 months, through systematic, data-driven SEO."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Case Studies, href: /case-studies }
+  - { label: TechicTalk, href: /case-studies/techictalk-organic-growth }
+eyebrow: "Case Study · Tech Media / Global"
+h1: "TechicTalk, From 0 to 976K Organic Clicks with Full-Funnel SEO"
+em: "976K Organic Clicks"
+lead: "How a brand-new tech media site went from zero organic traffic to 976K Google clicks and 30M+ impressions in 18 months, through systematic, data-driven SEO."
+heroChips: ["Organic SEO", "Content Strategy", "Authority Building", "Tech Media"]
+heroStats:
+  - { value: "976K", label: "Organic clicks" }
+  - { value: "30M+", label: "Impressions" }
+  - { value: "15K+", label: "Keywords ranked" }
+heroImage: "cases/techictalk-gsc.png"
+ctas:
+  - { label: Get Free SEO Audit, href: "/#free-audit" }
+  - { label: Return to homepage, href: /, style: ghost }
+intro:
+  - "**Client:** TechicTalk, a brand-new tech media publication. **Market:** global English. **Timeline:** 18 months, from a zero-traffic launch."
+sections:
+  - type: problems
+    eyebrow: "01 · Problem"
+    heading: The Challenge
+    intro: "TechicTalk launched as a brand-new tech media publication with zero domain authority, no backlink profile, no keyword rankings, and no content strategy, competing directly against established publishers like TechCrunch, The Verge, and Wired in one of the most saturated content verticals online."
+    items:
+      - { title: "Zero authority, zero traffic", text: "Zero domain authority and no existing organic traffic." }
+      - { title: "No content pipeline", text: "No keyword strategy or content production pipeline." }
+      - { title: "Giant competitors", text: "Competing against giant tech publishers in the SERPs." }
+      - { title: "Weak foundations", text: "No backlink profile and weak technical foundations." }
+  - type: steps
+    alt: true
+    eyebrow: "02 · Approach"
+    heading: The Strategy
+    intro: "Instead of competing head-on with massive publications, we built a systematic, data-driven SEO engine, targeting strategic content gaps with weak competition, then expanding into more competitive territories as authority compounded."
+    items:
+      - { title: "Foundation (M1-M3)", text: "Full technical SEO audit, site architecture redesign, Core Web Vitals 90+, schema markup, sitemaps, and GSC setup." }
+      - { title: "Content Engine (M3-M8)", text: "Topic clusters of 5,000+ keywords, 50+ SEO-optimized articles per month, internal linking architecture, and pillar pages." }
+      - { title: "Authority (M8-M14)", text: "Editorial backlinks from 200+ referring domains, guest posting, HARO outreach, and social amplification for engagement signals." }
+      - { title: "Scale & Optimize (M14-M18)", text: "Head-term targeting, content consolidation, featured snippet capture, and international expansion across global English markets." }
+  - type: stats
+    eyebrow: "03 · Outcome"
+    heading: The Result
+    intro: "In 18 months TechicTalk went from a zero-traffic launch to a major tech media player: 976K organic clicks, 30M+ impressions, 15,000+ ranking keywords, DR 45+, and $120K+/month in Semrush organic traffic value."
+    items:
+      - { title: "Organic clicks", value: "976K" }
+      - { title: "Impressions", value: "30M+" }
+      - { title: "Keywords ranked", value: "15K+" }
+      - { title: "Domain Rating", value: "45+" }
+  - type: images
+    alt: true
+    eyebrow: Real Screenshots
+    heading: "How the growth started"
+    intro: "Screenshots from the early months of the campaign (May to November 2021), when the growth curve first broke away from zero."
+    items:
+      - { title: "Google Search Console", text: "May to October 2021: 6.13K clicks and 376K impressions, with both lines climbing from near-zero into a sustained growth curve.", image: "cases/techictalk-gsc.png" }
+      - { title: "Semrush · Domain Overview", text: "November 2021: Authority Score 33, 4.2K monthly organic traffic, 2.39K keywords and 2.5K backlinks from 551 referring domains, with traffic rising sharply from mid-2021.", image: "cases/techictalk-semrush-overview.png" }
+      - { title: "Semrush · Organic Research", text: "735 ranking keywords in the US database (plus 292 IN and 149 UK), with informational how-to queries holding position 1.", image: "cases/techictalk-semrush-positions.png" }
+      - { title: "Ahrefs · Site Explorer", text: "3.82K backlinks from 555 referring domains, 2.2K organic keywords and a referring-domain curve that shoots up after launch.", image: "cases/techictalk-ahrefs.png" }
+  - type: list
+    eyebrow: "04 · Learnings"
+    heading: Key Takeaways
+    bullets:
+      - "**Strategic positioning beats brute-force competition.** Find the content gaps first."
+      - "**Technical excellence** multiplies the value of every piece of content you publish."
+      - "**Consistent execution and weekly data iteration** is what compounds into 7-figure traffic."
+    body:
+      - "Want a similar strategy for your business? Explore the [Local SEO services](/local-seo-service) or [return to the homepage](/)."
+showCases: true
+pricing: none
+related: [cases, technical, local-seo-service, book]
+finalCta:
+  heading: "See how your business can achieve similar results."
+  text: "Get a free Local SEO audit covering your Google Business Profile, map pack visibility, competitors, citations, and ranking gaps."
+  buttons:
+    - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+    - { label: Book Strategy Call, href: /book-strategy-call }
+card:
+  title: "TechicTalk, From 0 to 976K Organic Clicks with Full-Funnel SEO"
+  text: "A brand-new tech media site went from zero organic traffic to 976K Google clicks and 30M+ impressions in 18 months."
+  value: "976K"
+  label: "organic clicks"
+  category: "Organic growth"
+  image: "cases/techictalk-gsc.png"
+order: 2

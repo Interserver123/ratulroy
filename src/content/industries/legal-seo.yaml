@@ -1,0 +1,88 @@
+title: "Legal SEO Services | Local SEO for Law Firms | Ratul Roy"
+description: "Legal SEO and Local SEO for law firms. Rank in Google Maps for high-intent practice-area searches and earn qualified case leads."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Industries, href: /industries }
+  - { label: Legal SEO, href: /industries/legal-seo }
+eyebrow: "Legal SEO"
+h1: "Local SEO for Law Firms Going After Real Case Leads"
+em: "Real Case Leads"
+lead: "Rank in the Google Maps 3-pack and top organic results for high-intent practice-area searches (personal injury, criminal defense, family, immigration, business, and more) with E-E-A-T-first content built specifically for legal buyers."
+heroBullets:
+  - "Top-3 Maps ranking for practice-area + city queries"
+  - "Attorney and practice-area pages built for E-E-A-T"
+  - "Schema (Attorney, LegalService, Person, FAQ) done properly"
+  - "Reviews, authority signals, and citations specific to legal"
+ctas:
+  - { label: Book a Free Strategy Call, href: /book-strategy-call }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit", style: ghost }
+intro:
+  - "Legal is the most competitive Local SEO category in the world. Personal injury alone has CPCs above $1,000 per click in many markets. The firms that win don't outspend their competitors, they outrank them."
+  - "They have dominant Google Business Profiles, deep practice-area pages, attorney bios that actually communicate expertise, and a steady drumbeat of reviews and authority signals. Most firms have a beautiful website that doesn't rank for anything. That's the gap."
+sections:
+  - type: problems
+    eyebrow: The problem
+    heading: "Why legal SEO matters for your business"
+    intro: "The specific problems Local SEO solves for businesses in your industry."
+    items:
+      - { title: "You're paying $200+ per click and not closing leads", text: "PPC has become unsustainable for legal. Local SEO and organic are the only channels with compounding returns and qualified intent." }
+      - { title: "Your practice areas are buried", text: "Most firm sites list practice areas as a dropdown menu. Each one needs its own deep page, written for the way clients actually search." }
+      - { title: "Your attorney bios don't help you rank", text: "Attorney pages are usually a photo and a paragraph. Done right, they're some of the most powerful E-E-A-T pages on the site." }
+      - { title: "GBP isn't optimized for legal specifics", text: "Wrong primary category, missing secondary categories, weak service list, no posts, no Q&A. Competing firms are taking advantage of all of it." }
+  - type: cards
+    alt: true
+    columns: 3
+    eyebrow: What's included
+    heading: "What's included in this engagement"
+    intro: "Every legal SEO project covers the full Local SEO stack, tuned for your industry."
+    items:
+      - { title: "GBP optimization for law firms", text: "Primary category specific to practice area (Personal injury attorney, Criminal justice attorney, Family law attorney, Immigration attorney, etc.), secondary categories, full service list, attorney photos, GBP posts, and Q&A." }
+      - { title: "Deep practice-area pages", text: "Each practice area gets its own page (e.g. car accidents, slip and fall, divorce, custody, DUI, deportation defense) with LegalService schema, FAQs, case-result mentions, and clear consultation CTAs." }
+      - { title: "Attorney bio pages built for E-E-A-T", text: "Each attorney gets a real bio page with Person schema, credentials, bar admissions, cases, recognitions, publications, and clear authority signals." }
+      - { title: "City and venue pages", text: "Pages for each city, county, or courthouse where you actually practice, built around local context, not templated." }
+      - { title: "Authority content and topical depth", text: "Articles answering the questions clients Google before contacting an attorney: cost, process, timelines, what to do first. This is the strongest E-E-A-T signal you can build." }
+      - { title: "Reviews and reputation", text: "Review acquisition framework that respects state bar rules, response strategy, and reputation cleanup." }
+  - type: steps
+    eyebrow: Ranking factors
+    heading: "The ranking factors that decide this niche"
+    intro: "Not every Local SEO signal matters equally. These are the ones that move the needle in your industry."
+    items:
+      - { title: "E-E-A-T (the dominant factor in legal)", text: "Legal is YMYL. Google weights real expertise signals (credentials, bar admissions, named authors, case results) heavily; generic content from anonymous authors won't rank." }
+      - { title: "Topical depth per practice area", text: "Firms that cover one practice area deeply outrank firms that list 12 practice areas shallowly. Depth beats breadth in legal SEO." }
+      - { title: "Backlinks from authoritative sources", text: "Bar associations, legal directories (Justia, Avvo, Martindale, FindLaw), local news, and law school links carry significant weight." }
+      - { title: "Review credibility", text: "Legal review systems are heavily scrutinized. Quality, recency, and natural language matter more than raw volume." }
+  - type: prose
+    alt: true
+    heading: "What this looks like in practice"
+    body:
+      - "Legal cases are high-value enough that even modest ranking improvements compound into real revenue fast. One qualified personal-injury or family-law case typically covers months of SEO investment several times over."
+    stat: { value: "5-10x", label: "ROI per closed case from organic Maps leads" }
+  - type: list
+    heading: "Why work with Ratul Roy on this"
+    bullets:
+      - "Pure Local SEO focus, not generic legal marketing"
+      - "E-E-A-T-first content and schema strategy"
+      - "Hands-on practice-area and attorney-page builds"
+      - "Reporting tied to qualified case leads, not impressions"
+faqHeading: "Frequently asked questions"
+faqs:
+  - { q: "How long does legal SEO take to produce case leads?", a: "Legal is competitive and slower than easier niches. Most firms see meaningful Maps and organic improvements within 4-6 months, and steady case-lead growth within 6-9 months." }
+  - { q: "Do I need a separate page for every practice area?", a: "Yes, and ideally for every sub-practice (e.g. \"car accidents\", \"truck accidents\", \"motorcycle accidents\" under personal injury). Each one targets different queries." }
+  - { q: "Can I rank for multiple practice areas?", a: "Yes, but the strategy depends on focus. Firms that go deep on 2-3 practice areas usually outperform firms that go shallow on 10." }
+  - { q: "How important are attorney bios?", a: "Critical. Attorney pages with Person schema, real credentials, and content depth are some of the strongest E-E-A-T signals you can build for legal SEO." }
+  - { q: "Does Local SEO work for boutique or solo firms?", a: "Yes, often better than for big firms, because solos can build genuine topical authority and personal E-E-A-T faster." }
+  - { q: "Do you handle bar-rule compliance in marketing copy?", a: "All content is written conservatively and reviewed for typical state bar advertising norms, but final compliance review with your own counsel is always recommended." }
+related: [local-seo-service, gbp, cases, book, contact]
+finalCta:
+  heading: "Ready to own the Google Maps 3-pack in your market?"
+  text: "Book a free 30-minute strategy call. I'll review your current Local SEO setup, your top competitors, and the fastest path to top-3 Maps ranking for your industry."
+  buttons:
+    - { label: Book Strategy Call, href: /book-strategy-call }
+    - { label: Get Free Audit, href: "/#free-audit", style: ghost }
+card:
+  title: "Legal"
+  text: "Rank law firms in Google Maps and top organic results for high-intent practice-area searches with E-E-A-T-first content."
+  value: "5-10x"
+  label: "ROI per closed case"
+  category: "Professional"
+order: 5

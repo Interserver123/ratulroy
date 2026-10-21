@@ -1,0 +1,54 @@
+title: "Local SEO Case Studies & Results | Ratul Roy"
+description: "Local SEO case studies, Google Maps ranking results, GBP optimization wins, website SEO growth & qualified inbound call lifts for businesses in Bangladesh."
+breadcrumb:
+  - { label: Home, href: / }
+  - { label: Case Studies, href: /case-studies }
+eyebrow: Case Studies
+h1: "Explore my Local SEO success stories"
+em: "success stories"
+lead: "Browse real case studies by industry, service type, and results. Click any card to see the full strategy behind map pack visibility, GBP ranking, and qualified inbound call growth."
+ctas:
+  - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+  - { label: Book strategy call, href: /book-strategy-call, style: ghost }
+sections:
+  - type: cta
+    heading: "Want a case study like this for your business?"
+    intro: "Get a free Local SEO audit covering your GBP, map pack visibility, competitors, and ranking gaps."
+    buttons:
+      - { label: Get Free Local SEO Audit, href: "/#free-audit" }
+      - { label: Return to homepage, href: /, style: ghost }
+  - type: prose
+    alt: true
+    eyebrow: How to Read These
+    heading: "Real growth curves, real screenshots, real lessons"
+    intro: "Every case study is a real engagement with verifiable Google Search Console, Semrush, and Ahrefs data. Here's how to read them and what to look for in the shape of each growth curve."
+    blocks:
+      - heading: "How to read these case studies"
+        body:
+          - "Every case study on this page is a real project, with real Google Search Console screenshots, real Semrush and Ahrefs exports, and real before-and-after metrics. No mocked dashboards, no inflated numbers. The point isn't to brag, it's to show you, concretely, what compounding Local SEO and organic growth looks like over 6-18 months."
+          - "Pay attention to the shape of the growth curve, not just the final number. Sustainable SEO almost never goes vertical from week one. What you want to see is a steady upward slope where every month is meaningfully better than the last. That's what happens when the technical foundation, the content engine, and the prominence loop are all running in parallel."
+      - heading: "Industries and engagement types represented"
+        bullets:
+          - "**Local service businesses:** Map Pack ranking, GBP optimisation, geo-grid expansion, inbound call growth."
+          - "**Tech media and publishers:** full-funnel organic SEO, topic clusters, authority building from zero domain authority."
+          - "**Multi-industry website SEO:** technical SEO, content optimisation, CTR engineering, position improvements."
+          - "**Service-area businesses:** coverage across multiple cities and neighbourhoods with a single brand."
+      - heading: "What these projects have in common"
+        body:
+          - "Every case study started with a full audit, a clear strategy, and a written 90-day plan. None of them used black-hat tactics, link farms, or AI-spam content. The wins came from disciplined fundamentals executed weekly: keyword and intent mapping, on-page and technical SEO, schema, content depth, prominence signals, and patient measurement."
+faqHeading: "Everything You Need to Know About Results & Case Studies"
+faqs:
+  - { q: "Are these results typical?", a: "No result is typical, and anyone claiming otherwise is guessing. Outcomes depend on competition in your area, the state of your profile and website, your review base, and how long the business has been established. These case studies show what the system produced in those specific situations." }
+  - { q: "How long did these results take?", a: "Each case study states its own timeframe rather than averaging them. Local SEO generally shows measurable movement in three to six months, with compounding gains after that, but the starting position changes everything." }
+  - { q: "Why are the numbers screenshots rather than a report?", a: "The figures come straight from Google Search Console, Google Business Profile insights, and the client platforms involved. Screenshots from the source are harder to massage than a designed report." }
+  - { q: "Can I speak to a past client?", a: "Client references can be arranged where the client has agreed to it. Ask on a strategy call and it will be handled directly rather than published on the site." }
+  - { q: "My industry is not shown here. Does that matter?", a: "Not much. The ranking factors behind map pack visibility are consistent across local service industries; the competition level and search language differ. The [industry pages](/industries) cover how the approach adapts." }
+pricing: none
+related: [services, local-seo-service, about, book, contact]
+finalCta:
+  heading: "Ready to grow your local visibility?"
+  text: "Book a free strategy call and we'll map out exactly how to rank your business on Google Maps and bring in qualified inbound calls."
+  buttons:
+    - { label: Book strategy call, href: /book-strategy-call }
+    - { label: Get free SEO audit, href: "/#free-audit", style: ghost }
+order: 100

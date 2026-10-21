@@ -1,0 +1,317 @@
+---
+import { Image } from "astro:assets";
+import { img } from "../../lib/img";
+import { md } from "../../lib/md";
+
+interface Props {
+  breadcrumb?: { label: string; href: string }[];
+  eyebrow?: string;
+  h1: string;
+  em?: string;
+  lead?: string;
+  sub?: string;
+  heroBullets?: string[];
+  heroChips?: string[];
+  heroStats?: { value: string; label: string }[];
+  heroImage?: string;
+  ctas?: { label: string; href: string; style?: string }[];
+}
+const p = Astro.props;
+
+// Split the H1 so the emphasized phrase gets the route underline.
+const h1Parts = p.em && p.h1.includes(p.em) ? p.h1.split(p.em) : null;
+const stats = p.heroStats?.length
+  ? p.heroStats
+  : [
+      { value: "4.9★", label: "Fiverr rating" },
+      { value: "243", label: "Reviews" },
+      { value: "Level 2", label: "Fiverr seller" },
+    ];
+const ctas = p.ctas?.length
+  ? p.ctas
+  : [
+      { label: "Book Strategy Call", href: "/book-strategy-call", style: "dark" },
+      { label: "Get Free Local SEO Audit", href: "/#free-audit", style: "ghost" },
+    ];
+const portrait = img("people/ratul-roy-portrait.jpg");
+---
+
+<section class="phero" aria-labelledby="page-title">
+  <div class="phero__topo" aria-hidden="true"></div>
+  <div class="container phero__grid">
+    <div class="phero__copy">
+      {
+        p.breadcrumb && (
+          <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+            {p.breadcrumb.map((b, i) => (
+              <>
+                {i > 0 && <span aria-hidden="true">/</span>}
+                {i === p.breadcrumb!.length - 1 ? <span aria-current="page">{b.label}</span> : <a href={b.href}>{b.label}</a>}
+              </>
+            ))}
+          </nav>
+        )
+      }
+      {p.eyebrow && <p class="eyebrow" data-reveal>{p.eyebrow}</p>}
+      <h1 id="page-title" data-reveal style="--d:1">
+        {h1Parts ? (<>{h1Parts[0]}<span class="em">{p.em}</span>{h1Parts.slice(1).join(p.em)}</>) : p.h1}
+      </h1>
+      {p.lead && <p class="lead" data-reveal style="--d:2" set:html={md(p.lead)} />}
+      {p.sub && <p class="phero__sub" data-reveal style="--d:2" set:html={md(p.sub)} />}
+      {
+        p.heroBullets && (
+          <ul class="checklist phero__bullets" data-reveal style="--d:3">
+            {p.heroBullets.map((b) => <li set:html={md(b)} />)}
+          </ul>
+        )
+      }
+      <div class="btn-row" data-reveal style="--d:3">
+        {
+          ctas.map((c, i) =>
+            c.style === "ghost" || (i > 0 && !c.style) ? (
+              <a class="btn btn--ghost" href={c.href}>{c.label}</a>
+            ) : (
+              <a class="btn btn--dark" href={c.href}><span class="disc" aria-hidden="true">↗</span>{c.label}</a>
+            ),
+          )
+        }
+      </div>
+      {
+        p.heroChips && (
+          <ul class="chips phero__chips" data-reveal style="--d:4">
+            {p.heroChips.map((c) => <li class="chip chip--line">{c}</li>)}
+          </ul>
+        )
+      }
+    </div>
+
+    <aside class="proof card" data-reveal style="--d:2" aria-label="About the specialist">
+      {
+        p.heroImage ? (
+          <div class="proof__shot">
+            <Image src={img(p.heroImage)} alt="" widths={[400, 640]} sizes="(min-width: 1024px) 420px, 90vw" loading="eager" class="proof__shotimg" />
+          </div>
+        ) : null
+      }
+      <div class="proof__who">
+        <Image src={portrait} alt="" width={96} height={96} class="proof__face" />
+        <div>
+          <p class="proof__name">Ratul Roy</p>
+          <p class="proof__role">Local SEO Specialist · Founder, DigiPolli</p>
+        </div>
+        <span class="proof__live"><span class="dotg" aria-hidden="true"></span>2 spots open</span>
+      </div>
+      <dl class="proof__stats">
+        {
+          stats.map((s) => (
+            <div>
+              <dt>{s.label}</dt>
+              <dd class="num">{s.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <div class="proof__grid" aria-hidden="true">
+        {Array.from({ length: 63 }, (_, i) => {
+          const x = i % 9, y = Math.floor(i / 9);
+          const d = Math.hypot((x - 4) * 0.8, y - 3);
+          return <span class={d < 1.8 ? "g" : d < 3 ? "m" : "l"} style={`--i:${i}`} />;
+        })}
+      </div>
+      <p class="proof__note">Map Pack focus · White-hat · Direct access</p>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .phero {
+    position: relative;
+    overflow: hidden;
+    margin-top: -78px;
+    padding: calc(78px + clamp(32px, 5vw, 64px)) 0 clamp(56px, 7vw, 88px);
+    background:
+      radial-gradient(40% 50% at 82% 40%, rgb(15 157 99 / 11%), transparent 70%),
+      radial-gradient(35% 40% at 8% 12%, rgb(255 122 102 / 11%), transparent 70%);
+  }
+  .phero__topo {
+    position: absolute;
+    inset: 0;
+    background: url("/topo.svg") 0 0 / 1400px auto repeat;
+    opacity: 0.55;
+    mask-image: radial-gradient(70% 70% at 70% 40%, #000 25%, transparent 80%);
+    -webkit-mask-image: radial-gradient(70% 70% at 70% 40%, #000 25%, transparent 80%);
+    pointer-events: none;
+  }
+  .phero__grid {
+    position: relative;
+    display: grid;
+    gap: 44px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .phero__grid {
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 64px;
+    }
+  }
+  .phero__copy {
+    min-width: 0;
+  }
+  .crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--dim);
+    margin-bottom: 18px;
+  }
+  .crumbs a {
+    color: var(--muted);
+  }
+  .phero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    line-height: 1.16;
+  }
+  .phero .lead {
+    color: var(--ink);
+    max-width: 40em;
+  }
+  .phero__sub {
+    max-width: 42em;
+  }
+  .phero__bullets {
+    margin: 4px 0 26px;
+  }
+  .phero .btn-row {
+    margin-top: 8px;
+  }
+  .phero__chips {
+    margin-top: 22px;
+  }
+
+  .proof {
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    gap: 16px;
+  }
+  .proof__shot {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .proof__shotimg {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+  .proof__who {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .proof__face {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .proof__name {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .proof__role {
+    margin: 0;
+    font-size: 0.78rem;
+  }
+  .proof__live {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--good-soft);
+    color: var(--good);
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .dotg {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .proof__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 14px 0;
+    border-block: 1px solid var(--line);
+  }
+  .proof__stats > div {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10px;
+  }
+  .proof__stats > div:first-child {
+    padding-left: 0;
+  }
+  .proof__stats > div + div {
+    border-left: 1px solid var(--line);
+  }
+  .proof__stats dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+  .proof__stats dt {
+    font-size: 0.72rem;
+  }
+  .proof__grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    padding: 12px;
+    border-radius: 12px;
+    background:
+      url("/topo.svg") 30% 40% / 700px auto,
+      #f5f9f7;
+    border: 1px solid var(--line);
+  }
+  .proof__grid span {
+    aspect-ratio: 1;
+    max-width: 100%;
+    border-radius: 50%;
+    animation: pgpop 0.5s var(--ease) both;
+    animation-delay: calc(0.4s + var(--i) * 14ms);
+  }
+  .proof__grid .g {
+    background: var(--good);
+  }
+  .proof__grid .m {
+    background: var(--warn);
+  }
+  .proof__grid .l {
+    background: #c9d3d0;
+  }
+  @keyframes pgpop {
+    from {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+  }
+  .proof__note {
+    margin: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--dim);
+  }
+</style>
