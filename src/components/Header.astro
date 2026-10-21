@@ -7,7 +7,7 @@ import { site, megaMenu, navLinks } from "../data/site";
 <header class="header">
   <div class="header__bar">
     <a class="logo" href="/" aria-label="Ratul Roy, Local SEO Bangladesh, home">
-      <Image src={img("brand/logo-rr.png")} alt="" width={76} height={76} class="logo__mark" loading="eager" />
+      <Image src={img("brand/logo-portrait.jpg")} alt="Ratul Roy" width={88} height={88} class="logo__mark" loading="eager" />
       <span class="logo__text">
         <span class="logo__name">Ratul Roy</span>
         <span class="logo__tag">{site.tagline}</span>
@@ -119,11 +119,14 @@ import { site, megaMenu, navLinks } from "../data/site";
     flex-shrink: 0;
   }
   .logo__mark {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 12px -4px rgb(15 26 28 / 45%);
+    border: 2px solid #fff;
+    box-shadow:
+      0 0 0 2px var(--accent),
+      0 6px 14px -4px rgb(15 26 28 / 40%);
   }
   .logo__text {
     display: grid;
