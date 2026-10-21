@@ -1,0 +1,440 @@
+---
+// "Signal engine": the local ranking signals Ratul works on flow into one Map Pack position,
+// which flows out into real, published results. Descriptions reuse the site's own service copy.
+const signals = [
+  {
+    name: "Google Business Profile",
+    icon: '<rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2.2"/><path d="M14 10h4M14 14h4M6 16c.6-1.4 1.7-2 3-2s2.4.6 3 2"/>',
+    text: "Categories, services, and a complete profile tell Google exactly what you do and where.",
+  },
+  {
+    name: "Reviews & responses",
+    icon: '<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/>',
+    text: "More reviews and better responses make your business look like the safer choice.",
+  },
+  {
+    name: "Citations & NAP",
+    icon: '<path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/>',
+    text: "Consistent name, address, and phone across directories strengthens local trust.",
+  },
+  {
+    name: "Service & location pages",
+    icon: '<rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+    text: "Pages that match search intent help Google understand when and where to rank you.",
+  },
+  {
+    name: "Schema & entity",
+    icon: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/>',
+    text: "LocalBusiness, Service, and FAQ schema make you machine-readable for Google and AI.",
+  },
+  {
+    name: "Mentions & authority",
+    icon: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+    text: "Trusted brand mentions and ethical authority building raise your prominence.",
+  },
+  {
+    name: "Posts & photos",
+    icon: '<rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/>',
+    text: "A GBP post and photo strategy keeps the profile active, fresh, and convincing.",
+  },
+];
+
+// Real numbers already published on this site (case study + aggregates).
+const outcomes = [
+  { label: "Calls from GBP", value: "461", note: "client case study", count: true },
+  { label: "Profile interactions", value: "+62%", note: "same client", count: true },
+  { label: "Map Pack position", value: "Top 3", note: "core terms", count: false },
+  { label: "Avg. inbound call growth", value: "+200%", note: "across clients", count: true },
+];
+
+const ly = signals.map((_, i) => 7 + (i * 86) / (signals.length - 1));
+const ry = outcomes.map((_, i) => 14 + (i * 72) / (outcomes.length - 1));
+---
+
+<section class="section flow-sec" aria-labelledby="flow-title">
+  <div class="container">
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">How rankings turn into calls</p>
+      <h2 id="flow-title">Seven local signals. One Map Pack spot. <span class="em">More calls.</span></h2>
+      <p>
+        Google Maps ranks the business it trusts most. I strengthen every signal it reads, so your
+        profile climbs into the top 3 and the phone starts ringing. Hover or tap a signal to trace its path.
+      </p>
+    </div>
+
+    <div class="flow" data-flow data-reveal>
+      <ul class="flow__in" aria-label="Local ranking signals">
+        {
+          signals.map((s, i) => (
+            <li style={`--y:${ly[i]}`}>
+              <button type="button" class="sig" data-i={i} data-text={s.text} aria-describedby="flow-detail">
+                <span class="sig__ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={s.icon} />
+                </span>
+                {s.name}
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+
+      <svg class="flow__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        {
+          ly.map((y, i) => (
+            <g data-path={i}>
+              <path class="base" d={`M0 ${y} C 26 ${y}, 24 50, 50 50`} />
+              <path class="comet" pathLength="100" style={`--delay:${(i * 0.37).toFixed(2)}s`} d={`M0 ${y} C 26 ${y}, 24 50, 50 50`} />
+            </g>
+          ))
+        }
+        {
+          ry.map((y, i) => (
+            <g data-out={i}>
+              <path class="base o" d={`M50 50 C 76 50, 74 ${y}, 100 ${y}`} />
+              <path class="comet o" pathLength="100" style={`--delay:${(0.6 + i * 0.45).toFixed(2)}s`} d={`M50 50 C 76 50, 74 ${y}, 100 ${y}`} />
+            </g>
+          ))
+        }
+      </svg>
+
+      <div class="flow__core">
+        <div class="core" aria-hidden="true">
+          <span class="core__ring"></span>
+          <span class="core__ring core__ring--2"></span>
+          <svg viewBox="0 0 20 26" width="30" height="39"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"></path></svg>
+        </div>
+        <p class="core__label">Map Pack <b>Top 3</b></p>
+        <p id="flow-detail" class="core__detail" aria-live="polite">Hover or tap a signal to see what it does.</p>
+      </div>
+
+      <ul class="flow__out" aria-label="Results">
+        {
+          outcomes.map((o, i) => (
+            <li class="out card" style={`--y:${ry[i]}`} data-o={i}>
+              <span class="out__label">{o.label}</span>
+              <span class="out__value num" data-count={o.count ? "" : undefined}>{o.value}</span>
+              <span class="out__note">{o.note}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-flow]").forEach((root) => {
+    const sigs = [...root.querySelectorAll<HTMLButtonElement>(".sig")];
+    const paths = root.querySelectorAll<SVGGElement>("[data-path]");
+    const detail = root.querySelector<HTMLElement>(".core__detail");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let auto: number | undefined;
+    let i = -1;
+
+    const focus = (n: number) => {
+      root.classList.toggle("has-focus", n >= 0);
+      sigs.forEach((s, k) => s.classList.toggle("is-on", k === n));
+      paths.forEach((p, k) => p.classList.toggle("is-on", k === n));
+      if (detail) detail.textContent = n >= 0 ? (sigs[n].dataset.text ?? "") : "Hover or tap a signal to see what it does.";
+    };
+    const stopAuto = () => window.clearInterval(auto);
+
+    sigs.forEach((s, k) => {
+      s.addEventListener("pointerenter", () => {
+        stopAuto();
+        focus(k);
+      });
+      s.addEventListener("focus", () => {
+        stopAuto();
+        focus(k);
+      });
+      s.addEventListener("click", () => {
+        stopAuto();
+        focus(k);
+      });
+    });
+    root.querySelector(".flow__in")?.addEventListener("pointerleave", () => focus(-1));
+
+    // Walk through the signals on its own once visible, until the visitor takes over.
+    if (!reduce) {
+      const io = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        auto = window.setInterval(() => {
+          i = (i + 1) % sigs.length;
+          focus(i);
+        }, 2200);
+      });
+      io.observe(root);
+    }
+  });
+</script>
+
+<style>
+  .flow-sec {
+    background:
+      radial-gradient(40% 50% at 50% 55%, rgb(232 64 47 / 8%), transparent 70%),
+      radial-gradient(30% 40% at 85% 50%, rgb(15 157 99 / 8%), transparent 70%);
+  }
+  .flow {
+    position: relative;
+    display: grid;
+    gap: 28px;
+  }
+
+  /* Signals */
+  .flow__in {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .sig {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 6px 14px 6px 6px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      border-color 0.3s,
+      box-shadow 0.3s,
+      transform 0.3s var(--ease),
+      opacity 0.3s;
+  }
+  .sig__ico {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--ink-2);
+    transition:
+      background 0.3s,
+      color 0.3s;
+  }
+  .sig__ico svg {
+    width: 17px;
+    height: 17px;
+  }
+  .sig.is-on {
+    border-color: var(--accent);
+    box-shadow:
+      0 0 0 4px rgb(232 64 47 / 10%),
+      var(--shadow);
+  }
+  .sig.is-on .sig__ico {
+    background: var(--accent);
+    color: #fff;
+  }
+  .flow.has-focus .sig:not(.is-on) {
+    opacity: 0.55;
+  }
+
+  /* Lines (desktop only) */
+  .flow__lines {
+    display: none;
+  }
+  .flow__lines path {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+  }
+  .flow__lines .base {
+    stroke: #c9d6d1;
+    stroke-width: 1.2;
+    transition:
+      stroke 0.3s,
+      stroke-width 0.3s,
+      opacity 0.3s;
+  }
+  .flow__lines .base.o {
+    stroke: rgb(15 157 99 / 40%);
+  }
+  .flow__lines .comet {
+    stroke: var(--accent);
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-dasharray: 5 95;
+    stroke-dashoffset: 100;
+    animation: comet 3.2s linear infinite;
+    animation-delay: var(--delay);
+  }
+  .flow__lines .comet.o {
+    stroke: var(--good);
+    animation-duration: 2.6s;
+  }
+  @keyframes comet {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .flow.has-focus [data-path]:not(.is-on) .base {
+    opacity: 0.35;
+  }
+  .flow.has-focus [data-path]:not(.is-on) .comet {
+    opacity: 0.15;
+  }
+  [data-path].is-on .base {
+    stroke: var(--accent);
+    stroke-width: 2;
+  }
+  [data-path].is-on .comet {
+    stroke-width: 3.4;
+    animation-duration: 1.4s;
+  }
+
+  /* Core */
+  .flow__core {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .core {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--accent-2);
+    box-shadow:
+      0 0 0 10px rgb(232 64 47 / 8%),
+      0 24px 50px -16px rgb(15 26 28 / 60%);
+  }
+  .core__ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--accent-2);
+    animation: pulse-ring 2.6s ease-out infinite;
+  }
+  .core__ring--2 {
+    animation-delay: 1.3s;
+  }
+  .core__label {
+    margin: 4px 0 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .core__label b {
+    color: var(--good);
+  }
+  .core__detail {
+    margin: 0;
+    max-width: 260px;
+    min-height: 3.2em;
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  /* Outcomes */
+  .flow__out {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .out {
+    display: grid;
+    gap: 2px;
+    padding: 16px 18px;
+  }
+  .out__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .out__value {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--ink);
+  }
+  .out:nth-child(1) .out__value,
+  .out:nth-child(4) .out__value {
+    color: var(--good);
+  }
+  .out__note {
+    font-size: 0.78rem;
+  }
+
+  @media (min-width: 1024px) {
+    .flow {
+      display: block;
+      height: 560px;
+    }
+    .flow__in {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 260px;
+      display: block;
+    }
+    .flow__in li {
+      position: absolute;
+      left: 0;
+      top: calc(var(--y) * 1%);
+      transform: translateY(-50%);
+    }
+    .sig.is-on {
+      transform: translateX(6px);
+    }
+    .flow__lines {
+      display: block;
+      position: absolute;
+      left: 250px;
+      width: calc(100% - 250px - 270px);
+      top: 0;
+      height: 100%;
+      overflow: visible;
+    }
+    .flow__core {
+      position: absolute;
+      left: calc(250px + (100% - 520px) / 2);
+      top: 50%;
+      transform: translate(-50%, -48px);
+    }
+    .core__detail {
+      position: absolute;
+      top: 150px;
+      width: 240px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgb(255 255 255 / 85%);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--line);
+    }
+    .flow__out {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 270px;
+      display: block;
+    }
+    .out {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(var(--y) * 1%);
+      transform: translateY(-50%);
+    }
+  }
+</style>

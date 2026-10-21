@@ -32,24 +32,30 @@ const icons = [
         <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Show Me What's Blocking My Rankings</a>
       </div>
 
-      <figure class="pack card" data-reveal style="--d:2" aria-label="Illustration: a Google Maps 3-pack where your business is missing">
+      <figure class="pack card" data-race data-reveal style="--d:2" aria-label="Illustration: a Google Maps 3-pack. Drag the slider to move your business into it.">
         <figcaption class="pack__search">
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           plumber near me
+          <span class="pack__pos" data-pos>#9</span>
         </figcaption>
-        <ol class="pack__list">
-          {["A", "B", "C"].map((l, i) => (
-            <li style={`--i:${i}`}>
+        <ol class="pack__list" data-list>
+          {["A", "B", "C"].map((l) => (
+            <li class="pack__row" data-row={l}>
               <span class="pack__pin">{l}</span>
               <span class="pack__lines"><span></span><span></span></span>
               <span class="chip chip--green">Getting the call</span>
             </li>
           ))}
-          <li class="pack__you">
+          <li class="pack__row pack__you" data-row="you">
             <span class="pack__pin">?</span>
-            <span><strong>Your business</strong><br /><small>Not in the top 3, not seen</small></span>
+            <span class="pack__youtext"><strong>Your business</strong><br /><small data-status>Not in the top 3, not seen</small></span>
           </li>
         </ol>
+        <div class="race">
+          <label for="race-range">Local SEO strength</label>
+          <input id="race-range" type="range" min="0" max="100" value="0" step="1" data-range />
+          <div class="race__scale" aria-hidden="true"><span>Invisible</span><span>Top of the pack</span></div>
+        </div>
       </figure>
     </div>
 
@@ -107,6 +113,71 @@ const icons = [
     </div>
   </div>
 </section>
+
+<script>
+  // Map Pack race: drag the slider and "Your business" climbs into the 3-pack (FLIP reorder).
+  document.querySelectorAll<HTMLElement>("[data-race]").forEach((fig) => {
+    const list = fig.querySelector<HTMLElement>("[data-list]");
+    const range = fig.querySelector<HTMLInputElement>("[data-range]");
+    const pos = fig.querySelector<HTMLElement>("[data-pos]");
+    const status = fig.querySelector<HTMLElement>("[data-status]");
+    const you = fig.querySelector<HTMLElement>('[data-row="you"]');
+    const rivals = [...fig.querySelectorAll<HTMLElement>('[data-row]:not([data-row="you"])')];
+    if (!list || !range || !you) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let last = -1;
+
+    const render = () => {
+      const v = Number(range.value);
+      const rank = Math.max(1, Math.round(9 - (v / 100) * 8)); // 9 -> 1
+      if (rank === last) return;
+      last = rank;
+      const rows = [...list.children] as HTMLElement[];
+      const before = new Map(rows.map((r) => [r, r.getBoundingClientRect().top]));
+      // Order: you take slot `rank` if inside the top 3, otherwise sit below the pack.
+      const order = [...rivals];
+      order.splice(Math.min(rank, 4) - 1, 0, you);
+      order.forEach((r) => list.appendChild(r));
+      rivals.forEach((r) => r.classList.toggle("is-out", rank <= 3 && order.indexOf(r) === 3));
+      const top = rank <= 3;
+      you.classList.toggle("is-top", top);
+      if (pos) {
+        pos.textContent = `#${rank}`;
+        pos.classList.toggle("is-top", top);
+      }
+      if (status) status.textContent = top ? `Map Pack #${rank}, getting the call` : `Position #${rank}, not seen`;
+      if (!reduce) {
+        order.forEach((r) => {
+          const dy = (before.get(r) ?? 0) - r.getBoundingClientRect().top;
+          if (!dy) return;
+          r.animate([{ transform: `translateY(${dy}px)` }, { transform: "none" }], {
+            duration: 450,
+            easing: "cubic-bezier(.22,1,.36,1)",
+          });
+        });
+      }
+    };
+    range.addEventListener("input", render);
+    render();
+
+    // Hint: nudge the slider once when the card first appears.
+    if (!reduce) {
+      const io = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+        io.disconnect();
+        let v = 0;
+        const t = window.setInterval(() => {
+          v += 4;
+          range.value = String(v);
+          render();
+          if (v >= 72) window.clearInterval(t);
+        }, 45);
+        range.addEventListener("pointerdown", () => window.clearInterval(t), { once: true });
+      }, { threshold: 0.6 });
+      io.observe(fig);
+    }
+  });
+</script>
 
 <style>
   .problem {
@@ -189,6 +260,63 @@ const icons = [
   }
   .pack__lines span:last-child {
     width: 60%;
+  }
+  .pack__search {
+    position: relative;
+  }
+  .pack__pos {
+    margin-left: auto;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    transition:
+      background 0.3s,
+      color 0.3s;
+  }
+  .pack__pos.is-top {
+    background: var(--good-soft);
+    color: var(--good);
+  }
+  .pack__row {
+    will-change: transform;
+  }
+  .pack__you.is-top {
+    border-style: solid !important;
+    border-color: rgb(15 157 99 / 45%) !important;
+    background: var(--good-soft) !important;
+  }
+  .pack__you.is-top .pack__pin {
+    background: var(--good);
+  }
+  .pack__row.is-out {
+    opacity: 0.45;
+  }
+  .race {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line-2);
+  }
+  .race label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .race input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: grab;
+  }
+  .race__scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--dim);
   }
   .pack__you {
     border-style: dashed !important;
