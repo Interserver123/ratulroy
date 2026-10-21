@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://ratulroy.com",
@@ -8,6 +7,6 @@ export default defineConfig({
   trailingSlash: "never",
   build: { format: "file", inlineStylesheets: "auto" },
   prefetch: { prefetchAll: false, defaultStrategy: "hover" },
-  integrations: [sitemap()],
+  // Sitemap: src/pages/sitemap.xml.ts (styled by public/sitemap.xsl)
   compressHTML: true,
 });
