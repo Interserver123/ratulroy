@@ -33,25 +33,27 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
       </div>
     </div>
 
-    <ol class="steps">
-      {
-        strategy.map((s, i) => (
-          <li class="card card--hover step" data-reveal style={`--d:${i % 3}`} data-spot>
-            <div class="step__top">
-              <span class="step__num num">{String(i + 1).padStart(2, "0")}</span>
-              <span class="step__bar" aria-hidden="true"><span style={`width:${((i + 1) / strategy.length) * 100}%`}></span></span>
-            </div>
-            <h3>{s.title}</h3>
-            <p>{s.text}</p>
-            <ul class="checklist">
-              {s.points.map((p) => (
-                <li>{p}</li>
-              ))}
-            </ul>
-          </li>
-        ))
-      }
-    </ol>
+    <div class="route" data-route>
+      <div class="route__line" aria-hidden="true"><span></span></div>
+      <ol class="steps">
+        {
+          strategy.map((s, i) => (
+            <li class="step" data-reveal>
+              <span class="step__pin num" aria-hidden="true"><span>{String(i + 1).padStart(2, "0")}</span></span>
+              <div class="card card--hover step__card" data-spot>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+                <ul class="checklist">
+                  {s.points.map((p) => (
+                    <li>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
 
     <div class="system card" data-reveal>
       <div>
@@ -130,71 +132,94 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
   .strat-head .chips {
     margin-bottom: 18px;
   }
+  /* Route timeline: a map route that draws itself as you scroll; steps sit beside it as stops */
+  .route {
+    position: relative;
+  }
+  .route__line {
+    position: absolute;
+    left: 21px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+    background: repeating-linear-gradient(180deg, var(--line-2) 0 8px, transparent 8px 14px);
+  }
+  .route__line span {
+    position: absolute;
+    inset: 0 0 auto;
+    height: calc(var(--p, 1) * 100%);
+    border-radius: 3px;
+    background: linear-gradient(180deg, var(--accent-2), var(--accent));
+  }
   .steps {
     display: grid;
-    gap: 18px;
-  }
-  @media (min-width: 640px) {
-    .steps {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    .steps {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px 36px;
-    }
-    /* Dashed connector between cards in a row */
-    .step:not(:nth-child(3n))::after {
-      content: "";
-      position: absolute;
-      right: -37px;
-      top: 50%;
-      width: 36px;
-      height: 2px;
-      background: repeating-linear-gradient(90deg, var(--violet-2) 0 4px, transparent 4px 9px);
-    }
+    gap: 22px;
   }
   .step {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    padding-left: 64px;
   }
-  .step__top {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 20px;
-  }
-  .step__num {
+  .step__pin {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 45px;
+    height: 45px;
     display: grid;
     place-items: center;
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: 50% 50% 50% 6px;
+    transform: rotate(-45deg);
     background: var(--ink);
     color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 0 0 6px var(--bg);
+    z-index: 1;
+  }
+  .step__pin > span {
+    transform: rotate(45deg);
+  }
+  .step.is-in .step__pin {
+    background: var(--accent);
+    transition: background 0.5s 0.2s;
+  }
+  .step__card p {
+    font-size: 0.92rem;
+  }
+  .step__card .checklist {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .step__card .checklist li {
     font-size: 0.85rem;
-    font-weight: 600;
   }
-  .step__bar {
-    flex: 1;
-    height: 6px;
-    border-radius: 3px;
-    background: var(--violet-soft);
-    overflow: hidden;
-  }
-  .step__bar span {
-    display: block;
-    height: 100%;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--violet-2), var(--violet));
-  }
-  .step p {
-    font-size: 0.9rem;
-  }
-  .step .checklist li {
-    font-size: 0.85rem;
+  @media (min-width: 1024px) {
+    .route__line {
+      left: 50%;
+      margin-left: -1.5px;
+    }
+    .steps {
+      gap: 8px;
+    }
+    .step {
+      width: 50%;
+      padding: 0 56px 0 0;
+    }
+    .step:nth-child(even) {
+      margin-left: 50%;
+      padding: 0 0 0 56px;
+    }
+    .step__pin {
+      left: auto;
+      right: -22.5px;
+    }
+    .step:nth-child(even) .step__pin {
+      right: auto;
+      left: -22.5px;
+    }
+    .step:not(:first-child) {
+      margin-top: -64px;
+    }
   }
 
   .system {
@@ -253,7 +278,7 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
     align-items: center;
     gap: 18px;
     background:
-      radial-gradient(90% 140% at 0% 0%, rgb(139 108 255 / 22%), transparent 60%),
+      radial-gradient(90% 140% at 0% 0%, rgb(255 122 102 / 22%), transparent 60%),
       var(--paper);
   }
   .age__num {
@@ -262,7 +287,7 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
     font-style: italic;
     letter-spacing: -0.06em;
     line-height: 1;
-    color: var(--violet);
+    color: var(--accent);
   }
   .age span:last-child {
     font-weight: 500;

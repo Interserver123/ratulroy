@@ -28,7 +28,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
         <span class="text-link">Read the case study</span>
       </div>
       <div class="browser" aria-hidden="true">
-        <div class="browser__bar"><span></span><span></span><span></span><i>Google Business Profile · Performance</i></div>
+        <div class="browser__bar"><svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"/></svg><i>Google Business Profile · Performance</i></div>
         <div class="browser__screen">
           <dl class="kpis">
             <div class="kpis__hero"><dt>Calls from GBP</dt><dd class="num" data-count>461</dd></div>
@@ -44,7 +44,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
         caseStudies.map((c, i) => (
           <li class="card card--hover case" data-reveal style={`--d:${i % 2}`} data-spot>
             <div class="case__screen" aria-hidden="true">
-              <span class="case__dots"><span></span><span></span><span></span></span>
+              <span class="case__dots"><svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"/></svg></span>
               <span class="case__value num">{c.value}</span>
               <span class="case__label">{c.label}</span>
             </div>
@@ -126,8 +126,8 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     overflow: hidden;
     border: 1px solid var(--line);
     background: #fff;
-    box-shadow: 0 30px 60px -30px rgb(60 40 160 / 35%);
-    transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+    box-shadow: 0 30px 60px -30px rgb(16 42 40 / 35%);
+    transform: rotate(-1.5deg);
     transition: transform 0.6s var(--ease);
   }
   .featured:hover .browser {
@@ -142,14 +142,8 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     border-bottom: 1px solid var(--line);
     font-size: 0.72rem;
   }
-  .browser__bar span {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #ddd8f2;
-  }
-  .browser__bar span:first-child {
-    background: #ff8a8a;
+  .browser__bar svg {
+    color: var(--accent);
   }
   .browser__bar i {
     margin-left: 10px;
@@ -159,7 +153,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
   .browser__screen {
     padding: 18px;
     background:
-      radial-gradient(70% 90% at 100% 0%, rgb(139 108 255 / 14%), transparent 60%),
+      radial-gradient(70% 90% at 100% 0%, rgb(255 122 102 / 14%), transparent 60%),
       #fff;
   }
   .kpis {
@@ -190,7 +184,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
   }
   .kpis__hero dd {
     font-size: clamp(3rem, 6vw, 4.4rem);
-    color: var(--violet);
+    color: var(--accent);
   }
   .kpis dt {
     font-size: 0.78rem;
@@ -212,8 +206,9 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     border-radius: 14px;
     border: 1px solid var(--line);
     background:
-      radial-gradient(80% 120% at 100% 100%, rgb(139 108 255 / 22%), transparent 60%),
-      linear-gradient(180deg, #faf9ff, #f1eefe);
+      radial-gradient(80% 120% at 100% 100%, rgb(255 122 102 / 22%), transparent 60%),
+      url("/topo.svg") 40% 30% / 700px auto,
+      linear-gradient(180deg, #fafcfb, #eef4f1);
     overflow: hidden;
   }
   .case__dots {
@@ -223,11 +218,8 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     display: flex;
     gap: 5px;
   }
-  .case__dots span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ddd8f2;
+  .case__dots {
+    color: var(--accent);
   }
   .case__value {
     font-size: clamp(2.2rem, 4.4vw, 3.2rem);
@@ -243,7 +235,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
   }
   .case__label {
     font-size: 0.85rem;
-    color: var(--violet);
+    color: var(--accent);
     font-weight: 500;
   }
   .case h3 {

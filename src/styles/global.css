@@ -1,29 +1,32 @@
-/* Layout concept: airy lavender-white canvas, white "paper" cards with soft violet shadows,
-   one violet accent carried by italic emphasis words, near-black pill buttons for action. */
+/* Layout concept: a clean "map paper" canvas with faint topographic contours, white cards,
+   map-pin red for action and emphasis, Map Pack green for wins. Emphasis words get a
+   hand-drawn route underline instead of italics. */
 :root {
-  --bg: #f6f5fc;
-  --bg-2: #efedf9;
+  --bg: #f4f7f6;
+  --bg-2: #eaf0ee;
   --paper: #ffffff;
-  --ink: #0e0d1a;
-  --ink-2: #3b3a4f;
-  --muted: #6a6880;
-  --dim: #9896ad;
-  --line: #e7e5f3;
-  --line-2: #d9d6ec;
-  --violet: #5b3df5;
-  --violet-2: #8b6cff;
-  --violet-soft: #ece8ff;
-  --good: #12a46b;
-  --good-soft: #e3f7ee;
+  --ink: #0f1a1c;
+  --ink-2: #33403f;
+  --muted: #5f6d6b;
+  --dim: #8f9c9a;
+  --line: #e1e8e5;
+  --line-2: #d0dad6;
+  --accent: #e8402f;
+  --accent-2: #ff6a55;
+  --accent-soft: #ffece8;
+  --good: #0f9d63;
+  --good-soft: #dff5ea;
   --warn: #f2a516;
-  --rose: #e5486b;
-  --radius: 22px;
-  --radius-sm: 14px;
-  --shadow: 0 1px 2px rgb(30 20 80 / 4%), 0 12px 32px -12px rgb(60 40 160 / 14%);
-  --shadow-lg: 0 2px 4px rgb(30 20 80 / 4%), 0 30px 70px -24px rgb(60 40 160 / 28%);
+  --rose: #e8402f;
+  --radius: 20px;
+  --radius-sm: 13px;
+  --shadow: 0 1px 2px rgb(15 25 30 / 4%), 0 12px 32px -14px rgb(16 42 40 / 16%);
+  --shadow-lg: 0 2px 4px rgb(15 25 30 / 4%), 0 30px 70px -26px rgb(16 42 40 / 30%);
   --container: 1180px;
   --font: "Instrument Sans Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --route: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 30 2, 50 11, 80 6 S 130 2, 160 7 S 190 9, 198 4' fill='none' stroke='%23e8402f' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
   color-scheme: light;
 }
 
@@ -53,16 +56,18 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-display);
   color: var(--ink);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 650;
   margin: 0 0 0.5em;
   text-wrap: balance;
 }
 h1 {
-  font-size: clamp(2.5rem, 6.2vw, 4.8rem);
-  letter-spacing: -0.045em;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  letter-spacing: -0.04em;
+  font-weight: 700;
 }
 h2 {
   font-size: clamp(2rem, 4.2vw, 3.3rem);
@@ -81,12 +86,20 @@ strong {
   font-weight: 600;
 }
 
-/* Italic violet emphasis, the signature of the page */
+/* Emphasis: red words with a hand-drawn route underline that draws in on reveal */
 .em {
-  font-style: italic;
-  font-weight: 500;
-  color: var(--violet);
-  letter-spacing: -0.03em;
+  color: var(--accent);
+  padding-bottom: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: var(--route) no-repeat left bottom / 100% 0.28em;
+  transition: background-size 1.2s var(--ease) 0.3s;
+}
+.js [data-reveal] .em {
+  background-size: 0% 0.28em;
+}
+.js [data-reveal].is-in .em {
+  background-size: 100% 0.28em;
 }
 
 a {
@@ -95,7 +108,7 @@ a {
   transition: color 0.2s;
 }
 a:hover {
-  color: var(--violet);
+  color: var(--accent);
 }
 ul,
 ol {
@@ -109,11 +122,11 @@ img {
   display: block;
 }
 ::selection {
-  background: var(--violet-soft);
+  background: var(--accent-soft);
   color: var(--ink);
 }
 :focus-visible {
-  outline: 2px solid var(--violet);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 8px;
 }
@@ -167,14 +180,15 @@ img {
   position: relative;
   z-index: 1;
 }
-/* Soft violet wash behind a section */
+/* Soft wash behind a section */
 .wash::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(50% 45% at 50% 0%, rgb(139 108 255 / 14%), transparent 70%),
-    linear-gradient(180deg, transparent, rgb(255 255 255 / 55%) 40%, transparent);
+  background: url("/topo.svg") center / 1400px auto repeat;
+  opacity: 0.55;
+  mask-image: linear-gradient(180deg, transparent, #000 25%, #000 75%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 25%, #000 75%, transparent);
   pointer-events: none;
 }
 
@@ -198,22 +212,20 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-2);
-  padding: 6px 14px 6px 10px;
-  border-radius: 999px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 2px rgb(30 20 80 / 4%);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .eyebrow::before {
   content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--violet);
+  width: 10px;
+  height: 13px;
+  background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 26'%3E%3Cpath d='M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 26'%3E%3Cpath d='M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .lead {
@@ -257,12 +269,12 @@ img {
   background: #1f1d36;
   box-shadow: 0 16px 32px -12px rgb(14 13 26 / 70%);
 }
-.btn--violet {
-  background: linear-gradient(180deg, var(--violet-2), var(--violet));
+.btn--accent {
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
   color: #fff;
-  box-shadow: 0 12px 28px -10px rgb(91 61 245 / 60%), inset 0 1px 0 rgb(255 255 255 / 25%);
+  box-shadow: 0 12px 28px -10px rgb(255 77 61 / 60%), inset 0 1px 0 rgb(255 255 255 / 25%);
 }
-.btn--violet:hover {
+.btn--accent:hover {
   color: #fff;
 }
 .btn--ghost {
@@ -357,8 +369,8 @@ img {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--violet-soft)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%235b3df5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E")
+  background: var(--accent-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23e8402f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.5l3 3 6-7'/%3E%3C/svg%3E")
     center / 12px no-repeat;
 }
 
@@ -375,8 +387,8 @@ img {
   font-weight: 500;
   padding: 4px 11px;
   border-radius: 999px;
-  color: var(--violet);
-  background: var(--violet-soft);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 .chip--green {
   color: var(--good);
@@ -394,7 +406,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--violet);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -408,7 +420,7 @@ img {
 }
 .text-link::after {
   content: "→";
-  color: var(--violet);
+  color: var(--accent);
   transition: transform 0.3s var(--ease);
 }
 a.text-link:hover::after,
@@ -447,7 +459,7 @@ a.text-link:hover::after,
   padding: 13px 16px;
   border: 1px solid var(--line-2);
   border-radius: var(--radius-sm);
-  background: #fbfaff;
+  background: #fbfcfc;
   color: var(--ink);
   transition:
     border-color 0.2s,
@@ -462,8 +474,8 @@ a.text-link:hover::after,
 .field textarea:focus {
   outline: none;
   background: #fff;
-  border-color: var(--violet);
-  box-shadow: 0 0 0 4px rgb(91 61 245 / 12%);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgb(255 77 61 / 12%);
 }
 .form-status {
   font-size: 0.9rem;
@@ -534,7 +546,7 @@ a.text-link:hover::after,
 /* Cursor spotlight on interactive cards (position set by motion.ts) */
 [data-spot]:hover {
   background:
-    radial-gradient(320px circle at var(--mx, 50%) var(--my, 0%), rgb(139 108 255 / 11%), transparent 65%),
+    radial-gradient(320px circle at var(--mx, 50%) var(--my, 0%), rgb(255 122 102 / 11%), transparent 65%),
     var(--paper);
 }
 
@@ -545,8 +557,8 @@ a.text-link:hover::after,
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--violet-soft);
-  color: var(--violet);
+  background: var(--accent-soft);
+  color: var(--accent);
   margin-bottom: 18px;
 }
 .ico svg {

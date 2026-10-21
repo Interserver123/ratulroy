@@ -145,6 +145,31 @@ document.querySelectorAll<HTMLElement>("[data-highlight]").forEach((el) => {
   update();
 });
 
+// 4b. Route line draws as its section scrolls through the viewport.
+document.querySelectorAll<HTMLElement>("[data-route]").forEach((route) => {
+  const line = route.querySelector<HTMLElement>(".route__line span");
+  if (!line || reduce) return;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const r = route.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const p = Math.min(1, Math.max(0, (vh * 0.6 - r.top) / r.height));
+    line.style.setProperty("--p", p.toFixed(3));
+  };
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    },
+    { passive: true },
+  );
+  update();
+});
+
 // 5. Cursor spotlight on cards (desktop pointers only)
 if (!reduce && window.matchMedia("(pointer: fine)").matches) {
   document.querySelectorAll<HTMLElement>("[data-spot]").forEach((el) => {

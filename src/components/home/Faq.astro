@@ -99,7 +99,7 @@ const answered = faqs.filter((f) => f.a.trim());
     transform: translate(-50%, -50%) rotate(90deg);
   }
   .faq__item[open] .faq__icon {
-    background: var(--violet);
+    background: var(--accent);
     transform: rotate(45deg);
   }
   .faq__item[open] .faq__icon::before,
@@ -127,7 +127,7 @@ const answered = faqs.filter((f) => f.a.trim());
     align-items: center;
     padding: clamp(24px, 4vw, 36px);
     background:
-      radial-gradient(80% 140% at 100% 0%, rgb(139 108 255 / 16%), transparent 60%),
+      radial-gradient(80% 140% at 100% 0%, rgb(255 122 102 / 16%), transparent 60%),
       var(--paper);
   }
   .faq__cta h3 {

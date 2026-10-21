@@ -1,21 +1,27 @@
 ---
 import { platforms, aiPillars } from "../../data/home";
 
-// Left side of the hub: where customers discover local businesses.
-const sources = ["Google Search", "Google Maps", ...platforms.map((p) => p.title)];
-const n = sources.length;
-// Left node y-positions spread over 0..100 (viewBox units), right cards over 4 slots.
-const leftY = sources.map((_, i) => 6 + (i * 88) / (n - 1));
-const rightY = aiPillars.map((_, i) => 14 + (i * 72) / (aiPillars.length - 1));
+// Each tab is a place customers discover local businesses. The panel is an illustration
+// of the goal: your business named in the answer.
+const tabs = [
+  { title: "Google Search", text: "Organic local results", kind: "search" },
+  { title: "Google Maps", text: "Map Pack & directions", kind: "map" },
+  ...platforms.map((p) => ({
+    ...p,
+    kind: /ChatGPT|Perplexity|Overviews|Gemini/.test(p.title) ? "ai" : "map",
+  })),
+];
 ---
 
-<section class="section" aria-labelledby="ai-title">
+<section class="section wash" aria-labelledby="ai-title">
   <div class="container">
-    <div class="section-head section-head--center" data-reveal>
-      <p class="eyebrow">Beyond Google Maps</p>
-      <h2 id="ai-title">
-        Your next customer may not search Google. <span class="em">They may ask ChatGPT.</span>
-      </h2>
+    <div class="ai-head" data-reveal>
+      <div>
+        <p class="eyebrow">Beyond Google Maps</p>
+        <h2 id="ai-title">
+          Your next customer may not search Google. <span class="em">They may ask ChatGPT.</span>
+        </h2>
+      </div>
       <p>
         Local discovery is changing. Customers now use Google, Google Maps, AI Overviews, ChatGPT,
         Gemini, and Perplexity to compare businesses. Ratul Roy builds Local SEO systems that help
@@ -24,44 +30,62 @@ const rightY = aiPillars.map((_, i) => 14 + (i * 72) / (aiPillars.length - 1));
       </p>
     </div>
 
-    <div class="hub" data-reveal>
-      <ul class="hub__sources">
+    <div class="where card" data-where data-reveal>
+      <div class="where__tabs" role="tablist" aria-label="Where customers find local businesses">
         {
-          sources.map((s, i) => {
-            const p = platforms.find((x) => x.title === s);
-            return (
-              <li style={`--y:${leftY[i]}`}>
-                <strong>{s}</strong>
-                {p && <span>{p.text}</span>}
-              </li>
-            );
-          })
-        }
-      </ul>
-
-      <svg class="hub__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        {leftY.map((y) => <path d={`M0 ${y} C 22 ${y}, 28 50, 50 50`} />)}
-        {rightY.map((y) => <path class="out" d={`M50 50 C 72 50, 78 ${y}, 100 ${y}`} />)}
-      </svg>
-
-      <div class="hub__core" aria-hidden="true">
-        <span class="hub__pulse"></span>
-        <svg viewBox="0 0 64 64">
-          <path d="M32 13c-8 0-14.5 6.3-14.5 14.1C17.5 37.6 32 51.5 32 51.5S46.5 37.6 46.5 27.1C46.5 19.3 40 13 32 13Zm0 19.4a5.4 5.4 0 1 1 0-10.8 5.4 5.4 0 0 1 0 10.8Z" fill="#8b6cff"></path>
-        </svg>
-      </div>
-
-      <ul class="hub__out">
-        {
-          aiPillars.map((p, i) => (
-            <li class="card" style={`--y:${rightY[i]}`}>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-            </li>
+          tabs.map((t, i) => (
+            <button
+              type="button"
+              role="tab"
+              id={`where-tab-${i}`}
+              aria-controls="where-panel"
+              aria-selected={i === 0 ? "true" : "false"}
+              tabindex={i === 0 ? 0 : -1}
+              data-title={t.title}
+              data-text={t.text}
+              data-kind={t.kind}
+            >
+              <strong>{t.title}</strong>
+              <span>{t.text}</span>
+            </button>
           ))
         }
-      </ul>
+      </div>
+
+      <div id="where-panel" class="where__panel" role="tabpanel" aria-labelledby="where-tab-0" aria-live="polite">
+        <div class="where__query">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+          <span>best local service near me</span>
+          <em data-where-name>Google Search</em>
+        </div>
+        <div class="where__answer" data-where-answer>
+          <p class="where__label" data-where-label>Organic local results</p>
+          <div class="biz biz--you">
+            <span class="biz__pin" aria-hidden="true">1</span>
+            <span>
+              <strong>Your business</strong>
+              <small>Clear entity · consistent NAP · trusted reviews · structured data</small>
+            </span>
+            <span class="chip chip--green">Recommended</span>
+          </div>
+          <div class="biz"><span class="biz__pin" aria-hidden="true">2</span><span class="biz__line"></span></div>
+          <div class="biz"><span class="biz__pin" aria-hidden="true">3</span><span class="biz__line"></span></div>
+        </div>
+        <p class="where__note">Illustration of the goal, not a live result.</p>
+      </div>
     </div>
+
+    <ul class="grid grid--4 pillars">
+      {
+        aiPillars.map((p, i) => (
+          <li class="card card--hover" data-reveal style={`--d:${i}`} data-spot>
+            <span class="pillars__n num">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </li>
+        ))
+      }
+    </ul>
 
     <div class="ai__foot" data-reveal>
       <p>
@@ -73,178 +97,288 @@ const rightY = aiPillars.map((_, i) => 14 + (i * 72) / (aiPillars.length - 1));
   </div>
 </section>
 
+<script>
+  document.querySelectorAll<HTMLElement>("[data-where]").forEach((root) => {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const panel = root.querySelector<HTMLElement>('[role="tabpanel"]');
+    const name = root.querySelector<HTMLElement>("[data-where-name]");
+    const label = root.querySelector<HTMLElement>("[data-where-label]");
+    const answer = root.querySelector<HTMLElement>("[data-where-answer]");
+    let auto: number | undefined;
+
+    const select = (i: number, focus = false) => {
+      tabs.forEach((t, j) => {
+        t.setAttribute("aria-selected", String(i === j));
+        t.tabIndex = i === j ? 0 : -1;
+      });
+      const t = tabs[i];
+      if (name) name.textContent = t.dataset.title ?? "";
+      if (label) label.textContent = t.dataset.text ?? "";
+      if (panel) {
+        panel.setAttribute("aria-labelledby", t.id);
+        panel.dataset.kind = t.dataset.kind;
+      }
+      answer?.classList.remove("is-swap");
+      void answer?.offsetWidth;
+      answer?.classList.add("is-swap");
+      if (focus) t.focus();
+    };
+
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => {
+        window.clearInterval(auto);
+        select(i);
+      });
+      t.addEventListener("keydown", (e) => {
+        const k = e.key;
+        if (k !== "ArrowRight" && k !== "ArrowLeft" && k !== "ArrowDown" && k !== "ArrowUp") return;
+        e.preventDefault();
+        window.clearInterval(auto);
+        const dir = k === "ArrowRight" || k === "ArrowDown" ? 1 : -1;
+        select((i + dir + tabs.length) % tabs.length, true);
+      });
+    });
+
+    // Gently cycle through platforms until the visitor interacts.
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let i = 0;
+      auto = window.setInterval(() => {
+        i = (i + 1) % tabs.length;
+        select(i);
+      }, 2600);
+      root.addEventListener("pointerenter", () => window.clearInterval(auto), { once: true });
+    }
+  });
+</script>
+
 <style>
-  .hub {
-    position: relative;
+  .ai-head {
     display: grid;
     gap: 24px;
+    margin-bottom: 40px;
   }
-  .hub__sources {
+  .ai-head > p {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  @media (min-width: 1024px) {
+    .ai-head {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: end;
+    }
+  }
+
+  .where {
+    display: grid;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  @media (min-width: 900px) {
+    .where {
+      grid-template-columns: 300px 1fr;
+    }
+  }
+  .where__tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
   }
-  .hub__sources li {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 8px 14px;
-    border-radius: 12px;
-    background: #fff;
-    border: 1px solid var(--line);
-    box-shadow: 0 1px 2px rgb(30 20 80 / 4%);
-    font-size: 0.85rem;
-    line-height: 1.3;
-  }
-  .hub__sources span {
-    font-size: 0.72rem;
-    color: var(--dim);
-  }
-  .hub__lines {
+  .where__tabs::-webkit-scrollbar {
     display: none;
   }
-  .hub__core {
-    position: relative;
-    justify-self: center;
-    width: 84px;
-    height: 84px;
+  @media (min-width: 900px) {
+    .where__tabs {
+      flex-direction: column;
+      overflow: visible;
+      border-bottom: 0;
+      border-right: 1px solid var(--line);
+    }
+  }
+  .where__tabs button {
+    flex-shrink: 0;
+    display: grid;
+    gap: 1px;
+    text-align: left;
+    font: inherit;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    transition:
+      background 0.25s,
+      border-color 0.25s;
+  }
+  .where__tabs button strong {
+    font-size: 0.9rem;
+  }
+  .where__tabs button span {
+    font-size: 0.75rem;
+    color: var(--dim);
+  }
+  .where__tabs button:hover {
+    background: rgb(255 255 255 / 70%);
+  }
+  .where__tabs button[aria-selected="true"] {
+    background: #fff;
+    border-color: var(--line);
+    box-shadow: var(--shadow);
+  }
+  .where__tabs button[aria-selected="true"] strong {
+    color: var(--accent);
+  }
+
+  .where__panel {
+    padding: clamp(20px, 3.5vw, 40px);
+    display: grid;
+    align-content: center;
+    gap: 18px;
+    min-width: 0;
+    background:
+      radial-gradient(60% 80% at 100% 0%, rgb(15 157 99 / 10%), transparent 60%),
+      #fff;
+  }
+  .where__query {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line-2);
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .where__query svg {
+    color: var(--accent);
+  }
+  .where__query em {
+    margin-left: auto;
+    font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+  }
+  .where__label {
+    margin: 0 0 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .where__answer {
+    display: grid;
+    gap: 8px;
+  }
+  .where__answer:global(.is-swap) {
+    animation: swap 0.5s var(--ease);
+  }
+  @keyframes swap {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+  .biz {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+  }
+  .biz--you {
+    border-color: rgb(15 157 99 / 40%);
+    background: var(--good-soft);
+  }
+  .biz--you > span:nth-child(2) {
+    flex: 1;
+    display: grid;
+  }
+  .biz small {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .biz__pin {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
     display: grid;
     place-items: center;
     border-radius: 50%;
+    background: #c9d3d0;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .biz--you .biz__pin {
+    background: var(--good);
+  }
+  .biz__line {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--bg-2);
+  }
+  /* AI answers read as a sentence-style card rather than a list */
+  .where__panel[data-kind="ai"] .biz:not(.biz--you) {
+    display: none;
+  }
+  .where__panel[data-kind="ai"] .biz--you::before {
+    content: "AI";
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 7px;
+    border-radius: 8px;
     background: var(--ink);
-    box-shadow:
-      0 0 0 10px rgb(139 108 255 / 12%),
-      0 20px 50px -10px rgb(91 61 245 / 60%);
+    color: #fff;
   }
-  .hub__core svg {
-    width: 44px;
-    height: 44px;
+  .where__panel[data-kind="ai"] .biz--you .biz__pin {
+    display: none;
   }
-  .hub__pulse {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 2px solid var(--violet-2);
-    animation: pulse-ring 2.4s ease-out infinite;
-  }
-  .hub__out {
-    display: grid;
-    gap: 12px;
-  }
-  @media (min-width: 640px) {
-    .hub__out {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .hub__out .card {
-    padding: 18px 20px;
-  }
-  .hub__out h3 {
-    font-size: 0.98rem;
-    margin-bottom: 6px;
-  }
-  .hub__out p {
+  .where__note {
     margin: 0;
-    font-size: 0.82rem;
-    line-height: 1.5;
+    font-size: 0.75rem;
+    color: var(--dim);
   }
 
-  /* Desktop: true hub diagram with flowing lines */
-  @media (min-width: 1024px) {
-    .hub {
-      display: block;
-      height: 620px;
-    }
-    .hub::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 520px;
-      height: 520px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: radial-gradient(circle, rgb(139 108 255 / 20%), transparent 65%);
-      pointer-events: none;
-    }
-    .hub__sources {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 210px;
-      display: block;
-    }
-    .hub__sources li {
-      position: absolute;
-      left: 0;
-      top: calc(var(--y) * 1%);
-      transform: translateY(-50%);
-      flex-direction: row;
-      align-items: baseline;
-      gap: 8px;
-      white-space: nowrap;
-      transition:
-        transform 0.3s var(--ease),
-        border-color 0.3s;
-    }
-    .hub__sources li:hover {
-      transform: translate(6px, -50%);
-      border-color: var(--violet);
-    }
-    .hub__sources span {
-      display: none;
-    }
-    .hub__lines {
-      display: block;
-      position: absolute;
-      left: 200px;
-      right: 330px;
-      top: 0;
-      height: 100%;
-      width: calc(100% - 530px);
-      overflow: visible;
-    }
-    .hub__lines path {
-      fill: none;
-      stroke: #b9a9ff;
-      stroke-width: 1.2;
-      vector-effect: non-scaling-stroke;
-      stroke-dasharray: 4 6;
-      animation: dash 1.6s linear infinite;
-    }
-    .hub__lines path.out {
-      stroke: var(--violet);
-      stroke-dasharray: 6 6;
-    }
-    .hub__core {
-      position: absolute;
-      left: calc(200px + (100% - 530px) / 2);
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .hub__out {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 330px;
-      display: block;
-    }
-    .hub__out li {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: calc(var(--y) * 1%);
-      transform: translateY(-50%);
-    }
+  .pillars {
+    margin-top: 18px;
   }
-
+  .pillars .card {
+    padding: 22px;
+  }
+  .pillars__n {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .pillars h3 {
+    font-size: 1rem;
+  }
+  .pillars p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
   .ai__foot {
-    margin-top: 48px;
+    margin-top: 40px;
     display: grid;
     justify-items: center;
-    gap: 20px;
+    gap: 18px;
     text-align: center;
   }
   .ai__foot p {

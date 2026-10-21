@@ -1,6 +1,8 @@
 ---
 import "@fontsource-variable/instrument-sans/wght.css";
 import "@fontsource-variable/instrument-sans/wght-italic.css";
+import "@fontsource-variable/bricolage-grotesque/wght.css";
+import displayLatin from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2?url";
 import fontLatin from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
@@ -50,7 +52,8 @@ const jsonLd = schema.length
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
-    <meta name="theme-color" content="#f6f5fc" />
+    <meta name="theme-color" content="#f4f7f6" />
+    <link rel="preload" href={displayLatin} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={fontLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
