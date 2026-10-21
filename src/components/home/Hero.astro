@@ -6,8 +6,7 @@ import { site } from "../../data/site";
 
 const caseHref = "/case-studies/gbp-calls-growth";
 
-// Portrait: put the photo at src/assets/ratul-roy.(jpg|png|webp). It is optimized to
-// AVIF/WebP at build time. Without it, the geo-grid scanner becomes the main visual.
+// Portrait: src/assets/ratul-roy.(jpg|png|webp). Optimized to AVIF/WebP at build time.
 const portraits = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/ratul-roy.{jpg,jpeg,png,webp}",
   { eager: true },
@@ -17,15 +16,32 @@ const portrait = Object.values(portraits)[0]?.default;
 const rotating = ["Google Maps rankings", "GBP optimization", "near-me searches", "booked jobs"];
 const marquee = [...proofBadges, ...heroPoints];
 
-// Illustrative 7x7 geo-grid. "after": strong around the pin; "before": weak everywhere.
-const size = 7;
+// Rank dots orbiting the portrait: a circular geo-grid, best ranks on the inner ring.
+const rings = [
+  { r: 41, n: 10, rank: [1, 1, 2, 1, 1, 2, 1, 1, 2, 1] },
+  { r: 48.5, n: 14, rank: [2, 3, 2, 3, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3] },
+];
+const dots = rings.flatMap((ring, ri) =>
+  Array.from({ length: ring.n }, (_, i) => {
+    const a = (i / ring.n) * Math.PI * 2 - Math.PI / 2 + ri * 0.22;
+    return {
+      x: 50 + ring.r * Math.cos(a),
+      y: 50 + ring.r * Math.sin(a),
+      rank: ring.rank[i],
+      i: ri * 10 + i,
+    };
+  }),
+);
+
+// Compact before/after geo-grid
+const size = 5;
 const c = (size - 1) / 2;
 const cells = Array.from({ length: size * size }, (_, i) => {
   const x = i % size;
   const y = Math.floor(i / size);
   const d = Math.hypot(x - c, y - c);
-  const after = d < 1.2 ? 1 : d < 2 ? 2 : d < 2.6 ? 3 : d < 3.3 ? 4 : 7;
-  const before = d < 1 ? 6 : d < 2 ? 9 : 14;
+  const after = d < 1 ? 1 : d < 1.5 ? 2 : d < 2.3 ? 3 : 5;
+  const before = d < 1 ? 7 : d < 2 ? 11 : 15;
   return { after, before, d, pin: x === c && y === c };
 });
 const tone = (r: number) => (r <= 3 ? "g" : r <= 6 ? "m" : "l");
@@ -33,103 +49,83 @@ const label = (r: number) => (r > 9 ? "10+" : String(r));
 const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
 ---
 
-<section class="hero" aria-labelledby="hero-title">
+<section class="hero" aria-labelledby="hero-title" data-hero>
   <div class="hero__topo" aria-hidden="true"></div>
-  <div class="container hero__grid">
-    <div class="hero__copy">
-      <p class="hero__status" data-reveal>
-        <span class="live" aria-hidden="true"></span>
-        Accepting 2 new clients this month
-        <span class="hero__loc">· Based in Bangladesh · Serving worldwide</span>
-      </p>
-      <p class="hero__kicker" data-reveal style="--d:1">This is Ratul Roy</p>
-      <h1 id="hero-title" data-reveal style="--d:2">Local SEO Expert <span class="em">in Bangladesh</span></h1>
-      <p class="rotator" data-rotator aria-hidden="true" data-reveal style="--d:3">
-        <span>Your partner in</span>
-        <span class="rotator__words">
-          {rotating.map((w) => <span class="rotator__word" data-word>{w}</span>)}
-        </span>
-      </p>
-      <p class="hero__sub" data-reveal style="--d:4">
-        Google Maps ranking, GBP optimization and local search visibility that turns near-me
-        searches into booked jobs.
-      </p>
-      <p class="hero__strap" data-reveal style="--d:4">
-        Map Pack visibility. More qualified calls. Revenue-first Local SEO for Bangladesh.
-      </p>
-      <div class="btn-row" data-reveal style="--d:5">
-        <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Apply for Strategy Call</a>
-        <a class="btn btn--ghost" href="#results">See Results</a>
+
+  <div class="container hero__top">
+    <p class="hero__status" data-reveal>
+      <span class="live" aria-hidden="true"></span>
+      Accepting 2 new clients this month
+      <span class="hero__loc">· Based in Bangladesh · Serving worldwide</span>
+    </p>
+    <p class="hero__kicker" data-reveal style="--d:1">This is Ratul Roy</p>
+    <h1 id="hero-title" data-reveal style="--d:2">Local SEO Expert <span class="em">in Bangladesh</span></h1>
+    <p class="rotator" data-rotator aria-hidden="true" data-reveal style="--d:3">
+      <span>Your partner in</span>
+      <span class="rotator__words">
+        {rotating.map((w) => <span class="rotator__word" data-word>{w}</span>)}
+      </span>
+    </p>
+  </div>
+
+  <div class="container stage">
+    <div class="stage__art">
+    <!-- Lens: circular map with orbiting rank dots -->
+    <div class="lens" aria-hidden="true">
+      <div class="lens__disc"></div>
+      <div class="lens__orbit">
+        {
+          dots.map((d) => (
+            <span
+              class={`odot odot--${d.rank <= 1 ? "1" : d.rank <= 2 ? "2" : "3"}`}
+              style={`left:${d.x.toFixed(2)}%;top:${d.y.toFixed(2)}%;--i:${d.i}`}
+            >
+              {d.rank}
+            </span>
+          ))
+        }
       </div>
-      <div class="proofline" data-reveal style="--d:6">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <span><strong class="num">4.9</strong> · 243 reviews · Fiverr Level 2 Seller</span>
-        <a href={site.phoneHref}>Free 15-min consult →</a>
-      </div>
+      <div class="lens__ring"></div>
     </div>
 
-    <div class={`hero__visual${portrait ? " has-portrait" : ""}`} data-reveal style="--d:3">
+    <div class="stage__person" data-reveal style="--d:2">
       {
-        portrait && (
-          <figure class="portrait">
-            <Image
-              src={portrait}
-              alt="Ratul Roy, Local SEO expert in Bangladesh"
-              widths={[360, 540, 720, 960]}
-              sizes="(min-width: 1024px) 460px, 90vw"
-              loading="eager"
-              fetchpriority="high"
-              class="portrait__img"
-            />
-            <span class="tag-float tag-float--a"><span class="dotg" aria-hidden="true"></span>Top 3 Map Pack</span>
-            <span class="tag-float tag-float--b"><span class="stars" aria-hidden="true">★</span> 4.9 · 243 reviews</span>
-          </figure>
+        portrait ? (
+          <Image
+            src={portrait}
+            alt="Ratul Roy, Local SEO expert in Bangladesh"
+            widths={[360, 520, 680, 900]}
+            sizes="(min-width: 1024px) 520px, 88vw"
+            loading="eager"
+            fetchpriority="high"
+            class="portrait"
+          />
+        ) : (
+          <svg class="bigpin" viewBox="0 0 20 26" aria-hidden="true">
+            <path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor" />
+          </svg>
         )
       }
+      <span class="youarehere">
+        <svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"></path></svg>
+        Ratul Roy · {site.locality}, BD
+      </span>
+    </div>
 
-      <div class="scan card" data-scan data-state="after">
-        <div class="scan__head">
-          <div>
-            <p class="scan__title">Geo-grid ranking scan</p>
-            <p class="scan__sub">Illustrative 7×7 grid around one business</p>
-          </div>
-          <div class="scan__toggle" role="group" aria-label="Show rankings before or after Local SEO">
-            <button type="button" data-set="before" aria-pressed="false">Before</button>
-            <button type="button" data-set="after" aria-pressed="true">After</button>
-          </div>
-        </div>
-        <div class="scan__map">
-          <div class="scan__sweep" aria-hidden="true"></div>
-          <ul class="scan__grid" aria-hidden="true">
-            {
-              cells.map((cl) => (
-                <li
-                  class={`cell${cl.pin ? " cell--pin" : ""}`}
-                  style={`--d:${cl.d.toFixed(2)}`}
-                  data-a={label(cl.after)}
-                  data-b={label(cl.before)}
-                  data-ta={tone(cl.after)}
-                  data-tb={tone(cl.before)}
-                  data-tone={tone(cl.after)}
-                >
-                  <span>{label(cl.after)}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-        <div class="scan__foot">
-          <span><b class="num" data-after={top3("after")} data-before={top3("before")}>{top3("after")}</b>/49 points in the top 3</span>
-          <span class="scan__legend"><i class="g"></i>1–3 <i class="m"></i>4–6 <i class="l"></i>7+</span>
-        </div>
-      </div>
+    <!-- Floating cards (outer: mouse parallax, inner: idle float) -->
+    <div class="par par--chip1" data-depth="18">
+      <span class="chip-float"><span class="dotg" aria-hidden="true"></span>Top 3 Map Pack</span>
+    </div>
+    <div class="par par--chip2" data-depth="26">
+      <span class="chip-float"><span class="stars" aria-hidden="true">★</span> 4.9 · 243 reviews</span>
+    </div>
+    </div>
 
-      <a class="resultcard" href={caseHref}>
+    <div class="par par--result" data-depth="14">
+      <a class="resultcard glass" href={caseHref}>
         <span class="resultcard__label">Client result</span>
-        <span class="resultcard__row1">
-          <span class="resultcard__big num" data-count>461</span>
-          <span class="resultcard__desc">calls from Google Business Profile</span>
-        </span>
+        <span class="resultcard__big num" data-count>461</span>
+        <span class="resultcard__desc">calls from Google Business Profile</span>
         <span class="resultcard__row">
           <span><small>Profile interactions</small><b>+62%</b></span>
           <span><small>Map Pack position</small><b>Top 3</b></span>
@@ -137,17 +133,72 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
         <span class="text-link">Read the case study</span>
       </a>
     </div>
+
+    <div class="par par--scan" data-depth="22">
+      <div class="scan glass" data-scan>
+        <div class="scan__head">
+          <p class="scan__title">Geo-grid scan</p>
+          <div class="scan__toggle" role="group" aria-label="Show rankings before or after Local SEO">
+            <button type="button" data-set="before" aria-pressed="false">Before</button>
+            <button type="button" data-set="after" aria-pressed="true">After</button>
+          </div>
+        </div>
+        <ul class="scan__grid" aria-hidden="true">
+          {
+            cells.map((cl) => (
+              <li
+                class={`cell${cl.pin ? " cell--pin" : ""}`}
+                style={`--d:${cl.d.toFixed(2)}`}
+                data-a={label(cl.after)}
+                data-b={label(cl.before)}
+                data-ta={tone(cl.after)}
+                data-tb={tone(cl.before)}
+                data-tone={tone(cl.after)}
+              >
+                <span>{label(cl.after)}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="scan__foot">
+          <b class="num" data-after={top3("after")} data-before={top3("before")}>{top3("after")}</b>/25 points in the top 3 <span>· illustrative</span>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="container hero__body" data-reveal>
-    <p>
-      I'm Ratul Roy, a Local SEO expert in Bangladesh. I help local businesses dominate Google Maps
-      in every service area and turn near-me searches into booked jobs.
-    </p>
-    <p>
-      Not an agency. A dedicated SEO specialist in Bangladesh focused on Map Pack rankings, trust
-      signals, and call-driving local visibility.
-    </p>
+  <div class="container base">
+    <div class="base__left" data-reveal>
+      <div class="proofline">
+        <span class="avatars" aria-hidden="true"><span>SB</span><span>L2</span><span>★</span></span>
+        <span>
+          <span class="stars" aria-hidden="true">★★★★★</span> <strong class="num">4.9</strong> · 243 reviews<br />
+          <small>Fiverr Level 2 Seller</small>
+        </span>
+      </div>
+      <p>
+        I'm Ratul Roy, a Local SEO expert in Bangladesh. I help local businesses dominate Google
+        Maps in every service area and turn near-me searches into booked jobs.
+      </p>
+      <p>
+        Not an agency. A dedicated SEO specialist in Bangladesh focused on Map Pack rankings, trust
+        signals, and call-driving local visibility.
+      </p>
+    </div>
+    <div class="base__right" data-reveal style="--d:2">
+      <p class="base__sub">
+        Google Maps ranking, GBP optimization and local search visibility that turns near-me
+        searches into booked jobs.
+      </p>
+      <p class="base__strap">
+        Map Pack visibility. More qualified calls. Revenue-first Local SEO for Bangladesh.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Apply for Strategy Call</a>
+        <a class="btn btn--ghost" href="#results">See Results</a>
+      </div>
+      <a class="consult" href={site.phoneHref}>Free 15-min consult →</a>
+    </div>
   </div>
 
   <div class="strip">
@@ -176,14 +227,14 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
 </section>
 
 <script>
+  // Before/after scan toggle
   document.querySelectorAll<HTMLElement>("[data-scan]").forEach((scan) => {
     const cells = scan.querySelectorAll<HTMLElement>(".cell");
     const count = scan.querySelector<HTMLElement>("[data-after]");
     const buttons = scan.querySelectorAll<HTMLButtonElement>("[data-set]");
     const show = (state: "before" | "after") => {
-      scan.dataset.state = state;
       scan.classList.remove("is-scanning");
-      void scan.offsetWidth; // restart the scan animation
+      void scan.offsetWidth;
       scan.classList.add("is-scanning");
       cells.forEach((c) => {
         c.dataset.tone = (state === "after" ? c.dataset.ta : c.dataset.tb) ?? "";
@@ -195,15 +246,35 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
       buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === state)));
     };
     buttons.forEach((b) => b.addEventListener("click", () => show(b.dataset.set as "before" | "after")));
-    // Play the scan once when it scrolls into view.
-    const io = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        scan.classList.add("is-scanning");
-        io.disconnect();
-      }
-    });
-    io.observe(scan);
+    scan.classList.add("is-scanning");
   });
+
+  // Mouse parallax on the floating cards (desktop, motion allowed)
+  const hero = document.querySelector<HTMLElement>("[data-hero]");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (hero && !reduce && window.matchMedia("(pointer: fine)").matches) {
+    const layers = hero.querySelectorAll<HTMLElement>("[data-depth]");
+    let raf = 0;
+    hero.addEventListener("pointermove", (e) => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const r = hero.getBoundingClientRect();
+        const nx = (e.clientX - r.left) / r.width - 0.5;
+        const ny = (e.clientY - r.top) / r.height - 0.5;
+        layers.forEach((l) => {
+          const d = Number(l.dataset.depth) || 10;
+          l.style.translate = `${(-nx * d).toFixed(1)}px ${(-ny * d).toFixed(1)}px`;
+        });
+        hero.style.setProperty("--lx", `${(nx * 14).toFixed(1)}px`);
+        hero.style.setProperty("--ly", `${(ny * 14).toFixed(1)}px`);
+      });
+    });
+    hero.addEventListener("pointerleave", () => {
+      layers.forEach((l) => (l.style.translate = ""));
+      hero.style.setProperty("--lx", "0px");
+      hero.style.setProperty("--ly", "0px");
+    });
+  }
 </script>
 
 <style>
@@ -211,41 +282,35 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     position: relative;
     overflow: hidden;
     margin-top: -78px;
-    padding-top: calc(78px + clamp(36px, 6vw, 72px));
+    padding-top: calc(78px + clamp(28px, 4.5vw, 52px));
     background:
-      radial-gradient(45% 50% at 78% 40%, rgb(15 157 99 / 12%), transparent 70%),
-      radial-gradient(40% 40% at 10% 10%, rgb(255 122 102 / 12%), transparent 70%);
+      radial-gradient(38% 42% at 50% 62%, rgb(15 157 99 / 16%), transparent 70%),
+      radial-gradient(30% 30% at 20% 20%, rgb(255 122 102 / 12%), transparent 70%),
+      radial-gradient(30% 30% at 85% 15%, rgb(255 210 120 / 14%), transparent 70%);
   }
   .hero__topo {
     position: absolute;
     inset: 0;
-    background: url("/topo.svg") 0 0 / 1400px auto repeat;
-    opacity: 0.7;
-    mask-image: radial-gradient(70% 70% at 60% 40%, #000 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(70% 70% at 60% 40%, #000 30%, transparent 80%);
+    background: url("/topo.svg") 50% 0 / 1400px auto repeat;
+    opacity: 0.6;
+    mask-image: radial-gradient(60% 60% at 50% 55%, #000 25%, transparent 80%);
+    -webkit-mask-image: radial-gradient(60% 60% at 50% 55%, #000 25%, transparent 80%);
     pointer-events: none;
   }
-  .hero__grid {
+
+  /* ---------- Headline ---------- */
+  .hero__top {
     position: relative;
-    display: grid;
-    gap: 48px;
-    align-items: center;
-  }
-  @media (min-width: 1024px) {
-    .hero__grid {
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 56px;
-    }
-  }
-  .hero__copy {
-    min-width: 0;
+    z-index: 4;
+    text-align: center;
   }
   .hero__status {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
-    margin: 0 0 22px;
+    margin: 0 0 18px;
     padding: 6px 14px 6px 10px;
     border-radius: 999px;
     background: #fff;
@@ -279,20 +344,24 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     animation: pulse-ring 1.8s ease-out infinite;
   }
   .hero__kicker {
-    margin: 0 0 4px;
+    margin: 0 0 2px;
     font-weight: 500;
     color: var(--muted);
   }
   .hero h1 {
+    font-size: clamp(2.7rem, 7.4vw, 6.2rem);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
     margin-bottom: 14px;
   }
   .rotator {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0 0.35em;
-    margin: 0 0 22px;
+    margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+    font-size: clamp(1.25rem, 2.6vw, 1.75rem);
     font-weight: 600;
     letter-spacing: -0.02em;
     color: var(--ink-2);
@@ -329,81 +398,188 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     opacity: 0;
     transform: translateY(-60%);
   }
-  .hero__sub {
-    font-size: 1.1rem;
-    color: var(--ink);
-    max-width: 36em;
-  }
-  .hero__strap {
-    font-weight: 600;
-    font-size: 0.92rem;
-    color: var(--accent);
-  }
-  .hero .btn-row {
-    margin: 26px 0 22px;
-  }
-  .proofline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 14px;
-    font-size: 0.85rem;
-  }
-  .proofline a {
-    font-weight: 600;
-  }
 
-  .hero__visual {
+  /* ---------- Stage: lens + portrait + floating cards ---------- */
+  .stage {
     position: relative;
-    display: grid;
-    gap: 14px;
-    min-width: 0;
+    margin-top: -6px;
+    height: clamp(420px, 52vw, 640px);
   }
-
-  /* Portrait layout: photo on a contour card, scanner + result tucked over its lower edge */
-  .portrait {
-    position: relative;
-    margin: 0;
-    border-radius: 28px;
-    overflow: hidden;
-    aspect-ratio: 4 / 4.3;
-    max-width: 100%;
-    background:
-      url("/topo.svg") 50% 50% / 900px auto,
-      linear-gradient(180deg, #eef3f1, #dde6e3);
-    box-shadow: var(--shadow-lg);
-  }
-  .portrait__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 15%;
-    mix-blend-mode: multiply;
-  }
-  .tag-float {
+  .lens {
     position: absolute;
+    left: 50%;
+    bottom: -14%;
+    width: min(680px, 108vw);
+    aspect-ratio: 1;
+    translate: calc(-50% + var(--lx, 0px)) var(--ly, 0px);
+    transition: translate 0.6s var(--ease);
+    pointer-events: none;
+  }
+  .lens__disc {
+    position: absolute;
+    inset: 12%;
+    border-radius: 50%;
+    background:
+      url("/topo.svg") 40% 50% / 900px auto,
+      radial-gradient(circle at 50% 40%, #ffffff, #e7f1ed 70%);
+    box-shadow:
+      inset 0 0 0 1px rgb(15 157 99 / 18%),
+      0 40px 80px -30px rgb(16 42 40 / 35%);
+  }
+  .lens__ring {
+    position: absolute;
+    inset: 4%;
+    border-radius: 50%;
+    border: 1.5px dashed rgb(232 64 47 / 35%);
+    animation: spin 60s linear infinite;
+  }
+  .lens__orbit {
+    position: absolute;
+    inset: 0;
+    animation: spin 120s linear infinite;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .odot {
+    position: absolute;
+    width: clamp(20px, 3vw, 30px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(0.58rem, 1vw, 0.75rem);
+    font-weight: 700;
+    color: #fff;
+    background: var(--good);
+    box-shadow: 0 6px 14px -6px rgb(15 157 99 / 70%);
+    animation: odot-in 0.6s var(--ease) both;
+    animation-delay: calc(0.6s + var(--i) * 45ms);
+  }
+  .odot--2 {
+    background: #2fb57e;
+  }
+  .odot--3 {
+    background: #6cc9a1;
+  }
+  @keyframes odot-in {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3);
+    }
+  }
+
+  .stage__person {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: min(540px, 92vw);
+    translate: -50% 0;
+    z-index: 2;
+    display: grid;
+    justify-items: center;
+  }
+  .portrait {
+    width: 100%;
+    height: auto;
+    /* Melt the studio backdrop into the page and fade the base */
+    filter: grayscale(0.15) contrast(1.04);
+    mix-blend-mode: multiply;
+    mask-image:
+      radial-gradient(62% 70% at 50% 42%, #000 58%, transparent 74%),
+      linear-gradient(180deg, #000 70%, transparent 98%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+      radial-gradient(62% 70% at 50% 42%, #000 58%, transparent 74%),
+      linear-gradient(180deg, #000 70%, transparent 98%);
+    -webkit-mask-composite: source-in;
+  }
+  .bigpin {
+    width: 34%;
+    margin-bottom: 18%;
+    color: var(--accent);
+    filter: drop-shadow(0 20px 30px rgb(232 64 47 / 40%));
+    animation: float 5s ease-in-out infinite;
+  }
+  .youarehere {
+    position: absolute;
+    bottom: 12%;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 8px 14px;
     border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--ink);
-    background: rgb(255 255 255 / 88%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
-    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 14px 30px -12px rgb(15 26 28 / 60%);
   }
-  .tag-float--a {
-    left: 14px;
-    top: 18px;
+  .youarehere svg {
+    color: var(--accent-2);
   }
-  .tag-float--b {
-    right: 14px;
-    top: 30%;
+
+  .par {
+    position: absolute;
+    z-index: 3;
+    transition: translate 0.5s var(--ease);
+  }
+  .par > * {
+    animation: float 7s ease-in-out infinite;
+  }
+  .par--chip1 {
+    left: 21%;
+    top: 12%;
+  }
+  .par--chip2 {
+    right: 20%;
+    top: 26%;
+  }
+  .par--chip2 > * {
     animation-delay: -3s;
+  }
+  .par--result {
+    left: 0;
+    top: 40%;
+  }
+  .par--result > * {
+    animation-delay: -1.5s;
+  }
+  .par--scan {
+    right: 0;
+    top: 46%;
+  }
+  .par--scan > * {
+    animation-delay: -4.5s;
+  }
+  .glass {
+    background: rgb(255 255 255 / 78%);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgb(255 255 255 / 90%);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 80%) inset,
+      var(--shadow-lg);
+    border-radius: var(--radius);
+  }
+  .chip-float {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: rgb(255 255 255 / 85%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #fff;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
   }
   .dotg {
     width: 8px;
@@ -411,71 +587,82 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     border-radius: 50%;
     background: var(--good);
   }
-  .has-portrait .scan {
-    width: min(100%, 340px);
-    margin: -150px 0 0 -28px;
-    position: relative;
-    z-index: 2;
-    padding: 14px;
-  }
-  .has-portrait .scan__sub {
-    display: none;
-  }
-  .has-portrait .resultcard {
-    position: absolute;
-    right: -14px;
-    bottom: 24px;
+
+  .resultcard {
+    display: grid;
+    gap: 3px;
     width: 250px;
-    z-index: 3;
+    padding: 18px 20px;
+    color: var(--muted);
   }
-  .has-portrait .resultcard__row,
-  .has-portrait .resultcard .text-link {
-    display: none;
+  .resultcard:hover {
+    color: var(--muted);
   }
-  @media (max-width: 700px) {
-    .has-portrait .scan {
-      margin: -90px auto 0;
-    }
-    .has-portrait .resultcard {
-      position: static;
-      width: auto;
-    }
+  .resultcard__label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .resultcard__big {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .resultcard__desc {
+    font-size: 0.82rem;
+  }
+  .resultcard__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 10px 0 6px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .resultcard__row > span {
+    display: grid;
+  }
+  .resultcard__row small {
+    font-size: 0.7rem;
+  }
+  .resultcard__row b {
+    color: var(--good);
   }
 
   .scan {
-    padding: 18px;
-    box-shadow: var(--shadow-lg);
+    width: 250px;
+    padding: 14px;
   }
   .scan__head {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
   }
   .scan__title {
     margin: 0;
     font-family: var(--font-display);
     font-weight: 650;
+    font-size: 0.95rem;
     color: var(--ink);
-  }
-  .scan__sub {
-    margin: 0;
-    font-size: 0.75rem;
-    color: var(--dim);
   }
   .scan__toggle {
     display: inline-flex;
-    flex-shrink: 0;
     padding: 3px;
     border-radius: 999px;
     background: var(--bg-2);
   }
   .scan__toggle button {
     font: inherit;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 4px 9px;
     border: 0;
     border-radius: 999px;
     background: transparent;
@@ -489,46 +676,16 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     background: var(--ink);
     color: #fff;
   }
-  .scan__map {
-    position: relative;
-    overflow: hidden;
-    border-radius: 14px;
-    padding: clamp(10px, 2vw, 16px);
-    border: 1px solid var(--line);
-    background:
-      url("/topo.svg") 30% 40% / 900px auto,
-      linear-gradient(120deg, transparent 47%, rgb(16 42 40 / 6%) 47.5%, rgb(16 42 40 / 6%) 49.5%, transparent 50%),
-      linear-gradient(20deg, transparent 63%, rgb(16 42 40 / 5%) 63.5%, rgb(16 42 40 / 5%) 65%, transparent 65.5%),
-      #f7faf9;
-  }
-  .scan__sweep {
-    position: absolute;
-    inset: -50%;
-    background: conic-gradient(from 0deg, transparent 0deg, rgb(15 157 99 / 22%) 40deg, transparent 60deg);
-    opacity: 0;
-    pointer-events: none;
-  }
-  :global(.scan.is-scanning) .scan__sweep {
-    animation: sweep 1.6s var(--ease) 1;
-  }
-  @keyframes sweep {
-    0% {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: rotate(360deg);
-    }
-  }
   .scan__grid {
-    position: relative;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: clamp(5px, 1.2vw, 9px);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    padding: 10px;
+    border-radius: 12px;
+    background:
+      url("/topo.svg") 30% 40% / 700px auto,
+      #f5f9f7;
+    border: 1px solid var(--line);
   }
   .cell {
     aspect-ratio: 1;
@@ -536,7 +693,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    font-size: clamp(0.6rem, 1.3vw, 0.78rem);
+    font-size: 0.68rem;
     font-weight: 700;
     color: #fff;
     background: var(--good);
@@ -545,11 +702,10 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
       transform 0.3s var(--ease);
   }
   .cell:hover {
-    transform: scale(1.18);
+    transform: scale(1.15);
   }
   .cell[data-tone="g"] {
     background: var(--good);
-    box-shadow: 0 4px 12px -4px rgb(15 157 99 / 60%);
   }
   .cell[data-tone="m"] {
     background: var(--warn);
@@ -557,15 +713,14 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   .cell[data-tone="l"] {
     background: #c9d3d0;
     color: var(--ink-2);
-    box-shadow: none;
   }
   .cell--pin {
-    outline: 3px solid #fff;
-    box-shadow: 0 0 0 6px rgb(232 64 47 / 35%) !important;
+    outline: 2px solid #fff;
+    box-shadow: 0 0 0 5px rgb(232 64 47 / 35%);
   }
   :global(.scan.is-scanning) .cell {
     animation: pop 0.5s var(--ease) both;
-    animation-delay: calc(var(--d) * 110ms);
+    animation-delay: calc(var(--d) * 120ms);
   }
   @keyframes pop {
     from {
@@ -574,121 +729,146 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     }
   }
   .scan__foot {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 8px;
-    margin-top: 12px;
-    font-size: 0.8rem;
+    margin: 10px 0 0;
+    font-size: 0.75rem;
   }
   .scan__foot b {
     color: var(--ink);
-    font-size: 1rem;
-  }
-  .scan__legend {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--dim);
-  }
-  .scan__legend i {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    margin-left: 6px;
-  }
-  .scan__legend i.g {
-    background: var(--good);
-  }
-  .scan__legend i.m {
-    background: var(--warn);
-  }
-  .scan__legend i.l {
-    background: #c9d3d0;
-  }
-
-  .resultcard {
-    display: grid;
-    gap: 6px;
-    padding: 16px 20px;
-    border-radius: var(--radius);
-    background: var(--ink);
-    color: #b7c3c1;
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.4s var(--ease);
-  }
-  @media (min-width: 1024px) {
-    .hero__visual:not(.has-portrait) .resultcard {
-      margin: -40px 24px 0 -40px;
-      position: relative;
-      z-index: 2;
-    }
-  }
-  .resultcard:hover {
-    transform: translateY(-4px);
-    color: #b7c3c1;
-  }
-  .resultcard__label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-2);
-  }
-  .resultcard__row1 {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-  }
-  .resultcard__big {
-    font-family: var(--font-display);
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    color: #fff;
-  }
-  .resultcard__desc {
-    font-size: 0.85rem;
-  }
-  .resultcard__row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding-top: 8px;
-    border-top: 1px solid rgb(255 255 255 / 12%);
-  }
-  .resultcard__row > span {
-    display: grid;
-  }
-  .resultcard__row small {
-    font-size: 0.72rem;
-  }
-  .resultcard__row b {
-    color: #4ade9b;
-  }
-  .resultcard .text-link {
-    color: #fff;
-  }
-
-  .hero__body {
-    position: relative;
-    display: grid;
-    gap: 8px 40px;
-    margin-top: 48px;
     font-size: 0.95rem;
   }
-  @media (min-width: 900px) {
-    .hero__body {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .hero__body p {
-    margin: 0;
-    padding-left: 16px;
-    border-left: 2px solid var(--line-2);
+  .scan__foot span {
+    color: var(--dim);
   }
 
+  /* ---------- Base row ---------- */
+  .base {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    gap: 28px;
+    margin-top: 28px;
+  }
+  @media (min-width: 1024px) {
+    .base {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+  }
+  .base__left,
+  .base__right {
+    min-width: 0;
+    font-size: 0.95rem;
+  }
+  .proofline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .proofline small {
+    color: var(--muted);
+  }
+  .avatars {
+    display: flex;
+  }
+  .avatars span {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--ink);
+  }
+  .avatars span + span {
+    margin-left: -10px;
+  }
+  .avatars span:nth-child(2) {
+    background: var(--good);
+  }
+  .avatars span:nth-child(3) {
+    background: var(--accent);
+  }
+  .base__sub {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .base__strap {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--accent);
+  }
+  .base .btn-row {
+    margin: 20px 0 12px;
+  }
+  .consult {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .stage__art {
+    position: absolute;
+    inset: 0;
+  }
+  /* ---------- Responsive stage: art on top, cards in a row underneath ---------- */
+  @media (max-width: 1023px) {
+    .stage {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+    .stage__art {
+      position: relative;
+      width: 100%;
+      height: min(620px, 100vw);
+    }
+    .par--chip1 {
+      left: 4%;
+      top: 8%;
+    }
+    .par--chip2 {
+      right: 4%;
+      top: 24%;
+    }
+    .par--result,
+    .par--scan {
+      position: relative;
+      inset: auto;
+      margin-top: -36px;
+    }
+    .par--scan {
+      margin-top: 0;
+    }
+    .resultcard,
+    .scan {
+      width: min(300px, calc(100vw - 32px));
+    }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .par--scan {
+      margin-top: -36px;
+    }
+  }
+  @media (max-width: 560px) {
+    .chip-float {
+      font-size: 0.72rem;
+      padding: 7px 11px;
+    }
+    .youarehere {
+      font-size: 0.72rem;
+    }
+  }
+
+  /* ---------- Proof strip ---------- */
   .strip {
     position: relative;
     margin-top: clamp(40px, 6vw, 64px);
