@@ -47,7 +47,7 @@ sections:
       - { label: "03", title: Consultants and Experts, text: "Personal brands that want AI platforms to understand their expertise, services, credentials, and authority." }
       - { label: "04", title: SaaS and B2B Brands, text: "Companies that need visibility in problem-aware, comparison, and recommendation-based AI queries." }
       - { label: "05", title: "Healthcare, Legal & Professional Services", text: "Trust-heavy industries where E-E-A-T, content accuracy, and entity clarity are essential." }
-      - { label: "06", title: Not sure yet?, href: "/#free-audit", cta: Get an AI visibility audit, text: "Start with an audit of how AI platforms currently describe your business, then decide." }
+      - { label: "06", title: "Not sure yet?", href: "/#free-audit", cta: Get an AI visibility audit, text: "Start with an audit of how AI platforms currently describe your business, then decide." }
   - type: cards
     alt: true
     columns: 2

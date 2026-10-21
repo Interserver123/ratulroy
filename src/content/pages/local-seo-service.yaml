@@ -1,105 +1,292 @@
-title: "Local SEO Service Bangladesh | Google Maps Ranking"
-description: "Done-for-you Local SEO service in Bangladesh. Google Business Profile optimization, Google Maps ranking, and local website SEO that drives qualified calls."
+title: "Local SEO Services | Bangladesh & Worldwide | Ratul Roy"
+description: "Local SEO services from an independent specialist: Google Business Profile, Maps rankings, citations and reviews. Packages from $299. 4.9★ on 243 reviews."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
-  - { label: Local SEO Service, href: /local-seo-service }
+  - { label: Local SEO Services, href: /local-seo-service }
 eyebrow: Local SEO Services
-h1: "The Best Local SEO Service in Bangladesh"
-em: "Local SEO Service"
-lead: "Helping local service businesses dominate Google Maps, improve website SEO, and turn local searches into qualified inbound calls, built by a focused Local SEO expert, not a generic agency."
-heroChips: ["Fiverr Level 2 Seller", "4.9★ Rating", "243+ Reviews"]
+h1: "Local SEO Services for Small Businesses in Bangladesh & Worldwide"
+em: "Local SEO Services"
+lead: "Get into the Google Maps 3-pack for the searches that bring calls, then keep it. Google Business Profile, citations, reviews, location pages and technical fixes, run as one system by an independent specialist, not passed down an agency chain."
+heroBullets:
+  - "Packages from **$299**, no lock-in contracts"
+  - "You work directly with me, the person doing the work"
+  - "White-hat only: nothing that risks a suspension"
+heroImage: "cases/geo-grid-ranking.jpg"
+heroStats:
+  - { value: "4.9★", label: "Fiverr rating" }
+  - { value: "243", label: "Reviews" }
+  - { value: "$299", label: "Packages from" }
 ctas:
-  - { label: Book Strategy Call, href: /book-strategy-call }
-  - { label: Get Free Local SEO Audit, href: "/#free-audit", style: ghost }
+  - { label: Get a Free Local SEO Audit, href: "/#free-audit" }
+  - { label: See pricing, href: "#pricing", style: ghost }
+jumpNav: true
+intro:
+  - "**What are local SEO services?** Local SEO services are the work that makes a business appear, and look like the obvious choice, when someone nearby searches Google or Google Maps for what it sells. That means optimizing the Google Business Profile, keeping name, address and phone consistent across the web, earning reviews, and building website pages that confirm what you do and where."
 sections:
-  - type: list
-    eyebrow: Understanding Your Need
-    heading: "Why local businesses need a professional SEO service"
+  - type: factors
+    nav: How ranking works
+    id: how-ranking-works
+    eyebrow: How Google ranks local businesses
+    heading: "Three things decide who gets the Map Pack"
+    intro: "Google says local results are based mainly on [relevance, distance and prominence](https://support.google.com/business/answer/7091). Distance you cannot change. Everything in this service is aimed at the other two, which is where most profiles are weak."
+    stat: { value: "", label: "Map Pack" }
+    items:
+      - title: Relevance
+        label: Relevance
+        text: "How well your profile and website match the search. Categories, services, the business description and your service pages all feed it."
+        bullets: ["Correct primary and secondary categories", "Every service listed, with the words customers use", "Service and location pages that match the profile"]
+      - title: Distance
+        label: Distance
+        text: "How far your business is from the searcher, or from the area they named. It is fixed by your address, so the work is making sure Google places you precisely."
+        bullets: ["Pin on your actual entrance", "Service area set for where you really work", "No fake addresses: they get listings suspended"]
+      - title: Prominence
+        label: Prominence
+        text: "How well known and trusted the business is, online and off. Reviews, citations, links and mentions are what move it."
+        bullets: ["Steady flow of genuine reviews, all answered", "Consistent citations on the platforms that matter", "Local links, partners and press"]
+  - type: cards
+    nav: "What's included"
+    id: whats-included
+    alt: true
+    columns: 3
+    eyebrow: "What's included"
+    heading: "Everything a local business needs to rank on Maps, in one service"
+    intro: "Each part supports the others. Google cross-checks your profile against your website and the rest of the web, so working on one in isolation is slower."
+    items:
+      - title: Google Business Profile optimization
+        href: /google-business-profile-optimization
+        cta: GBP service in detail
+        text: "Categories, services, products, description, attributes, hours, photos and posts, set up the way Google reads them."
+        bullets: ["Primary & secondary categories", "Services and products with real descriptions", "Posting and photo routine"]
+      - title: Local keyword & area research
+        text: "The exact service + area phrases your customers search, mapped to the profile and to the right page on your site."
+        bullets: ["Service + city and near-me sets", "Area-level terms (e.g. Dhanmondi, Uttara)", "Competitor gap analysis"]
+      - title: Citations & NAP consistency
+        text: "One name, address and phone everywhere it appears. Wrong and duplicate listings are found and cleaned up first."
+        bullets: ["Bing Places, Apple Business Connect, Facebook", "Yelp and industry or country directories", "Duplicate listing clean-up"]
+      - title: Reviews & reputation
+        text: "A request routine your staff will actually follow, replies to every review, and no fake or incentivised reviews, ever."
+        bullets: ["Review request links and scripts", "Reply templates in your voice", "Monitoring across platforms"]
+      - title: Location & service-area pages
+        text: "Pages that confirm each service and each area you cover, written to be useful rather than the same template with the city swapped."
+        bullets: ["Service pages per core offer", "Area pages for real coverage", "Internal links to and from the profile"]
+      - title: On-page & technical SEO
+        href: /technical-seo
+        cta: Technical SEO service
+        text: "Titles, headings, internal links, speed on mobile data, crawl and index fixes, so the website supports the profile."
+        bullets: ["Core Web Vitals on mobile", "Crawl and indexing fixes", "On-page structure"]
+      - title: LocalBusiness schema & entity signals
+        text: "Structured data that states your business facts plainly for Google and AI assistants."
+        bullets: ["LocalBusiness, Service, FAQ schema", "sameAs links to your real profiles", "Consistent entity details"]
+      - title: Local links & mentions
+        text: "Links and mentions from local partners, associations, suppliers and press. No link farms or paid networks."
+        bullets: ["Partner and supplier links", "Local associations and events", "Unlinked mention reclaim"]
+      - title: AI search readiness
+        href: /generative-engine-optimization
+        cta: GEO service
+        text: "Clear, consistent facts that Google AI Overviews, ChatGPT and Gemini can quote when someone asks for a recommendation."
+        bullets: ["Question-led content", "Entity consistency", "Citations on trusted sources"]
+  - type: pricing
+    nav: Pricing
+    id: pricing
+    eyebrow: Packages & pricing
+    heading: "Local SEO packages, starting from $299"
+    intro: "Prices depend on how competitive your category and area are, how many locations you have, and how much groundwork your profile and website still need. The starting package is fixed; the larger ones are scoped after the audit so you are not paying for work you don't need."
+    tiers:
+      - name: Local Foundation
+        price: "From $299"
+        unit: one location
+        for: "A single location that needs the basics done properly."
+        text: "The profile, the listings and the on-page basics fixed in one go. A good start if you have never had Local SEO done."
+        bullets: ["Full Local SEO audit", "Google Business Profile optimization", "Citation audit and NAP fixes", "Review request setup", "On-page fixes for your main pages", "Geo-grid baseline report"]
+        receive: "Optimized profile, clean listings, and a prioritised plan"
+        cta: { label: Start with the audit, href: "/#free-audit" }
+      - name: Local Growth
+        price: Custom
+        unit: monthly, scoped after audit
+        featured: true
+        for: "One location in a competitive category that wants Map Pack positions."
+        text: "Everything in Foundation, then the ongoing work that moves prominence month after month."
+        bullets: ["Everything in Local Foundation", "Monthly profile posts and photos", "Citation building and clean-up", "Service and area pages", "Local links and mentions", "Monthly geo-grid and calls report"]
+        receive: "Ongoing ranking work with a report you can read in two minutes"
+        cta: { label: Book a strategy call, href: /book-strategy-call }
+      - name: Multi-Location
+        price: Custom
+        unit: per location, scoped
+        for: "Several branches, or a service area spread over many districts or cities."
+        text: "Each real location gets its own verified profile, pages and tracking, run from one plan."
+        bullets: ["Everything in Local Growth", "Per-location profiles and pages", "Location-level geo-grid tracking", "Consistent NAP across all branches", "Roll-up report across locations"]
+        receive: "One system across every location, reported per branch"
+        cta: { label: Get a quote, href: /book-strategy-call }
+    note: "No lock-in contracts. Final scope and price are agreed in writing before any work starts. See [what Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh) for how pricing is worked out."
+  - type: steps
+    nav: Process
+    id: process
+    eyebrow: How I work
+    heading: "How a Local SEO engagement runs, step by step"
+    items:
+      - { title: Audit, text: "Profile, website, citations, reviews and competitors, plus a geo-grid scan to see where you rank across your area today." }
+      - { title: "Keyword & area research", text: "The searches worth winning, mapped to the profile and to pages, and the areas where you can realistically compete." }
+      - { title: "Profile & on-site fixes", text: "Categories, services, pin, hours, photos, then the website pages and technical issues holding the profile back." }
+      - { title: "Citations & NAP clean-up", text: "Duplicates merged, wrong details corrected, then consistent listings built on the platforms that matter for you." }
+      - { title: "Reviews, links & content", text: "The prominence work: a review routine, local links and mentions, and posts that keep the profile active." }
+      - { title: "Report & refine", text: "Monthly geo-grid, calls and direction requests. Weak areas get the next month's attention." }
+  - type: timeline
+    nav: Timeline
+    id: timeline
+    alt: true
+    eyebrow: What to expect
+    heading: "A realistic Local SEO timeline"
+    intro: "Nobody can guarantee a Map Pack position, and Google says you cannot pay for a better local ranking. What can be promised is the work, and roughly when it tends to show."
+    items:
+      - label: Month 1
+        title: Fix the foundation
+        text: "Audit, profile optimization, pin and category fixes, duplicate clean-up."
+        meta: "Errors gone. Quick wins appear when a wrong category or pin was the problem."
+      - label: Months 2–3
+        title: Build relevance
+        text: "Citations, service and area pages, review routine running, first local links."
+        meta: "Visibility starts spreading out from your address on the geo-grid."
+      - label: Months 4–6
+        title: Grow prominence
+        text: "Review velocity, links and mentions, content for the weak areas of the grid."
+        meta: "In most categories this is when stable Map Pack positions and call growth show."
+      - label: "6 months +"
+        title: Compound and defend
+        text: "Hold positions, expand to new services or areas, keep the profile active."
+        meta: "Rankings that hold because the signals behind them are real."
     body:
-      - "If you run a service business in Bangladesh, most of your future customers search on Google before they call. They tap *near me*, compare the top 3 map pack listings, scan reviews, and pick one, usually within a minute. A professional Local SEO service makes sure that one is you."
+      - "Crowded categories in big cities take longer than a quiet category in a smaller town. The full picture is in [how long Local SEO takes](/blog/how-long-local-seo-takes-bangladesh)."
+  - type: problems
+    nav: Not on Maps?
+    id: not-on-maps
+    eyebrow: Diagnosis
+    heading: "Why your business isn't showing on Google Maps"
+    intro: "When a business is missing from the map pack, it is almost always one of these. The free audit checks every one."
+    items:
+      - { title: "Profile unverified, suspended or incomplete", text: "An unverified profile does not show at all, and a thin one rarely beats a complete competitor." }
+      - { title: Wrong primary category, text: "The single most common cause. A dentist listed as *Medical clinic* competes for the wrong searches." }
+      - { title: "NAP mismatches and duplicates", text: "Two listings for one business split reviews and confuse Google about which one is real." }
+      - { title: Pin in the wrong place, text: "A pin dropped on the wrong side of a busy road changes who sees you. Common in Bangladesh, where addresses are written by landmark." }
+      - { title: Too few or stale reviews, text: "Competitors with a steady stream of recent reviews look more trustworthy to Google and to customers." }
+      - { title: "A website that doesn't back it up", text: "No page for the service, slow on mobile, or details that differ from the profile." }
+    body:
+      - "More detail, with how to fix each one, in [why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps)."
+  - type: list
+    nav: Reporting
+    id: reporting
+    alt: true
+    eyebrow: Reporting
+    heading: "What you'll see in your monthly report"
+    body:
+      - "Numbers that map to revenue, not a single flattering ranking screenshot. Every report ends with what I am doing next month and why."
     bullets:
-      - Get found in Google Maps for near-me searches
-      - Improve website visibility in local search results
-      - Increase inbound calls from qualified local buyers
-      - Be seen as the trusted authority in your city
+      - "**Geo-grid rankings** across your service area, month on month"
+      - "**Calls** from your Google Business Profile"
+      - "**Direction requests** and website clicks from the profile"
+      - "**Organic rankings** for your service + area keywords"
+      - "**Website conversions** from GA4 and Search Console"
+      - "**Reviews** gained, average rating and replies sent"
+      - "**Citations** built or corrected"
+      - "**Next month's plan**, in plain language"
   - type: cards
+    nav: Who it's for
+    id: who-its-for
+    columns: 3
+    eyebrow: Who it's for
+    heading: "Built for businesses that depend on local calls"
+    items:
+      - { title: Home & trade services, href: /seo-for-home-services, cta: Home services SEO, text: "Plumbers, electricians, HVAC, roofers, cleaners, pest control, movers and towing, where the first three Maps results take most of the calls." }
+      - { title: Clinics & professionals, href: /industries, cta: All industries, text: "Dentists, clinics, diagnostic centres, lawyers and real estate, where trust signals and reviews decide who gets chosen." }
+      - { title: "Shops, showrooms & restaurants", href: /local-seo-dhaka, cta: Local SEO in Dhaka, text: "Walk-in businesses competing in crowded areas, where pin accuracy and photos matter most." }
+      - { title: Service-area businesses, text: "No storefront? The profile is set up as a service-area business, with pages for the areas you really cover, and no fake addresses." }
+      - { title: Multi-location brands, text: "Each real branch gets its own verified profile, pages and tracking, reported per location." }
+      - { title: Clients outside Bangladesh, text: "The ranking system is the same in any country. I work remotely with clients worldwide, in English, with calls on WhatsApp or Zoom at a time that suits your time zone." }
+  - type: stats
+    nav: Results
+    id: results
+    eyebrow: Proof
+    heading: "Results from real Local SEO campaigns"
+    intro: "From the [GBP calls case study](/case-studies/gbp-calls-growth) and the [service-area visibility case study](/case-studies/map-pack-service-areas)."
+    items:
+      - { title: calls from one Business Profile, value: "461" }
+      - { title: profile interactions, value: "+62%" }
+      - { title: Map Pack visibility, value: "+38%" }
+      - { title: direction requests, value: "+27%" }
+  - type: compare
+    nav: SEO vs Ads
+    id: local-seo-vs-ads
     alt: true
-    columns: 3
-    eyebrow: "What's Inside"
-    heading: "Advanced Local SEO, built layer by layer"
-    intro: "A complete Local SEO system covering Google Maps, GBP, citations, reviews, technical SEO, schema, and AI search visibility, designed for serious local businesses in Bangladesh."
-    items:
-      - title: Google Business Profile Optimization
-        text: "Transform your GBP into a high-converting ranking asset with optimized categories, services, posts, and trust signals built for the Bangladesh local market."
-        bullets: ["Primary & secondary categories", "Services & products setup", "Posts and photo strategy"]
-      - title: Google Maps Ranking & Map Pack Visibility
-        text: "Dedicated map pack strategy to move your business into the top 3 Google Maps positions for high-intent local keywords."
-        bullets: ["Proximity & relevance signals", "Geo-grid rank tracking", "Competitor map analysis"]
-      - title: Citation Building & NAP Consistency
-        text: "Strengthen local trust signals with consistent Name, Address, Phone listings across the highest-authority directories in Bangladesh and globally."
-        bullets: ["Citation audit & cleanup", "NAP consistency fixes", "Local directory optimization"]
-      - title: Reviews & Reputation Signals
-        text: "Build review velocity, rating quality, and a reputation engine that doubles as a long-term ranking signal."
-        bullets: ["Review generation systems", "Response strategy", "Rating recovery & protection"]
-      - title: Technical SEO & Website Optimization
-        text: "Clean technical foundations, Core Web Vitals, crawlability, mobile UX, so your site supports Maps rankings instead of holding them back."
-        bullets: ["Core Web Vitals", "Crawl & indexation fixes", "Mobile-first UX"]
-      - title: Schema & Entity SEO for Local Business
-        text: "LocalBusiness, Service, FAQ, and Organization schema that helps Google and AI systems understand exactly who you are and what you do."
-        bullets: ["LocalBusiness & Service schema", "FAQ & HowTo markup", "Entity & sameAs signals"]
-      - title: "AI Search Readiness, GEO / AIO / LLM"
-        text: "Prepare your business for AI-powered discovery across Google AI Overviews, ChatGPT, Gemini, and Perplexity. The next layer of Local SEO."
-        bullets: ["Generative Engine Optimization", "AI Overview readiness audit", "LLM visibility signals"]
-      - title: Local Keyword & Search Intent Mapping
-        text: "Targeting the exact phrases your customers search, including service + city, near-me, and buyer-intent keywords, and mapping them to the right page."
-        bullets: ["Service + city keyword sets", "Buyer-intent mapping", "Content gap analysis"]
-      - title: Metrics, Tracking & Analytics
-        text: "Transparent monthly reporting on rankings, calls, conversions, and revenue impact, so you always know what your SEO investment is doing."
-        bullets: ["Rank & call tracking", "GA4 & GBP insights", "Monthly growth reports"]
+    eyebrow: Local SEO vs Google Ads
+    heading: "Local SEO vs Google Ads: which should you pay for?"
+    intro: "Both put you on page one. They behave very differently once you stop paying."
+    table:
+      columns: ["Local SEO", "Google Ads (PPC)"]
+      highlight: 0
+      rows:
+        - { label: "Where you appear", cells: ["Map Pack, Google Maps and organic results", "Sponsored slots above the results"] }
+        - { label: "How you pay", cells: ["Fixed project or monthly fee", "Every click, at auction prices"] }
+        - { label: "Time to results", cells: ["Weeks for fixes, usually 3–6 months for stable positions", "As soon as the campaign is live"] }
+        - { label: "When you stop paying", cells: ["Rankings mostly hold while signals stay current", "Visibility stops the same day"] }
+        - { label: "Builds reviews & trust", cells: ["yes", "no"] }
+        - { label: "Good for testing new offers fast", cells: ["no", "yes"] }
+    body:
+      - "Many businesses run both: ads for immediate leads while Local SEO builds the position that does not need a daily budget. The longer version is in [Local SEO vs Google Ads](/blog/local-seo-vs-google-ads-bangladesh)."
   - type: cards
+    nav: Why me
+    id: why-me
     columns: 3
-    eyebrow: Why Choose Me
-    heading: "Why choose Ratul Roy"
+    eyebrow: Why an independent specialist
+    heading: "Why work with me instead of an agency"
     items:
-      - { title: Focused Local SEO Specialist, text: "Not a generalist agency, a dedicated Local SEO expert in Bangladesh focused on map pack and local search wins." }
-      - { title: "Proven Google Maps & GBP Results", text: "Real ranking improvements, real call volume, backed by case studies and 243+ verified Fiverr reviews." }
-      - { title: "Advanced Technical & Website SEO", text: "Schema, Core Web Vitals, on-page structure, the full technical foundation behind every Local SEO campaign." }
-      - { title: "AI & GEO-Ready Strategies", text: "Future-proofed for AI Overviews, ChatGPT, Gemini, and Perplexity, the next visibility battleground." }
-      - { title: "ROI & Calls Focused", text: "Strategy is measured in qualified inbound calls and revenue, not vanity rankings or fluff metrics." }
-      - { title: Transparent Reporting, text: "Monthly reports on rankings, calls, and growth, so you always know exactly what your SEO is producing." }
+      - { title: Direct access, text: "You talk to the person doing the work. No account manager relaying instructions to a junior." }
+      - { title: Local SEO only, text: "No ads, social or design upsells. Every hour goes into Maps visibility, the profile and the pages behind it." }
+      - { title: Named deliverables, text: "You know exactly what gets done each month, and the report shows it." }
+      - { title: White-hat only, text: "No keyword-stuffed business names, fake addresses, fake reviews or link networks. They work briefly, then get listings suspended." }
+      - { title: No lock-in, text: "No long contracts. The work has to earn the next month." }
+      - { title: Proven on Fiverr, text: "Level 2 seller, 4.9★ across 243 reviews from clients who paid for the work." }
   - type: quotes
-    alt: true
-    eyebrow: Client Voices
-    heading: "Real results from real local businesses"
+    eyebrow: Client voices
+    heading: "What local business owners say"
     quotes:
       - { quote: "Within 90 days my plumbing business was ranking #1 in the Dhaka map pack. Calls more than tripled. Best SEO investment I've ever made.", name: "Arif H.", meta: "Plumbing Services · Dhaka" }
       - { quote: "Ratul is the best Local SEO expert in Bangladesh, period. The technical work behind the rankings is on another level.", name: "Sadia R.", meta: "Dental Clinic · Chattogram" }
       - { quote: "Our Google Business Profile finally started generating real leads. Reviews, calls, direction requests, everything went up.", name: "Mehedi K.", meta: "Auto Repair · Sylhet" }
 showResults: true
 showCases: true
-faqHeading: "Everything You Need to Know About Local SEO & Google Maps Ranking"
+pricing: none
+faqHeading: "Local SEO Services: Frequently Asked Questions"
 faqs:
-  - q: "What is Local SEO and why do I need it for my business?"
-    a: "Local SEO helps your business appear in Google Maps, local searches, and near-me searches across Bangladesh, driving qualified phone calls, direction requests, and walk-in customers from people who are ready to buy in your service area."
-  - q: "How long does it take to see results from Local SEO services?"
-    a: "Depending on competition, your website structure, and Google Business Profile signals, most local businesses see measurable ranking and call improvements within 3-6 months, with compounding results over time."
-  - q: "Do you provide Google Business Profile optimization?"
-    a: "Yes. Every engagement includes full GBP optimization: categories, services, description, photos, posts, Q&A, reviews, and local citations, all tuned to improve Maps ranking and conversion."
-  - q: "Can you guarantee top Google Maps ranking?"
-    a: "No ethical SEO expert can guarantee specific rankings, but the data-driven Local SEO system used here is built to maximize your map pack presence, local visibility, and inbound leads in a sustainable, Google-safe way."
-  - q: "Do you handle citations, reviews, and technical SEO?"
-    a: "Yes. Every Local SEO project includes NAP consistency, authoritative citation building, review velocity strategy, website SEO, schema markup, and entity optimization for both Google and AI search."
-  - q: "Do you provide reports or tracking?"
-    a: "You get transparent monthly reports showing ranking progress, call tracking, GBP insights, conversions, and AI search visibility improvements, so you always know exactly what your SEO investment is producing."
-  - q: "Can your service work for multiple locations?"
-    a: "Yes. Using GEO, service-area optimization, and geo-grid tracking, your business can rank across multiple cities, districts, and neighborhoods, ideal for multi-branch service businesses in Bangladesh."
-  - q: "What makes you the best Local SEO expert in Bangladesh?"
-    a: "A pure focus on Local SEO, advanced technical and schema work, AI search readiness (GEO / AIO / LLM), transparent reporting, and a proven track record of moving service businesses into the top 3 Google Maps positions."
-related: [guide, gbp, technical, services, cases, book]
+  - q: "What is included in your local SEO services?"
+    a: "Google Business Profile optimization, local keyword and area research, citation clean-up and building, a review routine, service and area pages, on-page and technical fixes, LocalBusiness schema, local links, and monthly reporting. What runs each month depends on your package; the starting package covers the audit and foundation work."
+  - q: "How much do local SEO services cost?"
+    a: "Packages start from $299 for one location. Ongoing and multi-location work is scoped after the audit, because competition, the number of locations and the state of your profile decide the work. See [what Local SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh)."
+  - q: "How long does local SEO take to show results?"
+    a: "Fixes such as a wrong category or misplaced pin can move things within weeks. Stable Map Pack positions usually take three to six months of consistent work, longer in crowded categories in big cities."
+  - q: "How do I get my business into the Google Maps 3-pack?"
+    a: "Be as relevant and prominent as possible for the searches near you: correct categories and services, a precise pin, consistent citations, a steady flow of genuine reviews, and a website that confirms the same details. Distance from the searcher is the one factor nobody can change."
+  - q: "Can you guarantee a #1 ranking on Google Maps?"
+    a: "No, and you should be wary of anyone who does. Google states that you cannot pay for or request a better local ranking. What I can commit to is the work, done properly, and honest reporting on what it produces."
+  - q: "Do I need a website for local SEO?"
+    a: "You can rank on Maps without one, but a profile backed by a fast website that confirms your services and areas is stronger and converts better. If you have no site, the starting work focuses on the profile and listings."
+  - q: "Is local SEO worth it for a small business?"
+    a: "For businesses that depend on nearby customers, usually yes. The Map Pack sits above the organic results for local searches, and unlike ads, positions do not disappear the day you stop paying."
+  - q: "Can local SEO work for multiple locations or a business with no storefront?"
+    a: "Yes. Each real branch gets its own verified profile and pages. Service-area businesses hide their address and list the areas they serve. Adding addresses you do not occupy breaks Google's guidelines and is never done."
+  - q: "What will I see in the monthly report?"
+    a: "Geo-grid rankings across your area, calls, direction requests and website clicks from the profile, organic rankings, conversions, reviews gained, citations built, and the plan for next month."
+  - q: "Is there a contract or minimum term?"
+    a: "No lock-in contracts. Scope and price are agreed in writing before work starts, and ongoing work continues month to month."
+  - q: "Do you work with businesses outside Bangladesh?"
+    a: "Yes. The system is the same in any country. Clients abroad work with me remotely in English, with calls on WhatsApp or Zoom at a time that fits their time zone."
+  - q: "What happens if my Google Business Profile gets suspended?"
+    a: "Suspensions are appealed with the evidence Google asks for, usually proof of the premises and your right to operate there. Nobody can guarantee reinstatement, so the work is designed never to cause one."
+  - q: "How is local SEO different from regular SEO?"
+    a: "Regular SEO competes for rankings anywhere. Local SEO competes for searches with local intent, where the Map Pack and Google Business Profile matter as much as the website. Full comparison in [Local SEO vs traditional SEO](/blog/local-seo-vs-traditional-seo)."
+related: [guide, gbp, technical, home-services, cases, book]
 finalCta:
-  heading: "Ready to Get the Best Local SEO Service in Bangladesh?"
-  text: "Book a free audit or strategy call to see how your local business can dominate Google Maps and local search, and turn it into qualified inbound calls."
+  heading: "Find out what's keeping you out of the Map Pack"
+  text: "Get a free Local SEO audit: your profile, pin, categories, citations, reviews and website, checked against the businesses outranking you."
   buttons:
     - { label: Get Free Local SEO Audit, href: "/#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call }

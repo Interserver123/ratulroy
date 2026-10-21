@@ -1,103 +1,253 @@
-title: "Google Business Profile Optimization Service | GBP Optimization Expert"
-description: "Rank in the Google Map Pack and turn local searches into calls. Full Google Business Profile optimization: categories, photos, posts, reviews, citations."
+title: "Google Business Profile Optimization Service | From $299"
+description: "Get found on Google Maps. Hands-on Google Business Profile optimization, guideline-safe and tracked with geo-grids, by Ratul Roy. Packages from $299."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
   - { label: GBP Optimization, href: /google-business-profile-optimization }
 eyebrow: Google Business Profile Optimization
-h1: "Rank Higher on Google Maps With a Fully Optimized Business Profile"
-em: "Rank Higher on Google Maps"
-lead: "A done-for-you Google Business Profile optimization service that fixes weak categories, citations, reviews and on-site signals so your business ranks in the Google Map Pack and converts searches into calls."
-heroChips: ["Map Pack ranking", "Geo-grid tracking", "Citation cleanup", "Review strategy"]
+h1: "Google Business Profile Optimization Service That Gets You Found on Google Maps"
+em: "Found on Google Maps"
+lead: "Every field of your profile set up the way Google reads it, the problems that hold it back fixed, and the results tracked across your whole service area. Done by me directly, within Google's guidelines, so the gains last."
+heroChips: ["Fiverr Level 2 · 4.9★ (243 reviews)", "Geo-grid tracking", "Suspension & verification help", "White-hat only"]
 heroImage: "cases/gbp-calls-performance.jpeg"
 heroStats:
-  - { value: "461", label: "Calls from GBP" }
+  - { value: "461", label: "Calls, Apr–Aug 2024" }
   - { value: "+62%", label: "Interactions" }
   - { value: "Top 3", label: "Map Pack" }
 ctas:
   - { label: Get a Free GBP Audit, href: "/#free-audit" }
-  - { label: "See GBP case studies", href: /case-studies/gbp-calls-growth, style: ghost }
+  - { label: "See the case study", href: /case-studies/gbp-calls-growth, style: ghost }
+jumpNav: true
+intro:
+  - "**What is Google Business Profile optimization?** It is completing and correcting every part of your Google Business Profile (formerly Google My Business): the right categories, services, description, hours, photos and posts, a steady flow of answered reviews, and details that match your website, so Google can confidently show you for nearby searches and searchers choose you."
 sections:
-  - type: cards
-    columns: 4
-    eyebrow: Local Ranking Signals
-    heading: "What I optimize to improve Google Maps visibility"
-    intro: "Eight connected layers across your Google Business Profile, website, citations, reviews and tracking, built into one local SEO system."
-    items:
-      - { label: "01", title: "GBP Category & Service Optimization", text: "Primary + secondary categories, services, products and a keyword-rich business description so Google understands exactly what you should rank for.", tags: ["GBP Optimization", "Service Relevance"] }
-      - { label: "02", title: "Local Keyword & Search Intent Mapping", text: "Map your services to near-me, city-based and buyer-ready keywords so your profile + landing pages target real local demand.", tags: ["Local Keywords", "Near-Me Intent"] }
-      - { label: "03", title: "Geo-Grid Ranking Tracking", text: "Google Maps rankings change by location. Geo-grid tracking shows exactly where you rank across your service area so we improve weak zones.", tags: ["Geo-Grid", "Map Pack Visibility"] }
-      - { label: "04", title: "Review & Reputation Signals", text: "Review velocity, keyword-rich responses and reputation strategy that builds trust with Google and turns searchers into callers.", tags: ["Review Signals", "GBP Trust"] }
-      - { label: "05", title: "Citation & NAP Consistency", text: "Consistent name, address and phone across the top local citation sites so Google trusts your business entity.", tags: ["Local Citations", "NAP Consistency"] }
-      - { label: "06", title: "Website SEO That Supports Maps", text: "Service pages, location pages, internal links and on-page SEO that reinforce your GBP and lift Map Pack rankings.", tags: ["On-Page SEO", "Service Pages"] }
-      - { label: "07", title: "Schema, Entity & Trust Signals", text: "LocalBusiness, Service and FAQ schema plus entity-building so Google understands who you are, what you offer and where you serve.", tags: ["LocalBusiness Schema", "Entity SEO"] }
-      - { label: "08", title: "Behavior, Engagement & Conversion Signals", text: "Calls, direction requests, profile views, photos and engagement, tracked and tuned to maximise inbound leads from Maps.", tags: ["GBP Engagement", "Inbound Calls"] }
-  - type: images
+  - type: audit
+    nav: Free checklist
+    id: checklist
+    eyebrow: "GBP optimization checklist"
+    heading: "Score your own profile in two minutes"
+    intro: "This is the field-by-field checklist I work through on every profile. Tick what yours already has and see where the gaps are."
+    blocks:
+      - heading: Identity & location
+        bullets:
+          - "**Business name** exactly as on your signage, with no added keywords or city"
+          - "**Address and pin** on your actual entrance, or address hidden if you are a service-area business"
+          - "**Service areas** set to where you really work"
+          - "**Phone and website** matching your site and other listings"
+      - heading: Relevance
+        bullets:
+          - "**Primary category** that matches your main service"
+          - "**Secondary categories** for the other services you genuinely offer"
+          - "**Services list** complete, with short descriptions"
+          - "**Products** added where you sell specific items or packages"
+          - "**Business description** that says what you do and where, written for people"
+      - heading: Trust & engagement
+        bullets:
+          - "**Regular hours and special hours** (holidays, Friday) kept accurate"
+          - "**Attributes** filled in (accessibility, payments, amenities)"
+          - "**Real photos**: exterior, interior, team and work, added regularly"
+          - "**Logo and cover photo** set and on-brand"
+          - "**Google Posts** published at least monthly"
+      - heading: Reviews & tracking
+        bullets:
+          - "**A review request link** your team actually sends"
+          - "**Every review replied to**, good and bad"
+          - "**Booking, messaging or appointment link** where it applies"
+          - "**Rankings tracked on a geo-grid**, not from one spot"
+          - "**Calls, directions and clicks** checked each month"
+    buttons:
+      - { label: Get my free GBP audit, href: "/#free-audit" }
+    note: "Public Q&A was retired by Google in late 2025. Questions are now answered from your profile, reviews and website, which is why the fields above matter more."
+  - type: factors
+    nav: How ranking works
+    id: how-ranking-works
     alt: true
-    eyebrow: Real GBP Ranking Evidence
+    eyebrow: How Google Maps ranking works
+    heading: "What Google looks at before showing your profile"
+    intro: "Google says local results are mainly based on [relevance, distance and prominence](https://support.google.com/business/answer/7091), and that you cannot pay for a better local ranking. Optimization works on relevance and prominence; distance is fixed by where you are."
+    stat: { value: "", label: "Your profile" }
+    items:
+      - title: Relevance
+        label: Relevance
+        text: "How well the profile matches the search. Driven by categories, services, products, the description and the website it links to."
+      - title: Distance
+        label: Distance
+        text: "How close you are to the searcher or the area they typed. Nobody can change this, which is why a precise pin and an honest service area matter."
+      - title: Prominence
+        label: Prominence
+        text: "How well known and trusted you are. Reviews and ratings, links, articles and directory listings all feed it."
+  - type: cards
+    nav: Beyond the profile
+    id: beyond-the-profile
+    columns: 4
+    eyebrow: Beyond the profile
+    heading: "The signals around your profile that move Maps rankings"
+    intro: "A perfect profile alone rarely wins a competitive area. These are the off-profile layers included in Growth and Multi-Location."
+    items:
+      - { label: "01", title: "Local keyword & area mapping", text: "Near-me, service + area and buyer-intent searches mapped to the profile and to pages.", tags: ["Local keywords", "Search intent"] }
+      - { label: "02", title: "Geo-grid rank tracking", text: "Rankings checked from points across your area, so weak zones are visible and fixed.", tags: ["Geo-grid", "Map Pack"] }
+      - { label: "03", title: "Reviews & reputation", text: "Request links, reply routines and monitoring. No incentives, no gating, no fake reviews.", tags: ["Review velocity", "Replies"] }
+      - { label: "04", title: "Citations & NAP consistency", text: "Bing Places, Apple Business Connect, Facebook and directories, all with the same details.", tags: ["Citations", "NAP"] }
+      - { label: "05", title: "Website pages that support Maps", text: "Service and location pages that confirm what the profile claims.", tags: ["On-page SEO", "Service pages"] }
+      - { label: "06", title: "LocalBusiness schema & entity", text: "Structured data so Google and AI assistants read your business facts without guessing.", tags: ["Schema", "Entity SEO"] }
+      - { label: "07", title: "Photos & posts routine", text: "Real photos of your premises, team and work, and posts that keep the profile active.", tags: ["Photos", "Google Posts"] }
+      - { label: "08", title: "Calls & conversion tracking", text: "Calls, directions, website clicks and bookings from the profile, tracked monthly.", tags: ["GBP insights", "Inbound calls"] }
+  - type: problems
+    nav: Problems I fix
+    id: problems
+    alt: true
+    eyebrow: Profile problems I fix
+    heading: "Suspended, unverified, duplicated or hijacked? These get fixed first"
+    intro: "Optimizing a profile that has one of these problems is wasted effort, so they are always handled before anything else."
+    items:
+      - { title: Suspension & reinstatement, text: "The cause found (usually a keyword-stuffed name, a virtual office or a wrong service-area setup), corrected, and the appeal filed with the evidence Google asks for. Nobody can guarantee reinstatement." }
+      - { title: "Verification, including video", text: "I write the shot list for Google's live video verification: continuous, unedited, showing your signage or location and proof you run the business. You or your staff record it." }
+      - { title: "Duplicate listings", text: "Second and third listings for the same business claimed, merged or removed, so reviews and signals stop being split." }
+      - { title: "Unwanted suggested edits", text: "Changes Google or the public made to your hours, category or pin found, corrected and monitored." }
+      - { title: "Service-area setup", text: "Address hidden if customers don't visit you, and service areas set to where you really work, kept within Google's limits." }
+      - { title: "Wrong pin or category", text: "The two quickest wins. A pin on the wrong side of the road or a vague category can hide an otherwise good profile." }
+  - type: compare
+    nav: White-hat promise
+    id: white-hat
+    eyebrow: What I will and won't do
+    heading: "Guideline-safe GBP optimization vs the shortcuts"
+    intro: "Shortcuts sold as Maps ranking hacks tend to work for a while and then get profiles suspended. The guidelines are in [Google's Business Profile rules](https://support.google.com/business/answer/3038177)."
+    table:
+      columns: ["How I do it", "The shortcut I avoid"]
+      highlight: 0
+      rows:
+        - { label: Business name, cells: ["Exactly as on your signage", "Keywords and city stuffed into the name"] }
+        - { label: Address, cells: ["Your real premises, or hidden for a service-area business", "Virtual offices and fake addresses"] }
+        - { label: Reviews, cells: ["Asking every real customer, replying to all", "Fake, bought, incentivised or gated reviews"] }
+        - { label: Photos, cells: ["Real photos uploaded regularly", "Geo-tagging tricks (Google strips that data)"] }
+        - { label: Engagement, cells: ["Real calls and clicks, tracked", "Bots and fake searches"] }
+        - { label: "Ranking promise", cells: ["Honest reporting on the work", "Guaranteed Top 3 in 30 days"] }
+  - type: images
+    nav: Proof
+    id: proof
+    alt: true
+    eyebrow: Real GBP ranking evidence
     heading: "Real data. Real Map Pack visibility."
-    intro: "Real Google Business Profile screenshots, geo-grid ranking views and Maps performance data, used to find what's working, where visibility is weak, and what to fix next."
+    intro: "Screenshots from a client profile: calls from the Business Profile and a geo-grid view of Map Pack positions across the service area. Full story in the [GBP calls case study](/case-studies/gbp-calls-growth)."
     items:
       - { title: GBP calls performance, text: "461 calls from the Business Profile, April to August 2024", image: "cases/gbp-calls-performance.jpeg" }
       - { title: Geo-grid ranking view, text: "Top-3 Map Pack positions across the service area", image: "cases/geo-grid-ranking.jpg" }
-  - type: stats
-    alt: true
-    items:
-      - { title: profile interactions, value: "+62%" }
-      - { title: calls in 90 days, value: "461" }
-      - { title: Map Pack rankings, value: "Top 3" }
-      - { title: service areas in Top 3, value: "5×" }
   - type: steps
-    eyebrow: My Process
+    nav: Process
+    id: process
+    eyebrow: My process
     heading: "How my GBP optimization service works"
     items:
-      - { title: GBP Audit, text: "Deep audit of categories, services, photos, reviews, posts, suspensions and current Map Pack visibility." }
-      - { title: "Keyword & Geo Mapping", text: "Build the target keyword set and a geo-grid baseline across your real service area." }
-      - { title: Profile Optimization, text: "Fix categories, services, products, description, attributes, photos, posts and Q&A." }
-      - { title: Off-Profile Signals, text: "Citations cleanup, NAP fixes, review strategy, supporting links and on-site GBP signals." }
-      - { title: "Track, Report, Improve", text: "Monthly geo-grid + GBP insights reporting; iterate on weak zones and underperforming services." }
-  - type: pricing
+      - { title: "Audit & geo-grid baseline", text: "Every field checked, problems listed, and a geo-grid scan of where you rank today.", bullets: ["Profile scorecard", "Competitor comparison"] }
+      - { title: "Keyword & area mapping", text: "The searches worth winning and the areas you can realistically compete in." }
+      - { title: "Profile optimization", text: "Name, categories, services, products, description, attributes, hours, photos and posts fixed.", bullets: ["Before/after change log"] }
+      - { title: "Off-profile signals", text: "Citations, NAP fixes, review routine and website pages that back the profile up." }
+      - { title: "Track, report, improve", text: "Monthly geo-grid and profile insights; weak zones and services get the next round of work." }
+  - type: list
+    nav: Deliverables
+    id: deliverables
+    eyebrow: What you receive
+    heading: "Deliverables you can check, not promises"
+    bullets:
+      - "**Profile audit scorecard** with every issue found"
+      - "**Before and after change log** of everything edited"
+      - "**Geo-grid baseline** and follow-up scans"
+      - "**Review request link** and reply templates"
+      - "**Photo and posting plan** for your team"
+      - "**Monthly report**: calls, directions, website clicks and rankings (Growth and Multi-Location)"
+      - "**Next-step plan** in plain language"
+  - type: timeline
+    nav: Timeline
+    id: timeline
     alt: true
+    eyebrow: Timeline
+    heading: "How long GBP optimization takes"
+    intro: "Setup is fast. Ranking movement depends on how competitive your category and area are, so it is reported honestly rather than promised."
+    items:
+      - label: Week 1–2
+        title: Audit & setup
+        text: "Problems fixed and every field of the profile optimized."
+        meta: "A complete, correct profile. Quick wins when a category or pin was wrong."
+      - label: Weeks 3–8
+        title: Signals build
+        text: "Reviews, citations, photos, posts and supporting pages."
+        meta: "Visibility usually starts spreading from your address on the geo-grid."
+      - label: Months 3–6
+        title: Map Pack positions
+        text: "Prominence work continues in the weak zones of the grid."
+        meta: "In most categories, stable Top 3 positions and call growth show here."
+  - type: pricing
+    nav: Pricing
+    id: pricing
     eyebrow: Pricing
     heading: "Google Business Profile optimization packages"
-    intro: "Packages start from $299. What you actually need depends on how competitive your area is and how many locations you run, so the larger tiers are scoped on the call rather than sold blind."
+    intro: "Packages start from $299. The larger tiers depend on how competitive your area is and how many locations you run, so they are scoped on the call rather than sold blind."
     tiers:
       - name: Essential
         price: "$299"
-        unit: starting price
-        for: "One location. Get the profile itself right."
-        bullets: ["Full GBP audit", "Categories, services and products", "Description, attributes and hours", "Photos, posts and Q&A setup"]
+        unit: one-time, one location
+        for: "Get the profile itself right."
+        bullets: ["Full GBP audit and scorecard", "Name, pin and service-area check", "Categories, services and products", "Description, attributes and hours", "Photo and posting setup", "Review request link and templates", "Before/after change log"]
+        receive: "A fully optimized profile and a plan to keep it that way"
+        cta: { label: Get started, href: /book-strategy-call }
       - name: Growth
         price: Custom
-        unit: scoped on the call
+        unit: monthly, scoped on the call
         featured: true
         for: "One location in a competitive area, with off-profile signals."
-        bullets: ["Everything in Essential", "Keyword and geo mapping", "Citations cleanup and NAP fixes", "Review strategy", "Geo-grid rank tracking", "Monthly reporting"]
+        bullets: ["Everything in Essential", "Keyword and geo mapping", "Citation clean-up and NAP fixes", "Review strategy and replies", "Monthly posts and photos", "Geo-grid rank tracking", "Monthly reporting"]
+        receive: "Ongoing Maps ranking work, reported monthly"
+        cta: { label: Book a strategy call, href: /book-strategy-call }
       - name: Multi-Location
         price: Custom
-        unit: scoped on the call
-        for: "Several locations or a wide service area to cover."
-        bullets: ["Everything in Growth", "Multiple locations or service areas"]
+        unit: per location, scoped
+        for: "Several branches or a wide service area."
+        bullets: ["Everything in Growth", "One verified profile per real location", "Per-location geo-grid tracking", "Consistent details across branches", "Roll-up report"]
+        receive: "Every location optimized and tracked from one plan"
+        cta: { label: Get a quote, href: /book-strategy-call }
     note: "No lock-in contracts. Final scope is agreed before any work starts."
+  - type: cards
+    nav: Who it's for
+    id: who-its-for
+    alt: true
+    columns: 3
+    eyebrow: Who it's for
+    heading: "For businesses that win or lose on Google Maps"
+    items:
+      - { title: Home & trade services, href: /seo-for-home-services, cta: Home services SEO, text: "Plumbers, electricians, HVAC, roofers and cleaners, mostly set up as service-area businesses." }
+      - { title: "Clinics, shops & restaurants", href: /local-seo-dhaka, cta: Local SEO in Dhaka, text: "Walk-in businesses where the pin, photos and hours decide who gets the visit." }
+      - { title: Clients worldwide, href: /contact, cta: Get in touch, text: "Google Business Profile works the same in every country. I work remotely with owners in Bangladesh and abroad, in English." }
 showCases: true
 pricing: none
-faqHeading: "Everything You Need to Know About Local SEO & Google Maps Ranking"
+faqHeading: "Google Business Profile Optimization: Frequently Asked Questions"
 faqs:
-  - q: "What is Local SEO and why do I need it for my business?"
-    a: "Local SEO helps your business appear in Google Maps, local searches, and near-me searches across Bangladesh, driving qualified phone calls, direction requests, and walk-in customers from people who are ready to buy in your service area."
-  - q: "How long does it take to see results from Local SEO services?"
-    a: "Depending on competition, your website structure, and Google Business Profile signals, most local businesses see measurable ranking and call improvements within 3-6 months, with compounding results over time."
-  - q: "Do you provide Google Business Profile optimization?"
-    a: "Yes. Every engagement includes full GBP optimization: categories, services, description, photos, posts, Q&A, reviews, and local citations, all tuned to improve Maps ranking and conversion."
-  - q: "Can you guarantee top Google Maps ranking?"
-    a: "No ethical SEO expert can guarantee specific rankings, but the data-driven Local SEO system used here is built to maximize your map pack presence, local visibility, and inbound leads in a sustainable, Google-safe way."
-  - q: "Do you handle citations, reviews, and technical SEO?"
-    a: "Yes. Every Local SEO project includes NAP consistency, authoritative citation building, review velocity strategy, website SEO, schema markup, and entity optimization for both Google and AI search."
-  - q: "Can your service work for multiple locations?"
-    a: "Yes. Using GEO, service-area optimization, and geo-grid tracking, your business can rank across multiple cities, districts, and neighborhoods, ideal for multi-branch service businesses."
+  - q: "How much does Google Business Profile optimization cost?"
+    a: "The Essential package is $299, one-time, for one location. Ongoing and multi-location work is scoped on a call, because competition and the number of locations decide the work."
+  - q: "Is GBP optimization a one-time job or ongoing?"
+    a: "Both exist. The setup is a one-time job. Holding and growing Map Pack positions needs ongoing reviews, photos, posts and tracking, which is what the Growth package covers."
+  - q: "How long does it take to rank higher on Google Maps?"
+    a: "The profile is usually fully optimized within one to two weeks. Ranking movement depends on competition: quick when a wrong category or pin was the problem, typically a few months in competitive areas."
+  - q: "Can you guarantee a Top 3 Map Pack ranking?"
+    a: "No. Google says there is no way to request or pay for a better local ranking, and distance from the searcher is outside anyone's control. What you get is the work, done properly, and honest reporting."
+  - q: "Should I add keywords or my city to my business name?"
+    a: "No. The name must match your real-world signage. Keyword-stuffed names are one of the most common reasons profiles get suspended."
+  - q: "Which category should I choose?"
+    a: "The primary category should describe your main service as specifically as possible; it carries the most weight. Secondary categories cover other services you genuinely offer."
+  - q: "Do geo-tagged photos help rankings?"
+    a: "No. Google strips location data from uploaded photos. What helps is real, recent photos of your premises, team and work."
+  - q: "How do I get more Google reviews without breaking the rules?"
+    a: "Ask every real customer with a direct review link, at the moment the job is done, and reply to every review. Never pay, offer discounts for reviews, or only ask happy customers."
+  - q: "My profile is suspended. Can you help get it reinstated?"
+    a: "Yes. The cause is identified and fixed, then the appeal is filed with the evidence Google asks for. Reinstatement depends on Google's review, so it cannot be guaranteed."
+  - q: "I don't have a shop. Should I hide my address?"
+    a: "If customers don't visit you, yes: set up as a service-area business, hide the address and list the areas you really serve."
+  - q: "What happened to Q&A on Google Business Profile?"
+    a: "Google retired public Q&A in late 2025. Questions are now answered from your profile details, reviews and website, so complete fields and a good website matter more."
+  - q: "What's the difference between GBP optimization and Local SEO?"
+    a: "GBP optimization works on the profile itself. [Local SEO](/local-seo-service) also covers the website, citations, links and content that make the profile rank in competitive areas."
 related: [local-seo-service, home-services, geo, cases, services, contact]
 finalCta:
-  heading: "Want Your Business in the Google Map Pack?"
+  heading: "Want your business in the Google Map Pack?"
   text: "Get a free Google Business Profile audit and see exactly what's holding back your Map Pack rankings."
   buttons:
     - { label: Get Free GBP Audit, href: "/#free-audit" }

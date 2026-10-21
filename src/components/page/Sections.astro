@@ -859,6 +859,12 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
     color: #fff;
     border-color: #fff;
   }
+  .section-head :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   /* compare */
   .pcmp {
     padding: 0;
