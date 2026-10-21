@@ -13,8 +13,9 @@ import TrustBar from "../components/page/TrustBar.astro";
 import HubGrid from "../components/page/HubGrid.astro";
 import { getEntry } from "astro:content";
 import StickyCta from "../components/page/StickyCta.astro";
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import { img } from "../lib/img";
+import { ogCardUrl, OG_SIZE } from "../lib/og";
 import { md, plain, slugify } from "../lib/md";
 import { site } from "../data/site";
 import type { CollectionEntry } from "astro:content";
@@ -28,7 +29,7 @@ const { data: d, path, kind = "page" } = Astro.props;
 const url = `${site.url}${path}`;
 
 // Social share image: the page's hero screenshot, else the default.
-const og = d.heroImage ? await getImage({ src: img(d.heroImage), width: 1200, format: "jpg" }) : undefined;
+const ogUrl = ogCardUrl(path);
 const portrait = img("people/ratul-roy-portrait.jpg");
 const updatedIso = d.updated?.toISOString().slice(0, 10);
 const fmtDate = (x: Date) => x.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
@@ -81,7 +82,7 @@ const schema: Record<string, unknown>[] = [
     name: d.title,
     ...(kind === "case" ? { headline: d.h1, author: { "@id": `${site.url}/#person` } } : {}),
     ...(updatedIso ? { dateModified: updatedIso, author: { "@id": `${site.url}/#person` } } : {}),
-    ...(og ? { primaryImageOfPage: { "@type": "ImageObject", url: new URL(og.src, site.url).href } } : {}),
+    primaryImageOfPage: { "@type": "ImageObject", url: ogUrl, width: OG_SIZE.width, height: OG_SIZE.height },
     ...(d.entities.length ? { about: d.entities.map((e) => ({ "@type": "Thing", name: e.name, sameAs: e.sameAs })) } : {}),
     description: d.description,
     inLanguage: "en",
@@ -126,7 +127,7 @@ if (d.faqs.length) {
 }
 ---
 
-<BaseLayout title={d.title} description={d.description} schema={schema} ogType={kind === "case" ? "article" : "website"} ogImage={og?.src}>
+<BaseLayout title={d.title} description={d.description} schema={schema} ogType={kind === "case" ? "article" : "website"}>
   <PageHero
     breadcrumb={crumbs}
     eyebrow={d.eyebrow}

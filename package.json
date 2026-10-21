@@ -11,7 +11,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "seo:check": "node scripts/seo-check.mjs",
+    "og:cards": "node scripts/og-cards.mjs",
+    "test": "astro build && node scripts/seo-check.mjs"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

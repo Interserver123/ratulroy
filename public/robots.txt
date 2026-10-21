@@ -1,3 +1,9 @@
+# ratulroy.com crawler policy
+# Search engines and AI assistants may crawl all public pages. The owner wants the
+# site to be findable and citable in Google, Bing and AI answers (ChatGPT search,
+# Perplexity, Gemini, Copilot). To opt out of AI training/answers later, add groups
+# such as "User-agent: GPTBot" / "Disallow: /" here.
+
 User-agent: *
 Allow: /
 

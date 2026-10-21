@@ -8,19 +8,24 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { site } from "../data/site";
+import { ogCardUrl, OG_SIZE } from "../lib/og";
+import { completeGraph } from "../lib/schema";
+import { getImage } from "astro:assets";
+import { img } from "../lib/img";
 
 interface Props {
   title: string;
   description: string;
-  /** Absolute or root-relative image for social sharing (1200x630 recommended). */
+  /** Override the page's generated 1200x630 card (public/og/<route>.jpg). Rarely needed. */
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: "website" | "article";
   noindex?: boolean;
   /** JSON-LD objects; they are merged into one @graph. */
   schema?: Record<string, unknown>[];
 }
 
-const { title, description, ogImage, ogType = "website", noindex = false, schema = [] } =
+const { title, description, ogImage, ogImageAlt, ogType = "website", noindex = false, schema = [] } =
   Astro.props;
 
 // Canonical without trailing slash, matching the live URLs.
@@ -30,7 +35,9 @@ const path =
     .replace(/(^|\/)index$/, "")
     .replace(/\/$/, "") || "/";
 const canonical = new URL(path, site.url).href;
-const ogImageUrl = ogImage ? new URL(ogImage, site.url).href : undefined;
+// Every page gets a share image: an explicit override, else its generated card, else the site card.
+const ogImageUrl = ogImage ? new URL(ogImage, site.url).href : ogCardUrl(Astro.url.pathname);
+const ogAlt = ogImageAlt ?? `${title} · ${site.name}`;
 // Self-declared @font-face (latin + latin-ext only). font-display: optional means the
 // preloaded font is used if it arrives in time, otherwise the page keeps the system
 // font for that view: no late text repaint, so LCP is not pushed back by fonts.
@@ -46,9 +53,12 @@ const fontCss = [
   face("Bricolage Grotesque Variable", displayLatinExt, LATIN_EXT, "normal", "200 800"),
 ].join("");
 
-const jsonLd = schema.length
-  ? JSON.stringify({ "@context": "https://schema.org", "@graph": schema })
-  : null;
+// One JSON-LD graph per page; referenced site entities are always defined on the page.
+const portraitImg = await getImage({ src: img("people/ratul-roy-portrait.jpg"), width: 400, format: "jpg" });
+const entityImage = new URL(portraitImg.src, site.url).href;
+const graph = schema.length ? completeGraph(schema, entityImage) : [];
+// Escape "<" so content can never close the script tag early.
+const jsonLd = graph.length ? JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c") : null;
 ---
 
 <!doctype html>
@@ -82,11 +92,17 @@ const jsonLd = schema.length
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
-    <meta name="twitter:card" content={ogImageUrl ? "summary_large_image" : "summary"} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content={String(OG_SIZE.width)} />
+    <meta property="og:image:height" content={String(OG_SIZE.height)} />
+    <meta property="og:image:alt" content={ogAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogAlt} />
 
     {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
   </head>

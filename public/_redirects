@@ -1,0 +1,3 @@
+# Old sitemap URLs (from the @astrojs/sitemap integration) now live in one file.
+/sitemap-index.xml /sitemap.xml 301
+/sitemap-0.xml /sitemap.xml 301

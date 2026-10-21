@@ -1,12 +1,13 @@
 ---
 import { getCollection, render } from "astro:content";
-import { Image, getImage } from "astro:assets";
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageFaq from "../../components/page/PageFaq.astro";
 import FinalCta from "../../components/page/FinalCta.astro";
 import { img } from "../../lib/img";
 import { plain } from "../../lib/md";
 import { site } from "../../data/site";
+import { ogCardUrl, OG_SIZE } from "../../lib/og";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -36,7 +37,7 @@ const related = posts
   .slice(0, 3);
 
 const portrait = img("people/ratul-roy-portrait.jpg");
-const og = await getImage({ src: portrait, width: 1200, format: "jpg" });
+const ogUrl = ogCardUrl(path);
 
 const crumbs = [
   { label: "Home", href: "/" },
@@ -47,7 +48,7 @@ const schema: Record<string, unknown>[] = [
   {
     "@type": "BlogPosting",
     "@id": `${url}#article`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    mainEntityOfPage: { "@id": `${url}#webpage` },
     url,
     headline: d.h1,
     name: d.title,
@@ -58,11 +59,24 @@ const schema: Record<string, unknown>[] = [
     articleSection: d.category,
     keywords: d.tags.join(", ") || undefined,
     timeRequired: `PT${d.readTime}M`,
-    image: new URL(og.src, site.url).href,
+    image: { "@type": "ImageObject", url: ogUrl, width: OG_SIZE.width, height: OG_SIZE.height },
     author: { "@id": `${site.url}/#person` },
     publisher: { "@id": `${site.url}/#person` },
     isPartOf: { "@id": `${site.url}/#website` },
     breadcrumb: { "@id": `${url}#breadcrumb` },
+  },
+  {
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: d.title,
+    description: d.description,
+    inLanguage: "en",
+    isPartOf: { "@id": `${site.url}/#website` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+    primaryImageOfPage: { "@type": "ImageObject", url: ogUrl, width: OG_SIZE.width, height: OG_SIZE.height },
+    datePublished: iso,
+    dateModified: iso,
   },
   {
     "@type": "BreadcrumbList",
@@ -79,7 +93,7 @@ if (d.faqs.length) {
 }
 ---
 
-<BaseLayout title={d.title} description={d.description} schema={schema} ogType="article" ogImage={og.src}>
+<BaseLayout title={d.title} description={d.description} schema={schema} ogType="article">
   <div class="readbar" aria-hidden="true"><span data-readbar></span></div>
 
   <header class="ahead">
