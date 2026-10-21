@@ -1,5 +1,6 @@
 ---
 import { site } from "../../data/site";
+import MapEmbed from "../MapEmbed.astro";
 ---
 
 <section id="contact" class="section" aria-labelledby="contact-title">
@@ -61,6 +62,9 @@ import { site } from "../../data/site";
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
+    <div class="contact__map">
+      <MapEmbed heading="Visit or find me on Google Maps" />
+    </div>
   </div>
 </section>
 
@@ -88,6 +92,9 @@ import { site } from "../../data/site";
 </section>
 
 <style>
+  .contact__map {
+    margin-top: 24px;
+  }
   .contact {
     display: grid;
     gap: 40px;

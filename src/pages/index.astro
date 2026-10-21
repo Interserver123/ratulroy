@@ -66,6 +66,7 @@ const schema = [
     "@type": "ProfessionalService",
     "@id": businessId,
     name: "Ratul Roy · Local SEO Bangladesh",
+    alternateName: site.gbpName,
     url,
     description,
     email: site.email,
@@ -78,6 +79,7 @@ const schema = [
       addressCountry: site.countryCode,
     },
     hasMap: site.mapsUrl,
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
     areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
     sameAs: [site.mapsUrl],
     hasOfferCatalog: {

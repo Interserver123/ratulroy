@@ -2,11 +2,25 @@
 import { getEntry } from "astro:content";
 import ContentPage from "../layouts/ContentPage.astro";
 import LeadPanel from "../components/page/LeadPanel.astro";
+import MapEmbed from "../components/MapEmbed.astro";
 
 const page = await getEntry("pages", "contact");
 if (!page) throw new Error("Missing src/content/pages/contact.yaml");
 ---
 
 <ContentPage data={page.data} path="/contact">
-  <LeadPanel slot="before" variant="contact" />
+  <div slot="before">
+    <LeadPanel variant="contact" />
+    <section class="section contact-map" aria-label="Location on Google Maps">
+      <div class="container">
+        <MapEmbed />
+      </div>
+    </section>
+  </div>
 </ContentPage>
+
+<style>
+  .contact-map {
+    padding-top: 0;
+  }
+</style>
