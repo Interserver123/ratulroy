@@ -4,11 +4,23 @@ import { site } from "../../data/site";
 const answered = faqs.filter((f) => f.a.trim());
 ---
 
-<section class="section section--soft" aria-labelledby="faq-title">
+<section class="section section--alt" aria-labelledby="faq-title">
   <div class="container faq">
-    <div class="section-head section-head--center">
+    <div class="faq__head">
       <p class="eyebrow">Frequently Asked Questions</p>
-      <h2 id="faq-title">Everything You Need to Know About Local SEO &amp; Google Maps Ranking</h2>
+      <h2 id="faq-title">Everything You Need to Know About <span class="em">Local SEO &amp; Google Maps Ranking</span></h2>
+      <div class="faq__cta">
+        <h3>Still Have Questions?</h3>
+        <p><strong>Book a free Local SEO audit or strategy call.</strong></p>
+        <p>
+          Get a personalized review of your Google Maps visibility, Local SEO performance, and
+          inbound call opportunities.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/book-strategy-call">Get Free Local SEO Audit</a>
+          <a class="btn btn--ghost" href={site.whatsapp} rel="noopener" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
     </div>
 
     <div class="faq__list">
@@ -17,43 +29,45 @@ const answered = faqs.filter((f) => f.a.trim());
           <details class="faq__item" open={i === 0}>
             <summary>
               <h3>{f.q}</h3>
+              <span class="faq__icon" aria-hidden="true" />
             </summary>
             <p>{f.a}</p>
           </details>
         ))
       }
     </div>
-
-    <div class="faq__cta card">
-      <h3>Still Have Questions?</h3>
-      <p><strong>Book a free Local SEO audit or strategy call.</strong></p>
-      <p>
-        Get a personalized review of your Google Maps visibility, Local SEO performance, and inbound
-        call opportunities.
-      </p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="/book-strategy-call">Get Free Local SEO Audit</a>
-        <a class="btn btn--accent" href={site.whatsapp} rel="noopener" target="_blank"
-          >Chat on WhatsApp</a
-        >
-      </div>
-    </div>
   </div>
 </section>
 
 <style>
   .faq {
-    max-width: 880px;
+    display: grid;
+    gap: 48px;
+  }
+  @media (min-width: 1024px) {
+    .faq {
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq__head {
+      position: sticky;
+      top: 120px;
+    }
+  }
+  .faq__cta {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .faq__cta h3 {
+    font-size: 1.2rem;
   }
   .faq__list {
-    display: grid;
-    gap: 12px;
+    border-top: 1px solid var(--line);
   }
   .faq__item {
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    padding: 0 20px;
+    border-bottom: 1px solid var(--line);
   }
   .faq__item summary {
     cursor: pointer;
@@ -61,35 +75,49 @@ const answered = faqs.filter((f) => f.a.trim());
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
-    padding: 18px 0;
+    gap: 24px;
+    padding: 26px 0;
   }
   .faq__item summary::-webkit-details-marker {
     display: none;
   }
-  .faq__item summary::after {
-    content: "+";
-    font-size: 1.5rem;
-    line-height: 1;
-    color: var(--brand);
-    flex-shrink: 0;
-  }
-  .faq__item[open] summary::after {
-    content: "–";
-  }
   .faq__item h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    font-weight: 500;
+  }
+  .faq__icon {
+    position: relative;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--line-2);
+  }
+  .faq__icon::before,
+  .faq__icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 11px;
+    height: 1.5px;
+    background: var(--text);
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s;
+  }
+  .faq__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .faq__item[open] .faq__icon {
+    border-color: var(--accent);
+  }
+  .faq__item[open] .faq__icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   .faq__item p {
-    padding-bottom: 18px;
+    padding-bottom: 26px;
     margin: 0;
-  }
-  .faq__cta {
-    margin-top: 40px;
-    text-align: center;
-  }
-  .faq__cta .btn-row {
-    justify-content: center;
+    max-width: 62ch;
   }
 </style>

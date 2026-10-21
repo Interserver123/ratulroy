@@ -12,10 +12,10 @@ const year = new Date().getFullYear();
           This is Ratul Roy helping service businesses improve Google Maps rankings, strengthen
           Google Business Profile visibility, and turn local searches into qualified inbound calls.
         </p>
-        <ul class="footer__badges">
-          <li>Fiverr Level 2 Seller</li>
-          <li>4.9★ Rated</li>
-          <li>243 Reviews</li>
+        <ul class="chips">
+          <li class="chip">Fiverr Level 2 Seller</li>
+          <li class="chip"><span class="stars" aria-hidden="true">★</span>4.9 Rated</li>
+          <li class="chip">243 Reviews</li>
         </ul>
         <p class="footer__small">Built for local businesses that want visibility, trust, and real growth.</p>
         <p class="footer__small">Based in Bangladesh · Serving local businesses worldwide</p>
@@ -47,6 +47,8 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
+    <p class="footer__word" aria-hidden="true">Ratul Roy</p>
+
     <div class="footer__bottom">
       <p>© {year} Ratul Roy. All rights reserved.</p>
       <p>Built for the new era of Google Maps, Local SEO, and AI-driven search visibility.</p>
@@ -60,14 +62,18 @@ const year = new Date().getFullYear();
 
 <style>
   .footer {
-    background: var(--bg-dark);
-    color: #94a3b8;
-    padding: 72px 0 32px;
-    font-size: 0.925rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+    padding: 88px 0 32px;
+    font-size: 0.9rem;
+    background:
+      radial-gradient(60% 50% at 50% 100%, rgb(255 61 74 / 10%), transparent 70%),
+      var(--bg);
   }
   .footer__grid {
     display: grid;
-    gap: 36px;
+    gap: 40px;
   }
   @media (min-width: 640px) {
     .footer__grid {
@@ -80,64 +86,68 @@ const year = new Date().getFullYear();
     }
   }
   .footer__logo {
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: #fff;
     display: inline-block;
-    margin-bottom: 12px;
-  }
-  .footer__badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
     margin-bottom: 14px;
   }
-  .footer__badges li {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #e2e8f0;
-    border: 1px solid rgb(255 255 255 / 15%);
-    border-radius: 999px;
-    padding: 4px 12px;
+  .footer__brand .chips {
+    margin-bottom: 18px;
   }
   .footer__title {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 14px;
+    color: var(--dim);
+    margin-bottom: 16px;
   }
   .footer li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .footer a {
-    color: #cbd5e1;
+    color: var(--muted);
   }
   .footer a:hover {
-    color: #fff;
+    color: var(--text);
   }
   .footer__small {
     font-size: 0.85rem;
+    color: var(--dim);
     margin-bottom: 6px;
   }
+  .footer__word {
+    margin: 64px 0 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(4.5rem, 17vw, 15rem);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    background: linear-gradient(180deg, rgb(255 255 255 / 14%), rgb(255 255 255 / 0%) 85%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    user-select: none;
+  }
   .footer__bottom {
-    margin-top: 48px;
     padding-top: 24px;
-    border-top: 1px solid rgb(255 255 255 / 10%);
+    border-top: 1px solid var(--line);
     display: flex;
     flex-wrap: wrap;
     gap: 8px 24px;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    color: var(--dim);
   }
   .footer__bottom p {
     margin: 0;
   }
   .footer__legal {
     display: flex;
-    gap: 16px;
+    gap: 18px;
   }
 </style>

@@ -2,38 +2,41 @@
 import { platforms, aiPillars } from "../../data/home";
 ---
 
-<section class="section" aria-labelledby="ai-title">
+<section class="section section--alt ai" aria-labelledby="ai-title">
+  <div class="glow" style="width:640px;height:640px;left:50%;top:-240px;transform:translateX(-50%);background:rgb(80 140 255 / 14%)"></div>
   <div class="container">
-    <div class="ai">
-      <div>
-        <p class="eyebrow">Beyond Google Maps</p>
-        <h2 id="ai-title">
-          Your next customer may not search Google. <span class="hl">They may ask ChatGPT.</span>
-        </h2>
-        <p class="lead">
-          Local discovery is changing. Customers now use Google, Google Maps, AI Overviews, ChatGPT,
-          Gemini, and Perplexity to compare businesses. Ratul Roy builds Local SEO systems that help
-          your business become easier for both search engines and AI platforms to understand, trust,
-          and recommend.
-        </p>
-        <a class="btn btn--primary" href="#contact">Build My AI-Ready Local SEO System</a>
-      </div>
-      <ul class="platforms">
-        {
-          platforms.map((p) => (
-            <li>
-              <strong>{p.title}</strong>
-              <span>{p.text}</span>
-            </li>
-          ))
-        }
-      </ul>
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Beyond Google Maps</p>
+      <h2 id="ai-title">
+        Your next customer may not search Google. <span class="em">They may ask ChatGPT.</span>
+      </h2>
+      <p>
+        Local discovery is changing. Customers now use Google, Google Maps, AI Overviews, ChatGPT,
+        Gemini, and Perplexity to compare businesses. Ratul Roy builds Local SEO systems that help
+        your business become easier for both search engines and AI platforms to understand, trust,
+        and recommend.
+      </p>
     </div>
 
-    <ul class="grid grid--4 pillars">
+    <ul class="platforms">
+      {
+        platforms.map((p) => (
+          <li>
+            <strong>{p.title}</strong>
+            <span class="mono">{p.text}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="ai__cta">
+      <a class="btn btn--primary" href="#contact">Build My AI-Ready Local SEO System <span class="arrow" aria-hidden="true">→</span></a>
+    </p>
+
+    <ul class="hairgrid hairgrid--4 pillars">
       {
         aiPillars.map((p) => (
-          <li class="card">
+          <li>
             <h3>{p.title}</h3>
             <p>{p.text}</p>
           </li>
@@ -49,50 +52,60 @@ import { platforms, aiPillars } from "../../data/home";
 
 <style>
   .ai {
-    display: grid;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 48px;
-  }
-  @media (min-width: 1024px) {
-    .ai {
-      grid-template-columns: 1.1fr 0.9fr;
-    }
-  }
-  .hl {
-    color: var(--brand);
-  }
-  .ai .lead {
-    margin-bottom: 28px;
+    overflow: hidden;
   }
   .platforms {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .platforms {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   .platforms li {
     display: grid;
-    padding: 16px;
+    gap: 4px;
+    padding: 18px 20px;
     border-radius: var(--radius-sm);
-    background: var(--bg-soft);
     border: 1px solid var(--line);
+    background: rgb(255 255 255 / 2%);
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+  .platforms li:hover {
+    border-color: rgb(159 211 255 / 35%);
+    transform: translateY(-2px);
   }
   .platforms strong {
-    color: var(--ink);
+    font-size: 1rem;
   }
   .platforms span {
-    font-size: 0.85rem;
-    color: var(--muted);
+    font-size: 0.72rem;
+    color: var(--dim);
   }
-  .pillars .card p {
+  .ai__cta {
+    text-align: center;
+    margin: 40px 0 72px;
+  }
+  .pillars > li {
+    padding: 32px 28px;
+  }
+  .pillars h3 {
+    font-size: 1.05rem;
+  }
+  .pillars p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .ai__note {
-    margin: 40px auto 0;
-    max-width: 720px;
+    margin: 48px auto 0;
+    max-width: 640px;
     text-align: center;
-    font-weight: 600;
-    color: var(--ink);
+    color: var(--text);
   }
 </style>

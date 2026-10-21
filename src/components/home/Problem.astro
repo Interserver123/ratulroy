@@ -2,14 +2,15 @@
 import { problems } from "../../data/home";
 ---
 
-<section class="section section--dark" aria-labelledby="problem-title">
+<section class="section" aria-labelledby="problem-title">
+  <div class="glow" style="width:520px;height:520px;right:-200px;top:10%;background:rgb(255 61 74 / 14%)"></div>
   <div class="container">
     <div class="problem">
-      <div>
+      <div class="problem__copy">
         <p class="eyebrow">The Local Visibility Problem</p>
         <h2 id="problem-title">
-          Your competitors are <span class="hl">getting the calls</span> before you even know the
-          customer searched.
+          Your competitors are <span class="em em--hot">getting the calls</span> before you even know
+          the customer searched.
         </h2>
         <p>
           When someone searches for your service in your city, Google Maps decides who gets the
@@ -19,32 +20,47 @@ import { problems } from "../../data/home";
         <p class="problem__em">
           Most local businesses do not have a traffic problem. They have a visibility problem.
         </p>
-        <a class="btn btn--accent" href="#contact">Show Me What's Blocking My Rankings</a>
+        <a class="btn btn--primary" href="#contact">Show Me What's Blocking My Rankings <span class="arrow" aria-hidden="true">→</span></a>
       </div>
-      <ul class="grid grid--2">
-        {
-          problems.map((p, i) => (
-            <li class="card">
-              <span class="num">0{i + 1}</span>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-            </li>
-          ))
-        }
-      </ul>
+
+      <figure class="pack panel--edge" aria-label="Illustration: a Google Maps 3-pack where your business is missing">
+        <figcaption class="pack__head">
+          <span class="pack__search mono">plumber near me</span>
+          <span class="pack__tag mono">Map Pack</span>
+        </figcaption>
+        <ol class="pack__list">
+          <li><span class="pack__pin mono">A</span><span class="pack__bar"></span><span class="pack__calls">Getting the call</span></li>
+          <li><span class="pack__pin mono">B</span><span class="pack__bar"></span><span class="pack__calls">Getting the call</span></li>
+          <li><span class="pack__pin mono">C</span><span class="pack__bar"></span><span class="pack__calls">Getting the call</span></li>
+          <li class="pack__you"><span class="pack__pin mono">?</span><span><strong>Your business</strong><br /><small>Not in the top 3, not seen</small></span></li>
+        </ol>
+      </figure>
     </div>
+
+    <ul class="hairgrid hairgrid--4 problems">
+      {
+        problems.map((p, i) => (
+          <li>
+            <span class="problems__num mono">0{i + 1}</span>
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+
     <p class="problem__goal">
-      The goal is not just to rank higher. The goal is to become the obvious choice when local
-      buyers are ready to call.
+      The goal is not just to rank higher. The goal is to become the
+      <span class="em">obvious choice</span> when local buyers are ready to call.
     </p>
   </div>
 </section>
 
-<section id="free-audit" class="section audit" aria-labelledby="audit-title">
+<section id="free-audit" class="section section--alt audit" aria-labelledby="audit-title">
   <div class="container audit__grid">
     <div>
       <p class="eyebrow">Free Visibility Audit · No Obligation</p>
-      <h2 id="audit-title">Get a Free SEO Visibility Audit of Your Website.</h2>
+      <h2 id="audit-title">Get a Free SEO Visibility Audit of <span class="em">Your Website.</span></h2>
       <p class="lead">
         I'll personally review your website, Google Business Profile and top competitors, and send a
         prioritized action plan to your inbox.
@@ -55,7 +71,7 @@ import { problems } from "../../data/home";
         <li class="chip">No sales pitch</li>
       </ul>
     </div>
-    <form class="card" data-lead-form="audit" novalidate>
+    <form class="panel panel--edge audit__form" data-lead-form="audit" novalidate>
       <div class="field">
         <label for="audit-url">Website URL</label>
         <input id="audit-url" name="website" type="url" inputmode="url" placeholder="https://yourbusiness.com" required autocomplete="url" />
@@ -65,7 +81,7 @@ import { problems } from "../../data/home";
         <input id="audit-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
       </div>
       <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
-      <button class="btn btn--primary" type="submit" style="width:100%">Get My Free SEO Audit</button>
+      <button class="btn btn--primary" type="submit">Get My Free SEO Audit <span class="arrow" aria-hidden="true">→</span></button>
       <p class="note">Private. Never shared.</p>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
@@ -75,55 +91,157 @@ import { problems } from "../../data/home";
 <style>
   .problem {
     display: grid;
-    gap: 40px;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 72px;
   }
   @media (min-width: 1024px) {
     .problem {
-      grid-template-columns: 1fr 1.1fr;
-      align-items: start;
+      grid-template-columns: 1.15fr 0.85fr;
     }
   }
-  .hl {
-    color: #86efac;
+  .problem__copy {
+    min-width: 0;
+  }
+  .problem__copy > p:not(.eyebrow) {
+    max-width: 58ch;
   }
   .problem__em {
-    color: #fff;
-    font-weight: 600;
-    margin: 20px 0 28px;
+    color: var(--text);
+    font-weight: 500;
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+    margin: 24px 0 32px;
   }
-  .num {
-    display: inline-block;
-    font-weight: 800;
-    font-size: 0.85rem;
-    color: #f87171;
-    margin-bottom: 8px;
-  }
-  .card p {
+
+  .pack {
     margin: 0;
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .pack__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .pack__search {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line-2);
+    background: rgb(0 0 0 / 35%);
+    color: var(--text);
+    font-size: 0.85rem;
+  }
+  .pack__tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .pack__list {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+  }
+  .pack__list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgb(255 255 255 / 3%);
+    border: 1px solid var(--line);
+  }
+  .pack__pin {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(61 220 151 / 15%);
+    color: var(--good);
+    font-size: 0.8rem;
+  }
+  .pack__bar {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgb(255 255 255 / 18%), rgb(255 255 255 / 4%));
+  }
+  .pack__calls {
+    font-size: 0.75rem;
+    color: var(--good);
+    white-space: nowrap;
+  }
+  .pack__you {
+    border-style: dashed !important;
+    border-color: rgb(255 61 74 / 45%) !important;
+    background: rgb(255 61 74 / 6%) !important;
+    opacity: 0.85;
+  }
+  .pack__you .pack__pin {
+    background: rgb(255 61 74 / 15%);
+    color: var(--accent);
+  }
+  .pack__you small {
+    color: var(--dim);
+  }
+
+  .problems > li {
+    padding: 32px 28px;
+  }
+  .problems__num {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .problems h3 {
+    font-size: 1.1rem;
+  }
+  .problems p {
+    margin: 0;
+    font-size: 0.925rem;
   }
   .problem__goal {
-    margin: 48px auto 0;
-    max-width: 720px;
+    margin: 72px auto 0;
+    max-width: 820px;
     text-align: center;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 600;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-wrap: balance;
   }
-  .audit {
-    background: linear-gradient(135deg, #eff6ff, #f0fdf4);
-  }
+
   .audit__grid {
     display: grid;
-    gap: 40px;
+    gap: 48px;
     align-items: center;
   }
   @media (min-width: 1024px) {
     .audit__grid {
       grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
     }
   }
-  .audit form .note {
+  .audit .lead {
+    max-width: 52ch;
+  }
+  .audit__form {
+    padding: 32px;
+    box-shadow: 0 40px 100px -40px rgb(255 61 74 / 35%);
+  }
+  .audit__form .btn {
+    width: 100%;
+    margin-top: 4px;
+  }
+  .audit__form .note {
     text-align: center;
-    margin: 10px 0 0;
+    margin: 14px 0 0;
   }
 </style>

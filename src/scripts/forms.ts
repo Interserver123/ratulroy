@@ -8,7 +8,7 @@ function setStatus(form: HTMLFormElement, msg: string, ok: boolean) {
   const el = form.querySelector<HTMLElement>(".form-status");
   if (!el) return;
   el.textContent = msg;
-  el.style.color = ok ? "var(--accent)" : "#dc2626";
+  el.style.color = ok ? "var(--good)" : "var(--accent)";
 }
 
 document.querySelectorAll<HTMLFormElement>("form[data-lead-form]").forEach((form) => {
