@@ -2,26 +2,14 @@
 import { site, megaMenu, navLinks } from "../data/site";
 ---
 
-<div class="topbar">
-  <div class="container topbar__inner">
-    <p class="topbar__msg">
-      <span class="pulse" aria-hidden="true"></span>
-      <span>Accepting 2 new clients this month</span>
-      <span class="topbar__loc">Based in Bangladesh · Serving worldwide</span>
-    </p>
-    <a class="topbar__cta" href={site.phoneHref}>Free 15-min consult <span aria-hidden="true">↗</span></a>
-  </div>
-</div>
-
 <header class="header">
-  <div class="container header__inner">
+  <div class="header__bar">
     <a class="logo" href="/" aria-label="Ratul Roy, Local SEO Bangladesh, home">
       <svg class="logo__mark" viewBox="0 0 64 64" aria-hidden="true">
-        <rect width="64" height="64" rx="16" fill="#0f1218"></rect>
-        <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="2"></rect>
+        <rect width="64" height="64" rx="18" fill="#0e0d1a"></rect>
         <path
-          d="M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12Zm0 20a5.6 5.6 0 1 1 0-11.2A5.6 5.6 0 0 1 32 32Z"
-          fill="#ff3d4a"></path>
+          d="M32 13c-8 0-14.5 6.3-14.5 14.1C17.5 37.6 32 51.5 32 51.5S46.5 37.6 46.5 27.1C46.5 19.3 40 13 32 13Zm0 19.4a5.4 5.4 0 1 1 0-10.8 5.4 5.4 0 0 1 0 10.8Z"
+          fill="#8b6cff"></path>
       </svg>
       <span class="logo__text">
         <span class="logo__name">Ratul Roy</span>
@@ -89,97 +77,46 @@ import { site, megaMenu, navLinks } from "../data/site";
       </ul>
       <div class="nav__cta">
         <a class="btn btn--ghost" href="/#results">See Results</a>
-        <a class="btn btn--primary" href="/#contact">Book Strategy Call</a>
+        <a class="btn btn--dark" href="/#contact"><span class="disc" aria-hidden="true">↗</span>Book Strategy Call</a>
       </div>
     </nav>
   </div>
 </header>
 
 <style>
-  .topbar {
-    border-bottom: 1px solid var(--line);
-    font-size: 0.8rem;
-    background: var(--bg);
-  }
-  .topbar__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 38px;
-  }
-  .topbar__msg {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--text);
-    min-width: 0;
-  }
-  .topbar__loc {
-    color: var(--dim);
-    padding-left: 10px;
-    border-left: 1px solid var(--line-2);
-  }
-  .pulse {
-    position: relative;
-    flex-shrink: 0;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--good);
-  }
-  .pulse::after {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 1px solid var(--good);
-    animation: ping 2.2s ease-out infinite;
-  }
-  @keyframes ping {
-    from {
-      transform: scale(0.6);
-      opacity: 0.9;
-    }
-    to {
-      transform: scale(1.8);
-      opacity: 0;
-    }
-  }
-  .topbar__cta {
-    color: var(--text);
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .topbar__cta span {
-    color: var(--accent);
-  }
-  @media (max-width: 760px) {
-    .topbar__loc {
-      display: none;
-    }
-  }
-
   .header {
     position: sticky;
-    top: 0;
+    top: env(safe-area-inset-top, 0px);
     z-index: 50;
-    background: rgb(7 8 11 / 72%);
-    backdrop-filter: saturate(160%) blur(16px);
-    -webkit-backdrop-filter: saturate(160%) blur(16px);
-    border-bottom: 1px solid var(--line);
+    padding: 14px max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
   }
-  .header__inner {
+  .header__bar {
+    position: relative;
+    max-width: 1180px;
+    margin-inline: auto;
     display: flex;
     align-items: center;
-    gap: 24px;
-    min-height: 72px;
+    gap: 20px;
+    min-height: 64px;
+    padding: 8px 8px 8px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition:
+      background 0.4s,
+      border-color 0.4s,
+      box-shadow 0.4s;
+  }
+  :global(.header.is-scrolled) .header__bar {
+    background: rgb(255 255 255 / 78%);
+    backdrop-filter: saturate(170%) blur(16px);
+    -webkit-backdrop-filter: saturate(170%) blur(16px);
+    border-color: var(--line);
+    box-shadow: 0 12px 32px -16px rgb(60 40 160 / 25%);
   }
   .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-shrink: 0;
   }
   .logo__mark {
@@ -188,27 +125,24 @@ import { site, megaMenu, navLinks } from "../data/site";
   }
   .logo__text {
     display: grid;
-    line-height: 1.15;
+    line-height: 1.1;
   }
   .logo__name {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.05rem;
-    letter-spacing: -0.02em;
-    color: var(--text);
+    letter-spacing: -0.03em;
+    color: var(--ink);
   }
   .logo__tag {
-    font-family: var(--font-mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--dim);
+    font-size: 0.72rem;
+    color: var(--muted);
   }
 
   .nav {
     display: flex;
     align-items: center;
     flex: 1;
-    gap: 16px;
+    gap: 12px;
   }
   .nav__list {
     display: flex;
@@ -222,28 +156,31 @@ import { site, megaMenu, navLinks } from "../data/site";
     align-items: center;
   }
   .nav__list > li > a {
-    color: var(--muted);
+    color: var(--ink-2);
     font-weight: 500;
     font-size: 0.9rem;
     padding: 8px 12px;
     border-radius: 999px;
     transition:
-      color 0.2s,
-      background 0.2s;
+      background 0.2s,
+      color 0.2s;
   }
   .nav__list > li > a:hover,
   .nav__list > li > a[aria-current="page"] {
-    color: var(--text);
-    background: rgb(255 255 255 / 5%);
+    color: var(--ink);
+    background: rgb(91 61 245 / 7%);
   }
   .nav__cta {
     display: flex;
     gap: 8px;
   }
   .nav__cta .btn {
-    min-height: 42px;
+    min-height: 46px;
     padding: 8px 18px;
     font-size: 0.875rem;
+  }
+  .nav__cta .btn--dark {
+    padding-left: 22px;
   }
 
   .mega-toggle {
@@ -258,77 +195,83 @@ import { site, megaMenu, navLinks } from "../data/site";
   .mega {
     display: none;
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 18px);
     left: 50%;
     transform: translateX(-30%);
     width: min(780px, 92vw);
-    background: rgb(15 18 24 / 96%);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--line-2);
+    background: #fff;
+    border: 1px solid var(--line);
     border-radius: var(--radius);
-    box-shadow: 0 30px 80px -20px rgb(0 0 0 / 80%);
-    padding: 28px;
+    box-shadow: var(--shadow-lg);
+    padding: 26px;
   }
-  /* Hover bridge so the menu doesn't close crossing the gap */
   .mega::before {
     content: "";
     position: absolute;
-    inset: -16px 0 auto;
-    height: 16px;
+    inset: -20px 0 auto;
+    height: 20px;
   }
   .has-mega:hover .mega,
   .has-mega:focus-within .mega,
-  .has-mega.is-open .mega {
+  .has-mega:global(.is-open) .mega {
     display: block;
-    animation: rise 0.2s ease-out;
+    animation: menu-in 0.25s var(--ease);
+  }
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translate(-30%, 8px);
+    }
   }
   .mega__cols {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 26px;
   }
   .mega__title {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--dim);
-    margin-bottom: 12px;
+    color: var(--violet);
+    margin-bottom: 10px;
   }
   .mega li a {
     display: block;
     padding: 6px 0;
-    color: var(--muted);
+    color: var(--ink-2);
     font-size: 0.9rem;
   }
   .mega li a:hover {
-    color: var(--text);
+    color: var(--violet);
   }
   .mega__promo {
-    margin-top: 24px;
+    margin-top: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    padding: 18px 20px;
+    padding: 16px 20px;
     border-radius: var(--radius-sm);
-    border: 1px solid rgb(255 61 74 / 30%);
-    background: linear-gradient(100deg, rgb(255 61 74 / 14%), rgb(255 61 74 / 2%));
-    color: var(--text);
+    background: var(--ink);
+    color: #fff;
+  }
+  .mega__promo:hover {
+    color: #fff;
   }
   .mega__promo strong {
-    color: var(--accent);
+    color: var(--violet-2);
     white-space: nowrap;
   }
 
   .nav-toggle {
     display: none;
     margin-left: auto;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--line-2);
-    border-radius: 999px;
-    background: rgb(255 255 255 / 3%);
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ink);
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -338,8 +281,8 @@ import { site, megaMenu, navLinks } from "../data/site";
   .nav-toggle span {
     width: 18px;
     height: 1.5px;
-    background: var(--text);
-    transition: transform 0.2s;
+    background: #fff;
+    transition: transform 0.3s var(--ease);
   }
   .nav-toggle[aria-expanded="true"] span:first-child {
     transform: translateY(3.75px) rotate(45deg);
@@ -349,25 +292,40 @@ import { site, megaMenu, navLinks } from "../data/site";
   }
 
   @media (max-width: 1120px) {
+    .header__bar {
+      background: rgb(255 255 255 / 85%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-color: var(--line);
+    }
     .nav-toggle {
       display: inline-flex;
     }
     .nav {
       display: none;
       position: absolute;
-      top: 100%;
+      top: calc(100% + 10px);
       left: 0;
       right: 0;
       flex-direction: column;
       align-items: stretch;
-      background: var(--bg);
-      border-bottom: 1px solid var(--line);
-      padding: 8px 16px 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 8px 20px 20px;
       max-height: calc(100vh - 110px);
       overflow-y: auto;
     }
-    .nav.is-open {
+    .nav:global(.is-open) {
       display: flex;
+      animation: drop 0.3s var(--ease);
+    }
+    @keyframes drop {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
     }
     .nav__list {
       flex-direction: column;
@@ -380,9 +338,8 @@ import { site, megaMenu, navLinks } from "../data/site";
     }
     .nav__list > li > a {
       flex: 1;
-      padding: 16px 0;
+      padding: 15px 0;
       font-size: 1rem;
-      color: var(--text);
       border-radius: 0;
     }
     .nav__list > li > a:hover {
@@ -400,20 +357,19 @@ import { site, megaMenu, navLinks } from "../data/site";
       width: 100%;
       box-shadow: none;
       border: 0;
-      background: none;
-      padding: 0 0 20px;
+      padding: 0 0 18px;
       animation: none;
     }
-    .has-mega.is-open .mega {
+    .has-mega:global(.is-open) .mega {
       display: block;
     }
     .mega__cols {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 14px;
     }
     .nav__cta {
       flex-direction: column;
-      margin-top: 20px;
+      margin-top: 18px;
     }
   }
 </style>

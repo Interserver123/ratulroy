@@ -3,81 +3,85 @@ import { site } from "../../data/site";
 ---
 
 <section id="contact" class="section" aria-labelledby="contact-title">
-  <div class="container contact">
-    <div class="contact__info">
-      <p class="eyebrow">Get in touch</p>
-      <h2 id="contact-title">Let's talk about <span class="em">your local SEO</span></h2>
-      <p class="lead">
-        Send a message, drop me a call, or visit on Google Maps. I usually reply within a few hours.
-      </p>
+  <div class="container">
+    <div class="contact card" data-reveal>
+      <div class="contact__info">
+        <p class="eyebrow">Get in touch</p>
+        <h2 id="contact-title">Let's talk about <span class="em">your local SEO.</span></h2>
+        <p class="lead">
+          Send a message, drop me a call, or visit on Google Maps. I usually reply within a few
+          hours.
+        </p>
 
-      <h3 class="contact__sub">Contact details</h3>
-      <ul class="contact__list">
-        <li>
-          <a href={`mailto:${site.email}`}><span class="mono">Email</span>{site.email}</a>
-        </li>
-        <li>
-          <a href={site.phoneHref}><span class="mono">Phone</span>{site.phone}</a>
-        </li>
-        <li>
-          <a href={site.mapsUrl} rel="noopener" target="_blank"
-            ><span class="mono">Location</span>{site.locality}, {site.country}</a
-          >
-        </li>
-      </ul>
+        <h3 class="contact__sub">Contact details</h3>
+        <ul class="contact__list">
+          <li>
+            <a href={`mailto:${site.email}`}><span>Email</span>{site.email}</a>
+          </li>
+          <li>
+            <a href={site.phoneHref}><span>Phone</span>{site.phone}</a>
+          </li>
+          <li>
+            <a href={site.mapsUrl} rel="noopener" target="_blank"
+              ><span>Location</span>{site.locality}, {site.country}</a
+            >
+          </li>
+        </ul>
 
-      <h3 class="contact__sub">Follow / Message</h3>
-      <div class="btn-row">
-        <a class="btn btn--ghost" href={site.whatsapp} rel="noopener" target="_blank">WhatsApp</a>
-        <a class="btn btn--ghost" href={site.mapsUrl} rel="noopener" target="_blank">View on Google Maps · This is Ratul Roy</a>
+        <h3 class="contact__sub">Follow / Message</h3>
+        <div class="btn-row">
+          <a class="btn btn--ghost" href={site.whatsapp} rel="noopener" target="_blank">WhatsApp</a>
+          <a class="btn btn--ghost" href={site.mapsUrl} rel="noopener" target="_blank">View on Google Maps · This is Ratul Roy</a>
+        </div>
       </div>
+
+      <form class="contact__form" data-lead-form="contact" novalidate>
+        <h3>Send a message</h3>
+        <p class="note">Tell me about your business and the result you want.</p>
+        <div class="contact__row">
+          <div class="field">
+            <label for="c-name">Your name*</label>
+            <input id="c-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="c-email">Email*</label>
+            <input id="c-email" name="email" type="email" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="c-biz">Business / Website</label>
+          <input id="c-biz" name="business" autocomplete="organization" />
+        </div>
+        <div class="field">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" name="message" rows="5"></textarea>
+        </div>
+        <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
+        <button class="btn btn--dark" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
-
-    <form class="panel panel--edge contact__form" data-lead-form="contact" novalidate>
-      <h3>Send a message</h3>
-      <p class="note">Tell me about your business and the result you want.</p>
-      <div class="contact__row">
-        <div class="field">
-          <label for="c-name">Your name*</label>
-          <input id="c-name" name="name" required autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="c-email">Email*</label>
-          <input id="c-email" name="email" type="email" required autocomplete="email" />
-        </div>
-      </div>
-      <div class="field">
-        <label for="c-biz">Business / Website</label>
-        <input id="c-biz" name="business" autocomplete="organization" />
-      </div>
-      <div class="field">
-        <label for="c-msg">Message</label>
-        <textarea id="c-msg" name="message" rows="5"></textarea>
-      </div>
-      <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
-      <button class="btn btn--primary" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button>
-      <p class="form-status" role="status" aria-live="polite"></p>
-    </form>
   </div>
 </section>
 
 <section class="final" aria-labelledby="final-title">
-  <div class="final__ring" aria-hidden="true"></div>
-  <div class="container final__inner">
-    <p class="eyebrow">Ready to Grow?</p>
-    <h2 id="final-title">Want to Know What's <span class="em">Blocking Your Local Rankings?</span></h2>
-    <p>
-      Get a clear Local SEO audit covering your Google Business Profile, Google Maps visibility,
-      website SEO, citations, reviews, competitors, and AI search readiness.
-    </p>
-    <ul class="chips">
-      <li class="chip">Google Maps SEO</li>
-      <li class="chip">GBP Optimization</li>
-      <li class="chip">Website SEO</li>
-      <li class="chip">AI Search Ready</li>
-    </ul>
-    <div class="btn-row">
-      <a class="btn btn--primary" href="#free-audit">Get Free Local SEO Audit <span class="arrow" aria-hidden="true">→</span></a>
+  <div class="container final__inner" data-reveal>
+    <div>
+      <p class="eyebrow">Ready to Grow?</p>
+      <h2 id="final-title">Want to Know What's <span class="em">Blocking Your Local Rankings?</span></h2>
+      <p>
+        Get a clear Local SEO audit covering your Google Business Profile, Google Maps visibility,
+        website SEO, citations, reviews, competitors, and AI search readiness.
+      </p>
+      <ul class="chips">
+        <li class="chip">Google Maps SEO</li>
+        <li class="chip">GBP Optimization</li>
+        <li class="chip">Website SEO</li>
+        <li class="chip">AI Search Ready</li>
+      </ul>
+    </div>
+    <div class="final__btns">
+      <a class="btn btn--dark" href="#free-audit"><span class="disc" aria-hidden="true">↗</span>Get Free Local SEO Audit</a>
       <a class="btn btn--ghost" href={site.whatsapp} rel="noopener" target="_blank">Chat on WhatsApp</a>
     </div>
   </div>
@@ -86,63 +90,81 @@ import { site } from "../../data/site";
 <style>
   .contact {
     display: grid;
-    gap: 48px;
+    gap: 40px;
+    padding: clamp(24px, 4.5vw, 56px);
+    box-shadow: var(--shadow-lg);
+    background:
+      radial-gradient(60% 60% at 0% 0%, rgb(139 108 255 / 12%), transparent 60%),
+      var(--paper);
   }
   @media (min-width: 1024px) {
     .contact {
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 80px;
-      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
     }
   }
   .contact__info {
     min-width: 0;
   }
+  .contact h2 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  }
   .contact__sub {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--dim);
-    margin: 36px 0 14px;
+    margin: 32px 0 12px;
   }
   .contact__list {
-    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 8px;
   }
   .contact__list a {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--line);
-    color: var(--text);
-    font-size: 1.05rem;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: rgb(255 255 255 / 70%);
+    color: var(--ink);
+    font-weight: 500;
     word-break: break-word;
+    transition:
+      border-color 0.2s,
+      transform 0.3s var(--ease);
   }
   .contact__list a:hover {
-    color: var(--accent);
+    border-color: var(--violet);
+    transform: translateX(4px);
   }
   .contact__list span {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 0.75rem;
     color: var(--dim);
   }
   .contact__form {
-    padding: clamp(24px, 4vw, 40px);
+    min-width: 0;
+    padding: clamp(20px, 3vw, 32px);
+    border-radius: var(--radius);
+    background: var(--bg);
+    border: 1px solid var(--line);
   }
   .contact__form h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 4px;
   }
   .contact__form .note {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+  }
+  .contact__form .btn {
+    width: 100%;
   }
   .contact__row {
     display: grid;
-    gap: 0 16px;
+    gap: 0 14px;
   }
   @media (min-width: 640px) {
     .contact__row {
@@ -153,48 +175,37 @@ import { site } from "../../data/site";
   .final {
     position: relative;
     overflow: hidden;
-    padding: clamp(96px, 13vw, 168px) 0;
-    text-align: center;
-    border-top: 1px solid var(--line);
+    padding: clamp(64px, 9vw, 112px) 0;
     background:
-      radial-gradient(50% 70% at 50% 120%, rgb(255 61 74 / 30%), transparent 70%),
+      radial-gradient(50% 80% at 85% 50%, rgb(139 108 255 / 22%), transparent 70%),
       var(--bg);
   }
-  .final__ring {
-    position: absolute;
-    left: 50%;
-    bottom: -60%;
-    width: min(1100px, 160vw);
-    aspect-ratio: 1;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    border: 1px solid rgb(255 61 74 / 30%);
-    box-shadow:
-      0 0 0 80px rgb(255 61 74 / 2%),
-      0 0 0 160px rgb(255 61 74 / 1.5%);
-    pointer-events: none;
-  }
   .final__inner {
-    position: relative;
-    max-width: 860px;
+    display: grid;
+    gap: 32px;
+    align-items: end;
   }
-  .final .eyebrow::after {
-    content: "";
-    width: 18px;
-    height: 1px;
-    background: var(--accent);
+  @media (min-width: 1024px) {
+    .final__inner {
+      grid-template-columns: 1.4fr auto;
+      gap: 56px;
+    }
   }
   .final h2 {
-    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-size: clamp(2.3rem, 5.4vw, 4.2rem);
   }
   .final p:not(.eyebrow) {
-    max-width: 60ch;
-    margin-inline: auto;
-    font-size: 1.1rem;
+    max-width: 58ch;
+    font-size: 1.05rem;
   }
-  .final .chips,
-  .final .btn-row {
-    justify-content: center;
-    margin-top: 28px;
+  .final__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  @media (min-width: 1024px) {
+    .final__btns {
+      flex-direction: column;
+    }
   }
 </style>

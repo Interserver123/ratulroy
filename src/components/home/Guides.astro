@@ -4,10 +4,10 @@ import { guides } from "../../data/home";
 
 <section class="section" aria-labelledby="guides-title">
   <div class="container">
-    <div class="guides-head">
+    <div class="guides-head" data-reveal>
       <div>
         <p class="eyebrow">Local SEO Guides</p>
-        <h2 id="guides-title">Answers to the questions local businesses <span class="em">ask first</span></h2>
+        <h2 id="guides-title">Answers to the questions local businesses <span class="em">ask first.</span></h2>
         <p>
           Practical guides on Local SEO in Bangladesh, Google Maps ranking, Google Business Profile,
           citations, and AI search visibility. No theory, just what moves local rankings.
@@ -16,21 +16,19 @@ import { guides } from "../../data/home";
       <a class="btn btn--ghost" href="/blog">All Local SEO resources · Browse the blog <span class="arrow" aria-hidden="true">→</span></a>
     </div>
 
-    <ul class="hairgrid hairgrid--4 guides">
+    <ul class="grid grid--4 guides">
       {
-        guides.map((g) => (
-          <li class="guide">
-            <p class="guide__meta mono">
-              <span>Local SEO</span>
+        guides.map((g, i) => (
+          <li class="card card--hover guide" data-reveal style={`--d:${i % 4}`} data-spot>
+            <p class="guide__meta">
+              <span class="chip">Local SEO</span>
               <span>{g.minutes} min read</span>
             </p>
             <h3>
               <a href={g.href}>{g.title}</a>
             </h3>
             <p>{g.text}</p>
-            <span class="text-link" aria-hidden="true">
-              Read guide
-            </span>
+            <span class="text-link">Read guide</span>
           </li>
         ))
       }
@@ -41,8 +39,8 @@ import { guides } from "../../data/home";
 <style>
   .guides-head {
     display: grid;
-    gap: 28px;
-    margin-bottom: 56px;
+    gap: 24px;
+    margin-bottom: 40px;
   }
   .guides-head p:not(.eyebrow) {
     max-width: 60ch;
@@ -56,37 +54,26 @@ import { guides } from "../../data/home";
     }
   }
   .guide {
-    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 28px 24px !important;
-    transition: background 0.25s;
-  }
-  .guide:hover {
-    background: rgb(255 255 255 / 2%);
+    padding: 22px;
   }
   .guide__meta {
     display: flex;
     justify-content: space-between;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    align-items: center;
+    font-size: 0.78rem;
     color: var(--dim);
-    margin-bottom: 20px;
-  }
-  .guide__meta span:first-child {
-    color: var(--accent);
+    margin-bottom: 18px;
   }
   .guide h3 {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
   }
   .guide h3 a::after {
     content: "";
     position: absolute;
     inset: 0;
-  }
-  .guide:hover h3 a {
-    color: #fff;
+    z-index: 1;
   }
   .guide p {
     font-size: 0.875rem;

@@ -2,47 +2,51 @@
 import { aggregates, results, auditPoints, auditTags } from "../../data/home";
 ---
 
-<section id="results" class="section results" aria-labelledby="results-title">
-  <div class="glow" style="width:700px;height:500px;left:-260px;top:30%;background:rgb(255 61 74 / 12%)"></div>
+<section id="results" class="section wash" aria-labelledby="results-title">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Verified SEO Results · Client-Approved Previews</p>
-      <h2 id="results-title">Real Ranking Screenshots. <span class="em">Real Search Visibility Growth.</span></h2>
-      <p>
-        Selected website SEO and Google Business Profile ranking results pulled directly from Google
-        Search Console, GBP Insights and geo-grid trackers. Brand details are masked to protect
-        client confidentiality, the data is real.
-      </p>
-      <ul class="chips">
-        <li class="chip">Verified GSC &amp; GBP data</li>
-        <li class="chip">NDA-safe previews</li>
-        <li class="chip">Client identities protected</li>
-      </ul>
+    <div class="res-head" data-reveal>
+      <div>
+        <p class="eyebrow">Verified SEO Results · Client-Approved Previews</p>
+        <h2 id="results-title">Real Ranking Screenshots. <span class="em">Real Search Visibility Growth.</span></h2>
+        <p>
+          Selected website SEO and Google Business Profile ranking results pulled directly from
+          Google Search Console, GBP Insights and geo-grid trackers. Brand details are masked to
+          protect client confidentiality, the data is real.
+        </p>
+        <ul class="chips">
+          <li class="chip">Verified GSC &amp; GBP data</li>
+          <li class="chip chip--green">NDA-safe previews</li>
+          <li class="chip chip--line">Client identities protected</li>
+        </ul>
+      </div>
     </div>
 
     <dl class="aggregates">
       {
-        aggregates.map((a) => (
-          <div>
+        aggregates.map((a, i) => (
+          <div class="card" data-reveal style={`--d:${i}`}>
             <dt>
-              <span class="mono">Aggregate</span>
+              <span>Aggregate</span>
               {a.label}
             </dt>
-            <dd class="mono">{a.value}</dd>
+            <dd class="num" data-count={a.value.startsWith("Top") ? undefined : ""}>{a.value}</dd>
           </div>
         ))
       }
     </dl>
 
-    <div class="results__bar">
-      <h3 class="results__tab">Website Ranking <span class="mono">{results.length}</span></h3>
-      <p class="mono">Source: Google Search Console</p>
+    <div class="res-bar" data-reveal>
+      <h3 class="res-tab">Website Ranking <span class="num">{results.length}</span></h3>
+      <div class="res-nav">
+        <button type="button" class="res-btn" data-dir="-1" aria-label="Previous results" aria-controls="res-track">←</button>
+        <button type="button" class="res-btn" data-dir="1" aria-label="Next results" aria-controls="res-track">→</button>
+      </div>
     </div>
 
-    <ul class="grid grid--3 results__grid">
+    <ul id="res-track" class="res-track" data-reveal>
       {
-        results.map((r, i) => (
-          <li class={`panel result${i === 0 ? " result--wide panel--edge" : ""}`}>
+        results.map((r) => (
+          <li class="card result">
             {r.image && (
               <img
                 src={r.image}
@@ -54,47 +58,47 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
               />
             )}
             <div class="result__top">
-              <span class="tag">{r.period}</span>
-              <span class="result__src mono">GSC</span>
+              <span class="chip">{r.period}</span>
+              <span class="result__src">Source: Google Search Console</span>
             </div>
             <h4>{r.title}</h4>
-            <p class="result__metric mono">{r.metric}</p>
+            <p class="result__metric">{r.metric}</p>
             <p>{r.text}</p>
             <ul class="chips">
               {r.tags.map((t) => (
-                <li class="chip">{t}</li>
+                <li class="chip chip--line">{t}</li>
               ))}
             </ul>
           </li>
         ))
       }
     </ul>
-    <p class="results__disclaimer">
+    <p class="res-disclaimer">
       All screenshots are exported from authenticated Google Search Console and Google Business
       Profile dashboards. Brand names, URLs and account identifiers are intentionally blurred under
       client NDA. Full unblurred reports are shared privately on request.
     </p>
 
-    <figure class="quote">
-      <span class="quote__mark" aria-hidden="true">“</span>
+    <figure class="quote card" data-reveal>
+      <span class="stars" aria-hidden="true">★★★★★</span>
       <blockquote>
         <p>
-          Ratul rebuilt our entire local SEO foundation, GBP, citations, on-page, and Maps signals.
-          Within months we moved from page two to the top of the map pack and our phone stopped
-          going quiet.
+          “Ratul rebuilt our entire local SEO foundation, GBP, citations, on-page, and Maps signals.
+          Within months we moved from <span class="em">page two to the top of the map pack</span>
+          and our phone stopped going quiet.”
         </p>
       </blockquote>
       <figcaption>
-        <span class="quote__avatar mono" aria-hidden="true">SB</span>
+        <span class="quote__avatar" aria-hidden="true">SB</span>
         <span><strong>Verified Client</strong><br />Service business owner · Identity protected under NDA</span>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<section class="section section--alt" aria-labelledby="audit2-title">
+<section class="section" aria-labelledby="audit2-title">
   <div class="container audit2">
-    <div class="audit2__copy">
+    <div class="audit2__copy" data-reveal>
       <p class="eyebrow">Free Visibility Audit · No Obligation</p>
       <h2 id="audit2-title">Want to See What Is <span class="em">Blocking Your Rankings?</span></h2>
       <p class="lead">
@@ -106,36 +110,50 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
         {auditPoints.map((p) => <li>{p}</li>)}
       </ul>
       <ul class="chips">
-        {auditTags.map((t) => <li class="chip">{t}</li>)}
+        {auditTags.map((t) => <li class="chip chip--line">{t}</li>)}
       </ul>
     </div>
-    <div class="ticket panel--edge">
-      <p class="ticket__label mono">Choose your audit</p>
+    <div class="ticket card" data-reveal style="--d:2">
+      <p class="ticket__label">Choose your audit</p>
       <p class="ticket__price">Free</p>
       <div class="ticket__btns">
-        <a class="btn btn--primary" href="#contact">Get Free SEO Audit</a>
+        <a class="btn btn--dark" href="#contact">Get Free SEO Audit</a>
         <a class="btn btn--ghost" href="#contact">Request GBP Audit</a>
       </div>
       <dl class="ticket__stats">
-        <div><dt>Turnaround</dt><dd class="mono">48h</dd></div>
-        <div><dt>Expert review</dt><dd class="mono">1:1</dd></div>
-        <div><dt>Confidential</dt><dd class="mono">100%</dd></div>
+        <div><dt>Turnaround</dt><dd>48h</dd></div>
+        <div><dt>Expert review</dt><dd>1:1</dd></div>
+        <div><dt>Confidential</dt><dd>100%</dd></div>
       </dl>
       <p class="note">Private. Never shared. No sales pitch.</p>
     </div>
   </div>
 </section>
 
+<script>
+  const track = document.getElementById("res-track");
+  document.querySelectorAll<HTMLButtonElement>(".res-btn").forEach((b) =>
+    b.addEventListener("click", () => {
+      const card = track?.querySelector("li");
+      const step = (card?.getBoundingClientRect().width ?? 320) + 18;
+      track?.scrollBy({ left: step * Number(b.dataset.dir), behavior: "smooth" });
+    }),
+  );
+</script>
+
 <style>
-  .results {
-    overflow: hidden;
+  .res-head {
+    margin-bottom: 40px;
+    max-width: 780px;
+  }
+  .res-head p:not(.eyebrow) {
+    max-width: 62ch;
   }
   .aggregates {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 0 80px;
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
+    gap: 14px;
+    margin: 0 0 56px;
   }
   @media (min-width: 1024px) {
     .aggregates {
@@ -145,148 +163,163 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
   .aggregates > div {
     display: flex;
     flex-direction: column-reverse;
-    gap: 10px;
-    padding: 28px 24px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 22px;
     min-width: 0;
   }
   .aggregates dd {
     margin: 0;
-    font-size: clamp(2rem, 4.4vw, 3.6rem);
-    font-weight: 400;
+    font-size: clamp(2rem, 4.4vw, 3.2rem);
+    font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1;
-    color: var(--text);
+    color: var(--ink);
+  }
+  .aggregates > div:nth-child(3) dd {
+    color: var(--good);
   }
   .aggregates > div:first-child dd {
-    background: linear-gradient(100deg, var(--accent-2), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--violet);
   }
   .aggregates dt {
     display: grid;
-    gap: 2px;
     font-size: 0.85rem;
   }
-  .aggregates dt .mono {
-    font-size: 0.65rem;
-    letter-spacing: 0.14em;
+  .aggregates dt span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--dim);
   }
-  .results__bar {
+
+  .res-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-  .results__bar p {
-    margin: 0;
-    font-size: 0.72rem;
-    color: var(--dim);
-  }
-  .results__tab {
+  .res-tab {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     margin: 0;
     font-size: 0.9rem;
-    font-weight: 500;
-    padding: 8px 8px 8px 16px;
+    font-weight: 600;
+    padding: 6px 6px 6px 16px;
     border-radius: 999px;
-    border: 1px solid var(--line-2);
-    background: rgb(255 255 255 / 4%);
-  }
-  .results__tab span {
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 999px;
-    background: var(--accent);
+    background: var(--ink);
     color: #fff;
   }
+  .res-tab span {
+    font-size: 0.75rem;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--violet-2);
+  }
+  .res-nav {
+    display: flex;
+    gap: 8px;
+  }
+  .res-btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--line-2);
+    background: #fff;
+    color: var(--ink);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      transform 0.3s var(--ease);
+  }
+  .res-btn:hover {
+    background: var(--ink);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  .res-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min(86%, 360px);
+    gap: 18px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 6px 4px 26px;
+    margin-inline: -4px;
+  }
+  .res-track::-webkit-scrollbar {
+    display: none;
+  }
   .result {
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 22px;
     min-width: 0;
   }
-  @media (min-width: 640px) {
-    .result--wide {
-      grid-column: span 2;
-    }
-  }
-  @media (min-width: 1024px) {
-    .result:last-child {
-      grid-column: span 2;
-    }
-  }
-  .result--wide .result__metric {
-    font-size: clamp(1.4rem, 2.6vw, 2rem);
-  }
   .result img {
-    border-radius: 10px;
-    margin-bottom: 16px;
+    border-radius: 12px;
+    margin-bottom: 14px;
   }
   .result__top {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
   }
   .result__src {
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
+    font-size: 0.7rem;
     color: var(--dim);
+    text-align: right;
   }
   .result h4 {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
   }
   .result__metric {
-    color: var(--text);
-    font-size: 1rem;
-    letter-spacing: -0.02em;
+    color: var(--violet);
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
   .result p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
   .result .chips {
     margin-top: auto;
   }
-  .results__disclaimer {
-    margin-top: 28px;
+  .res-disclaimer {
     font-size: 0.82rem;
     color: var(--dim);
     max-width: 860px;
   }
 
   .quote {
-    position: relative;
-    margin: 96px auto 0;
-    max-width: 900px;
+    margin: 64px auto 0;
+    max-width: 860px;
     text-align: center;
-  }
-  .quote__mark {
-    display: block;
-    font-family: var(--font-serif);
-    font-size: 7rem;
-    line-height: 0.6;
-    color: var(--accent);
+    padding: clamp(28px, 5vw, 52px);
+    box-shadow: var(--shadow-lg);
   }
   .quote blockquote {
-    margin: 0;
+    margin: 14px 0 22px;
   }
   .quote p {
-    font-family: var(--font-serif);
-    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
-    line-height: 1.3;
-    color: var(--text);
-    letter-spacing: -0.01em;
+    margin: 0;
+    font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    color: var(--ink);
   }
   .quote figcaption {
     display: inline-flex;
-    gap: 14px;
+    gap: 12px;
     align-items: center;
     text-align: left;
     font-size: 0.85rem;
@@ -299,51 +332,46 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
     display: grid;
     place-items: center;
     font-size: 0.8rem;
-    color: var(--text);
-    border: 1px solid var(--line-2);
-    background: var(--surface-2);
+    font-weight: 700;
+    color: #fff;
+    background: var(--violet);
   }
 
   .audit2 {
     display: grid;
-    gap: 48px;
+    gap: 40px;
     align-items: center;
   }
   @media (min-width: 1024px) {
     .audit2 {
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 80px;
+      gap: 72px;
     }
   }
   .audit2__copy {
     min-width: 0;
   }
   .audit2__points {
-    margin: 24px 0;
-  }
-  .audit2__points li {
-    color: var(--text);
+    margin: 22px 0;
   }
   .ticket {
-    border-radius: var(--radius);
-    padding: 36px 32px;
+    padding: 32px 28px;
     text-align: center;
-    box-shadow: 0 40px 100px -40px rgb(255 61 74 / 35%);
+    box-shadow: var(--shadow-lg);
   }
   .ticket__label {
     margin: 0;
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--dim);
+    font-size: 0.85rem;
+    font-weight: 500;
   }
   .ticket__price {
-    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 600;
     font-style: italic;
-    font-size: 5rem;
+    letter-spacing: -0.06em;
     line-height: 1;
-    color: var(--text);
-    margin: 8px 0 24px;
+    color: var(--violet);
+    margin: 6px 0 22px;
   }
   .ticket__btns {
     display: grid;
@@ -352,8 +380,8 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
   .ticket__stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 28px 0 16px;
-    padding-top: 20px;
+    margin: 24px 0 14px;
+    padding-top: 18px;
     border-top: 1px dashed var(--line-2);
   }
   .ticket__stats > div {
@@ -363,11 +391,11 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
   .ticket__stats dd {
     margin: 0;
     font-size: 1.3rem;
-    color: var(--text);
+    font-weight: 600;
+    color: var(--ink);
   }
   .ticket__stats dt {
     font-size: 0.75rem;
-    color: var(--dim);
   }
   .ticket .note {
     margin: 0;

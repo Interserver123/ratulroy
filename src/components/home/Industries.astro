@@ -2,13 +2,11 @@
 import { industries } from "../../data/home";
 ---
 
-<section class="section section--alt" aria-labelledby="industries-title">
+<section class="section wash" aria-labelledby="industries-title">
   <div class="container">
-    <div class="ind-head">
-      <div>
-        <p class="eyebrow">Industries We Serve</p>
-        <h2 id="industries-title">Built for local businesses that <span class="em">depend on calls.</span></h2>
-      </div>
+    <div class="section-head section-head--center" data-reveal>
+      <p class="eyebrow">Industries We Serve</p>
+      <h2 id="industries-title">Built for local businesses that <span class="em">depend on calls.</span></h2>
       <p>
         Every local industry has different search behavior, competition, and trust signals. I build
         Local SEO systems around how your customers actually search, compare, and choose a business.
@@ -18,8 +16,8 @@ import { industries } from "../../data/home";
     <ul class="ind">
       {
         industries.map((i, n) => (
-          <li>
-            <span class="ind__n mono">{String(n + 1).padStart(2, "0")}</span>
+          <li class="card card--hover" data-reveal style={`--d:${n % 4}`} data-spot>
+            <span class="ind__n num">{String(n + 1).padStart(2, "0")}</span>
             <h3>{i.title}</h3>
             <p>{i.text}</p>
           </li>
@@ -27,87 +25,76 @@ import { industries } from "../../data/home";
       }
     </ul>
 
-    <div class="ind__more panel--edge">
-      <div>
-        <h3><a href="#contact">More Local Service Niches</a></h3>
-        <p>If your business depends on local search, the system can be adapted.</p>
-        <p class="note">
-          Don't see your industry? If your business relies on local visibility and inbound calls,
-          Local SEO can still work for you.
-        </p>
-      </div>
-      <a class="btn btn--primary" href="#contact">Check My Local SEO Opportunity <span class="arrow" aria-hidden="true">→</span></a>
+    <div class="ind__more" data-reveal>
+      <p class="ind__line">
+        <a href="#contact"><strong>More Local Service Niches</strong></a>
+        <span>If your business depends on local search, the system can be adapted.</span>
+      </p>
+      <p class="note">
+        Don't see your industry? If your business relies on local visibility and inbound calls,
+        Local SEO can still work for you.
+      </p>
+      <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Check My Local SEO Opportunity</a>
     </div>
   </div>
 </section>
 
 <style>
-  .ind-head {
-    display: grid;
-    gap: 24px;
-    margin-bottom: 56px;
-  }
-  @media (min-width: 1024px) {
-    .ind-head {
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 72px;
-      align-items: end;
-    }
-  }
   .ind {
     display: grid;
-    border-top: 1px solid var(--line);
+    gap: 14px;
   }
   @media (min-width: 640px) {
     .ind {
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 40px;
     }
   }
   @media (min-width: 1024px) {
     .ind {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
-  .ind li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 16px;
-    padding: 22px 0;
-    border-bottom: 1px solid var(--line);
+  .ind .card {
+    padding: 20px 22px;
   }
   .ind__n {
-    grid-row: span 2;
-    font-size: 0.72rem;
-    color: var(--accent);
-    padding-top: 4px;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--violet);
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--violet-soft);
+    margin-bottom: 14px;
   }
   .ind h3 {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     margin-bottom: 4px;
   }
   .ind p {
     margin: 0;
     font-size: 0.875rem;
-    color: var(--dim);
   }
   .ind__more {
-    margin-top: 48px;
+    margin-top: 40px;
     display: grid;
-    gap: 24px;
-    align-items: center;
-    border-radius: var(--radius);
-    padding: clamp(24px, 4vw, 40px);
+    justify-items: center;
+    gap: 14px;
+    text-align: center;
   }
-  .ind__more h3 {
-    font-size: 1.4rem;
-  }
-  .ind__more .note {
+  .ind__line {
+    display: grid;
+    gap: 2px;
     margin: 0;
   }
-  @media (min-width: 1024px) {
-    .ind__more {
-      grid-template-columns: 1.5fr auto;
-    }
+  .ind__line strong {
+    font-size: 1.15rem;
+  }
+  .ind__line span {
+    color: var(--ink-2);
+  }
+  .ind__more .note {
+    max-width: 52ch;
+    margin: 0 0 6px;
   }
 </style>

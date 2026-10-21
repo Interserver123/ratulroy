@@ -25,37 +25,41 @@ const trustedLogos: { src: string; alt: string }[] = [];
   )
 }
 
-<section class="section section--alt" aria-labelledby="about-title">
+<section class="section" aria-labelledby="about-title">
   <div class="container about">
-    <div class="about__copy">
+    <div class="about__head" data-reveal>
       <p class="eyebrow">The Specialist Behind the System</p>
       <h2 id="about-title">From curious student to <span class="em">local search architect.</span></h2>
-      <p class="lead">
-        My fascination with how businesses get found online started in school, testing what makes
-        one show up and another disappear. That curiosity carried through my ICT studies at Islamic
-        University, sharpened over two years at Netmark, and proved itself on Fiverr as a Level 2
-        seller. Today I run DigiPolli, focused on one thing: helping local businesses dominate Maps,
-        organic, and AI search with a singular focus on revenue.
-      </p>
-      <dl class="facts">
-        <div><dt>in SEO</dt><dd class="mono">5+ Yrs</dd></div>
-        <div><dt>Fiverr</dt><dd class="mono">Level 2</dd></div>
-        <div><dt>Founder</dt><dd>DigiPolli</dd></div>
-      </dl>
-      <a class="text-link" href="#contact">Read the full story</a>
     </div>
 
-    <ol class="journey" aria-label="Fiverr journey">
-      <li class="journey__step">
-        <span class="journey__label mono">Started Here</span>
-        <strong>Level One</strong>
-      </li>
-      <li class="journey__line" aria-hidden="true"></li>
-      <li class="journey__step journey__step--now panel--edge">
-        <span class="journey__label mono">Where I am now</span>
-        <strong>Level Two <span class="stars">·</span> 4.9★</strong>
-      </li>
-    </ol>
+    <p class="statement" data-highlight>
+      My fascination with how businesses get found online started in school, testing what makes one
+      show up and another disappear. That curiosity carried through my ICT studies at Islamic
+      University, sharpened over two years at Netmark, and proved itself on Fiverr as a Level 2
+      seller. Today I run DigiPolli, focused on one thing: helping local businesses dominate Maps,
+      organic, and AI search with a singular focus on revenue.
+    </p>
+
+    <div class="about__foot">
+      <dl class="facts">
+        <div class="card" data-reveal><dt>in SEO</dt><dd><span class="num" data-count>5+</span> Yrs</dd></div>
+        <div class="card" data-reveal style="--d:1"><dt>Fiverr</dt><dd>Level <span class="num" data-count>2</span></dd></div>
+        <div class="card" data-reveal style="--d:2"><dt>Founder</dt><dd>DigiPolli</dd></div>
+      </dl>
+
+      <ol class="journey" aria-label="Fiverr journey" data-reveal style="--d:3">
+        <li class="journey__step">
+          <span class="journey__label">Started Here</span>
+          <strong>Level One</strong>
+        </li>
+        <li class="journey__line" aria-hidden="true"><span></span></li>
+        <li class="journey__step journey__step--now">
+          <span class="journey__label">Where I am now</span>
+          <strong>Level Two · 4.9★</strong>
+        </li>
+      </ol>
+    </div>
+    <p class="about__link"><a class="text-link" href="#contact">Read the full story</a></p>
   </div>
 </section>
 
@@ -63,10 +67,9 @@ const trustedLogos: { src: string; alt: string }[] = [];
   .trusted {
     padding-block: 64px;
     text-align: center;
-    border-top: 1px solid var(--line);
   }
   .logos {
-    margin-top: 32px;
+    margin-top: 28px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -76,81 +79,108 @@ const trustedLogos: { src: string; alt: string }[] = [];
   .logos img {
     max-height: 40px;
     width: auto;
-    filter: grayscale(1) brightness(1.8);
-    opacity: 0.6;
+    filter: grayscale(1);
+    opacity: 0.7;
   }
   .about {
+    max-width: 980px;
+  }
+  .about__head {
+    text-align: center;
+  }
+  .statement {
+    margin: 24px 0 56px;
+    font-size: clamp(1.4rem, 2.9vw, 2.15rem);
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+  }
+  :global(.statement.is-live) :global(.hl-word) {
+    color: #c9c5dc;
+    transition: color 0.35s;
+  }
+  :global(.statement.is-live) :global(.hl-word.on) {
+    color: var(--ink);
+  }
+  .about__foot {
     display: grid;
-    gap: 56px;
-    align-items: center;
+    gap: 18px;
+    align-items: stretch;
   }
-  @media (min-width: 1024px) {
-    .about {
-      grid-template-columns: 1.45fr 0.55fr;
-      gap: 80px;
+  @media (min-width: 900px) {
+    .about__foot {
+      grid-template-columns: 1.4fr 1fr;
     }
-  }
-  .about__copy {
-    min-width: 0;
-  }
-  .about .lead {
-    max-width: 62ch;
   }
   .facts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 36px 0;
-    border-top: 1px solid var(--line);
+    gap: 12px;
+    margin: 0;
   }
   .facts > div {
     display: flex;
     flex-direction: column-reverse;
-    padding: 18px 16px 0 0;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 20px;
   }
   .facts dd {
     margin: 0;
-    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
-    color: var(--text);
-    letter-spacing: -0.03em;
+    font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--ink);
   }
   .facts dt {
     font-size: 0.8rem;
-    color: var(--dim);
   }
   .journey {
-    display: grid;
+    display: flex;
+    align-items: center;
     gap: 0;
-    padding: 0;
   }
   .journey__step {
+    flex: 1;
     display: grid;
-    gap: 6px;
-    padding: 24px;
+    gap: 2px;
+    padding: 18px 20px;
     border-radius: var(--radius);
     border: 1px dashed var(--line-2);
-  }
-  .journey__line {
-    width: 1px;
-    height: 40px;
-    margin-left: 32px;
-    background: linear-gradient(var(--line-2), var(--accent));
+    background: rgb(255 255 255 / 50%);
   }
   .journey__step strong {
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: -0.03em;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
   }
   .journey__step--now {
-    border-style: solid;
-    box-shadow: 0 30px 80px -30px rgb(255 61 74 / 40%);
+    border: 0;
+    background: var(--ink);
+    box-shadow: 0 20px 40px -20px rgb(14 13 26 / 60%);
+  }
+  .journey__step--now strong {
+    color: #fff;
   }
   .journey__label {
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--dim);
   }
   .journey__step--now .journey__label {
-    color: var(--accent);
+    color: var(--violet-2);
+  }
+  .journey__line {
+    width: 36px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--violet) 0 4px, transparent 4px 8px);
+    flex-shrink: 0;
+  }
+  .about__link {
+    text-align: center;
+    margin: 28px 0 0;
   }
 </style>

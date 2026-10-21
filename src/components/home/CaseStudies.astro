@@ -5,56 +5,62 @@ const featuredHref = "/case-studies/gbp-calls-growth";
 
 <section class="section" aria-labelledby="cases-title">
   <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Local SEO Case Studies</p>
-      <h2 id="cases-title">Local SEO Results That Turned Rankings Into <span class="em">Real Leads</span></h2>
-      <p>
-        Real Google Maps ranking, Google Business Profile, and local lead growth, built through
-        clear, repeatable systems for service-area businesses.
-      </p>
+    <div class="cases-head" data-reveal>
+      <div>
+        <p class="eyebrow">Local SEO Case Studies</p>
+        <h2 id="cases-title">Local SEO Results That Turned Rankings Into <span class="em">Real Leads.</span></h2>
+        <p>
+          Real Google Maps ranking, Google Business Profile, and local lead growth, built through
+          clear, repeatable systems for service-area businesses.
+        </p>
+      </div>
+      <a class="btn btn--ghost" href="/case-studies">See all case studies <span class="arrow" aria-hidden="true">→</span></a>
     </div>
 
-    <article class="featured panel--edge">
+    <article class="featured card" data-reveal>
       <div class="featured__copy">
         <p class="tag">Local Service Business</p>
-        <h3>
-          <a href={featuredHref}>From Weak Maps Visibility to Consistent Call Growth</a>
-        </h3>
+        <h3><a href={featuredHref}>From Weak Maps Visibility to Consistent Call Growth</a></h3>
         <p>
           A Local SEO case study on turning an under-optimized Google Business Profile into a steady
           source of qualified inbound calls.
         </p>
-        <span class="text-link" aria-hidden="true">Read the case study</span>
+        <span class="text-link">Read the case study</span>
       </div>
-      <dl class="featured__stats">
-        <div class="featured__hero"><dt>Calls from GBP</dt><dd class="mono">461</dd></div>
-        <div><dt>Profile Interactions</dt><dd class="mono">+62%</dd></div>
-        <div><dt>Map Pack for Core Terms</dt><dd class="mono">Top 3</dd></div>
-      </dl>
+      <div class="browser" aria-hidden="true">
+        <div class="browser__bar"><span></span><span></span><span></span><i>Google Business Profile · Performance</i></div>
+        <div class="browser__screen">
+          <dl class="kpis">
+            <div class="kpis__hero"><dt>Calls from GBP</dt><dd class="num" data-count>461</dd></div>
+            <div><dt>Profile Interactions</dt><dd class="num" data-count>+62%</dd></div>
+            <div><dt>Map Pack for Core Terms</dt><dd>Top 3</dd></div>
+          </dl>
+        </div>
+      </div>
     </article>
 
-    <ul class="hairgrid hairgrid--2 cases">
+    <ul class="grid grid--2 cases">
       {
-        caseStudies.map((c) => (
-          <li class="case">
+        caseStudies.map((c, i) => (
+          <li class="card card--hover case" data-reveal style={`--d:${i % 2}`} data-spot>
+            <div class="case__screen" aria-hidden="true">
+              <span class="case__dots"><span></span><span></span><span></span></span>
+              <span class="case__value num">{c.value}</span>
+              <span class="case__label">{c.label}</span>
+            </div>
             <p class="tag">{c.category}</p>
-            <p class="case__value">
-              <strong class="mono">{c.value}</strong>
-              <span>{c.label}</span>
-            </p>
             <h3>
               <a href={c.href}>{c.title}</a>
             </h3>
+            <p class="sr-only">{c.value} {c.label}</p>
             <p>{c.text}</p>
-            <span class="text-link" aria-hidden="true">
-              View result
-            </span>
+            <span class="text-link">View result</span>
           </li>
         ))
       }
     </ul>
 
-    <div class="cases__cta">
+    <div class="cases__cta card" data-reveal>
       <div>
         <h3>Want Similar Local SEO Growth?</h3>
         <p>
@@ -63,7 +69,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
         </p>
       </div>
       <div class="btn-row">
-        <a class="btn btn--primary" href="#free-audit">Get Free SEO Audit</a>
+        <a class="btn btn--dark" href="#free-audit"><span class="disc" aria-hidden="true">↗</span>Get Free SEO Audit</a>
         <a class="btn btn--ghost" href="/case-studies">See all case studies</a>
       </div>
     </div>
@@ -71,123 +77,200 @@ const featuredHref = "/case-studies/gbp-calls-growth";
 </section>
 
 <style>
-  .featured {
-    position: relative;
+  .cases-head {
     display: grid;
-    gap: 36px;
-    border-radius: var(--radius);
-    padding: clamp(28px, 4vw, 52px);
-    margin-bottom: 16px;
-    overflow: hidden;
-    background-image:
-      radial-gradient(80% 120% at 100% 100%, rgb(255 61 74 / 16%), transparent 60%),
-      linear-gradient(180deg, var(--surface-2), var(--surface));
-    background-origin: border-box;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .cases-head p:not(.eyebrow) {
+    max-width: 60ch;
+    margin: 0;
+  }
+  @media (min-width: 1024px) {
+    .cases-head {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
+  }
+
+  .featured {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+    padding: clamp(24px, 4vw, 44px);
+    margin-bottom: 18px;
+    box-shadow: var(--shadow-lg);
   }
   @media (min-width: 1024px) {
     .featured {
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
     }
   }
   .featured__copy {
     min-width: 0;
   }
   .featured h3 {
-    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     letter-spacing: -0.035em;
   }
   .featured h3 a::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
   }
-  .featured__stats {
+
+  .browser {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: 0 30px 60px -30px rgb(60 40 160 / 35%);
+    transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+    transition: transform 0.6s var(--ease);
+  }
+  .featured:hover .browser {
+    transform: none;
+  }
+  .browser__bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    font-size: 0.72rem;
+  }
+  .browser__bar span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ddd8f2;
+  }
+  .browser__bar span:first-child {
+    background: #ff8a8a;
+  }
+  .browser__bar i {
+    margin-left: 10px;
+    font-style: normal;
+    color: var(--dim);
+  }
+  .browser__screen {
+    padding: 18px;
+    background:
+      radial-gradient(70% 90% at 100% 0%, rgb(139 108 255 / 14%), transparent 60%),
+      #fff;
+  }
+  .kpis {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1px;
+    gap: 12px;
     margin: 0;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    background: var(--line);
-    border: 1px solid var(--line);
   }
-  .featured__stats > div {
+  .kpis > div {
     display: flex;
     flex-direction: column-reverse;
-    gap: 6px;
-    padding: 22px;
-    background: rgb(11 13 18 / 92%);
+    gap: 4px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: rgb(255 255 255 / 80%);
   }
-  .featured__hero {
+  .kpis__hero {
     grid-column: 1 / -1;
   }
-  .featured__stats dd {
+  .kpis dd {
     margin: 0;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-weight: 600;
     letter-spacing: -0.04em;
-    color: var(--text);
     line-height: 1;
+    color: var(--good);
   }
-  .featured__hero dd {
-    font-size: clamp(3.4rem, 7vw, 5.5rem);
-    background: linear-gradient(100deg, var(--accent-2), var(--accent));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .kpis__hero dd {
+    font-size: clamp(3rem, 6vw, 4.4rem);
+    color: var(--violet);
   }
-  .featured__stats dt {
-    font-size: 0.8rem;
-    color: var(--dim);
+  .kpis dt {
+    font-size: 0.78rem;
   }
 
   .case {
-    position: relative;
     display: flex;
     flex-direction: column;
-    padding: 36px 32px !important;
-    transition: background 0.25s;
+    padding: 18px 18px 24px;
   }
-  .case:hover {
-    background: rgb(255 255 255 / 2%);
+  .case__screen {
+    position: relative;
+    display: grid;
+    align-content: center;
+    gap: 4px;
+    min-height: 160px;
+    margin-bottom: 20px;
+    padding: 34px 22px 20px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background:
+      radial-gradient(80% 120% at 100% 100%, rgb(139 108 255 / 22%), transparent 60%),
+      linear-gradient(180deg, #faf9ff, #f1eefe);
+    overflow: hidden;
+  }
+  .case__dots {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    display: flex;
+    gap: 5px;
+  }
+  .case__dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ddd8f2;
   }
   .case__value {
-    display: grid;
-    margin-bottom: 16px;
-  }
-  .case__value strong {
-    font-size: clamp(2rem, 3.6vw, 2.8rem);
-    font-weight: 400;
+    font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+    font-weight: 600;
     letter-spacing: -0.05em;
-    line-height: 1.05;
+    line-height: 1;
+    color: var(--ink);
+    transition: transform 0.5s var(--ease);
+    transform-origin: left;
   }
-  .case__value span {
+  .case:hover .case__value {
+    transform: scale(1.06);
+  }
+  .case__label {
     font-size: 0.85rem;
-    color: var(--dim);
+    color: var(--violet);
+    font-weight: 500;
   }
   .case h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
   .case h3 a::after {
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 1;
   }
   .case p {
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
   .case .text-link {
     margin-top: auto;
   }
 
   .cases__cta {
-    margin-top: 48px;
+    margin-top: 28px;
     display: grid;
-    gap: 24px;
+    gap: 20px;
     align-items: center;
+    padding: clamp(24px, 4vw, 36px);
   }
   .cases__cta h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .cases__cta p {
     margin: 0;

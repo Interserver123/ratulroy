@@ -2,9 +2,9 @@
 import { strategy, systemTags, whyPoints } from "../../data/home";
 ---
 
-<section class="section" aria-labelledby="strategy-title">
+<section class="section wash" aria-labelledby="strategy-title">
   <div class="container">
-    <div class="strat-head">
+    <div class="strat-head" data-reveal>
       <div>
         <p class="eyebrow">Why My Strategy Is Different</p>
         <h2 id="strategy-title">
@@ -33,11 +33,14 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
       </div>
     </div>
 
-    <ol class="hairgrid hairgrid--3 steps">
+    <ol class="steps">
       {
         strategy.map((s, i) => (
-          <li>
-            <span class="steps__num mono">{String(i + 1).padStart(2, "0")}</span>
+          <li class="card card--hover step" data-reveal style={`--d:${i % 3}`} data-spot>
+            <div class="step__top">
+              <span class="step__num num">{String(i + 1).padStart(2, "0")}</span>
+              <span class="step__bar" aria-hidden="true"><span style={`width:${((i + 1) / strategy.length) * 100}%`}></span></span>
+            </div>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
             <ul class="checklist">
@@ -50,7 +53,7 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
       }
     </ol>
 
-    <div class="system panel--edge">
+    <div class="system card" data-reveal>
       <div>
         <p class="tag">The System</p>
         <h3>Built for how local search works now.</h3>
@@ -60,20 +63,20 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
           authority signals. That is the system I build.
         </p>
         <ul class="chips">
-          {systemTags.map((t) => <li class="chip">{t}</li>)}
+          {systemTags.map((t) => <li class="chip chip--line">{t}</li>)}
         </ul>
       </div>
       <div class="btn-row system__btns">
-        <a class="btn btn--primary" href="#contact">Get Free SEO Visibility Audit</a>
+        <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Get Free SEO Visibility Audit</a>
         <a class="btn btn--ghost" href="#results">See Real Results</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--alt why" aria-labelledby="why-title">
-  <div class="container why__grid">
-    <div class="why__copy">
+<section class="section" aria-labelledby="why-title">
+  <div class="container why">
+    <div class="why__copy" data-reveal>
       <p class="eyebrow">Why Choose Ratul Roy</p>
       <h2 id="why-title">Why Choose Ratul Roy <span class="em">The Youngest SEO Expert in Bangladesh.</span></h2>
       <p class="lead">
@@ -83,20 +86,24 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
         personalized approach ensures measurable growth for every client.
       </p>
       <div class="why__cta">
-        <a class="btn btn--primary" href="/book-strategy-call">Book Free Strategy Call <span class="arrow" aria-hidden="true">→</span></a>
-        <div class="why__rating">
+        <a class="btn btn--dark" href="/book-strategy-call"><span class="disc" aria-hidden="true">↗</span>Book Free Strategy Call</a>
+        <span class="why__rating">
           <span class="stars" aria-hidden="true">★★★★★</span>
-          <span><strong class="mono">4.9</strong> · 243 reviews · Fiverr L2</span>
-        </div>
+          <span><strong class="num">4.9</strong> · 243 reviews · Fiverr L2</span>
+        </span>
       </div>
       <p class="note">Trusted by service businesses across Bangladesh &amp; beyond</p>
     </div>
+
     <div class="why__side">
-      <p class="why__age" aria-hidden="true"><span class="em">16</span></p>
+      <div class="age card" data-reveal>
+        <span class="age__num num" data-count>16</span>
+        <span>the age I started doing SEO</span>
+      </div>
       <ul class="why__list">
         {
-          whyPoints.map((w) => (
-            <li>
+          whyPoints.map((w, i) => (
+            <li class="card card--hover" data-reveal style={`--d:${i + 1}`} data-spot>
               <h3>{w.title}</h3>
               <p>{w.text}</p>
             </li>
@@ -110,50 +117,95 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
 <style>
   .strat-head {
     display: grid;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 28px;
+    margin-bottom: 48px;
   }
   @media (min-width: 1024px) {
     .strat-head {
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 72px;
+      gap: 64px;
       align-items: end;
     }
   }
   .strat-head .chips {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .steps {
-    padding: 0;
-  }
-  .steps > li {
-    padding: 36px 28px;
-  }
-  .steps__num {
-    display: block;
-    font-size: 2.6rem;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    margin-bottom: 28px;
-    background: linear-gradient(180deg, var(--text), rgb(255 255 255 / 15%));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .steps p {
-    font-size: 0.925rem;
-  }
-  .system {
-    margin-top: 48px;
     display: grid;
-    gap: 28px;
+    gap: 18px;
+  }
+  @media (min-width: 640px) {
+    .steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .steps {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 36px;
+    }
+    /* Dashed connector between cards in a row */
+    .step:not(:nth-child(3n))::after {
+      content: "";
+      position: absolute;
+      right: -37px;
+      top: 50%;
+      width: 36px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--violet-2) 0 4px, transparent 4px 9px);
+    }
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+  }
+  .step__top {
+    display: flex;
     align-items: center;
-    border-radius: var(--radius);
-    padding: clamp(28px, 4vw, 44px);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .step__num {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .step__bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--violet-soft);
+    overflow: hidden;
+  }
+  .step__bar span {
+    display: block;
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--violet-2), var(--violet));
+  }
+  .step p {
+    font-size: 0.9rem;
+  }
+  .step .checklist li {
+    font-size: 0.85rem;
+  }
+
+  .system {
+    margin-top: 40px;
+    display: grid;
+    gap: 24px;
+    align-items: center;
+    padding: clamp(24px, 4vw, 40px);
   }
   .system h3 {
-    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
   }
   .system p {
     max-width: 60ch;
@@ -167,15 +219,15 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
     }
   }
 
-  .why__grid {
+  .why {
     display: grid;
-    gap: 56px;
+    gap: 48px;
     align-items: center;
   }
   @media (min-width: 1024px) {
-    .why__grid {
+    .why {
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 80px;
+      gap: 72px;
     }
   }
   .why__copy {
@@ -185,41 +237,50 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
-    margin: 32px 0 14px;
+    gap: 18px;
+    margin: 28px 0 12px;
   }
   .why__rating {
     display: grid;
     font-size: 0.85rem;
   }
   .why__side {
-    position: relative;
+    display: grid;
+    gap: 14px;
   }
-  .why__age {
-    position: absolute;
-    right: -10px;
-    top: -110px;
-    margin: 0;
-    font-size: clamp(8rem, 16vw, 13rem);
+  .age {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background:
+      radial-gradient(90% 140% at 0% 0%, rgb(139 108 255 / 22%), transparent 60%),
+      var(--paper);
+  }
+  .age__num {
+    font-size: 4rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.06em;
     line-height: 1;
-    opacity: 0.22;
-    pointer-events: none;
+    color: var(--violet);
+  }
+  .age span:last-child {
+    font-weight: 500;
+    color: var(--ink-2);
   }
   .why__list {
-    position: relative;
     display: grid;
-    border-top: 1px solid var(--line);
+    gap: 14px;
   }
-  .why__list li {
-    padding: 24px 0;
-    border-bottom: 1px solid var(--line);
+  .why__list .card {
+    padding: 20px 22px;
   }
   .why__list h3 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+    font-size: 1.02rem;
+    margin-bottom: 4px;
   }
   .why__list p {
     margin: 0;
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
 </style>

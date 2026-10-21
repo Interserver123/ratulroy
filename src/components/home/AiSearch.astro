@@ -1,11 +1,17 @@
 ---
 import { platforms, aiPillars } from "../../data/home";
+
+// Left side of the hub: where customers discover local businesses.
+const sources = ["Google Search", "Google Maps", ...platforms.map((p) => p.title)];
+const n = sources.length;
+// Left node y-positions spread over 0..100 (viewBox units), right cards over 4 slots.
+const leftY = sources.map((_, i) => 6 + (i * 88) / (n - 1));
+const rightY = aiPillars.map((_, i) => 14 + (i * 72) / (aiPillars.length - 1));
 ---
 
-<section class="section section--alt ai" aria-labelledby="ai-title">
-  <div class="glow" style="width:640px;height:640px;left:50%;top:-240px;transform:translateX(-50%);background:rgb(80 140 255 / 14%)"></div>
+<section class="section" aria-labelledby="ai-title">
   <div class="container">
-    <div class="section-head section-head--center">
+    <div class="section-head section-head--center" data-reveal>
       <p class="eyebrow">Beyond Google Maps</p>
       <h2 id="ai-title">
         Your next customer may not search Google. <span class="em">They may ask ChatGPT.</span>
@@ -18,94 +24,233 @@ import { platforms, aiPillars } from "../../data/home";
       </p>
     </div>
 
-    <ul class="platforms">
-      {
-        platforms.map((p) => (
-          <li>
-            <strong>{p.title}</strong>
-            <span class="mono">{p.text}</span>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="hub" data-reveal>
+      <ul class="hub__sources">
+        {
+          sources.map((s, i) => {
+            const p = platforms.find((x) => x.title === s);
+            return (
+              <li style={`--y:${leftY[i]}`}>
+                <strong>{s}</strong>
+                {p && <span>{p.text}</span>}
+              </li>
+            );
+          })
+        }
+      </ul>
 
-    <p class="ai__cta">
-      <a class="btn btn--primary" href="#contact">Build My AI-Ready Local SEO System <span class="arrow" aria-hidden="true">→</span></a>
-    </p>
+      <svg class="hub__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        {leftY.map((y) => <path d={`M0 ${y} C 22 ${y}, 28 50, 50 50`} />)}
+        {rightY.map((y) => <path class="out" d={`M50 50 C 72 50, 78 ${y}, 100 ${y}`} />)}
+      </svg>
 
-    <ul class="hairgrid hairgrid--4 pillars">
-      {
-        aiPillars.map((p) => (
-          <li>
-            <h3>{p.title}</h3>
-            <p>{p.text}</p>
-          </li>
-        ))
-      }
-    </ul>
-    <p class="ai__note">
-      AI search visibility is not magic. It starts with a clear business entity, trusted local
-      signals, structured content, and strong search authority.
-    </p>
+      <div class="hub__core" aria-hidden="true">
+        <span class="hub__pulse"></span>
+        <svg viewBox="0 0 64 64">
+          <path d="M32 13c-8 0-14.5 6.3-14.5 14.1C17.5 37.6 32 51.5 32 51.5S46.5 37.6 46.5 27.1C46.5 19.3 40 13 32 13Zm0 19.4a5.4 5.4 0 1 1 0-10.8 5.4 5.4 0 0 1 0 10.8Z" fill="#8b6cff"></path>
+        </svg>
+      </div>
+
+      <ul class="hub__out">
+        {
+          aiPillars.map((p, i) => (
+            <li class="card" style={`--y:${rightY[i]}`}>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="ai__foot" data-reveal>
+      <p>
+        AI search visibility is not magic. It starts with a clear business entity, trusted local
+        signals, structured content, and strong search authority.
+      </p>
+      <a class="btn btn--dark" href="#contact"><span class="disc" aria-hidden="true">↗</span>Build My AI-Ready Local SEO System</a>
+    </div>
   </div>
 </section>
 
 <style>
-  .ai {
-    overflow: hidden;
-  }
-  .platforms {
+  .hub {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 980px;
-    margin: 0 auto;
+    gap: 24px;
   }
-  @media (min-width: 768px) {
-    .platforms {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .hub__sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
   }
-  .platforms li {
-    display: grid;
-    gap: 4px;
-    padding: 18px 20px;
-    border-radius: var(--radius-sm);
+  .hub__sources li {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: #fff;
     border: 1px solid var(--line);
-    background: rgb(255 255 255 / 2%);
-    transition:
-      border-color 0.2s,
-      transform 0.2s;
+    box-shadow: 0 1px 2px rgb(30 20 80 / 4%);
+    font-size: 0.85rem;
+    line-height: 1.3;
   }
-  .platforms li:hover {
-    border-color: rgb(159 211 255 / 35%);
-    transform: translateY(-2px);
-  }
-  .platforms strong {
-    font-size: 1rem;
-  }
-  .platforms span {
+  .hub__sources span {
     font-size: 0.72rem;
     color: var(--dim);
   }
-  .ai__cta {
-    text-align: center;
-    margin: 40px 0 72px;
+  .hub__lines {
+    display: none;
   }
-  .pillars > li {
-    padding: 32px 28px;
+  .hub__core {
+    position: relative;
+    justify-self: center;
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--ink);
+    box-shadow:
+      0 0 0 10px rgb(139 108 255 / 12%),
+      0 20px 50px -10px rgb(91 61 245 / 60%);
   }
-  .pillars h3 {
-    font-size: 1.05rem;
+  .hub__core svg {
+    width: 44px;
+    height: 44px;
   }
-  .pillars p {
+  .hub__pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--violet-2);
+    animation: pulse-ring 2.4s ease-out infinite;
+  }
+  .hub__out {
+    display: grid;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .hub__out {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .hub__out .card {
+    padding: 18px 20px;
+  }
+  .hub__out h3 {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+  }
+  .hub__out p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
-  .ai__note {
-    margin: 48px auto 0;
-    max-width: 640px;
+
+  /* Desktop: true hub diagram with flowing lines */
+  @media (min-width: 1024px) {
+    .hub {
+      display: block;
+      height: 620px;
+    }
+    .hub::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 520px;
+      height: 520px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgb(139 108 255 / 20%), transparent 65%);
+      pointer-events: none;
+    }
+    .hub__sources {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 210px;
+      display: block;
+    }
+    .hub__sources li {
+      position: absolute;
+      left: 0;
+      top: calc(var(--y) * 1%);
+      transform: translateY(-50%);
+      flex-direction: row;
+      align-items: baseline;
+      gap: 8px;
+      white-space: nowrap;
+      transition:
+        transform 0.3s var(--ease),
+        border-color 0.3s;
+    }
+    .hub__sources li:hover {
+      transform: translate(6px, -50%);
+      border-color: var(--violet);
+    }
+    .hub__sources span {
+      display: none;
+    }
+    .hub__lines {
+      display: block;
+      position: absolute;
+      left: 200px;
+      right: 330px;
+      top: 0;
+      height: 100%;
+      width: calc(100% - 530px);
+      overflow: visible;
+    }
+    .hub__lines path {
+      fill: none;
+      stroke: #b9a9ff;
+      stroke-width: 1.2;
+      vector-effect: non-scaling-stroke;
+      stroke-dasharray: 4 6;
+      animation: dash 1.6s linear infinite;
+    }
+    .hub__lines path.out {
+      stroke: var(--violet);
+      stroke-dasharray: 6 6;
+    }
+    .hub__core {
+      position: absolute;
+      left: calc(200px + (100% - 530px) / 2);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hub__out {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 330px;
+      display: block;
+    }
+    .hub__out li {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(var(--y) * 1%);
+      transform: translateY(-50%);
+    }
+  }
+
+  .ai__foot {
+    margin-top: 48px;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
     text-align: center;
-    color: var(--text);
+  }
+  .ai__foot p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--ink);
+    font-weight: 500;
   }
 </style>
