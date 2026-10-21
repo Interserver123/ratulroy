@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { strategy, systemTags, whyPoints } from "../../data/home";
+import { img } from "../../lib/img";
 ---
 
 <section class="section wash" aria-labelledby="strategy-title">
@@ -98,10 +100,13 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
     </div>
 
     <div class="why__side">
-      <div class="age card" data-reveal>
-        <span class="age__num num" data-count>16</span>
-        <span>the age I started doing SEO</span>
-      </div>
+      <figure class="whyphoto" data-reveal>
+        <Image src={img("people/ratul-why-choose.jpg")} alt="Ratul Roy at his desk with a laptop" widths={[360, 540, 720]} sizes="(min-width: 1024px) 420px, 90vw" loading="lazy" class="whyphoto__img" />
+        <figcaption class="age">
+          <span class="age__num num" data-count>16</span>
+          <span>the age I started doing SEO</span>
+        </figcaption>
+      </figure>
       <ul class="why__list">
         {
           whyPoints.map((w, i) => (
@@ -272,6 +277,39 @@ import { strategy, systemTags, whyPoints } from "../../data/home";
   .why__side {
     display: grid;
     gap: 14px;
+  }
+  .whyphoto {
+    position: relative;
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3.4;
+  }
+  .whyphoto__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 62%;
+    transition: transform 0.8s var(--ease);
+  }
+  .whyphoto:hover .whyphoto__img {
+    transform: scale(1.04);
+  }
+  .whyphoto .age {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    right: auto;
+    padding: 10px 16px;
+    border-radius: 16px;
+    background: rgb(255 255 255 / 88%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+  }
+  .whyphoto .age__num {
+    font-size: 2.6rem;
   }
   .age {
     display: flex;

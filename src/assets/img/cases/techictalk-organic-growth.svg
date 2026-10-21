@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="55%" stop-color="#10243d"/>
+      <stop offset="100%" stop-color="#1a1530"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="clicksFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63b3ed" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#63b3ed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="imprFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+
+  <!-- Header bar -->
+  <g>
+    <rect x="60" y="60" width="680" height="56" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(99,179,237,0.3)"/>
+    <circle cx="92" cy="88" r="10" fill="#e94560"/>
+    <rect x="112" y="80" width="180" height="9" rx="3" fill="rgba(255,255,255,0.4)"/>
+    <rect x="112" y="96" width="110" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+    <text x="690" y="93" text-anchor="end" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.45)" letter-spacing="2">TECHICTALK · GSC</text>
+  </g>
+
+  <!-- KPI cards -->
+  <g>
+    <rect x="60" y="140" width="160" height="80" rx="10" fill="rgba(99,179,237,0.10)" stroke="rgba(99,179,237,0.35)"/>
+    <text x="76" y="166" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Total Clicks</text>
+    <text x="76" y="200" font-family="sans-serif" font-size="26" font-weight="700" fill="#ffffff">976K</text>
+
+    <rect x="232" y="140" width="160" height="80" rx="10" fill="rgba(167,139,250,0.10)" stroke="rgba(167,139,250,0.35)"/>
+    <text x="248" y="166" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Impressions</text>
+    <text x="248" y="200" font-family="sans-serif" font-size="26" font-weight="700" fill="#ffffff">30M+</text>
+
+    <rect x="404" y="140" width="160" height="80" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="420" y="166" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Keywords</text>
+    <text x="420" y="200" font-family="sans-serif" font-size="26" font-weight="700" fill="#ffffff">15,000+</text>
+
+    <rect x="576" y="140" width="164" height="80" rx="10" fill="rgba(233,69,96,0.10)" stroke="rgba(233,69,96,0.35)"/>
+    <text x="592" y="166" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">DR (Ahrefs)</text>
+    <text x="592" y="200" font-family="sans-serif" font-size="26" font-weight="700" fill="#ffffff">45+</text>
+  </g>
+
+  <!-- Chart area -->
+  <g>
+    <rect x="60" y="244" width="680" height="296" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="80" y="272" font-family="sans-serif" font-size="12" fill="rgba(255,255,255,0.55)">Organic Growth · 18 Months</text>
+
+    <!-- gridlines -->
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+      <line x1="80" y1="320" x2="720" y2="320"/>
+      <line x1="80" y1="380" x2="720" y2="380"/>
+      <line x1="80" y1="440" x2="720" y2="440"/>
+      <line x1="80" y1="500" x2="720" y2="500"/>
+    </g>
+
+    <!-- Impressions area (purple, slightly ahead) -->
+    <path d="M80,500 L120,495 L160,485 L200,470 L240,440 L280,400 L320,350 L360,320 L400,295 L440,275 L480,260 L520,250 L560,245 L600,240 L640,238 L680,236 L720,234 L720,520 L80,520 Z"
+          fill="url(#imprFill)"/>
+    <path d="M80,500 L120,495 L160,485 L200,470 L240,440 L280,400 L320,350 L360,320 L400,295 L440,275 L480,260 L520,250 L560,245 L600,240 L640,238 L680,236 L720,234"
+          fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+
+    <!-- Clicks area (blue) -->
+    <path d="M80,510 L120,508 L160,503 L200,495 L240,478 L280,455 L320,420 L360,385 L400,355 L440,335 L480,318 L520,302 L560,290 L600,280 L640,272 L680,266 L720,262 L720,520 L80,520 Z"
+          fill="url(#clicksFill)"/>
+    <path d="M80,510 L120,508 L160,503 L200,495 L240,478 L280,455 L320,420 L360,385 L400,355 L440,335 L480,318 L520,302 L560,290 L600,280 L640,272 L680,266 L720,262"
+          fill="none" stroke="#63b3ed" stroke-width="2.5"/>
+
+    <!-- breakout marker -->
+    <circle cx="320" cy="420" r="6" fill="#e94560"/>
+    <text x="332" y="414" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.65)">Authority breakout</text>
+
+    <!-- X axis labels -->
+    <g font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.45)">
+      <text x="80" y="535">M1</text>
+      <text x="200" y="535">M4</text>
+      <text x="360" y="535">M9</text>
+      <text x="520" y="535">M13</text>
+      <text x="700" y="535" text-anchor="end">M18</text>
+    </g>
+
+    <!-- Legend -->
+    <g font-family="sans-serif" font-size="11">
+      <rect x="560" y="262" width="10" height="3" fill="#63b3ed"/>
+      <text x="576" y="266" fill="rgba(255,255,255,0.7)">Clicks</text>
+      <rect x="630" y="262" width="10" height="3" fill="#a78bfa"/>
+      <text x="646" y="266" fill="rgba(255,255,255,0.7)">Impressions</text>
+    </g>
+  </g>
+
+  <text x="60" y="582" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" letter-spacing="3">RATUL ROY · CASE STUDY · TECHICTALK</text>
+</svg>

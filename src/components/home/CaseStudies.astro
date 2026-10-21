@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { caseStudies } from "../../data/home";
+import { img } from "../../lib/img";
 const featuredHref = "/case-studies/gbp-calls-growth";
 ---
 
@@ -30,8 +32,16 @@ const featuredHref = "/case-studies/gbp-calls-growth";
       <div class="browser" aria-hidden="true">
         <div class="browser__bar"><svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"/></svg><i>Google Business Profile · Performance</i></div>
         <div class="browser__screen">
+          <Image
+            src={img("cases/gbp-calls-performance.jpeg")}
+            alt="Google Business Profile performance: 461 calls made from the Business Profile, April to August 2024"
+            widths={[480, 720, 960]}
+            sizes="(min-width: 1024px) 560px, 90vw"
+            loading="lazy"
+            class="browser__img"
+          />
           <dl class="kpis">
-            <div class="kpis__hero"><dt>Calls from GBP</dt><dd class="num" data-count>461</dd></div>
+            <div><dt>Calls from GBP</dt><dd class="num" data-count>461</dd></div>
             <div><dt>Profile Interactions</dt><dd class="num" data-count>+62%</dd></div>
             <div><dt>Map Pack for Core Terms</dt><dd>Top 3</dd></div>
           </dl>
@@ -44,6 +54,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
         caseStudies.map((c, i) => (
           <li class="card card--hover case" data-reveal style={`--d:${i % 2}`} data-spot>
             <div class="case__screen" aria-hidden="true">
+              {c.image && <Image src={img(c.image)} alt="" widths={[400, 640]} sizes="(min-width: 640px) 520px, 90vw" loading="lazy" class="case__img" />}
               <span class="case__dots"><svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"/></svg></span>
               <span class="case__value num">{c.value}</span>
               <span class="case__label">{c.label}</span>
@@ -150,15 +161,22 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     font-style: normal;
     color: var(--dim);
   }
+  .browser__img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    margin-bottom: 12px;
+  }
   .browser__screen {
-    padding: 18px;
+    padding: 14px;
     background:
       radial-gradient(70% 90% at 100% 0%, rgb(255 122 102 / 14%), transparent 60%),
       #fff;
   }
   .kpis {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin: 0;
   }
@@ -171,19 +189,16 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     border: 1px solid var(--line);
     background: rgb(255 255 255 / 80%);
   }
-  .kpis__hero {
-    grid-column: 1 / -1;
-  }
+
   .kpis dd {
     margin: 0;
-    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
     font-weight: 600;
     letter-spacing: -0.04em;
     line-height: 1;
     color: var(--good);
   }
-  .kpis__hero dd {
-    font-size: clamp(3rem, 6vw, 4.4rem);
+  .kpis > div:first-child dd {
     color: var(--accent);
   }
   .kpis dt {
@@ -220,6 +235,42 @@ const featuredHref = "/case-studies/gbp-calls-growth";
   }
   .case__dots {
     color: var(--accent);
+  }
+  .case__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    transition: transform 0.7s var(--ease);
+  }
+  .case:hover .case__img {
+    transform: scale(1.05);
+  }
+  .case__screen:has(.case__img) {
+    min-height: 210px;
+    align-content: end;
+    justify-items: start;
+  }
+  .case__screen:has(.case__img) .case__dots {
+    display: none;
+  }
+  .case__screen:has(.case__img) .case__value,
+  .case__screen:has(.case__img) .case__label {
+    position: relative;
+    background: rgb(255 255 255 / 90%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2px 12px;
+  }
+  .case__screen:has(.case__img) .case__value {
+    border-radius: 12px 12px 12px 0;
+    padding-top: 8px;
+  }
+  .case__screen:has(.case__img) .case__label {
+    border-radius: 0 0 12px 12px;
+    padding-bottom: 8px;
   }
   .case__value {
     font-size: clamp(2.2rem, 4.4vw, 3.2rem);

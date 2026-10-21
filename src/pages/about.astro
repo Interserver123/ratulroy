@@ -2,6 +2,7 @@
 import { Image, getImage } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { img } from "../lib/img";
 import { site } from "../data/site";
 import {
   quickFacts,
@@ -183,6 +184,10 @@ const pin =
       </div>
 
       <aside class="story__side" data-reveal style="--d:2">
+        <figure class="candid">
+          <Image src={img("people/ratul-roy-portrait.jpg")} alt="Ratul Roy, Local SEO specialist, looking at his phone" widths={[320, 480, 640]} sizes="(min-width: 1024px) 340px, 90vw" loading="lazy" class="candid__img" />
+          <figcaption>Ratul Roy · Founder, DigiPolli</figcaption>
+        </figure>
         <dl class="sheet card">
           {
             factSheet.map((f) => (
@@ -250,6 +255,17 @@ const pin =
           ))
         }
       </ul>
+      <div class="proofshots">
+        <figure class="card" data-reveal>
+          <Image src={img("fiverr/fiverr-level-one.jpg")} alt="Fiverr notification: Ratul reached seller Level One" widths={[480, 720]} sizes="(min-width: 900px) 540px, 90vw" loading="lazy" class="proofshots__img" />
+          <figcaption><b>Started here</b> · Fiverr Level One</figcaption>
+        </figure>
+        <span class="proofshots__arrow" aria-hidden="true">→</span>
+        <figure class="card" data-reveal style="--d:1">
+          <Image src={img("fiverr/fiverr-level-two.png")} alt="Ratul's Fiverr profile: Level 2 seller, 4.9 rating from 243 reviews, Bangladesh" widths={[480, 720]} sizes="(min-width: 900px) 540px, 90vw" loading="lazy" class="proofshots__img" />
+          <figcaption><b>Where I am now</b> · Level 2 · 4.9★ · 243 reviews</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -781,6 +797,80 @@ const pin =
   .creds p {
     margin: 0;
     font-size: 0.9rem;
+  }
+
+  .candid {
+    position: relative;
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 1;
+  }
+  .candid__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .candid figcaption {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: rgb(255 255 255 / 88%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .proofshots {
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+  }
+  @media (min-width: 900px) {
+    .proofshots {
+      grid-template-columns: 1fr auto 1fr;
+    }
+  }
+  .proofshots figure {
+    margin: 0;
+    padding: 12px;
+  }
+  .proofshots__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 40%;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .proofshots figcaption {
+    padding: 10px 4px 2px;
+    font-size: 0.875rem;
+  }
+  .proofshots figcaption b {
+    color: var(--accent);
+  }
+  .proofshots__arrow {
+    justify-self: center;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 700;
+  }
+  @media (max-width: 899px) {
+    .proofshots__arrow {
+      rotate: 90deg;
+    }
   }
 
   /* ---------- Method ---------- */

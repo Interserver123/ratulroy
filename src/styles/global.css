@@ -565,3 +565,7 @@ a.text-link:hover::after,
   width: 22px;
   height: 22px;
 }
+
+[hidden] {
+  display: none !important;
+}

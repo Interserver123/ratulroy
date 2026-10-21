@@ -1,6 +1,18 @@
 ---
-// "Trusted By" logos: add files to /public/logos and list them here to show the strip.
-const trustedLogos: { src: string; alt: string }[] = [];
+import { Image } from "astro:assets";
+import { img } from "../../lib/img";
+
+const trustedLogos = [
+  ["dallas-heating-and-ac.png", "Dallas Heating and AC"],
+  ["amz-sellers-attorney.png", "AMZ Sellers Attorney"],
+  ["lpma-primary-care-medicine.png", "LPMA Primary Care Medicine"],
+  ["pediatric-pod.png", "Pediatric Pod"],
+  ["shiridi-sai-packers-and-movers.png", "Shiridi Sai Packers and Movers"],
+  ["edoxi-training-institute.svg", "EDOXI Training Institute"],
+  ["logoinhours-dallas.jpg", "LogoinHours Dallas"],
+  ["qs-health-care-service.png", "QS Health Care Service"],
+  ["chococraving.webp", "ChocoCraving"],
+].map(([file, alt]) => ({ src: img(`logos/${file}`), alt }));
 ---
 
 {
@@ -13,13 +25,17 @@ const trustedLogos: { src: string; alt: string }[] = [];
           Selected businesses and projects that trusted Ratul Roy's SEO execution, Local SEO
           systems, and search visibility strategy.
         </p>
-        <ul class="logos">
-          {trustedLogos.map((l) => (
-            <li>
-              <img src={l.src} alt={l.alt} loading="lazy" decoding="async" width="160" height="60" />
-            </li>
+        <div class="logos">
+          {[0, 1].map((copy) => (
+            <ul class="logos__track" aria-hidden={copy === 1 ? "true" : undefined}>
+              {trustedLogos.map((l) => (
+                <li>
+                  <Image src={l.src} alt={copy === 1 ? "" : `${l.alt} logo`} height={96} loading="lazy" class="logos__img" />
+                </li>
+              ))}
+            </ul>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )
@@ -49,11 +65,13 @@ const trustedLogos: { src: string; alt: string }[] = [];
 
       <ol class="journey" aria-label="Fiverr journey" data-reveal style="--d:3">
         <li class="journey__step">
+          <Image src={img("fiverr/fiverr-level-one.jpg")} alt="Fiverr notification congratulating Ratul on reaching Level One" widths={[320, 480]} sizes="240px" loading="lazy" class="journey__img" />
           <span class="journey__label">Started Here</span>
           <strong>Level One</strong>
         </li>
         <li class="journey__line" aria-hidden="true"><span></span></li>
         <li class="journey__step journey__step--now">
+          <Image src={img("fiverr/fiverr-level-two.png")} alt="Ratul's Fiverr profile showing Level 2, 4.9 rating and 243 reviews" widths={[320, 480]} sizes="240px" loading="lazy" class="journey__img" />
           <span class="journey__label">Where I am now</span>
           <strong>Level Two · 4.9★</strong>
         </li>
@@ -65,22 +83,58 @@ const trustedLogos: { src: string; alt: string }[] = [];
 
 <style>
   .trusted {
-    padding-block: 64px;
+    padding-block: 56px 24px;
     text-align: center;
   }
-  .logos {
-    margin-top: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
+  .trusted h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
   }
-  .logos img {
-    max-height: 40px;
+  .trusted p:not(.eyebrow) {
+    max-width: 56ch;
+    margin-inline: auto;
+  }
+  .logos {
+    display: flex;
+    overflow: hidden;
+    margin-top: 28px;
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+  .logos__track {
+    display: flex;
+    flex-shrink: 0;
+    gap: 16px;
+    padding-right: 16px;
+    animation: logos-x 36s linear infinite;
+  }
+  .logos:hover .logos__track {
+    animation-play-state: paused;
+  }
+  @keyframes logos-x {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .logos__track li {
+    display: grid;
+    place-items: center;
+    height: 84px;
+    padding: 0 22px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .logos__img {
+    height: 48px;
     width: auto;
-    filter: grayscale(1);
-    opacity: 0.7;
+    max-width: 180px;
+    object-fit: contain;
+    filter: saturate(0.9);
+    transition: transform 0.4s var(--ease);
+  }
+  .logos__track li:hover .logos__img {
+    transform: scale(1.06);
   }
   .about {
     max-width: 980px;
@@ -150,6 +204,14 @@ const trustedLogos: { src: string; alt: string }[] = [];
     border-radius: var(--radius);
     border: 1px dashed var(--line-2);
     background: rgb(255 255 255 / 50%);
+  }
+  .journey__img {
+    width: 100%;
+    height: 84px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 10px;
+    margin-bottom: 8px;
   }
   .journey__step strong {
     font-size: 1.1rem;

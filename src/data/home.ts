@@ -248,18 +248,22 @@ export const aggregates = [
   { value: "Top 1-3", label: "Map pack rankings achieved" },
 ];
 
-// Add `image: "/results/xxx.webp"` to a result once the screenshot is in /public/results.
-export const results: {
+export type Result = {
   period: string;
   title: string;
   metric: string;
   text: string;
   tags: string[];
+  /** Path inside src/assets/img */
   image?: string;
-}[] = [
+  source?: string;
+};
+
+export const results: Result[] = [
   {
     period: "16 months",
     title: "Organic Search Growth",
+    image: "results/website/website-result-1.png",
     metric: "75.2K clicks · 4.04M impressions",
     text: "Steady organic SEO growth in Google Search Console driven by technical SEO, on-page optimization and topical content structure.",
     tags: ["Organic SEO", "Search Console", "Website Ranking"],
@@ -267,6 +271,7 @@ export const results: {
   {
     period: "24 months",
     title: "Scaled Search Visibility",
+    image: "results/website/website-result-2.png",
     metric: "1.35M clicks · 64M impressions",
     text: "Compounding impressions and clicks growth from improved indexation, internal linking and search intent-aligned content.",
     tags: ["Organic Growth", "Technical SEO", "Content"],
@@ -274,6 +279,7 @@ export const results: {
   {
     period: "6 months",
     title: "Early Organic Lift-Off",
+    image: "results/website/website-result-3.png",
     metric: "6.13K clicks · 376K impressions",
     text: "Compounding clicks and impressions growth on a new site after technical SEO foundations, on-page optimization and consistent topical publishing.",
     tags: ["Technical SEO", "On-Page SEO", "Search Console"],
@@ -281,6 +287,7 @@ export const results: {
   {
     period: "12 months",
     title: "Local Dental Clinic, 12 Month Growth",
+    image: "results/website/website-result-4.png",
     metric: "8.62K clicks · 507K impressions",
     text: "Local dental clinic SEO program scaling organic traffic and visibility over 12 months through localized service pages and on-page SEO.",
     tags: ["Local SEO", "Dental SEO", "Service Pages"],
@@ -288,6 +295,7 @@ export const results: {
   {
     period: "6 months vs 6 months",
     title: "Dentist SEO, 6 Months vs Previous",
+    image: "results/website/website-result-5.png",
     metric: "6.62K vs 2K clicks · +231% clicks",
     text: "Side-by-side comparison of a local dentist's search performance, last 6 months vs the previous 6, driven by improved rankings and CTR.",
     tags: ["Local SEO", "Period Compare", "CTR"],
@@ -295,6 +303,7 @@ export const results: {
   {
     period: "15 months",
     title: "Enterprise-Scale Search Visibility",
+    image: "results/website/website-result-6.jpg",
     metric: "976K clicks · 53.7M impressions",
     text: "Large-scale organic visibility growth from sitewide technical SEO, internal linking architecture and content scaling across thousands of pages.",
     tags: ["Enterprise SEO", "Technical SEO", "Content Scale"],
@@ -302,9 +311,88 @@ export const results: {
   {
     period: "6 months",
     title: "Answers Hub, Topical Authority",
+    image: "results/website/website-result-7.jpg",
     metric: "8.32K clicks · 322K impressions · 2.6% CTR",
     text: "A targeted answers / FAQ hub building topical authority and capturing long-tail and question-based search traffic.",
     tags: ["Topical Authority", "Long-Tail", "AI Search"],
+  },
+];
+
+export const gbpResults: Result[] = [
+  {
+    period: "Geo-grid scan",
+    title: "Service-Area Map Pack Coverage",
+    metric: "Rank 1 across almost the whole grid",
+    text: "Geo-grid scan of a Dallas service business showing first-position Map Pack rankings across its service area.",
+    tags: ["Geo-Grid", "Google Maps", "Service Area"],
+    image: "results/gbp/gbp-result-1.jpg",
+    source: "Geo-grid tracker",
+  },
+  {
+    period: "Apr–Aug 2024",
+    title: "Calls From Business Profile",
+    metric: "461 calls in 5 months",
+    text: "Call volume from Google Business Profile climbing month over month after a full GBP and local SEO rebuild.",
+    tags: ["GBP Calls", "Lead Growth", "Local SEO"],
+    image: "results/gbp/gbp-result-3.jpeg",
+    source: "GBP Insights",
+  },
+  {
+    period: "Jul–Nov 2025",
+    title: "Education Academy Discovery",
+    metric: "10,107 profile views · 4,461 searches",
+    text: "An IELTS and PTE academy's Business Profile reaching thousands of local searchers through stronger categories, services, and content.",
+    tags: ["Profile Views", "Search Discovery", "Education"],
+    image: "results/gbp/gbp-result-4.png",
+    source: "GBP Insights",
+  },
+  {
+    period: "vs Jul–Nov 2024",
+    title: "Year-Over-Year Profile Growth",
+    metric: "8,698 profile views · +67.7%",
+    text: "Profile views and search appearances both up 67.7% compared with the same period a year earlier.",
+    tags: ["YoY Growth", "Profile Views", "GBP"],
+    image: "results/gbp/gbp-result-6.png",
+    source: "GBP Insights",
+  },
+  {
+    period: "vs Sep 2023",
+    title: "Clinic Profile Visibility Lift",
+    metric: "3,647 views (+175.7%) · 1,845 searches (+239.8%)",
+    text: "A physiotherapy profile more than doubling both views and search appearances against its earlier baseline.",
+    tags: ["Healthcare", "Search Appearances", "GBP"],
+    image: "results/gbp/gbp-result-2.webp",
+    source: "GBP Insights",
+  },
+  {
+    period: "Jul–Nov 2025",
+    title: "Fresh Profile, First Calls",
+    metric: "8 calls from a brand-new profile",
+    text: "A brand-new Business Profile optimized from day one, moving from zero to its first inbound calls.",
+    tags: ["New Profile", "GBP Optimization", "Calls"],
+    image: "results/gbp/gbp-result-5.png",
+    source: "GBP Insights",
+  },
+];
+
+export const homeResults: Result[] = [
+  {
+    period: "Home services",
+    title: "Electrician SEO Growth",
+    metric: "12.2K clicks · 436K impressions",
+    text: "Organic growth for an electrician website, with clicks and impressions rising sharply in the most recent months.",
+    tags: ["Electrician SEO", "Organic Growth", "Search Console"],
+    image: "results/home/electrician-seo-growth.png",
+    source: "Google Search Console",
+  },
+  {
+    period: "Home services",
+    title: "“Plumber Near Me” Visibility",
+    metric: "Map Pack and top organic listing",
+    text: "A live “plumber near me” search showing plumbing businesses in both the local Map Pack and the first organic result.",
+    tags: ["Plumber SEO", "Map Pack", "Organic"],
+    image: "results/home/plumber-near-me-serp.png",
+    source: "Google Search",
   },
 ];
 
@@ -331,6 +419,7 @@ export const caseStudies = [
     label: "Map Pack Visibility",
     title: "Improving Local Visibility Across Service Areas",
     href: "/case-studies/map-pack-service-areas",
+    image: "cases/geo-grid-ranking.jpg",
     text: "A Local SEO case study on expanding map pack visibility across multiple nearby service areas.",
   },
   {
@@ -339,6 +428,7 @@ export const caseStudies = [
     label: "Monthly Shopify Sales (+206%)",
     title: "Hamper Story, From Low Organic Traffic to $72,412 in Monthly Sales",
     href: "/case-studies/hamper-story",
+    image: "cases/hamper-shopify-overview.png",
     text: "Hamper Story is a Singapore-based Shopify store selling premium hampers online. They came to us for organic growth, we shipped a full SEO campaign that turned search visibility into real revenue, scaling sales by +206% and orders by +294%.",
   },
   {
@@ -347,6 +437,7 @@ export const caseStudies = [
     label: "Organic Clicks in 18 Months",
     title: "TechicTalk, From 0 to 976K Organic Clicks with Full-Funnel SEO",
     href: "/case-studies/techictalk-organic-growth",
+    image: "cases/techictalk-semrush-overview.png",
     text: "How a brand-new tech media site went from zero organic traffic to 976K Google clicks and 30M+ impressions in 18 months, through systematic, data-driven SEO.",
   },
   {
@@ -355,6 +446,7 @@ export const caseStudies = [
     label: "Organic Clicks in 6 Months",
     title: "From Zero to 3.93K Clicks, Data-Driven Organic SEO Growth in 6 Months",
     href: "/case-studies/data-driven-organic-growth",
+    image: "cases/data-driven-gsc.png",
     text: "How a near-invisible website went from almost zero organic traffic to 3.93K clicks, 47.4K impressions and an 8.3% CTR in just 6 months, through disciplined, data-driven SEO.",
   },
 ];

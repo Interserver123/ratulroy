@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { img } from "../lib/img";
 import { site, footerColumns } from "../data/site";
 const year = new Date().getFullYear();
 ---
@@ -7,7 +9,7 @@ const year = new Date().getFullYear();
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a class="footer__logo" href="/">Ratul Roy</a>
+        <a class="footer__logo" href="/"><Image src={img("brand/logo-rr.png")} alt="" width={88} height={88} class="footer__mark" />Ratul Roy</a>
         <p>
           This is Ratul Roy helping service businesses improve Google Maps rankings, strengthen
           Google Business Profile visibility, and turn local searches into qualified inbound calls.
@@ -83,8 +85,15 @@ const year = new Date().getFullYear();
       grid-template-columns: 1.6fr repeat(4, 1fr);
     }
   }
+  .footer__mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
   .footer__logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     font-size: 1.4rem;
     font-family: var(--font-display);
     font-weight: 700;

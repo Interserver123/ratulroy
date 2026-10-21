@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f"/>
+      <stop offset="55%" stop-color="#10243d"/>
+      <stop offset="100%" stop-color="#2a0f1f"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="clicksFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63b3ed" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#63b3ed" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="imprFill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#grid2)"/>
+
+  <!-- header -->
+  <text x="40" y="56" font-family="Inter, system-ui, sans-serif" font-size="13" fill="rgba(255,255,255,0.55)" letter-spacing="3">GOOGLE SEARCH CONSOLE · 6 MONTHS</text>
+  <text x="40" y="86" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff">Data-Driven Organic Growth</text>
+
+  <!-- KPI cards -->
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="40" y="110" width="170" height="92" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(99,179,237,0.35)"/>
+    <text x="56" y="134" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="2">TOTAL CLICKS</text>
+    <text x="56" y="172" font-size="28" font-weight="700" fill="#63b3ed">3.93K</text>
+    <text x="56" y="192" font-size="11" fill="rgba(255,255,255,0.45)">from near-zero</text>
+
+    <rect x="220" y="110" width="170" height="92" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(248,113,113,0.35)"/>
+    <text x="236" y="134" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="2">IMPRESSIONS</text>
+    <text x="236" y="172" font-size="28" font-weight="700" fill="#f87171">47.4K</text>
+    <text x="236" y="192" font-size="11" fill="rgba(255,255,255,0.45)">+exponential</text>
+
+    <rect x="400" y="110" width="170" height="92" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="416" y="134" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="2">AVG CTR</text>
+    <text x="416" y="172" font-size="28" font-weight="700" fill="#ffffff">8.3%</text>
+    <text x="416" y="192" font-size="11" fill="rgba(255,255,255,0.45)">above industry avg</text>
+
+    <rect x="580" y="110" width="180" height="92" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="596" y="134" font-size="11" fill="rgba(255,255,255,0.55)" letter-spacing="2">AVG POSITION</text>
+    <text x="596" y="172" font-size="28" font-weight="700" fill="#ffffff">26.8</text>
+    <text x="596" y="192" font-size="11" fill="rgba(255,255,255,0.45)">from 50+ · trending up</text>
+  </g>
+
+  <!-- chart -->
+  <g transform="translate(40,240)">
+    <rect width="720" height="320" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="32" font-family="Inter, system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)" letter-spacing="2">CLICKS &amp; IMPRESSIONS · 6 MO</text>
+
+    <!-- axes -->
+    <g stroke="rgba(255,255,255,0.07)">
+      <line x1="40" y1="80" x2="700" y2="80"/>
+      <line x1="40" y1="140" x2="700" y2="140"/>
+      <line x1="40" y1="200" x2="700" y2="200"/>
+      <line x1="40" y1="260" x2="700" y2="260"/>
+    </g>
+
+    <!-- impressions area (red) -->
+    <path d="M40,255 L130,250 L220,235 L310,200 L400,150 L490,110 L580,85 L670,75 L700,72 L700,260 L40,260 Z" fill="url(#imprFill2)"/>
+    <path d="M40,255 L130,250 L220,235 L310,200 L400,150 L490,110 L580,85 L670,75 L700,72" fill="none" stroke="#f87171" stroke-width="2.5"/>
+
+    <!-- clicks line (blue) -->
+    <path d="M40,258 L130,256 L220,250 L310,235 L400,210 L490,180 L580,150 L670,130 L700,122 L700,260 L40,260 Z" fill="url(#clicksFill2)"/>
+    <path d="M40,258 L130,256 L220,250 L310,235 L400,210 L490,180 L580,150 L670,130 L700,122" fill="none" stroke="#63b3ed" stroke-width="2.5"/>
+
+    <!-- month labels -->
+    <g font-family="Inter, system-ui, sans-serif" font-size="10" fill="rgba(255,255,255,0.45)">
+      <text x="40" y="285">M1</text>
+      <text x="130" y="285">M2</text>
+      <text x="220" y="285">M3</text>
+      <text x="310" y="285">M4</text>
+      <text x="400" y="285">M5</text>
+      <text x="490" y="285">M6</text>
+    </g>
+
+    <!-- legend -->
+    <g font-family="Inter, system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">
+      <circle cx="540" cy="28" r="4" fill="#63b3ed"/>
+      <text x="552" y="32">Clicks</text>
+      <circle cx="610" cy="28" r="4" fill="#f87171"/>
+      <text x="622" y="32">Impressions</text>
+    </g>
+  </g>
+</svg>

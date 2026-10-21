@@ -1,5 +1,22 @@
 ---
-import { aggregates, results, auditPoints, auditTags } from "../../data/home";
+import { Image, getImage } from "astro:assets";
+import { aggregates, results, gbpResults, homeResults, auditPoints, auditTags } from "../../data/home";
+import type { Result } from "../../data/home";
+import { img } from "../../lib/img";
+
+const prep = async (list: Result[]) =>
+  Promise.all(
+    list.map(async (r) => {
+      const thumb = r.image ? img(r.image) : undefined;
+      const full = thumb ? (await getImage({ src: thumb, width: Math.min(1600, thumb.width), format: "webp" })).src : undefined;
+      return { ...r, thumb, full, alt: `${r.title}: ${r.metric} (${r.source ?? "Google Search Console"} screenshot)` };
+    }),
+  );
+const groups = [
+  { key: "web", label: "Website Ranking", items: await prep(results) },
+  { key: "gbp", label: "GBP Ranking", items: await prep(gbpResults) },
+  { key: "home", label: "Home Services", items: await prep(homeResults) },
+];
 ---
 
 <section id="results" class="section wash" aria-labelledby="results-title">
@@ -36,43 +53,70 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
     </dl>
 
     <div class="res-bar" data-reveal>
-      <h3 class="res-tab">Website Ranking <span class="num">{results.length}</span></h3>
+      <div class="res-tabs" role="tablist" aria-label="Result type">
+        {
+          groups.map((g, i) => (
+            <button
+              type="button"
+              role="tab"
+              id={`rtab-${g.key}`}
+              aria-controls={`rpanel-${g.key}`}
+              aria-selected={i === 0 ? "true" : "false"}
+              tabindex={i === 0 ? 0 : -1}
+              class="res-tab"
+              data-rtab={g.key}
+            >
+              {g.label} <span class="num">{g.items.length}</span>
+            </button>
+          ))
+        }
+      </div>
       <div class="res-nav">
-        <button type="button" class="res-btn" data-dir="-1" aria-label="Previous results" aria-controls="res-track">←</button>
-        <button type="button" class="res-btn" data-dir="1" aria-label="Next results" aria-controls="res-track">→</button>
+        <button type="button" class="res-btn" data-dir="-1" aria-label="Previous results">←</button>
+        <button type="button" class="res-btn" data-dir="1" aria-label="Next results">→</button>
       </div>
     </div>
 
-    <ul id="res-track" class="res-track" data-reveal>
-      {
-        results.map((r) => (
-          <li class="card result">
-            {r.image && (
-              <img
-                src={r.image}
-                alt={`${r.title}: ${r.metric} (Google Search Console)`}
-                loading="lazy"
-                decoding="async"
-                width="640"
-                height="360"
-              />
-            )}
-            <div class="result__top">
-              <span class="chip">{r.period}</span>
-              <span class="result__src">Source: Google Search Console</span>
-            </div>
-            <h4>{r.title}</h4>
-            <p class="result__metric">{r.metric}</p>
-            <p>{r.text}</p>
-            <ul class="chips">
-              {r.tags.map((t) => (
-                <li class="chip chip--line">{t}</li>
-              ))}
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      groups.map((g, gi) => (
+        <ul
+          id={`rpanel-${g.key}`}
+          class="res-track"
+          role="tabpanel"
+          aria-labelledby={`rtab-${g.key}`}
+          hidden={gi !== 0}
+          data-rpanel={g.key}
+        >
+          {g.items.map((r) => (
+            <li class="card result">
+              {r.thumb && (
+                <button type="button" class="result__shot" data-full={r.full} data-alt={r.alt} aria-label={`Enlarge screenshot: ${r.title}`}>
+                  <Image src={r.thumb} alt={r.alt} widths={[400, 640]} sizes="(min-width: 640px) 360px, 86vw" loading="lazy" class="result__img" />
+                  <span class="result__zoom" aria-hidden="true">⤢</span>
+                </button>
+              )}
+              <div class="result__top">
+                <span class="chip">{r.period}</span>
+                <span class="result__src">Source: {r.source ?? "Google Search Console"}</span>
+              </div>
+              <h4>{r.title}</h4>
+              <p class="result__metric">{r.metric}</p>
+              <p>{r.text}</p>
+              <ul class="chips">
+                {r.tags.map((t) => (
+                  <li class="chip chip--line">{t}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+
+    <dialog class="lightbox" data-lightbox aria-label="Screenshot">
+      <form method="dialog"><button class="lightbox__close" aria-label="Close">×</button></form>
+      <img alt="" data-lightbox-img />
+    </dialog>
     <p class="res-disclaimer">
       All screenshots are exported from authenticated Google Search Console and Google Business
       Profile dashboards. Brand names, URLs and account identifiers are intentionally blurred under
@@ -131,14 +175,57 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
 </section>
 
 <script>
-  const track = document.getElementById("res-track");
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>("[data-rtab]")];
+  const panels = [...document.querySelectorAll<HTMLElement>("[data-rpanel]")];
+  const current = () => panels.find((p) => !p.hidden);
+  const select = (i: number, focus = false) => {
+    tabs.forEach((t, k) => {
+      t.setAttribute("aria-selected", String(k === i));
+      t.tabIndex = k === i ? 0 : -1;
+    });
+    panels.forEach((p, k) => {
+      p.hidden = k !== i;
+      if (k === i) {
+        p.scrollLeft = 0;
+        p.animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }], {
+          duration: 400,
+          easing: "cubic-bezier(.22,1,.36,1)",
+        });
+      }
+    });
+    if (focus) tabs[i].focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener("click", () => select(i));
+    t.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      select((i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length, true);
+    });
+  });
   document.querySelectorAll<HTMLButtonElement>(".res-btn").forEach((b) =>
     b.addEventListener("click", () => {
+      const track = current();
       const card = track?.querySelector("li");
       const step = (card?.getBoundingClientRect().width ?? 320) + 18;
       track?.scrollBy({ left: step * Number(b.dataset.dir), behavior: "smooth" });
     }),
   );
+
+  // Lightbox for screenshots
+  const box = document.querySelector<HTMLDialogElement>("[data-lightbox]");
+  const boxImg = document.querySelector<HTMLImageElement>("[data-lightbox-img]");
+  document.querySelectorAll<HTMLButtonElement>(".result__shot").forEach((b) =>
+    b.addEventListener("click", () => {
+      if (!box || !boxImg) return;
+      boxImg.src = b.dataset.full ?? "";
+      boxImg.alt = b.dataset.alt ?? "";
+      box.showModal();
+    }),
+  );
+  box?.addEventListener("click", (e) => {
+    if (e.target === box) box.close();
+  });
 </script>
 
 <style>
@@ -200,6 +287,33 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
     align-items: center;
     gap: 16px;
     margin-bottom: 18px;
+  }
+  .res-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 4px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--line);
+  }
+  .res-tab {
+    font: inherit;
+    border: 0;
+    cursor: pointer;
+    background: transparent !important;
+    color: var(--ink-2) !important;
+    transition:
+      background 0.25s,
+      color 0.25s;
+  }
+  .res-tab[aria-selected="true"] {
+    background: var(--ink) !important;
+    color: #fff !important;
+  }
+  .res-tab:not([aria-selected="true"]) span {
+    background: var(--bg-2) !important;
+    color: var(--muted);
   }
   .res-tab {
     display: inline-flex;
@@ -263,9 +377,81 @@ import { aggregates, results, auditPoints, auditTags } from "../../data/home";
     padding: 22px;
     min-width: 0;
   }
-  .result img {
+  .result__shot {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: -8px 0 16px;
+    border: 1px solid var(--line);
     border-radius: 12px;
-    margin-bottom: 14px;
+    overflow: hidden;
+    background: var(--bg);
+    cursor: zoom-in;
+    aspect-ratio: 16 / 9;
+  }
+  .result__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+    transition: transform 0.6s var(--ease);
+  }
+  .result__shot:hover .result__img {
+    transform: scale(1.04);
+  }
+  .result__zoom {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgb(15 26 28 / 75%);
+    color: #fff;
+    font-size: 0.95rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .result__shot:hover .result__zoom,
+  .result__shot:focus-visible .result__zoom {
+    opacity: 1;
+  }
+  .lightbox {
+    max-width: min(1200px, 94vw);
+    max-height: 90vh;
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 40px 120px -20px rgb(0 0 0 / 50%);
+    overflow: auto;
+  }
+  .lightbox::backdrop {
+    background: rgb(15 26 28 / 70%);
+    backdrop-filter: blur(4px);
+  }
+  .lightbox img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .lightbox__close {
+    position: sticky;
+    top: 10px;
+    float: right;
+    margin: 10px 10px -46px 0;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
   }
   .result__top {
     display: flex;
