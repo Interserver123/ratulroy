@@ -16,6 +16,14 @@ interface Props {
   heroImage?: string;
   ctas?: { label: string; href: string; style?: string }[];
   heroForm?: boolean;
+  heroShowcase?: {
+    main: string;
+    mainLabel: string;
+    side?: string;
+    sideLabel?: string;
+    href?: string;
+    chips: { value: string; label: string }[];
+  };
 }
 const p = Astro.props;
 
@@ -35,11 +43,12 @@ const ctas = p.ctas?.length
       { label: "Get Free Local SEO Audit", href: "/#free-audit", style: "ghost" },
     ];
 const portrait = img("people/ratul-roy-portrait.jpg");
+const sc = p.heroShowcase;
 ---
 
 <section class="phero" aria-labelledby="page-title">
   <div class="phero__topo" aria-hidden="true"></div>
-  <div class="container phero__grid">
+  <div class={`container phero__grid${sc ? " phero__grid--show" : ""}`}>
     <div class="phero__copy">
       {
         p.breadcrumb && (
@@ -66,17 +75,38 @@ const portrait = img("people/ratul-roy-portrait.jpg");
           </ul>
         )
       }
-      <div class="btn-row" data-reveal style="--d:3">
-        {
-          ctas.map((c, i) =>
-            c.style === "ghost" || (i > 0 && !c.style) ? (
-              <a class="btn btn--ghost" href={c.href}>{c.label}</a>
-            ) : (
-              <a class="btn btn--dark" href={c.href}><span class="disc" aria-hidden="true">↗</span>{c.label}</a>
-            ),
-          )
-        }
-      </div>
+      {
+        p.heroForm ? (
+          <form class="qform" id="free-audit" data-lead-form="audit" novalidate data-reveal style="--d:3" aria-labelledby="qform-title">
+            <p class="qform__title" id="qform-title">
+              <span class="dotg" aria-hidden="true" />Free Map Pack audit · <b>2 spots open</b> this month
+            </p>
+            <div class="qform__bar">
+              <label class="sr-only" for="qf-site">Website or Google Maps link</label>
+              <input id="qf-site" name="website" inputmode="url" placeholder="Website or Maps link" required autocomplete="url" />
+              <label class="sr-only" for="qf-email">Email</label>
+              <input id="qf-email" name="email" type="email" placeholder="Your email" required autocomplete="email" />
+              <button class="btn btn--dark" type="submit"><span class="disc" aria-hidden="true">↗</span>Get my audit</button>
+            </div>
+            <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
+            <p class="qform__meta">
+              <span>✓ Personally reviewed</span><span>✓ Within 48 hours</span><span>✓ Confidential</span>
+              {ctas.slice(0, 1).map((c) => <a href={c.href}>or {c.label.toLowerCase()} →</a>)}
+            </p>
+            <p class="form-status" role="status" aria-live="polite" />
+          </form>
+        ) : (
+          <div class="btn-row" data-reveal style="--d:3">
+            {ctas.map((c, i) =>
+              c.style === "ghost" || (i > 0 && !c.style) ? (
+                <a class="btn btn--ghost" href={c.href}>{c.label}</a>
+              ) : (
+                <a class="btn btn--dark" href={c.href}><span class="disc" aria-hidden="true">↗</span>{c.label}</a>
+              ),
+            )}
+          </div>
+        )
+      }
       {
         p.heroChips && (
           <ul class="chips phero__chips" data-reveal style="--d:4">
@@ -86,43 +116,37 @@ const portrait = img("people/ratul-roy-portrait.jpg");
       }
     </div>
 
-    {p.heroForm ? (
-    <aside class="hform card" id="free-audit" data-reveal style="--d:2" aria-labelledby="hform-title">
-      <div class="hform__who">
-        <Image src={portrait} alt="" width={96} height={96} class="proof__face" loading="eager" />
-        <div>
-          <p class="proof__name">Ratul Roy</p>
-          <p class="hform__stars"><span aria-hidden="true">★★★★★</span> 4.9 · 243 reviews</p>
-        </div>
-        <span class="proof__live"><span class="dotg" aria-hidden="true"></span>2 spots open</span>
+    {sc ? (
+    <div class="show" data-reveal style="--d:2" data-tilt>
+      <a class="show__main" href={sc.href ?? "/case-studies"} aria-label={`${sc.mainLabel}: open the case study`}>
+        <span class="show__bar" aria-hidden="true"><i /><i /><i /><b>{sc.mainLabel}</b></span>
+        <Image src={img(sc.main)} alt={sc.mainLabel} widths={[480, 720, 960]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" fetchpriority="high" class="show__img" />
+      </a>
+      {
+        sc.side && (
+          <figure class="show__side">
+            <Image src={img(sc.side)} alt={sc.sideLabel ?? ""} width={320} height={320} loading="eager" />
+            {sc.sideLabel && <figcaption>{sc.sideLabel}</figcaption>}
+          </figure>
+        )
+      }
+      {
+        sc.chips.map((c, i) => (
+          <p class={`show__chip show__chip--${i}`} style={`--i:${i}`}>
+            <b class="num">{c.value}</b>
+            <span>{c.label}</span>
+          </p>
+        ))
+      }
+      <div class="show__badge">
+        <Image src={portrait} alt="" width={88} height={88} />
+        <span>
+          <b>Ratul Roy</b>
+          <small><i aria-hidden="true">★★★★★</i> 4.9 · 243 reviews</small>
+        </span>
       </div>
-      <h2 id="hform-title" class="hform__title">Get your free Map Pack audit</h2>
-      <p class="hform__sub">I'll personally check your profile, pin, categories, reviews and the competitors above you, then send a prioritized action plan.</p>
-      <form class="hform__form" data-lead-form="audit" novalidate>
-        <div class="field">
-          <label for="hf-site">Website or Google Maps link*</label>
-          <input id="hf-site" name="website" inputmode="url" placeholder="yourbusiness.com" required autocomplete="url" />
-        </div>
-        <div class="hform__row">
-          <div class="field">
-            <label for="hf-email">Email*</label>
-            <input id="hf-email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
-          </div>
-          <div class="field">
-            <label for="hf-wa">WhatsApp</label>
-            <input id="hf-wa" name="phone" type="tel" placeholder="Optional" autocomplete="tel" />
-          </div>
-        </div>
-        <input class="sr-only" tabindex="-1" aria-hidden="true" name="company_website" autocomplete="off" />
-        <button class="btn btn--dark hform__btn" type="submit"><span class="disc" aria-hidden="true">↗</span>Send my free audit</button>
-        <ul class="hform__ticks" role="list">
-          <li>Personally reviewed</li>
-          <li>Within 48 hours</li>
-          <li>Confidential</li>
-        </ul>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </aside>
+      <p class="show__note">Real client data · <a href={sc.href ?? "/case-studies"}>see the case study →</a></p>
+    </div>
     ) : (
     <aside class="proof card" data-reveal style="--d:2" aria-label="About the specialist">
       {
@@ -165,31 +189,61 @@ const portrait = img("people/ratul-roy-portrait.jpg");
 
 <script>
   import "../../scripts/forms";
+  // Showcase tilts gently toward the pointer (desktop only).
+  const tilt = document.querySelector<HTMLElement>("[data-tilt]");
+  if (tilt && matchMedia("(pointer: fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    tilt.addEventListener("pointermove", (e) => {
+      const r = tilt.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      tilt.style.setProperty("--ry", `${(x * 10).toFixed(2)}deg`);
+      tilt.style.setProperty("--rx", `${(-y * 8).toFixed(2)}deg`);
+    });
+    tilt.addEventListener("pointerleave", () => {
+      tilt.style.removeProperty("--ry");
+      tilt.style.removeProperty("--rx");
+    });
+  }
 </script>
 
 <style>
-  .hform {
-    position: relative;
-    align-self: center;
-    display: grid;
-    gap: 14px;
-    padding: clamp(20px, 2.6vw, 28px);
-    box-shadow: var(--shadow-lg);
-    background:
-      radial-gradient(90% 50% at 100% 0%, rgb(15 157 99 / 10%), transparent 60%),
-      var(--paper);
+  /* inline audit form */
+  .qform {
+    margin: 6px 0 4px;
+    max-width: 640px;
   }
-  .hform::before {
+  .qform__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  .qform__title b {
+    color: var(--good);
+  }
+  .qform__bar {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+  }
+  .qform__bar::before {
     content: "";
     position: absolute;
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--accent) 80%, transparent 90%);
+    background: conic-gradient(from var(--a, 0deg), transparent 0 72%, var(--accent) 82%, transparent 92%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: hformSpin 6s linear infinite;
+    animation: qSpin 6s linear infinite;
     pointer-events: none;
   }
   @property --a {
@@ -197,76 +251,284 @@ const portrait = img("people/ratul-roy-portrait.jpg");
     inherits: false;
     initial-value: 0deg;
   }
-  @keyframes hformSpin {
+  @keyframes qSpin {
     to {
       --a: 360deg;
     }
   }
-  .hform__who {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .hform__who .proof__live {
-    position: absolute;
-    top: -13px;
-    right: 22px;
-    box-shadow: var(--shadow);
-    background: var(--paper);
-  }
-  .hform__stars {
-    white-space: nowrap;
-    margin: 0;
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-  .hform__stars span {
-    color: var(--warn);
-    letter-spacing: 1px;
-  }
-  .hform__title {
-    margin: 4px 0 0;
-    font-size: 1.45rem;
-    line-height: 1.2;
-  }
-  .hform__sub {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-  .hform__form {
-    display: grid;
-    gap: 12px;
-  }
-  .hform__row {
-    display: grid;
-    gap: 12px;
-  }
-  @media (min-width: 480px) {
-    .hform__row {
-      grid-template-columns: 1.3fr 1fr;
+  @media (min-width: 640px) {
+    .qform__bar {
+      grid-template-columns: 1.25fr 1fr auto;
+      border-radius: 999px;
     }
   }
-  .hform__btn {
-    width: 100%;
-    justify-content: center;
+  .qform__bar input {
+    min-width: 0;
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 13px 16px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--ink);
   }
-  .hform__ticks {
+  .qform__bar input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 0;
+  }
+  .qform__bar .btn {
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .qform__meta {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px 14px;
-    margin: 0;
-    font-size: 0.78rem;
+    gap: 6px 16px;
+    margin: 12px 0 0;
+    font-size: 0.82rem;
     color: var(--muted);
   }
-  .hform__ticks li::before {
-    content: "✓ ";
+  .qform__meta span {
     color: var(--good);
-    font-weight: 700;
+  }
+  .qform__meta a {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .qform__meta a:hover {
+    color: var(--accent);
+  }
+
+  /* layered proof showcase */
+  .show {
+    position: relative;
+    padding: 46px 0 86px;
+    perspective: 1200px;
+  }
+  .show__main {
+    position: relative;
+    display: block;
+    margin-left: 16%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow:
+      0 2px 4px rgb(15 25 30 / 5%),
+      0 40px 80px -30px rgb(16 42 40 / 40%);
+    transform: rotateY(var(--ry, -6deg)) rotateX(var(--rx, 3deg));
+    transform-style: preserve-3d;
+    transition: transform 0.6s var(--ease);
+  }
+  .show__bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .show__bar i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--line-2);
+  }
+  .show__bar i:first-child {
+    background: #ff6159;
+  }
+  .show__bar i:nth-child(2) {
+    background: #ffbd2e;
+  }
+  .show__bar i:nth-child(3) {
+    background: #28c941;
+  }
+  .show__bar b {
+    margin-left: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .show__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .show__side {
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 30%;
+    margin: 0;
+    padding: 6px 6px 8px;
+    border-radius: 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+    animation: showFloat 7s var(--ease) infinite;
+    animation-delay: -2s;
+  }
+  .show__side :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 11px;
+  }
+  .show__side figcaption {
+    padding: 6px 4px 0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-2);
+    line-height: 1.3;
+  }
+  .show__chip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 9px 14px 9px 10px;
+    border-radius: 999px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+    font-size: 0.78rem;
+    color: var(--muted);
+    white-space: nowrap;
+    animation: showFloat 6s var(--ease) infinite;
+    animation-delay: calc(var(--i) * -1.7s);
+  }
+  .show__chip b {
+    display: grid;
+    place-items: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: var(--good-soft);
+    color: var(--good);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+  }
+  .show__chip--0 {
+    top: 0;
+    left: 0;
+  }
+  .show__chip--1 {
+    top: 46%;
+    right: -18px;
+  }
+  .show__chip--1 b {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .show__chip--2 {
+    bottom: 24px;
+    left: 34%;
+  }
+  .show__badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 14px 7px 7px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: #fff;
+    box-shadow: var(--shadow-lg);
+  }
+  .show__badge :global(img) {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .show__badge span {
+    display: grid;
+    line-height: 1.2;
+  }
+  .show__badge b {
+    font-size: 0.85rem;
+  }
+  .show__badge small {
+    font-size: 0.72rem;
+    color: rgb(255 255 255 / 70%);
+  }
+  .show__badge i {
+    font-style: normal;
+    color: var(--warn);
+  }
+  .show__note {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--dim);
+  }
+  .show__note a {
+    color: var(--ink-2);
+    font-weight: 600;
+  }
+  @keyframes showFloat {
+    50% {
+      translate: 0 -8px;
+    }
+  }
+  @media (max-width: 1023px) {
+    .show {
+      max-width: 560px;
+      margin: 8px auto 0;
+      width: 100%;
+    }
+  }
+  @media (max-width: 560px) {
+    .show {
+      padding: 50px 0 96px;
+    }
+    .show__main {
+      margin-left: 0;
+    }
+    .show__side {
+      width: 40%;
+      bottom: 30px;
+    }
+    .show__badge {
+      top: auto;
+      bottom: 34px;
+    }
+    .show__chip {
+      font-size: 0.7rem;
+      padding: 6px 10px 6px 6px;
+    }
+    .show__chip b {
+      height: 26px;
+      min-width: 26px;
+      font-size: 0.82rem;
+    }
+    .show__chip--1 {
+      top: 40%;
+      right: -4px;
+    }
+    .show__chip--2 {
+      display: none;
+    }
+    .show__note {
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      text-align: center;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
-    .hform::before {
+    .qform__bar::before,
+    .show__side,
+    .show__chip {
       animation: none;
     }
   }
@@ -299,6 +561,13 @@ const portrait = img("people/ratul-roy-portrait.jpg");
     .phero__grid {
       grid-template-columns: 1.3fr 0.7fr;
       gap: 64px;
+    }
+    .phero__grid--show {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .phero__grid--show h1 {
+      font-size: clamp(2.2rem, 3.9vw, 3.3rem);
     }
   }
   .phero__copy {

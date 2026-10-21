@@ -10,6 +10,8 @@ import Results from "../components/home/Results.astro";
 import CaseStudies from "../components/home/CaseStudies.astro";
 import JumpNav from "../components/page/JumpNav.astro";
 import TrustBar from "../components/page/TrustBar.astro";
+import HubGrid from "../components/page/HubGrid.astro";
+import { getEntry } from "astro:content";
 import StickyCta from "../components/page/StickyCta.astro";
 import { Image, getImage } from "astro:assets";
 import { img } from "../lib/img";
@@ -51,6 +53,20 @@ const jump = d.jumpNav
       ...(d.faqs.length ? [{ id: "faq", label: "FAQ" }] : []),
     ]
   : [];
+
+// Proof-first: chosen case studies (and the screenshot portfolio) right after the hero.
+const proofCases = (await Promise.all(d.proofFirst.map((id) => getEntry("cases", id))))
+  .filter((e): e is NonNullable<typeof e> => Boolean(e))
+  .map((e) => ({
+    href: `/case-studies/${e.id}`,
+    title: e.data.card?.title ?? e.data.h1,
+    text: e.data.card?.text ?? e.data.description,
+    category: e.data.card?.category,
+    value: e.data.card?.value,
+    label: e.data.card?.label,
+    image: e.data.card?.image ?? e.data.heroImage,
+  }));
+const proofFirst = proofCases.length > 0;
 
 const crumbs = d.breadcrumb ?? [
   { label: "Home", href: "/" },
@@ -124,8 +140,23 @@ if (d.faqs.length) {
     heroImage={d.heroImage}
     ctas={d.ctas}
     heroForm={d.heroForm}
+    heroShowcase={d.heroShowcase}
   />
   {d.trustBar && <TrustBar />}
+  {
+    proofFirst && (
+      <>
+        <HubGrid
+          items={proofCases}
+          variant="case"
+          eyebrow="Proof first"
+          heading="Real results before the sales pitch"
+          intro="Case studies from real campaigns, with the screenshots to back them up. Read the method after, if the numbers are what you are after."
+        />
+        {d.showResults && <Results />}
+      </>
+    )
+  }
 
   {
     d.intro && (
@@ -153,8 +184,8 @@ if (d.faqs.length) {
   <slot name="before" />
   <Sections sections={d.sections} />
   <slot />
-  {d.showResults && <Results />}
-  {d.showCases && <CaseStudies />}
+  {d.showResults && !proofFirst && <Results />}
+  {d.showCases && !proofFirst && <CaseStudies />}
   <PageFaq heading={d.faqHeading} faqs={d.faqs} />
   {d.pricing === "default" && <Pricing />}
   <Related keys={d.related} />

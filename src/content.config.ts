@@ -88,7 +88,19 @@ const page = z.object({
   card: z.object({ title: z.string(), text: z.string(), value: z.string().optional(), label: z.string().optional(), category: z.string().optional(), image: z.string().optional() }).optional(),
   order: z.number().default(100),
   jumpNav: z.boolean().default(false),
-  heroForm: z.boolean().default(false), // audit form in the hero instead of the proof card
+  heroForm: z.boolean().default(false), // compact audit form in the hero copy column
+  // Layered proof visual on the hero's right side (real screenshots + result chips)
+  heroShowcase: z
+    .object({
+      main: z.string(),
+      mainLabel: z.string(),
+      side: z.string().optional(),
+      sideLabel: z.string().optional(),
+      href: z.string().optional(),
+      chips: z.array(z.object({ value: z.string(), label: z.string() })).default([]),
+    })
+    .optional(),
+  proofFirst: z.array(z.string()).default([]), // case study ids shown right after the hero
   trustBar: z.boolean().default(false), // rating + client logos under the hero
   stickyCta: z.boolean().default(false), // mobile bottom CTA bar
   updated: z.coerce.date().optional(), // shown in the author line and used as dateModified

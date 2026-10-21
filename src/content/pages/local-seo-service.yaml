@@ -4,10 +4,10 @@ breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
   - { label: Local SEO Services, href: /local-seo-service }
-eyebrow: Local SEO Services
-h1: "Local SEO Services for Small Businesses in Bangladesh & Worldwide"
+eyebrow: "Local SEO Services · Bangladesh & Worldwide"
+h1: "Local SEO Services for Small Businesses"
 em: "Local SEO Services"
-lead: "Get into the Google Maps 3-pack for the searches that bring calls, then keep it. Google Business Profile, citations, reviews, location pages and technical fixes, run as one system by an independent specialist, not passed down an agency chain."
+lead: "Get into the Google Maps 3-pack for the searches that bring calls, then keep it. Profile, citations, reviews, pages and technical fixes, run as one system by an independent specialist in Bangladesh, for clients here and worldwide."
 heroBullets:
   - "Packages from **$299**, no lock-in contracts"
   - "You work directly with me, the person doing the work"
@@ -22,6 +22,17 @@ ctas:
   - { label: See pricing, href: "#pricing", style: ghost }
 jumpNav: true
 heroForm: true
+heroShowcase:
+  main: "cases/gbp-calls-performance.jpeg"
+  mainLabel: "Google Business Profile · Performance · Calls"
+  side: "cases/geo-grid-ranking.jpg"
+  sideLabel: "Geo-grid: Top-3 across the service area"
+  href: /case-studies/gbp-calls-growth
+  chips:
+    - { value: "461", label: "calls from GBP, Apr–Aug 2024" }
+    - { value: "+205%", label: "calls vs the year before" }
+    - { value: "+62%", label: "profile interactions" }
+proofFirst: [hamper-story, map-pack-service-areas, gbp-calls-growth]
 trustBar: true
 stickyCta: true
 updated: 2026-10-21
@@ -219,17 +230,6 @@ sections:
       - { title: Service-area businesses, text: "No storefront? The profile is set up as a service-area business, with pages for the areas you really cover, and no fake addresses." }
       - { title: Multi-location brands, text: "Each real branch gets its own verified profile, pages and tracking, reported per location." }
       - { title: Clients outside Bangladesh, text: "The ranking system is the same in any country. I work remotely with clients worldwide, in English, with calls on WhatsApp or Zoom at a time that suits your time zone." }
-  - type: stats
-    nav: Results
-    id: results
-    eyebrow: Proof
-    heading: "Results from real Local SEO campaigns"
-    intro: "From the [GBP calls case study](/case-studies/gbp-calls-growth) and the [service-area visibility case study](/case-studies/map-pack-service-areas)."
-    items:
-      - { title: calls from one Business Profile, value: "461" }
-      - { title: profile interactions, value: "+62%" }
-      - { title: Map Pack visibility, value: "+38%" }
-      - { title: direction requests, value: "+27%" }
   - type: compare
     nav: SEO vs Ads
     id: local-seo-vs-ads
