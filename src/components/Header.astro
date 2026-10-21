@@ -70,7 +70,9 @@ import { site, megaMenu, navLinks } from "../data/site";
         {
           navLinks.map((l) => (
             <li>
-              <a href={l.href}>{l.label}</a>
+              <a href={l.href} aria-current={Astro.url.pathname.replace(/(\.html|\/)$/, "") === l.href ? "page" : undefined}>
+                {l.label}
+              </a>
             </li>
           ))
         }
