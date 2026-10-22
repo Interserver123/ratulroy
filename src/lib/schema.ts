@@ -7,6 +7,24 @@ export const ids = {
   business: `${site.url}/#business`,
 };
 
+/** Profiles that are the same entity: Google Business Profile + official social profiles. */
+export const sameAs = () => [site.mapsUrl, ...site.social.map((x) => x.href)];
+
+export const languages = ["English", "Bengali"];
+
+/** How customers reach the business. */
+export const contactPoint = () => [
+  {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: site.phone,
+    email: site.email,
+    url: site.whatsapp,
+    availableLanguage: languages,
+    areaServed: ["BD", "Worldwide"],
+  },
+];
+
 /**
  * Compact definitions of the site-wide entities. BaseLayout adds any of these that a
  * page references (via @id) but does not define, so each page's graph is self-contained.
@@ -30,6 +48,9 @@ export function coreEntities(imageUrl?: string): Record<string, unknown>[] {
       jobTitle: "Local SEO Specialist",
       ...(imageUrl ? { image: imageUrl } : {}),
       worksFor: { "@id": ids.business },
+      knowsLanguage: languages,
+      nationality: { "@type": "Country", name: site.country },
+      sameAs: sameAs(),
     },
     {
       "@type": "ProfessionalService",
@@ -44,7 +65,11 @@ export function coreEntities(imageUrl?: string): Record<string, unknown>[] {
       address: { "@type": "PostalAddress", addressLocality: site.locality, addressCountry: site.countryCode },
       geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
       hasMap: site.mapsUrl,
-      ...(imageUrl ? { image: imageUrl } : {}),
+      areaServed: [{ "@type": "Country", name: site.country }, "Worldwide"],
+      knowsLanguage: languages,
+      contactPoint: contactPoint(),
+      sameAs: sameAs(),
+      ...(imageUrl ? { image: imageUrl, logo: imageUrl } : {}),
     },
   ];
 }

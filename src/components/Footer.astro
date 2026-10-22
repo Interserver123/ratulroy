@@ -46,6 +46,19 @@ const year = new Date().getFullYear();
           <li><a href={site.whatsapp} rel="noopener" target="_blank">Chat on WhatsApp</a></li>
         </ul>
         <p class="footer__small">Prefer WhatsApp for faster replies.</p>
+        {
+          site.social.length > 0 && (
+            <ul class="footer__social" aria-label="Ratul Roy on social media">
+              {site.social.map((x) => (
+                <li>
+                  <a href={x.href} rel="me noopener" target="_blank">
+                    {x.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
       </div>
     </div>
 
@@ -63,6 +76,8 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
+  .footer__social { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 0.85rem; }
+  .footer__social a { text-decoration: underline; text-underline-offset: 3px; }
   .footer {
     position: relative;
     overflow: hidden;

@@ -11,7 +11,7 @@ import CaseStudies from "../components/home/CaseStudies.astro";
 import JumpNav from "../components/page/JumpNav.astro";
 import TrustBar from "../components/page/TrustBar.astro";
 import HubGrid from "../components/page/HubGrid.astro";
-import { getEntry } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import StickyCta from "../components/page/StickyCta.astro";
 import { Image } from "astro:assets";
 import { img } from "../lib/img";
@@ -74,9 +74,27 @@ const crumbs = d.breadcrumb ?? [
   { label: d.eyebrow ?? d.h1, href: path },
 ];
 
+// Hub pages list what they link to (CollectionPage + ItemList); contact pages are ContactPage.
+const hubItems: { name: string; url: string }[] =
+  path === "/blog"
+    ? (await getCollection("blog")).sort((a, b) => +b.data.date - +a.data.date).map((e) => ({ name: e.data.title, url: `${site.url}/blog/${e.id}` }))
+    : path === "/industries"
+      ? (await getCollection("industries")).map((e) => ({ name: e.data.eyebrow ?? e.data.h1, url: `${site.url}/industries/${e.id}` }))
+      : path === "/case-studies"
+        ? (await getCollection("cases")).map((e) => ({ name: e.data.card?.title ?? e.data.h1, url: `${site.url}/case-studies/${e.id}` }))
+        : path === "/services"
+          ? d.sections
+              .filter((x) => x.type === "cards")
+              .flatMap((x) => x.items ?? [])
+              .filter((i) => i.href?.startsWith("/") && !i.href.startsWith("/blog"))
+              .map((i) => ({ name: i.title, url: `${site.url}${i.href}` }))
+              .filter((it, i, all) => all.findIndex((x) => x.url === it.url) === i)
+          : [];
+const pageType = kind === "case" ? "Article" : hubItems.length ? "CollectionPage" : ["/contact", "/book-strategy-call"].includes(path) ? "ContactPage" : "WebPage";
+
 const schema: Record<string, unknown>[] = [
   {
-    "@type": kind === "case" ? "Article" : "WebPage",
+    "@type": pageType,
     "@id": `${url}#webpage`,
     url,
     name: d.title,
@@ -88,6 +106,16 @@ const schema: Record<string, unknown>[] = [
     inLanguage: "en",
     isPartOf: { "@id": `${site.url}/#website` },
     breadcrumb: { "@id": `${url}#breadcrumb` },
+    ...(pageType === "ContactPage" ? { mainEntity: { "@id": `${site.url}/#business` } } : {}),
+    ...(hubItems.length
+      ? {
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: hubItems.length,
+            itemListElement: hubItems.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, url: it.url })),
+          },
+        }
+      : {}),
   },
   {
     "@type": "BreadcrumbList",

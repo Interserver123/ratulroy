@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { contactPoint, languages, sameAs } from "../lib/schema";
 import Hero from "../components/home/Hero.astro";
 import About from "../components/home/About.astro";
 import Problem from "../components/home/Problem.astro";
@@ -54,6 +55,9 @@ const schema = [
     telephone: site.phone,
     alumniOf: { "@type": "CollegeOrUniversity", name: "Islamic University" },
     worksFor: { "@id": businessId },
+    knowsLanguage: languages,
+    nationality: { "@type": "Country", name: site.country },
+    sameAs: sameAs(),
     knowsAbout: [
       "Local SEO",
       "Google Business Profile optimization",
@@ -81,7 +85,9 @@ const schema = [
     hasMap: site.mapsUrl,
     geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
     areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
-    sameAs: [site.mapsUrl],
+    sameAs: sameAs(),
+    contactPoint: contactPoint(),
+    knowsLanguage: languages,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Search Visibility Services",

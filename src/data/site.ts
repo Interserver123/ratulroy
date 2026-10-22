@@ -16,6 +16,9 @@ export const site = {
   locality: "Khulna",
   country: "Bangladesh",
   countryCode: "BD",
+  // Official profiles (Facebook Page, LinkedIn, Instagram, YouTube, X, Fiverr...). Each one is
+  // added to the structured data as sameAs and shown as a link in the footer.
+  social: [] as { label: string; href: string }[],
 };
 
 export type Link = { label: string; href: string };
