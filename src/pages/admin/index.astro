@@ -2,6 +2,10 @@
 // Private leads dashboard. Static shell only: no lead data is ever in this HTML.
 // Not indexed (meta + X-Robots-Tag header), not in the sitemap or llms.txt, not linked from public pages.
 import "../../styles/global.css";
+import { Image } from "astro:assets";
+import FontFaces from "../../components/FontFaces.astro";
+import { img } from "../../lib/img";
+const logo = img("brand/logo-portrait.jpg");
 ---
 
 <!doctype html>
@@ -11,26 +15,15 @@ import "../../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta name="referrer" content="same-origin" />
-    <title>Leads dashboard · Ratul Roy</title>
+    <title>Lead desk · Ratul Roy</title>
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <FontFaces />
   </head>
   <body class="adm">
-    <!-- Login -->
-    <section class="adm-login" data-view="login" hidden>
-      <form class="adm-card adm-login__card" data-login>
-        <p class="adm-kicker"><span class="adm-pin"></span>Private</p>
-        <h1>Leads dashboard</h1>
-        <p class="adm-muted">Sign in to manage enquiries from ratulroy.com.</p>
-        <label>Email<input name="email" type="email" autocomplete="username" required /></label>
-        <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
-        <button class="adm-btn adm-btn--dark" type="submit">Sign in</button>
-        <p class="adm-error" data-login-error role="alert"></p>
-      </form>
-    </section>
-
     <!-- First-run setup (only while no account exists) -->
-    <section class="adm-login" data-view="setup" hidden>
-      <form class="adm-card adm-login__card" data-setup>
+    <section class="adm-auth" data-view="setup" hidden>
+      <form class="adm-auth__card" data-setup>
+        <Image src={logo} alt="" width={96} height={96} class="adm-auth__face" />
         <p class="adm-kicker"><span class="adm-pin"></span>First-time setup</p>
         <h1>Create your account</h1>
         <p class="adm-muted" data-setup-note>Enter the setup key you saved in Cloudflare, then choose your login.</p>
@@ -39,69 +32,194 @@ import "../../styles/global.css";
         <label>Email<input name="email" type="email" autocomplete="username" required /></label>
         <label>Password (12+ characters)<input name="password" type="password" autocomplete="new-password" minlength="12" required /></label>
         <label>Repeat password<input name="password2" type="password" autocomplete="new-password" minlength="12" required /></label>
-        <button class="adm-btn adm-btn--dark" type="submit">Create account</button>
+        <button class="adm-btn adm-btn--dark adm-btn--block" type="submit">Create account</button>
         <p class="adm-error" data-setup-error role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Login -->
+    <section class="adm-auth" data-view="login" hidden>
+      <form class="adm-auth__card" data-login>
+        <Image src={logo} alt="" width={96} height={96} class="adm-auth__face" />
+        <p class="adm-kicker"><span class="adm-pin"></span>Private</p>
+        <h1>Lead desk</h1>
+        <p class="adm-muted">Sign in to manage enquiries from ratulroy.com.</p>
+        <label>Email<input name="email" type="email" autocomplete="username" required /></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+        <button class="adm-btn adm-btn--dark adm-btn--block" type="submit">Sign in</button>
+        <p class="adm-error" data-login-error role="alert"></p>
       </form>
     </section>
 
     <!-- App -->
     <div class="adm-app" data-view="app" hidden>
       <header class="adm-top">
-        <div class="adm-brand"><span class="adm-pin"></span><b>Leads</b><span class="adm-muted">ratulroy.com</span></div>
-        <div class="adm-top__right">
-          <span class="adm-muted" data-user></span>
-          <button class="adm-btn" type="button" data-logout>Sign out</button>
+        <div class="adm-top__in">
+          <a class="adm-brand" href="/admin" aria-label="Lead desk home">
+            <Image src={logo} alt="" width={72} height={72} />
+            <span><b>Ratul Roy</b><small>Lead desk</small></span>
+          </a>
+          <nav class="adm-tabs" aria-label="Sections">
+            <button type="button" data-tab-btn="overview" aria-current="page">Overview</button>
+            <button type="button" data-tab-btn="leads">Leads <i data-badge-new></i></button>
+            <button type="button" data-tab-btn="followups">Follow-ups <i data-badge-due></i></button>
+          </nav>
+          <div class="adm-top__right">
+            <a class="adm-iconbtn" href="/" target="_blank" rel="noopener" title="Open the website" aria-label="Open the website">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <button class="adm-user" type="button" data-logout title="Sign out">
+              <span data-user-initial>R</span><b data-user>Ratul</b>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 17l5-5-5-5M20 12H9M12 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
         </div>
       </header>
 
       <main class="adm-main">
-        <section class="adm-kpis" data-kpis aria-label="Key numbers"></section>
-
-        <section class="adm-grid">
-          <div class="adm-card adm-chart">
-            <div class="adm-card__head"><h2>Leads, last 30 days</h2><span class="adm-muted" data-chart-total></span></div>
-            <div data-chart></div>
-          </div>
-          <div class="adm-card"><h2>By form</h2><ul class="adm-bars" data-by-form></ul></div>
-          <div class="adm-card"><h2>By source</h2><ul class="adm-bars" data-by-source></ul></div>
-          <div class="adm-card"><h2>Top pages</h2><ul class="adm-bars" data-top-pages></ul></div>
-        </section>
-
-        <section class="adm-card adm-leads" aria-label="Leads">
-          <div class="adm-toolbar">
-            <div class="adm-pills" data-status-pills role="tablist" aria-label="Status filter"></div>
-            <div class="adm-toolbar__row">
-              <input type="search" placeholder="Search name, email, business, website, phone" data-q aria-label="Search leads" />
-              <select data-form aria-label="Form">
-                <option value="">All forms</option>
-                <option value="audit">Free audit</option>
-                <option value="contact">Contact</option>
-                <option value="strategy-call">Strategy call</option>
-              </select>
-              <select data-sort aria-label="Sort">
-                <option value="newest">Newest first</option>
-                <option value="oldest">Oldest first</option>
-                <option value="followup">Follow-up date</option>
-                <option value="priority">Priority</option>
-                <option value="value">Deal value</option>
-              </select>
-              <label class="adm-check"><input type="checkbox" data-due /> Follow-ups due</label>
-              <a class="adm-btn" data-export href="/api/admin/export">Export CSV</a>
+        <!-- ===== Overview ===== -->
+        <section data-tab="overview">
+          <div class="ov-hello">
+            <div>
+              <h1><span data-greeting>Hi</span>, <span data-first-name>Ratul</span><span class="ov-wave" aria-hidden="true">.</span></h1>
+              <p class="adm-muted">Here's what's happening with your leads today.</p>
+            </div>
+            <div class="ov-actions">
+              <a class="adm-iconbtn adm-iconbtn--ring" href="/api/admin/export?status=all" title="Export all leads (CSV)" aria-label="Export all leads as CSV">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+              <button class="adm-btn adm-btn--pill" type="button" data-goto="followups">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                Follow-ups
+              </button>
+              <button class="adm-btn adm-btn--pill adm-btn--dark" type="button" data-goto="new">
+                <span class="adm-dot"></span>New leads <b data-new-count>0</b>
+              </button>
             </div>
           </div>
-          <div class="adm-table-wrap">
-            <table class="adm-table">
-              <thead>
-                <tr><th>Lead</th><th>Form</th><th>Status</th><th>Source</th><th>Follow-up</th><th>Received</th></tr>
-              </thead>
-              <tbody data-rows></tbody>
-            </table>
+
+          <div class="ov-grid">
+            <article class="ov-card ov-main">
+              <div class="ov-card__head">
+                <h2>Leads</h2>
+                <label class="adm-select">
+                  <span class="sr-only">Duration</span>
+                  <select data-range>
+                    <option value="7">Last 7 days</option>
+                    <option value="30" selected>Last 30 days</option>
+                    <option value="90">Last 90 days</option>
+                  </select>
+                </label>
+              </div>
+              <p class="ov-big"><b data-period-count>0</b><span> leads</span> <em class="adm-chip" data-period-delta>+0%</em></p>
+              <div class="ov-legend"><span><i class="l1"></i>All leads</span><span><i class="l2"></i>Contacted or further</span></div>
+              <div class="ov-chart" data-chart></div>
+            </article>
+
+            <article class="ov-card ov-sources">
+              <div class="ov-card__head"><h2>Top sources</h2></div>
+              <div class="ov-tiles" data-sources></div>
+            </article>
+
+            <article class="ov-card ov-win">
+              <div>
+                <h2>Win rate</h2>
+                <p class="ov-mid"><b data-won>0</b> won<span class="adm-muted"> / <span data-closed>0</span> closed</span></p>
+              </div>
+              <div class="ov-ring" data-ring style="--p:0"><span data-winrate>0%</span></div>
+            </article>
+
+            <article class="ov-card ov-meter">
+              <div class="ov-card__head"><h2>Waiting for a reply</h2><button class="adm-iconbtn" type="button" data-goto="new" aria-label="Open new leads">↗</button></div>
+              <p class="ov-big ov-big--sm"><b data-fresh>0</b><span> new</span> <em class="adm-chip" data-fresh-chip>0 today</em></p>
+              <p class="ov-target">Contacted this period <b data-worked-of>0 of 0</b></p>
+              <div class="ov-bar ov-bar--good"><span data-worked-bar style="--w:0%"><b data-worked-pct>0%</b></span></div>
+            </article>
+
+            <article class="ov-card ov-meter">
+              <div class="ov-card__head"><h2>Pipeline value</h2><button class="adm-iconbtn" type="button" data-goto="pipeline" aria-label="Open pipeline">↗</button></div>
+              <p class="ov-big ov-big--sm"><b data-pipeline>$0</b> <em class="adm-chip" data-open-chip>0 open</em></p>
+              <p class="ov-target">Won so far <b data-won-value>$0</b></p>
+              <div class="ov-bar ov-bar--accent"><span data-won-bar style="--w:0%"><b data-won-pct>0%</b></span></div>
+            </article>
+
+            <article class="ov-promo" data-promo>
+              <div class="ov-promo__grid" aria-hidden="true" data-promo-grid></div>
+              <p class="adm-kicker adm-kicker--light"><span class="adm-pin"></span>Today</p>
+              <h2 data-promo-title>Follow-ups due</h2>
+              <p data-promo-text>Leads you promised to get back to.</p>
+              <button class="adm-btn adm-btn--light" type="button" data-promo-btn data-goto="followups">Open follow-ups</button>
+            </article>
+
+            <article class="ov-card ov-recent">
+              <div class="ov-card__head"><h2>Latest leads</h2><button class="adm-link" type="button" data-goto="leads">See all →</button></div>
+              <ul class="ov-list" data-recent></ul>
+            </article>
+
+            <article class="ov-card ov-pages">
+              <div class="ov-card__head"><h2>Pages that convert</h2></div>
+              <ul class="adm-bars" data-top-pages></ul>
+              <h2 class="ov-sub">By form</h2>
+              <ul class="adm-bars" data-by-form></ul>
+            </article>
           </div>
-          <div class="adm-pager" data-pager></div>
+        </section>
+
+        <!-- ===== Leads ===== -->
+        <section data-tab="leads" hidden>
+          <div class="ov-hello ov-hello--sm">
+            <div>
+              <h1 data-leads-title>Leads</h1>
+              <p class="adm-muted" data-leads-sub>Every enquiry from the website, newest first.</p>
+            </div>
+            <div class="ov-actions">
+              <a class="adm-btn adm-btn--pill" data-export href="/api/admin/export">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Export CSV
+              </a>
+            </div>
+          </div>
+          <div class="ov-card">
+            <div class="adm-toolbar">
+              <div class="adm-pills" data-status-pills role="tablist" aria-label="Status filter"></div>
+              <div class="adm-toolbar__row">
+                <label class="adm-search">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                  <input type="search" placeholder="Search name, email, business, website, phone" data-q aria-label="Search leads" />
+                </label>
+                <label class="adm-select"><span class="sr-only">Form</span>
+                  <select data-form>
+                    <option value="">All forms</option>
+                    <option value="audit">Free audit</option>
+                    <option value="contact">Contact</option>
+                    <option value="strategy-call">Strategy call</option>
+                  </select>
+                </label>
+                <label class="adm-select"><span class="sr-only">Sort</span>
+                  <select data-sort>
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="followup">Follow-up date</option>
+                    <option value="priority">Priority</option>
+                    <option value="value">Deal value</option>
+                  </select>
+                </label>
+                <label class="adm-check"><input type="checkbox" data-due /> Due only</label>
+              </div>
+            </div>
+            <div class="adm-table-wrap">
+              <table class="adm-table">
+                <thead>
+                  <tr><th>Lead</th><th>Form</th><th>Status</th><th>Source</th><th>Follow-up</th><th>Received</th></tr>
+                </thead>
+                <tbody data-rows></tbody>
+              </table>
+            </div>
+            <div class="adm-pager" data-pager></div>
+          </div>
         </section>
       </main>
 
-      <!-- Lead drawer -->
       <div class="adm-scrim" data-scrim hidden></div>
       <aside class="adm-drawer" data-drawer aria-label="Lead details" hidden>
         <div data-drawer-body></div>
@@ -116,535 +234,212 @@ import "../../styles/global.css";
 </html>
 
 <style is:global>
-  body.adm {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 15px;
-  }
-  .adm h1,
-  .adm h2,
-  .adm h3 {
-    font-family: inherit;
-    letter-spacing: -0.02em;
-  }
-  .adm [hidden] {
-    display: none !important;
-  }
-  .adm-muted {
-    color: var(--muted);
-  }
-  .adm-pin {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    background: var(--accent);
-  }
-  .adm-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 18px;
-    box-shadow: 0 1px 2px rgb(15 25 30 / 4%);
-    min-width: 0;
-  }
-  .adm-card h2 {
-    font-size: 0.95rem;
-    margin: 0 0 12px;
-  }
-  .adm-card__head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .adm-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 10px;
-    border: 1px solid var(--line-2);
-    background: var(--paper);
-    color: var(--ink);
-    font: inherit;
-    font-weight: 600;
-    font-size: 0.88rem;
-    cursor: pointer;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .adm-btn:hover {
-    border-color: var(--ink);
-  }
-  .adm-btn--dark {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: #fff;
-  }
-  .adm-btn--danger {
-    color: var(--accent);
-  }
-  .adm input,
-  .adm select,
-  .adm textarea {
-    font: inherit;
-    padding: 9px 12px;
-    border: 1px solid var(--line-2);
-    border-radius: 10px;
-    background: var(--paper);
-    color: var(--ink);
-    min-width: 0;
-  }
-  .adm input:focus,
-  .adm select:focus,
-  .adm textarea:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: 1px;
-  }
+  body.adm { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; min-height: 100vh; }
+  .adm h1, .adm h2, .adm h3 { font-family: var(--font-display); letter-spacing: -0.03em; margin: 0; }
+  .adm [hidden] { display: none !important; }
+  .adm-muted { color: var(--muted); }
+  .adm-pin { display: inline-block; flex: none; width: 11px; height: 11px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--accent); }
+  .adm-kicker { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  .adm-kicker--light { color: #ffb3a7; }
+  .adm-kicker--light .adm-pin { background: #ff6a55; }
+  .adm-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff6a55; box-shadow: 0 0 0 3px rgb(255 106 85 / 30%); }
 
-  /* login */
-  .adm-login {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 20px;
-  }
-  .adm-login__card {
-    width: min(100%, 380px);
-    display: grid;
-    gap: 12px;
-    padding: 28px;
-  }
-  .adm-login__card h1 {
-    margin: 0;
-    font-size: 1.6rem;
-  }
-  .adm-login__card label {
-    display: grid;
-    gap: 6px;
-    font-weight: 600;
-    font-size: 0.88rem;
-  }
-  .adm-kicker {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-  .adm-error {
-    margin: 0;
-    color: var(--accent);
-    min-height: 1.2em;
-    font-size: 0.9rem;
-  }
+  /* buttons & inputs */
+  .adm-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-decoration: none; white-space: nowrap; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+  .adm-btn:hover { border-color: var(--ink); }
+  .adm-btn:active { transform: translateY(1px); }
+  .adm-btn:disabled { opacity: 0.45; cursor: default; }
+  .adm-btn--pill { border-radius: 999px; padding: 10px 18px; border-color: transparent; box-shadow: 0 1px 2px rgb(15 25 30 / 8%); }
+  .adm-btn--dark { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .adm-btn--dark:hover { background: #1f2d30; }
+  .adm-btn--dark b { padding: 1px 8px; border-radius: 99px; background: rgb(255 255 255 / 16%); }
+  .adm-btn--light { background: #fff; border-color: #fff; color: var(--ink); border-radius: 999px; }
+  .adm-btn--block { width: 100%; padding: 12px; }
+  .adm-btn--danger { color: var(--accent); }
+  .adm-link { border: 0; background: none; font: inherit; font-weight: 600; font-size: 0.85rem; color: var(--accent); cursor: pointer; }
+  .adm-iconbtn { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; text-decoration: none; transition: transform 0.25s var(--ease), background 0.2s; }
+  .adm-iconbtn:hover { transform: rotate(-12deg); background: var(--bg); }
+  .adm-iconbtn--ring { width: 42px; height: 42px; border: 1.5px solid var(--ink); background: transparent; }
+  .adm input, .adm select, .adm textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--paper); color: var(--ink); min-width: 0; }
+  .adm input:focus, .adm select:focus, .adm textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .adm-select select { appearance: none; padding: 8px 34px 8px 14px; border-radius: 999px; border: 0; background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%230f1a1c' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") right 12px center / 14px no-repeat; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+  .adm-chip { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-style: normal; font-family: var(--font); font-size: 0.75rem; font-weight: 700; letter-spacing: 0; background: var(--good-soft); color: var(--good); vertical-align: middle; }
+  .adm-chip--down { background: var(--accent-soft); color: var(--accent); }
+  .adm-chip--flat { background: var(--bg-2); color: var(--muted); }
+  .adm-error { margin: 0; color: var(--accent); min-height: 1.2em; font-size: 0.9rem; }
 
-  /* app shell */
-  .adm-top {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 20px;
-    background: rgb(255 255 255 / 90%);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .adm-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .adm-top__right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .adm-main {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    gap: 16px;
-  }
-  .adm-kpis {
-    display: grid;
-    gap: 12px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (min-width: 700px) {
-    .adm-kpis {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  @media (min-width: 1200px) {
-    .adm-kpis {
-      grid-template-columns: repeat(8, 1fr);
-    }
-  }
-  .adm-kpi {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 14px 16px;
-  }
-  .adm-kpi span {
-    display: block;
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-  .adm-kpi b {
-    display: block;
-    margin-top: 4px;
-    font-size: 1.6rem;
-    letter-spacing: -0.03em;
-  }
-  .adm-kpi--accent b {
-    color: var(--accent);
-  }
-  .adm-kpi--good b {
-    color: var(--good);
-  }
-  .adm-grid {
-    display: grid;
-    gap: 12px;
-  }
-  @media (min-width: 1000px) {
-    .adm-grid {
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-    }
-  }
-  .adm-chart svg {
-    width: 100%;
-    height: 140px;
-    display: block;
-  }
-  .adm-bars {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 8px;
-    font-size: 0.85rem;
-  }
-  .adm-bars li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 4px 8px;
-  }
-  .adm-bars li span:first-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .adm-bars i {
-    grid-column: 1 / -1;
-    height: 6px;
-    border-radius: 99px;
-    background: var(--bg-2);
-    overflow: hidden;
-  }
-  .adm-bars i::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: var(--w);
-    background: var(--ink);
-    border-radius: inherit;
-  }
+  /* auth */
+  .adm-auth { min-height: 100vh; display: grid; place-items: center; padding: 20px; background: radial-gradient(40% 50% at 85% 15%, rgb(15 157 99 / 12%), transparent 70%), radial-gradient(40% 50% at 10% 90%, rgb(232 64 47 / 10%), transparent 70%), url("/topo.svg") center / 1100px auto, var(--bg); }
+  .adm-auth__card { width: min(100%, 400px); display: grid; gap: 12px; padding: 32px; border-radius: 24px; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+  .adm-auth__card h1 { font-size: 2rem; }
+  .adm-auth__card label { display: grid; gap: 6px; font-weight: 600; font-size: 0.85rem; }
+  .adm-auth__face { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--accent); margin-bottom: 4px; }
 
-  /* table */
-  .adm-toolbar {
-    display: grid;
-    gap: 12px;
-    margin-bottom: 12px;
+  /* top bar */
+  .adm-top { position: sticky; top: 0; z-index: 10; background: rgb(244 247 246 / 85%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .adm-top__in { max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; gap: 16px; }
+  .adm-brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+  .adm-brand img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 2px var(--accent); }
+  .adm-brand span { display: grid; line-height: 1.1; }
+  .adm-brand b { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: -0.03em; }
+  .adm-brand small { font-size: 0.75rem; color: var(--muted); }
+  .adm-tabs { display: flex; gap: 4px; margin: 0 auto; padding: 4px; border-radius: 999px; background: var(--bg-2); }
+  .adm-tabs button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 0; border-radius: 999px; background: transparent; font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--muted); cursor: pointer; transition: background 0.2s, color 0.2s; }
+  .adm-tabs button:hover { color: var(--ink); }
+  .adm-tabs button[aria-current="page"] { background: var(--paper); color: var(--ink); box-shadow: 0 1px 3px rgb(15 25 30 / 10%); }
+  .adm-tabs i { font-style: normal; min-width: 20px; padding: 1px 6px; border-radius: 99px; background: var(--accent); color: #fff; font-size: 0.7rem; text-align: center; }
+  .adm-tabs i:empty { display: none; }
+  .adm-top__right { display: flex; align-items: center; gap: 8px; }
+  .adm-user { display: flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font: inherit; font-size: 0.88rem; cursor: pointer; }
+  .adm-user span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 0.8rem; }
+  .adm-user:hover { border-color: var(--accent); color: var(--accent); }
+  .adm-main { max-width: 1240px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  /* overview */
+  .ov-hello { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 22px; }
+  .ov-hello h1 { font-size: clamp(2.2rem, 4.4vw, 3.2rem); line-height: 1; }
+  .ov-hello--sm h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); }
+  .ov-hello p { margin: 8px 0 0; }
+  .ov-wave { color: var(--accent); }
+  .ov-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .ov-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) {
+    .ov-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ov-main { grid-column: span 2; grid-row: span 2; }
+    .ov-recent { grid-column: span 2; }
   }
-  .adm-toolbar__row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-  }
-  .adm-toolbar__row input[type="search"] {
-    flex: 1 1 260px;
-  }
-  .adm-check {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.88rem;
-  }
-  .adm-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .adm-pill {
-    padding: 6px 12px;
-    border-radius: 99px;
-    border: 1px solid var(--line-2);
-    background: var(--paper);
-    font: inherit;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .adm-pill[aria-selected="true"] {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: #fff;
-  }
-  .adm-pill small {
-    opacity: 0.65;
-    margin-left: 4px;
-  }
-  .adm-table-wrap {
-    overflow-x: auto;
-  }
-  .adm-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.88rem;
-  }
-  .adm-table th {
-    text-align: left;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 8px 10px;
-    border-bottom: 1px solid var(--line);
-    white-space: nowrap;
-  }
-  .adm-table td {
-    padding: 10px;
-    border-bottom: 1px solid var(--line);
-    vertical-align: top;
-  }
-  .adm-table tbody tr {
-    cursor: pointer;
-  }
-  .adm-table tbody tr:hover td,
-  .adm-table tbody tr:focus-visible td {
-    background: var(--bg);
-  }
-  .adm-table td b {
-    display: block;
-  }
-  .adm-empty {
-    text-align: center;
-    color: var(--muted);
-    padding: 30px 10px !important;
-  }
-  .adm-badge {
-    display: inline-block;
-    padding: 3px 9px;
-    border-radius: 99px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    white-space: nowrap;
-    background: var(--bg-2);
-    color: var(--ink-2);
-  }
-  .adm-badge--new {
-    background: #e7efff;
-    color: #1d4fb8;
-  }
-  .adm-badge--contacted {
-    background: #fff4dc;
-    color: #8a5a00;
-  }
-  .adm-badge--qualified {
-    background: #efe7ff;
-    color: #5b2db8;
-  }
-  .adm-badge--proposal {
-    background: #ffe9e4;
-    color: #a3301c;
-  }
-  .adm-badge--won {
-    background: var(--good-soft);
-    color: var(--good);
-  }
-  .adm-badge--lost,
-  .adm-badge--spam {
-    background: #eceff0;
-    color: #5f6d6b;
-  }
-  .adm-badge--high {
-    background: var(--accent-soft);
-    color: var(--accent);
-  }
-  .adm-overdue {
-    color: var(--accent);
-    font-weight: 700;
-  }
-  .adm-pager {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    margin-top: 12px;
-    font-size: 0.88rem;
-  }
+  .ov-card { position: relative; min-width: 0; padding: 20px; border-radius: 22px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 1px 2px rgb(15 25 30 / 4%); }
+  .ov-card h2 { font-family: var(--font); font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; }
+  .ov-card__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ov-big { margin: 6px 0 0; font-family: var(--font-display); line-height: 1; }
+  .ov-big b { font-size: clamp(2.6rem, 5vw, 3.4rem); font-weight: 600; letter-spacing: -0.04em; }
+  .ov-big span { font-size: 1.6rem; color: #b9c2bf; letter-spacing: -0.03em; }
+  .ov-big--sm b { font-size: 2.6rem; }
+  .ov-big .adm-chip { margin-left: 6px; }
+  .ov-legend { display: flex; gap: 16px; margin: 16px 0 6px; font-size: 0.78rem; color: var(--muted); }
+  .ov-legend span { display: flex; align-items: center; gap: 6px; }
+  .ov-legend i { width: 10px; height: 10px; border-radius: 3px; }
+  .ov-legend .l1 { background: #f6c8bf; }
+  .ov-legend .l2 { background: var(--accent); }
+  .ov-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .ov-chart .col:hover .b1 { fill: #f2b1a5; }
+  .ov-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ov-tile { padding: 12px; border-radius: 16px; background: var(--accent-soft); display: grid; gap: 8px; }
+  .ov-tile:nth-child(2) { background: #e6f4ee; }
+  .ov-tile__icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; }
+  .ov-tile:nth-child(2) .ov-tile__icon { background: var(--good); }
+  .ov-tile small { font-size: 0.78rem; color: var(--ink-2); text-transform: capitalize; }
+  .ov-tile b { font-family: var(--font-display); font-size: 1.7rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+  .ov-tile em { display: flex; justify-content: space-between; align-items: center; padding: 7px 10px; border-radius: 12px; background: #fff; font-style: normal; font-size: 0.75rem; color: var(--ink-2); }
+  .ov-empty { grid-column: 1 / -1; margin: 0; padding: 18px; border-radius: 14px; background: var(--bg); color: var(--muted); font-size: 0.88rem; text-align: center; }
+  .ov-win { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .ov-mid { margin: 26px 0 0; font-family: var(--font-display); font-size: 1.1rem; }
+  .ov-mid b { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; }
+  .ov-ring { --p: 0; flex: none; display: grid; place-items: center; width: 104px; height: 104px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--p) * 1%), var(--bg-2) 0); }
+  .ov-ring span { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: var(--paper); font-family: var(--font-display); font-weight: 700; color: var(--accent); }
+  .ov-target { margin: 22px 0 8px; font-size: 0.82rem; color: var(--muted); }
+  .ov-target b { color: var(--accent); font-weight: 600; }
+  .ov-bar { height: 46px; border-radius: 14px; background: var(--bg); overflow: hidden; }
+  .ov-bar span { --w: 0%; display: flex; align-items: center; height: 100%; width: max(var(--w), 64px); padding-left: 14px; border-radius: 14px; color: #fff; transition: width 0.9s var(--ease); }
+  .ov-bar b { font-family: var(--font-display); font-size: 1.05rem; }
+  .ov-bar--good span { background: repeating-linear-gradient(135deg, rgb(255 255 255 / 0%) 0 10px, rgb(255 255 255 / 10%) 10px 20px), linear-gradient(90deg, #075f3c, #2fbf86); }
+  .ov-bar--accent span { background: repeating-linear-gradient(135deg, rgb(255 255 255 / 0%) 0 10px, rgb(255 255 255 / 10%) 10px 20px), linear-gradient(90deg, #a3271a, #ff6a55); }
+  .ov-promo { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-height: 220px; padding: 22px; border-radius: 22px; color: #fff; background: radial-gradient(70% 80% at 100% 0%, rgb(232 64 47 / 55%), transparent 60%), radial-gradient(60% 70% at 0% 100%, rgb(15 157 99 / 35%), transparent 65%), #0f1a1c; }
+  .ov-promo::before { content: ""; position: absolute; inset: 0; background: url("/topo.svg") center / 700px auto; opacity: 0.12; filter: invert(1); pointer-events: none; }
+  .ov-promo > * { position: relative; }
+  .ov-promo h2 { font-size: 1.7rem; line-height: 1.1; max-width: 14ch; color: #fff; }
+  .ov-promo p:not(.adm-kicker) { margin: 0; color: rgb(255 255 255 / 75%); font-size: 0.9rem; max-width: 24ch; }
+  .ov-promo .adm-btn { margin-top: auto; }
+  .ov-promo__grid { position: absolute; right: 18px; bottom: 18px; display: grid; grid-template-columns: repeat(5, 11px); gap: 6px; }
+  .ov-promo__grid i { width: 11px; height: 11px; border-radius: 50%; background: rgb(255 255 255 / 14%); }
+  .ov-promo__grid i.a { background: #f2a516; }
+  .ov-promo__grid i.g { background: #2fbf86; }
+  .ov-list { list-style: none; margin: 0; padding: 0; display: grid; }
+  .ov-list li button { width: 100%; display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 12px; padding: 10px 6px; border: 0; border-top: 1px solid var(--line); background: none; font: inherit; text-align: left; color: var(--ink); cursor: pointer; border-radius: 10px; }
+  .ov-list li:first-child button { border-top: 0; }
+  .ov-list li button:hover { background: var(--bg); }
+  .ov-av { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; text-transform: uppercase; }
+  .ov-list b { display: block; font-size: 0.92rem; }
+  .ov-list small { color: var(--muted); font-size: 0.8rem; }
+  .ov-list .r { text-align: right; display: grid; gap: 3px; justify-items: end; }
+  .ov-sub { margin: 18px 0 8px !important; }
+  .adm-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; font-size: 0.85rem; }
+  .adm-bars li { display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; }
+  .adm-bars li span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .adm-bars i { grid-column: 1 / -1; height: 6px; border-radius: 99px; background: var(--bg-2); overflow: hidden; }
+  .adm-bars i::after { content: ""; display: block; height: 100%; width: var(--w); background: var(--ink); border-radius: inherit; }
+
+  /* leads table */
+  .adm-toolbar { display: grid; gap: 12px; margin-bottom: 12px; }
+  .adm-toolbar__row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .adm-search { flex: 1 1 280px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-radius: 999px; background: var(--bg); color: var(--muted); }
+  .adm-search input { flex: 1; border: 0 !important; background: transparent !important; padding: 10px 0 !important; outline: none !important; }
+  .adm-search:focus-within { outline: 2px solid var(--accent); }
+  .adm-check { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; font-weight: 600; }
+  .adm-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .adm-pill { padding: 7px 13px; border-radius: 99px; border: 1px solid var(--line-2); background: var(--paper); font: inherit; font-size: 0.84rem; font-weight: 600; cursor: pointer; }
+  .adm-pill[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .adm-pill small { opacity: 0.6; margin-left: 5px; }
+  .adm-table-wrap { overflow-x: auto; }
+  .adm-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .adm-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .adm-table td { padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .adm-table tbody tr { cursor: pointer; }
+  .adm-table tbody tr:hover td, .adm-table tbody tr:focus-visible td { background: var(--bg); }
+  .adm-lead { display: flex; align-items: center; gap: 10px; }
+  .adm-lead b { display: block; }
+  .adm-lead small { color: var(--muted); }
+  .adm-empty { text-align: center; color: var(--muted); padding: 40px 10px !important; }
+  .adm-badge { display: inline-block; padding: 4px 10px; border-radius: 99px; font-size: 0.74rem; font-weight: 700; white-space: nowrap; background: var(--bg-2); color: var(--ink-2); }
+  .adm-badge--new { background: var(--accent-soft); color: var(--accent); }
+  .adm-badge--contacted { background: #fff4dc; color: #7a4f00; }
+  .adm-badge--qualified { background: #e7efff; color: #1d4fb8; }
+  .adm-badge--proposal { background: #efe7ff; color: #5b2db8; }
+  .adm-badge--won { background: var(--good-soft); color: var(--good); }
+  .adm-badge--lost, .adm-badge--spam { background: #eceff0; color: #5f6d6b; }
+  .adm-badge--high { background: var(--ink); color: #fff; }
+  .adm-overdue { color: var(--accent); font-weight: 700; }
+  .adm-pager { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 14px; font-size: 0.88rem; }
 
   /* drawer */
-  .adm-scrim {
-    position: fixed;
-    inset: 0;
-    background: rgb(15 26 28 / 35%);
-    z-index: 20;
+  .adm-scrim { position: fixed; inset: 0; background: rgb(15 26 28 / 40%); backdrop-filter: blur(2px); z-index: 20; }
+  .adm-drawer { position: fixed; top: 10px; right: 10px; bottom: 10px; width: min(calc(100% - 20px), 560px); z-index: 21; background: var(--paper); border-radius: 24px; box-shadow: -20px 0 60px -20px rgb(15 26 28 / 40%); overflow-y: auto; padding: 24px; }
+  .adm-drawer h2 { font-size: 1.6rem; }
+  .adm-drawer h3 { font-family: var(--font); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 24px 0 10px; }
+  .adm-dhead { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+  .adm-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .adm-pipeline { display: flex; flex-wrap: wrap; gap: 6px; }
+  .adm-pipeline button { border-radius: 999px; }
+  .adm-pipeline button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .adm-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .adm-fields label { display: grid; gap: 4px; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+  .adm-fields .full { grid-column: 1 / -1; }
+  .adm-dl { display: grid; grid-template-columns: 130px 1fr; gap: 8px 12px; margin: 0; padding: 14px; border-radius: 16px; background: var(--bg); font-size: 0.9rem; }
+  .adm-dl dt { color: var(--muted); }
+  .adm-dl dd { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+  .adm-dl a { color: var(--accent); }
+  .adm-notes { display: grid; gap: 8px; }
+  .adm-note { padding: 12px 14px; border-radius: 14px; background: var(--accent-soft); font-size: 0.9rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .adm-note small, .adm-timeline small { display: block; color: var(--muted); font-size: 0.75rem; margin-bottom: 2px; }
+  .adm-newnote { display: grid; gap: 8px; margin-top: 8px; }
+  .adm-timeline { list-style: none; margin: 0; padding: 0 0 0 16px; border-left: 2px dashed var(--line-2); display: grid; gap: 12px; font-size: 0.85rem; }
+  .adm-timeline li { position: relative; }
+  .adm-timeline li::before { content: ""; position: absolute; left: -23px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--paper); border: 2px solid var(--accent); }
+  .adm-toast { position: fixed; left: 50%; bottom: 20px; translate: -50% 0; z-index: 30; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 0.9rem; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+  .adm-toast.is-on { opacity: 1; }
+
+  @media (max-width: 760px) {
+    .adm-top__in { flex-wrap: wrap; padding: 10px 14px; }
+    .adm-tabs { order: 3; width: 100%; justify-content: space-between; }
+    .adm-tabs button { flex: 1; justify-content: center; padding: 8px 6px; }
+    .adm-top__right { margin-left: auto; }
+    .adm-user b { display: none; }
+    .adm-main { padding: 20px 14px 50px; }
+    .adm-fields, .adm-dl { grid-template-columns: 1fr; }
+    .adm-dl dt { margin-top: 6px; }
+    .adm-table th:nth-child(4), .adm-table td:nth-child(4), .adm-table th:nth-child(5), .adm-table td:nth-child(5) { display: none; }
   }
-  .adm-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: min(100%, 560px);
-    z-index: 21;
-    background: var(--paper);
-    box-shadow: -20px 0 60px -20px rgb(15 26 28 / 35%);
-    overflow-y: auto;
-    padding: 20px;
-  }
-  .adm-drawer h2 {
-    margin: 0;
-    font-size: 1.35rem;
-  }
-  .adm-drawer h3 {
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 22px 0 8px;
-  }
-  .adm-dhead {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    align-items: start;
-  }
-  .adm-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 12px;
-  }
-  .adm-pipeline {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .adm-pipeline button[aria-pressed="true"] {
-    background: var(--ink);
-    color: #fff;
-    border-color: var(--ink);
-  }
-  .adm-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .adm-fields label {
-    display: grid;
-    gap: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--muted);
-  }
-  .adm-fields .full {
-    grid-column: 1 / -1;
-  }
-  .adm-dl {
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 6px 12px;
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  .adm-dl dt {
-    color: var(--muted);
-  }
-  .adm-dl dd {
-    margin: 0;
-    overflow-wrap: anywhere;
-    white-space: pre-wrap;
-  }
-  .adm-dl a {
-    color: var(--accent);
-  }
-  .adm-notes {
-    display: grid;
-    gap: 8px;
-  }
-  .adm-note {
-    padding: 10px 12px;
-    border-radius: 12px;
-    background: var(--bg);
-    font-size: 0.9rem;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-  }
-  .adm-note small,
-  .adm-timeline small {
-    display: block;
-    color: var(--muted);
-    font-size: 0.75rem;
-    margin-bottom: 2px;
-  }
-  .adm-newnote {
-    display: grid;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .adm-timeline {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 0 14px;
-    border-left: 2px solid var(--line);
-    display: grid;
-    gap: 10px;
-    font-size: 0.85rem;
-  }
-  .adm-toast {
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    translate: -50% 0;
-    z-index: 30;
-    padding: 10px 16px;
-    border-radius: 10px;
-    background: var(--ink);
-    color: #fff;
-    font-size: 0.9rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-  }
-  .adm-toast.is-on {
-    opacity: 1;
-  }
-  @media (max-width: 640px) {
-    .adm-fields {
-      grid-template-columns: 1fr;
-    }
-    .adm-dl {
-      grid-template-columns: 1fr;
-    }
-    .adm-dl dt {
-      margin-top: 6px;
-    }
-    .adm-top__right .adm-muted {
-      display: none;
-    }
+  @media (prefers-reduced-motion: reduce) {
+    .adm * { transition: none !important; }
   }
 </style>

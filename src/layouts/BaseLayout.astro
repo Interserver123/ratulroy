@@ -1,10 +1,6 @@
 ---
-import displayLatin from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2?url";
-import displayLatinExt from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-ext-wght-normal.woff2?url";
-import fontLatin from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url";
-import fontLatinExt from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-ext-wght-normal.woff2?url";
-import fontItalic from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-italic.woff2?url";
 import "../styles/global.css";
+import FontFaces from "../components/FontFaces.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { site } from "../data/site";
@@ -38,20 +34,6 @@ const canonical = new URL(path, site.url).href;
 // Every page gets a share image: an explicit override, else its generated card, else the site card.
 const ogImageUrl = ogImage ? new URL(ogImage, site.url).href : ogCardUrl(Astro.url.pathname);
 const ogAlt = ogImageAlt ?? `${title} · ${site.name}`;
-// Self-declared @font-face (latin + latin-ext only). font-display: optional means the
-// preloaded font is used if it arrives in time, otherwise the page keeps the system
-// font for that view: no late text repaint, so LCP is not pushed back by fonts.
-const LATIN = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD";
-const LATIN_EXT = "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF";
-const face = (family: string, src: string, range: string, style = "normal", weight = "400 700") =>
-  `@font-face{font-family:'${family}';font-style:${style};font-display:optional;font-weight:${weight};src:url(${src}) format('woff2-variations');unicode-range:${range}}`;
-const fontCss = [
-  face("Instrument Sans Variable", fontLatin, LATIN),
-  face("Instrument Sans Variable", fontLatinExt, LATIN_EXT),
-  face("Instrument Sans Variable", fontItalic, LATIN, "italic"),
-  face("Bricolage Grotesque Variable", displayLatin, LATIN, "normal", "200 800"),
-  face("Bricolage Grotesque Variable", displayLatinExt, LATIN_EXT, "normal", "200 800"),
-].join("");
 
 // One JSON-LD graph per page; referenced site entities are always defined on the page.
 const portraitImg = await getImage({ src: img("people/ratul-roy-portrait.jpg"), width: 400, format: "jpg" });
@@ -78,9 +60,7 @@ const jsonLd = graph.length ? JSON.stringify({ "@context": "https://schema.org",
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
     <meta name="theme-color" content="#f4f7f6" />
-    <style is:inline set:html={fontCss}></style>
-    <link rel="preload" href={displayLatin} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={fontLatin} as="font" type="font/woff2" crossorigin />
+    <FontFaces />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
