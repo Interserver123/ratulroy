@@ -307,9 +307,13 @@ export function mountMessenger({ api, toast, esc, when }: Helpers) {
       out.textContent = "Asking Meta…";
       try {
         const r = await api("/api/admin/messenger/connection", { method: "POST", body: JSON.stringify({ action: b.dataset.mcConn }) });
-        const apps = (r.subscribedApps as any[]).map((a) => `${a.name} (${(a.subscribed_fields ?? []).join(", ") || "no fields"})`).join("; ");
+        const list = r.subscribedApps as any[] | null;
+        const apps = list ? list.map((a) => `${a.name} (${(a.subscribed_fields ?? []).join(", ") || "no fields"})`).join("; ") : null;
         out.className = "mc-result is-ok";
-        out.textContent = `Connected to “${r.page.name}” (${r.page.id}).\nApps receiving this Page's messages: ${apps || "none yet: press “Subscribe Page to webhook”"}`;
+        out.textContent =
+          `Connected to ${r.page.name} (Page ID ${r.page.id}).` +
+          (r.scopes ? `\nPermissions: ${r.scopes.join(", ")}` : "") +
+          (apps === null ? "" : `\nApps receiving this Page's messages: ${apps || "none yet: press “Subscribe Page to webhook”"}`);
         await loadStatus();
       } catch (x) {
         out.className = "mc-result is-bad";

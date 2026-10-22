@@ -71,7 +71,7 @@ const verify = r.data.verifyToken;
 check("verify token generated", /^rr_/.test(verify ?? ""), verify);
 r = await call("/api/admin/messenger/settings", {
   method: "PUT",
-  body: { ai_model: "openai/gpt-4o-mini", bot_enabled: true, secrets: { meta_app_secret: APP_SECRET, meta_page_token: "page-test-token", openrouter_key: "or-test-key" } },
+  body: { ai_model: "openai/gpt-4o-mini", meta_app_id: "5550001", bot_enabled: true, secrets: { meta_app_secret: APP_SECRET, meta_page_token: "page-test-token", openrouter_key: "or-test-key" } },
 });
 check("secrets saved", r.status === 200 && r.data.secrets.meta_page_token.set && r.data.secrets.meta_page_token.source === "stored", r.data);
 check("secrets never returned in plain text", !JSON.stringify(r.data).includes("page-test-token") && !JSON.stringify(r.data).includes(APP_SECRET));
@@ -87,7 +87,7 @@ cookie = saved;
 
 // --- connection test (real Graph call, here answered by the mock) ---
 r = await call("/api/admin/messenger/connection", { method: "POST", body: { action: "subscribe" } });
-check("connect + subscribe page", r.status === 200 && r.data.page?.id === "1122334455", r.data);
+check("connect + subscribe page (token checked via debug_token, name not required)", r.status === 200 && r.data.page?.id === "1122334455" && r.data.scopes?.includes("pages_messaging"), r.data);
 const sub = (await mockCalls()).find((c) => c.method === "POST" && c.path.endsWith("/subscribed_apps"));
 check("subscribed to messages, postbacks, echoes", sub?.query.subscribed_fields === "messages,messaging_postbacks,message_echoes", sub);
 

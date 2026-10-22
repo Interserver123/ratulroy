@@ -50,6 +50,15 @@ createServer(async (req, res) => {
     return send(res, 200, { model: body.model, choices: [{ message: { content: ai(body) } }] });
   }
 
+  // Graph: token inspection with the app token (App ID|App secret)
+  if (p === "/v21.0/debug_token") {
+    if (req.headers.authorization !== "Bearer 5550001|app-secret-for-tests") return send(res, 400, { error: { message: "Invalid app token", code: 190 } });
+    const ok = url.searchParams.get("input_token") === "page-test-token";
+    return send(res, 200, { data: ok ? { is_valid: true, type: "PAGE", app_id: "5550001", profile_id: "1122334455", scopes: ["pages_messaging", "pages_show_list"], expires_at: 0 } : { is_valid: false, error: { message: "Invalid token" } } });
+  }
+  // A Page token without pages_read_engagement cannot read the Page name.
+  if (p === "/v21.0/1122334455" && url.searchParams.get("fields") === "name") return send(res, 400, { error: { message: "(#100) requires pages_read_engagement", code: 100 } });
+
   // Graph
   if (req.headers.authorization !== "Bearer page-test-token") return send(res, 400, { error: { message: "Invalid OAuth access token.", code: 190 } });
   if (p === "/v21.0/me" && req.method === "GET") return send(res, 200, { id: "1122334455", name: "Ratul Roy Test Page" });
