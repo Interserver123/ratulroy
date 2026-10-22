@@ -1,4 +1,5 @@
 // Lead desk client. Talks only to /api/admin/*. All lead data is escaped before rendering.
+import { mountMessenger } from "./admin-messenger";
 type Lead = Record<string, string | number | null>;
 type Count = { k: string; n: number };
 
@@ -68,6 +69,8 @@ function toast(msg: string) {
   window.setTimeout(() => t.classList.remove("is-on"), 2200);
 }
 
+const messenger = mountMessenger({ api, toast, esc, when });
+
 // ---------- auth views ----------
 function showOnly(view: "login" | "setup" | "app") {
   for (const v of ["login", "setup", "app"]) $(`[data-view=${v}]`).hidden = v !== view;
@@ -91,7 +94,7 @@ async function showApp(user: { email: string; name: string }) {
   $("[data-user-initial]").textContent = initials(name).slice(0, 1).toUpperCase();
   const h = new Date().getHours();
   $("[data-greeting]").textContent = h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
-  await Promise.all([loadStats(), loadRecent(), loadLeads()]);
+  await Promise.all([loadStats(), loadRecent(), loadLeads(), messenger.badge()]);
 }
 
 $<HTMLFormElement>("[data-login]").addEventListener("submit", async (e) => {
@@ -144,11 +147,14 @@ $("[data-logout]").addEventListener("click", async () => {
 });
 
 // ---------- tabs ----------
-type Tab = "overview" | "leads" | "followups";
+type Tab = "overview" | "leads" | "followups" | "messenger";
 function setTab(tab: Tab) {
   $$("[data-tab-btn]").forEach((b) => (b.dataset.tabBtn === tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
   $("[data-tab=overview]").hidden = tab !== "overview";
-  $("[data-tab=leads]").hidden = tab === "overview";
+  $("[data-tab=leads]").hidden = tab === "overview" || tab === "messenger";
+  $("[data-tab=messenger]").hidden = tab !== "messenger";
+  if (tab === "messenger") messenger.open().catch((x) => toast((x as Error).message));
+  else messenger.close();
   if (tab === "followups") {
     Object.assign(state, { status: "open", due: true, sort: "followup", page: 1 });
     $("[data-leads-title]").textContent = "Follow-ups";
@@ -158,7 +164,7 @@ function setTab(tab: Tab) {
     $("[data-leads-title]").textContent = "Leads";
     $("[data-leads-sub]").textContent = "Every enquiry from the website.";
   }
-  if (tab !== "overview") {
+  if (tab === "leads" || tab === "followups") {
     syncControls();
     renderPills();
     loadLeads();

@@ -63,6 +63,7 @@ const logo = img("brand/logo-portrait.jpg");
             <button type="button" data-tab-btn="overview" aria-current="page">Overview</button>
             <button type="button" data-tab-btn="leads">Leads <i data-badge-new></i></button>
             <button type="button" data-tab-btn="followups">Follow-ups <i data-badge-due></i></button>
+            <button type="button" data-tab-btn="messenger">Messenger <i data-badge-mc></i></button>
           </nav>
           <div class="adm-top__right">
             <a class="adm-iconbtn" href="/" target="_blank" rel="noopener" title="Open the website" aria-label="Open the website">
@@ -216,6 +217,137 @@ const logo = img("brand/logo-portrait.jpg");
               </table>
             </div>
             <div class="adm-pager" data-pager></div>
+          </div>
+        </section>
+
+        <!-- ===== Messenger ===== -->
+        <section data-tab="messenger" hidden>
+          <div class="ov-hello ov-hello--sm">
+            <div>
+              <h1>Messenger assistant</h1>
+              <p class="adm-muted">Answers Facebook Page messages from your website content. Hands over to you when it doesn't know.</p>
+            </div>
+            <div class="ov-actions">
+              <button class="mc-switch" type="button" role="switch" aria-checked="false" data-mc-power>
+                <span class="mc-switch__knob" aria-hidden="true"></span><b data-mc-power-label>AI replies off</b>
+              </button>
+            </div>
+          </div>
+
+          <div class="mc-status" data-mc-status>
+            <article class="mc-stat"><small>Facebook Page</small><b data-mc-page>Not connected</b><span data-mc-page-sub>Add your Page token in Settings</span></article>
+            <article class="mc-stat"><small>AI model</small><b data-mc-model>–</b><span data-mc-model-sub>OpenRouter key missing</span></article>
+            <article class="mc-stat"><small>Website knowledge</small><b data-mc-kb>0 pages</b><span data-mc-kb-sub>Never scanned</span></article>
+            <article class="mc-stat mc-stat--dark"><small>Needs you</small><b data-mc-human>0</b><span data-mc-human-sub>conversations waiting</span></article>
+          </div>
+
+          <div class="adm-pills mc-subtabs" role="tablist" aria-label="Messenger sections">
+            <button class="adm-pill" type="button" role="tab" data-mc-sub="inbox" aria-selected="true">Inbox</button>
+            <button class="adm-pill" type="button" role="tab" data-mc-sub="kb" aria-selected="false">Knowledge &amp; test</button>
+            <button class="adm-pill" type="button" role="tab" data-mc-sub="settings" aria-selected="false">Settings</button>
+            <button class="adm-pill" type="button" role="tab" data-mc-sub="logs" aria-selected="false">Activity log</button>
+          </div>
+
+          <!-- Inbox -->
+          <div class="mc-inbox" data-mc-panel="inbox">
+            <div class="ov-card mc-list">
+              <div class="adm-pills" data-mc-filter>
+                <button class="adm-pill" type="button" data-f="all" aria-selected="true">All</button>
+                <button class="adm-pill" type="button" data-f="human" aria-selected="false">Needs you</button>
+                <button class="adm-pill" type="button" data-f="unread" aria-selected="false">Unread</button>
+              </div>
+              <ul class="ov-list" data-mc-convs></ul>
+            </div>
+            <div class="ov-card mc-thread" data-mc-thread>
+              <p class="ov-empty">Pick a conversation to read it and reply.</p>
+            </div>
+          </div>
+
+          <!-- Knowledge base + test -->
+          <div class="mc-grid" data-mc-panel="kb" hidden>
+            <article class="ov-card">
+              <div class="ov-card__head"><h2>Website knowledge base</h2><button class="adm-btn adm-btn--dark adm-btn--pill" type="button" data-mc-scan>Rescan website</button></div>
+              <p class="adm-muted mc-small">The assistant only answers from these pages (taken from your sitemap). It refreshes automatically every day; rescan after you publish changes.</p>
+              <div class="mc-progress" data-mc-progress hidden><span style="--w:0%"></span><b data-mc-progress-label>Starting…</b></div>
+              <div class="adm-table-wrap"><table class="adm-table mc-scans"><thead><tr><th>Started</th><th>Type</th><th>Status</th><th>Pages</th><th>Sections</th></tr></thead><tbody data-mc-scans></tbody></table></div>
+              <form class="mc-row" data-mc-search>
+                <label class="adm-search"><input type="search" name="q" placeholder="Search the knowledge base, e.g. google business profile" aria-label="Search knowledge base" /></label>
+                <button class="adm-btn adm-btn--pill" type="submit">Search</button>
+              </form>
+              <ul class="mc-hits" data-mc-hits></ul>
+            </article>
+            <article class="ov-card">
+              <div class="ov-card__head"><h2>Test the assistant</h2></div>
+              <p class="adm-muted mc-small">Runs the real AI on your knowledge base. Nothing is sent to Messenger.</p>
+              <form class="mc-test" data-mc-test>
+                <textarea name="message" rows="3" placeholder="e.g. আপনার লোকাল এসইও সার্ভিসে কী কী থাকে?" required></textarea>
+                <button class="adm-btn adm-btn--dark" type="submit">Ask</button>
+              </form>
+              <div data-mc-test-out></div>
+            </article>
+          </div>
+
+          <!-- Settings -->
+          <form class="mc-grid" data-mc-panel="settings" data-mc-settings hidden>
+            <p class="mc-warn" data-mc-nokey hidden>Secrets can't be saved yet: add a secret named <b>APP_ENCRYPTION_KEY</b> in Cloudflare (any long random text), redeploy, then come back.</p>
+            <article class="ov-card">
+              <p class="adm-kicker"><span class="adm-pin"></span>Step 1</p>
+              <h2 class="mc-h">Connect your Facebook Page</h2>
+              <p class="adm-muted mc-small">Paste these two values into your Meta app (Messenger → Webhooks). Full guide: docs/MESSENGER.md.</p>
+              <div class="mc-copy"><label>Callback URL<input readonly data-mc-webhook /></label><button class="adm-btn" type="button" data-copy="[data-mc-webhook]">Copy</button></div>
+              <div class="mc-copy"><label>Verify token<input readonly data-mc-verify /></label><button class="adm-btn" type="button" data-copy="[data-mc-verify]">Copy</button></div>
+              <div class="adm-fields">
+                <label class="full">Page access token <span class="mc-secret" data-secret="meta_page_token"></span><input name="secret:meta_page_token" type="password" autocomplete="off" placeholder="Paste to set or replace" /></label>
+                <label class="full">App secret <span class="mc-secret" data-secret="meta_app_secret"></span><input name="secret:meta_app_secret" type="password" autocomplete="off" placeholder="Paste to set or replace" /></label>
+                <label>App ID (optional)<input name="meta_app_id" inputmode="numeric" /></label>
+                <label>Page ID (filled by the test)<input name="meta_page_id" inputmode="numeric" /></label>
+              </div>
+              <div class="adm-actions">
+                <button class="adm-btn" type="button" data-mc-conn="test">Test connection</button>
+                <button class="adm-btn" type="button" data-mc-conn="subscribe">Subscribe Page to webhook</button>
+              </div>
+              <p class="mc-result" data-mc-conn-out></p>
+            </article>
+            <article class="ov-card">
+              <p class="adm-kicker"><span class="adm-pin"></span>Step 2</p>
+              <h2 class="mc-h">AI model (OpenRouter)</h2>
+              <div class="adm-fields">
+                <label class="full">OpenRouter API key <span class="mc-secret" data-secret="openrouter_key"></span><input name="secret:openrouter_key" type="password" autocomplete="off" placeholder="sk-or-…" /></label>
+                <label class="full">Model<input name="ai_model" list="mc-models" placeholder="openai/gpt-4o-mini" /></label>
+                <datalist id="mc-models" data-mc-models></datalist>
+                <label>Creativity (0 to 1)<input name="ai_temperature" inputmode="decimal" /></label>
+                <label>Max AI replies per person per hour<input name="max_replies_per_hour" inputmode="numeric" /></label>
+              </div>
+              <div class="adm-actions"><button class="adm-btn" type="button" data-mc-models-btn>Check model name</button></div>
+              <p class="mc-result" data-mc-models-out></p>
+            </article>
+            <article class="ov-card mc-span">
+              <p class="adm-kicker"><span class="adm-pin"></span>Step 3</p>
+              <h2 class="mc-h">What the assistant may say</h2>
+              <div class="adm-fields">
+                <label class="full">Extra facts (optional). Only write things that are true; the assistant treats this as fact.<textarea name="owner_notes" rows="4" placeholder="e.g. Office hours: Sat–Thu, 10am–7pm (Bangladesh time)."></textarea></label>
+                <label>Handover message (English)<textarea name="handoff_message_en" rows="2"></textarea></label>
+                <label>Handover message (Bengali)<textarea name="handoff_message_bn" rows="2"></textarea></label>
+                <label>When the AI can't answer (English)<textarea name="fallback_message_en" rows="2"></textarea></label>
+                <label>When the AI can't answer (Bengali)<textarea name="fallback_message_bn" rows="2"></textarea></label>
+                <label>Give a chat back to the AI after (hours, 0 = never)<input name="auto_resume_hours" inputmode="numeric" /></label>
+                <label class="adm-check mc-check"><input type="checkbox" name="pause_on_inbox_reply" /> Pause the AI in a chat when I reply from the Facebook inbox</label>
+              </div>
+            </article>
+            <div class="mc-save mc-span"><button class="adm-btn adm-btn--dark adm-btn--pill" type="submit">Save settings</button><span class="adm-muted mc-small">Secrets are encrypted on the server and never shown again.</span></div>
+          </form>
+
+          <!-- Logs -->
+          <div class="ov-card" data-mc-panel="logs" hidden>
+            <div class="ov-card__head">
+              <div class="adm-pills" data-mc-loglevel>
+                <button class="adm-pill" type="button" data-l="" aria-selected="true">All</button>
+                <button class="adm-pill" type="button" data-l="error" aria-selected="false">Errors</button>
+                <button class="adm-pill" type="button" data-l="warn" aria-selected="false">Warnings</button>
+              </div>
+              <button class="adm-link" type="button" data-mc-logs-refresh>Refresh</button>
+            </div>
+            <ul class="mc-logs" data-mc-logs></ul>
           </div>
         </section>
       </main>
@@ -428,10 +560,87 @@ const logo = img("brand/logo-portrait.jpg");
   .adm-toast { position: fixed; left: 50%; bottom: 20px; translate: -50% 0; z-index: 30; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 0.9rem; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
   .adm-toast.is-on { opacity: 1; }
 
+
+  /* messenger */
+  .mc-switch { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--paper); font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+  .mc-switch__knob { width: 44px; height: 26px; border-radius: 99px; background: var(--bg-2); position: relative; transition: background 0.2s; }
+  .mc-switch__knob::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgb(0 0 0 / 25%); transition: translate 0.25s var(--ease); }
+  .mc-switch[aria-checked="true"] .mc-switch__knob { background: var(--good); }
+  .mc-switch[aria-checked="true"] .mc-switch__knob::after { translate: 18px 0; }
+  .mc-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .mc-stat { display: grid; gap: 4px; padding: 16px 18px; border-radius: 20px; background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+  .mc-stat small { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .mc-stat b { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: -0.03em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mc-stat span { font-size: 0.82rem; color: var(--muted); }
+  .mc-stat.is-ok b::before, .mc-stat.is-bad b::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 8px; border-radius: 50%; vertical-align: middle; background: var(--good); }
+  .mc-stat.is-bad b::before { background: var(--accent); }
+  .mc-stat--dark { background: radial-gradient(80% 90% at 100% 0%, rgb(232 64 47 / 50%), transparent 60%), #0f1a1c; color: #fff; border-color: #0f1a1c; }
+  .mc-stat--dark small, .mc-stat--dark span { color: rgb(255 255 255 / 70%); }
+  .mc-subtabs { margin-bottom: 14px; }
+  .mc-inbox { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .mc-inbox { grid-template-columns: minmax(280px, 360px) 1fr; } }
+  .mc-list .adm-pills { margin-bottom: 8px; }
+  .mc-list .ov-list { max-height: 640px; overflow-y: auto; }
+  .mc-list li button[aria-current="true"] { background: var(--bg); }
+  .mc-list small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+  .mc-list li button > span:nth-child(2) { min-width: 0; }
+  .mc-unread { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px; background: var(--accent); color: #fff; font-size: 0.7rem; font-weight: 700; }
+  .mc-thread { display: grid; grid-template-rows: auto 1fr auto; min-height: 520px; }
+  .mc-thead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .mc-thead h2 { font-family: var(--font-display) !important; font-size: 1.3rem !important; }
+  .mc-msgs { display: flex; flex-direction: column; gap: 8px; padding: 14px 2px; max-height: 520px; overflow-y: auto; }
+  .mc-msg { max-width: 82%; padding: 10px 14px; border-radius: 18px; font-size: 0.92rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .mc-msg small { display: block; margin-top: 4px; font-size: 0.72rem; opacity: 0.7; }
+  .mc-msg--in { align-self: flex-start; background: var(--bg); border-bottom-left-radius: 6px; }
+  .mc-msg--out { align-self: flex-end; background: var(--ink); color: #fff; border-bottom-right-radius: 6px; }
+  .mc-msg--ai { background: #e7efff; color: #10306f; }
+  .mc-msg--system { background: var(--good-soft); color: #064d30; }
+  .mc-msg--failed { background: var(--accent-soft); color: var(--accent); outline: 1px dashed var(--accent); }
+  .mc-msg details { margin-top: 6px; font-size: 0.75rem; }
+  .mc-msg details a { color: inherit; }
+  .mc-reply { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .mc-reply textarea { resize: vertical; }
+  .mc-reply__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+  .mc-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .mc-grid { grid-template-columns: 1fr 1fr; } .mc-span { grid-column: 1 / -1; } }
+  .mc-h { font-size: 1.3rem !important; font-family: var(--font-display) !important; margin: 6px 0 4px !important; }
+  .mc-small { font-size: 0.85rem; margin: 0 0 12px; }
+  .mc-copy { display: flex; align-items: end; gap: 8px; margin-bottom: 10px; }
+  .mc-copy label { flex: 1; display: grid; gap: 4px; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+  .mc-copy input { background: var(--bg); font-family: ui-monospace, monospace; font-size: 0.82rem; }
+  .mc-secret { justify-self: start; font-weight: 700; font-size: 0.72rem; padding: 2px 8px; border-radius: 99px; background: var(--bg-2); color: var(--muted); }
+  .mc-secret.is-set { background: var(--good-soft); color: var(--good); }
+  .mc-secret.is-bad { background: var(--accent-soft); color: var(--accent); }
+  .mc-check { grid-column: 1 / -1; color: var(--ink) !important; display: flex !important; }
+  .mc-result { margin: 10px 0 0; font-size: 0.88rem; min-height: 1.2em; white-space: pre-wrap; }
+  .mc-result.is-ok { color: var(--good); }
+  .mc-result.is-bad { color: var(--accent); }
+  .mc-warn { grid-column: 1 / -1; margin: 0; padding: 12px 16px; border-radius: 14px; background: #fff4dc; color: #7a4f00; }
+  .mc-save { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .mc-progress { position: relative; height: 34px; margin-bottom: 12px; border-radius: 12px; background: var(--bg); overflow: hidden; }
+  .mc-progress span { position: absolute; inset: 0 auto 0 0; width: var(--w); background: repeating-linear-gradient(135deg, rgb(255 255 255 / 0%) 0 10px, rgb(255 255 255 / 14%) 10px 20px), linear-gradient(90deg, #075f3c, #2fbf86); transition: width 0.4s var(--ease); }
+  .mc-progress b { position: relative; display: block; padding: 7px 12px; font-size: 0.85rem; }
+  .mc-row { display: flex; gap: 8px; margin: 16px 0 8px; }
+  .mc-hits, .mc-logs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .mc-hits li { padding: 10px 12px; border-radius: 14px; background: var(--bg); font-size: 0.85rem; }
+  .mc-hits b { display: block; }
+  .mc-hits a { color: var(--accent); font-size: 0.78rem; }
+  .mc-test { display: grid; gap: 8px; margin-bottom: 12px; }
+  .mc-answer { padding: 14px; border-radius: 16px; background: #e7efff; color: #10306f; white-space: pre-wrap; }
+  .mc-meta { margin: 8px 0 0; font-size: 0.8rem; color: var(--muted); }
+  .mc-logs li { display: grid; grid-template-columns: auto auto 1fr; gap: 4px 10px; align-items: baseline; padding: 10px 4px; border-top: 1px solid var(--line); font-size: 0.86rem; }
+  .mc-logs li:first-child { border-top: 0; }
+  .mc-logs pre { grid-column: 1 / -1; margin: 0; padding: 8px 10px; border-radius: 10px; background: var(--bg); font-size: 0.75rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .mc-logs time { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
+  .mc-lv { padding: 2px 8px; border-radius: 99px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; background: var(--bg-2); }
+  .mc-lv--error { background: var(--accent-soft); color: var(--accent); }
+  .mc-lv--warn { background: #fff4dc; color: #7a4f00; }
+
   @media (max-width: 760px) {
     .adm-top__in { flex-wrap: wrap; padding: 10px 14px; }
     .adm-tabs { order: 3; width: 100%; justify-content: space-between; }
-    .adm-tabs button { flex: 1; justify-content: center; padding: 8px 6px; }
+    .adm-tabs button { flex: 1; justify-content: center; padding: 8px 4px; font-size: 0.8rem; }
+    .mc-msg { max-width: 92%; }
     .adm-top__right { margin-left: auto; }
     .adm-user b { display: none; }
     .adm-main { padding: 20px 14px 50px; }

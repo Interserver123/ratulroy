@@ -128,3 +128,7 @@ npm test                       # build + SEO check (fails if /admin leaks into s
 - **Privacy:** raw IP addresses are never stored (salted hash only, used for rate limiting). Delete a person's data from the lead drawer ("Delete lead permanently"), which also removes notes and history.
 - **New admin / password reset:** rerun `scripts/admin-user.mjs` with the same email; it updates the hash.
 - **Schema changes:** add `migrations/0002_*.sql`, then `npm run backend:migrate:remote`.
+
+## Messenger assistant
+
+The Facebook Messenger AI assistant uses the same database and admin login. Setup: [MESSENGER.md](MESSENGER.md).

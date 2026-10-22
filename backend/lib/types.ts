@@ -23,6 +23,22 @@ export interface Env {
   SETUP_KEY?: string;
   /** Optional webhook (Discord/Slack/Google Chat) pinged on each new lead. */
   NOTIFY_WEBHOOK_URL?: string;
+
+  // ---- Messenger auto-reply (see docs/MESSENGER.md). All optional: the admin
+  // screen can store these encrypted instead. A value set here always wins.
+  /** Key that encrypts secrets saved from the admin screen (falls back to IP_SALT). */
+  APP_ENCRYPTION_KEY?: string;
+  META_APP_SECRET?: string;
+  META_PAGE_ACCESS_TOKEN?: string;
+  META_VERIFY_TOKEN?: string;
+  OPENROUTER_API_KEY?: string;
+  /** Shared secret for the scheduled knowledge-base refresh (GitHub Actions). */
+  CRON_SECRET?: string;
+  /** Test-only overrides so the integration can run against local mock servers. */
+  META_GRAPH_BASE?: string;
+  OPENROUTER_BASE?: string;
+  /** Static asset binding Cloudflare Pages provides to Functions. */
+  ASSETS?: { fetch: (input: Request | string) => Promise<Response> };
 }
 
 export interface AdminUser {

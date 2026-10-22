@@ -4,7 +4,11 @@ import { baseHeaders, fail, sameOrigin } from "../../backend/lib/http";
 import { ensureSchema } from "../../backend/lib/schema";
 
 export const onRequest = async (ctx: Ctx) => {
-  if (!sameOrigin(ctx.request)) return fail(403, "Cross-origin request blocked");
+  // Meta's webhook and the scheduled refresh are server-to-server calls with no Origin
+  // header; they authenticate with an HMAC signature / bearer secret instead.
+  const path = new URL(ctx.request.url).pathname;
+  const machine = path === "/api/messenger/webhook" || path === "/api/messenger/cron";
+  if (!machine && !sameOrigin(ctx.request)) return fail(403, "Cross-origin request blocked");
   if (!ctx.env.DB) return fail(503, "Backend not configured (missing D1 binding DB)");
   let res: Response;
   try {
