@@ -59,6 +59,11 @@ export async function chat(
               : "";
       last = new AiError((data.error?.message || `OpenRouter HTTP ${res.status}`) + hint, res.status);
       if (res.status === 429 || res.status >= 500) continue;
+      // Some models reject JSON mode: ask again without it (the prompt still asks for JSON).
+      if (o.json && res.status === 400 && i === 0) {
+        o = { ...o, json: false };
+        continue;
+      }
       throw last;
     }
     const text = data.choices?.[0]?.message?.content?.trim();

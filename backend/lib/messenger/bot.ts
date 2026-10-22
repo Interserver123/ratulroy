@@ -4,7 +4,7 @@
 import type { Env } from "../types";
 import { nowIso, uuid } from "../http";
 import { getSecret, getSettings, type Settings } from "./settings";
-import { search, type Hit } from "./kb";
+import { coreFacts, expandQuery, search, type Hit } from "./kb";
 import { chat, parseJson, AiError, type ChatMessage } from "./openrouter";
 import { GraphError, OUR_METADATA_PREFIX, sendText, senderAction, splitMessage, userName } from "./graph";
 import { log } from "./log";
@@ -246,9 +246,13 @@ export async function answer(env: Env, s: Settings, key: string, history: ChatMe
     await log(env, "warn", "ai", "Query rewrite failed, searching the raw message", { error: (e as Error).message });
   }
 
-  // 2) Retrieve.
-  let hits: Hit[] = await search(env, `${plan.search} ${hasBengali(question) ? "" : question}`, 6);
-  if (!hits.length && plan.search !== question) hits = await search(env, question, 6);
+  // 2) Retrieve: AI keywords + built-in Bengali/Banglish word list + the message itself.
+  const query = expandQuery(`${plan.search} ${question}`);
+  let hits: Hit[] = await search(env, query, 7);
+  if (hits.length < 2) hits = [...hits, ...(await search(env, expandQuery(question), 7))];
+  // Always include the core facts (services, starting price, contact), without duplicates.
+  const seen = new Set<number>();
+  hits = [...hits, ...(await coreFacts(env))].filter((h) => !seen.has(h.id) && seen.add(h.id)).slice(0, 12);
 
   const ctxItems = hits.map((h, i) => `[${i + 1}] ${h.title}${h.heading ? " > " + h.heading : ""} (${h.url})\n${h.content}`);
   if (s.owner_notes.trim()) ctxItems.push(`[${hits.length + 1}] Owner's notes (authoritative)\n${s.owner_notes.trim().slice(0, 3000)}`);

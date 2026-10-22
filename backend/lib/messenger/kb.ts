@@ -309,6 +309,54 @@ export async function fullScan(env: Env, origin: string, trigger: "manual" | "sc
 }
 
 // ---- retrieval -----------------------------------------------------------------
+// Bengali / Banglish words customers use -> English words that appear on the website.
+// Works even when the AI query rewrite is unavailable.
+const SYNONYMS: [RegExp, string][] = [
+  [/প্যাকেজ|প্যাকেজের|package|pakage|pakej|প্ল্যান|plan/i, "package packages pricing price plan Essential"],
+  [/দাম|মূল্য|খরচ|চার্জ|ফি|টাকা|কত|dam|daam|koto|khoroch|charge|price|cost|rate|budget|বাজেট/i, "price pricing cost packages from budget"],
+  [/সার্ভিস|সেবা|কাজ কি|কী কী|ki ki|service|seba|kaj/i, "services service what is included"],
+  [/গ্যারান্টি|নিশ্চয়তা|guarantee|garanti|নিশ্চিত/i, "guarantee guaranteed rankings results"],
+  [/র‍্যাংক|র্যাংক|রেংক|র‍্যাঙ্ক|rank|ranking|টপে|প্রথমে|উপরে/i, "ranking rankings Map Pack top 3"],
+  [/ম্যাপ|ম্যাপস|map|maps|গুগল ম্যাপ/i, "Google Maps Map Pack"],
+  [/প্রোফাইল|জিবিপি|gbp|বিজনেস প্রোফাইল|profile/i, "Google Business Profile GBP optimization"],
+  [/অডিট|audit|চেক/i, "audit free audit"],
+  [/সময়|কত দিন|কতদিন|মাস|সপ্তাহ|koto din|kotodin|somoy|time|how long|কবে/i, "how long timeline months weeks results"],
+  [/রিভিউ|review/i, "reviews review"],
+  [/সাইটেশন|citation/i, "citations NAP"],
+  [/ওয়েবসাইট|ওয়েব সাইট|সাইট|website|site/i, "website technical SEO pages"],
+  [/যোগাযোগ|ফোন|নাম্বার|নম্বর|হোয়াটসঅ্যাপ|ইমেইল|contact|number|phone|whatsapp|email|call/i, "contact phone WhatsApp email book call"],
+  [/মিটিং|কল বুক|meeting|book|appointment|অ্যাপয়েন্টমেন্ট/i, "book strategy call free"],
+  [/ঢাকা|বাংলাদেশ|dhaka|bangladesh|গুলশান|ধানমন্ডি|উত্তরা|মিরপুর/i, "Dhaka Bangladesh local SEO Dhaka"],
+  [/ফলাফল|রেজাল্ট|কেস স্টাডি|result|case|proof|প্রমাণ/i, "results case studies calls growth"],
+  [/রাতুল|কে আপনি|about|ke apni|অভিজ্ঞতা|experience/i, "about Ratul Roy experience Fiverr reviews"],
+  [/পেমেন্ট|বিকাশ|নগদ|payment|pay|bkash|nagad/i, "payment pay"],
+  [/রিফান্ড|ফেরত|refund/i, "refund terms"],
+  [/ডেন্টাল|ক্লিনিক|প্লাম্বার|রেস্টুরেন্ট|শোরুম|dental|clinic|plumber|restaurant|showroom|hvac|লইয়ার|lawyer/i, "industries dental clinic plumbing HVAC legal showroom"],
+  [/এআই|জিইও|chatgpt|ai search|geo/i, "AI search GEO generative engine optimization"],
+];
+
+/** Adds English search words for Bengali / Banglish terms in the message. */
+export function expandQuery(text: string): string {
+  const extra = SYNONYMS.filter(([re]) => re.test(text)).map(([, en]) => en);
+  return [text, ...extra].join(" ");
+}
+
+/** Short facts always given to the AI: page summaries of the main pages + contact details. */
+export async function coreFacts(env: Env): Promise<Hit[]> {
+  const active = (await getSettings(env)).kb_active_scan;
+  if (!active) return [];
+  const { results } = await env.DB.prepare(
+    `SELECT id, url, title, heading, content, 0 AS score FROM kb_chunks
+      WHERE scan_id = ?1 AND (
+        (heading = 'Page summary' AND url IN ('/', '/services', '/local-seo-service', '/google-business-profile-optimization'))
+        OR title = 'Contact details'
+        OR (url = '/local-seo-service' AND content LIKE '%packages, starting from%'))
+      ORDER BY id LIMIT 8`,
+  )
+    .bind(active)
+    .all<Hit>();
+  return results.map((h) => (h.title === "Contact details" ? { ...h, content: h.content.slice(0, 900) } : h));
+}
 export type Hit = Chunk & { id: number; score: number };
 
 const STOP = new Set(
@@ -319,7 +367,7 @@ const STOP = new Set(
 export function ftsQuery(text: string): string | null {
   const terms = [...new Set(text.toLowerCase().normalize("NFKC").match(/[\p{L}\p{N}]+/gu) ?? [])]
     .filter((t) => t.length > 1 && !STOP.has(t))
-    .slice(0, 16);
+    .slice(0, 40);
   if (!terms.length) return null;
   return terms.map((t) => `"${t.replace(/"/g, "")}"*`).join(" OR ");
 }

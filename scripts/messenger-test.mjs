@@ -154,6 +154,12 @@ const planner = (await mockCalls()).find((c) => c.path.endsWith("/chat/completio
 check("Bengali message answered", !!out?.length, out);
 check("Bengali query rewritten before search", !!planner);
 
+// --- Bengali-only question still finds website facts (even if the AI rewrite gives nothing) ---
+r = await call("/api/admin/messenger/test-ai", { method: "POST", body: { message: "উনার প্যাকেজ বলো" } });
+const pkgCall = (await mockCalls()).filter((c) => c.path.endsWith("/chat/completions") && JSON.stringify(c.body.messages).includes("উনার প্যাকেজ বলো")).at(-1);
+const ctxSent = pkgCall?.body.messages.find((m) => m.content.startsWith("CONTEXT"))?.content ?? "";
+check("Bengali-only package question gets the package/price facts", r.status === 200 && ctxSent.includes("$299") && /packages/i.test(ctxSent), ctxSent.slice(0, 300));
+
 // --- price guard: an amount not on the website is never sent ---
 const p5 = id(5);
 await webhook(msg(p5, "do you have any discount?"));
