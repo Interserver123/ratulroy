@@ -1,5 +1,6 @@
 // Lead desk client. Talks only to /api/admin/*. All lead data is escaped before rendering.
 import { mountMessenger } from "./admin-messenger";
+import { mountAudits } from "./admin-audits";
 type Lead = Record<string, string | number | null>;
 type Count = { k: string; n: number };
 
@@ -79,6 +80,7 @@ function toast(msg: string) {
 }
 
 const messenger = mountMessenger({ api, toast, esc, when });
+const audits = mountAudits({ api, toast, esc, when, openLead: (id: string) => openLead(id) });
 
 // ---------- auth views ----------
 function showOnly(view: "login" | "setup" | "app") {
@@ -103,7 +105,7 @@ async function showApp(user: { email: string; name: string }) {
   $("[data-user-initial]").textContent = initials(name).slice(0, 1).toUpperCase();
   const h = new Date().getHours();
   $("[data-greeting]").textContent = h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
-  await Promise.all([loadStats(), loadRecent(), loadLeads(), messenger.badge()]);
+  await Promise.all([loadStats(), loadRecent(), loadLeads(), messenger.badge(), audits.badge()]);
 }
 
 $<HTMLFormElement>("[data-login]").addEventListener("submit", async (e) => {
@@ -156,12 +158,14 @@ $("[data-logout]").addEventListener("click", async () => {
 });
 
 // ---------- tabs ----------
-type Tab = "overview" | "leads" | "followups" | "messenger";
+type Tab = "overview" | "leads" | "followups" | "messenger" | "audits";
 function setTab(tab: Tab) {
   $$("[data-tab-btn]").forEach((b) => (b.dataset.tabBtn === tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
   $("[data-tab=overview]").hidden = tab !== "overview";
-  $("[data-tab=leads]").hidden = tab === "overview" || tab === "messenger";
+  $("[data-tab=leads]").hidden = !(tab === "leads" || tab === "followups");
   $("[data-tab=messenger]").hidden = tab !== "messenger";
+  $("[data-tab=audits]").hidden = tab !== "audits";
+  if (tab === "audits") audits.load().catch((x) => toast((x as Error).message));
   if (tab === "messenger") messenger.open().catch((x) => toast((x as Error).message));
   else messenger.close();
   if (tab === "followups") {
@@ -605,6 +609,7 @@ function describe(ev: Lead): string {
   if (ev.type === "created") return `Submitted the ${LABEL[d.form] ?? d.form} form${d.page ? ` on ${d.page}` : ""}`;
   if (ev.type === "status") return `Status: ${LABEL[d.from] ?? d.from} → ${LABEL[d.to] ?? d.to}`;
   if (ev.type === "note") return "Added a note";
+  if (d.audit) return `Audit: ${({ todo: "To do", in_progress: "In progress", sent: "Sent" } as Record<string, string>)[d.audit] ?? d.audit}`;
   return `Updated ${Object.keys(d).join(", ").replace(/_/g, " ")}`;
 }
 

@@ -63,6 +63,7 @@ const logo = img("brand/logo-portrait.jpg");
             <button type="button" data-tab-btn="overview" aria-current="page">Overview</button>
             <button type="button" data-tab-btn="leads">Leads <i data-badge-new></i></button>
             <button type="button" data-tab-btn="followups">Follow-ups <i data-badge-due></i></button>
+            <button type="button" data-tab-btn="audits">Audits <i data-badge-audits></i></button>
             <button type="button" data-tab-btn="messenger">Messenger <i data-badge-mc></i></button>
           </nav>
           <div class="adm-top__right">
@@ -217,6 +218,41 @@ const logo = img("brand/logo-portrait.jpg");
               </table>
             </div>
             <div class="adm-pager" data-pager></div>
+          </div>
+        </section>
+
+
+        <!-- ===== Audits ===== -->
+        <section data-tab="audits" hidden>
+          <div class="ov-hello ov-hello--sm">
+            <div>
+              <h1>Audit requests</h1>
+              <p class="adm-muted">Free Map Pack audit requests from the website. The site promises a reply within 48 hours.</p>
+            </div>
+          </div>
+          <div class="au-kpis">
+            <div class="au-kpi"><small>To do</small><b data-au-todo>0</b></div>
+            <div class="au-kpi"><small>In progress</small><b data-au-progress>0</b></div>
+            <div class="au-kpi au-kpi--late"><small>Overdue (48 h)</small><b data-au-overdue>0</b></div>
+            <div class="au-kpi au-kpi--done"><small>Sent</small><b data-au-sent>0</b></div>
+          </div>
+          <div class="ov-card">
+            <div class="adm-toolbar">
+              <div class="adm-toolbar__row">
+                <div class="adm-pills" data-au-filter role="tablist" aria-label="Audit filter">
+                  <button class="adm-pill" type="button" data-f="open" aria-selected="true">Open</button>
+                  <button class="adm-pill" type="button" data-f="todo" aria-selected="false">To do</button>
+                  <button class="adm-pill" type="button" data-f="in_progress" aria-selected="false">In progress</button>
+                  <button class="adm-pill" type="button" data-f="sent" aria-selected="false">Sent</button>
+                  <button class="adm-pill" type="button" data-f="all" aria-selected="false">All</button>
+                </div>
+                <label class="adm-search">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                  <input type="search" placeholder="Search website, email or name" data-au-q aria-label="Search audit requests" />
+                </label>
+              </div>
+            </div>
+            <ul class="au-list" data-au-list></ul>
           </div>
         </section>
 
@@ -564,6 +600,41 @@ const logo = img("brand/logo-portrait.jpg");
   .adm-toast.is-on { opacity: 1; }
 
 
+  /* audits */
+  .adm-tabs i.is-calm { background: var(--ink-2); }
+  .au-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 14px; }
+  .au-kpi { padding: 16px 18px; border-radius: 20px; background: var(--paper); border: 1px solid var(--line); }
+  .au-kpi small { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .au-kpi b { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; letter-spacing: -0.04em; line-height: 1.1; }
+  .au-kpi--late.is-bad { background: var(--accent-soft); border-color: transparent; }
+  .au-kpi--late.is-bad b { color: var(--accent); }
+  .au-kpi--done b { color: var(--good); }
+  .au-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .au-item { display: grid; gap: 12px; padding: 16px; border-radius: 18px; border: 1px solid var(--line); background: var(--paper); transition: border-color 0.2s, box-shadow 0.2s; }
+  .au-item:hover { border-color: var(--line-2); box-shadow: 0 10px 24px -18px rgb(15 26 28 / 35%); }
+  .au-item--sent { background: var(--bg); }
+  @media (min-width: 1000px) { .au-item { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; } }
+  .au-main { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+  .au-ico { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--ink); color: #fff; font-weight: 700; }
+  .au-ico--maps { background: var(--accent-soft); }
+  .au-who { display: grid; min-width: 0; }
+  .au-site { font-weight: 700; color: var(--ink); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  a.au-site:hover { color: var(--accent); }
+  .au-who small { color: var(--muted); font-size: 0.82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .au-due { padding: 5px 10px; border-radius: 999px; font-size: 0.76rem; font-weight: 700; white-space: nowrap; background: var(--good-soft); color: var(--good); }
+  .au-due--soon { background: #fff4dc; color: #7a4f00; }
+  .au-due--late { background: var(--accent); color: #fff; }
+  .au-due--done { background: var(--bg-2); color: var(--muted); }
+  .au-ctrl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .au-seg { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--bg); }
+  .au-seg button { padding: 7px 12px; border: 0; border-radius: 999px; background: transparent; font: inherit; font-size: 0.8rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+  .au-seg button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .au-seg button[data-stage="sent"][aria-pressed="true"] { background: var(--good); }
+  .au-report { flex: 1 1 200px; }
+  .au-report input { width: 100%; padding: 8px 12px; font-size: 0.85rem; border-radius: 999px; }
+  .au-acts { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .au-acts .adm-btn { padding: 7px 14px; font-size: 0.82rem; border-color: var(--line-2); }
+
   /* messenger */
   .mc-switch { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--paper); font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
   .mc-switch__knob { width: 44px; height: 26px; border-radius: 99px; background: var(--bg-2); position: relative; transition: background 0.2s; }
@@ -642,8 +713,9 @@ const logo = img("brand/logo-portrait.jpg");
 
   @media (max-width: 760px) {
     .adm-top__in { flex-wrap: wrap; padding: 10px 14px; }
-    .adm-tabs { order: 3; width: 100%; justify-content: space-between; }
-    .adm-tabs button { flex: 1; justify-content: center; padding: 8px 4px; font-size: 0.8rem; }
+    .adm-tabs { order: 3; width: 100%; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+    .adm-tabs::-webkit-scrollbar { display: none; }
+    .adm-tabs button { flex: none; justify-content: center; padding: 8px 12px; font-size: 0.82rem; white-space: nowrap; }
     .mc-msg { max-width: 92%; }
     .adm-top__right { margin-left: auto; }
     .adm-user b { display: none; }

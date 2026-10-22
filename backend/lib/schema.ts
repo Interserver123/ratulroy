@@ -56,6 +56,14 @@ export const MIGRATIONS: { file: string; sentinel: string; statements: string[] 
       "CREATE INDEX IF NOT EXISTS idx_bookings_lead ON bookings (lead_id)",
     ],
   },
+  {
+    file: "0004_audits.sql",
+    sentinel: "audit_requests",
+    statements: [
+      "CREATE TABLE IF NOT EXISTS audit_requests ( lead_id TEXT PRIMARY KEY REFERENCES leads (id) ON DELETE CASCADE, stage TEXT NOT NULL DEFAULT 'todo' CHECK (stage IN ('todo', 'in_progress', 'sent')), report_url TEXT, sent_at TEXT, updated_at TEXT NOT NULL, updated_by TEXT )",
+      "CREATE INDEX IF NOT EXISTS idx_audit_stage ON audit_requests (stage)",
+    ],
+  },
 ];
 
 let ready = false;

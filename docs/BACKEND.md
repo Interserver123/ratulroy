@@ -143,3 +143,15 @@ The page `/book-strategy-call` shows the call packages and a live calendar.
 - **Holding and freeing slots:** a booked slot, plus 15 minutes either side, is hidden from everyone else. Mark the lead **Lost** or **Spam** to free it again.
 - **Your follow-up:** confirm the time with the customer, and send the payment link yourself for paid calls.
 - **Testing:** `npm run booking:test` (with a local server running) checks availability rules, double-booking protection and validation.
+
+## Audit requests
+
+Free audit requests (the "Website or Maps link + email" forms) have their own **Audits** tab in admin. Each request shows:
+
+- the website or Google Maps link, the email and phone, and the page it came from;
+- a countdown to the 48-hour reply the site promises, turning red when overdue;
+- a stage: **To do → In progress → Sent**;
+- a box to paste the report link (Google Doc, Loom, PDF);
+- buttons to email the results with a ready-made message, or to reply on WhatsApp.
+
+Marking an audit **Sent** also moves the lead from New to Contacted. The tab badge shows how many audits are still open; it turns red when any are overdue. To test: `npm run audits:test`.
