@@ -585,7 +585,8 @@ const logo = img("brand/logo-portrait.jpg");
   .mc-list small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
   .mc-list li button > span:nth-child(2) { min-width: 0; }
   .mc-unread { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px; background: var(--accent); color: #fff; font-size: 0.7rem; font-weight: 700; }
-  .mc-thread { display: grid; grid-template-rows: auto 1fr auto; min-height: 520px; }
+  .mc-thread { display: grid; grid-template-rows: auto auto 1fr auto; align-content: start; min-height: 520px; }
+  .mc-thread .mc-warn { margin-top: 12px; }
   .mc-thead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
   .mc-thead h2 { font-family: var(--font-display) !important; font-size: 1.3rem !important; }
   .mc-msgs { display: flex; flex-direction: column; gap: 8px; padding: 14px 2px; max-height: 520px; overflow-y: auto; }

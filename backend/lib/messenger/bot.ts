@@ -231,7 +231,7 @@ export async function answer(env: Env, s: Settings, key: string, history: ChatMe
 }
 
 // ---- event processing -------------------------------------------------------------
-type Conv = { psid: string; name: string | null; mode: "ai" | "human"; handoff_at: string | null; last_user_at: string | null };
+type Conv = { psid: string; name: string | null; mode: "ai" | "human"; handoff_at: string | null; last_user_at: string | null; handoff_reason: string | null };
 
 export async function handleEvent(env: Env, ev: MessagingEvent, site: string, opts: { debounceMs?: number } = {}) {
   if (ev.read || ev.delivery || ev.reaction) return;
@@ -279,7 +279,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
     at,
   });
 
-  const conv = (await env.DB.prepare("SELECT psid, name, mode, handoff_at, last_user_at FROM mc_conversations WHERE psid = ?").bind(psid).first<Conv>())!;
+  const conv = (await env.DB.prepare("SELECT psid, name, mode, handoff_at, last_user_at, handoff_reason FROM mc_conversations WHERE psid = ?").bind(psid).first<Conv>())!;
   const token = await getSecret(env, "meta_page_token");
   if (token && !conv.name) {
     const name = await userName(env, token, psid);
@@ -287,7 +287,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
   }
 
   // --- should the assistant answer? ---
-  if (s.bot_enabled !== "1") return;
+  if (s.bot_enabled !== "1") return void (await log(env, "warn", "bot", `Not replying to ${conv.name ?? psid}: the "AI replies" switch is off`));
   if (!token) return void (await log(env, "error", "bot", "No Page access token: cannot reply"));
 
   if (conv.mode === "human") {
@@ -298,7 +298,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
     if (hours > 0 && Date.now() - lastHumanAt > hours * 3600_000) {
       await setMode(env, psid, "ai", null);
       await log(env, "info", "handoff", `AI resumed for ${psid} after ${hours}h without a human reply`);
-    } else return;
+    } else return void (await log(env, "info", "bot", `Not replying to ${conv.name ?? psid}: this chat is set to "You" (${conv.handoff_reason ?? "taken over"}). Press "Let AI reply again" to change it.`));
   }
 
   const lang: "en" | "bn" = hasBengali(text) ? "bn" : "en";

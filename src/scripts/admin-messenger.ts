@@ -137,6 +137,7 @@ export function mountMessenger({ api, toast, esc, when }: Helpers) {
         <div><h2>${esc(c.name || "Messenger user")}</h2><small class="adm-muted">${c.mode === "human" ? `You're handling this${c.handoff_reason ? ` · ${esc(c.handoff_reason)}` : ""}` : "AI is replying"} · ${esc(WINDOW[r.window])}</small></div>
         <button class="adm-btn adm-btn--pill" type="button" data-mc-mode="${c.mode === "human" ? "ai" : "human"}">${c.mode === "human" ? "Let AI reply again" : "Take over"}</button>
       </div>
+      ${status?.settings?.bot_enabled !== "1" ? `<p class="mc-warn">The <b>AI replies</b> switch (top right) is off, so the assistant isn't answering anyone.</p>` : c.mode === "human" ? `<p class="mc-warn">The AI is paused in this chat. Press <b>Let AI reply again</b> to let it answer.</p>` : ""}
       <div class="mc-msgs">${(r.messages as any[])
         .map((m) => {
           const meta = JSON.parse(m.meta || "{}");
