@@ -1,26 +1,14 @@
 ---
-import displayLatin from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2?url";
-import displayLatinExt from "@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-ext-wght-normal.woff2?url";
-import fontLatin from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url";
-import fontLatinExt from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-ext-wght-normal.woff2?url";
-import fontItalic from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-italic.woff2?url";
+// Fonts come from Astro's Fonts API (see astro.config.mjs). <Font> inlines the
+// @font-face rules plus metric-matched fallback faces. We preload only the first
+// upright face of each family (the Latin file, declared first in the config); the
+// Latin Extended files load on demand, so they never compete with above-the-fold content.
+import { Font, fontData } from "astro:assets";
 
-// Self-declared @font-face (latin + latin-ext only). font-display: optional means the
-// preloaded font is used if it arrives in time, otherwise the page keeps the system
-// font for that view: no late text repaint, so LCP is not pushed back by fonts.
-const LATIN = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD";
-const LATIN_EXT = "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF";
-const face = (family: string, src: string, range: string, style = "normal", weight = "400 700") =>
-  `@font-face{font-family:'${family}';font-style:${style};font-display:optional;font-weight:${weight};src:url(${src}) format('woff2-variations');unicode-range:${range}}`;
-const fontCss = [
-  face("Instrument Sans Variable", fontLatin, LATIN),
-  face("Instrument Sans Variable", fontLatinExt, LATIN_EXT),
-  face("Instrument Sans Variable", fontItalic, LATIN, "italic"),
-  face("Bricolage Grotesque Variable", displayLatin, LATIN, "normal", "200 800"),
-  face("Bricolage Grotesque Variable", displayLatinExt, LATIN_EXT, "normal", "200 800"),
-].join("");
+const firstUpright = (v: string) => fontData[v]?.find((f) => f.style === "normal")?.src[0]?.url;
+const preloads = [firstUpright("--ff-body"), firstUpright("--ff-display")].filter(Boolean) as string[];
 ---
 
-<style is:inline set:html={fontCss}></style>
-<link rel="preload" href={displayLatin} as="font" type="font/woff2" crossorigin />
-<link rel="preload" href={fontLatin} as="font" type="font/woff2" crossorigin />
+<Font cssVariable="--ff-body" />
+<Font cssVariable="--ff-display" />
+{preloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
