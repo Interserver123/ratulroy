@@ -78,7 +78,7 @@ sections:
       - { title: Measured monthly, text: "Rankings, calls and direction requests are tracked every month. You see what moved and what I am fixing next." }
       - { title: White-hat only, text: "No keyword-stuffed business names, fake addresses, fake reviews or link networks. They work briefly, then get listings suspended." }
       - { title: Direct access, text: "You work with me, not an account manager passing notes to a junior. Every recommendation comes from hands-on work." }
-      - { title: "Bangladesh + worldwide", text: "Based in Khulna division, Bangladesh, working with clients here and abroad. The ranking system is the same in any country; the search terms and directories change." }
+      - { title: "Bangladesh + worldwide", text: "Based in Bangladesh, working with clients here and abroad. The ranking system is the same in any country; the search terms and directories change." }
       - { title: Ready for AI search, text: "Clean entity data, schema and consistent citations help Google AI Overviews and assistants like ChatGPT describe your business correctly." }
   - type: prose
     eyebrow: Services in detail

@@ -534,7 +534,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Who is Ratul Roy?",
-    a: "Ratul Roy is an independent Local SEO expert based in Bagerhat, Khulna division, Bangladesh, and the founder of DigiPolli. He is a Fiverr Level 2 seller rated 4.9 from 243 reviews and works directly with service businesses in Bangladesh and worldwide on Google Maps, Google Business Profile and AI search visibility.",
+    a: "Ratul Roy is an independent Local SEO expert in Bangladesh and the founder of DigiPolli. He is a Fiverr Level 2 seller rated 4.9 from 243 reviews and works directly with service businesses in Bangladesh and worldwide on Google Maps, Google Business Profile and AI search visibility.",
   },
   {
     q: "How long does it take to see results from Local SEO services?",

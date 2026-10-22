@@ -7,7 +7,7 @@ export const quickFacts = [
   "243 reviews",
   "2 years at Netmark",
   "Founder of DigiPolli",
-  "Based in Bagerhat, Bangladesh",
+  "Local SEO Expert in Bangladesh",
 ];
 
 export const factSheet = [
@@ -194,7 +194,7 @@ export const expectations = [
 export const aboutFaqs = [
   {
     q: "Who is Ratul Roy?",
-    a: "Ratul Roy is a Local SEO specialist based in Bagerhat, Khulna division, Bangladesh, and the founder of DigiPolli. He helps local service businesses in Bangladesh and worldwide improve Google Maps visibility, optimize their Google Business Profile, strengthen website SEO and turn local searches into qualified inbound calls.",
+    a: "Ratul Roy is a Local SEO expert in Bangladesh and the founder of DigiPolli. He helps local service businesses in Bangladesh and worldwide improve Google Maps visibility, optimize their Google Business Profile, strengthen website SEO and turn local searches into qualified inbound calls.",
   },
   {
     q: "What experience does Ratul have?",
@@ -202,7 +202,7 @@ export const aboutFaqs = [
   },
   {
     q: "Where is Ratul Roy based, and does he work with clients abroad?",
-    a: "Ratul works from Bagerhat in Bangladesh's Khulna division. He takes on businesses across Bangladesh, including Dhaka, and service companies in other countries. All work is done remotely, with reporting from Google Business Profile, Search Console and geo-grid rank tracking.",
+    a: "Ratul is a Local SEO expert in Bangladesh. He takes on businesses across Bangladesh, including Dhaka, and service companies in other countries. All work is done remotely, with reporting from Google Business Profile, Search Console and geo-grid rank tracking.",
   },
   {
     q: "Will I work with Ratul directly?",

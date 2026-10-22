@@ -13,6 +13,7 @@ export const site = {
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.486892333328!2d89.78304037481354!3d22.649124530162283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fff79580a7db83%3A0xab3acb4acc3478!2sRatul%20Roy%20-%20Local%20SEO%20Expert%20in%20Bangladesh!5e1!3m2!1sen!2sbd!4v1792621176535!5m2!1sen!2sbd",
   geo: { lat: 22.649125, lng: 89.78304 },
+  // locality is only used in the hidden schema address (must match the Google Business Profile).
   locality: "Khulna",
   country: "Bangladesh",
   countryCode: "BD",

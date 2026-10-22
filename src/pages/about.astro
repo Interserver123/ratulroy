@@ -27,9 +27,9 @@ const portrait = Object.values(portraits)[0]?.default;
 const shareImg = portrait ? await getImage({ src: portrait, width: 1000, format: "jpg" }) : undefined;
 const imageUrl = shareImg ? new URL(shareImg.src, site.url).href : undefined;
 
-const title = "About Ratul Roy | Local SEO Specialist in Bangladesh";
+const title = "About Ratul Roy | Local SEO Expert in Bangladesh";
 const description =
-  "Ratul Roy is a Local SEO specialist in Bagerhat, Bangladesh and founder of DigiPolli. Fiverr Level 2, 4.9 from 243 reviews. Google Maps, GBP and AI search.";
+  "Ratul Roy is a Local SEO Expert in Bangladesh and founder of DigiPolli. Fiverr Level 2, 4.9 from 243 reviews. Google Maps, GBP and AI search.";
 const url = `${site.url}/about`;
 
 const schema = [
@@ -52,7 +52,7 @@ const schema = [
     ...(imageUrl ? { image: imageUrl } : {}),
     jobTitle: "Local SEO Specialist",
     description:
-      "Local SEO specialist based in Bagerhat, Khulna division, Bangladesh, and founder of DigiPolli. Helps service businesses in Bangladesh and worldwide improve Google Maps visibility, Google Business Profile performance, website SEO and qualified inbound calls.",
+      "Local SEO expert in Bangladesh and founder of DigiPolli. Helps service businesses in Bangladesh and worldwide improve Google Maps visibility, Google Business Profile performance, website SEO and qualified inbound calls.",
     email: `mailto:${site.email}`,
     telephone: site.phone,
     address: { "@type": "PostalAddress", addressLocality: site.locality, addressCountry: site.countryCode },

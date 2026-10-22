@@ -16,7 +16,7 @@ faqs:
   - q: "Can Local SEO results disappear?"
     a: "They can fade if the profile is neglected, details go out of date, or competitors keep improving while you stop. A suspension for breaking Google's guidelines can remove a listing entirely, which is why risky shortcuts are not worth it."
   - q: "Is it faster to rank in a smaller city than in Dhaka?"
-    a: "Usually, yes. In most smaller cities and district towns, such as Bagerhat, Jashore or Rangpur, fewer competing businesses have optimised profiles, so the same work produces results sooner. Crowded categories in Gulshan, Dhanmondi or central Chattogram take longer because every nearby competitor is also investing."
+    a: "Usually, yes. In most smaller cities and district towns, such as Bogura, Jashore or Rangpur, fewer competing businesses have optimised profiles, so the same work produces results sooner. Crowded categories in Gulshan, Dhanmondi or central Chattogram take longer because every nearby competitor is also investing."
   - q: "Will running Google Ads make Local SEO work faster?"
     a: "No. Ads and organic map pack rankings are separate systems, and Google states there is no way to pay for a better local ranking. Ads can bring calls while Local SEO builds, which is why many businesses run both for the first few months. [Local SEO vs Google Ads](/blog/local-seo-vs-google-ads-bangladesh) compares them."
 ---

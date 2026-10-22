@@ -16,7 +16,7 @@ faqs:
   - q: "Which businesses benefit most from Local SEO in Bangladesh?"
     a: "Businesses where customers search with urgency or compare options nearby benefit most: clinics, dentists, restaurants, salons, coaching centres, AC and electrical repair services, showrooms, hotels and professional services such as lawyers and accountants. If people search for you with an area name or 'near me', Local SEO is worth doing."
   - q: "Can Local SEO help if my business is in a small town?"
-    a: "Yes, often more than in big cities. Competition in district towns and smaller cities such as Bagerhat, Jashore or Rangpur is usually lighter, and many rival profiles have the wrong category or no reviews, so a properly optimised profile can stand out quickly."
+    a: "Yes, often more than in big cities. Competition in district towns and smaller cities such as Bogura, Jashore or Rangpur is usually lighter, and many rival profiles have the wrong category or no reviews, so a properly optimised profile can stand out quickly."
   - q: "Do I need Local SEO if customers already know my business?"
     a: "Yes, if you want new customers. People who already know you search your name, but new customers search the service: 'diagnostic centre near me' or 'AC servicing Uttara'. Local SEO is what puts you in those category searches, where you compete with every nearby alternative."
 ---

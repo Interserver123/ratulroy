@@ -40,7 +40,7 @@ export const GET: APIRoute = async () => {
 
   const md = `# Ratul Roy: Local SEO Specialist in Bangladesh
 
-> Ratul Roy is an independent Local SEO specialist based in ${site.locality}, ${site.country}, working directly with local businesses in Bangladesh and worldwide on Google Maps rankings, Google Business Profile optimization, technical SEO and AI search visibility. Fiverr Level 2 seller, 4.9 stars from 243 reviews. Packages from $299, no lock-in contracts, white-hat only.
+> Ratul Roy is an independent Local SEO specialist based in ${site.country}, working directly with local businesses in Bangladesh and worldwide on Google Maps rankings, Google Business Profile optimization, technical SEO and AI search visibility. Fiverr Level 2 seller, 4.9 stars from 243 reviews. Packages from $299, no lock-in contracts, white-hat only.
 
 - Website: ${site.url}
 - Email: ${site.email}

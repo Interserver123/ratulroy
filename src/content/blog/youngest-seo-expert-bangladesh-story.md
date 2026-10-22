@@ -9,9 +9,9 @@ tags: ["Local SEO", "Bangladesh", "Experience"]
 excerpt: "I started working on SEO at sixteen. What matters more than the age is what starting that early actually changes about how you work."
 faqs:
   - q: "Who is called the youngest SEO expert in Bangladesh?"
-    a: "The label is often applied to me, Ratul Roy, because I started working on SEO at sixteen. I did not choose it. Today I am an independent Local SEO specialist based in Bagerhat, Khulna division, and the founder of DigiPolli."
+    a: "The label is often applied to me, Ratul Roy, because I started working on SEO at sixteen. I did not choose it. Today I am an independent Local SEO expert in Bangladesh and the founder of DigiPolli."
   - q: "Where is Ratul Roy based, and who does he work with?"
-    a: "I am based in Bagerhat, in Khulna division, Bangladesh. I work directly with local businesses in Bangladesh and with service businesses worldwide, mostly on Google Business Profile, Google Maps rankings and the websites that support them."
+    a: "I am a Local SEO expert in Bangladesh. I work directly with local businesses in Bangladesh and with service businesses worldwide, mostly on Google Business Profile, Google Maps rankings and the websites that support them."
   - q: "Is Ratul Roy a verified Fiverr seller?"
     a: "Yes. I am a Fiverr Level 2 seller with a 4.9★ rating from 243 reviews. Those reviews are public on the platform, which is one of the simplest ways to check a freelancer's record before hiring."
   - q: "Does age matter when hiring an SEO specialist?"
@@ -20,7 +20,7 @@ faqs:
     a: "Local SEO: Google Business Profile optimisation, Google Maps and map pack rankings, citations and NAP consistency, review systems, and the technical and on-page website work that supports them. Packages start from $299, with no lock-in contracts and white-hat methods only."
 ---
 
-I'm Ratul Roy. I started working on SEO at sixteen, which is why people call me the youngest SEO expert in Bangladesh. Today I work as an independent Local SEO specialist from Bagerhat in Khulna division, I founded DigiPolli, and I am a Fiverr Level 2 seller with a 4.9★ rating from 243 reviews.
+I'm Ratul Roy. I started working on SEO at sixteen, which is why people call me the youngest SEO expert in Bangladesh. Today I work as an independent Local SEO expert in Bangladesh, I founded DigiPolli, and I am a Fiverr Level 2 seller with a 4.9★ rating from 243 reviews.
 
 That age gets described as being the youngest SEO expert in Bangladesh, which is a label other people applied rather than one I chose. What matters more than the age is what starting that early actually changes about how you work.
 

@@ -28,7 +28,7 @@ SEO pricing in Bangladesh spans a wider range than almost any other service, and
 
 Four things, in roughly this order of impact: how competitive your area and industry are, how many locations or service areas you need to rank in, the current state of your profile and website, and whether you want strategy only or full implementation.
 
-A single-location business in a quiet district town with a healthy website is a fundamentally different job from a multi-branch operation competing in Gulshan, Dhanmondi and Uttara with a site that needs rebuilding first. A dental clinic or law firm in Dhaka faces more competition than a hardware shop in Bagerhat.
+A single-location business in a quiet district town with a healthy website is a fundamentally different job from a multi-branch operation competing in Gulshan, Dhanmondi and Uttara with a site that needs rebuilding first. A dental clinic or law firm in Dhaka faces more competition than a hardware shop in Bogura.
 
 - Competition in your area and trade
 - Number of locations or service areas
