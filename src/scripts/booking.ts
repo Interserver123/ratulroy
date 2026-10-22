@@ -33,9 +33,15 @@ function init(root: HTMLElement) {
   $("[data-tz]").textContent = tzLabel;
 
   // ---------- host panel (photo + message per step) ----------
-  const hostImg: Record<number, string> = { 1: "phone", 2: "laptop", 3: "confident", 4: "confident" };
+  const badges: Record<number, string> = { 1: "📞", 2: "🗓️", 3: "✍️", 4: "✅" };
   function setHost(step: number) {
-    document.querySelectorAll<HTMLElement>("[data-host-img]").forEach((im) => im.classList.toggle("is-on", im.dataset.hostImg === hostImg[step]));
+    const badge = document.querySelector<HTMLElement>("[data-host-badge]");
+    if (badge && badge.textContent !== badges[step]) {
+      badge.textContent = badges[step];
+      badge.classList.add("is-pop");
+      void badge.offsetWidth; // restart the pop animation
+      badge.classList.remove("is-pop");
+    }
     document.querySelectorAll<HTMLElement>("[data-host-say]").forEach((el) => (el.hidden = el.dataset.hostSay !== String(step)));
   }
   function setSummary() {

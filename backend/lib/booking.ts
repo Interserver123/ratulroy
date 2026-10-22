@@ -13,7 +13,7 @@ export interface CallPackage {
   includes: string[];
   featured?: boolean;
   badge?: string;
-  image: "phone" | "laptop" | "confident";
+  image: "phone" | "confident";
   amount?: number; // USD, for structured data
   recurring?: boolean;
 }
@@ -45,7 +45,7 @@ export const PACKAGES: CallPackage[] = [
     ],
     featured: true,
     badge: "Most popular",
-    image: "laptop",
+    image: "confident",
     amount: 79,
   },
   {
@@ -69,7 +69,7 @@ export const PACKAGES: CallPackage[] = [
     minutes: 30,
     tagline: "You run the business; I run the Local SEO.",
     includes: ["Google Business Profile optimization", "Citations, reviews and Map Pack work", "Service and area pages, technical fixes", "Monthly report on calls and rankings"],
-    image: "laptop",
+    image: "phone",
     amount: 299,
   },
 ];

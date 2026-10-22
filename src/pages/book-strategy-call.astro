@@ -21,14 +21,13 @@ const url = `${site.url}${path}`;
 
 const photos = {
   confident: img("people/cutouts/ratul-confident.png"),
-  laptop: img("people/cutouts/ratul-laptop.png"),
   phone: img("people/cutouts/ratul-phone.png"),
 };
 
 // What the host says at each step of the booking (the photo changes with it).
 const host = [
   { step: 1, image: "phone", title: "Pick the call that fits", text: "Not sure? Start with the free intro call. I'll tell you honestly if you need more." },
-  { step: 2, image: "laptop", title: "Choose a time that suits you", text: "Times are shown in your time zone. I'll have your profile open before we talk." },
+  { step: 2, image: "confident", title: "Choose a time that suits you", text: "Times are shown in your time zone. I'll have your profile open before we talk." },
   { step: 3, image: "confident", title: "Almost done", text: "Share your website or Maps link so I can prepare. You'll hear from me within a few hours." },
   { step: 4, image: "confident", title: "See you on the call", text: "I'll confirm on WhatsApp or email shortly. Bring your questions." },
 ] as const;
@@ -195,11 +194,11 @@ const schema = [
     <div class="container bk">
       <aside class="bk-host" aria-live="polite">
         <div class="bk-host__photo">
-          {
-            (["phone", "laptop", "confident"] as const).map((k) => (
-              <Image src={photos[k]} alt="" width={420} widths={[280, 420]} sizes="(max-width: 900px) 40vw, 420px" class="bk-host__img" data-host-img={k} loading="lazy" />
-            ))
-          }
+          <span class="bk-host__ring" aria-hidden="true"></span>
+          <span class="bk-host__dot bk-host__dot--a" aria-hidden="true"></span>
+          <span class="bk-host__dot bk-host__dot--b" aria-hidden="true"></span>
+          <Image src={photos.confident} alt="" width={420} widths={[280, 420]} sizes="(max-width: 900px) 40vw, 420px" class="bk-host__img is-on" loading="lazy" />
+          <span class="bk-host__badge" data-host-badge aria-hidden="true">📞</span>
         </div>
         {
           host.map((h) => (
@@ -451,8 +450,15 @@ const schema = [
     .bk-host__say .bk-host__title { font-size: 1rem; }
     .bk-host__say p { font-size: 0.82rem; }
   }
+  .bk-host__ring { position: absolute; left: 50%; bottom: 6%; width: 78%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 20%, rgb(255 106 85 / 80%) 35%, transparent 50% 70%, rgb(47 191 134 / 70%) 85%, transparent); mask: radial-gradient(closest-side, transparent 91%, #000 92%); animation: bk-spin 12s linear infinite; }
+  .bk-host__dot { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #ff6a55; box-shadow: 0 0 12px #ff6a55; animation: bk-float 4s var(--ease) infinite; }
+  .bk-host__dot--a { left: 14%; top: 22%; }
+  .bk-host__dot--b { right: 16%; top: 48%; background: #2fbf86; box-shadow: 0 0 12px #2fbf86; animation-delay: -2s; }
+  .bk-host__badge { position: absolute; right: 10%; top: 12%; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; font-size: 1.3rem; box-shadow: 0 10px 24px -8px rgb(0 0 0 / 50%); animation: bk-pop 0.55s var(--ease); }
+  .bk-host__badge.is-pop { animation: none; }
   .bk-host__img { position: absolute; left: 50%; bottom: 0; translate: -50% 12px; height: 100%; width: auto; max-width: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s var(--ease), translate 0.6s var(--ease); filter: drop-shadow(0 16px 22px rgb(0 0 0 / 45%)); }
-  .bk-host__img.is-on { opacity: 1; translate: -50% 0; }
+  .bk-host__img.is-on { opacity: 1; translate: -50% 0; animation: bk-breathe 6s var(--ease) infinite; transform-origin: 50% 100%; }
+  @keyframes bk-breathe { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-6px) scale(1.015); } }
   .bk-host__say { position: relative; padding: 14px 16px; border-radius: 18px 18px 18px 6px; background: rgb(255 255 255 / 10%); animation: bk-say 0.45s var(--ease); }
   .bk-host__say p { margin: 0; font-size: 0.9rem; color: rgb(255 255 255 / 80%); }
   .bk-host__say .bk-host__title { margin-bottom: 4px; font-family: var(--font-display); font-size: 1.15rem; color: #fff; letter-spacing: -0.02em; }
@@ -537,7 +543,7 @@ const schema = [
   .how__social p { margin: 14px 0 0; font-weight: 600; }
 
   @media (prefers-reduced-motion: reduce) {
-    .bk-stage__ring, .bk-float, .bk-live { animation: none; }
+    .bk-stage__ring, .bk-float, .bk-live, .bk-host__ring, .bk-host__dot, .bk-host__img.is-on, .bk-host__badge { animation: none; }
     .pk, .bk-host__img, .bk-panel, .bk-host__say { transition: none; animation: none; }
   }
 </style>
