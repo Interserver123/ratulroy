@@ -9,4 +9,5 @@ export const trustedLogos: [file: string, name: string][] = [
   ["logoinhours-dallas.jpg", "LogoinHours Dallas"],
   ["qs-health-care-service.png", "QS Health Care Service"],
   ["chococraving.webp", "ChocoCraving"],
+  ["hawk-towing-and-auto.png", "Hawk Towing & Auto"],
 ];
