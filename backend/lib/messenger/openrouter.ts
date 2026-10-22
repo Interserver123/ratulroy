@@ -49,7 +49,15 @@ export async function chat(
       usage?: unknown;
     };
     if (!res.ok || data.error) {
-      last = new AiError(data.error?.message || `OpenRouter HTTP ${res.status}`, res.status);
+      const hint =
+        res.status === 401
+          ? " (OpenRouter did not accept the API key: create a new key at openrouter.ai > Keys and paste it again)"
+          : res.status === 402
+            ? " (your OpenRouter account is out of credit: add credit at openrouter.ai > Credits)"
+            : res.status === 404 || res.status === 400
+              ? " (check the model name in Settings with “Check model name”)"
+              : "";
+      last = new AiError((data.error?.message || `OpenRouter HTTP ${res.status}`) + hint, res.status);
       if (res.status === 429 || res.status >= 500) continue;
       throw last;
     }
