@@ -19,7 +19,7 @@ export const onRequestPost = async ({ env, request }: Ctx) => {
     return json({ ok: true, ...a, ms: Date.now() - started });
   } catch (e) {
     await log(env, "error", "ai", "Test AI failed", { error: (e as Error).message });
-    return fail(502, `AI test failed: ${(e as Error).message}`);
+    return fail(422, `AI test failed: ${(e as Error).message}`);
   }
 };
 
@@ -28,6 +28,6 @@ export const onRequestGet = async ({ env }: Ctx) => {
   try {
     return json({ ok: true, models: (await listModels(env)).slice(0, 500) });
   } catch (e) {
-    return fail(502, `Could not load models: ${(e as Error).message}`);
+    return fail(422, `Could not load models: ${(e as Error).message}`);
   }
 };

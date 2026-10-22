@@ -33,6 +33,14 @@ export const onRequestPost = async ({ env, request }: Ctx) => {
   } catch (e) {
     const g = e as GraphError;
     await log(env, "error", "connect", `Connection ${action} failed`, { error: g.message, code: g.code, status: g.status });
-    return fail(502, `Meta said: ${g.message}${g.code ? ` (code ${g.code})` : ""}`);
+    const hint =
+      g.status === 0
+        ? " Could not reach Facebook; try again in a minute."
+        : g.code === 190
+          ? " The Page access token is wrong or expired: generate a new one in Meta (Messenger > Messenger API Settings) and paste it again."
+          : g.code === 100 || g.code === 200 || g.code === 210
+            ? " This looks like a user or app token, or the Page isn't connected to this app. Use the token from Messenger API Settings next to your Page."
+            : "";
+    return fail(422, `Meta said: ${g.message}${g.code ? ` (code ${g.code})` : ""}.${hint}`);
   }
 };

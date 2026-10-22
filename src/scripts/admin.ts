@@ -56,9 +56,18 @@ async function api<T = any>(path: string, opts: RequestInit = {}): Promise<T> {
     ...opts,
     headers: { "Content-Type": "application/json", ...(opts.headers ?? {}) },
   });
-  const data = await res.json().catch(() => ({}));
+  const text = await res.text();
+  let data: any = {};
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    /* not JSON: e.g. a Cloudflare error page */
+  }
   if (res.status === 401 && path !== "/api/admin/login" && path !== "/api/admin/setup") showLogin();
-  if (!res.ok) throw new ApiError(res.status, data.error ?? `Request failed (${res.status})`);
+  if (!res.ok) {
+    const page = text.match(/<title>([^<]{1,120})<\/title>/i)?.[1]?.trim();
+    throw new ApiError(res.status, data.error ?? `Request failed (${res.status}${page ? `: ${page}` : ""}). Open Messenger > Activity log for details.`);
+  }
   return data;
 }
 

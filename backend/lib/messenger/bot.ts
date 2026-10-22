@@ -399,7 +399,7 @@ export async function manualReply(env: Env, psid: string, text: string) {
     return { ok: false, status: 409, error: "This person last wrote more than 7 days ago. Meta only allows a reply after they message the Page again." };
   const tag = age > WINDOW_MS ? ("HUMAN_AGENT" as const) : undefined;
   const r = await deliver(env, token, psid, text, { source: "human", tag });
-  if (!r.ok) return { ok: false, status: 502, error: `Meta refused the message: ${r.error}${tag ? " (replies after 24 hours need the Human Agent permission)" : ""}` };
+  if (!r.ok) return { ok: false, status: 422, error: `Meta refused the message: ${r.error}${tag ? " (replies after 24 hours need the Human Agent permission)" : ""}` };
   await env.DB.prepare("UPDATE mc_conversations SET unread = 0 WHERE psid = ?").bind(psid).run();
   return { ok: true, tag: tag ?? null };
 }
