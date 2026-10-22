@@ -132,3 +132,14 @@ npm test                       # build + SEO check (fails if /admin leaks into s
 ## Messenger assistant
 
 The Facebook Messenger AI assistant uses the same database and admin login. Setup: [MESSENGER.md](MESSENGER.md).
+
+## Strategy-call bookings
+
+The page `/book-strategy-call` shows the call packages and a live calendar.
+
+- **Packages, prices, call lengths, working days and hours** are all in `backend/lib/booking.ts`. Edit that one file and redeploy.
+- **Booking a slot:** the visitor picks a package, a date and a time (shown in their own time zone, with Bangladesh time underneath) and sends their details. Nothing is charged on the page.
+- **What gets saved:** each booking appears in **admin → Leads** as a "Strategy call" lead. The lead message holds the package, the date and time in Bangladesh time, the visitor's time zone and the call platform. A notification is sent if `NOTIFY_WEBHOOK_URL` is set.
+- **Holding and freeing slots:** a booked slot, plus 15 minutes either side, is hidden from everyone else. Mark the lead **Lost** or **Spam** to free it again.
+- **Your follow-up:** confirm the time with the customer, and send the payment link yourself for paid calls.
+- **Testing:** `npm run booking:test` (with a local server running) checks availability rules, double-booking protection and validation.

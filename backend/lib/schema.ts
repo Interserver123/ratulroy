@@ -47,6 +47,15 @@ export const MIGRATIONS: { file: string; sentinel: string; statements: string[] 
       "CREATE INDEX IF NOT EXISTS idx_logs_created ON app_logs (created_at DESC)",
     ],
   },
+  {
+    file: "0003_bookings.sql",
+    sentinel: "bookings",
+    statements: [
+      "CREATE TABLE IF NOT EXISTS bookings ( id TEXT PRIMARY KEY, lead_id TEXT NOT NULL REFERENCES leads (id) ON DELETE CASCADE, package TEXT NOT NULL, start_at TEXT NOT NULL, end_at TEXT NOT NULL, timezone TEXT, platform TEXT, status TEXT NOT NULL DEFAULT 'requested' CHECK (status IN ('requested', 'confirmed', 'cancelled')), created_at TEXT NOT NULL )",
+      "CREATE INDEX IF NOT EXISTS idx_bookings_start ON bookings (start_at)",
+      "CREATE INDEX IF NOT EXISTS idx_bookings_lead ON bookings (lead_id)",
+    ],
+  },
 ];
 
 let ready = false;

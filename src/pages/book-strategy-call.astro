@@ -1,12 +1,543 @@
 ---
+// Strategy-call booking page: packages, live availability calendar and request form.
+// Packages, prices and hours live in backend/lib/booking.ts (shared with the booking API).
 import { getEntry } from "astro:content";
-import ContentPage from "../layouts/ContentPage.astro";
-import LeadPanel from "../components/page/LeadPanel.astro";
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageFaq from "../components/page/PageFaq.astro";
+import FinalCta from "../components/page/FinalCta.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import { img } from "../lib/img";
+import { plain } from "../lib/md";
+import { site } from "../data/site";
+import { ogCardUrl, OG_SIZE } from "../lib/og";
+import { AVAILABILITY, PACKAGES, PLATFORMS } from "../../backend/lib/booking";
 
 const page = await getEntry("pages", "book-strategy-call");
 if (!page) throw new Error("Missing src/content/pages/book-strategy-call.yaml");
+const d = page.data;
+const path = "/book-strategy-call";
+const url = `${site.url}${path}`;
+
+const photos = {
+  confident: img("people/cutouts/ratul-confident.png"),
+  laptop: img("people/cutouts/ratul-laptop.png"),
+  phone: img("people/cutouts/ratul-phone.png"),
+};
+
+// What the host says at each step of the booking (the photo changes with it).
+const host = [
+  { step: 1, image: "phone", title: "Pick the call that fits", text: "Not sure? Start with the free intro call. I'll tell you honestly if you need more." },
+  { step: 2, image: "laptop", title: "Choose a time that suits you", text: "Times are shown in your time zone. I'll have your profile open before we talk." },
+  { step: 3, image: "confident", title: "Almost done", text: "Share your website or Maps link so I can prepare. You'll hear from me within a few hours." },
+  { step: 4, image: "confident", title: "See you on the call", text: "I'll confirm on WhatsApp or email shortly. Bring your questions." },
+] as const;
+
+const fmtHour = (m: number) => `${((Math.floor(m / 60) + 11) % 12) + 1}${m % 60 ? ":" + String(m % 60).padStart(2, "0") : ""} ${m < 720 ? "AM" : "PM"}`;
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const hours = `${dayNames[AVAILABILITY.days[0]]}–${dayNames[AVAILABILITY.days[AVAILABILITY.days.length - 1]]}, ${fmtHour(AVAILABILITY.startMinutes)}–${fmtHour(AVAILABILITY.endMinutes)} Bangladesh time`;
+
+const focusOptions = ["Google Maps ranking", "Google Business Profile", "Reviews", "Citations & NAP", "Website SEO", "AI search (GEO)", "Suspended profile"];
+
+const config = {
+  packages: PACKAGES.map(({ id, name, price, priceNote, minutes }) => ({ id, name, price, priceNote, minutes })),
+  whatsapp: site.whatsapp,
+  email: site.email,
+  title: "Local SEO call with Ratul Roy",
+};
+
+const ogUrl = ogCardUrl(path);
+const schema = [
+  {
+    "@type": "ContactPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: d.title,
+    description: d.description,
+    inLanguage: "en",
+    isPartOf: { "@id": `${site.url}/#website` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+    mainEntity: { "@id": `${url}#service` },
+    primaryImageOfPage: { "@type": "ImageObject", url: ogUrl, width: OG_SIZE.width, height: OG_SIZE.height },
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
+      { "@type": "ListItem", position: 2, name: "Book a strategy call", item: url },
+    ],
+  },
+  {
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: "Local SEO strategy call and consulting",
+    serviceType: "Local SEO consulting",
+    description: d.description,
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
+    availableChannel: { "@type": "ServiceChannel", serviceUrl: url, availableLanguage: ["English", "Bengali"] },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Strategy call packages",
+      itemListElement: PACKAGES.map((p) => ({
+        "@type": "Offer",
+        name: p.name,
+        description: `${p.tagline} ${p.includes.join(". ")}.`,
+        url: `${url}?package=${p.id}#book`,
+        priceCurrency: "USD",
+        ...(p.recurring
+          ? { priceSpecification: { "@type": "UnitPriceSpecification", price: String(p.amount), priceCurrency: "USD", unitCode: "MON", referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" } } }
+          : p.id === "done-for-you"
+            ? { priceSpecification: { "@type": "PriceSpecification", minPrice: String(p.amount), priceCurrency: "USD" } }
+            : { price: String(p.amount) }),
+      })),
+    },
+  },
+  {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: d.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: plain(f.a) } })),
+  },
+];
 ---
 
-<ContentPage data={page.data} path="/book-strategy-call">
-  <LeadPanel slot="before" variant="book" />
-</ContentPage>
+<BaseLayout title={d.title} description={d.description} schema={schema}>
+  <!-- ===== Hero ===== -->
+  <section class="bk-hero" aria-labelledby="bk-title">
+    <div class="bk-hero__topo" aria-hidden="true"></div>
+    <div class="container bk-hero__grid">
+      <div class="bk-hero__copy">
+        <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+          <a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Book a strategy call</span>
+        </nav>
+        <p class="eyebrow" data-reveal>Local SEO Strategy Call</p>
+        <h1 id="bk-title" data-reveal style="--d:1">
+          A strategy call that ends with <span class="em">a plan</span>, not a pitch
+        </h1>
+        <p class="lead" data-reveal style="--d:2">
+          Talk one-to-one with Ratul Roy about your Google Maps rankings, Google Business Profile and the calls you're missing.
+          Pick a call, choose a time that suits you, and get a clear next step.
+        </p>
+        <ul class="bk-trust" data-reveal style="--d:3">
+          <li><b>4.9★</b> from 243 reviews</li>
+          <li><b>Level 2</b> Fiverr seller</li>
+          <li><b>1-to-1</b> no sales reps</li>
+        </ul>
+        <div class="btn-row" data-reveal style="--d:4">
+          <a class="btn btn--dark" href="#packages"><span class="disc" aria-hidden="true">↓</span>Choose your call</a>
+          <a class="btn btn--ghost" href={site.whatsapp} target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bk-stage" data-reveal style="--d:2">
+        <div class="bk-stage__ring" aria-hidden="true"></div>
+        <div class="bk-stage__glow" aria-hidden="true"></div>
+        <Image src={photos.confident} alt="Ratul Roy, Local SEO expert in Bangladesh" width={520} widths={[320, 520, 760]} sizes="(max-width: 900px) 70vw, 520px" class="bk-stage__photo" loading="eager" fetchpriority="high" />
+        <div class="bk-float bk-float--a">
+          <span class="bk-float__icon" aria-hidden="true">★</span>
+          <div><b>4.9 rating</b><small>243 client reviews</small></div>
+        </div>
+        <div class="bk-float bk-float--b">
+          <span class="bk-float__icon bk-float__icon--green" aria-hidden="true">↑</span>
+          <div><b>461 calls</b><small>from one Google profile</small></div>
+        </div>
+        <div class="bk-float bk-float--c">
+          <span class="bk-live" aria-hidden="true"></span>
+          <div><b>Booking now</b><small>{hours.split(",")[0]}</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Packages ===== -->
+  <section class="section" id="packages" aria-labelledby="pk-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">Call Packages</p>
+        <h2 id="pk-title">Choose how you want to work together</h2>
+        <p>Start free, go deep in one session, or keep me in your corner every month.</p>
+      </div>
+      <div class="pk-grid">
+        {
+          PACKAGES.map((p, i) => (
+            <article class:list={["pk", { "pk--featured": p.featured }]} data-reveal style={`--d:${i}`}>
+              {p.badge && <p class="pk__badge">{p.badge}</p>}
+              <div class="pk__head">
+                <span class="pk__face" aria-hidden="true">
+                  <Image src={photos[p.image]} alt="" width={120} />
+                </span>
+                <div>
+                  <h3>{p.name}</h3>
+                  <p class="pk__note">{p.priceNote}</p>
+                </div>
+              </div>
+              <p class="pk__price">{p.price}</p>
+              <p class="pk__tag">{p.tagline}</p>
+              <ul class="pk__list">
+                {p.includes.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+              <a class:list={["btn", p.featured ? "btn--accent" : "btn--dark", "pk__cta"]} href={`?package=${p.id}#book`} data-pick={p.id}>
+                {p.id === "intro" ? "Book free call" : p.id === "done-for-you" ? "Book scoping call" : `Book ${p.name}`}
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <p class="pk-foot" data-reveal>Nothing is charged on this page. I confirm your time first, then send a secure payment link for paid calls.</p>
+    </div>
+  </section>
+
+  <!-- ===== Booking ===== -->
+  <section class="section bk-wrap" id="book" aria-labelledby="bk-form-title">
+    <div class="container bk">
+      <aside class="bk-host" aria-live="polite">
+        <div class="bk-host__photo">
+          {
+            (["phone", "laptop", "confident"] as const).map((k) => (
+              <Image src={photos[k]} alt="" width={420} widths={[280, 420]} sizes="(max-width: 900px) 40vw, 420px" class="bk-host__img" data-host-img={k} loading="lazy" />
+            ))
+          }
+        </div>
+        {
+          host.map((h) => (
+            <div class="bk-host__say" data-host-say={h.step} hidden={h.step !== 1}>
+              <p class="bk-host__title">{h.title}</p>
+              <p>{h.text}</p>
+            </div>
+          ))
+        }
+        <dl class="bk-sum" data-summary hidden>
+          <dt>Call</dt><dd data-sum-pkg>–</dd>
+          <dt>When</dt><dd data-sum-when>–</dd>
+        </dl>
+        <p class="bk-hours"><span class="bk-live" aria-hidden="true"></span>{hours}</p>
+      </aside>
+
+      <div class="bk-card" data-booking data-config={JSON.stringify(config)}>
+        <h2 id="bk-form-title" class="sr-only">Book your call</h2>
+        <ol class="bk-steps" aria-label="Booking steps">
+          <li data-step-tab="1" aria-current="step"><span>1</span>Call</li>
+          <li data-step-tab="2"><span>2</span>Date &amp; time</li>
+          <li data-step-tab="3"><span>3</span>Your details</li>
+        </ol>
+
+        <!-- Step 1: package -->
+        <fieldset class="bk-panel" data-step="1">
+          <legend class="bk-legend">Which call would you like?</legend>
+          <div class="bk-opts">
+            {
+              PACKAGES.map((p) => (
+                <label class:list={["bk-opt", { "bk-opt--featured": p.featured }]}>
+                  <input type="radio" name="package" value={p.id} checked={p.featured} />
+                  <span class="bk-opt__body">
+                    <b>{p.name}</b>
+                    <small>{p.priceNote}</small>
+                  </span>
+                  <span class="bk-opt__price">{p.price}</span>
+                </label>
+              ))
+            }
+          </div>
+          <div class="bk-nav"><span></span><button class="btn btn--dark" type="button" data-next>Choose a time <span class="arrow" aria-hidden="true">→</span></button></div>
+        </fieldset>
+
+        <!-- Step 2: date & time -->
+        <div class="bk-panel" data-step="2" hidden>
+          <p class="bk-legend">Pick a date and time</p>
+          <p class="bk-tz">Times in <b data-tz>your time zone</b> · Bangladesh time shown underneath</p>
+          <div class="bk-cal-wrap">
+            <div class="bk-cal" data-calendar>
+              <div class="bk-cal__head">
+                <button type="button" class="bk-cal__nav" data-month="-1" aria-label="Previous month">‹</button>
+                <p data-month-label aria-live="polite"></p>
+                <button type="button" class="bk-cal__nav" data-month="1" aria-label="Next month">›</button>
+              </div>
+              <div class="bk-cal__dow" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+              <div class="bk-cal__grid" data-days role="grid" aria-label="Available days"></div>
+            </div>
+            <div class="bk-times">
+              <p class="bk-times__day" data-day-label>Choose a day</p>
+              <div class="bk-times__list" data-times role="listbox" aria-label="Available times"></div>
+            </div>
+          </div>
+          <p class="bk-msg" data-slot-msg role="status"></p>
+          <div class="bk-nav">
+            <button class="btn btn--ghost" type="button" data-back>← Back</button>
+            <button class="btn btn--dark" type="button" data-next disabled>Your details <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <!-- Step 3: details -->
+        <form class="bk-panel" data-step="3" data-booking-form hidden novalidate>
+          <p class="bk-legend">Tell me about your business</p>
+          <div class="bk-row">
+            <div class="field"><label for="bk-name">Your name*</label><input id="bk-name" name="name" required autocomplete="name" /></div>
+            <div class="field"><label for="bk-email">Email*</label><input id="bk-email" name="email" type="email" required autocomplete="email" /></div>
+          </div>
+          <div class="bk-row">
+            <div class="field"><label for="bk-phone">WhatsApp / phone*</label><input id="bk-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+880 1XXX XXXXXX" /></div>
+            <div class="field"><label for="bk-site">Website or Google Maps link</label><input id="bk-site" name="website" inputmode="url" autocomplete="url" /></div>
+          </div>
+          <div class="field"><label for="bk-biz">Business type and city</label><input id="bk-biz" name="business" placeholder="e.g. Dental clinic, Dhanmondi, Dhaka" /></div>
+          <fieldset class="bk-chips">
+            <legend>What do you want help with?</legend>
+            {
+              focusOptions.map((f) => (
+                <label class="bk-chip"><input type="checkbox" name="focus" value={f} /><span>{f}</span></label>
+              ))
+            }
+          </fieldset>
+          <fieldset class="bk-chips">
+            <legend>Call on</legend>
+            {
+              PLATFORMS.map((p, i) => (
+                <label class="bk-chip"><input type="radio" name="platform" value={p.id} checked={i === 0} /><span>{p.label}</span></label>
+              ))
+            }
+          </fieldset>
+          <div class="field"><label for="bk-msg">Anything I should know before the call?</label><textarea id="bk-msg" name="message" rows="3"></textarea></div>
+          <div class="hp" aria-hidden="true"><label>Company website<input name="company_website" tabindex="-1" autocomplete="off" /></label></div>
+          <p class="bk-msg" data-form-msg role="alert"></p>
+          <div class="bk-nav">
+            <button class="btn btn--ghost" type="button" data-back>← Back</button>
+            <button class="btn btn--accent" type="submit"><span class="disc" aria-hidden="true">↗</span>Request this time</button>
+          </div>
+          <p class="bk-fine">No payment now. I confirm your time on WhatsApp or email first.</p>
+        </form>
+
+        <!-- Step 4: done -->
+        <div class="bk-panel bk-done" data-step="4" hidden tabindex="-1">
+          <div class="bk-done__tick" aria-hidden="true">✓</div>
+          <h3>Your call request is in</h3>
+          <p data-done-text></p>
+          <div class="btn-row bk-done__actions">
+            <a class="btn btn--dark" data-gcal target="_blank" rel="noopener">Add to Google Calendar</a>
+            <a class="btn btn--ghost" data-ics download="strategy-call.ics">Download .ics</a>
+            <a class="btn btn--ghost" data-wa target="_blank" rel="noopener">Message on WhatsApp</a>
+          </div>
+        </div>
+
+        <noscript><p class="bk-msg">Booking needs JavaScript. You can also book on <a href={site.whatsapp}>WhatsApp</a> or by email at <a href={`mailto:${site.email}`}>{site.email}</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section class="section wash" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">How It Works</p>
+        <h2 id="how-title">From booking to a clear plan in three steps</h2>
+      </div>
+      <ol class="how">
+        <li class="how__step card" data-reveal style="--d:0">
+          <span class="how__n">01</span>
+          <h3>Pick a call and a time</h3>
+          <p>Choose the package that fits and a slot that suits you. Every time is shown in your own time zone.</p>
+        </li>
+        <li class="how__step card" data-reveal style="--d:1">
+          <span class="how__n">02</span>
+          <h3>I confirm and prepare</h3>
+          <p>You get a confirmation on WhatsApp or email with the meeting link. Before we talk I review your Google Business Profile, Maps rankings and website.</p>
+        </li>
+        <li class="how__step card" data-reveal style="--d:2">
+          <span class="how__n">03</span>
+          <h3>Leave with next steps</h3>
+          <p>We go through what's holding your local visibility back and what to fix first. Strategy Sessions include the recording and a written 30-day plan.</p>
+        </li>
+      </ol>
+      <div class="how__social" data-reveal><p>See my work first:</p><SocialLinks labels /></div>
+    </div>
+  </section>
+
+  <PageFaq faqs={d.faqs} heading="Questions before you book" />
+
+  <FinalCta
+    heading="Prefer to just send a message?"
+    text="WhatsApp is the fastest way to reach me. Ask anything about your Google Maps visibility, and I'll reply personally, usually within a couple of hours on working days."
+    buttons={[
+      { label: "Chat on WhatsApp", href: site.whatsapp },
+      { label: "See case studies", href: "/case-studies" },
+    ]}
+  />
+</BaseLayout>
+
+<script>
+  import "../scripts/booking";
+</script>
+
+<style>
+  /* ---------- hero ---------- */
+  .bk-hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: -78px;
+    padding: calc(78px + clamp(28px, 5vw, 60px)) 0 clamp(40px, 6vw, 80px);
+    background:
+      radial-gradient(45% 55% at 85% 45%, rgb(232 64 47 / 13%), transparent 70%),
+      radial-gradient(35% 45% at 5% 10%, rgb(15 157 99 / 10%), transparent 70%);
+  }
+  .bk-hero__topo { position: absolute; inset: 0; background: url("/topo.svg") 0 0 / 1400px auto repeat; opacity: 0.5; pointer-events: none; }
+  .bk-hero__grid { position: relative; display: grid; gap: clamp(28px, 5vw, 56px); align-items: center; }
+  @media (min-width: 900px) { .bk-hero__grid { grid-template-columns: 1.1fr 0.9fr; } }
+  .bk-hero .crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; font-size: 0.88rem; color: var(--muted); }
+  .bk-hero .crumbs a { color: var(--ink-2); }
+  .bk-hero h1 { font-size: clamp(2.3rem, 5.2vw, 4rem); line-height: 1.02; margin: 12px 0 18px; }
+  .bk-hero .em { color: var(--accent); }
+  .bk-trust { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 26px; padding: 0; list-style: none; }
+  .bk-trust li { padding: 8px 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 0.88rem; color: var(--ink-2); box-shadow: var(--shadow); }
+  .bk-trust b { color: var(--ink); }
+
+  .bk-stage { position: relative; aspect-ratio: 1 / 1.08; max-width: 520px; width: 100%; margin: 0 auto; border-radius: 36px; background: radial-gradient(90% 70% at 50% 100%, #233236, #0f1a1c 70%); box-shadow: var(--shadow-lg); isolation: isolate; }
+  .bk-stage::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: url("/topo.svg") center / 900px auto; opacity: 0.1; filter: invert(1); }
+  .bk-stage__ring { position: absolute; left: 50%; top: 46%; width: 78%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 20%, rgb(255 106 85 / 85%) 35%, transparent 50% 70%, rgb(47 191 134 / 75%) 85%, transparent); mask: radial-gradient(closest-side, transparent 92%, #000 93%); animation: bk-spin 14s linear infinite; z-index: -1; }
+  .bk-stage__glow { position: absolute; left: 50%; top: 50%; width: 70%; aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; background: radial-gradient(closest-side, rgb(232 64 47 / 35%), transparent); filter: blur(10px); z-index: -1; }
+  .bk-stage__photo { position: absolute; left: 50%; bottom: 0; translate: -50% 0; height: 94%; width: auto; max-width: 92%; object-fit: contain; filter: drop-shadow(0 24px 30px rgb(0 0 0 / 45%)); }
+  .bk-float { position: absolute; display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 10px; border-radius: 16px; background: rgb(255 255 255 / 92%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 12px 30px -10px rgb(0 0 0 / 40%); font-size: 0.85rem; animation: bk-float 6s var(--ease) infinite; }
+  .bk-float b { display: block; font-family: var(--font-display); font-size: 1rem; letter-spacing: -0.02em; }
+  .bk-float small { color: var(--muted); }
+  .bk-float--a { left: -6%; top: 14%; }
+  .bk-float--b { right: -6%; top: 44%; animation-delay: -2s; }
+  .bk-float--c { left: 4%; bottom: 8%; animation-delay: -4s; }
+  .bk-float__icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; }
+  .bk-float__icon--green { background: var(--good); }
+  .bk-live { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; background: #2fbf86; box-shadow: 0 0 0 0 rgb(47 191 134 / 60%); animation: bk-pulse 2s infinite; }
+  @keyframes bk-spin { to { rotate: 360deg; } }
+  @keyframes bk-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+  @keyframes bk-pulse { 70% { box-shadow: 0 0 0 10px rgb(47 191 134 / 0%); } 100% { box-shadow: 0 0 0 0 rgb(47 191 134 / 0%); } }
+  @media (max-width: 600px) { .bk-float { font-size: 0.78rem; padding: 8px 10px 8px 8px; } .bk-float--a { left: 2%; } .bk-float--b { right: 2%; } .bk-float__icon { width: 28px; height: 28px; } }
+
+  /* ---------- packages ---------- */
+  .pk-grid { display: grid; gap: 16px; grid-template-columns: 1fr; align-items: stretch; }
+  @media (min-width: 700px) { .pk-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1100px) { .pk-grid { grid-template-columns: repeat(4, 1fr); } }
+  .pk { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 26px 22px 22px; border-radius: 26px; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+  .pk:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .pk--featured { color: #fff; border: 0; background: radial-gradient(90% 60% at 100% 0%, rgb(232 64 47 / 55%), transparent 60%), radial-gradient(70% 60% at 0% 100%, rgb(15 157 99 / 30%), transparent 65%), #0f1a1c; }
+  .pk--featured::before { content: ""; position: absolute; inset: 0; padding: 1.5px; border-radius: inherit; background: linear-gradient(135deg, #ff6a55, transparent 40%, transparent 60%, #2fbf86); mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; -webkit-mask-composite: xor; pointer-events: none; }
+  .pk__badge { position: absolute; top: -12px; left: 22px; margin: 0; padding: 5px 12px; border-radius: 999px; background: var(--accent); color: #fff; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.02em; box-shadow: 0 8px 18px -8px rgb(200 48 29 / 70%); }
+  .pk:not(.pk--featured) .pk__badge { background: var(--ink); box-shadow: none; }
+  .pk__head { display: flex; align-items: center; gap: 12px; }
+  .pk__face { flex: none; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; background: radial-gradient(circle at 50% 30%, #2a3a3e, #0f1a1c); box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--accent-soft); }
+  .pk--featured .pk__face { box-shadow: 0 0 0 3px #0f1a1c, 0 0 0 5px #ff6a55; }
+  .pk__face img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; }
+  .pk h3 { font-size: 1.2rem; margin: 0; }
+  .pk--featured h3, .pk--featured .pk__price { color: #fff; }
+  .pk__note { margin: 2px 0 0; font-size: 0.82rem; color: var(--muted); }
+  .pk--featured .pk__note, .pk--featured .pk__tag { color: rgb(255 255 255 / 72%); }
+  .pk__price { margin: 6px 0 0; font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+  .pk__tag { margin: 0; color: var(--ink-2); font-size: 0.93rem; }
+  .pk__list { display: grid; gap: 9px; margin: 6px 0 4px; padding: 0; list-style: none; font-size: 0.9rem; }
+  .pk__list li { position: relative; padding-left: 26px; }
+  .pk__list li::before { content: "✓"; position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--good-soft); color: var(--good); font-size: 0.7rem; font-weight: 700; }
+  .pk--featured .pk__list li::before { background: rgb(47 191 134 / 20%); color: #6ee7b7; }
+  .pk__cta { margin-top: auto; justify-content: center; }
+  .pk-foot { margin: 22px auto 0; text-align: center; color: var(--muted); font-size: 0.9rem; max-width: 60ch; }
+
+  /* ---------- booking ---------- */
+  .bk-wrap { background: linear-gradient(180deg, transparent, var(--bg-2) 30%, transparent); scroll-margin-top: 80px; }
+  .bk { display: grid; gap: 20px; align-items: start; }
+  @media (min-width: 960px) { .bk { grid-template-columns: 340px 1fr; } .bk-host { position: sticky; top: 96px; } }
+  .bk-host { display: grid; gap: 14px; padding: 22px; border-radius: 28px; color: #fff; background: radial-gradient(80% 60% at 100% 0%, rgb(232 64 47 / 45%), transparent 60%), #0f1a1c; box-shadow: var(--shadow-lg); overflow: hidden; }
+  .bk-host__photo { position: relative; height: 250px; border-radius: 20px; background: radial-gradient(70% 70% at 50% 100%, #2a3a3e, transparent 70%); }
+  @media (max-width: 959px) {
+    .bk-host { grid-template-columns: 120px 1fr; align-items: center; padding: 14px; gap: 12px; }
+    .bk-host__photo { height: 130px; grid-row: span 2; }
+    .bk-sum, .bk-hours { grid-column: 1 / -1; }
+    .bk-host__say { padding: 10px 12px; }
+    .bk-host__say .bk-host__title { font-size: 1rem; }
+    .bk-host__say p { font-size: 0.82rem; }
+  }
+  .bk-host__img { position: absolute; left: 50%; bottom: 0; translate: -50% 12px; height: 100%; width: auto; max-width: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s var(--ease), translate 0.6s var(--ease); filter: drop-shadow(0 16px 22px rgb(0 0 0 / 45%)); }
+  .bk-host__img.is-on { opacity: 1; translate: -50% 0; }
+  .bk-host__say { position: relative; padding: 14px 16px; border-radius: 18px 18px 18px 6px; background: rgb(255 255 255 / 10%); animation: bk-say 0.45s var(--ease); }
+  .bk-host__say p { margin: 0; font-size: 0.9rem; color: rgb(255 255 255 / 80%); }
+  .bk-host__say .bk-host__title { margin-bottom: 4px; font-family: var(--font-display); font-size: 1.15rem; color: #fff; letter-spacing: -0.02em; }
+  @keyframes bk-say { from { opacity: 0; translate: 0 8px; } }
+  .bk-sum { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 0; padding: 12px 14px; border-radius: 14px; background: rgb(255 255 255 / 6%); font-size: 0.85rem; }
+  .bk-sum dt { color: rgb(255 255 255 / 60%); }
+  .bk-sum dd { margin: 0; font-weight: 600; }
+  .bk-hours { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.8rem; color: rgb(255 255 255 / 65%); }
+
+  .bk-card { min-width: 0; padding: clamp(18px, 3vw, 30px); border-radius: 28px; background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+  .bk-steps { display: flex; gap: 6px; margin: 0 0 22px; padding: 5px; list-style: none; border-radius: 999px; background: var(--bg); counter-reset: s; }
+  .bk-steps li { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 8px; border-radius: 999px; font-size: 0.86rem; font-weight: 600; color: var(--muted); transition: background 0.3s, color 0.3s; }
+  .bk-steps span { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--line); font-size: 0.75rem; }
+  .bk-steps li[aria-current="step"] { background: var(--ink); color: #fff; }
+  .bk-steps li[aria-current="step"] span { background: var(--accent); color: #fff; }
+  .bk-steps li.is-done span { background: var(--good); color: #fff; }
+  @media (max-width: 520px) { .bk-steps li { font-size: 0.74rem; gap: 5px; } }
+  .bk-panel { margin: 0; padding: 0; border: 0; min-width: 0; animation: bk-say 0.4s var(--ease); }
+  .bk-legend { margin: 0 0 14px; padding: 0; font-family: var(--font-display); font-size: 1.4rem; letter-spacing: -0.02em; }
+  .bk-opts { display: grid; gap: 10px; }
+  .bk-opt { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 18px; border: 1.5px solid var(--line-2); cursor: pointer; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; }
+  .bk-opt:hover { border-color: var(--ink); }
+  .bk-opt input { accent-color: var(--accent); width: 18px; height: 18px; }
+  .bk-opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 8px 20px -14px rgb(200 48 29 / 60%); }
+  .bk-opt__body { flex: 1; display: grid; }
+  .bk-opt__body small { color: var(--muted); font-size: 0.82rem; }
+  .bk-opt__price { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; white-space: nowrap; }
+  .bk-nav { display: flex; justify-content: space-between; gap: 10px; margin-top: 22px; }
+  .bk-nav .btn:disabled { opacity: 0.4; pointer-events: none; }
+  .bk-tz { margin: -8px 0 14px; font-size: 0.85rem; color: var(--muted); }
+  .bk-cal-wrap { display: grid; gap: 18px; }
+  @media (min-width: 700px) { .bk-cal-wrap { grid-template-columns: 1.15fr 1fr; } }
+  .bk-cal__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .bk-cal__head p { margin: 0; font-weight: 700; }
+  .bk-cal__nav { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--paper); font-size: 1.2rem; cursor: pointer; }
+  .bk-cal__nav:disabled { opacity: 0.3; cursor: default; }
+  .bk-cal__dow, .bk-cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+  .bk-cal__dow span { font-size: 0.72rem; font-weight: 700; color: var(--muted); padding: 4px 0; }
+  :global(.bk-day) { aspect-ratio: 1; display: grid; place-items: center; border-radius: 12px; border: 0; background: transparent; font: inherit; font-size: 0.9rem; color: #b5c0bd; }
+  :global(.bk-day[data-open]) { background: var(--bg); color: var(--ink); font-weight: 600; cursor: pointer; position: relative; }
+  :global(.bk-day[data-open]::after) { content: ""; position: absolute; bottom: 5px; width: 4px; height: 4px; border-radius: 50%; background: var(--good); }
+  :global(.bk-day[data-open]:hover) { background: var(--accent-soft); }
+  :global(.bk-day[aria-pressed="true"]) { background: var(--ink) !important; color: #fff; }
+  :global(.bk-day[aria-pressed="true"]::after) { background: #ff6a55; }
+  .bk-times__day { margin: 0 0 10px; font-weight: 700; }
+  .bk-times__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+  :global(.bk-time) { display: grid; gap: 2px; padding: 10px; border-radius: 12px; border: 1.5px solid var(--line-2); background: var(--paper); font: inherit; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+  :global(.bk-time b) { font-size: 0.95rem; }
+  :global(.bk-time small) { font-size: 0.72rem; color: var(--muted); }
+  :global(.bk-time:hover) { border-color: var(--ink); }
+  :global(.bk-time[aria-selected="true"]) { border-color: var(--accent); background: var(--accent); color: #fff; }
+  :global(.bk-time[aria-selected="true"] small) { color: rgb(255 255 255 / 80%); }
+  .bk-msg { margin: 12px 0 0; min-height: 1.2em; font-size: 0.9rem; color: var(--accent); }
+  .bk-msg:empty { margin: 0; }
+  .bk-row { display: grid; gap: 12px; }
+  @media (min-width: 640px) { .bk-row { grid-template-columns: 1fr 1fr; } }
+  .bk-panel .field { margin-bottom: 12px; }
+  .bk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; padding: 0; border: 0; }
+  .bk-chips legend { width: 100%; margin-bottom: 8px; font-size: 0.85rem; font-weight: 600; }
+  .bk-chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .bk-chip span { display: inline-block; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--line-2); font-size: 0.86rem; cursor: pointer; transition: all 0.2s; }
+  .bk-chip:hover span { border-color: var(--ink); }
+  .bk-chip input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .bk-chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .bk-fine { margin: 10px 0 0; font-size: 0.82rem; color: var(--muted); text-align: right; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .bk-done { text-align: center; padding: 20px 0; }
+  .bk-done__tick { width: 72px; height: 72px; margin: 0 auto 14px; display: grid; place-items: center; border-radius: 50%; background: var(--good); color: #fff; font-size: 2rem; box-shadow: 0 0 0 10px var(--good-soft); animation: bk-pop 0.6s var(--ease); }
+  @keyframes bk-pop { from { scale: 0.4; opacity: 0; } }
+  .bk-done h3 { font-size: 1.8rem; margin: 0 0 8px; }
+  .bk-done p { color: var(--ink-2); max-width: 46ch; margin: 0 auto; }
+  .bk-done__actions { justify-content: center; margin-top: 20px; }
+
+  /* ---------- how it works ---------- */
+  .how { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+  @media (min-width: 800px) { .how { grid-template-columns: repeat(3, 1fr); } }
+  .how__step { padding: 24px; }
+  .how__n { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: var(--accent-soft); color: var(--accent); font-family: var(--font-display); font-weight: 700; }
+  .how__step h3 { margin: 14px 0 6px; font-size: 1.2rem; }
+  .how__step p { margin: 0; color: var(--ink-2); font-size: 0.95rem; }
+  .how__social { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 14px; margin-top: 26px; }
+  .how__social p { margin: 14px 0 0; font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bk-stage__ring, .bk-float, .bk-live { animation: none; }
+    .pk, .bk-host__img, .bk-panel, .bk-host__say { transition: none; animation: none; }
+  }
+</style>
