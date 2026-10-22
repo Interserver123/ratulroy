@@ -93,27 +93,20 @@ Security: same-origin `Origin` check on every non-GET request, JSON-only bodies 
 - Leads table: search, status/form filters, sortable, paginated, CSV export.
 - Lead drawer: all fields, attribution (page, referrer, UTM, country), status pipeline buttons, priority, value, follow-up date, tags, notes, activity timeline, delete.
 
-## 6. Setup (Cloudflare, one time)
+## 6. Setup (Cloudflare, one time, no command line)
 
-Until these steps are done the site works exactly as before: `/api/leads` answers 503 and every form falls back to opening the visitor's email app, so no enquiry is lost.
+Until these steps are done the site works exactly as before: `/api/leads` answers 503 and every form falls back to opening the visitor's email app, so no enquiry is lost. The database tables are created automatically on first use, and the first account is created in the browser.
 
-```bash
-npx wrangler login
-npx wrangler d1 create ratulroy-leads
-#   -> paste the printed database_id into wrangler.backend.toml
-npm run backend:migrate:remote
-node scripts/admin-user.mjs you@example.com 'a-long-unique-password' "Ratul Roy" owner > admin.sql
-npx wrangler d1 execute ratulroy-leads --remote -c wrangler.backend.toml --file admin.sql && rm admin.sql
-```
+1. **Create the database:** dash.cloudflare.com → *Storage & Databases* → *D1 SQL Database* → *Create* → name `ratulroy-leads` → *Create*.
+2. **Connect it to the site:** *Workers & Pages* → the `ratulroy` project → *Settings* → *Bindings* → *Add* → *D1 database* → variable name `DB`, database `ratulroy-leads` → *Save*.
+3. **Add two secrets:** same *Settings* page → *Variables and Secrets* → *Add* (type *Secret*):
+   - `IP_SALT` = any long random text (you never need it again).
+   - `SETUP_KEY` = a private word or phrase only you know (needed once, in step 5).
+4. **Redeploy:** *Deployments* → latest deployment → *…* → *Retry deployment*. The project must be deploying the branch that contains this code.
+5. **Create your login:** open `https://ratulroy.com/admin` → "Create your account" → enter the `SETUP_KEY`, your name, email and a password (12+ characters). This page locks itself permanently once an account exists.
+6. Optional: delete the `SETUP_KEY` secret afterwards. Optional: `NOTIFY_WEBHOOK_URL` secret for Slack/Discord/Google Chat pings on new leads. Optional extra lock: Cloudflare Zero Trust → Access on `ratulroy.com/admin*`.
 
-Cloudflare dashboard → Workers & Pages → the `ratulroy` Pages project → **Settings**:
-1. **Bindings → Add → D1 database:** variable name `DB`, database `ratulroy-leads` (set for Production; add Preview too if you test on preview deployments).
-2. **Variables and secrets → Add → Secret:** `IP_SALT` = a random string of 32+ characters.
-3. Optional secret `NOTIFY_WEBHOOK_URL`: a Discord, Slack or Google Chat incoming-webhook URL to get a ping for every new lead.
-4. Redeploy (Deployments → latest → Retry deployment) so the bindings apply.
-5. Open `https://ratulroy.com/admin` and sign in.
-
-Optional extra lock: Cloudflare Zero Trust → Access → Applications → add `ratulroy.com/admin*` and `ratulroy.com/api/admin/*` with a one-time-PIN policy for your email.
+Command-line alternative (developers): `npx wrangler d1 create ratulroy-leads`, put the id in `wrangler.backend.toml`, `npm run backend:migrate:remote`, then create users with `scripts/admin-user.mjs` + `wrangler d1 execute`.
 
 > Why `wrangler.backend.toml` and not `wrangler.toml`: a root `wrangler.toml` makes Cloudflare Pages take all settings from the file on every Git deploy (overriding the dashboard). Keeping bindings in the dashboard is safer for this project.
 

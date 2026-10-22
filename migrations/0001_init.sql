@@ -1,7 +1,7 @@
 -- Leads backend schema (Cloudflare D1 / SQLite). See docs/BACKEND.md.
 PRAGMA foreign_keys = ON;
 
-CREATE TABLE leads (
+CREATE TABLE IF NOT EXISTS leads (
   id              TEXT PRIMARY KEY,
   created_at      TEXT NOT NULL,
   updated_at      TEXT NOT NULL,
@@ -35,22 +35,22 @@ CREATE TABLE leads (
   tags            TEXT NOT NULL DEFAULT '[]',  -- JSON array
   spam_score      INTEGER NOT NULL DEFAULT 0
 );
-CREATE INDEX idx_leads_status_created ON leads (status, created_at DESC);
-CREATE INDEX idx_leads_created ON leads (created_at DESC);
-CREATE INDEX idx_leads_email ON leads (email);
-CREATE INDEX idx_leads_follow_up ON leads (next_follow_up);
-CREATE INDEX idx_leads_ip_created ON leads (ip_hash, created_at);
+CREATE INDEX IF NOT EXISTS idx_leads_status_created ON leads (status, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_leads_created ON leads (created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_leads_email ON leads (email);
+CREATE INDEX IF NOT EXISTS idx_leads_follow_up ON leads (next_follow_up);
+CREATE INDEX IF NOT EXISTS idx_leads_ip_created ON leads (ip_hash, created_at);
 
-CREATE TABLE lead_notes (
+CREATE TABLE IF NOT EXISTS lead_notes (
   id          TEXT PRIMARY KEY,
   lead_id     TEXT NOT NULL REFERENCES leads (id) ON DELETE CASCADE,
   created_at  TEXT NOT NULL,
   author      TEXT NOT NULL,
   body        TEXT NOT NULL
 );
-CREATE INDEX idx_notes_lead ON lead_notes (lead_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_notes_lead ON lead_notes (lead_id, created_at);
 
-CREATE TABLE lead_events (
+CREATE TABLE IF NOT EXISTS lead_events (
   id          TEXT PRIMARY KEY,
   lead_id     TEXT NOT NULL REFERENCES leads (id) ON DELETE CASCADE,
   created_at  TEXT NOT NULL,
@@ -58,9 +58,9 @@ CREATE TABLE lead_events (
   type        TEXT NOT NULL CHECK (type IN ('created', 'status', 'update', 'note')),
   data        TEXT NOT NULL DEFAULT '{}'
 );
-CREATE INDEX idx_events_lead ON lead_events (lead_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_events_lead ON lead_events (lead_id, created_at);
 
-CREATE TABLE admin_users (
+CREATE TABLE IF NOT EXISTS admin_users (
   id             TEXT PRIMARY KEY,
   email          TEXT NOT NULL UNIQUE COLLATE NOCASE,
   name           TEXT NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE admin_users (
   last_login_at  TEXT
 );
 
-CREATE TABLE admin_sessions (
+CREATE TABLE IF NOT EXISTS admin_sessions (
   id          TEXT PRIMARY KEY,
   user_id     TEXT NOT NULL REFERENCES admin_users (id) ON DELETE CASCADE,
   token_hash  TEXT NOT NULL UNIQUE,
@@ -79,13 +79,13 @@ CREATE TABLE admin_sessions (
   ip_hash     TEXT,
   user_agent  TEXT
 );
-CREATE INDEX idx_sessions_expires ON admin_sessions (expires_at);
+CREATE INDEX IF NOT EXISTS idx_sessions_expires ON admin_sessions (expires_at);
 
-CREATE TABLE login_attempts (
+CREATE TABLE IF NOT EXISTS login_attempts (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   ip_hash     TEXT NOT NULL,
   email       TEXT,
   created_at  TEXT NOT NULL,
   success     INTEGER NOT NULL DEFAULT 0
 );
-CREATE INDEX idx_login_ip_created ON login_attempts (ip_hash, created_at);
+CREATE INDEX IF NOT EXISTS idx_login_ip_created ON login_attempts (ip_hash, created_at);

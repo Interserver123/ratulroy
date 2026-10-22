@@ -49,7 +49,7 @@ async function api<T = any>(path: string, opts: RequestInit = {}): Promise<T> {
     headers: { "Content-Type": "application/json", ...(opts.headers ?? {}) },
   });
   const data = await res.json().catch(() => ({}));
-  if (res.status === 401 && path !== "/api/admin/login") showLogin();
+  if (res.status === 401 && path !== "/api/admin/login" && path !== "/api/admin/setup") showLogin();
   if (!res.ok) throw new ApiError(res.status, data.error ?? `Request failed (${res.status})`);
   return data;
 }
@@ -64,11 +64,22 @@ function toast(msg: string) {
 // ---------- views ----------
 function showLogin() {
   $("[data-view=app]").hidden = true;
+  $("[data-view=setup]").hidden = true;
   $("[data-view=login]").hidden = false;
   $<HTMLInputElement>("[data-login] input[name=email]").focus();
 }
+function showSetup(configured: boolean) {
+  $("[data-view=app]").hidden = true;
+  $("[data-view=login]").hidden = true;
+  $("[data-view=setup]").hidden = false;
+  if (!configured) {
+    $("[data-setup-note]").textContent =
+      "Almost there: add a secret called SETUP_KEY in Cloudflare (Pages project → Settings → Variables and secrets), redeploy, then reload this page.";
+  }
+}
 async function showApp(user: { email: string; name: string }) {
   $("[data-view=login]").hidden = true;
+  $("[data-view=setup]").hidden = true;
   $("[data-view=app]").hidden = false;
   $("[data-user]").textContent = user.name || user.email;
   await Promise.all([loadStats(), loadLeads()]);
@@ -85,6 +96,32 @@ $<HTMLFormElement>("[data-login]").addEventListener("submit", async (e) => {
     const fd = new FormData(f);
     const r = await api("/api/admin/login", { method: "POST", body: JSON.stringify({ email: fd.get("email"), password: fd.get("password") }) });
     f.reset();
+    await showApp(r.user);
+  } catch (x) {
+    err.textContent = (x as Error).message;
+  } finally {
+    btn.disabled = false;
+  }
+});
+$<HTMLFormElement>("[data-setup]").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const f = e.currentTarget as HTMLFormElement;
+  const err = $("[data-setup-error]");
+  const fd = new FormData(f);
+  err.textContent = "";
+  if (fd.get("password") !== fd.get("password2")) {
+    err.textContent = "The two passwords don't match.";
+    return;
+  }
+  const btn = f.querySelector("button")!;
+  btn.disabled = true;
+  try {
+    const r = await api("/api/admin/setup", {
+      method: "POST",
+      body: JSON.stringify({ key: fd.get("key"), name: fd.get("name"), email: fd.get("email"), password: fd.get("password") }),
+    });
+    f.reset();
+    toast("Account created");
     await showApp(r.user);
   } catch (x) {
     err.textContent = (x as Error).message;
@@ -411,4 +448,17 @@ $("[data-drawer]").addEventListener("submit", async (e) => {
 // ---------- boot ----------
 api("/api/admin/me")
   .then((r) => showApp(r.user))
-  .catch(() => showLogin());
+  .catch(async (x) => {
+    if (x instanceof ApiError && x.status === 503) {
+      showLogin();
+      $("[data-login-error]").textContent = "The database isn't connected yet. Finish the Cloudflare setup steps, then reload.";
+      return;
+    }
+    try {
+      const s = await api("/api/admin/setup");
+      if (s.needed) return showSetup(Boolean(s.configured));
+    } catch {
+      /* fall through to login */
+    }
+    showLogin();
+  });

@@ -19,6 +19,8 @@ export interface Env {
   DB: D1Database;
   /** Secret used to hash IPs. Set in Pages > Settings > Variables and secrets. */
   IP_SALT?: string;
+  /** One-time key that lets you create the first admin account at /admin. */
+  SETUP_KEY?: string;
   /** Optional webhook (Discord/Slack/Google Chat) pinged on each new lead. */
   NOTIFY_WEBHOOK_URL?: string;
 }

@@ -28,6 +28,22 @@ import "../../styles/global.css";
       </form>
     </section>
 
+    <!-- First-run setup (only while no account exists) -->
+    <section class="adm-login" data-view="setup" hidden>
+      <form class="adm-card adm-login__card" data-setup>
+        <p class="adm-kicker"><span class="adm-pin"></span>First-time setup</p>
+        <h1>Create your account</h1>
+        <p class="adm-muted" data-setup-note>Enter the setup key you saved in Cloudflare, then choose your login.</p>
+        <label>Setup key<input name="key" type="password" autocomplete="off" required /></label>
+        <label>Your name<input name="name" autocomplete="name" value="Ratul Roy" required /></label>
+        <label>Email<input name="email" type="email" autocomplete="username" required /></label>
+        <label>Password (12+ characters)<input name="password" type="password" autocomplete="new-password" minlength="12" required /></label>
+        <label>Repeat password<input name="password2" type="password" autocomplete="new-password" minlength="12" required /></label>
+        <button class="adm-btn adm-btn--dark" type="submit">Create account</button>
+        <p class="adm-error" data-setup-error role="alert"></p>
+      </form>
+    </section>
+
     <!-- App -->
     <div class="adm-app" data-view="app" hidden>
       <header class="adm-top">
