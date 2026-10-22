@@ -1,0 +1,120 @@
+---
+// Dynamic SSR page: /<slug>. Rendered at the edge, cached by src/middleware.ts.
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Faq from "../components/Faq.astro";
+import ShareButton from "../components/ShareButton.astro";
+import { getPage, getRelated, isValidSlug } from "../lib/edge-data";
+import { breadcrumb, canonicalFor, faqPage, type Seo } from "../lib/seo";
+
+export const prerender = false; // this route runs on the Worker
+
+const { slug } = Astro.params;
+
+// 1) Reject junk before touching the database. An empty 404 response makes Astro serve
+//    src/pages/404.astro with a real 404 status (works with a prerendered 404 page too).
+if (!isValidSlug(slug)) return new Response(null, { status: 404, statusText: "Not Found" });
+
+// 2) Fetch everything the page needs in parallel (each call has its own timeout).
+const [page, related] = await Promise.all([getPage(slug), getRelated(slug)]);
+
+// 3) Correct status codes for crawlers.
+if (!page.ok && page.status === 404) return new Response(null, { status: 404, statusText: "Not Found" });
+if (!page.ok) {
+  // Temporary failure: 503 + Retry-After tells Google to come back, not to drop the URL.
+  Astro.response.status = 503;
+  Astro.response.statusText = "Service Unavailable";
+  Astro.response.headers.set("Retry-After", "120");
+}
+
+const site = Astro.site;
+const canonical = canonicalFor(site, Astro.url.pathname);
+const data = page.ok ? page.data : null;
+
+// 4) Map data to meta + JSON-LD.
+const seo: Seo = data
+  ? {
+      title: data.title,
+      description: data.description,
+      canonical,
+      type: "article",
+      publishedAt: data.publishedAt,
+      updatedAt: data.updatedAt,
+      image: data.image ? { url: data.image.src, width: data.image.width, height: data.image.height, alt: data.image.alt } : undefined,
+      jsonLd: [
+        {
+          "@type": "Article",
+          "@id": `${canonical}#article`,
+          headline: data.heading,
+          description: data.description,
+          datePublished: data.publishedAt,
+          dateModified: data.updatedAt,
+          author: { "@type": "Person", name: data.author },
+          mainEntityOfPage: canonical,
+          ...(data.image ? { image: { "@type": "ImageObject", url: data.image.src, width: data.image.width, height: data.image.height } } : {}),
+          publisher: { "@id": `${site?.origin}/#organization` },
+        },
+        { "@type": "Organization", "@id": `${site?.origin}/#organization`, name: "Example Site", url: `${site?.origin}/` },
+        breadcrumb(canonical, [
+          { name: "Home", url: `${site?.origin}/` },
+          { name: data.heading, url: canonical },
+        ]),
+        ...[faqPage(canonical, data.faqs)].filter((n): n is NonNullable<typeof n> => n !== null),
+      ],
+    }
+  : { title: "Temporarily unavailable", description: "This page is temporarily unavailable. Please try again in a few minutes.", canonical, noindex: true };
+---
+
+<BaseLayout seo={seo} lcpImage={data?.image ?? undefined}>
+  {
+    data ? (
+      <article>
+        <header>
+          <h1>{data.heading}</h1>
+          <p>
+            By {data.author} · Updated <time datetime={data.updatedAt}>{new Date(data.updatedAt).toLocaleDateString("en-GB", { dateStyle: "long" })}</time>
+          </p>
+        </header>
+
+        {data.image && (
+          <Image
+            src={data.image.src}
+            alt={data.image.alt}
+            width={data.image.width}
+            height={data.image.height}
+            widths={[480, 800, 1200]}
+            sizes="(min-width: 1024px) 800px, 100vw"
+            format="webp"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        )}
+
+        <div set:html={data.bodyHtml} />
+
+        <Faq faqs={data.faqs} />
+
+        {related.length > 0 && (
+          <nav aria-label="Related pages">
+            <h2>Related</h2>
+            <ul>
+              {related.map((r) => (
+                <li>
+                  <a href={`/${r.slug}`}>{r.title}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        <ShareButton url={canonical} title={data.title} />
+      </article>
+    ) : (
+      <section>
+        <h1>We'll be right back</h1>
+        <p>This page is temporarily unavailable. Please refresh in a minute.</p>
+      </section>
+    )
+  }
+</BaseLayout>

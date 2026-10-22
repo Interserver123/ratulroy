@@ -1,0 +1,8 @@
+---
+// Static by default (prerendered at build time).
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout seo={{ title: "Example Site: fast, crawlable pages at the edge", description: "Static pages by default, SSR only where content changes, cached at the Cloudflare edge for fast TTFB and clean indexing.", canonical: Astro.site!.origin + "/" }}>
+  <h1>Example Site</h1>
+</BaseLayout>

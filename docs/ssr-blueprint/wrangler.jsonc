@@ -1,0 +1,9 @@
+{
+  "name": "example-site",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // Bindings are read in code via: import { env } from "cloudflare:workers"
+  "d1_databases": [{ "binding": "DB", "database_name": "site-content", "database_id": "00000000-0000-0000-0000-000000000000" }],
+  "vars": { "CONTENT_API": "https://api.example.com" },
+  "observability": { "enabled": true }
+}

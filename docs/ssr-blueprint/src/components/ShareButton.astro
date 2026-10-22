@@ -1,0 +1,17 @@
+---
+// The only interactive piece: a tiny inline script, loaded only on pages that use it.
+// (For a framework component you would use client:visible / client:idle instead.)
+interface Props { url: string; title: string }
+const { url, title } = Astro.props;
+---
+
+<button type="button" data-share data-url={url} data-title={title}>Share</button>
+<script>
+  for (const b of document.querySelectorAll<HTMLButtonElement>("[data-share]")) {
+    b.addEventListener("click", async () => {
+      const data = { url: b.dataset.url!, title: b.dataset.title! };
+      if (navigator.share) await navigator.share(data).catch(() => undefined);
+      else await navigator.clipboard?.writeText(data.url);
+    });
+  }
+</script>

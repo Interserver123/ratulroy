@@ -1,0 +1,19 @@
+---
+// Static FAQ: native <details>, no JavaScript. Content is in the HTML for crawlers.
+interface Props { faqs: { q: string; a: string }[] }
+const { faqs } = Astro.props;
+---
+
+{
+  faqs.length > 0 && (
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Frequently asked questions</h2>
+      {faqs.map((f, i) => (
+        <details open={i === 0}>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </section>
+  )
+}

@@ -1,0 +1,9 @@
+---
+// Prerendered 404. Served for unknown URLs and whenever a route returns an empty 404 response.
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout seo={{ title: "Page not found", description: "The page you are looking for does not exist or has moved.", canonical: new URL("/404", Astro.site).href, noindex: true }}>
+  <h1>Page not found</h1>
+  <p><a href="/">Go to the homepage</a></p>
+</BaseLayout>
