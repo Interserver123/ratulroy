@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import { img } from "../../lib/img";
 import { site } from "../../data/site";
+import SocialLinks from "../SocialLinks.astro";
 
 // Form panel used on /contact and /book-strategy-call.
 interface Props {
@@ -50,6 +51,8 @@ const methods = [
             ))
           }
         </ul>
+        <p class="lp__follow">Follow my work</p>
+        <SocialLinks labels />
         <p class="lp__live"><span class="lp__dot" aria-hidden="true"></span>WhatsApp replies usually within 2 hours on working days (GMT+6)</p>
       </aside>
 
@@ -169,6 +172,7 @@ const methods = [
     font-size: 0.88rem;
     color: rgb(255 255 255 / 65%);
   }
+  .lp__follow { margin: 18px 0 0; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
   .lp__note {
     margin: 0;
     color: rgb(255 255 255 / 80%);

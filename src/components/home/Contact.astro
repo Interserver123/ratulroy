@@ -1,5 +1,6 @@
 ---
 import { site } from "../../data/site";
+import SocialLinks from "../SocialLinks.astro";
 import MapEmbed from "../MapEmbed.astro";
 ---
 
@@ -34,6 +35,7 @@ import MapEmbed from "../MapEmbed.astro";
           <a class="btn btn--ghost" href={site.whatsapp} rel="noopener" target="_blank">WhatsApp</a>
           <a class="btn btn--ghost" href={site.mapsUrl} rel="noopener" target="_blank">View on Google Maps · This is Ratul Roy</a>
         </div>
+        <SocialLinks labels />
       </div>
 
       <form class="contact__form" data-lead-form="contact" novalidate>

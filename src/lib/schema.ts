@@ -8,7 +8,7 @@ export const ids = {
 };
 
 /** Profiles that are the same entity: Google Business Profile + official social profiles. */
-export const sameAs = () => [site.mapsUrl, ...site.social.map((x) => x.href)];
+export const sameAs = () => [site.mapsUrl, ...site.social.filter((x) => x.sameAs !== false).map((x) => x.href)];
 
 export const languages = ["English", "Bengali"];
 

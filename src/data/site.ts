@@ -19,7 +19,13 @@ export const site = {
   countryCode: "BD",
   // Official profiles (Facebook Page, LinkedIn, Instagram, YouTube, X, Fiverr...). Each one is
   // added to the structured data as sameAs and shown as a link in the footer.
-  social: [] as { label: string; href: string }[],
+  // sameAs: false = shown on the site but not claimed as the same entity in structured data.
+  social: [
+    { label: "Facebook", name: "Ratul Roy on Facebook", href: "https://www.facebook.com/freelancerratulroy", icon: "facebook" },
+    { label: "LinkedIn", name: "Ratul Roy on LinkedIn", href: "https://www.linkedin.com/in/freelancerratulroy", icon: "linkedin" },
+    { label: "YouTube", name: "Ratul Roy on YouTube", href: "https://www.youtube.com/@iamratulroy", icon: "youtube" },
+    { label: "Wantrepreneur", name: "Wantrepreneur on Facebook", href: "https://www.facebook.com/wantrepreneur", icon: "facebook", sameAs: false },
+  ] as { label: string; name: string; href: string; icon: "facebook" | "linkedin" | "youtube"; sameAs?: boolean }[],
 };
 
 export type Link = { label: string; href: string };
