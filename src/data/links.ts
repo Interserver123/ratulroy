@@ -42,7 +42,7 @@ export const relatedLinks: Record<string, { title: string; text: string; href: s
   },
   about: {
     title: "About Ratul Roy",
-    text: "Local SEO consultant, Fiverr Level 2, 243+ reviews, helping businesses worldwide.",
+    text: "Local SEO consultant and founder of DigiPolli, helping businesses worldwide.",
     href: "/about",
   },
   "home-services": {

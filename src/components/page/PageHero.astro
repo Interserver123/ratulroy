@@ -32,9 +32,9 @@ const h1Parts = p.em && p.h1.includes(p.em) ? p.h1.split(p.em) : null;
 const stats = p.heroStats?.length
   ? p.heroStats
   : [
-      { value: "4.9★", label: "Fiverr rating" },
-      { value: "243", label: "Reviews" },
-      { value: "Level 2", label: "Fiverr seller" },
+      { value: "461", label: "Calls from one profile" },
+      { value: "+38%", label: "Map Pack visibility" },
+      { value: "$299", label: "Packages from" },
     ];
 const ctas = p.ctas?.length
   ? p.ctas
@@ -142,7 +142,7 @@ const sc = p.heroShowcase;
         <Image src={portrait} alt="" width={88} height={88} />
         <span>
           <b>Ratul Roy</b>
-          <small><i aria-hidden="true">★★★★★</i> 4.9 · 243 reviews</small>
+          <small>Local SEO Expert · Bangladesh</small>
         </span>
       </div>
       <p class="show__note">Real client data · <a href={sc.href ?? "/case-studies"}>see the case study →</a></p>
