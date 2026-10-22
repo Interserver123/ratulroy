@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import ContentPage from "../../layouts/ContentPage.astro";
+import { site } from "../../data/site";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -9,6 +10,24 @@ export async function getStaticPaths() {
     .map((entry) => ({ params: { slug: entry.id.replace(/^careers-/, "") }, props: { entry } }));
 }
 const { entry } = Astro.props;
+const d = entry.data;
+const path = `/careers/${entry.id.replace(/^careers-/, "")}`;
+
+// Google job posting (eligible for Google's job search experience).
+const job = {
+  "@type": "JobPosting",
+  "@id": `${site.url}${path}#job`,
+  title: "Junior Local SEO Specialist",
+  description: `<p>${d.lead ?? ""}</p><p>${d.description}</p>`,
+  datePosted: (d.updated ?? new Date()).toISOString().slice(0, 10),
+  employmentType: "FULL_TIME",
+  jobLocationType: "TELECOMMUTE",
+  applicantLocationRequirements: { "@type": "Country", name: "Bangladesh" },
+  hiringOrganization: { "@type": "Organization", name: site.name, sameAs: site.url, logo: `${site.url}/apple-touch-icon.png` },
+  baseSalary: { "@type": "MonetaryAmount", currency: "BDT", value: { "@type": "QuantitativeValue", minValue: 10000, maxValue: 12000, unitText: "MONTH" } },
+  directApply: false,
+  url: `${site.url}${path}`,
+};
 ---
 
-<ContentPage data={entry.data} path={`/careers/${entry.id.replace(/^careers-/, "")}`} />
+<ContentPage data={d} path={path} extraSchema={[job]} />

@@ -488,9 +488,9 @@ export const guides = [
     minutes: 11,
   },
   {
-    title: "How Local SEO Works in Bangladesh",
-    href: "/blog/how-local-seo-works-bangladesh",
-    text: "What actually happens between a customer typing a search and your phone ringing, step by step, including the parts that work differently in Bangladesh.",
+    title: "How Local SEO Works: Rank Higher on Google Maps",
+    href: "/blog/local-seo-helps-businesses-rank-google-maps",
+    text: "How Google picks the three businesses in the Map Pack, what actually moves rankings, and the parts that work differently in Bangladesh.",
     minutes: 12,
   },
   {
@@ -512,7 +512,7 @@ export const guides = [
     minutes: 12,
   },
   {
-    title: "How Much Does Local SEO Cost in Bangladesh?",
+    title: "How Much Does SEO Cost in Bangladesh? Local SEO Pricing",
     href: "/blog/local-seo-cost-bangladesh",
     text: "What Local SEO actually costs here, what pushes the number up or down, and how to tell whether a quote buys real work or just activity.",
     minutes: 11,

@@ -31,7 +31,6 @@ Workflow when adding or retitling a page: `npm run build && npm run og:cards && 
 
 ## Cannibalisation watch-list
 
-- `/blog/seo-cost-bangladesh` (all SEO pricing) vs `/blog/local-seo-cost-bangladesh` (Local SEO only): keep the scopes distinct and cross-linked.
 - `/industries/construction-seo` (commercial builds) vs `/industries/contractor-seo` (residential remodel): differentiated in copy and linked to each other.
 - `/services` (hub) vs `/local-seo-service` (pillar): hub links down; pillar owns "local SEO services".
 
@@ -58,7 +57,6 @@ All routes: rendering = SSG (prerendered). Generated from the production build.
 | `/blog` | SSG | index | https://ratulroy.com/blog | content/pages |
 | `/blog/ai-search-visibility-local-business` | SSG | index | https://ratulroy.com/blog/ai-search-visibility-local-business | content/blog |
 | `/blog/google-business-profile-optimization-checklist` | SSG | index | https://ratulroy.com/blog/google-business-profile-optimization-checklist | content/blog |
-| `/blog/how-local-seo-works-bangladesh` | SSG | index | https://ratulroy.com/blog/how-local-seo-works-bangladesh | content/blog |
 | `/blog/how-long-local-seo-takes-bangladesh` | SSG | index | https://ratulroy.com/blog/how-long-local-seo-takes-bangladesh | content/blog |
 | `/blog/how-to-choose-seo-specialist-bangladesh` | SSG | index | https://ratulroy.com/blog/how-to-choose-seo-specialist-bangladesh | content/blog |
 | `/blog/local-citations-nap-consistency-guide` | SSG | index | https://ratulroy.com/blog/local-citations-nap-consistency-guide | content/blog |
@@ -68,7 +66,6 @@ All routes: rendering = SSG (prerendered). Generated from the production build.
 | `/blog/local-seo-helps-businesses-rank-google-maps` | SSG | index | https://ratulroy.com/blog/local-seo-helps-businesses-rank-google-maps | content/blog |
 | `/blog/local-seo-vs-google-ads-bangladesh` | SSG | index | https://ratulroy.com/blog/local-seo-vs-google-ads-bangladesh | content/blog |
 | `/blog/local-seo-vs-traditional-seo` | SSG | index | https://ratulroy.com/blog/local-seo-vs-traditional-seo | content/blog |
-| `/blog/seo-cost-bangladesh` | SSG | index | https://ratulroy.com/blog/seo-cost-bangladesh | content/blog |
 | `/blog/seo-specialist-vs-agency-bangladesh` | SSG | index | https://ratulroy.com/blog/seo-specialist-vs-agency-bangladesh | content/blog |
 | `/blog/what-does-seo-specialist-do` | SSG | index | https://ratulroy.com/blog/what-does-seo-specialist-do | content/blog |
 | `/blog/what-is-local-seo-bangladesh` | SSG | index | https://ratulroy.com/blog/what-is-local-seo-bangladesh | content/blog |

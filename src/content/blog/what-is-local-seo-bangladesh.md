@@ -70,14 +70,14 @@ The difference from general website SEO is explained fully in [Local SEO vs Trad
 
 Any business that serves customers in a particular place benefits. It matters most where people search with urgency, or compare options nearby before choosing:
 
-- Clinics, diagnostic centres, dentists and pharmacies
+- Clinics, diagnostic centres, [dentists](/industries/dental-seo) and pharmacies
 - Restaurants, cafes, bakeries and sweet shops
 - Salons, parlours, gyms and spas
 - Coaching centres, language schools and training institutes
-- Repair and home services: AC, electrical, plumbing, pest control, mobile and laptop repair
+- Repair and home services: [AC](/industries/hvac-seo), [electrical](/industries/local-seo-for-electricians), [plumbing](/industries/plumbing-seo), [pest control](/industries/pest-control-seo), [car repair](/industries/auto-repair-seo), mobile and laptop repair
 - Showrooms: furniture, electronics, motorcycles, tiles and sanitary ware
 - Hotels, resorts and community centres
-- Law firms, accountants, travel agencies and real estate offices
+- [Law firms](/industries/legal-seo), accountants, travel agencies and [real estate offices](/industries/real-estate-seo)
 
 ## Businesses without a shopfront
 
@@ -107,4 +107,4 @@ Rankings are useful as a leading indicator, but checking one keyword from your o
 
 If your business does not appear at all, [why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps) covers the usual causes.
 
-> Local SEO is the discipline of being findable and choosable in your own area. For a business in Bangladesh it starts with an accurate, complete Google Business Profile and grows through reviews, a supporting website and consistency across the web. Next in the series: [How Local SEO Works in Bangladesh](/blog/how-local-seo-works-bangladesh). Or see [how the Local SEO service works](/local-seo-service).
+> Local SEO is the discipline of being findable and choosable in your own area. For a business in Bangladesh it starts with an accurate, complete Google Business Profile and grows through reviews, a supporting website and consistency across the web. Next in the series: [How Local SEO Works: Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps). Or see [how the Local SEO service works](/local-seo-service).

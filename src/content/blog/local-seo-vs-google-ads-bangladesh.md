@@ -33,7 +33,7 @@ Google also offers a pay-per-lead format called Local Services Ads in some count
 
 ## How Local SEO compares
 
-Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in [How Local SEO Works in Bangladesh](/blog/how-local-seo-works-bangladesh), and the wider SEO comparison in part 5, [Local SEO vs Traditional SEO](/blog/local-seo-vs-traditional-seo).
+Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in [how Local SEO works and ranks you on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps), and the wider SEO comparison in part 5, [Local SEO vs Traditional SEO](/blog/local-seo-vs-traditional-seo).
 
 ## Cost: renting versus owning
 

@@ -60,7 +60,7 @@ sections:
     heading: "Which Dhaka businesses gain the most from Google Maps visibility?"
     body:
       - "Anywhere customers search with urgency, or compare a few nearby options before calling, the three businesses in the Map Pack take most of the enquiries. Clinics are the clearest example: someone searching \"dentist near me open now\" in Gulshan rarely scrolls past the first three, which is why [dental clinic SEO](/industries/dental-seo) leans so heavily on the profile."
-    bullets: ["Clinics, dentists and diagnostic centres", "Restaurants, cafes and bakeries", "Salons, parlours and gyms", "Coaching centres and IELTS institutes", "Home services and repairs", "AC, electronics and mobile repair", "Showrooms: furniture, tiles, electronics", "Real estate, law and accounting firms", "Wholesale and distribution"]
+    bullets: ["Clinics, dentists and diagnostic centres", "Restaurants, cafes and bakeries", "Salons, parlours and gyms", "Coaching centres and IELTS institutes", "Home services and repairs", "AC, [car](/industries/auto-repair-seo), electronics and mobile repair", "Showrooms: furniture, tiles, electronics", "[Real estate](/industries/real-estate-seo), [law](/industries/legal-seo) and accounting firms", "Wholesale and distribution"]
   - type: steps
     alt: true
     eyebrow: The work

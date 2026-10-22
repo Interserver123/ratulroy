@@ -5,3 +5,7 @@
 # Electrician page renamed to match the target keyword
 /industries/electrician-seo /industries/local-seo-for-electricians 301
 /industries/electrician-seo/ /industries/local-seo-for-electricians 301
+
+# Merged overlapping articles (same search intent)
+/blog/seo-cost-bangladesh /blog/local-seo-cost-bangladesh 301
+/blog/how-local-seo-works-bangladesh /blog/local-seo-helps-businesses-rank-google-maps 301

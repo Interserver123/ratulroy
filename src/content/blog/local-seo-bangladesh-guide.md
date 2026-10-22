@@ -52,7 +52,7 @@ Google states that local results are based mainly on relevance, distance and pro
 - **Distance:** how far your business is from the searcher, or from the area named in the search. You cannot change where you are, but you can make sure Google has your location right.
 - **Prominence:** how well known and trusted Google thinks you are, judged from reviews, links, mentions across the web, and how people interact with your listing.
 
-The step-by-step mechanics are covered in part 3, [How Local SEO Works in Bangladesh](/blog/how-local-seo-works-bangladesh), and the general ranking system in [How Local SEO Helps Businesses Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps).
+The step-by-step mechanics and the ranking system are covered in part 3, [How Local SEO Works: Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps).
 
 ## Start with your Google Business Profile
 

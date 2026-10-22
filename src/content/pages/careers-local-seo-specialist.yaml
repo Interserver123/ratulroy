@@ -5,8 +5,8 @@ breadcrumb:
   - { label: Careers, href: /careers/local-seo-specialist }
   - { label: Local SEO Specialist, href: /careers/local-seo-specialist }
 eyebrow: "Full-time · Junior / Beginner–Intermediate"
-h1: "Join Our SEO Team"
-em: "SEO Team"
+h1: "Junior Local SEO Specialist Job: Join Our SEO Team"
+em: "Join Our SEO Team"
 lead: "We are looking for a Junior Local SEO Specialist who is ready to learn, work hard, and grow with real client projects."
 sub: "We are not looking for an expert. We are looking for someone who is serious about becoming one."
 heroChips: ["Full-time", "Remote", "৳10,000–৳12,000 / month", "Beginner to Intermediate"]
@@ -15,7 +15,7 @@ heroStats:
   - { value: "Remote", label: "Work type" }
   - { value: "15–20 min", label: "Application time" }
 ctas:
-  - { label: Start Application, href: "#apply" }
+  - { label: How to apply, href: "#apply" }
   - { label: Contact, href: /contact, style: ghost }
 sections:
   - type: cards
@@ -84,10 +84,10 @@ sections:
     id: apply
     eyebrow: How to apply
     heading: "How the application works"
-    intro: "Five short steps, estimated time 15 to 20 minutes. Your answers are saved on your device as you go, so you can finish later. Your CV (PDF or Word, up to 5 MB) is required."
+    intro: "Email your CV (PDF or Word) to [hello@ratulroy.com](mailto:hello@ratulroy.com) with the subject \"Application: Junior Local SEO Specialist\". Shortlisted candidates then go through the steps below."
     items:
-      - { title: Basic Information, text: "Who you are and how to reach you." }
-      - { title: "Skills & Experience", text: "What you have actually worked with so far." }
+      - { title: "Send your CV", text: "Email your CV with your name, phone or WhatsApp, and a few lines on what SEO you have worked on." }
+      - { title: "Skills & Experience", text: "A short questionnaire on what you have actually worked with so far." }
       - { title: Practical SEO Assessment, text: "Real scenarios, answered in your own words. We read your thinking, not your vocabulary; pasted answers score lower." }
       - { title: "Shortlisting & Verification", text: "A short call where shortlisted candidates talk through their answers." }
     body:
@@ -97,7 +97,8 @@ sections:
     heading: "Think you are a good fit?"
     intro: "Do not worry if you do not know everything. If you are serious about SEO, willing to learn and ready to work hard, apply."
     buttons:
-      - { label: Start Application, href: "#apply" }
+      - { label: Apply by email, href: "mailto:hello@ratulroy.com?subject=Application%3A%20Junior%20Local%20SEO%20Specialist" }
 pricing: none
 related: [about, contact]
 order: 100
+updated: 2026-10-22

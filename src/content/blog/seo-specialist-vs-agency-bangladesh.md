@@ -59,7 +59,7 @@ It is not always the case, and good agencies avoid it. But it is worth asking di
 
 Specialists are often assumed to be cheaper. Sometimes true, sometimes not. An experienced independent may charge more per hour than an agency junior, and be better value because fewer hours are wasted.
 
-Compare what is actually delivered per month rather than headline rates. Ask both what specifically happens in month one. My [honest breakdown of SEO cost in Bangladesh](/blog/seo-cost-bangladesh) covers what moves the price.
+Compare what is actually delivered per month rather than headline rates. Ask both what specifically happens in month one. My [honest breakdown of SEO cost in Bangladesh](/blog/local-seo-cost-bangladesh) covers what moves the price.
 
 ## Questions that work on both
 

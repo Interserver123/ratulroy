@@ -73,6 +73,6 @@ If a first conversation leaves you more confused than when you started, that wil
 
 Local SEO is not instant. Three to six months to measurable movement is normal, with compounding gains after that, and the starting condition of your profile and website changes everything. I break that down in [how long Local SEO takes in Bangladesh](/blog/how-long-local-seo-takes-bangladesh).
 
-On price, published entry figures in this market start around a few hundred dollars a month and rise with competition and the number of areas you need to cover. Anyone quoting a firm number before seeing your profile is quoting a package, not a plan. The full breakdown is in [how much SEO costs in Bangladesh](/blog/seo-cost-bangladesh).
+On price, published entry figures in this market start around a few hundred dollars a month and rise with competition and the number of areas you need to cover. Anyone quoting a firm number before seeing your profile is quoting a package, not a plan. The full breakdown is in [how much SEO costs in Bangladesh](/blog/local-seo-cost-bangladesh).
 
 The best signal is simple: does this person tell you things you did not want to hear? Someone willing to say a keyword is unrealistic, or that your site needs work before rankings will move, is someone worth hiring. You can read [my background](/about), see [how my Local SEO service works](/local-seo-service), or [book a call](/book-strategy-call) and put these questions to me directly.

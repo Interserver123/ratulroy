@@ -313,9 +313,9 @@ const schema = [
           <h3>Your call request is in</h3>
           <p data-done-text></p>
           <div class="btn-row bk-done__actions">
-            <a class="btn btn--dark" data-gcal target="_blank" rel="noopener">Add to Google Calendar</a>
-            <a class="btn btn--ghost" data-ics download="strategy-call.ics">Download .ics</a>
-            <a class="btn btn--ghost" data-wa target="_blank" rel="noopener">Message on WhatsApp</a>
+            <a class="btn btn--dark" href="https://calendar.google.com/calendar/" data-gcal target="_blank" rel="noopener">Add to Google Calendar</a>
+            <a class="btn btn--ghost" href="#book" data-ics download="strategy-call.ics">Download .ics</a>
+            <a class="btn btn--ghost" href={site.whatsapp} data-wa target="_blank" rel="noopener">Message on WhatsApp</a>
           </div>
         </div>
 
