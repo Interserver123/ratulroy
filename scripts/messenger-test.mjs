@@ -160,7 +160,7 @@ await webhook(msg(p5, "do you have any discount?"));
 out = await waitFor(async () => (await sends(p5)).length && (await sends(p5)));
 check("invented price blocked", out && !out[0].body.message.text.includes("$37"), out?.[0]?.body.message.text);
 t = await thread(p5);
-check("blocked answer hands over to human", t.conversation?.mode === "human");
+check("blocked answer flags 'needs you' but AI stays on", t.conversation?.mode === "ai" && !!t.conversation?.handoff_reason);
 
 // --- human handoff on request ---
 const p6 = id(6);
@@ -168,17 +168,26 @@ await webhook(msg(p6, "I want to talk to a real person"));
 out = await waitFor(async () => (await sends(p6)).length && (await sends(p6)));
 check("handoff message sent", out?.[0]?.body.message.text.includes("Ratul"), out);
 t = await thread(p6);
-check("conversation switched to human", t.conversation?.mode === "human");
+check("handover flags the chat for you", t.conversation?.mode === "ai" && t.conversation?.handoff_reason === "Customer asked for a person");
 await fetch(MOCK + "/__reset");
-await webhook(msg(p6, "are you there?"));
+await webhook(msg(p6, "what is local seo"));
+out = await waitFor(async () => (await sends(p6)).length && (await sends(p6)));
+check("AI keeps answering after a handover", out?.[0]?.body.message.text.startsWith("MOCK ANSWER"), out?.[0]?.body.message.text);
+// With "Stop AI after a handover" on, the chat pauses instead.
+await call("/api/admin/messenger/settings", { method: "PUT", body: { handoff_pauses_ai: true } });
+const p6b = id(61);
+await webhook(msg(p6b, "I want to talk to a real person"));
+await waitFor(async () => (await sends(p6b)).length);
+await webhook(msg(p6b, "are you there?"));
 await sleep(4000);
-check("AI stays silent in human mode", (await sends(p6)).length === 0);
+check("optional setting: AI silent after handover", (await thread(p6b)).conversation.mode === "human" && (await sends(p6b)).length === 1);
+await call("/api/admin/messenger/settings", { method: "PUT", body: { handoff_pauses_ai: false } });
 
 // --- Bengali handoff + quick reply payload ---
 const p7 = id(7);
 await webhook(msg(p7, "Talk to Ratul", { quick_reply: { payload: "RR_HUMAN" } }));
 out = await waitFor(async () => (await sends(p7)).length && (await sends(p7)));
-check("quick-reply 'Talk to Ratul' hands over", !!out?.length && (await thread(p7)).conversation.mode === "human");
+check("quick-reply 'Talk to Ratul' hands over", !!out?.length && !!(await thread(p7)).conversation.handoff_reason);
 
 // --- Page inbox echo pauses AI ---
 const p8 = id(8);
@@ -224,7 +233,7 @@ const p10 = id(10);
 await webhook(msg(p10, "MOCK_AI_DOWN please"));
 out = await waitFor(async () => (await sends(p10)).length && (await sends(p10)));
 check("AI outage -> fallback message", out?.[0]?.body.message.text.startsWith("Sorry"), out?.[0]?.body.message.text);
-check("AI outage -> human mode", (await thread(p10)).conversation.mode === "human");
+check("AI outage -> flagged for you", !!(await thread(p10)).conversation.handoff_reason);
 
 // --- global pause ---
 await call("/api/admin/messenger/settings", { method: "PUT", body: { bot_enabled: false } });
@@ -238,7 +247,7 @@ await call("/api/admin/messenger/settings", { method: "PUT", body: { bot_enabled
 r = await call("/api/admin/messenger/test-ai", { method: "POST", body: { message: "How do you improve Google Maps rankings?" } });
 check("Test AI dry run", r.status === 200 && r.data.reply?.startsWith("MOCK ANSWER") && r.data.sources.length > 0, r.data);
 r = await call("/api/admin/messenger/conversations?filter=human");
-check("conversation list filter", r.status === 200 && r.data.conversations.every((c) => c.mode === "human") && r.data.conversations.length >= 2);
+check("conversation list filter", r.status === 200 && r.data.conversations.every((c) => c.mode === "human" || c.handoff_reason) && r.data.conversations.length >= 2);
 r = await call("/api/admin/messenger/logs?level=error");
 check("errors logged", r.data.logs?.some((l) => l.scope === "send") && r.data.logs?.some((l) => l.scope === "ai"), r.data.logs?.map((l) => l.message));
 

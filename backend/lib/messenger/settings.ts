@@ -28,6 +28,7 @@ export const DEFAULTS = {
   fallback_message_bn: "দুঃখিত, এই প্রশ্নের উত্তর আমি এই মুহূর্তে দিতে পারছি না। রাতুলকে জানানো হয়েছে, উনি এখানে নিজেই উত্তর দেবেন।",
   auto_resume_hours: "24",
   pause_on_inbox_reply: "1",
+  handoff_pauses_ai: "0",
   max_replies_per_hour: "20",
   kb_active_scan: "",
   kb_last_scan_at: "",
@@ -49,6 +50,7 @@ export const EDITABLE: SettingKey[] = [
   "fallback_message_bn",
   "auto_resume_hours",
   "pause_on_inbox_reply",
+  "handoff_pauses_ai",
   "max_replies_per_hour",
 ];
 

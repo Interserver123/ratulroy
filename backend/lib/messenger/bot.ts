@@ -77,6 +77,13 @@ export async function setMode(env: Env, psid: string, mode: "ai" | "human", reas
     .run();
 }
 
+/** Marks a chat as "needs you" and alerts Ratul. The AI keeps answering unless the
+ *  "Stop AI after a handover" setting is on. */
+export async function flagHandoff(env: Env, s: Settings, psid: string, reason: string) {
+  if (s.handoff_pauses_ai === "1") return setMode(env, psid, "human", reason);
+  await env.DB.prepare("UPDATE mc_conversations SET handoff_reason = ?, handoff_at = ? WHERE psid = ?").bind(reason, nowIso(), psid).run();
+}
+
 function notify(env: Env, text: string) {
   if (!env.NOTIFY_WEBHOOK_URL) return Promise.resolve();
   return fetch(env.NOTIFY_WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ content: text, text }) })
@@ -306,7 +313,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
   if (payload === HUMAN_PAYLOAD || (text && wantsHuman(text))) {
     await senderAction(env, token, psid, "mark_seen");
     await deliver(env, token, psid, lang === "bn" ? s.handoff_message_bn : s.handoff_message_en, { source: "system", meta: { reason: "customer asked for a person" } });
-    await setMode(env, psid, "human", "Customer asked for a person");
+    await flagHandoff(env, s, psid, "Customer asked for a person");
     await notify(env, `Messenger: ${conv.name ?? psid} asked to talk to you. Open /admin to reply.`);
     await log(env, "info", "handoff", `Handoff requested by ${psid}`);
     return;
@@ -320,8 +327,8 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
     .bind(psid, new Date(Date.now() - 3600_000).toISOString())
     .first<{ n: number }>();
   if ((recent?.n ?? 0) >= max) {
-    await setMode(env, psid, "human", "Reply limit reached");
-    await log(env, "warn", "bot", `Reply limit (${max}/h) reached for ${psid}; switched to human`);
+    await flagHandoff(env, s, psid, "Reply limit reached");
+    await log(env, "warn", "bot", `Reply limit (${max}/h) reached for ${psid}; skipped this message`);
     await notify(env, `Messenger: ${conv.name ?? psid} hit the AI reply limit. Please take over in /admin.`);
     return;
   }
@@ -369,7 +376,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
   } catch (e) {
     await log(env, "error", "ai", `AI reply failed for ${psid}`, { error: (e as Error).message, status: (e as AiError).status });
     await deliver(env, token, psid, lang === "bn" ? s.fallback_message_bn : s.fallback_message_en, { source: "system", meta: { reason: "ai_error" } });
-    await setMode(env, psid, "human", "AI error");
+    await flagHandoff(env, s, psid, "AI error");
     await notify(env, `Messenger: AI could not answer ${conv.name ?? psid}. Please reply in /admin.`);
     return;
   }
@@ -383,7 +390,7 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
   });
   await env.DB.prepare("UPDATE mc_conversations SET lang = ? WHERE psid = ?").bind(a.lang, psid).run();
   if (sent.ok && a.handoff === "now") {
-    await setMode(env, psid, "human", "Assistant handed over");
+    await flagHandoff(env, s, psid, "Assistant handed over");
     await notify(env, `Messenger: ${conv.name ?? psid} needs you personally. Open /admin to reply.`);
   }
 }

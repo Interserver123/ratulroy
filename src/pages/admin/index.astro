@@ -332,6 +332,7 @@ const logo = img("brand/logo-portrait.jpg");
                 <label>When the AI can't answer (Bengali)<textarea name="fallback_message_bn" rows="2"></textarea></label>
                 <label>Give a chat back to the AI after (hours, 0 = never)<input name="auto_resume_hours" inputmode="numeric" /></label>
                 <label class="adm-check mc-check"><input type="checkbox" name="pause_on_inbox_reply" /> Pause the AI in a chat when I reply from the Facebook inbox</label>
+                <label class="adm-check mc-check"><input type="checkbox" name="handoff_pauses_ai" /> Stop AI replies in a chat after it hands the chat to me (off = the AI keeps answering everyone; you still get a "Needs you" alert)</label>
               </div>
             </article>
             <div class="mc-save mc-span"><button class="adm-btn adm-btn--dark adm-btn--pill" type="submit">Save settings</button><span class="adm-muted mc-small">Secrets are encrypted on the server and never shown again.</span></div>

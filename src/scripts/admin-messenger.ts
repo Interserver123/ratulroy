@@ -100,7 +100,7 @@ export function mountMessenger({ api, toast, esc, when }: Helpers) {
             (c) => `<li><button type="button" data-psid="${esc(c.psid)}" aria-current="${c.psid === current}">
         <span class="ov-av">${esc((c.name || "?").slice(0, 1))}</span>
         <span><b>${esc(c.name || "Messenger user")}</b><small>${esc(c.last_preview ?? "")}</small></span>
-        <span class="r"><small>${esc(when(c.last_message_at))}</small>${c.mode === "human" ? '<span class="adm-badge adm-badge--new">You</span>' : '<span class="adm-badge adm-badge--qualified">AI</span>'}${c.unread ? `<span class="mc-unread">${c.unread}</span>` : ""}</span>
+        <span class="r"><small>${esc(when(c.last_message_at))}</small>${c.mode === "human" ? '<span class="adm-badge adm-badge--new">You</span>' : c.handoff_reason ? '<span class="adm-badge adm-badge--contacted">Needs you</span>' : '<span class="adm-badge adm-badge--qualified">AI</span>'}${c.unread ? `<span class="mc-unread">${c.unread}</span>` : ""}</span>
       </button></li>`,
           )
           .join("")
@@ -134,8 +134,8 @@ export function mountMessenger({ api, toast, esc, when }: Helpers) {
     const draft = box.querySelector<HTMLTextAreaElement>("textarea")?.value ?? "";
     box.innerHTML = `
       <div class="mc-thead">
-        <div><h2>${esc(c.name || "Messenger user")}</h2><small class="adm-muted">${c.mode === "human" ? `You're handling this${c.handoff_reason ? ` · ${esc(c.handoff_reason)}` : ""}` : "AI is replying"} · ${esc(WINDOW[r.window])}</small></div>
-        <button class="adm-btn adm-btn--pill" type="button" data-mc-mode="${c.mode === "human" ? "ai" : "human"}">${c.mode === "human" ? "Let AI reply again" : "Take over"}</button>
+        <div><h2>${esc(c.name || "Messenger user")}</h2><small class="adm-muted">${c.mode === "human" ? `You're handling this${c.handoff_reason ? ` · ${esc(c.handoff_reason)}` : ""}` : c.handoff_reason ? `AI is replying · needs you: ${esc(c.handoff_reason)}` : "AI is replying"} · ${esc(WINDOW[r.window])}</small></div>
+        <div class="adm-actions" style="margin:0">${c.mode === "ai" && c.handoff_reason ? '<button class="adm-btn adm-btn--pill" type="button" data-mc-resolve>Mark as handled</button>' : ""}<button class="adm-btn adm-btn--pill" type="button" data-mc-mode="${c.mode === "human" ? "ai" : "human"}">${c.mode === "human" ? "Let AI reply again" : "Take over"}</button></div>
       </div>
       ${status?.settings?.bot_enabled !== "1" ? `<p class="mc-warn">The <b>AI replies</b> switch (top right) is off, so the assistant isn't answering anyone.</p>` : c.mode === "human" ? `<p class="mc-warn">The AI is paused in this chat. Press <b>Let AI reply again</b> to let it answer.</p>` : ""}
       <div class="mc-msgs">${(r.messages as any[])
@@ -162,6 +162,11 @@ export function mountMessenger({ api, toast, esc, when }: Helpers) {
   }
 
   $("[data-mc-thread]").addEventListener("click", async (e) => {
+    if ((e.target as HTMLElement).closest("[data-mc-resolve]") && current) {
+      await api(`/api/admin/messenger/conversations/${current}`, { method: "PATCH", body: JSON.stringify({ resolve: true }) }).catch((x) => toast((x as Error).message));
+      toast("Marked as handled");
+      return void (await Promise.all([openThread(current), loadConvs(), loadStatus()]));
+    }
     const b = (e.target as HTMLElement).closest<HTMLElement>("[data-mc-mode]");
     if (!b || !current) return;
     try {

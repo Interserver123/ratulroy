@@ -1,5 +1,5 @@
 // GET   /api/admin/messenger/conversations/:psid  — thread (marks it read)
-// PATCH /api/admin/messenger/conversations/:psid  {mode:"ai"|"human"}
+// PATCH /api/admin/messenger/conversations/:psid  {mode:"ai"|"human"} or {resolve:true}
 // POST  /api/admin/messenger/conversations/:psid  {text} — manual reply via Send API
 import type { Ctx } from "../../../../../backend/lib/types";
 import { fail, json, readJson, str } from "../../../../../backend/lib/http";
@@ -23,7 +23,11 @@ export const onRequestGet = async ({ env, params }: Ctx<"psid">) => {
 
 export const onRequestPatch = async ({ env, params, request, data }: Ctx<"psid">) => {
   if (!valid(params.psid)) return fail(404, "Not found");
-  const body = await readJson<{ mode?: string }>(request, 1024);
+  const body = await readJson<{ mode?: string; resolve?: boolean }>(request, 1024);
+  if (body?.resolve) {
+    await env.DB.prepare("UPDATE mc_conversations SET handoff_reason = NULL, handoff_at = NULL WHERE psid = ? AND mode = 'ai'").bind(params.psid).run();
+    return json({ ok: true });
+  }
   if (body?.mode !== "ai" && body?.mode !== "human") return fail(422, "Invalid mode");
   await setMode(env, params.psid, body.mode, body.mode === "human" ? `Taken over by ${data.user?.name ?? "admin"}` : null);
   await log(env, "info", "handoff", `${data.user?.email} set ${params.psid} to ${body.mode === "ai" ? "AI replies" : "human replies"}`);

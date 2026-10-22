@@ -12,7 +12,7 @@ export async function status(env: Ctx["env"], origin: string) {
     kbStats(env),
     env.DB.prepare(
       `SELECT COUNT(*) AS conversations,
-              SUM(CASE WHEN mode = 'human' THEN 1 ELSE 0 END) AS human,
+              SUM(CASE WHEN mode = 'human' OR handoff_reason IS NOT NULL THEN 1 ELSE 0 END) AS human,
               SUM(unread) AS unread
          FROM mc_conversations`,
     ).first(),
