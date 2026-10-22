@@ -11,7 +11,7 @@ Replies to messages on your Facebook Page using only what your website says. Whe
 5. The AI answers only from those pages plus the "Extra facts" you write in Settings. It is told never to invent prices, offers, policies or services. As a second check, any money amount in the answer must appear on your website, otherwise the answer is replaced by your "can't answer" message and the chat is handed to you.
 6. The reply is sent through Meta's Send API. If Meta refuses, the message is marked "Not delivered" with Meta's reason. It is never shown as sent.
 
-When the AI can't help (the person asks for a human or taps **Talk to Ratul**, the answer isn't on your site, the AI fails, or the hourly limit is hit), it tells them Ratul will reply, marks the chat **Needs you** and alerts you. It keeps answering that person's later messages. Press **Mark as handled** when you're done. To make the AI go quiet after a handover instead, tick "Stop AI replies in a chat after it hands the chat to me" in Settings.
+When the AI can't help (the person asks for a human or taps **Talk to Ratul**, the answer isn't on your site, the AI fails, or the hourly limit is hit), it tells them to wait a little for Ratul sir, marks the chat **Needs you** and alerts you. It keeps answering that person's later messages. If they send 2 more messages while waiting and nobody has replied, it shares your phone / WhatsApp number once (change the number or the count in Settings, 0 = never). Press **Mark as handled** when you're done. To make the AI go quiet after a handover instead, tick "Stop AI replies in a chat after it hands the chat to me" in Settings.
 
 The AI only goes quiet in a chat when:
 

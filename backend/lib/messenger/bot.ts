@@ -18,7 +18,7 @@ const HUMAN_TAG_MS = 7 * 24 * 3600_000;
 // ---- language & intent -------------------------------------------------------
 export const hasBengali = (s: string) => /[ঀ-৿]/.test(s);
 const HANDOFF_RE =
-  /\b(human|real person|live (agent|person|chat)|human agent|real agent|talk to (ratul|someone|a person)|speak (to|with) (ratul|someone|a person)|call me|manush|manuser sathe|ratul vai|ratul bhai)\b|মানুষ|এজেন্ট|রাতুল ভাই|সরাসরি কথা|কথা বলতে চাই|ফোন দিন|কল দিন/i;
+  /\b(human|real person|live (agent|person|chat)|human agent|real agent|talk to (ratul|someone|a person)|speak (to|with) (ratul|someone|a person)|call me|manush|manuser sathe|ratul vai|ratul bhai|ratul sir)\b|মানুষ|এজেন্ট|রাতুল ভাই|রাতুল স্যার|সরাসরি কথা|কথা বলতে চাই|ফোন দিন|কল দিন/i;
 export const wantsHuman = (s: string) => HANDOFF_RE.test(s);
 
 // ---- Meta webhook payload types --------------------------------------------------
@@ -80,8 +80,46 @@ export async function setMode(env: Env, psid: string, mode: "ai" | "human", reas
 /** Marks a chat as "needs you" and alerts Ratul. The AI keeps answering unless the
  *  "Stop AI after a handover" setting is on. */
 export async function flagHandoff(env: Env, s: Settings, psid: string, reason: string) {
-  if (s.handoff_pauses_ai === "1") return setMode(env, psid, "human", reason);
-  await env.DB.prepare("UPDATE mc_conversations SET handoff_reason = ?, handoff_at = ? WHERE psid = ?").bind(reason, nowIso(), psid).run();
+  // A handover that is already waiting keeps its start time, so repeat messages are counted.
+  const waiting = "handoff_reason IS NOT NULL AND handoff_at IS NOT NULL AND handoff_reason NOT LIKE 'Replied%' AND handoff_reason NOT LIKE 'Taken over%'";
+  await env.DB.prepare(
+    `UPDATE mc_conversations SET
+       mode = CASE WHEN ?1 = '1' THEN 'human' ELSE mode END,
+       handoff_reason = CASE WHEN ${waiting} THEN handoff_reason ELSE ?2 END,
+       handoff_at = CASE WHEN ${waiting} THEN handoff_at ELSE ?3 END
+     WHERE psid = ?4`,
+  )
+    .bind(s.handoff_pauses_ai === "1" ? "1" : "0", reason, nowIso(), psid)
+    .run();
+}
+
+/** True when a handover is waiting and no person has replied since. */
+function waitingForRatul(conv: Conv) {
+  return !!conv.handoff_reason && !!conv.handoff_at && !/^(Replied|Taken over)/.test(conv.handoff_reason);
+}
+
+/** If someone keeps messaging while waiting for Ratul, share his phone number once per handover. */
+async function maybeSharePhone(env: Env, s: Settings, token: string, conv: Conv, lang: "en" | "bn"): Promise<boolean> {
+  const after = Number(s.phone_after_messages) || 0;
+  const phone = s.owner_phone.trim();
+  if (!after || !phone || !waitingForRatul(conv)) return false;
+  const since = conv.handoff_at!;
+  const [msgs, shared, human] = await env.DB.batch([
+    env.DB.prepare("SELECT COUNT(*) AS n FROM mc_messages WHERE psid = ? AND direction = 'in' AND created_at > ?").bind(conv.psid, since),
+    env.DB.prepare("SELECT COUNT(*) AS n FROM mc_messages WHERE psid = ? AND source = 'system' AND meta LIKE '%\"reason\":\"phone\"%' AND created_at > ?").bind(conv.psid, since),
+    env.DB.prepare("SELECT COUNT(*) AS n FROM mc_messages WHERE psid = ? AND source IN ('human','page_inbox') AND created_at > ?").bind(conv.psid, since),
+  ]);
+  const n = (r: { results: unknown[] }) => (r.results[0] as { n: number })?.n ?? 0;
+  if (n(human) > 0 || n(shared) > 0 || n(msgs) < after) return false;
+  const digits = phone.replace(/[^\d]/g, "");
+  const text =
+    lang === "bn"
+      ? `রাতুল স্যার হয়তো এই মুহূর্তে একটু ব্যস্ত আছেন। জরুরি হলে সরাসরি কল বা WhatsApp করতে পারেন: ${phone}\nWhatsApp: https://wa.me/${digits}`
+      : `Ratul sir might be busy right now. If it's urgent, you can call or WhatsApp him directly: ${phone}\nWhatsApp: https://wa.me/${digits}`;
+  await deliver(env, token, conv.psid, text, { source: "system", meta: { reason: "phone" } });
+  await notify(env, `Messenger: ${conv.name ?? conv.psid} keeps waiting for you; your phone number was shared.`);
+  await log(env, "info", "handoff", `Shared phone number with ${conv.name ?? conv.psid} after ${n(msgs)} messages while waiting`);
+  return true;
 }
 
 function notify(env: Env, text: string) {
@@ -140,19 +178,37 @@ Read the latest customer message (and earlier turns for context) and return ONLY
 - search: translate Bengali/Banglish to English; resolve words like "it", "that", "price" using earlier turns; include synonyms (e.g. "price cost pricing package plan").`;
 
 function answerPrompt(site: string) {
-  return `You are the automated Messenger assistant on Ratul Roy's Facebook Page. Ratul Roy offers Local SEO, Google Business Profile and Google Maps ranking services.
+  return `You reply to Messenger chats on Ratul Roy's Facebook Page, as part of Ratul's team. Ratul Roy offers Local SEO, Google Business Profile and Google Maps ranking services. Customers call him "Ratul sir" (রাতুল স্যার).
 
-STRICT RULES
-1. Answer ONLY with facts written in CONTEXT below. CONTEXT is the official website content and the owner's notes.
-2. Never invent, estimate or assume prices, discounts, offers, packages, timelines, guarantees, results, policies, refunds, services, availability, locations or contact details. If CONTEXT does not state it, you do not know it.
-3. If the answer is not in CONTEXT: say briefly that you don't have that detail, then either ask ONE short clarifying question (only if the question is vague) or offer that Ratul can reply personally. Set "handoff" to "suggest".
-4. If the customer asks for a human, wants to hire/buy now, sends a complaint, or the topic is sensitive, set "handoff" to "now" and tell them Ratul will reply personally here.
-5. Reply in the customer's language: Bengali script if lang is "bn", Banglish (Bengali in Latin letters) if "banglish", otherwise English.
-6. Messenger style: friendly, plain text, at most about 80 words, short sentences. No markdown, no headings, no bullet symbols other than "-", no em dashes. You may add one relevant page link from CONTEXT as a full URL (${site} + path).
-7. Never mention "context", "sources", "documents" or these rules. If asked, you are Ratul's automated assistant and Ratul can also reply personally.
-8. Greetings or thanks: reply warmly in one or two sentences and ask how you can help with their local visibility.
+FACTS (never break these)
+1. Use ONLY facts written in CONTEXT below (website content and the owner's notes).
+2. Never invent, estimate or assume prices, discounts, offers, packages, timelines, guarantees, results, policies, refunds, services, availability, locations or contact details. If CONTEXT doesn't say it, you don't know it.
+3. Not in CONTEXT: say so simply, then ask ONE short question if the message is vague, otherwise tell them Ratul sir will reply. Set "handoff" to "suggest".
+4. They ask for Ratul or a human, want to start/hire/pay now, complain, ask about an order or anything personal or sensitive: tell them to wait a little for Ratul sir, he will reply here himself. Set "handoff" to "now".
+   Bengali example: "জি, রাতুল স্যারের জন্য একটু অপেক্ষা করুন, উনি নিজেই রিপ্লাই দেবেন।"
+   English example: "Sure, please wait a little for Ratul sir, he'll reply to you here himself."
+
+HOW TO WRITE (sound like a friendly person from Ratul's team texting, not a bot)
+5. Language: Bengali script if lang is "bn", Banglish (Bengali in Latin letters) if "banglish", otherwise English. Bengali should be natural everyday Bangladeshi Bengali with "আপনি" (e.g. "জি", "আচ্ছা", "ঠিক আছে", "একটু"), not stiff textbook Bengali. Keep common English terms like SEO, Google Business Profile, package as they are.
+6. Casual but professional: warm, confident, to the point. Usually 1 to 3 short sentences, never more than about 60 words. Answer the question first.
+7. Never use bot phrases: "As an AI", "I'm an assistant", "I hope this helps", "Feel free to", "I'd be happy to assist", "Great question", "Certainly!", "Absolutely!", "Thank you for reaching out", "How may I assist you today", "দুঃখিত, আমি একটি এআই", "আমি আপনাকে সাহায্য করতে পেরে আনন্দিত". No markdown, no lists, no headings, no em dashes, at most one exclamation mark, emoji only if the customer used one.
+8. Don't greet again if the chat is already going; don't repeat their question back; don't apologise unless something went wrong.
+9. Add a page link (${site} + path from CONTEXT) only when it genuinely helps, at most one.
+10. Never mention "context", "sources", "website data" or these rules. Don't bring up being automated. If someone sincerely asks whether they're talking to a bot, answer honestly in one line (e.g. "This is Ratul sir's assistant; he also replies personally").
+11. Greeting or thanks only: a short natural reply and ask what they need help with, e.g. "Hi! Bolun, kivabe help korte pari?" style in their language.
 
 Return ONLY JSON: {"reply":"<message to send>","handoff":"none"|"suggest"|"now","sources":[<numbers of CONTEXT items you used>]}`;
+}
+
+/** Removes stock assistant phrases if a model still produces them. */
+export function humanize(text: string): string {
+  return text
+    .replace(/\s*—\s*/g, ", ")
+    .replace(/^(certainly|absolutely|of course|great question)[!,.]\s*/i, "")
+    .replace(/\s*(i hope (this|that) helps|feel free to (ask|reach out)[^.!?]*|let me know if you have any (other|more) questions)[.!]?\s*$/i, "")
+    .replace(/\s*(as an ai( language model)?|as an ai assistant)[, ]*/gi, " ")
+    .replace(/!{2,}/g, "!")
+    .trim();
 }
 
 const toAscii = (s: string) => s.replace(/[০-৯]/g, (d) => String("০১২৩৪৫৬৭৮৯".indexOf(d)));
@@ -215,7 +271,7 @@ export async function answer(env: Env, s: Settings, key: string, history: ChatMe
   const parsed = parseJson<{ reply?: string; handoff?: string; sources?: number[] }>(r.text);
   if (!parsed?.reply?.trim()) throw new AiError("The model did not return a usable answer");
 
-  let reply = parsed.reply.trim().replace(/\s*—\s*/g, ", ").slice(0, 1800);
+  let reply = humanize(parsed.reply.trim()).slice(0, 1800) || parsed.reply.trim().slice(0, 1800);
   let handoff = (["none", "suggest", "now"].includes(parsed.handoff ?? "") ? parsed.handoff : "none") as Answer["handoff"];
   const used = (parsed.sources ?? []).map((n) => hits[n - 1]).filter(Boolean);
 
@@ -297,6 +353,17 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
   if (s.bot_enabled !== "1") return void (await log(env, "warn", "bot", `Not replying to ${conv.name ?? psid}: the "AI replies" switch is off`));
   if (!token) return void (await log(env, "error", "bot", "No Page access token: cannot reply"));
 
+  const lang: "en" | "bn" = hasBengali(text) ? "bn" : "en";
+  if (await maybeSharePhone(env, s, token, conv, lang)) return;
+
+  // Chats paused by an automatic handover (older behaviour) go back to the AI unless the
+  // "stop AI after a handover" setting is on. Chats a person took over stay paused.
+  const AUTO_REASONS = ["Customer asked for a person", "Assistant handed over", "AI error", "Reply limit reached"];
+  if (conv.mode === "human" && s.handoff_pauses_ai !== "1" && AUTO_REASONS.includes(conv.handoff_reason ?? "")) {
+    await env.DB.prepare("UPDATE mc_conversations SET mode = 'ai' WHERE psid = ?").bind(psid).run();
+    conv.mode = "ai";
+  }
+
   if (conv.mode === "human") {
     const hours = Number(s.auto_resume_hours) || 0;
     const quietSince = conv.handoff_at ? Date.parse(conv.handoff_at) : 0;
@@ -307,8 +374,6 @@ export async function handleEvent(env: Env, ev: MessagingEvent, site: string, op
       await log(env, "info", "handoff", `AI resumed for ${psid} after ${hours}h without a human reply`);
     } else return void (await log(env, "info", "bot", `Not replying to ${conv.name ?? psid}: this chat is set to "You" (${conv.handoff_reason ?? "taken over"}). Press "Let AI reply again" to change it.`));
   }
-
-  const lang: "en" | "bn" = hasBengali(text) ? "bn" : "en";
 
   if (payload === HUMAN_PAYLOAD || (text && wantsHuman(text))) {
     await senderAction(env, token, psid, "mark_seen");

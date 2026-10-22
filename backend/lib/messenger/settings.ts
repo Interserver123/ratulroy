@@ -22,13 +22,15 @@ export const DEFAULTS = {
   ai_model: "openai/gpt-4o-mini",
   ai_temperature: "0.2",
   owner_notes: "",
-  handoff_message_en: "Thanks! I've passed this to Ratul and he'll reply here personally as soon as he can.",
-  handoff_message_bn: "ধন্যবাদ! আমি বিষয়টি রাতুলকে জানিয়েছি, উনি যত দ্রুত সম্ভব এখানে নিজেই উত্তর দেবেন।",
-  fallback_message_en: "Sorry, I couldn't answer that automatically. I've let Ratul know and he'll reply here personally.",
-  fallback_message_bn: "দুঃখিত, এই প্রশ্নের উত্তর আমি এই মুহূর্তে দিতে পারছি না। রাতুলকে জানানো হয়েছে, উনি এখানে নিজেই উত্তর দেবেন।",
+  handoff_message_en: "Got it. Please wait a little for Ratul sir, he'll reply to you here himself.",
+  handoff_message_bn: "জি, রাতুল স্যারের জন্য একটু অপেক্ষা করুন। উনি নিজেই এখানে আপনাকে রিপ্লাই দেবেন।",
+  fallback_message_en: "This one's best answered by Ratul sir himself. Please wait a little, he'll reply to you here.",
+  fallback_message_bn: "এই বিষয়টা রাতুল স্যার নিজেই ভালো বলতে পারবেন। একটু অপেক্ষা করুন, উনি এখানে আপনাকে রিপ্লাই দেবেন।",
   auto_resume_hours: "24",
   pause_on_inbox_reply: "1",
   handoff_pauses_ai: "0",
+  owner_phone: "+8801866820758",
+  phone_after_messages: "2",
   max_replies_per_hour: "20",
   kb_active_scan: "",
   kb_last_scan_at: "",
@@ -51,13 +53,23 @@ export const EDITABLE: SettingKey[] = [
   "auto_resume_hours",
   "pause_on_inbox_reply",
   "handoff_pauses_ai",
+  "owner_phone",
+  "phone_after_messages",
   "max_replies_per_hour",
 ];
+
+/** Earlier default texts: if one is still stored unchanged, use the current default instead. */
+const OLD_DEFAULTS: Partial<Record<SettingKey, string>> = {
+  "handoff_message_en": "Thanks! I've passed this to Ratul and he'll reply here personally as soon as he can.",
+  "handoff_message_bn": "ধন্যবাদ! আমি বিষয়টি রাতুলকে জানিয়েছি, উনি যত দ্রুত সম্ভব এখানে নিজেই উত্তর দেবেন।",
+  "fallback_message_en": "Sorry, I couldn't answer that automatically. I've let Ratul know and he'll reply here personally.",
+  "fallback_message_bn": "দুঃখিত, এই প্রশ্নের উত্তর আমি এই মুহূর্তে দিতে পারছি না। রাতুলকে জানানো হয়েছে, উনি এখানে নিজেই উত্তর দেবেন।"
+};
 
 export async function getSettings(env: Env): Promise<Settings> {
   const { results } = await env.DB.prepare("SELECT key, value FROM app_settings WHERE key NOT LIKE 'secret:%'").all<{ key: string; value: string }>();
   const out = { ...DEFAULTS } as Settings;
-  for (const r of results) if (r.key in DEFAULTS) out[r.key as SettingKey] = r.value;
+  for (const r of results) if (r.key in DEFAULTS && OLD_DEFAULTS[r.key as SettingKey] !== r.value) out[r.key as SettingKey] = r.value;
   return out;
 }
 

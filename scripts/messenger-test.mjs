@@ -182,6 +182,30 @@ await webhook(msg(p6b, "are you there?"));
 await sleep(4000);
 check("optional setting: AI silent after handover", (await thread(p6b)).conversation.mode === "human" && (await sends(p6b)).length === 1);
 await call("/api/admin/messenger/settings", { method: "PUT", body: { handoff_pauses_ai: false } });
+await webhook(msg(p6b, "hello?")); // 2nd message while waiting: phone number is shared
+await waitFor(async () => (await sends(p6b)).some((c) => c.body.message.text.includes("+8801866820758")));
+await sleep(3000);
+await webhook(msg(p6b, "what is local seo"));
+out = await waitFor(async () => (await sends(p6b)).some((c) => c.body.message.text.startsWith("MOCK ANSWER")));
+check("chat paused by an automatic handover replies again once the setting is off", !!out && (await thread(p6b)).conversation.mode === "ai");
+
+// --- keeps messaging while waiting for Ratul -> phone number shared once ---
+const pw = id(62);
+await webhook(msg(pw, "আমি রাতুল ভাইয়ের সাথে সরাসরি কথা বলতে চাই"));
+out = await waitFor(async () => (await sends(pw)).length && (await sends(pw)));
+check("Bengali handover says wait for Ratul sir", out?.[0]?.body.message.text.includes("রাতুল স্যারের জন্য"), out?.[0]?.body.message.text);
+await webhook(msg(pw, "কেউ আছেন?"));
+await waitFor(async () => (await sends(pw)).length >= 2);
+await sleep(3000);
+await webhook(msg(pw, "হ্যালো?"));
+out = await waitFor(async () => {
+  const x = await sends(pw);
+  return x.some((c) => c.body.message.text.includes("+8801866820758")) && x;
+});
+check("phone number shared after repeated messages", !!out && out.find((c) => c.body.message.text.includes("+8801866820758")).body.message.text.includes("wa.me/8801866820758"));
+await webhook(msg(pw, "আবার?"));
+await sleep(4000);
+check("phone number shared only once", (await sends(pw)).filter((c) => c.body.message.text.includes("+8801866820758")).length === 1);
 
 // --- Bengali handoff + quick reply payload ---
 const p7 = id(7);
@@ -232,7 +256,7 @@ check("failed send stored as failed with Meta's error", !!t && JSON.parse(t.mess
 const p10 = id(10);
 await webhook(msg(p10, "MOCK_AI_DOWN please"));
 out = await waitFor(async () => (await sends(p10)).length && (await sends(p10)));
-check("AI outage -> fallback message", out?.[0]?.body.message.text.startsWith("Sorry"), out?.[0]?.body.message.text);
+check("AI outage -> fallback message", out?.[0]?.body.message.text.includes("Ratul sir"), out?.[0]?.body.message.text);
 check("AI outage -> flagged for you", !!(await thread(p10)).conversation.handoff_reason);
 
 // --- global pause ---

@@ -331,6 +331,8 @@ const logo = img("brand/logo-portrait.jpg");
                 <label>When the AI can't answer (English)<textarea name="fallback_message_en" rows="2"></textarea></label>
                 <label>When the AI can't answer (Bengali)<textarea name="fallback_message_bn" rows="2"></textarea></label>
                 <label>Give a chat back to the AI after (hours, 0 = never)<input name="auto_resume_hours" inputmode="numeric" /></label>
+                <label>Your phone / WhatsApp number<input name="owner_phone" inputmode="tel" placeholder="+8801XXXXXXXXX" /></label>
+                <label>Share it if they send this many more messages while waiting for you (0 = never)<input name="phone_after_messages" inputmode="numeric" /></label>
                 <label class="adm-check mc-check"><input type="checkbox" name="pause_on_inbox_reply" /> Pause the AI in a chat when I reply from the Facebook inbox</label>
                 <label class="adm-check mc-check"><input type="checkbox" name="handoff_pauses_ai" /> Stop AI replies in a chat after it hands the chat to me (off = the AI keeps answering everyone; you still get a "Needs you" alert)</label>
               </div>

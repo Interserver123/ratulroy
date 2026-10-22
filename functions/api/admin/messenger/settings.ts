@@ -49,6 +49,8 @@ export const onRequestPut = async ({ env, request, data }: Ctx) => {
   if (values.ai_temperature !== undefined && !(Number(values.ai_temperature) >= 0 && Number(values.ai_temperature) <= 1)) return fail(422, "Temperature must be between 0 and 1");
   for (const k of ["auto_resume_hours", "max_replies_per_hour"] as const)
     if (values[k] !== undefined && !(/^\d{1,4}$/.test(values[k]!))) return fail(422, `${k.replace(/_/g, " ")} must be a whole number`);
+  if (values.owner_phone && !/^\+?[\d\s-]{7,20}$/.test(values.owner_phone)) return fail(422, "Phone number should look like +8801XXXXXXXXX");
+  if (values.phone_after_messages !== undefined && !/^\d{1,2}$/.test(values.phone_after_messages)) return fail(422, "Messages before sharing the phone must be a number (0 = never)");
   if (values.meta_page_id && !/^\d{5,25}$/.test(values.meta_page_id)) return fail(422, "Page ID must be digits");
   if (values.meta_app_id && !/^\d{5,25}$/.test(values.meta_app_id)) return fail(422, "App ID must be digits");
 
