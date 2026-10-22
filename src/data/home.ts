@@ -465,7 +465,7 @@ export const industries = [
   { title: "Roofing Contractors", href: "/industries/roofing-seo", text: "Rank for roof repair, replacement and storm damage jobs worth the most." },
   { title: "Towing Companies", href: "/industries/towing-seo", text: "Show up for roadside assistance, flatbed, jump start and lockout calls, day or night." },
   { title: "Pest Control Services", href: "/industries/pest-control-seo", text: "Win searches for termite, cockroach and rodent treatment and inspections." },
-  { title: "Electricians", href: "/industries/electrician-seo", text: "Get found for wiring, panel upgrades, installations and emergency electrician calls." },
+  { title: "Electricians", href: "/industries/local-seo-for-electricians", text: "Get found for wiring, panel upgrades, installations and emergency electrician calls." },
   { title: "Cleaning Companies", href: "/industries/cleaning-seo", text: "Get booked for house cleaning, deep cleaning and office cleaning in your area." },
   { title: "Moving Companies", href: "/industries/moving-seo", text: "Rank for house shifting, office moves and \"movers near me\" in each city you serve." },
   { title: "Construction Companies", href: "/industries/construction-seo", text: "Earn trust on high-value build, renovation and general contractor searches." },

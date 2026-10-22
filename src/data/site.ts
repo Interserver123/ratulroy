@@ -46,7 +46,7 @@ export const megaMenu: { title: string; links: Link[] }[] = [
     title: "Industries",
     links: [
       { label: "SEO for Home Services", href: "/seo-for-home-services" },
-      { label: "SEO for Electricians", href: "/industries/electrician-seo" },
+      { label: "Local SEO for Electricians", href: "/industries/local-seo-for-electricians" },
       { label: "SEO for Plumbers", href: "/industries/plumbing-seo" },
       { label: "SEO for HVAC", href: "/industries/hvac-seo" },
       { label: "SEO for Roofers", href: "/industries/roofing-seo" },
@@ -111,7 +111,7 @@ export const footerColumns: { title: string; links: Link[] }[] = [
       { label: "Roofing SEO", href: "/industries/roofing-seo" },
       { label: "Towing SEO", href: "/industries/towing-seo" },
       { label: "Pest Control SEO", href: "/industries/pest-control-seo" },
-      { label: "Electrician SEO", href: "/industries/electrician-seo" },
+      { label: "Electrician SEO", href: "/industries/local-seo-for-electricians" },
       { label: "Dental SEO", href: "/industries/dental-seo" },
       { label: "Contractor SEO", href: "/industries/contractor-seo" },
       { label: "Construction SEO", href: "/industries/construction-seo" },

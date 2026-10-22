@@ -49,7 +49,7 @@ The dishonest version of this is spinning fifty near-identical pages with the to
 
 ## Trade-specific relevance beats generic SEO
 
-An electrician and a roofer need different content architectures because their customers search differently. Roofing is seasonal, storm-driven and high-consideration. Electrical splits between emergencies and planned work. HVAC swings between installation, servicing and summer breakdowns.
+An electrician and a roofer need different content architectures because their customers search differently. Roofing is seasonal, storm-driven and high-consideration. Electrical splits between emergencies and planned work, which is why [local SEO for electricians](/industries/local-seo-for-electricians) needs separate pages for emergency repairs and for projects like panel upgrades. HVAC swings between installation, servicing and summer breakdowns.
 
 That is why I build the trade pages separately rather than as one generic service. See how it plays out for [HVAC companies](/industries/hvac-seo), [plumbing businesses](/industries/plumbing-seo) and [roofing contractors](/industries/roofing-seo).
 

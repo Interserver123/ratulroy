@@ -22,7 +22,7 @@ faqs:
 
 AI search visibility is how often assistants such as ChatGPT, Gemini, Perplexity, Bing Copilot and Google AI Overviews name or cite your business when people ask for local recommendations. They draw on the same sources as local search: your website, Google Business Profile, reviews and directory listings. Clear, consistent facts across all of them are what earn the mention.
 
-A growing share of local research now happens inside an AI assistant. The user asks for a good electrician nearby and gets a short list with reasoning, not ten blue links. Being absent from that list is a new kind of invisibility, and it is not fixed by the same tactics as classic rankings.
+A growing share of local research now happens inside an AI assistant. The user asks for a good [electrician](/industries/local-seo-for-electricians) nearby and gets a short list with reasoning, not ten blue links. Being absent from that list is a new kind of invisibility, and it is not fixed by the same tactics as classic rankings.
 
 ## AI answers compress the results page
 

@@ -136,6 +136,7 @@ if (kind === "service" || kind === "industry") {
     description: d.description,
     serviceType: d.eyebrow ?? d.h1,
     provider: { "@id": `${site.url}/#business` },
+    ...(kind === "industry" && d.card?.title ? { audience: { "@type": "BusinessAudience", audienceType: `${d.card.title} businesses` } } : {}),
     areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
     ...(offers.length
       ? {

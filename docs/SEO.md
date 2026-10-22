@@ -93,7 +93,7 @@ All routes: rendering = SSG (prerendered). Generated from the production build.
 | `/industries/construction-seo` | SSG | index | https://ratulroy.com/industries/construction-seo | content/industries |
 | `/industries/contractor-seo` | SSG | index | https://ratulroy.com/industries/contractor-seo | content/industries |
 | `/industries/dental-seo` | SSG | index | https://ratulroy.com/industries/dental-seo | content/industries |
-| `/industries/electrician-seo` | SSG | index | https://ratulroy.com/industries/electrician-seo | content/industries |
+| `/industries/local-seo-for-electricians` | SSG | index | https://ratulroy.com/industries/local-seo-for-electricians | content/industries |
 | `/industries/healthcare-seo` | SSG | index | https://ratulroy.com/industries/healthcare-seo | content/industries |
 | `/industries/hvac-seo` | SSG | index | https://ratulroy.com/industries/hvac-seo | content/industries |
 | `/industries/legal-seo` | SSG | index | https://ratulroy.com/industries/legal-seo | content/industries |
