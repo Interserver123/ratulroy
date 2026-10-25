@@ -9,7 +9,7 @@ export const heroPoints = [
 
 export const proofBadges = [
   { title: "Level 2", text: "Fiverr Seller" },
-  { title: "AI Driven", text: "Modern SEO workflows" },
+  { title: "5+ years", text: "Ranking local businesses" },
   { title: "Local SEO", text: "Maps & calls focus" },
   { title: "White-hat", text: "Revenue-first SEO" },
 ];
@@ -168,71 +168,6 @@ export const aiPillars = [
     text: "LocalBusiness and Service schema, FAQPage markup, sameAs links, citations, reviews and internal links that describe your business in a machine-readable way.",
   },
 ];
-
-export const strategy = [
-  {
-    title: "Local-First SEO, Not Generic SEO",
-    text: "Your customers search by city, area, service and urgency (\"AC repair near me\", \"dentist in Dhanmondi\"). I plan for Google Maps, near-me intent and service-area relevance first.",
-    points: [
-      "Google Maps visibility",
-      "Service-area targeting",
-      "Local search intent",
-      "Call-focused optimization",
-    ],
-  },
-  {
-    title: "Entity SEO for Google and AI",
-    text: "Search engines rank businesses they can identify with confidence. I make your name, address, phone, services and links match everywhere, then confirm it with structured data.",
-    points: [
-      "Entity optimization",
-      "Knowledge Graph signals",
-      "Brand consistency",
-      "Structured business info",
-    ],
-  },
-  {
-    title: "GEO, AIO & LLM Visibility",
-    text: "People now ask AI Overviews, ChatGPT, Gemini and Perplexity which business to call. I structure your content so those systems can understand and cite it.",
-    points: [
-      "Generative Engine Optimization",
-      "AI Overview readiness",
-      "LLM visibility signals",
-      "ChatGPT & Perplexity discovery",
-    ],
-  },
-  {
-    title: "Technical SEO That Supports Trust",
-    text: "A slow or badly indexed site caps how far a profile can climb. I fix crawling, indexing, mobile speed, schema and site structure so Google reads your pages clearly.",
-    points: [
-      "Crawlability & indexation",
-      "Core Web Vitals",
-      "LocalBusiness schema",
-      "Internal linking structure",
-    ],
-  },
-  {
-    title: "Topical Authority With Buyer Intent",
-    text: "No random blog posts. I build service pages, location pages and FAQs around the questions buyers ask, in English, Bangla or the market you serve.",
-    points: [
-      "Service page strategy",
-      "Location page structure",
-      "Semantic SEO",
-      "Buyer-intent content",
-    ],
-  },
-  {
-    title: "Transparent Reporting & Growth",
-    text: "You see what changed and why. I report geo-grid rankings, GBP Performance (calls, direction requests, website clicks), Search Console data and next month's priorities.",
-    points: [
-      "Ranking tracking",
-      "GBP performance review",
-      "Competitor monitoring",
-      "Clear monthly priorities",
-    ],
-  },
-];
-
-export const systemTags = ["White-Hat SEO", "E-E-A-T Focused", "AI Search Ready", "Local SEO Specialist"];
 
 export const whyPoints = [
   {

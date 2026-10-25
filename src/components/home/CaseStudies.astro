@@ -10,7 +10,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     <div class="cases-head" data-reveal>
       <div>
         <p class="eyebrow">Local SEO Case Studies</p>
-        <h2 id="cases-title">Local SEO Results That Turned Rankings Into <span class="em">Real Leads.</span></h2>
+        <h2 id="cases-title">Local SEO case studies: <span class="em">rankings that became leads.</span></h2>
         <p>
           Google Maps rankings, Business Profile calls and organic growth for service-area
           businesses and online stores, each with the method and the screenshots behind it.
@@ -54,7 +54,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
         caseStudies.map((c, i) => (
           <li class="card card--hover case" data-reveal style={`--d:${i % 2}`} data-spot>
             <div class="case__screen" aria-hidden="true">
-              {c.image && <Image src={img(c.image)} alt="" widths={[400, 640]} sizes="(min-width: 640px) 520px, 90vw" loading="lazy" class="case__img" />}
+              {c.image && <Image src={img(c.image)} alt={`${c.title}: ${c.value} ${c.label.toLowerCase()} (screenshot)`} widths={[400, 640]} sizes="(min-width: 640px) 520px, 90vw" loading="lazy" class="case__img" />}
               <span class="case__dots"><svg viewBox="0 0 20 26" width="12" height="15" aria-hidden="true"><path d="M10 0C4.5 0 0 4.4 0 9.8 0 17.2 10 26 10 26s10-8.8 10-16.2C20 4.4 15.5 0 10 0zm0 13.6a3.8 3.8 0 1 1 0-7.6 3.8 3.8 0 0 1 0 7.6z" fill="currentColor"/></svg></span>
               <span class="case__value num">{c.value}</span>
               <span class="case__label">{c.label}</span>
@@ -73,7 +73,7 @@ const featuredHref = "/case-studies/gbp-calls-growth";
 
     <div class="cases__cta card" data-reveal>
       <div>
-        <h3>Want Similar Local SEO Growth?</h3>
+        <p class="cases__cta-title">Want results like these?</p>
         <p>
           I'll review your Google Business Profile, Maps ranking, citations, and local landing pages,
           and show exactly where the lead gaps are.
@@ -312,7 +312,8 @@ const featuredHref = "/case-studies/gbp-calls-growth";
     align-items: center;
     padding: clamp(24px, 4vw, 36px);
   }
-  .cases__cta h3 {
+  .cases__cta .cases__cta-title {
+    font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 0.4em;
     font-size: 1.4rem;
   }
   .cases__cta p {

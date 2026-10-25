@@ -8,7 +8,7 @@ const answered = faqs.filter((f) => f.a.trim());
   <div class="container faq">
     <div class="section-head section-head--center" data-reveal>
       <p class="eyebrow">Frequently Asked Questions</p>
-      <h2 id="faq-title">Everything You Need to Know About <span class="em">Local SEO &amp; Google Maps Ranking</span></h2>
+      <h2 id="faq-title">Local SEO in Bangladesh: <span class="em">frequently asked questions</span></h2>
     </div>
 
     <div class="faq__list">
@@ -29,7 +29,7 @@ const answered = faqs.filter((f) => f.a.trim());
 
     <div class="faq__cta card" data-reveal>
       <div>
-        <h3>Still Have Questions?</h3>
+        <p class="faq__cta-title">Still have a question?</p>
         <p><strong>Book a free Local SEO audit or strategy call.</strong></p>
         <p>
           Get a personalized review of your Google Maps visibility, Local SEO performance, and
@@ -130,7 +130,8 @@ const answered = faqs.filter((f) => f.a.trim());
       radial-gradient(80% 140% at 100% 0%, rgb(255 122 102 / 16%), transparent 60%),
       var(--paper);
   }
-  .faq__cta h3 {
+  .faq__cta .faq__cta-title {
+    font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 0.4em;
     font-size: 1.35rem;
   }
   .faq__cta p:last-child {
