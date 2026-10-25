@@ -9,3 +9,14 @@
 # Merged overlapping articles (same search intent)
 /blog/seo-cost-bangladesh /blog/local-seo-cost-bangladesh 301
 /blog/how-local-seo-works-bangladesh /blog/local-seo-helps-businesses-rank-google-maps 301
+
+# Thin industry pages removed
+/industries/towing-seo /industries 301
+/industries/moving-seo /industries 301
+/industries/cleaning-seo /industries 301
+/industries/pest-control-seo /industries 301
+/industries/real-estate-seo /industries 301
+/industries/legal-seo /industries 301
+/industries/healthcare-seo /industries/dental-seo 301
+/industries/contractor-seo /industries 301
+/industries/construction-seo /industries 301

@@ -49,12 +49,11 @@ sections:
     heading: "Local SEO by industry"
     intro: "The ranking factors are the same everywhere. The categories, services, search terms and trust signals are not, so each vertical has its own page."
     items:
-      - { title: Home services, href: /seo-for-home-services, cta: "Home services SEO", text: "HVAC, plumbing, roofing, electricians, cleaning, pest control, moving and towing, where most calls go to the first three Maps results." }
+      - { title: Home services, href: /seo-for-home-services, cta: "Home services SEO", text: "HVAC, plumbing, roofing and electricians, where most calls go to the first three Maps results." }
       - { title: Dental clinics, href: /industries/dental-seo, cta: "Dental SEO", text: "New-patient searches for scaling, root canal, braces, implants and emergency dentist near me." }
       - { title: HVAC companies, href: /industries/hvac-seo, cta: "HVAC SEO", text: "AC repair, AC servicing, gas refill and 24-hour emergency searches, mostly from service-area businesses." }
-      - { title: Law firms, href: /industries/legal-seo, cta: "Legal SEO", text: "Practice-area pages and consultation searches, where reviews and credentials decide who gets the call." }
       - { title: Wholesale distributors, href: /seo-for-wholesale-distributors, cta: "SEO for distributors", text: "B2B buyers searching by product, brand and region, with a different funnel from walk-in local businesses." }
-      - { title: All industries, href: /industries, cta: "Browse every industry", text: "Auto repair, healthcare, real estate, construction, contractors and more, each with its own categories and service vocabulary." }
+      - { title: All industries, href: /industries, cta: "Browse every industry", text: "Auto repair, dental, HVAC, plumbing, roofing and electricians, each with its own categories and service vocabulary." }
   - type: cards
     alt: true
     columns: 3

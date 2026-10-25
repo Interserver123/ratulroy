@@ -398,15 +398,8 @@ export const industries = [
   { title: "HVAC Companies", href: "/industries/hvac-seo", text: "Rank for AC repair, AC servicing, installation and 24-hour emergency searches." },
   { title: "Plumbing Businesses", href: "/industries/plumbing-seo", text: "Win \"emergency plumber near me\", leak and drain searches across your service area." },
   { title: "Roofing Contractors", href: "/industries/roofing-seo", text: "Rank for roof repair, replacement and storm damage jobs worth the most." },
-  { title: "Towing Companies", href: "/industries/towing-seo", text: "Show up for roadside assistance, flatbed, jump start and lockout calls, day or night." },
-  { title: "Pest Control Services", href: "/industries/pest-control-seo", text: "Win searches for termite, cockroach and rodent treatment and inspections." },
   { title: "Electricians", href: "/industries/local-seo-for-electricians", text: "Get found for wiring, panel upgrades, installations and emergency electrician calls." },
-  { title: "Cleaning Companies", href: "/industries/cleaning-seo", text: "Get booked for house cleaning, deep cleaning and office cleaning in your area." },
-  { title: "Moving Companies", href: "/industries/moving-seo", text: "Rank for house shifting, office moves and \"movers near me\" in each city you serve." },
-  { title: "Construction Companies", href: "/industries/construction-seo", text: "Earn trust on high-value build, renovation and general contractor searches." },
   { title: "Dental Clinics", href: "/industries/dental-seo", text: "Fill the chair with root canal, scaling, braces, implant and emergency dentist searches." },
-  { title: "Healthcare Clinics", href: "/industries/healthcare-seo", text: "Help patients find your clinic, doctors and opening hours when they search nearby." },
-  { title: "Legal Services", href: "/industries/legal-seo", text: "Rank by practice area and city so people book a consultation with your firm." },
 ];
 
 export const guides = [

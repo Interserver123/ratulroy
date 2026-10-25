@@ -80,7 +80,7 @@ sections:
     heading: "What this looks like in practice"
     body:
       - "Roofing results are measured in quote requests and won jobs, not raw traffic. The method I use is the one behind [improving Map Pack visibility across several service areas](/case-studies/map-pack-service-areas): geo-grid tracking to find where you vanish, then area pages, citations and reviews to fill the gaps. That project saw Map Pack visibility rise 38% and 5x as many areas reach the Top 3. Your numbers will depend on your market."
-      - "Roofing sits within my [Local SEO for home services](/seo-for-home-services). It overlaps most with [general contractor SEO](/industries/contractor-seo), since homeowners planning a renovation often need a roofer too. For background on how Maps ranking works, see [how Local SEO helps businesses rank on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps)."
+      - "Roofing sits within my [Local SEO for home services](/seo-for-home-services). It overlaps most with [electrician SEO](/industries/local-seo-for-electricians), since renovation jobs often need both trades. For background on how Maps ranking works, see [how Local SEO helps businesses rank on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps)."
     stat: { value: "+38%", label: "Map Pack visibility across a multi-area service business" }
   - type: list
     heading: "Why roofers work with me"

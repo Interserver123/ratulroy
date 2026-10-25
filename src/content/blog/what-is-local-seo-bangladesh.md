@@ -74,10 +74,10 @@ Any business that serves customers in a particular place benefits. It matters mo
 - Restaurants, cafes, bakeries and sweet shops
 - Salons, parlours, gyms and spas
 - Coaching centres, language schools and training institutes
-- Repair and home services: [AC](/industries/hvac-seo), [electrical](/industries/local-seo-for-electricians), [plumbing](/industries/plumbing-seo), [pest control](/industries/pest-control-seo), [car repair](/industries/auto-repair-seo), mobile and laptop repair
+- Repair and home services: [AC](/industries/hvac-seo), [electrical](/industries/local-seo-for-electricians), [plumbing](/industries/plumbing-seo), pest control, [car repair](/industries/auto-repair-seo), mobile and laptop repair
 - Showrooms: furniture, electronics, motorcycles, tiles and sanitary ware
 - Hotels, resorts and community centres
-- [Law firms](/industries/legal-seo), accountants, travel agencies and [real estate offices](/industries/real-estate-seo)
+- Law firms, accountants, travel agencies and real estate offices
 
 ## Businesses without a shopfront
 

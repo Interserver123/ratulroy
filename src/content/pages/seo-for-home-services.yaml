@@ -47,18 +47,12 @@ sections:
     columns: 2
     eyebrow: Trades I work with
     heading: "Local SEO for each home service trade"
-    intro: "Every trade searches differently. Emergency trades live on \"near me\" and \"open now\" searches at all hours; project trades like roofing and construction get fewer, larger enquiries researched over weeks. Each page below covers the categories, schema type and search terms for that trade."
+    intro: "Every trade searches differently. Emergency trades live on \"near me\" and \"open now\" searches at all hours; project trades like roofing get fewer, larger enquiries researched over weeks. Each page below covers the categories, schema type and search terms for that trade."
     items:
       - { title: HVAC, href: /industries/hvac-seo, cta: Our HVAC SEO approach, text: "AC repair, AC servicing, installation, gas refill and duct cleaning searches, with seasonal demand peaks. GBP categories like HVAC contractor and Air conditioning repair service; schema type HVACBusiness." }
       - { title: Plumbing, href: /industries/plumbing-seo, cta: SEO for plumbers, text: "Burst pipes, blocked drains and water heater repair, where emergency and same-day searches drive most calls. GBP category Plumber; schema type Plumber." }
       - { title: Roofing, href: /industries/roofing-seo, cta: Roofing contractor SEO, text: "Roof repair, replacement and storm damage enquiries, where photos of finished jobs and reviews carry big tickets. GBP category Roofing contractor; schema type RoofingContractor." }
       - { title: Electrical, href: /industries/local-seo-for-electricians, cta: Electrician SEO, text: "Fault finding, rewiring, panel upgrades and emergency electricians, where licensing and trust signals matter. GBP category Electrician; schema type Electrician." }
-      - { title: Cleaning, href: /industries/cleaning-seo, cta: Cleaning company SEO, text: "House cleaning, deep cleaning and move-out cleans, often run as a service-area business with no public address. GBP category House cleaning service." }
-      - { title: Pest control, href: /industries/pest-control-seo, cta: Pest control SEO, text: "Termites, cockroaches, bed bugs and rodents, where urgent searches and repeat contracts both count. GBP category Pest control service." }
-      - { title: Moving, href: /industries/moving-seo, cta: Moving company SEO, text: "House moves, office moves and packing services, where buyers compare quotes days ahead. GBP category Moving company; schema type MovingCompany." }
-      - { title: Towing, href: /industries/towing-seo, cta: Towing company SEO, text: "Roadside assistance, flatbed towing, jump starts and lockouts, searched from the roadside on a phone at any hour. GBP category Towing service." }
-      - { title: General contractors, href: /industries/contractor-seo, cta: General contractor SEO, text: "Renovations, extensions and remodels, where a portfolio of real projects and clear service pages win the shortlist. GBP category General contractor; schema type GeneralContractor." }
-      - { title: Construction, href: /industries/construction-seo, cta: Construction company SEO, text: "Commercial and residential builds with long sales cycles, where project pages and reputation do the selling. GBP category Construction company." }
     body:
       - "Not a home service trade? See [Local SEO for every industry I work with](/industries)."
   - type: cards
