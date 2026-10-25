@@ -28,7 +28,7 @@ const portrait = Object.values(portraits)[0]?.default;
 const shareImg = portrait ? await getImage({ src: portrait, width: 1000, format: "jpg" }) : undefined;
 const imageUrl = shareImg ? new URL(shareImg.src, site.url).href : undefined;
 
-const title = "About Ratul Roy | Local SEO Expert in Bangladesh";
+const title = "About Ratul Roy: Background, Experience & Clients";
 const description =
   "Ratul Roy is a Local SEO Expert in Bangladesh and founder of DigiPolli. Fiverr Level 2, 4.9 from 243 reviews. Google Maps, GBP and AI search.";
 const url = `${site.url}/about`;
