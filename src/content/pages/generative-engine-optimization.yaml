@@ -133,10 +133,12 @@ sections:
       - "For a practical walkthrough for small businesses, read [how to get your local business cited by ChatGPT and Gemini](/blog/ai-search-visibility-local-business)."
   - type: images
     id: geo-proof
-    eyebrow: Real result
-    heading: "A client named first in a Google AI Overview"
-    intro: "A live Google search for *construction materials supplier in china*. The AI Overview names my client JEES Global first, with its core focus, products and services, and cites its website. Screenshot, not a mock-up; AI answers change, so this is not a guarantee."
+    eyebrow: Real results
+    heading: "Clients named first in ChatGPT and Google AI Overviews"
+    intro: "Live screenshots from two client projects, not mock-ups. For Hawk Towing & Auto the Search Console report from the client's own property is shown too, because I have access to it: that is how you can tell these are real clients and real work. AI answers change by user and over time, so these are snapshots, not guarantees."
     items:
+      - { title: "ChatGPT · Hawk Towing & Auto, Beaumont TX", text: "ChatGPT recommends Hawk Towing & Auto first for the prompt cash for junk cars in beaumont tx, with its phone number and a link to the cash-offer page. Full results in the [Hawk Towing case study](/case-studies/hawk-towing-beaumont).", image: "cases/hawk/chatgpt-cash-for-junk-cars-beaumont.png" }
+      - { title: "Google Search Console · same client", text: "The same client's own Search Console, last 3 months against the previous 3: 204 clicks vs 34 and 14.1K impressions vs 2.79K, the SEO foundation that AI answers draw on.", image: "cases/hawk/search-console-3-months.jpg" }
       - { title: "Google AI Overview · JEES Global", text: "Google AI Overview for the query construction materials supplier in China, listing JEES Global first with a cited source and its website shown in the results panel.", image: "results/geo/ai-overview-jees-global.png" }
   - type: list
     alt: true

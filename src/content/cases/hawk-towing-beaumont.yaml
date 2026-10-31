@@ -83,6 +83,13 @@ sections:
       - { title: "motorcycle towing service: #1", text: "The dedicated motorcycle towing page ranks first for a specialist search most local competitors don't target.", image: "cases/hawk/motorcycle-towing-serp.jpg" }
       - { title: "Independent check: cash for junk cars beaumont", text: "FatRank's US rank checker, which is not personalised to my browser, confirms position 1 for /cash-for-junk-cars.", image: "cases/hawk/fatrank-cash-for-junk-cars-beaumont.jpg" }
       - { title: "Independent check: cash for junk cars beaumont tx", text: "Position 1 again for the variant with \"tx\".", image: "cases/hawk/fatrank-cash-for-junk-cars-beaumont-tx.jpg" }
+  - type: images
+    id: ai-search
+    eyebrow: "AI search"
+    heading: "ChatGPT also recommends Hawk Towing first"
+    intro: "Asked *cash for junk cars in beaumont tx*, ChatGPT lists Hawk Towing & Auto first under \"Best places to sell a junk car in Beaumont, TX\", with its phone number and a link to the cash-offer page. The same dedicated page that ranks #1 on Google is the one being surfaced. AI answers vary by user and over time, so this is a snapshot, not a guarantee."
+    items:
+      - { title: "ChatGPT: cash for junk cars in Beaumont, TX", text: "ChatGPT answer for the prompt cash for junk cars in beaumont tx, with Hawk Towing & Auto as the first recommended local buyer, followed by a competitor.", image: "cases/hawk/chatgpt-cash-for-junk-cars-beaumont.png" }
   - type: list
     alt: true
     eyebrow: "05 · Learnings"
