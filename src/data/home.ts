@@ -358,12 +358,12 @@ export const auditTags = [
 export const caseStudies = [
   {
     category: "Towing SEO · Beaumont, TX",
-    value: "#1",
-    label: "Towing searches in Beaumont",
+    value: "6x",
+    label: "Google clicks in 3 months",
     title: "Hawk Towing & Auto: #1 on Google for Towing in Beaumont",
     href: "/case-studies/hawk-towing-beaumont",
     image: "cases/hawk/wrecker-service-beaumont-serp.jpg",
-    text: "One page per service took a Beaumont towing company to #1 organic for towing, wrecker and cash-for-junk-cars searches, ahead of sites with far bigger link profiles.",
+    text: "One page per service took a Beaumont towing company from 34 to 204 Google clicks in three months and to #1 for 7 towing and junk car searches.",
   },
   {
     category: "Google Maps Ranking",
