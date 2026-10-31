@@ -42,12 +42,12 @@ const schema = [
     description,
     inLanguage: "en",
     isPartOf: { "@id": `${site.url}/#website` },
-    mainEntity: { "@id": `${site.url}/#person` },
+    mainEntity: { "@id": `${site.url}/#ratul` },
     breadcrumb: { "@id": `${url}#breadcrumb` },
   },
   {
     "@type": "Person",
-    "@id": `${site.url}/#person`,
+    "@id": `${site.url}/#ratul`,
     name: "Ratul Roy",
     url: site.url + "/",
     ...(imageUrl ? { image: imageUrl } : {}),
@@ -294,7 +294,7 @@ const pin =
         {
           method.map((m, i) => (
             <li class="card card--hover" data-reveal style={`--d:${i}`} data-spot>
-              <span class="method__n num">{String(i + 1).padStart(2, "0")}</span>
+              <span class="method__n num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
               <h3>{m.title}</h3>
               <p>{m.text}</p>
             </li>

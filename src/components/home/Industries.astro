@@ -40,7 +40,7 @@ const queries = [
       {
         industries.map((i, n) => (
           <li class="card card--hover" data-reveal style={`--d:${n % 4}`} data-spot data-q={queries[n]}>
-            <span class="ind__n num">{String(n + 1).padStart(2, "0")}</span>
+            <span class="ind__n num" aria-hidden="true">{String(n + 1).padStart(2, "0")}</span>
             <h3><a class="ind__link" href={i.href}>{i.title}</a></h3>
             <p>{i.text}</p>
           </li>

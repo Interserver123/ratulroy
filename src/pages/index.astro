@@ -22,7 +22,7 @@ const description =
   "Ratul Roy, Local SEO expert in Bangladesh: Google Maps ranking, Google Business Profile optimization and AI search for local businesses. From $299, no lock-in.";
 
 const url = `${site.url}/`;
-const personId = `${site.url}/#person`;
+const personId = `${site.url}/#ratul`;
 const businessId = `${site.url}/#business`;
 const websiteId = `${site.url}/#website`;
 
@@ -50,7 +50,7 @@ const schema = [
     "@id": personId,
     name: "Ratul Roy",
     url,
-    jobTitle: "Local SEO Expert",
+    jobTitle: "Local SEO Specialist",
     email: `mailto:${site.email}`,
     telephone: site.phone,
     alumniOf: { "@type": "CollegeOrUniversity", name: "Islamic University" },
@@ -69,13 +69,13 @@ const schema = [
   {
     "@type": "ProfessionalService",
     "@id": businessId,
-    name: "Ratul Roy · Local SEO Bangladesh",
+    name: "Ratul Roy Local SEO",
     alternateName: site.gbpName,
     url,
     description,
     email: site.email,
     telephone: site.phone,
-    priceRange: "From $299",
+    priceRange: "$$",
     founder: { "@id": personId },
     address: {
       "@type": "PostalAddress",
@@ -84,7 +84,7 @@ const schema = [
     },
     hasMap: site.mapsUrl,
     geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
-    areaServed: [{ "@type": "Country", name: "Bangladesh" }, "Worldwide"],
+    areaServed: ["Bangladesh", "United States", "Global"],
     sameAs: sameAs(),
     contactPoint: contactPoint(),
     knowsLanguage: languages,

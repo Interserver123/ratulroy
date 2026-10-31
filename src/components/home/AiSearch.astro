@@ -80,7 +80,7 @@ const tabs = [
       {
         aiPillars.map((p, i) => (
           <li class="card card--hover" data-reveal style={`--d:${i}`} data-spot>
-            <span class="pillars__n num">{String(i + 1).padStart(2, "0")}</span>
+            <span class="pillars__n num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
             <h3>{p.title}</h3>
             <p>{p.text}</p>
           </li>

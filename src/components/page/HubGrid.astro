@@ -56,7 +56,7 @@ const pad = (n: number) => String(n + 1).padStart(2, "0");
             <li data-cat={it.category} data-reveal style={`--d:${i % 4}`}>
               <a class="ind card" href={it.href} data-spot>
                 <span class="ind__top">
-                  <span class="ind__n num">{pad(i)}</span>
+                  <span class="ind__n num" aria-hidden="true">{pad(i)}</span>
                   {it.category && <span class="ind__cat">{it.category}</span>}
                 </span>
                 <h3>SEO for {it.title}</h3>
