@@ -28,6 +28,10 @@ Home service searches carry the highest intent in local search. Nobody googles "
 
 Urgent searches ("24-hour electrician", "AC not cooling", "blocked drain open now") convert on the first result that answers instantly. Phone number visible, hours clear, service area obvious. A beautiful site that buries the number below the fold loses to a plainer competitor that does not.
 
+![Four steps from an urgent search to the business that answers first](../../assets/img/blog/home-service-response.svg)
+
+*Emergency searches end at the first business that picks up.*
+
 Check your own site on a phone, at arm's length, on mobile data, and count the seconds before the number is tappable.
 
 ## Set up the profile as a service-area business
@@ -56,6 +60,10 @@ That is why I build the trade pages separately rather than as one generic servic
 ## Track calls, not rankings
 
 Position is a proxy. Booked jobs are the outcome. Use call tracking so you can tell which pages and which areas actually produce revenue, then invest where it is working. Pair it with the calls and direction requests in your GBP Performance report and a geo-grid scan of each service area.
+
+![Google results for plumber near me showing client listings in the Map Pack and organic results](../../assets/img/results/home/plumber-near-me-serp.png)
+
+*A live "plumber near me" search with client listings in both the Map Pack and the first organic result.*
 
 Plenty of businesses rank well in places that never convert, and poorly in the two neighbourhoods that pay the bills. On one home service account, mapping that by area led to [+38% Map Pack visibility and +27% more direction requests](/case-studies/map-pack-service-areas).
 

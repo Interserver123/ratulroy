@@ -29,6 +29,10 @@ Business owners often hear 'SEO' and 'Local SEO' used as if they were the same s
 
 Traditional SEO, sometimes called organic or national SEO, is about ranking web pages in the ordinary list of search results for searches with no particular location attached: 'how to choose a laptop', 'best accounting software', 'IELTS preparation tips'. Local SEO is about ranking a business, mainly through its Google Business Profile, for searches where the location matters: 'laptop repair Elephant Road', 'accountant in Motijheel', 'IELTS coaching near me'.
 
+![Comparison table of Local SEO and traditional SEO](../../assets/img/blog/local-vs-traditional.svg)
+
+*Different results pages, different signals, different goals.*
+
 > Put simply, traditional SEO competes to be the best page on a subject. Local SEO competes to be the best business in a place.
 
 ## Where the results appear

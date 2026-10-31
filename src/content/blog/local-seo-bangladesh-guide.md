@@ -48,6 +48,10 @@ Google Maps itself is familiar to most smartphone users through ride-hailing and
 
 Google states that local results are based mainly on relevance, distance and prominence. It also states there is no way to pay for or request a better local ranking. Every tactic in Local SEO feeds one of these three.
 
+![Google local ranking factors: relevance, distance and prominence](../../assets/img/blog/three-ranking-factors.svg)
+
+*The three factors behind every Map Pack result.*
+
 - **Relevance:** how well your profile and website match what was searched. Categories, services, descriptions, website content and review text all contribute.
 - **Distance:** how far your business is from the searcher, or from the area named in the search. You cannot change where you are, but you can make sure Google has your location right.
 - **Prominence:** how well known and trusted Google thinks you are, judged from reviews, links, mentions across the web, and how people interact with your listing.
@@ -115,6 +119,10 @@ Google's AI Overviews and assistants like ChatGPT and Gemini increasingly answer
 
 Cost depends on competition, the number of locations or areas you need to rank in, the state of your current profile and website, and whether you want advice or full implementation. Packages here start from $299. The full breakdown is in part 7, [How Much Does Local SEO Cost in Bangladesh?](/blog/local-seo-cost-bangladesh)
 
+![Business Profile of an IELTS and PTE academy showing 10,107 profile views](../../assets/img/results/gbp/gbp-result-4.png)
+
+*Client result: an IELTS and PTE academy profile with 10,107 views and 4,461 searches (Jul–Nov 2025, GBP Insights).*
+
 Time follows the same factors. Profile fixes can show early movement within weeks, while competitive categories in Dhaka usually need three to six months of consistent work before results settle. Part 8, [How Long Does Local SEO Take to Work in Bangladesh?](/blog/how-long-local-seo-takes-bangladesh), sets out what to expect month by month. For a real before and after, the [GBP calls growth case study](/case-studies/gbp-calls-growth) shows 461 calls from Apr–Aug 2024, up 205% on the year before.
 
 If you are weighing Local SEO against other channels, part 6, [Local SEO vs Google Ads](/blog/local-seo-vs-google-ads-bangladesh), and part 5, [Local SEO vs Traditional SEO](/blog/local-seo-vs-traditional-seo), compare them directly.
@@ -133,6 +141,10 @@ If you are weighing Local SEO against other channels, part 6, [Local SEO vs Goog
 ## A simple order of work
 
 If you are starting from scratch or from a neglected profile, this order avoids wasted effort. Each step makes the next one count for more.
+
+![Six-step order of work for Local SEO in Bangladesh](../../assets/img/blog/bangladesh-order-of-work.svg)
+
+*Start at the top. Each step supports the next.*
 
 - **Week one:** claim or verify the profile, then fix the name, category, hours, pin and phone number
 - **Weeks two to four:** complete every profile field, add photos, and align the website and Facebook details

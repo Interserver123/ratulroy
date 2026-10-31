@@ -40,6 +40,10 @@ If your listing is not appearing at all, work through [why a business does not s
 
 Your primary category is the most important field on the whole profile. It tells Google which searches you are even eligible to appear in. Get it wrong and no amount of reviews or citations will rescue the listing.
 
+![Six-step order for optimizing a Google Business Profile](../../assets/img/blog/gbp-checklist-order.svg)
+
+*The order I follow: fix ownership and duplicates before touching anything else.*
+
 Pick the category that describes what you are, not what you sell. A firm listed as "Contractor" when it is really an "HVAC contractor" is competing in the wrong pool entirely, and a practice set to "Medical clinic" instead of "Dentist" misses dental searches. Then add additional categories for genuine extra services, and stop. Padding the list with loosely related categories dilutes relevance rather than widening it.
 
 ## Get name, address and phone exactly right
@@ -106,6 +110,10 @@ Anyone can suggest an edit to your profile, and Google sometimes applies it with
 ## How to tell whether it worked
 
 The Performance section of your profile reports calls, direction requests, website clicks, bookings and the searches that surfaced you. Those are the numbers to watch, not your position when you search your own name.
+
+![Google Business Profile Insights showing 461 calls over five months](../../assets/img/results/gbp/gbp-result-3.jpeg)
+
+*Client result: 461 calls from a Business Profile in five months, from GBP Insights (Apr–Aug 2024).*
 
 Track them monthly. A profile that is improving usually shows rising direction requests before rising rankings, because proximity-driven discovery moves first. One client's profile work turned into [461 calls from the Business Profile in April to August 2024, up 205% on the year before](/case-studies/gbp-calls-growth).
 

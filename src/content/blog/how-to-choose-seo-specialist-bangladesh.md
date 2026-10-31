@@ -44,6 +44,10 @@ A specialist does one thing repeatedly and sees the same patterns across account
 
 Case studies with round numbers and no source are decoration. Ask for screenshots from Google Search Console or Google Business Profile Performance, with the date range visible. Those are harder to massage than a designed report. Public reviews on platforms like Fiverr or Google, from clients you could in principle contact, add a second layer.
 
+![Five questions to ask before hiring an SEO specialist](../../assets/img/blog/hire-specialist-questions.svg)
+
+*Five questions that separate real work from sales talk.*
+
 You can see what that should look like on my [case studies page](/case-studies). For example, the [GBP calls case study](/case-studies/gbp-calls-growth) shows the Business Profile screenshot behind 461 calls from April to August 2024.
 
 ## What are the red flags when hiring an SEO specialist?

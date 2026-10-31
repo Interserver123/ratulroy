@@ -29,6 +29,10 @@ It is the question every business owner asks, and the honest answer is: it depen
 
 Google states there is no way to pay for or request a better local ranking, and your competitors keep working while you do. So the timeline is an estimate built from your starting point, not a delivery date. How much it costs to get there is covered in part 7, [How Much Does Local SEO Cost in Bangladesh?](/blog/local-seo-cost-bangladesh)
 
+![Four phases of a Local SEO timeline from month one to after six months](../../assets/img/blog/timeline-local-seo.svg)
+
+*A typical sequence. Your market and starting point move every phase.*
+
 Anyone promising first place on Google Maps within days is either describing a category with no competition or selling something that will not last.
 
 ## Month one: foundations
@@ -79,6 +83,10 @@ A few issues come up here more often than elsewhere. Verification can take sever
 None of these are unusual, but they add weeks, so they are worth identifying in the first audit rather than discovering later. If your profile is missing from Maps altogether, start with [why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps).
 
 ## Signs it is working
+
+![Business Profile views and searches up 67.7% year over year](../../assets/img/results/gbp/gbp-result-6.png)
+
+*Client result: profile views up 67.7% against the same months a year earlier (GBP Insights).*
 
 - Profile views and search appearances rising in the performance report
 - More calls, direction requests and website clicks from the profile

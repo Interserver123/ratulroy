@@ -35,6 +35,10 @@ Unlike traditional SEO, which competes on a national or global keyword, Local SE
 
 Google's own Business Profile help documentation names three factors that decide Local Pack and Maps rankings. Every tactic in this article feeds one of them:
 
+![Google local ranking factors: relevance, distance and prominence](../../assets/img/blog/three-ranking-factors.svg)
+
+*Relevance and prominence you can build. Distance you can only measure around.*
+
 - **Relevance:** how well your profile and website match what the searcher typed. Driven by primary category, additional categories, services, on-page content and reviews that mention the service.
 - **Distance:** how far your business location is from the searcher, or from the place named in the search. You cannot fake this, but you can win nearby areas with stronger relevance and prominence.
 - **Prominence:** how well known and trusted Google thinks you are. Built from reviews and ratings, citations, backlinks, press and brand mentions, and how people interact with your listing.
@@ -99,6 +103,10 @@ Ownership is worth stressing: make sure the business owner, not a staff member o
 ## How do you track Google Maps rankings properly?
 
 Because distance is part of the calculation, there is no single ranking for your business: checking from your office shows only the best case. Average position in a tool like Ahrefs tells you little about local performance, because rankings change at every point on the map, sometimes street to street. Use a geo-grid tracker (Local Falcon, BrightLocal or GMB Crush) to map visibility across a 7x7 or 9x9 grid centred on your service area. On one home service account, that grid view is how we lifted [Map Pack visibility by +38% and got 5x more areas into the Top 3](/case-studies/map-pack-service-areas).
+
+![Geo-grid scan showing Map Pack rankings across a service area](../../assets/img/cases/geo-grid-ranking.jpg)
+
+*A geo-grid scan samples rankings across the whole service area, not one pin.*
 
 Then watch the GBP Performance metrics that correlate with revenue: calls, direction requests, website clicks and bookings. Rankings are a leading indicator; these are the result. For one client, profile work produced [461 calls from the Business Profile between April and August 2024](/case-studies/gbp-calls-growth).
 

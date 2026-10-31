@@ -51,6 +51,10 @@ Local SEO is a set of jobs. A proper engagement includes most of these, and unde
 
 ## The four things that change the price
 
+![Four factors that change the price of Local SEO](../../assets/img/blog/cost-drivers.svg)
+
+*What moves a quote up or down.*
+
 - **Competition:** a dentist in Gulshan or Dhanmondi faces far more competition than one in a district town
 - **Coverage:** one location and a small area costs less than several branches or a city-wide service area
 - **Starting condition:** a suspended profile, duplicates or a broken website mean more work up front

@@ -29,6 +29,10 @@ Every day, people in your area search Google for exactly what you sell. Some of 
 
 Local SEO does not create demand. It captures demand that already exists. Someone searching 'AC repair Mirpur' in May, 'pharmacy open now' late at night, or 'best biryani near me' at lunchtime, has already decided to buy. The same intent shows up in Bangla and romanised Bangla searches too. The only open question is from whom. The businesses in the map pack get the first look, the first call and usually the sale.
 
+![Four reasons Local SEO pays off for Bangladesh businesses](../../assets/img/blog/why-local-seo-matters.svg)
+
+*Four reasons showing up locally pays off.*
+
 That makes Local SEO fundamentally different from most marketing, which interrupts people who were not looking. Here you are answering people who asked. Part 3, [How Local SEO Works: Rank Higher on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps), explains how Google picks the three businesses that get that first look.
 
 ## Local searches carry high intent
@@ -66,6 +70,10 @@ Google's AI Overviews and assistants such as ChatGPT and Gemini now answer quest
 ## The business case
 
 The clearest way to judge Local SEO is against the value of a single customer. If one new patient, client or booking is worth a meaningful amount to you over time, then even a handful of extra calls a month covers the cost of the work. That is the calculation to make, rather than comparing providers' prices in isolation.
+
+![Physiotherapy clinic profile with views up 175.7% and searches up 239.8%](../../assets/img/results/gbp/gbp-result-2.webp)
+
+*Client result: a physiotherapy profile with views up 175.7% and searches up 239.8% against its baseline (GBP Insights).*
 
 Results vary widely with category, area and starting point. For a real example of what the change can look like, the [GBP calls growth case study](/case-studies/gbp-calls-growth) shows a profile's call volume taken from the Business Profile performance report.
 

@@ -31,6 +31,10 @@ Local SEO gets described in so much jargon that many business owners here assume
 
 The definition above has two halves and both matter. Appearing is about ranking: being one of the businesses Google shows. Looking like the right choice is about what the searcher sees when you do appear: your reviews, photos, hours, and whether calling you is one tap away. Ranking without the second half produces views but not customers.
 
+![Table comparing being found on Google Maps with being chosen by customers](../../assets/img/blog/found-vs-chosen.svg)
+
+*Ranking gets you seen. Reviews and a complete profile get you the call.*
+
 ## What a local search result looks like
 
 Search 'dentist near me' or 'AC servicing Mirpur' on your phone and you will usually see three kinds of result. At the top there may be ads, marked as sponsored. Below them sits a map with three businesses listed underneath, known as the local pack or map pack. Below that come the ordinary website results. Tapping 'more places' opens the full list on Google Maps, called the local finder. On many searches an AI Overview now sits above all of it, summarising options drawn from the same profiles and reviews.

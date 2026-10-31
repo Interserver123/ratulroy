@@ -28,6 +28,10 @@ Business owners rarely get a straight answer about what SEO work consists of. Pa
 
 Nothing gets fixed before the diagnosis. That means auditing the Google Business Profile field by field, checking the website for technical faults (crawling, indexing, mobile speed, Core Web Vitals), mapping which keywords you already rank for in Google Search Console, and running a geo-grid to see your visibility across the whole service area rather than from one address.
 
+![Four-stage workflow of a Local SEO specialist](../../assets/img/blog/specialist-workflow.svg)
+
+*The work in sequence, from audit to monthly reporting.*
+
 Keyword research happens here too: what customers actually type, including "near me", "in [area]", "cost" and "emergency" variations, and in Bangladesh the Bangla and Banglish versions.
 
 Most audits surface the same handful of problems: wrong primary category, incomplete profile fields, inconsistent business details across the web, and a website with no pages targeting the services people actually search for.

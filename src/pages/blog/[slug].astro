@@ -531,6 +531,22 @@ if (d.faqs.length) {
     color: var(--accent);
     font-weight: 700;
   }
+  .md :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1.8em 0 0.6em;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: #fff;
+  }
+  .md :global(p:has(> img) + p:has(> em:only-child)) {
+    margin: 0 0 1.8em;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--muted, var(--ink-2));
+    text-align: center;
+  }
   .md :global(blockquote) {
     margin: 1.6em 0;
     padding: 20px 24px;

@@ -34,6 +34,10 @@ That raises the stakes on being clearly, unambiguously described as what you are
 
 Assistants reason over entities: a business, its location, its services, the areas it covers, its relationships to other things. They are not counting keyword density. If your site never states plainly what you do and where, there is nothing solid to reason about.
 
+![Four steps an AI assistant takes to choose which local business to name](../../assets/img/blog/ai-answers-sources.svg)
+
+*How an AI assistant arrives at a business name: it reads, compares and quotes the clearest source.*
+
 Structured data helps here, because it states those facts in a machine-readable form rather than leaving them to be inferred from marketing copy. LocalBusiness schema (or the right subtype, such as Dentist or Electrician) with `areaServed`, `openingHoursSpecification` and `sameAs` links to your profiles is the baseline. I set this up as part of [technical SEO](/technical-seo).
 
 ## Get cited, because crawled is not enough

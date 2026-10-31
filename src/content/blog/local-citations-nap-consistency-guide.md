@@ -34,6 +34,10 @@ The value is corroboration, not volume. Ten consistent listings on sites Google 
 
 If one directory lists "Suite 4" and another lists "Unit 4", and a third has an old phone number, Google has to decide which is correct. That uncertainty reduces confidence in your listing, and confidence feeds prominence, one of Google's three local ranking factors alongside relevance and distance. The bigger picture is in [how Local SEO helps businesses rank on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps).
 
+![Table showing one address written three ways across directories versus one standard format](../../assets/img/blog/nap-variants.svg)
+
+*Small spelling differences can read as separate records. Pick one format and use it everywhere.*
+
 Pick one exact format, down to punctuation, and use it everywhere. Then match it to your Google Business Profile exactly. In Bangladesh this needs extra care, because addresses are often written several ways (road number or name, house number, landmark, area). Choose one, for example "House 12, Road 5, Dhanmondi, Dhaka 1205", and stop improvising.
 
 ## How to audit without buying tools

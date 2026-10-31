@@ -28,6 +28,10 @@ That age gets described as being the youngest SEO expert in Bangladesh, which is
 
 I did not learn SEO from a course that was already out of date when it was recorded. I learned by changing something on a real site and watching what happened, which is slower and produces fewer confident opinions.
 
+![Timeline of Ratul Roy from age 16 to founding DigiPolli](../../assets/img/blog/seo-story-timeline.svg)
+
+*The path in four steps.*
+
 That turns out to be an advantage in a field where much of the received wisdom is several algorithm updates behind. If you never learned the old rule, you do not have to unlearn it.
 
 ## Balancing education with client work

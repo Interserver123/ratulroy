@@ -53,6 +53,10 @@ The other advantage is focus. Someone who only does Local SEO (Google Business P
 
 This is the specific risk with agencies, and it is worth naming plainly. The person who sells you the work is frequently not the person who does it. You are impressed in the meeting, then the account is handed to whoever has capacity.
 
+![Comparison of who does the work at an agency versus a specialist](../../assets/img/blog/agency-junior-problem.svg)
+
+*Ask who will actually touch your account.*
+
 It is not always the case, and good agencies avoid it. But it is worth asking directly: who will actually be working on my account, and how many other accounts do they hold?
 
 ## Is a specialist cheaper than an agency?

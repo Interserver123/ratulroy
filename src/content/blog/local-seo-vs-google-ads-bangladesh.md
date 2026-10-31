@@ -35,6 +35,10 @@ Google also offers a pay-per-lead format called Local Services Ads in some count
 
 Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in [how Local SEO works and ranks you on Google Maps](/blog/local-seo-helps-businesses-rank-google-maps), and the wider SEO comparison in part 5, [Local SEO vs Traditional SEO](/blog/local-seo-vs-traditional-seo).
 
+![Comparison table of Google Ads and Local SEO](../../assets/img/blog/ads-vs-local-seo.svg)
+
+*Ads rent attention. Local SEO builds a position you keep maintaining.*
+
 ## Cost: renting versus owning
 
 Ads are like renting a shop on a busy street: you are visible for as long as you keep paying. Local SEO is closer to buying one: slower and more effort up front, but the asset remains yours. Every click on an ad costs money; every call from your map listing costs nothing extra.

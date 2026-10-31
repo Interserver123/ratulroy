@@ -28,6 +28,10 @@ Not showing up on Google Maps feels like one problem, but it is at least nine di
 
 Map Pack results change street by street. Searching from your office and seeing yourself ranked first tells you almost nothing, because distance to the searcher is a ranking factor you cannot control. The reverse is also true: searching from home and not seeing yourself does not mean you are invisible everywhere.
 
+![Six checks for why a business is not showing on Google Maps](../../assets/img/blog/maps-diagnosis.svg)
+
+*Work through these in order. The cheapest checks come first.*
+
 Use a geo-grid tool that samples results across your whole service area instead of a single point. Almost every business that believes it ranks well is looking at one favourable pin. That grid view is also how we tracked [5x more service areas reaching the Top 3](/case-studies/map-pack-service-areas) on one home service account.
 
 ## The profile is unverified or suspended
@@ -69,6 +73,10 @@ When several similar businesses share an address or building (common in Dhaka pl
 ## Your service area is drawn wrong
 
 Service-area businesses list up to 20 areas. Too wide and you spread relevance across places you will never realistically serve. Too narrow and you disappear from areas you want. Remember that the service area does not override distance: Google still measures from your verified location.
+
+![Geo-grid scan of a Dallas service business with first-position rankings](../../assets/img/results/gbp/gbp-result-1.jpg)
+
+*Client result: a geo-grid scan with first-position Map Pack rankings across a Dallas service area.*
 
 Define it honestly around where you actually take jobs. Twenty genuine neighbourhoods beats a hundred aspirational ones.
 
