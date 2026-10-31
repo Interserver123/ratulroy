@@ -117,7 +117,7 @@ const sc = p.heroShowcase;
     </div>
 
     {sc ? (
-    <div class="show" data-reveal style="--d:2" data-tilt>
+    <div class="show" data-nosnippet data-reveal style="--d:2" data-tilt>
       <a class="show__main" href={sc.href ?? "/case-studies"} aria-label={`${sc.mainLabel}: open the case study`}>
         <span class="show__bar" aria-hidden="true"><i /><i /><i /><b>{sc.mainLabel}</b></span>
         <Image src={img(sc.main)} alt={sc.mainLabel} widths={[400, 560, 800]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" fetchpriority="high" class="show__img" />
@@ -148,7 +148,7 @@ const sc = p.heroShowcase;
       <p class="show__note">Real client data · <a href={sc.href ?? "/case-studies"}>see the case study →</a></p>
     </div>
     ) : (
-    <aside class="proof card" data-reveal style="--d:2" aria-label="About the specialist">
+    <aside class="proof card" data-nosnippet data-reveal style="--d:2" aria-label="About the specialist">
       {
         p.heroImage ? (
           <div class="proof__shot">

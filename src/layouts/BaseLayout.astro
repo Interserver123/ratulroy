@@ -5,9 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { site } from "../data/site";
 import { ogCardUrl, OG_SIZE } from "../lib/og";
-import { completeGraph } from "../lib/schema";
-import { getImage } from "astro:assets";
-import { img } from "../lib/img";
+import SchemaGraph from "../components/SchemaGraph.astro";
 
 interface Props {
   title: string;
@@ -24,23 +22,27 @@ interface Props {
 const { title, description, ogImage, ogImageAlt, ogType = "website", noindex = false, schema = [] } =
   Astro.props;
 
-// Canonical without trailing slash, matching the live URLs.
+// Canonical is always the production origin (Astro.site), never the host being served,
+// so staging clones (*.pages.dev, *.vercel.app, *.lovable.app) canonicalise to ratulroy.com.
+const origin = (Astro.site ?? new URL(site.url)).origin;
 const path =
   Astro.url.pathname
     .replace(/\.html$/, "")
     .replace(/(^|\/)index$/, "")
     .replace(/\/$/, "") || "/";
-const canonical = new URL(path, site.url).href;
-// Every page gets a share image: an explicit override, else its generated card, else the site card.
-const ogImageUrl = ogImage ? new URL(ogImage, site.url).href : ogCardUrl(Astro.url.pathname);
-const ogAlt = ogImageAlt ?? `${title} · ${site.name}`;
+const canonical = new URL(path, origin).href;
 
-// One JSON-LD graph per page; referenced site entities are always defined on the page.
-const portraitImg = await getImage({ src: img("people/ratul-roy-portrait.jpg"), width: 400, format: "jpg" });
-const entityImage = new URL(portraitImg.src, site.url).href;
-const graph = schema.length ? completeGraph(schema, entityImage) : [];
-// Escape "<" so content can never close the script tag early.
-const jsonLd = graph.length ? JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c") : null;
+// Anything not served from ratulroy.com (or www) is a preview/staging clone: never index it.
+// Dev server and the static build both use localhost/production hosts, so only the request
+// host of a deployed SSR preview can trip this; static previews are covered by public/_headers.
+const host = Astro.url.hostname;
+const isProd = host === new URL(origin).hostname || host === `www.${new URL(origin).hostname}`;
+const isLocal = host === "localhost" || host === "127.0.0.1";
+const blockIndexing = noindex || (!isProd && !isLocal);
+
+// Every page gets a share image: an explicit override, else its generated card, else the site card.
+const ogImageUrl = ogImage ? new URL(ogImage, origin).href : ogCardUrl(Astro.url.pathname);
+const ogAlt = ogImageAlt ?? `${title} · ${site.name}`;
 ---
 
 <!doctype html>
@@ -58,7 +60,19 @@ const jsonLd = graph.length ? JSON.stringify({ "@context": "https://schema.org",
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
+    <meta name="robots" content={blockIndexing ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
+    {/* Static builds are rendered at build time with the production host, so the server-side check above
+        can't see a preview URL. This guard flips robots to noindex when the page is served elsewhere. */}
+    <script is:inline define:vars={{ prodHost: new URL(origin).hostname }}>
+      (function () {
+        var h = location.hostname;
+        if (h === prodHost || h === "www." + prodHost || h === "localhost" || h === "127.0.0.1") return;
+        var m = document.querySelector('meta[name="robots"]');
+        if (m) m.setAttribute("content", "noindex, nofollow");
+        var c = document.querySelector('link[rel="canonical"]');
+        if (c) c.setAttribute("href", "https://" + prodHost + location.pathname);
+      })();
+    </script>
     <meta name="theme-color" content="#f4f7f6" />
     <FontFaces />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
@@ -84,15 +98,15 @@ const jsonLd = graph.length ? JSON.stringify({ "@context": "https://schema.org",
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={ogAlt} />
 
-    {jsonLd && <script type="application/ld+json" set:html={jsonLd} />}
+    <SchemaGraph nodes={schema} />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <Header />
-    <main id="main">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div data-nosnippet><Header /></div>
+    <main id="main-content">
       <slot />
     </main>
-    <Footer />
+    <div data-nosnippet><Footer /></div>
     <script>
       import "../scripts/motion";
     </script>

@@ -53,13 +53,13 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   <div class="hero__topo" aria-hidden="true"></div>
 
   <div class="container hero__top">
-    <p class="hero__status" data-reveal>
+    <h1 id="hero-title" data-reveal style="--d:2">Local SEO Expert <span class="em">in Bangladesh</span></h1>
+    <p class="hero__status" data-reveal data-nosnippet>
       <span class="live" aria-hidden="true"></span>
       Accepting 2 new clients this month
       <span class="hero__loc">· Based in Bangladesh · Serving worldwide</span>
     </p>
-    <p class="hero__kicker" data-reveal style="--d:1">This is Ratul Roy</p>
-    <h1 id="hero-title" data-reveal style="--d:2">Local SEO Expert <span class="em">in Bangladesh</span></h1>
+    <p class="hero__kicker" data-reveal data-nosnippet style="--d:1">This is Ratul Roy</p>
     <p class="rotator" data-rotator aria-hidden="true" data-reveal style="--d:3">
       <span>Your partner in</span>
       <span class="rotator__words">
@@ -113,15 +113,15 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
     </div>
 
     <!-- Floating cards (outer: mouse parallax, inner: idle float) -->
-    <div class="par par--chip1" data-depth="18">
+    <div class="par par--chip1" data-nosnippet data-depth="18">
       <span class="chip-float"><span class="dotg" aria-hidden="true"></span>Top 3 Map Pack</span>
     </div>
-    <div class="par par--chip2" data-depth="26">
+    <div class="par par--chip2" data-nosnippet data-depth="26">
       <span class="chip-float"><span class="stars" aria-hidden="true">↑</span> +38% Map Pack visibility</span>
     </div>
     </div>
 
-    <div class="par par--result" data-depth="14">
+    <div class="par par--result" data-nosnippet data-depth="14">
       <a class="resultcard glass" href={caseHref}>
         <span class="resultcard__label">Client result</span>
         <span class="resultcard__big num" data-count>461</span>
@@ -134,7 +134,7 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
       </a>
     </div>
 
-    <div class="par par--scan" data-depth="22">
+    <div class="par par--scan" data-nosnippet data-depth="22">
       <div class="scan glass" data-scan>
         <div class="scan__head">
           <p class="scan__title">Geo-grid scan</p>
@@ -301,11 +301,18 @@ const top3 = (k: "after" | "before") => cells.filter((cl) => cl[k] <= 3).length;
   }
 
   /* ---------- Headline ---------- */
+  /* DOM order is h1 -> status pill -> kicker -> rotator so crawlers read the value proposition
+     first; flex "order" keeps the visual order (pill, kicker, h1, rotator). */
   .hero__top {
     position: relative;
     z-index: 4;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .hero__top > .hero__status { order: -2; }
+  .hero__top > .hero__kicker { order: -1; }
   .hero__status {
     display: inline-flex;
     align-items: center;

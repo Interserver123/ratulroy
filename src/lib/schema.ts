@@ -3,12 +3,19 @@ import { site } from "../data/site";
 // Stable entity IDs shared by every page's JSON-LD graph.
 export const ids = {
   website: `${site.url}/#website`,
-  person: `${site.url}/#person`,
+  person: `${site.url}/#ratul`,
   business: `${site.url}/#business`,
 };
 
 /** Profiles that are the same entity: Google Business Profile + official social profiles. */
-export const sameAs = () => [site.mapsUrl, ...site.social.filter((x) => x.sameAs !== false).map((x) => x.href)];
+export const sameAs = () => [
+  site.mapsUrl,
+  site.whatsapp,
+  ...site.social.filter((x) => x.sameAs !== false).map((x) => x.href),
+];
+
+export const digipolli = { "@type": "Organization", "@id": `${site.url}/#digipolli`, name: "DigiPolli" };
+export const visibly = { "@type": "Organization", "@id": `${site.url}/#visibly`, name: "Visibly" };
 
 export const languages = ["English", "Bengali"];
 
@@ -47,7 +54,7 @@ export function coreEntities(imageUrl?: string): Record<string, unknown>[] {
       url: `${site.url}/about`,
       jobTitle: "Local SEO Specialist",
       ...(imageUrl ? { image: imageUrl } : {}),
-      worksFor: { "@id": ids.business },
+      worksFor: [{ "@id": ids.business }, { "@id": digipolli["@id"] }, { "@id": visibly["@id"] }],
       knowsLanguage: languages,
       nationality: { "@type": "Country", name: site.country },
       sameAs: sameAs(),
@@ -55,47 +62,52 @@ export function coreEntities(imageUrl?: string): Record<string, unknown>[] {
     {
       "@type": "ProfessionalService",
       "@id": ids.business,
-      name: "Ratul Roy · Local SEO Bangladesh",
+      name: "Ratul Roy Local SEO",
       alternateName: site.gbpName,
       url: `${site.url}/`,
       email: site.email,
       telephone: site.phone,
-      priceRange: "From $299",
+      priceRange: "$$",
       founder: { "@id": ids.person },
       address: { "@type": "PostalAddress", addressLocality: site.locality, addressCountry: site.countryCode },
       geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
       hasMap: site.mapsUrl,
-      areaServed: [{ "@type": "Country", name: site.country }, "Worldwide"],
+      areaServed: ["Bangladesh", "United States", "Global"],
       knowsLanguage: languages,
       contactPoint: contactPoint(),
       sameAs: sameAs(),
       ...(imageUrl ? { image: imageUrl, logo: imageUrl } : {}),
     },
+    digipolli,
+    visibly,
   ];
 }
 
-/** Adds core entities that are referenced but missing; drops later duplicates of an @id. */
+/**
+ * Builds the connected @graph. Person, ProfessionalService and WebSite are ALWAYS present
+ * (page-defined versions are merged over the compact core ones, so a page can add detail
+ * but never drop the shared fields). DigiPolli/Visibly are added when referenced.
+ */
 export function completeGraph(nodes: Record<string, unknown>[], imageUrl?: string) {
   const core = coreEntities(imageUrl);
-  const out = [...nodes];
-  // Repeat: an added entity can itself reference another one (e.g. WebSite -> business).
-  for (let added = true; added; ) {
-    added = false;
-    const defined = new Set(out.map((n) => n["@id"]).filter(Boolean));
-    const json = JSON.stringify(out);
-    for (const e of core) {
-      if (!defined.has(e["@id"]) && json.includes(`"${e["@id"]}"`)) {
-        out.push(e);
-        added = true;
-      }
+  const always = new Set<unknown>([ids.website, ids.person, ids.business]);
+  const byId = new Map(core.map((e) => [e["@id"], e]));
+  const out: Record<string, unknown>[] = [];
+  const seen = new Set<unknown>();
+  for (const n of nodes) {
+    const id = n["@id"];
+    if (id && seen.has(id)) continue;
+    if (id) seen.add(id);
+    out.push(id && byId.has(id) ? { ...byId.get(id), ...n } : n);
+  }
+  for (const e of core) {
+    if (!seen.has(e["@id"]) && always.has(e["@id"])) {
+      out.push(e);
+      seen.add(e["@id"]);
     }
   }
-  const seen = new Set<unknown>();
-  return out.filter((n) => {
-    const id = n["@id"];
-    if (!id) return true;
-    if (seen.has(id)) return false;
-    seen.add(id);
-    return true;
-  });
+  // Pull in any other core entity (DigiPolli, Visibly) that the graph references.
+  const json = JSON.stringify(out);
+  for (const e of core) if (!seen.has(e["@id"]) && json.includes(`"${e["@id"]}"`)) out.push(e);
+  return out;
 }

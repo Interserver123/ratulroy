@@ -46,9 +46,9 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
               {s.blocks?.map((b, bi) => (
                 <div class="prose__block">
                   {s.heading ? (
-                    <h3><span class="prose__n num">{pad(bi)}</span>{b.heading}</h3>
+                    <h3><span class="prose__n num" aria-hidden="true">{pad(bi)}</span>{b.heading}</h3>
                   ) : (
-                    <h2 class="prose__h"><span class="prose__n num">{pad(bi)}</span>{b.heading}</h2>
+                    <h2 class="prose__h"><span class="prose__n num" aria-hidden="true">{pad(bi)}</span>{b.heading}</h2>
                   )}
                   {b.body?.map((p) => <p set:html={md(p)} />)}
                   {b.bullets && (
@@ -311,7 +311,7 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
                 {s.items?.map((it, i) => (
                   <li class="jy__step" data-step={i}>
                     <button type="button" class="jy__tab" data-go={i}>
-                      <span class="jy__n num">{pad(i)}</span>
+                      <span class="jy__n num" aria-hidden="true">{pad(i)}</span>
                       <span>{it.label ?? it.title}</span>
                     </button>
                     <div class="jy__body">
@@ -368,7 +368,7 @@ const auditTotal = (s: Section) => s.blocks?.reduce((n, b) => n + (b.bullets?.le
               <div class="paud__groups">
                 {s.blocks?.map((b, bi) => (
                   <fieldset class="card paud__group" data-reveal style={`--d:${bi % 2}`}>
-                    <legend><span class="num">{pad(bi)}</span>{b.heading}</legend>
+                    <legend><span class="num" aria-hidden="true">{pad(bi)}</span>{b.heading}</legend>
                     {b.bullets?.map((x, xi) => (
                       <label class="paud__row">
                         <input type="checkbox" name={`a-${si}-${bi}-${xi}`} />

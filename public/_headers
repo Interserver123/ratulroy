@@ -1,7 +1,9 @@
 # Cloudflare Pages response headers.
-# After ratulroy.com is live, also add this block so the preview domain is never indexed:
-#   https://:project.pages.dev/*
-#     X-Robots-Tag: noindex
+# Preview/staging hosts are never indexed (header-level guard; BaseLayout adds the meta equivalent).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
 
 /*
   X-Content-Type-Options: nosniff

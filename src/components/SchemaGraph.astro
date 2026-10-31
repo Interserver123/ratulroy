@@ -1,0 +1,21 @@
+---
+// Entity-first JSON-LD. Every page gets one connected @graph:
+// Person (#ratul) + ProfessionalService (#business) + WebSite, plus the page-specific nodes
+// passed in `nodes` (Service, ItemList/CreativeWork, BlogPosting + FAQPage, ...).
+import { getImage } from "astro:assets";
+import { img } from "../lib/img";
+import { site } from "../data/site";
+import { completeGraph } from "../lib/schema";
+
+interface Props {
+  nodes?: Record<string, unknown>[];
+}
+const { nodes = [] } = Astro.props;
+
+const portrait = await getImage({ src: img("people/ratul-roy-portrait.jpg"), width: 400, format: "jpg" });
+const graph = completeGraph(nodes, new URL(portrait.src, site.url).href);
+// Escape "<" so content can never close the script tag early.
+const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
+---
+
+<script type="application/ld+json" set:html={json} />
