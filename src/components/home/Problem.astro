@@ -1,5 +1,6 @@
 ---
 import { problems } from "../../data/home";
+const { part = "both" } = Astro.props as { part?: "problem" | "audit" | "both" };
 const icons = [
   // map pin off
   '<path d="M12 21s-6-5.6-6-11a6 6 0 0 1 9.7-4.7M18 10c0 1.6-.6 3.3-1.4 4.8M3 3l18 18"/>',
@@ -12,6 +13,7 @@ const icons = [
 ];
 ---
 
+{part !== "audit" && (
 <section class="section" aria-labelledby="problem-title">
   <div class="container">
     <div class="problem">
@@ -78,7 +80,9 @@ const icons = [
     </p>
   </div>
 </section>
+)}
 
+{part !== "problem" && (
 <section id="free-audit" class="section wash" aria-labelledby="audit-title">
   <div class="container">
     <div class="audit card" data-reveal>
@@ -112,6 +116,7 @@ const icons = [
     </div>
   </div>
 </section>
+)}
 
 <script>
   // Map Pack race: drag the slider and "Your business" climbs into the 3-pack (FLIP reorder).

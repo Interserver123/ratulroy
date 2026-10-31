@@ -3,11 +3,12 @@ import { Image } from "astro:assets";
 import { img } from "../../lib/img";
 import { trustedLogos as logos } from "../../data/logos";
 
+const { show = "both" } = Astro.props as { show?: "logos" | "bio" | "both" };
 const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), alt }));
 ---
 
 {
-  trustedLogos.length > 0 && (
+  show !== "bio" && trustedLogos.length > 0 && (
     <section class="trusted" aria-labelledby="trusted-title">
       <div class="container">
         <p class="eyebrow">Clients</p>
@@ -32,6 +33,7 @@ const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), al
   )
 }
 
+{show !== "logos" && (
 <section class="section" aria-labelledby="about-title">
   <div class="container about">
     <div class="about__head" data-reveal>
@@ -80,6 +82,7 @@ const trustedLogos = logos.map(([file, alt]) => ({ src: img(`logos/${file}`), al
     </div>
   </div>
 </section>
+)}
 
 <style>
   .trusted {

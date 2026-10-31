@@ -164,4 +164,20 @@ const icons = [
       flex-direction: column;
     }
   }
+  @media (max-width: 639px) {
+    /* Phones: swipe through the cards instead of a long stack. */
+    .grid.services {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      margin-inline: -16px;
+      padding: 4px 16px 12px;
+    }
+    .grid.services > li {
+      flex: 0 0 84%;
+      scroll-snap-align: start;
+    }
+  }
 </style>

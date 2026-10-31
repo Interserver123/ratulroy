@@ -17,6 +17,7 @@ const groups = [
   { key: "gbp", label: "GBP Ranking", items: await prep(gbpResults) },
   { key: "home", label: "Home Services", items: await prep(homeResults) },
 ];
+const { cta = true } = Astro.props as { cta?: boolean };
 ---
 
 <section id="results" class="section wash" aria-labelledby="results-title">
@@ -135,6 +136,7 @@ const groups = [
   </div>
 </section>
 
+{cta && (
 <section class="section" aria-labelledby="audit2-title">
   <div class="container audit2">
     <div class="audit2__copy" data-reveal>
@@ -168,6 +170,7 @@ const groups = [
     </div>
   </div>
 </section>
+)}
 
 <script>
   const tabs = [...document.querySelectorAll<HTMLButtonElement>("[data-rtab]")];

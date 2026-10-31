@@ -5,13 +5,11 @@ import Hero from "../components/home/Hero.astro";
 import About from "../components/home/About.astro";
 import Problem from "../components/home/Problem.astro";
 import Services from "../components/home/Services.astro";
-import SignalFlow from "../components/home/SignalFlow.astro";
 import AiSearch from "../components/home/AiSearch.astro";
 import Strategy from "../components/home/Strategy.astro";
 import Results from "../components/home/Results.astro";
 import CaseStudies from "../components/home/CaseStudies.astro";
 import Industries from "../components/home/Industries.astro";
-import Guides from "../components/home/Guides.astro";
 import Faq from "../components/home/Faq.astro";
 import Contact from "../components/home/Contact.astro";
 import { site } from "../data/site";
@@ -113,16 +111,16 @@ const schema = [
 
 <BaseLayout title={title} description={description} schema={schema}>
   <Hero />
-  <About />
-  <Problem />
-  <SignalFlow />
+  <!-- Proof first: who I've worked with, then results, then the free audit. -->
+  <About show="logos" />
+  <CaseStudies />
+  <Results cta={false} />
+  <Problem part="audit" />
   <Services />
   <AiSearch />
   <Strategy />
-  <Results />
-  <CaseStudies />
+  <About show="bio" />
   <Industries />
-  <Guides />
   <Faq />
   <Contact />
 </BaseLayout>
