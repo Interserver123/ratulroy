@@ -1,5 +1,5 @@
 title: "Towing SEO Case Study: Hawk Towing Ranks #1 in Beaumont, TX"
-description: "Towing SEO case study: Hawk Towing & Auto ranks #1 in Google's organic results for towing, wrecker and cash-for-junk-cars searches in Beaumont, Texas."
+description: "Towing SEO case study: Hawk Towing & Auto went from 34 to 204 Google clicks in three months and ranks #1 for 7 towing and junk car searches in Beaumont, TX."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Case Studies, href: /case-studies }
@@ -7,32 +7,48 @@ breadcrumb:
 eyebrow: "Case Study · Towing Company · Beaumont, TX"
 h1: "Hawk Towing & Auto: #1 on Google for Towing in Beaumont, TX"
 em: "#1 on Google"
-lead: "Hawk Towing & Auto is a 24/7 towing, roadside and junk car business in Beaumont, Texas. Its website now ranks first in Google's organic results for five of its main money searches, ahead of competitors with far larger link profiles."
+lead: "Hawk Towing & Auto is a 24/7 towing, roadside and junk car business in Beaumont, Texas. In three months its Google clicks rose from 34 to 204 and impressions from 2.79K to 14.1K. The site now ranks first in Google's organic results for seven of its main money searches, ahead of competitors with far larger link profiles."
 heroChips: ["Towing SEO", "Service pages", "Beaumont, TX"]
 heroStats:
-  - { value: "#1", label: "Organic position" }
-  - { value: "5", label: "Money keywords at #1" }
-  - { value: "62%", label: "Hardest keyword difficulty" }
+  - { value: "6x", label: "Google clicks (34 → 204)" }
+  - { value: "5x", label: "Impressions (2.79K → 14.1K)" }
+  - { value: "7", label: "Money keywords at #1" }
 heroImage: "cases/hawk/wrecker-service-beaumont-serp.jpg"
 ctas:
   - { label: Get Free SEO Audit, href: "/#free-audit" }
   - { label: See all case studies, href: /case-studies, style: ghost }
 intro:
-  - "**Client:** [Hawk Towing & Auto](https://hawktowingandauto.com), a towing and wrecker service in Beaumont, Texas. **Focus:** organic rankings for towing, wrecker and cash-for-junk-cars searches. **Key result:** #1 organic position for every search below, including \"wrecker service beaumont tx\" (keyword difficulty 62%)."
+  - "**Client:** [Hawk Towing & Auto](https://hawktowingandauto.com), a towing and wrecker service in Beaumont, Texas. **Focus:** organic rankings for towing, wrecker and cash-for-junk-cars searches. **Key results:** Google clicks up from 34 to 204 and impressions from 2.79K to 14.1K, comparing the last three months with the three before (Google Search Console). #1 organic position for seven searches, including \"wrecker service beaumont tx\" (keyword difficulty 62%)."
 updated: 2026-10-31
 sections:
   - type: stats
-    eyebrow: "01 · Results"
+    eyebrow: "01 · Traffic"
+    heading: "Search Console: three months against the three before"
+    intro: "Clicks from Google grew six-fold and impressions five-fold in three months. The figures below are from Hawk Towing's Google Search Console, web search, last three months compared with the previous three."
+    items:
+      - { title: "Clicks (was 34)", value: "204" }
+      - { title: "Impressions (was 2.79K)", value: "14.1K" }
+      - { title: "Click-through rate (was 1.2%)", value: "1.4%" }
+  - type: images
+    alt: true
+    eyebrow: Google Search Console
+    heading: "Performance report"
+    items:
+      - { title: "Search Console performance", text: "Last 3 months (solid lines) against the previous 3 months (dashed): 204 clicks vs 34, and 14.1K impressions vs 2.79K. Average position held at 7.7 as the site began showing for far more searches.", image: "cases/hawk/search-console-3-months.jpg" }
+  - type: stats
+    eyebrow: "02 · Rankings"
     heading: "Where Hawk Towing ranks today"
-    intro: "Hawk Towing & Auto holds the first organic result on Google for five towing and junk car searches in Beaumont. Keyword difficulty figures come from SEOquake's Semrush data shown in each screenshot."
+    intro: "Hawk Towing & Auto holds the first organic result on Google for seven towing and junk car searches in Beaumont. Keyword difficulty figures come from SEOquake's Semrush data shown in each screenshot."
     items:
       - { title: "towing service", value: "#1" }
       - { title: "beaumont towing service (KD 46%)", value: "#1" }
       - { title: "wrecker service beaumont tx (KD 62%)", value: "#1" }
       - { title: "cash for junk cars beaumont", value: "#1" }
       - { title: "junk cars for cash beaumont tx (KD 60%)", value: "#1" }
+      - { title: "sell your junk car for cash (KD 56%)", value: "#1" }
+      - { title: "motorcycle towing service", value: "#1" }
   - type: problems
-    eyebrow: "02 · The market"
+    eyebrow: "03 · The market"
     heading: "Why towing is a hard local market"
     intro: "Towing searches are urgent, mobile and fought over by established operators. Most of the clicks go to the Map Pack and the first one or two organic results, so second place earns far fewer calls."
     items:
@@ -42,11 +58,11 @@ sections:
       - { title: "Price-led rivals", text: "Competitors lead with prices, such as tows \"from $50\", so the page has to give a reason to call beyond cost." }
   - type: steps
     alt: true
-    eyebrow: "03 · Approach"
+    eyebrow: "04 · Approach"
     heading: "How the site was built to rank"
     intro: "The site gives each service its own page, written for one buyer and one city, with the phone number first. You can see this structure in the search results themselves."
     items:
-      - { title: "One page per service", text: "Towing and cash for junk cars have separate pages and URLs (for example /cash-for-junk-cars), so each can rank for its own searches." }
+      - { title: "One page per service", text: "Towing, motorcycle towing and cash for junk cars each have their own page and URL (/motorcycle-towing, /cash-for-junk-cars), so each can rank for its own searches." }
       - { title: "Service and city in every title", text: "Titles such as \"Towing Services in Beaumont, TX — 24/7, No Hidden Fees\" and \"Fast Cash For Junk Cars in Beaumont, TX\" match how people search and state the offer." }
       - { title: "Call-first snippets", text: "The meta description opens with \"Call (409) 790-1677 any time day or night\", so a stranded driver can act from the results page." }
       - { title: "Answers to real objections", text: "Pages answer what buyers worry about: hidden fees, response time, and free pickup for non-running cars." }
@@ -56,16 +72,20 @@ sections:
   - type: images
     eyebrow: Real Screenshots
     heading: "Google results for each keyword"
-    intro: "Each screenshot is a live Google search for the keyword shown, with Hawk Towing & Auto in the first organic position."
+    intro: "Each screenshot is a live Google search for the keyword shown, with Hawk Towing & Auto in the first organic position. Two independent rank checks confirm the result outside my own browser."
     items:
       - { title: "towing service: #1", text: "Hawk Towing & Auto in first place for \"towing service\", searched from the Beaumont area.", image: "cases/hawk/towing-service-serp.jpg" }
       - { title: "beaumont towing service: #1 (KD 46%)", text: "First organic result, ahead of a competitor advertising tows from $50.", image: "cases/hawk/beaumont-towing-service-serp.jpg" }
       - { title: "wrecker service beaumont tx: #1 (KD 62%)", text: "First organic result directly below the Map Pack, on the hardest keyword in the set.", image: "cases/hawk/wrecker-service-beaumont-serp.jpg" }
       - { title: "cash for junk cars beaumont: #1", text: "The dedicated junk car page ranks first, above a used car buyer with a far larger link profile.", image: "cases/hawk/cash-for-junk-cars-beaumont-serp.jpg" }
       - { title: "junk cars for cash beaumont tx: #1 (KD 60%)", text: "The same page holds first place for the reversed search phrase.", image: "cases/hawk/junk-cars-for-cash-beaumont-serp.jpg" }
+      - { title: "sell your junk car for cash: #1 (KD 56%)", text: "The junk car page also wins this broader search with no city in it, above CarBrain and a large parts site.", image: "cases/hawk/sell-junk-car-for-cash-serp.jpg" }
+      - { title: "motorcycle towing service: #1", text: "The dedicated motorcycle towing page ranks first for a specialist search most local competitors don't target.", image: "cases/hawk/motorcycle-towing-serp.jpg" }
+      - { title: "Independent check: cash for junk cars beaumont", text: "FatRank's US rank checker, which is not personalised to my browser, confirms position 1 for /cash-for-junk-cars.", image: "cases/hawk/fatrank-cash-for-junk-cars-beaumont.jpg" }
+      - { title: "Independent check: cash for junk cars beaumont tx", text: "Position 1 again for the variant with \"tx\".", image: "cases/hawk/fatrank-cash-for-junk-cars-beaumont-tx.jpg" }
   - type: list
     alt: true
-    eyebrow: "04 · Learnings"
+    eyebrow: "05 · Learnings"
     heading: "What this case study shows"
     intro: "A small local site can outrank much stronger domains when each page matches one search exactly and gives the buyer what they need to call."
     bullets:
@@ -86,9 +106,9 @@ finalCta:
     - { label: Book Strategy Call, href: /book-strategy-call }
 card:
   title: "Hawk Towing & Auto: #1 for Towing in Beaumont, TX"
-  text: "Dedicated service pages took a Beaumont towing company to #1 on Google for towing, wrecker and cash-for-junk-cars searches."
-  value: "#1"
-  label: "Towing searches in Beaumont"
+  text: "Dedicated service pages took a Beaumont towing company from 34 to 204 Google clicks in three months, with #1 rankings for 7 money searches."
+  value: "6x"
+  label: "Google clicks in 3 months"
   category: "Towing SEO · Local organic"
   image: "cases/hawk/wrecker-service-beaumont-serp.jpg"
 order: 6
