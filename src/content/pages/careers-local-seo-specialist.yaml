@@ -41,7 +41,7 @@ sections:
       - { title: WordPress, text: "Working with WordPress and Elementor to implement SEO recommendations." }
       - { title: Content, text: "Optimizing existing content and creating useful, search-focused content." }
       - { title: "AI + SEO", text: "Learning modern AI-assisted SEO workflows and tools." }
-      - { title: Real Client Projects, text: "You will work on actual SEO campaigns, not only theoretical exercises." }
+      - { title: Real Client Projects, text: "You work on live client campaigns from week one." }
   - type: prose
     eyebrow: Requirements
     heading: "Who we are looking for"
@@ -77,7 +77,7 @@ sections:
     bullets:
       - "Full-time, remote position"
       - "৳10,000 to ৳12,000 per month, depending on skill level, practical ability, commitment and performance"
-      - "Work on real client SEO campaigns, not only theoretical exercises"
+      - "Work on live client SEO campaigns from week one"
       - "Training, after which you work independently"
       - "Hands-on experience with modern AI-assisted SEO workflows and tools"
   - type: steps

@@ -36,7 +36,7 @@ Assistants reason over entities: a business, its location, its services, the are
 
 Structured data helps here, because it states those facts in a machine-readable form rather than leaving them to be inferred from marketing copy. LocalBusiness schema (or the right subtype, such as Dentist or Electrician) with `areaServed`, `openingHoursSpecification` and `sameAs` links to your profiles is the baseline. I set this up as part of [technical SEO](/technical-seo).
 
-## Get cited, not just crawled
+## Get cited, because crawled is not enough
 
 Assistants tend to cite sources that answer a question directly and completely. Pages that bury the answer under three paragraphs of preamble get skipped in favour of ones that lead with it.
 
