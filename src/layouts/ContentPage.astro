@@ -91,7 +91,7 @@ const hubItems: { name: string; url: string }[] =
               .map((i) => ({ name: i.title, url: `${site.url}${i.href}` }))
               .filter((it, i, all) => all.findIndex((x) => x.url === it.url) === i)
           : [];
-const pageType = kind === "case" ? "Article" : hubItems.length ? "CollectionPage" : ["/contact", "/book-strategy-call"].includes(path) ? "ContactPage" : "WebPage";
+const pageType = hubItems.length ? "CollectionPage" : ["/contact", "/book-strategy-call"].includes(path) ? "ContactPage" : "WebPage";
 
 const schema: Record<string, unknown>[] = [
   {
@@ -129,6 +129,21 @@ const schema: Record<string, unknown>[] = [
     })),
   },
 ];
+// Case studies: the page is a WebPage; the write-up itself is an Article on it.
+if (kind === "case") {
+  schema.push({
+    "@type": "Article",
+    "@id": `${url}#article`,
+    headline: d.h1,
+    description: d.description,
+    image: { "@type": "ImageObject", url: ogUrl, width: OG_SIZE.width, height: OG_SIZE.height },
+    author: { "@id": `${site.url}/#ratul` },
+    publisher: { "@id": `${site.url}/#ratul` },
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    ...(updatedIso ? { dateModified: updatedIso } : {}),
+    inLanguage: "en",
+  });
+}
 if (kind === "service" || kind === "industry") {
   schema.push({
     "@type": "Service",

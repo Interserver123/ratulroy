@@ -1,5 +1,5 @@
 title: "Generative Engine Optimization (GEO) Service in Bangladesh"
-description: "Generative Engine Optimization that helps AI Overviews, ChatGPT, Gemini and Perplexity understand and cite your business, built on Local SEO and entity work."
+description: "GEO for service businesses: I test buyer prompts in ChatGPT, Gemini and AI Overviews, fix your entity and schema, and track who gets cited. No lock-in."
 breadcrumb:
   - { label: Home, href: / }
   - { label: Services, href: /services }
@@ -7,19 +7,20 @@ breadcrumb:
 eyebrow: Generative Engine Optimization
 h1: "GEO Service in Bangladesh for AI Search Visibility"
 em: "AI Search Visibility"
-lead: "I make your business easier for Google AI Overviews, Gemini, ChatGPT search, Perplexity and Bing Copilot to identify, trust and cite. The work is entity SEO, structured data, answer-ready content and consistent brand signals across the sources those systems read."
-sub: "More buyers now ask an assistant for \"the best dentist in Dhanmondi\" or \"a reliable AC repair service near me\" instead of scrolling ten blue links. If the assistant cannot work out who you are, what you do and where you do it, you are not in the answer."
-heroChips: ["AI Overviews", "Entity SEO", "LLM citations", "Schema markup", "Local SEO + AI search"]
+lead: "AI assistants recommend the businesses they can verify. I test the prompts your buyers type into Google AI Overviews, Gemini, ChatGPT search, Perplexity and Bing Copilot, find out why a competitor gets named instead of you, and fix the entity, schema and profile signals behind it."
+sub: "This is the same evidence-led method behind 461 calls from one Google Business Profile in five months and +38% Map Pack visibility for a home service business near Dallas. It works for a plumber in Plano and a clinic in Dhanmondi, because every assistant checks the same things: who you are, what you do and where."
+heroChips: ["AI Overviews", "Entity SEO", "LLM citations", "Schema markup", "Geo-grid tracking"]
 heroStats:
-  - { value: "5", label: "AI platforms" }
-  - { value: "10", label: "Service layers" }
-  - { value: "4", label: "Framework levels" }
+  - { value: "461", label: "Calls from one GBP" }
+  - { value: "+38%", label: "Map Pack visibility" }
+  - { value: "0", label: "Lock-in contracts" }
 ctas:
   - { label: Get Free AI Search Visibility Audit, href: "/#free-audit" }
-  - { label: See How GEO Works, href: "#geo-process", style: ghost }
+  - { label: See How I Work, href: "#geo-process", style: ghost }
 intro:
-  - "**Generative Engine Optimization (GEO)** is the work of making a business easy for AI answer engines to identify, verify and cite. It covers entity consistency, schema.org structured data, answer-ready pages, reviews and brand mentions on trusted sites, so tools like Google AI Overviews, Gemini, ChatGPT search and Perplexity name you when someone asks."
-updated: 2026-10-21
+  - "**Generative Engine Optimization (GEO)** is the work of making a business easy for AI answer engines to identify, verify and cite. In practice that means one consistent entity across your website, Google Business Profile and directories, schema.org markup that ties them together, pages that answer buyer questions directly, and reviews and mentions an assistant can confirm."
+  - "I don't start with content. I start by recording what the assistants say about you today, which sources they cite, and where the facts about your business disagree. Most lost AI mentions trace back to a small number of fixable mismatches."
+updated: 2026-10-31
 entities:
   - { name: Generative engine optimization, sameAs: "https://en.wikipedia.org/wiki/Generative_engine_optimization" }
   - { name: Google Knowledge Graph, sameAs: "https://en.wikipedia.org/wiki/Google_Knowledge_Graph" }
@@ -28,102 +29,108 @@ entities:
 sections:
   - type: cards
     columns: 2
-    eyebrow: What is GEO?
+    eyebrow: GEO vs SEO
     heading: "How GEO differs from traditional SEO"
-    intro: "Traditional SEO earns a position in a list of links. GEO earns a mention inside a written answer. The two share a foundation (crawlable pages, clear content, links and reviews), but an AI answer adds a step: the system has to be confident about which real business it is describing before it names you."
+    intro: "SEO earns a position in a list of links; GEO earns a named mention inside a written answer. Both need crawlable pages and trust, but an assistant must also be certain which real business it is describing before it names you. That certainty is what I build."
     items:
       - { label: Then, title: Traditional SEO, bullets: ["Rankings in the organic results", "Clicks from a results page", "Title tags and snippets", "Keyword-led pages", "Traffic as the main measure"] }
-      - { label: Now, title: Generative Engine Optimization, featured: true, bullets: ["Mentions inside AI-written answers", "Entity recognition: who, what, where", "Citations to your pages as sources", "Brand mentions on third-party sites", "Answers that survive follow-up questions", "Visibility in AI Overviews"] }
+      - { label: Now, title: Generative Engine Optimization, featured: true, bullets: ["Named in AI-written answers", "One verified entity: who, what, where", "Your pages cited as sources", "Facts confirmed on third-party sites", "Answers that hold up to follow-up questions", "Visibility in AI Overviews"] }
   - type: cards
     alt: true
     columns: 4
-    eyebrow: Why it matters
+    eyebrow: Where answers come from
     heading: "Where AI answers get their information about your business"
-    intro: "Each assistant builds its answer from different sources. Google AI Overviews and Gemini lean on Google's own index, Google Maps data and the Knowledge Graph. Bing Copilot draws on Bing's index and Bing Places. ChatGPT search and Perplexity run live web searches and cite the pages they read. One inconsistent fact in any of those places weakens the whole picture."
+    intro: "Google AI Overviews and Gemini read Google's index, Maps data and the Knowledge Graph; Bing Copilot reads Bing and Bing Places; ChatGPT search and Perplexity run live web searches. I audit all of those sources, because one wrong phone number or category in any of them weakens the whole picture."
     items:
-      - { title: Fewer clicks reach your site, text: "An AI Overview often answers the question on the results page. If your business is named in that answer, you still win the call. If it is not, the click never existed." }
-      - { title: Entities beat keywords, text: "Assistants reason about things, not strings. Your business name, address, phone, founder, services and service area need to match everywhere so they resolve to one entity." }
-      - { title: Third-party proof counts, text: "AI systems prefer facts they can confirm elsewhere: reviews, directory listings, press, association pages and industry sites that mention you by name." }
-      - { title: Local and AI search share signals, text: "Your Google Business Profile, reviews and citations feed both the Map Pack and AI answers to local questions. Weak local foundations show up in both places." }
+      - { title: Fewer clicks reach your site, text: "An AI Overview often answers on the results page. If you are named in it, you still get the call. If you are not, there was never a click to win." }
+      - { title: Entities beat keywords, text: "Assistants reason about things, not strings. I match your name, address, phone, founder, services and service area across every profile so they resolve to one business." }
+      - { title: Third-party proof counts, text: "Assistants prefer facts they can confirm elsewhere. I build that corroboration on directories, associations, local media and partner pages." }
+      - { title: Maps and AI share signals, text: "Your Google Business Profile, reviews and citations feed both the Map Pack and AI answers to local questions. That is why I fix them first." }
   - type: list
     eyebrow: Local GEO
     heading: "How AI answers \"best X near me\" questions"
+    intro: "For local questions, AI answers are built mostly from Google Maps listings, review text and the businesses' own sites, so the business that ranks across the most of its service area gets named most. I measure that with geo-grid tracking rather than a single rank check from one postcode."
     body:
-      - "Ask Gemini or an AI Overview for \"the best pediatric dentist near me\" and the answer is usually assembled from Google Maps listings, review text, the businesses' own websites and a few list articles. That means the same signals behind [Local SEO services](/local-seo-service) decide who gets named: distance from the searcher, how relevant your categories and services are, and how prominent your business looks across the web."
-      - "Review text matters more than most owners expect. When customers write \"they fixed our AC the same evening\" or \"the root canal was painless\", an assistant can quote that as a reason to recommend you. A profile with a correct primary category, a full services list and recent reviews gives an AI system concrete things to say, which is why [Google Business Profile optimization](/google-business-profile-optimization) is usually the first GEO task for a local business."
-    bullets: ["Google Business Profile categories and services", "Review recency and what reviews actually say", "NAP consistency across directories", "LocalBusiness schema with areaServed and sameAs", "Service and area pages that answer real questions", "Bing Places and Apple Business Connect listings", "Mentions in local news and list articles", "Owner replies that add useful detail"]
+      - "A geo-grid scan checks the same keyword from a grid of points across your service area and shows each position on a map. For a home service business near Plano, that view showed it ranked in one zone and nowhere else. After category, service-area and citation work it ranked Top 3 across five times as many areas, with Map Pack visibility up 38% ([the full case study](/case-studies/map-pack-service-areas))."
+      - "On each grid I compare your primary and secondary categories with the competitors who outrank you. Where a competitor has stuffed keywords into its business name or runs a fake listing, I report it to Google with evidence, because those listings take places that belong to real businesses. Then I line up your service and area pages with the profile, using LocalBusiness JSON-LD with areaServed and sameAs, so Google and the assistants read one consistent story."
+      - "Review text matters more than most owners expect. When a customer writes \"they fixed our AC the same evening\", an assistant can quote it as a reason to recommend you. That is why [Google Business Profile optimization](/google-business-profile-optimization) is usually the first GEO task for a local business."
+    bullets: ["Primary and secondary categories vs the competitors who outrank you", "Geo-grid rank tracking across the whole service area", "Spam and keyword-stuffed listings reported with evidence", "NAP matched across every directory", "LocalBusiness JSON-LD with areaServed and sameAs", "Service and area pages aligned with the profile", "Bing Places and Apple Business Connect listings", "Review requests that prompt specific detail"]
   - type: cards
     columns: 3
-    eyebrow: Who needs GEO?
+    eyebrow: Who it's for
     heading: "Which businesses benefit most from GEO?"
+    intro: "GEO pays back fastest for businesses where one recommended enquiry is worth a lot: high-ticket trades, B2B suppliers and trust-heavy services. I work with clients in the US and abroad and with market leaders in Bangladesh. The method is the same; the platforms and sources differ by market."
     items:
-      - { label: "01", title: Local service businesses, text: "Clinics, trades, law firms and repair shops that want to be named when people ask an assistant for a provider in their city or area." }
-      - { label: "02", title: SEO agencies, text: "Agencies that need entity, schema and AI visibility work delivered for their clients under their own process." }
-      - { label: "03", title: Consultants and experts, text: "Personal brands that need AI systems to connect their name with their expertise, credentials and published work." }
-      - { label: "04", title: SaaS and B2B brands, text: "Companies that appear in comparison and \"which tool should I use\" prompts, where being described accurately matters as much as being mentioned." }
-      - { label: "05", title: "Healthcare, legal and professional services", text: "Trust-heavy fields where AI systems are cautious, so author credentials, accurate claims and verifiable proof carry extra weight. See how this applies to [dental clinics](/industries/dental-seo)." }
-      - { label: "06", title: "Not sure yet?", href: "/#free-audit", cta: Get an AI visibility audit, text: "Start with an audit of how AI platforms currently describe your business, then decide." }
+      - { label: "01", title: "HVAC, plumbing and electrical", text: "Emergency and high-value jobs where buyers ask an assistant \"who can fix this today\". I work on Maps coverage and AI mentions together. See [HVAC SEO](/industries/hvac-seo), [plumbing SEO](/industries/plumbing-seo) and [Local SEO for electricians](/industries/local-seo-for-electricians)." }
+      - { label: "02", title: Wholesale distributors, text: "B2B buyers ask assistants for suppliers by product, brand and region. I make your catalogue, brands and coverage area clear enough to be named. See [SEO for wholesale distributors](/seo-for-wholesale-distributors)." }
+      - { label: "03", title: "Leading local businesses in Bangladesh", text: "In Bangladesh, addresses are written many ways and Bangla and English searches mix. I standardise your entity across Google, Facebook and local directories so assistants stop confusing you with similar names." }
+      - { label: "04", title: "Clinics and professional services", text: "AI systems are cautious in health and legal topics. Named experts, verifiable credentials and real reviews carry extra weight. See how this applies to [dental clinics](/industries/dental-seo)." }
+      - { label: "05", title: Consultants and SEO agencies, text: "Personal brands that need AI systems to connect a name with expertise, and agencies that need entity and schema work delivered for their clients." }
+      - { label: "06", title: "Not sure yet?", href: "/#free-audit", cta: Get an AI visibility audit, text: "Start with an audit of what the assistants say about you today, then decide." }
   - type: cards
     alt: true
     columns: 2
-    eyebrow: GEO service stack
+    eyebrow: What I do
     heading: "What's included in my Generative Engine Optimization service"
+    intro: "Each part of the service fixes one reason an assistant might skip you: it can't find you, can't verify you, or can't find a quotable answer on your pages. You get the diagnosis first, then the fixes in order of impact."
     items:
-      - { title: AI Search Visibility Audit, text: "I run the prompts your buyers would use in AI Overviews, Gemini, ChatGPT search, Perplexity and Bing Copilot, then record whether you are named, how you are described and which sources get cited instead.", tags: ["AI visibility audit", "Prompt testing", "Source mapping"] }
-      - { title: Entity SEO, text: "I make one clear version of your business: the same name, address, phone, founder, services and area on your website, Google Business Profile, social profiles and directories, so systems resolve them to one entity.", tags: ["Entity consistency", "Knowledge Graph", "Brand entity"] }
-      - { title: "Schema and structured data", text: "I add JSON-LD for Organization or LocalBusiness (with the right subtype), Person, Service, FAQPage, Article and BreadcrumbList, including sameAs links that tie your site to your other profiles.", tags: ["Schema markup", "sameAs", "JSON-LD"] }
-      - { title: AI Overview readiness, text: "I restructure key pages so each one opens with a direct answer, uses specific headings and covers the follow-up questions a searcher asks next.", tags: ["AI Overviews", "Answer-first pages", "Question headings"] }
-      - { title: LLM citation work, text: "I improve the pages an assistant is most likely to cite: clear facts, named services, prices or ranges where you publish them, and claims backed by evidence on the page.", tags: ["LLM citations", "ChatGPT search", "Perplexity"] }
-      - { title: Topical coverage mapping, text: "I map the questions buyers ask around each service and build supporting pages, so your site covers the topic rather than one keyword.", tags: ["Topical authority", "Semantic SEO", "Content clusters"] }
-      - { title: "Query fan-out coverage", text: "AI systems split one question into several sub-searches. I check which of those sub-questions your site answers and fill the gaps with comparison, cost and how-to content.", tags: ["Query fan-out", "Follow-up prompts", "Answer engine optimization"] }
-      - { title: "Brand mentions and citations", text: "I clean up directory listings and build mentions on sites assistants trust: industry directories, associations, local media and partner pages. More on the groundwork in this [guide to local citations and NAP consistency](/blog/local-citations-nap-consistency-guide).", tags: ["Brand mentions", "Citation signals", "NAP consistency"] }
-      - { title: "E-E-A-T and trust signals", text: "I strengthen author pages, credentials, case studies, review display and the About page, so a cautious AI system has evidence to rely on.", tags: ["E-E-A-T", "Author signals", "Proof"] }
-      - { title: "GEO reporting and next steps", text: "Each month you see which prompts name you, which sources get cited, what changed in schema and entity coverage, and what I am fixing next.", tags: ["GEO reporting", "Prompt tracking", "Roadmap"] }
+      - { title: AI search visibility audit, text: "I run the prompts your buyers use across AI Overviews, Gemini, ChatGPT search, Perplexity and Bing Copilot, and log three things for each: are you named, how are you described, and which sources were cited instead.", tags: ["Prompt testing", "Source mapping", "Competitor citations"] }
+      - { title: Entity audit and clean-up, text: "I list every place your business appears and flag each mismatch in name, address, phone, category or description. Duplicate and outdated listings get merged or closed.", tags: ["Entity consistency", "Knowledge Graph", "Duplicate listings"] }
+      - { title: "Schema and structured data", text: "I write JSON-LD for LocalBusiness (with the right subtype), Person, Service, FAQPage and BreadcrumbList, joined in one graph with sameAs links to your real profiles. I validate it before it goes live.", tags: ["JSON-LD", "sameAs", "LocalBusiness"] }
+      - { title: Search Console and SERP auditing, text: "I pull your Google Search Console queries and check the live results for the ones that trigger AI Overviews. That shows which of your pages Google already trusts, and which questions you are losing.", tags: ["Search Console", "AI Overview queries", "SERP audit"] }
+      - { title: Answer-first pages, text: "I rewrite priority pages so each section opens with a direct, quotable answer, followed by the detail and proof. Assistants lift those first sentences.", tags: ["AI Overviews", "Answer-first", "Question headings"] }
+      - { title: "Query fan-out coverage", text: "Assistants split one question into several sub-searches. I map those sub-questions (cost, comparison, timing, risk) and fill the gaps on your site.", tags: ["Query fan-out", "Follow-up prompts", "Topical coverage"] }
+      - { title: "Brand mentions and citations", text: "I fix directory listings and earn mentions on sites assistants trust: industry directories, associations, local media and partner pages. Groundwork in this [guide to local citations and NAP consistency](/blog/local-citations-nap-consistency-guide).", tags: ["Brand mentions", "Citations", "NAP"] }
+      - { title: "Proof and trust signals", text: "Named author, credentials, case studies with real numbers, and reviews shown on the page. A cautious assistant needs evidence it can point to.", tags: ["E-E-A-T", "Author signals", "Case studies"] }
+      - { title: Crawler access check, text: "I check robots.txt, CDN and security settings for blocks on OAI-SearchBot, PerplexityBot, Bingbot and Googlebot. Accidental blocks are common and quick to fix.", tags: ["robots.txt", "AI crawlers", "Technical SEO"] }
+      - { title: "Monthly prompt tracking", text: "Each month I re-run the same prompts and report which name you, which sources were cited, what changed and what I am fixing next. Enquiries are reported alongside mentions.", tags: ["Prompt tracking", "Reporting", "Roadmap"] }
   - type: cards
     columns: 4
-    eyebrow: The GEO framework
+    eyebrow: The framework
     heading: "Four levels from basic AI readiness to strong LLM visibility"
+    intro: "Most businesses I audit stop at Level 1 or 2: the site can be crawled, but the entity is inconsistent and the pages don't answer questions directly. Each level depends on the one before it, so I fix them in order."
     items:
-      - { label: Level 1, title: Foundation, bullets: ["Crawlable, indexable pages", "AI crawlers not blocked in robots.txt", "Clear service pages", "Basic schema", "Consistent brand name"] }
-      - { label: Level 2, title: Entity clarity, bullets: ["Organization, Person or LocalBusiness schema", "sameAs links to real profiles", "A detailed About page", "Matching NAP everywhere", "Named author and expert"] }
-      - { label: Level 3, title: Answer engine optimization, bullets: ["Answer-first paragraphs", "Question-form headings", "Comparison and cost content", "Problem and solution pages", "FAQs that add new information"] }
-      - { label: Level 4, title: Strong LLM visibility, featured: true, bullets: ["Full topical coverage", "Query fan-out coverage", "Citable facts and proof", "Brand mentions on trusted sites", "Reviews that describe the work", "Ongoing prompt monitoring"] }
+      - { label: Level 1, title: Foundation, bullets: ["Crawlable, indexable pages", "AI crawlers allowed in robots.txt", "Clear service pages", "Basic schema", "Consistent brand name"] }
+      - { label: Level 2, title: Entity clarity, bullets: ["LocalBusiness or Organization schema", "sameAs links to real profiles", "A detailed About page", "Matching NAP everywhere", "Named author and expert"] }
+      - { label: Level 3, title: Answer-ready pages, bullets: ["Answer-first sections", "Question-form headings", "Cost and comparison content", "Problem and solution pages", "FAQs that add new information"] }
+      - { label: Level 4, title: Strong LLM visibility, featured: true, bullets: ["Full topical coverage", "Query fan-out coverage", "Citable facts and proof", "Mentions on trusted sites", "Reviews that describe the work", "Monthly prompt tracking"] }
   - type: steps
     id: geo-process
     alt: true
     eyebrow: Process
     heading: "My GEO process, step by step"
+    intro: "The process runs in six steps, from a recorded baseline to monthly tracking against it. Nothing is changed before the baseline exists, so every result can be measured."
     items:
-      - { title: AI search discovery audit, text: "I test buyer prompts across Google AI Overviews, Gemini, ChatGPT search, Perplexity and Bing Copilot, and note who gets named and which pages get cited." }
-      - { title: Entity and trust signal mapping, text: "I list every place your business appears (website, Google Business Profile, Bing Places, social profiles, directories, press) and flag each mismatch in name, address, phone or description." }
-      - { title: Content and intent gap analysis, text: "I compare the questions buyers ask with the pages you have, and find the missing service, cost, comparison and FAQ content." }
-      - { title: Schema and technical fixes, text: "I implement structured data, fix internal links and remove crawl blocks. Where the site itself is the problem, the [technical SEO service](/technical-seo) handles indexing, speed and rendering." }
-      - { title: Answer-ready content, text: "I rewrite priority pages to open with direct answers, use specific headings and include facts an assistant can quote." }
-      - { title: Monitoring and iteration, text: "I re-run the same prompts each month, track mentions and cited sources, and adjust what to fix next." }
+      - { title: Baseline prompt audit, text: "I run your buyer prompts across five AI platforms and save the answers and cited sources. This is the baseline every later report is measured against." }
+      - { title: Entity and geo-grid mapping, text: "I map every listing and profile, flag mismatches, and run geo-grid scans for your main services to see where you rank across the service area." }
+      - { title: Search Console and content gaps, text: "I compare your Search Console queries and AI Overview results with the questions buyers ask, and list the missing pages and answers." }
+      - { title: Schema and technical fixes, text: "I implement structured data, fix internal links and remove crawl blocks. Where the site itself is the problem, the [technical SEO service](/technical-seo) covers indexing, speed and rendering." }
+      - { title: Answer-ready content, text: "I rewrite priority pages to open with direct answers and add the facts and proof an assistant can quote." }
+      - { title: Monthly tracking, text: "I re-run the same prompts and grids each month, report what changed, and pick the next fixes. You can stop at any time; there is no lock-in contract." }
   - type: cards
     columns: 3
     eyebrow: Why Ratul Roy
     heading: "Why work with Ratul Roy for GEO and AI search optimization?"
-    intro: "GEO is not a separate discipline from SEO. It sits on the same Local SEO, technical SEO, entity and content work I already do for service businesses, the work behind organic results like the [TechicTalk growth to 976K clicks](/case-studies/techictalk-organic-growth). The difference is the extra attention to how machines read and verify a business."
+    intro: "I've spent 5+ years ranking businesses in Google Maps and organic search, and GEO uses the same data. My results include 461 calls from one Business Profile, +38% Map Pack visibility and a tech site grown from zero to [976K Google clicks](/case-studies/techictalk-organic-growth)."
     items:
-      - { title: "Local SEO and GEO together", text: "I work on Google Maps visibility and AI answers at the same time, because for local businesses they draw on the same data." }
-      - { title: Entity-first thinking, text: "I start with a consistent entity (schema, citations, service pages, social profiles), not with prompts or tricks." }
-      - { title: Technical foundation, text: "AI crawlers need fast, crawlable, well-structured pages. I fix those before writing anything new." }
-      - { title: Content for people first, text: "Pages that answer buyers' questions clearly are also the pages AI systems cite. I write for the buyer and structure for the machine." }
-      - { title: Honest about uncertainty, text: "AI answers change often and nobody controls them. I report what I can measure and say plainly what I cannot." }
-      - { title: Measured in enquiries, text: "Visibility only matters if it brings calls, bookings and qualified leads, so that is what I report on alongside mentions." }
+      - { title: "Maps and AI together", text: "For local businesses, the Map Pack and AI answers draw on the same profile, reviews and citations. I work on both at once rather than paying twice for overlapping work." }
+      - { title: Entity first, text: "I start with one consistent entity: schema, citations, service pages and profiles. No prompt tricks." }
+      - { title: Measured, not guessed, text: "Geo-grid scans, Search Console data and saved prompt results. Every report shows the screenshots behind the numbers." }
+      - { title: White-hat only, text: "No fake reviews, no keyword-stuffed business names, no private link networks. These get listings suspended, and assistants learn to distrust them." }
+      - { title: Honest about limits, text: "Nobody controls what an AI says, and answers change often. I report what I can measure and say plainly what I can't." }
+      - { title: You work with me, text: "No account managers and no lock-in. You talk to the person doing the work, from $299." }
   - type: steps
     eyebrow: AI discovery preview
     heading: "How an AI system decides to recommend a business"
-    intro: "A simplified picture for a query like *best GEO expert in Bangladesh*. It is not a live platform result or a ranking guarantee."
+    intro: "An assistant names a business when several independent sources agree on who it is and what it does. A simplified view of a query like *best AC repair near me* follows; it is not a live result or a ranking guarantee."
     items:
       - { title: It searches and reads pages, text: "The assistant runs one or more searches and reads the top sources, including your site if it can crawl it." }
-      - { title: It resolves the entity, text: "It matches names, addresses and profiles to decide which real business each source is talking about." }
-      - { title: It checks corroboration, text: "It looks for the same facts on reviews, directories and third-party pages before trusting them." }
-      - { title: It matches services to the question, text: "It checks whether your pages clearly offer what was asked, in the place that was asked about." }
+      - { title: It resolves the entity, text: "It matches names, addresses and profiles to decide which real business each source describes." }
+      - { title: It checks corroboration, text: "It looks for the same facts in reviews, directories and third-party pages before trusting them." }
+      - { title: It matches services to the question, text: "It checks whether your pages clearly offer what was asked, in the area that was asked about." }
       - { title: It writes the answer, text: "It names the businesses it is most confident about and often links the pages it relied on." }
     body:
-      - "For a practical walkthrough of this process for small businesses, read [how to get your local business cited by ChatGPT and Gemini](/blog/ai-search-visibility-local-business)."
+      - "For a practical walkthrough for small businesses, read [how to get your local business cited by ChatGPT and Gemini](/blog/ai-search-visibility-local-business)."
   - type: images
     id: geo-proof
     eyebrow: Real result
@@ -135,27 +142,29 @@ sections:
     alt: true
     eyebrow: Deliverables
     heading: "What you receive with a GEO project"
-    bullets: ["AI search visibility audit with prompt results", "Entity consistency report", "Schema implementation plan", "Content gap map", "AI Overview readiness recommendations", "LLM citation improvement plan", "Topical coverage roadmap", "FAQ and answer content plan", "Brand mention and citation targets", "E-E-A-T checklist", "Monthly GEO priorities"]
+    intro: "You receive a recorded baseline, a prioritised fix list and monthly reports measured against that baseline. Every item below is a document or change you can check."
+    bullets: ["Baseline prompt audit with saved answers and cited sources", "Entity mismatch report", "Geo-grid scans for your main services", "Search Console and AI Overview query review", "Schema implemented and validated", "Content gap map", "Answer-first rewrites of priority pages", "Citation and mention targets", "Crawler access check", "Monthly report: prompts, sources, grids and enquiries"]
   - type: cta
-    heading: "Proof-driven SEO, now applied to AI search"
-    intro: "GEO is new, but the foundation is familiar: crawlable pages, clear entities, trusted content and measurable visibility. See the SEO results and case studies that show this work in practice."
+    heading: "See the proof before you decide"
+    intro: "GEO is new, but the method rests on work I can already show: 461 calls from one profile, +38% Map Pack visibility and the screenshots behind both."
     buttons:
       - { label: View Case Studies, href: /case-studies }
       - { label: See SEO Results, href: "/#results" }
 faqHeading: "Frequently Asked Questions About Generative Engine Optimization"
 faqs:
-  - { q: "What is GEO in SEO?", a: "GEO stands for Generative Engine Optimization. It is the work of making your business easy for AI answer engines such as Google AI Overviews, Gemini, ChatGPT search and Perplexity to identify, trust and cite, using entity consistency, structured data, answer-ready content and third-party mentions." }
-  - { q: "Is GEO different from SEO?", a: "Partly. GEO builds on SEO rather than replacing it. Rankings, crawlable pages and links still matter. GEO adds attention to entity consistency, schema, citable facts and brand mentions, because AI systems need to be sure which business they are describing before they name it." }
-  - { q: "Can you guarantee that ChatGPT or Perplexity will recommend my business?", a: "No. Nobody controls what AI platforms say, and their answers change from one day to the next. GEO improves the signals those systems rely on, and I report honestly on which prompts name you and which do not." }
-  - { q: "How do AI tools choose businesses for \"near me\" questions?", a: "Mostly from local data. Google AI Overviews and Gemini draw on Google Maps listings and reviews, Bing Copilot on Bing Places, and ChatGPT search and Perplexity on the web pages they find. Consistent listings, strong reviews and clear service pages help in all of them." }
-  - { q: "Does my Google Business Profile affect AI answers?", a: "Yes, for local questions it is one of the strongest inputs. Your categories, services, hours, review count and the words customers use in reviews all give Google's AI systems something specific to say about you." }
-  - { q: "What is the sameAs property and why does it matter?", a: "sameAs is a schema.org property that lists your other official profiles, such as your Facebook Page, LinkedIn and directory listings. It tells search engines these profiles belong to the same entity as your website, which helps them connect facts about you." }
-  - { q: "Should I block AI crawlers in robots.txt?", a: "Not if you want AI visibility. Blocking crawlers such as OAI-SearchBot or PerplexityBot stops those tools from reading your pages for their search answers. Many sites block them by accident through a security plugin or CDN setting, so it is one of the first things I check." }
-  - { q: "How long does GEO take?", a: "Fixes such as schema, unblocked crawlers and corrected listings can be done in weeks. Being named consistently takes longer, because it depends on reviews, mentions and content building up over months, and on how often each AI platform refreshes what it knows." }
+  - { q: "What is GEO in SEO?", a: "GEO stands for Generative Engine Optimization: making your business easy for AI answer engines such as Google AI Overviews, Gemini, ChatGPT search and Perplexity to identify, trust and cite. The main levers are a consistent entity, structured data, answer-first pages and third-party mentions." }
+  - { q: "Is GEO different from SEO?", a: "GEO builds on SEO rather than replacing it. Rankings, crawlable pages and links still matter. GEO adds entity consistency, schema, citable facts and brand mentions, because an assistant needs to be sure which business it is describing before it names it." }
+  - { q: "Can you guarantee that ChatGPT or Perplexity will recommend my business?", a: "No. Nobody controls what AI platforms say, and answers change from day to day. I improve the signals those systems rely on and report honestly which prompts name you and which do not." }
+  - { q: "How do you measure GEO results?", a: "I save a baseline of buyer prompts and cited sources before changing anything, then re-run the same prompts monthly. For local businesses I add geo-grid rank scans and Search Console data, and report enquiries alongside mentions." }
+  - { q: "How do AI tools choose businesses for \"near me\" questions?", a: "Mostly from local data. Google AI Overviews and Gemini use Google Maps listings and reviews, Bing Copilot uses Bing Places, and ChatGPT search and Perplexity use the web pages they find. Consistent listings, strong reviews and clear service pages help in all of them." }
+  - { q: "Does my Google Business Profile affect AI answers?", a: "Yes. For local questions it is one of the strongest inputs. Your categories, services, hours, review count and the words customers use in reviews all give Google's AI something specific to say about you." }
+  - { q: "Does GEO work for businesses outside Bangladesh?", a: "Yes. The assistants check the same things in every market: who you are, what you do and where. I work with home service businesses and distributors in the US and abroad as well as local businesses in Bangladesh." }
+  - { q: "Should I block AI crawlers in robots.txt?", a: "Not if you want AI visibility. Blocking OAI-SearchBot or PerplexityBot stops those tools reading your pages for their answers. Many sites block them by accident through a security plugin or CDN setting, so it is one of the first things I check." }
+  - { q: "How long does GEO take?", a: "Schema, crawler access and listing fixes take weeks. Being named consistently takes months, because it depends on reviews, mentions and content building up, and on how often each platform refreshes what it knows." }
 related: [local-seo-service, gbp, technical, services, cases, book]
 finalCta:
-  heading: "Want to Know If Your Business Is Ready for AI Search?"
-  text: "Get a GEO and AI search visibility audit. I'll test the prompts your buyers use, check your schema and entity consistency, and show you which sources AI tools cite instead of you."
+  heading: "Find Out What AI Assistants Say About Your Business"
+  text: "Get a free AI search visibility audit. I'll run your buyers' prompts, show you who gets named instead of you and which sources they cite, and list the fixes in order. No lock-in."
   buttons:
     - { label: Get Free AI Search Visibility Audit, href: "/#free-audit" }
     - { label: Book Strategy Call, href: /book-strategy-call }

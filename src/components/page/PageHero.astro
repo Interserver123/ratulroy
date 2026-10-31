@@ -120,7 +120,7 @@ const sc = p.heroShowcase;
     <div class="show" data-nosnippet data-reveal style="--d:2" data-tilt>
       <a class="show__main" href={sc.href ?? "/case-studies"} aria-label={`${sc.mainLabel}: open the case study`}>
         <span class="show__bar" aria-hidden="true"><i /><i /><i /><b>{sc.mainLabel}</b></span>
-        <Image src={img(sc.main)} alt={sc.mainLabel} widths={[400, 560, 800]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" decoding="async" class="show__img" />
+        <Image src={img(sc.main)} alt={sc.mainLabel} widths={[400, 560, 800]} sizes="(min-width: 1024px) 520px, 92vw" loading="eager" fetchpriority="high" class="show__img" />
       </a>
       {
         sc.side && (
