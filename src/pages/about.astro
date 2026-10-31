@@ -273,6 +273,13 @@ const pin =
           <figcaption><b>Where I am now</b> · Level 2 · 4.9★ · 243 reviews</figcaption>
         </figure>
       </div>
+      <figure class="card aiproof" data-reveal>
+        <Image src={img("results/geo/chatgpt-local-seo-expert-bangladesh.png")} alt="ChatGPT answer to Local SEO Expert in Bangladesh, listing Ratul Roy first" widths={[420, 640, 844]} sizes="(min-width: 900px) 520px, 90vw" loading="lazy" class="aiproof__img" />
+        <figcaption>
+          <b>Named first by ChatGPT</b>
+          <span>Ask ChatGPT for a "Local SEO expert in Bangladesh" and it lists me first, noting the site is focused on exactly that positioning. See how I do the same for clients on the <a href="/generative-engine-optimization">GEO page</a>.</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -1201,5 +1208,35 @@ const pin =
     font-size: 0.875rem;
     font-weight: 600;
     text-align: center;
+  }
+  .aiproof {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    margin: 24px 0 0;
+    padding: 18px;
+  }
+  @media (min-width: 900px) {
+    .aiproof {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+    }
+  }
+  .aiproof :global(.aiproof__img) {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .aiproof figcaption {
+    display: grid;
+    gap: 8px;
+  }
+  .aiproof figcaption b {
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+  .aiproof figcaption a {
+    color: var(--accent);
+    text-decoration: underline;
   }
 </style>
