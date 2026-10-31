@@ -124,6 +124,13 @@ sections:
       - { title: It writes the answer, text: "It names the businesses it is most confident about and often links the pages it relied on." }
     body:
       - "For a practical walkthrough of this process for small businesses, read [how to get your local business cited by ChatGPT and Gemini](/blog/ai-search-visibility-local-business)."
+  - type: images
+    id: geo-proof
+    eyebrow: Real result
+    heading: "A client named first in a Google AI Overview"
+    intro: "A live Google search for *construction materials supplier in china*. The AI Overview names my client JEES Global first, with its core focus, products and services, and cites its website. Screenshot, not a mock-up; AI answers change, so this is not a guarantee."
+    items:
+      - { title: "Google AI Overview · JEES Global", text: "Google AI Overview for the query construction materials supplier in China, listing JEES Global first with a cited source and its website shown in the results panel.", image: "results/geo/ai-overview-jees-global.png" }
   - type: list
     alt: true
     eyebrow: Deliverables
