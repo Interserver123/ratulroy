@@ -13,6 +13,7 @@ import TrustBar from "../components/page/TrustBar.astro";
 import HubGrid from "../components/page/HubGrid.astro";
 import { getCollection, getEntry } from "astro:content";
 import StickyCta from "../components/page/StickyCta.astro";
+import CaseStudy from "../components/case/CaseStudy.astro";
 import { Image } from "astro:assets";
 import { img } from "../lib/img";
 import { ogCardUrl, OG_SIZE } from "../lib/og";
@@ -173,6 +174,14 @@ if (d.faqs.length) {
 ---
 
 <BaseLayout title={d.title} description={d.description} schema={schema} ogType={kind === "case" ? "article" : "website"}>
+  {kind === "case" ? (
+    <>
+      <CaseStudy data={d} id={path.split("/").pop()!} />
+      <FinalCta {...(d.finalCta ?? {})} />
+      <StickyCta />
+    </>
+  ) : (
+  <>
   <PageHero
     breadcrumb={crumbs}
     eyebrow={d.eyebrow}
@@ -237,6 +246,8 @@ if (d.faqs.length) {
   <Related keys={d.related} />
   <FinalCta {...(d.finalCta ?? {})} />
   {d.stickyCta && <StickyCta href={d.heroForm ? "#free-audit" : undefined} />}
+  </>
+  )}
 </BaseLayout>
 
 <style>
