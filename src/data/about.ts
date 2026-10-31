@@ -21,32 +21,32 @@ export const journey = [
   {
     label: "Step 1",
     title: "Started SEO at age 16",
-    text: "Began testing why some businesses, pages and local listings rank on Google while others never appear, while still in school.",
+    text: "Still at school, I spent evenings testing why one listing ranked and a near-identical one never appeared.",
   },
   {
     label: "Step 2",
     title: "Gov PC College",
-    text: "Balanced college studies with hands-on SEO, freelance projects and real client work.",
+    text: "Classes by day, client work at night. Real projects taught what coursework could not.",
   },
   {
     label: "Step 3",
     title: "Fiverr growth",
-    text: "Built verified client trust as a Fiverr Level 2 Seller with a 4.9★ rating across 243 reviews.",
+    text: "Reached Level 2 on Fiverr with a 4.9★ rating across 243 reviews. Ratings like that come from on-time delivery and clear communication.",
   },
   {
     label: "Step 4",
     title: "Netmark",
-    text: "Two years as an SEO Strategist at an agency, working on competitive campaigns and ranking systems.",
+    text: "Two years as an SEO Strategist at an agency, running competitive campaigns on tight reporting deadlines.",
   },
   {
     label: "Step 5",
     title: "DigiPolli",
-    text: "Founded DigiPolli to focus on Local SEO, Google Business Profile optimization and Google Maps visibility for service businesses in Bangladesh and abroad.",
+    text: "Founded DigiPolli to do one thing: Local SEO and Google Maps visibility for service businesses in Bangladesh and abroad.",
   },
   {
     label: "Now",
     title: "Islamic University (ICT)",
-    text: "Studying ICT while applying the same analytical thinking to local rankings and AI search visibility for clients.",
+    text: "Studying ICT while working on local rankings and AI search visibility for clients.",
   },
 ];
 
@@ -54,51 +54,51 @@ export const credentials = [
   {
     value: "Level 2",
     title: "Fiverr Level 2 Seller",
-    text: "A seller level Fiverr awards for consistent on-time delivery and client ratings over time.",
+    text: "Fiverr grants this level for sustained on-time delivery and strong client ratings.",
   },
   {
     value: "4.9★",
     title: "Average rating",
-    text: "Clients rate the communication, the quality of execution and the strategy behind it.",
+    text: "Clients score communication, execution and strategy separately.",
   },
   {
     value: "243",
     title: "Fiverr reviews",
-    text: "Real feedback from clients across different industries and business types.",
+    text: "Reviews from clients across many trades and business types.",
   },
   {
     value: "2 yr",
     title: "Netmark",
-    text: "Agency-level SEO strategy experience across competitive campaigns.",
+    text: "Agency experience on competitive campaigns.",
   },
   {
     value: "Founder",
     title: "DigiPolli",
-    text: "A focused brand built around Local SEO, Google Maps visibility, and search growth.",
+    text: "A one-person practice built around Local SEO and Google Maps.",
   },
   {
     value: "Local",
     title: "SEO specialist",
-    text: "One specialty: Google Maps visibility, trust signals and qualified inbound calls for local businesses.",
+    text: "One specialty: Google Maps visibility and inbound calls for local businesses.",
   },
 ];
 
 export const method = [
   {
     title: "Local-first strategy",
-    text: "Built around how people search for services: by city, area, urgency, trust and “near me” intent, in English, Bangla or the local language of your market.",
+    text: "People search by area and urgency, and in Bangladesh they mix English and Bangla in the same query. I research the actual phrases before choosing a single keyword.",
   },
   {
     title: "Maps + website connection",
-    text: "Your Google Business Profile and website should say the same thing: matching categories and service pages, consistent NAP, LocalBusiness schema and internal links.",
+    text: "Your profile and website must agree. A \"Dental implants\" category with no implants page, or a different phone number in the footer, makes Google doubt both.",
   },
   {
     title: "Entity & trust signals",
-    text: "Google, ChatGPT and Gemini need clear, consistent signals about who you are, what you offer, where you serve and why you can be trusted.",
+    text: "Google, ChatGPT and Gemini cross-check sources. If three sites describe you three ways, none of them gets quoted with confidence.",
   },
   {
     title: "Revenue-focused SEO",
-    text: "Rankings matter, but the real goal is qualified inbound calls, booked jobs, and measurable growth.",
+    text: "A ranking is a means. The target is a booked job, and I measure from the call back to the keyword.",
   },
 ];
 
@@ -170,54 +170,54 @@ export const specialist = [
 export const expectations = [
   {
     title: "Direct access",
-    text: "You work with me, not an account manager passing notes.",
+    text: "You talk to me, not an account manager relaying messages.",
   },
   {
     title: "Clear scope",
-    text: "Every engagement has written deliverables, timelines, and KPIs tied to revenue.",
+    text: "Written deliverables, dates and KPIs before work starts.",
   },
   {
     title: "Honest reporting",
-    text: "Geo-grid screenshots, GBP insights, and Search Console data. No inflated dashboards.",
+    text: "Geo-grid screenshots, GBP Insights and Search Console data, with the source visible.",
   },
   {
     title: "Education",
-    text: "I'll teach your team what we're doing and why, so the work keeps compounding.",
+    text: "I explain each change and why it matters, so your team can keep it up when I step back.",
   },
   {
     title: "No lock-in",
-    text: "Month-to-month contracts. The work has to keep earning the relationship.",
+    text: "Month to month. If the work stops paying off, you leave.",
   },
 ];
 
-// Every answer restates facts from the page above, nothing new.
+// Answers restate facts from the page above.
 export const aboutFaqs = [
   {
     q: "Who is Ratul Roy?",
-    a: "Ratul Roy is a Local SEO expert in Bangladesh and the founder of DigiPolli. He helps local service businesses in Bangladesh and worldwide improve Google Maps visibility, optimize their Google Business Profile, strengthen website SEO and turn local searches into qualified inbound calls.",
+    a: "Ratul Roy is a Local SEO specialist in Bangladesh and the founder of DigiPolli. He gets local service businesses in Bangladesh and abroad ranking on Google Maps, fixes their Google Business Profile and website, and measures success in inbound calls.",
   },
   {
     q: "What experience does Ratul have?",
-    a: "Ratul started SEO at age 16, spent two years as an SEO Strategist at Netmark, and is a Fiverr Level 2 Seller with a 4.9★ rating across 243 reviews. He studied at Gov PC College and is studying ICT at Islamic University, and now runs DigiPolli.",
+    a: "Ratul started SEO at 16, spent two years as an SEO Strategist at Netmark, and holds a Fiverr Level 2 rating of 4.9★ across 243 reviews. He studied at Gov PC College, is now studying ICT at Islamic University, and runs DigiPolli.",
   },
   {
     q: "Where is Ratul Roy based, and does he work with clients abroad?",
-    a: "Ratul is a Local SEO expert in Bangladesh. He takes on businesses across Bangladesh, including Dhaka, and service companies in other countries. All work is done remotely, with reporting from Google Business Profile, Search Console and geo-grid rank tracking.",
+    a: "Ratul is based in Bangladesh and works with businesses across the country, including Dhaka, and with service companies abroad. All work is remote, and reporting comes from Google Business Profile, Search Console and geo-grid scans.",
   },
   {
     q: "Will I work with Ratul directly?",
-    a: "Yes. Clients work with Ratul directly, not through an account manager passing notes. The person who audits your Google Business Profile and website is the same person who does the work and explains the results to you.",
+    a: "Yes. The person who audits your profile and website also does the work and explains the results. Nothing passes through an account manager.",
   },
   {
     q: "Are there long-term contracts?",
-    a: "No. Engagements are month-to-month, with written deliverables, timelines and KPIs tied to revenue. The work has to keep earning the relationship, so you can stop at any time without a lock-in period.",
+    a: "No. Engagements run month to month with written deliverables, dates and KPIs. You can stop at any time.",
   },
   {
     q: "Which businesses is Ratul the best fit for?",
-    a: "Local service businesses that depend on phone calls, appointment bookings and walk-ins: home services such as plumbing, HVAC and electrical work, plus dental clinics, healthcare practices, law firms and other businesses that win or lose on high-intent local searches.",
+    a: "Businesses that live on phone calls, appointments and walk-ins: plumbing, HVAC, electrical, dental, healthcare, law firms. If a customer picks you within minutes of searching, this is your channel.",
   },
   {
     q: "How do we get started?",
-    a: "Start with a free Local SEO audit or book a strategy call. The audit reviews your Google Business Profile, website SEO, Google Maps visibility, competitors, citations, reviews and AI search readiness, and ends with a prioritized list of fixes.",
+    a: "Request the free audit or book a strategy call. The audit covers your profile, website, Maps visibility, competitors, citations, reviews and AI search readiness, and ends with fixes ranked by impact.",
   },
 ];
