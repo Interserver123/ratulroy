@@ -104,7 +104,8 @@ Until these steps are done the site works exactly as before: `/api/leads` answer
    - `SETUP_KEY` = a private word or phrase only you know (needed once, in step 5).
 4. **Redeploy:** *Deployments* → latest deployment → *…* → *Retry deployment*. The project must be deploying the branch that contains this code.
 5. **Create your login:** open `https://ratulroy.com/admin` → "Create your account" → enter the `SETUP_KEY`, your name, email and a password (12+ characters). This page locks itself permanently once an account exists.
-6. Optional: delete the `SETUP_KEY` secret afterwards. Optional: `NOTIFY_WEBHOOK_URL` secret for Slack/Discord/Google Chat pings on new leads. Optional extra lock: Cloudflare Zero Trust → Access on `ratulroy.com/admin*`.
+6. **Forgot password:** on the sign-in screen click "Forgot password?", then enter your email, the `SETUP_KEY` value and a new password. This signs out every session. It needs no email service, so **keep `SETUP_KEY` set** if you want this recovery path (deleting it turns reset off; the owner login still works).
+7. Optional: delete the `SETUP_KEY` secret afterwards only if you accept having no in-app password recovery. Optional: `NOTIFY_WEBHOOK_URL` secret for Slack/Discord/Google Chat pings on new leads. Optional extra lock: Cloudflare Zero Trust → Access on `ratulroy.com/admin*`.
 
 Command-line alternative (developers): `npx wrangler d1 create ratulroy-leads`, put the id in `wrangler.backend.toml`, `npm run backend:migrate:remote`, then create users with `scripts/admin-user.mjs` + `wrangler d1 execute`.
 

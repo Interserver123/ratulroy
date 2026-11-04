@@ -47,7 +47,25 @@ const logo = img("brand/logo-portrait.jpg");
         <label>Email<input name="email" type="email" autocomplete="username" required /></label>
         <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
         <button class="adm-btn adm-btn--dark adm-btn--block" type="submit">Sign in</button>
+        <button class="adm-link adm-forgot" type="button" data-goto-reset>Forgot password?</button>
         <p class="adm-error" data-login-error role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Forgot password -->
+    <section class="adm-auth" data-view="reset" hidden>
+      <form class="adm-auth__card" data-reset>
+        <Image src={logo} alt="" width={96} height={96} class="adm-auth__face" />
+        <p class="adm-kicker"><span class="adm-pin"></span>Password reset</p>
+        <h1>Forgot password</h1>
+        <p class="adm-muted">Enter your login email, the recovery key (the <b>SETUP_KEY</b> secret saved in Cloudflare) and a new password.</p>
+        <label>Email<input name="email" type="email" autocomplete="username" required /></label>
+        <label>Recovery key<input name="key" type="password" autocomplete="off" required /></label>
+        <label>New password (12+ characters)<input name="password" type="password" autocomplete="new-password" minlength="12" required /></label>
+        <label>Repeat new password<input name="password2" type="password" autocomplete="new-password" minlength="12" required /></label>
+        <button class="adm-btn adm-btn--dark adm-btn--block" type="submit">Set new password</button>
+        <button class="adm-link adm-forgot" type="button" data-goto-login>Back to sign in</button>
+        <p class="adm-error" data-reset-error role="alert"></p>
       </form>
     </section>
 
@@ -427,6 +445,7 @@ const logo = img("brand/logo-portrait.jpg");
   .adm-btn--light { background: #fff; border-color: #fff; color: var(--ink); border-radius: 999px; }
   .adm-btn--block { width: 100%; padding: 12px; }
   .adm-btn--danger { color: var(--accent); }
+  .adm-forgot { justify-self: center; padding: 4px; }
   .adm-link { border: 0; background: none; font: inherit; font-weight: 600; font-size: 0.85rem; color: var(--accent); cursor: pointer; }
   .adm-iconbtn { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; text-decoration: none; transition: transform 0.25s var(--ease), background 0.2s; }
   .adm-iconbtn:hover { transform: rotate(-12deg); background: var(--bg); }

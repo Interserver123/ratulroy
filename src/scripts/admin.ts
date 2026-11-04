@@ -64,7 +64,7 @@ async function api<T = any>(path: string, opts: RequestInit = {}): Promise<T> {
   } catch {
     /* not JSON: e.g. a Cloudflare error page */
   }
-  if (res.status === 401 && path !== "/api/admin/login" && path !== "/api/admin/setup") showLogin();
+  if (res.status === 401 && path !== "/api/admin/login" && path !== "/api/admin/setup" && path !== "/api/admin/reset") showLogin();
   if (!res.ok) {
     const page = text.match(/<title>([^<]{1,120})<\/title>/i)?.[1]?.trim();
     throw new ApiError(res.status, data.error ?? `Request failed (${res.status}${page ? `: ${page}` : ""}). Open Messenger > Activity log for details.`);
@@ -83,8 +83,8 @@ const messenger = mountMessenger({ api, toast, esc, when });
 const audits = mountAudits({ api, toast, esc, when, openLead: (id: string) => openLead(id) });
 
 // ---------- auth views ----------
-function showOnly(view: "login" | "setup" | "app") {
-  for (const v of ["login", "setup", "app"]) $(`[data-view=${v}]`).hidden = v !== view;
+function showOnly(view: "login" | "setup" | "reset" | "app") {
+  for (const v of ["login", "setup", "reset", "app"]) $(`[data-view=${v}]`).hidden = v !== view;
 }
 function showLogin() {
   showOnly("login");
@@ -146,6 +146,35 @@ $<HTMLFormElement>("[data-setup]").addEventListener("submit", async (e) => {
     f.reset();
     toast("Account created");
     await showApp(r.user);
+  } catch (x) {
+    err.textContent = (x as Error).message;
+  } finally {
+    btn.disabled = false;
+  }
+});
+$("[data-goto-reset]").addEventListener("click", () => {
+  showOnly("reset");
+  $<HTMLInputElement>("[data-reset] input[name=email]").value = $<HTMLInputElement>("[data-login] input[name=email]").value;
+  $<HTMLInputElement>("[data-reset] input[name=email]").focus();
+});
+$("[data-goto-login]").addEventListener("click", showLogin);
+$<HTMLFormElement>("[data-reset]").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const f = e.currentTarget as HTMLFormElement;
+  const err = $("[data-reset-error]");
+  const fd = new FormData(f);
+  err.textContent = "";
+  if (fd.get("password") !== fd.get("password2")) {
+    err.textContent = "The two passwords don't match.";
+    return;
+  }
+  const btn = f.querySelector("button[type=submit]") as HTMLButtonElement;
+  btn.disabled = true;
+  try {
+    await api("/api/admin/reset", { method: "POST", body: JSON.stringify({ email: fd.get("email"), key: fd.get("key"), password: fd.get("password") }) });
+    f.reset();
+    showLogin();
+    toast("Password changed. Sign in with the new one.");
   } catch (x) {
     err.textContent = (x as Error).message;
   } finally {

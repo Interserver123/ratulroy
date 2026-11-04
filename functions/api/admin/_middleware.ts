@@ -1,11 +1,11 @@
-// Every /api/admin/* route needs a valid session, except login.
+// Every /api/admin/* route needs a valid session, except login, first-run setup and password reset.
 import type { Ctx } from "../../../backend/lib/types";
 import { getUser } from "../../../backend/lib/auth";
 import { fail } from "../../../backend/lib/http";
 
 export const onRequest = async (ctx: Ctx) => {
   const path = new URL(ctx.request.url).pathname;
-  if (path === "/api/admin/login" || path === "/api/admin/setup") return ctx.next();
+  if (path === "/api/admin/login" || path === "/api/admin/setup" || path === "/api/admin/reset") return ctx.next();
   const user = await getUser(ctx.request, ctx.env);
   if (!user) return fail(401, "Sign in required");
   ctx.data.user = user;
