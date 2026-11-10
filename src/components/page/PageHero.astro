@@ -62,12 +62,12 @@ const sc = p.heroShowcase;
           </nav>
         )
       }
-      {p.eyebrow && <p class="eyebrow" data-reveal>{p.eyebrow}</p>}
+      {p.eyebrow && <p class="eyebrow">{p.eyebrow}</p>}
       <h1 id="page-title">
         {h1Parts ? (<>{h1Parts[0]}<span class="em">{p.em}</span>{h1Parts.slice(1).join(p.em)}</>) : p.h1}
       </h1>
       {p.lead && <p class="lead" set:html={md(p.lead)} />}
-      {p.sub && <p class="phero__sub" data-reveal style="--d:2" set:html={md(p.sub)} />}
+      {p.sub && <p class="phero__sub" set:html={md(p.sub)} />}
       {
         p.heroBullets && (
           <ul class="checklist phero__bullets" data-reveal style="--d:3">

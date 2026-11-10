@@ -98,6 +98,15 @@ strong {
 .js [data-reveal] .em {
   background-size: 0% 0.2em;
 }
+/* Hero headings are never hidden (LCP): their underline animates with plain CSS instead. */
+.js h1 .em {
+  animation: em-draw 1.2s var(--ease) 0.3s both;
+}
+@keyframes em-draw {
+  from {
+    background-size: 0% 0.2em;
+  }
+}
 .js [data-reveal].is-in .em {
   background-size: 100% 0.2em;
 }
