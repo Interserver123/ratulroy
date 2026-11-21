@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Ratul Roy</title>
+  <link>https://ratulroy.com</link>
+  <language>en-US</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:category><wp:category_nicename><![CDATA[ai-search-geo-aio]]></wp:category_nicename><wp:cat_name><![CDATA[AI Search / GEO / AIO]]></wp:cat_name></wp:category>
+  <wp:category><wp:category_nicename><![CDATA[google-business-profile]]></wp:category_nicename><wp:cat_name><![CDATA[Google Business Profile]]></wp:cat_name></wp:category>
+  <wp:category><wp:category_nicename><![CDATA[local-seo]]></wp:category_nicename><wp:cat_name><![CDATA[Local SEO]]></wp:cat_name></wp:category>
+  <wp:category><wp:category_nicename><![CDATA[seo-tips]]></wp:category_nicename><wp:cat_name><![CDATA[SEO Tips]]></wp:cat_name></wp:category>
+  <wp:category><wp:category_nicename><![CDATA[google-maps-ranking]]></wp:category_nicename><wp:cat_name><![CDATA[Google Maps Ranking]]></wp:cat_name></wp:category>
+  <wp:tag><wp:tag_slug><![CDATA[geo]]></wp:tag_slug><wp:tag_name><![CDATA[GEO]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[ai-search]]></wp:tag_slug><wp:tag_name><![CDATA[AI Search]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[local-seo]]></wp:tag_slug><wp:tag_name><![CDATA[Local SEO]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[ai-overviews]]></wp:tag_slug><wp:tag_name><![CDATA[AI Overviews]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[google-business-profile]]></wp:tag_slug><wp:tag_name><![CDATA[Google Business Profile]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[map-pack]]></wp:tag_slug><wp:tag_name><![CDATA[Map Pack]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[google-maps]]></wp:tag_slug><wp:tag_name><![CDATA[Google Maps]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[timeline]]></wp:tag_slug><wp:tag_name><![CDATA[Timeline]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[bangladesh]]></wp:tag_slug><wp:tag_name><![CDATA[Bangladesh]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-8]]></wp:tag_slug><wp:tag_name><![CDATA[series-8]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[seo-specialist]]></wp:tag_slug><wp:tag_name><![CDATA[SEO Specialist]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[hiring]]></wp:tag_slug><wp:tag_name><![CDATA[Hiring]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[citations]]></wp:tag_slug><wp:tag_name><![CDATA[Citations]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[nap]]></wp:tag_slug><wp:tag_name><![CDATA[NAP]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[guide]]></wp:tag_slug><wp:tag_name><![CDATA[Guide]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-1]]></wp:tag_slug><wp:tag_name><![CDATA[series-1]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[seo-cost]]></wp:tag_slug><wp:tag_name><![CDATA[SEO Cost]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[pricing]]></wp:tag_slug><wp:tag_name><![CDATA[Pricing]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-7]]></wp:tag_slug><wp:tag_name><![CDATA[series-7]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[home-services]]></wp:tag_slug><wp:tag_name><![CDATA[Home Services]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[service-area]]></wp:tag_slug><wp:tag_name><![CDATA[Service Area]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[gbp-optimization]]></wp:tag_slug><wp:tag_name><![CDATA[GBP Optimization]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-3]]></wp:tag_slug><wp:tag_name><![CDATA[series-3]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[google-ads]]></wp:tag_slug><wp:tag_name><![CDATA[Google Ads]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[comparison]]></wp:tag_slug><wp:tag_name><![CDATA[Comparison]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-6]]></wp:tag_slug><wp:tag_name><![CDATA[series-6]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[seo]]></wp:tag_slug><wp:tag_name><![CDATA[SEO]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-5]]></wp:tag_slug><wp:tag_name><![CDATA[series-5]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[agency]]></wp:tag_slug><wp:tag_name><![CDATA[Agency]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[process]]></wp:tag_slug><wp:tag_name><![CDATA[Process]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[beginner-guide]]></wp:tag_slug><wp:tag_name><![CDATA[Beginner Guide]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-2]]></wp:tag_slug><wp:tag_name><![CDATA[series-2]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[business-growth]]></wp:tag_slug><wp:tag_name><![CDATA[Business Growth]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[series-4]]></wp:tag_slug><wp:tag_name><![CDATA[series-4]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[troubleshooting]]></wp:tag_slug><wp:tag_name><![CDATA[Troubleshooting]]></wp:tag_name></wp:tag>
+  <wp:tag><wp:tag_slug><![CDATA[experience]]></wp:tag_slug><wp:tag_name><![CDATA[Experience]]></wp:tag_name></wp:tag>
+  <item>
+    <title>AI Search Visibility: Getting Your Local Business Cited by ChatGPT and Gemini</title>
+    <link>https://ratulroy.com/blog/ai-search-visibility-local-business</link>
+    <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/ai-search-visibility-local-business</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>AI search visibility is how often assistants such as ChatGPT, Gemini, Perplexity, Bing Copilot and Google AI Overviews name or cite your business when people ask for local recommendations. They draw on the same sources as local search: your website, Google Business Profile, reviews and directory listings. Clear, consistent facts across all of them are what earn the mention.</p>
+<p>A growing share of local research now happens inside an AI assistant. The user asks for a good <a href="/industries/local-seo-for-electricians">electrician</a> nearby and gets a short list with reasoning, not ten blue links. Being absent from that list is a new kind of invisibility, and it is not fixed by the same tactics as classic rankings.</p>
+<h2 id="ai-answers-compress-the-results-page">AI answers compress the results page</h2>
+<p>A traditional results page shows ten options and lets the user choose. An assistant usually names two or three and explains why. The long tail of positions four to ten effectively disappears. Google’s own AI Overviews increasingly sit above or beside the Map Pack for service questions, so the same squeeze happens inside Google.</p>
+<p>That raises the stakes on being clearly, unambiguously described as what you are, where you are, and who you serve.</p>
+<h2 id="entities-matter-more-than-keywords">Entities matter more than keywords</h2>
+<p>Assistants reason over entities: a business, its location, its services, the areas it covers, its relationships to other things. They are not counting keyword density. If your site never states plainly what you do and where, there is nothing solid to reason about.</p>
+<p>Structured data helps here, because it states those facts in a machine-readable form rather than leaving them to be inferred from marketing copy. LocalBusiness schema (or the right subtype, such as Dentist or Electrician) with <code>areaServed</code>, <code>openingHoursSpecification</code> and <code>sameAs</code> links to your profiles is the baseline. I set this up as part of <a href="/technical-seo">technical SEO</a>.</p>
+<h2 id="get-cited-not-just-crawled">Get cited, not just crawled</h2>
+<p>Assistants tend to cite sources that answer a question directly and completely. Pages that bury the answer under three paragraphs of preamble get skipped in favour of ones that lead with it.</p>
+<p>Write the answer first, then the supporting detail. It suits human readers too.</p>
+<ul>
+<li>State the answer in the first sentence of a section</li>
+<li>Use headings that match real questions</li>
+<li>Keep facts consistent across your site, profile and listings</li>
+</ul>
+<h2 id="this-does-not-replace-local-seo">This does not replace Local SEO</h2>
+<p>Assistants draw heavily on the same underlying signals: your profile, your reviews, your citations, your site. A business invisible in Maps is usually invisible to the assistant too.</p>
+<p>GEO is a layer on top of solid fundamentals, not a substitute. My <a href="/generative-engine-optimization">generative engine optimization service</a> assumes the <a href="/local-seo-service">Local SEO groundwork</a> is in place, or fixes it first.</p>
+<h2 id="where-do-ai-assistants-get-local-information">Where do AI assistants get local information?</h2>
+<p>They are not inventing recommendations. They draw on indexed web content, mapping data, review platforms and licensed sources. A business with a thin site, few reviews and inconsistent listings simply provides less material to draw on.</p>
+<p>This is why GEO is not a separate discipline bolted onto SEO. The inputs overlap almost entirely; the presentation layer is what changed. A complete Google Business Profile is still one of the strongest inputs, so start with my <a href="/blog/google-business-profile-optimization-checklist">GBP optimization checklist</a> if yours is half-finished.</p>
+<h2 id="answer-one-question-completely">Answer one question completely</h2>
+<p>Assistants favour sources that resolve a question without needing three more pages. A page covering one topic thoroughly outperforms five pages each covering a fragment of it.</p>
+<p>This runs against the old habit of splitting content into thin keyword-targeted pages. That tactic was already declining in classic search; in AI answers it fails outright.</p>
+<ul>
+<li>One page per genuine question, not per keyword variation</li>
+<li>Lead each section with the answer, then the detail</li>
+<li>Include the specifics assistants need: areas served, hours, prices where fixed, what you actually do</li>
+</ul>
+<p>In Bangladesh, remember that people ask in English, Bangla and romanised Bangla. A page that names areas the way locals do (Bashundhara R/A, Old Dhaka) gives assistants a clearer match.</p>
+<h2 id="consistency-across-every-surface">Consistency across every surface</h2>
+<p>If your site says you serve five districts, your profile says three, and a directory says something else, an assistant has no reliable fact to state. It will usually name a competitor whose information agrees with itself.</p>
+<p>This is the least glamorous work in AI visibility and the most commonly skipped. The method is the same one in my <a href="/blog/local-citations-nap-consistency-guide">NAP consistency and citations guide</a>.</p>
+<h2 id="how-to-check-whether-it-is-working">How to check whether it is working</h2>
+<p>Ask the assistants directly. Pose the questions a customer would ask about your service and area in ChatGPT, Gemini, Perplexity and Copilot, then note whether you appear, which competitors do, and what the answer says about you.</p>
+<p>Do it monthly and record the results. Reliable rank tracking for AI answers is still immature, so a manual log is genuinely the most honest measurement available.</p>
+<p>AI visibility rewards clarity: say plainly what you do, where you do it, and back it with consistent signals everywhere else. For how this fits the wider picture, see the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh guide</a>. <a href="/book-strategy-call">Book a call</a> if you want your current AI visibility checked.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I get my business recommended by ChatGPT?</h3>
+<p>Give it consistent, citable facts to work with. Keep your name, address, phone, services and areas identical across your website, Google Business Profile and major directories, earn genuine reviews, and publish pages that answer customer questions directly. There is no submission form or paid placement.</p>
+<h3>Is GEO different from SEO?</h3>
+<p>Generative engine optimization (GEO) focuses on being named and cited in AI answers rather than ranked in a list of links. The inputs overlap heavily with SEO: crawlable pages, clear entities, reviews and trusted mentions. GEO mostly changes how you structure and present information.</p>
+<h3>Do Google AI Overviews show local businesses?</h3>
+<p>Yes. For many local and service questions, AI Overviews summarise options and often sit alongside the Map Pack, which draws on Google Business Profile data. A strong profile and a website that answers questions clearly give you the best chance of appearing in both.</p>
+<h3>Does schema markup help with AI search?</h3>
+<p>It helps by stating your business facts in a machine-readable form. LocalBusiness schema with name, address, areaServed, opening hours and sameAs links removes guesswork. It will not rescue thin content or inconsistent listings, but it supports clear ones.</p>
+<h3>How can I check if AI assistants mention my business?</h3>
+<p>Ask them. Put the questions a customer would ask, such as "best AC repair service in Uttara", to ChatGPT, Gemini, Perplexity and Copilot, and log whether you appear, who does, and what is said. Repeat monthly, because answers change.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[A growing share of local research now happens inside an AI assistant. Being absent from its short list is a new kind of invisibility, and it is not fixed by the same tactics as classic rankings.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-08-05 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-08-05 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[ai-search-visibility-local-business]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="ai-search-geo-aio"><![CDATA[AI Search / GEO / AIO]]></category>
+    <category domain="post_tag" nicename="geo"><![CDATA[GEO]]></category>
+    <category domain="post_tag" nicename="ai-search"><![CDATA[AI Search]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="ai-overviews"><![CDATA[AI Overviews]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[AI Search Visibility for Local Businesses]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[How ChatGPT, Gemini, Perplexity and Google AI Overviews choose which local businesses to recommend, and what to change so your business gets named and cited.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Google Business Profile Optimization Checklist for Local Businesses</title>
+    <link>https://ratulroy.com/blog/google-business-profile-optimization-checklist</link>
+    <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/google-business-profile-optimization-checklist</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Google Business Profile optimization means completing and maintaining every field Google reads on your listing (category, services, hours, attributes, photos, posts and reviews) so you appear for more local searches and more searchers choose you. The primary category matters most; the rest decides how relevant, active and trustworthy your profile looks next to competitors.</p>
+<p>A Google Business Profile (formerly Google My Business) is not a directory listing you fill in once. It is the strongest ranking asset a local business owns, and Google reads roughly forty separate fields on it. Most profiles I audit are missing half of them. This is the checklist I work through, in order. If you want to understand why these fields matter for rankings first, read <a href="/blog/local-seo-helps-businesses-rank-google-maps">how Local SEO helps businesses rank on Google Maps</a>.</p>
+<h2 id="check-verification-ownership-and-duplicates-first">Check verification, ownership and duplicates first</h2>
+<p>Before touching any field, confirm three things: the profile is verified, you (not a former agency or employee) hold the owner role, and there is only one listing for this location. Unverified profiles do not rank, and duplicates split reviews and signals between them.</p>
+<ul>
+<li>Verification complete, including live video verification if Google asked for it</li>
+<li>Owner access held by the business, with managers added as needed</li>
+<li>Search your name, old name and phone number in Google Maps for duplicates</li>
+</ul>
+<p>If your listing is not appearing at all, work through <a href="/blog/why-my-business-not-showing-google-maps">why a business does not show on Google Maps</a> before optimizing anything.</p>
+<h2 id="start-with-the-primary-category">Start with the primary category</h2>
+<p>Your primary category is the most important field on the whole profile. It tells Google which searches you are even eligible to appear in. Get it wrong and no amount of reviews or citations will rescue the listing.</p>
+<p>Pick the category that describes what you are, not what you sell. A firm listed as “Contractor” when it is really an “HVAC contractor” is competing in the wrong pool entirely, and a practice set to “Medical clinic” instead of “Dentist” misses dental searches. Then add additional categories for genuine extra services, and stop. Padding the list with loosely related categories dilutes relevance rather than widening it.</p>
+<h2 id="get-name-address-and-phone-exactly-right">Get name, address and phone exactly right</h2>
+<p>Your business name must match your real-world name. No added city, no added service. Keyword-stuffed names are one of the most common reasons profiles get suspended.</p>
+<p>Use a local phone number that is answered during your listed hours, and an address written in the same format as on your website footer and your main directory listings. In Bangladesh, where addresses often lean on landmarks, pick one written version (road, house, area, city) and use it everywhere. My <a href="/blog/local-citations-nap-consistency-guide">guide to NAP consistency and citations</a> covers how to standardise it.</p>
+<h2 id="fill-in-services-and-products-properly">Fill in services and products properly</h2>
+<p>The services section is a free, structured place to tell Google exactly what you do. Each service accepts a name and a description, and those descriptions are indexed text.</p>
+<p>Write them the way a customer would search. “Emergency drain unblocking” beats “Drainage solutions”. If your service list mirrors the language on your website’s service pages, the two reinforce each other.</p>
+<ul>
+<li>One entry per service you genuinely offer</li>
+<li>Descriptions written in customer language, not industry jargon</li>
+<li>Pricing left blank unless it is fixed and accurate</li>
+<li>Products added for things you sell or package (for example, “AC servicing package”)</li>
+</ul>
+<h2 id="set-service-areas-and-booking-links">Set service areas and booking links</h2>
+<p>Service-area businesses (plumbers, cleaners, movers, towing) should hide the street address and list the areas they actually serve, up to 20. Name real cities or neighbourhoods, such as Gulshan, Banani and Uttara, rather than drawing a vague region.</p>
+<p>If you take bookings online, add the booking or appointment link so customers can act straight from the listing. Bookings then show up in your Performance data.</p>
+<h2 id="photos-and-posts-are-activity-signals">Photos and posts are activity signals</h2>
+<p>Google measures engagement, and profiles that are actively maintained outperform dormant ones with identical fundamentals. Real photos of your premises, team, vehicles and finished work carry more weight with customers than stock imagery, and they get viewed and clicked.</p>
+<p>Add new photos every few weeks. Cover the exterior (so people recognise the place on arrival), the interior, the team at work and the results.</p>
+<h2 id="reviews-velocity-beats-total">Reviews: velocity beats total</h2>
+<p>A steady trickle of reviews signals an operating business. Forty reviews collected in one week and none since signals a campaign. Ask every customer consistently using your review link or a QR code at the counter, reply to every review, and never buy, incentivise or filter them. Google’s policies prohibit all three.</p>
+<p>Reply to negative reviews calmly and specifically. Future customers read the reply as much as the complaint. If you want this run for you alongside Maps ranking work, that is what my <a href="/google-business-profile-optimization">Google Business Profile optimization service</a> covers.</p>
+<h2 id="hours-attributes-and-skipped-details">Hours, attributes and skipped details</h2>
+<p>Hours seem trivial until you realise Google surfaces “open now” as a filter, and that closed businesses get pushed down at the exact moment a customer is searching. Special hours for public holidays (Eid, Pohela Boishakh, Victory Day) matter more than owners expect, because a wrong closure on a busy day costs a full day of calls.</p>
+<p>Attributes are the checkbox list most people ignore: wheelchair access, on-site parking, appointment required, languages spoken. Each is a structured fact Google can match against a qualified search, and each is free.</p>
+<ul>
+<li>Set special hours before every public holiday, not after</li>
+<li>Fill every attribute that genuinely applies, leave the rest blank</li>
+<li>If you are a service-area business, hide the address rather than faking one</li>
+</ul>
+<h2 id="the-description-is-not-a-ranking-field">The description is not a ranking field</h2>
+<p>This surprises people. The 750-character description does not directly influence ranking. Stuffing it with keywords achieves nothing except making it read badly to the humans who do see it.</p>
+<p>Write it for conversion instead. State what you do, the areas you cover, and what makes working with you different. That is the job it actually performs.</p>
+<h2 id="google-posts-small-effort-real-engagement">Google Posts: small effort, real engagement</h2>
+<p>Few businesses keep posting after the first month, which is exactly why consistent posts work: they are an activity signal most competitors will not match. Use update posts for news, offer posts for promotions with dates, and event posts for anything time-bound.</p>
+<p>You do not need marketing copy. A finished job, a seasonal reminder, a common question answered. Anything showing the business is operating.</p>
+<h2 id="watch-for-suggested-edits">Watch for suggested edits</h2>
+<p>Anyone can suggest an edit to your profile, and Google sometimes applies it without asking. Hours changed, category swapped, website removed. Check the profile monthly and revert anything you did not change.</p>
+<h2 id="how-to-tell-whether-it-worked">How to tell whether it worked</h2>
+<p>The Performance section of your profile reports calls, direction requests, website clicks, bookings and the searches that surfaced you. Those are the numbers to watch, not your position when you search your own name.</p>
+<p>Track them monthly. A profile that is improving usually shows rising direction requests before rising rankings, because proximity-driven discovery moves first. One client’s profile work turned into <a href="/case-studies/gbp-calls-growth">461 calls from the Business Profile in April to August 2024, up 205% on the year before</a>.</p>
+<ul>
+<li><strong>Calls and direction requests:</strong> the closest proxy for revenue</li>
+<li><strong>Discovery versus direct searches:</strong> discovery growth means new customers finding you</li>
+<li><strong>Photo views against competitors:</strong> a rough prominence gauge</li>
+</ul>
+<p>Work down this list once and most profiles gain ground within weeks, because the gaps are usually basic. Keep working it monthly and the profile compounds. The profile is one part of the wider <a href="/local-seo-service">Local SEO system</a>; the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh guide</a> shows how the rest fits together. Or <a href="/book-strategy-call">book a strategy call</a> to have your profile audited.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is the most important part of a Google Business Profile?</h3>
+<p>The primary category. It decides which searches your listing is eligible to appear for, so a wrong one limits everything else. After that, accurate NAP, a complete services list, steady genuine reviews and correct hours have the biggest effect on whether customers find and choose you.</p>
+<h3>How often should I update my Google Business Profile?</h3>
+<p>Check it monthly at minimum, and post or add photos every week or two. Monthly checks catch suggested edits you did not make, wrong hours and new review questions. Regular posts and photos show Google and customers that the business is active.</p>
+<h3>Does the business description help my Google Maps ranking?</h3>
+<p>Not directly. The 750-character description is not treated as a ranking field, so stuffing it with keywords achieves nothing. Write it for customers: what you do, which areas you cover and why people choose you. Its job is to convert the people who read it.</p>
+<h3>Should a service-area business show its address on Google?</h3>
+<p>No, if customers do not visit you. Google's guidelines ask service-area businesses to hide the address and list the areas they serve instead, up to 20. Showing a street address you do not serve customers from is a common suspension trigger.</p>
+<h3>Can I add keywords to my business name on Google?</h3>
+<p>No. Your Google Business Profile name must match your real-world business name as it appears on signage, documents and your website. Adding cities or services to the name breaks Google's guidelines and can get the profile suspended, even if it seems to help briefly.</p>
+<h3>How do I know if my Google Business Profile optimization is working?</h3>
+<p>Watch the Performance section: calls, direction requests, website clicks, bookings and the search terms that surfaced you. Rising direction requests and discovery searches usually appear before ranking gains. A geo-grid scan then shows where in your service area visibility improved.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[A Google Business Profile is not a directory listing you fill in once. It is the strongest ranking asset a local business owns, and this is the checklist I work through, in order.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-06-02 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-06-02 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[google-business-profile-optimization-checklist]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="google-business-profile"><![CDATA[Google Business Profile]]></category>
+    <category domain="post_tag" nicename="google-business-profile"><![CDATA[Google Business Profile]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="map-pack"><![CDATA[Map Pack]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Google Business Profile Optimization Checklist]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[A field-by-field Google Business Profile checklist: categories, services, hours, attributes, photos, posts and reviews, in the order I work through them.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>How Long Does Local SEO Take to Work in Bangladesh?</title>
+    <link>https://ratulroy.com/blog/how-long-local-seo-takes-bangladesh</link>
+    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/how-long-local-seo-takes-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO in Bangladesh usually shows early movement on Google Maps within four to eight weeks of fixing the Google Business Profile, and settled results in three to six months. Quiet categories and district towns can be faster. Crowded Dhaka categories, suspended profiles and duplicate listings take longer.</p>
+<p>It is the question every business owner asks, and the honest answer is: it depends. But ‘it depends’ is only useful if you know on what. This guide, the final part of the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh series</a>, sets out a realistic timeline month by month, along with the factors that speed results up or slow them down, and the early signs that show the work is on track.</p>
+<h2 id="why-nobody-can-promise-a-date">Why nobody can promise a date</h2>
+<p>Google states there is no way to pay for or request a better local ranking, and your competitors keep working while you do. So the timeline is an estimate built from your starting point, not a delivery date. How much it costs to get there is covered in part 7, <a href="/blog/local-seo-cost-bangladesh">How Much Does Local SEO Cost in Bangladesh?</a></p>
+<p>Anyone promising first place on Google Maps within days is either describing a category with no competition or selling something that will not last.</p>
+<h2 id="month-one-foundations">Month one: foundations</h2>
+<p>The first month is diagnosis and repair. The profile is audited and corrected: category, services, hours, pin, photos and description. Duplicate listings are identified, and the address is standardised across the profile, website and Facebook page. If verification is incomplete, that is resolved first, because an unverified profile cannot perform. A baseline geo-grid scan and a note of current calls and direction requests in GBP Performance are taken now, so later progress can be measured honestly.</p>
+<p>Some businesses see movement within this month, especially when the primary category was wrong or the pin was misplaced. Correcting a fundamental error can produce a jump quickly. Others see little change yet, which is normal.</p>
+<h2 id="months-two-and-three-signals-build">Months two and three: signals build</h2>
+<p>With the foundations fixed, the work shifts to the signals that take longer: a steady review routine, citation clean-up, website service pages that match the profile, and regular photos and posts. Google needs time to recrawl, re-evaluate and trust the changes.</p>
+<p>This is typically when geo-grid scans start to show improvement spreading outward from your location (the <a href="/case-studies/map-pack-service-areas">service-area Map Pack case study</a> shows that pattern across 5x as many areas), and when profile actions such as calls and direction requests begin to rise.</p>
+<h2 id="months-four-to-six-results-settle">Months four to six: results settle</h2>
+<p>By this stage, competitive categories usually show whether the strategy is working. Rankings become more stable, visibility extends further across the service area, and gains in calls and direction requests become consistent rather than occasional. For a sense of what consistent looks like, the <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a> shows 461 calls from the profile between April and August 2024, up 205% on the same months a year earlier.</p>
+<p>This is also when decisions are made about expanding: more service pages, more areas, or local link building to push into the tougher parts of the city.</p>
+<h2 id="after-six-months-compounding">After six months: compounding</h2>
+<p>Local SEO keeps building after the first six months if the work continues. Reviews accumulate, the website gains authority, and the business becomes more prominent locally. The effort shifts from fixing to maintaining and expanding.</p>
+<p>Stopping entirely is possible, but competitors do not stop, and a profile left alone slowly loses ground.</p>
+<h2 id="what-makes-local-seo-faster">What makes Local SEO faster</h2>
+<ul>
+<li>An existing, verified profile with some reviews already</li>
+<li>A clear error to fix, such as a wrong category or misplaced pin</li>
+<li>Low competition in your category and area</li>
+<li>A website that already works well on mobile</li>
+<li>An owner who responds to reviews and keeps details current</li>
+</ul>
+<h2 id="what-makes-it-slower">What makes it slower</h2>
+<ul>
+<li>A brand-new business with no reviews or history</li>
+<li>Verification problems or a suspended profile</li>
+<li>Duplicate listings that need merging or removing</li>
+<li>Crowded categories in central Dhaka or Chattogram</li>
+<li>No website, or a website with technical problems</li>
+<li>An address written differently across many platforms</li>
+</ul>
+<h2 id="delays-specific-to-bangladesh">Delays specific to Bangladesh</h2>
+<p>A few issues come up here more often than elsewhere. Verification can take several attempts, particularly with video verification when the recording does not clearly show signage and proof of management. Informal or inconsistent addresses mean more clean-up. Listings created years ago by staff, or added from Maps data, may need to be claimed or merged before real work can begin.</p>
+<p>None of these are unusual, but they add weeks, so they are worth identifying in the first audit rather than discovering later. If your profile is missing from Maps altogether, start with <a href="/blog/why-my-business-not-showing-google-maps">why your business is not showing on Google Maps</a>.</p>
+<h2 id="signs-it-is-working">Signs it is working</h2>
+<ul>
+<li>Profile views and search appearances rising in the performance report</li>
+<li>More calls, direction requests and website clicks from the profile</li>
+<li>Geo-grid scans showing visibility spreading across more of your area</li>
+<li>More searches for your business name, a sign of growing awareness</li>
+<li>Reviews arriving steadily rather than in rare bursts</li>
+</ul>
+<h2 id="warning-signs-to-watch-for">Warning signs to watch for</h2>
+<ul>
+<li>Guaranteed rankings, or first place within days</li>
+<li>Reports that show only rankings, never calls or direction requests</li>
+<li>Changes to your business name that add keywords or area names</li>
+<li>Reviews appearing in bulk from accounts with no history</li>
+<li>No access to your own profile or reporting</li>
+</ul>
+<blockquote>
+<p>Local SEO in Bangladesh usually shows early signs within weeks and delivers settled results in three to six months, with gains that keep compounding while the work continues. The timeline depends on competition, your starting point, and how consistently the fundamentals are maintained. That completes this series. Go back to any topic from the series guide above, see <a href="/local-seo-service">what the Local SEO service includes</a>, or <a href="/book-strategy-call">book a strategy call</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>How long does it take to rank on Google Maps in Bangladesh?</h3>
+<p>Early movement usually appears within four to eight weeks of fixing the profile. Stable results in competitive categories typically take three to six months. Small towns and low-competition categories can be faster, while suspended or duplicate profiles take longer.</p>
+<h3>Why is my new Google Business Profile not showing up?</h3>
+<p>New profiles often need time after verification before they appear widely, and they start with no reviews or history. Check that verification is complete, the category is right and the pin is accurate, then build reviews steadily. [Why your business is not showing on Google Maps](/blog/why-my-business-not-showing-google-maps) covers other causes.</p>
+<h3>Can Local SEO results disappear?</h3>
+<p>They can fade if the profile is neglected, details go out of date, or competitors keep improving while you stop. A suspension for breaking Google's guidelines can remove a listing entirely, which is why risky shortcuts are not worth it.</p>
+<h3>Is it faster to rank in a smaller city than in Dhaka?</h3>
+<p>Usually, yes. In most smaller cities and district towns, such as Bogura, Jashore or Rangpur, fewer competing businesses have optimised profiles, so the same work produces results sooner. Crowded categories in Gulshan, Dhanmondi or central Chattogram take longer because every nearby competitor is also investing.</p>
+<h3>Will running Google Ads make Local SEO work faster?</h3>
+<p>No. Ads and organic map pack rankings are separate systems, and Google states there is no way to pay for a better local ranking. Ads can bring calls while Local SEO builds, which is why many businesses run both for the first few months. [Local SEO vs Google Ads](/blog/local-seo-vs-google-ads-bangladesh) compares them.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[The honest answer is: it depends. This guide sets out a realistic Local SEO timeline for businesses in Bangladesh, month by month, with the factors that speed results up or slow them down and the early signs the work is on track.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-18 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-18 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[how-long-local-seo-takes-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="timeline"><![CDATA[Timeline]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="series-8"><![CDATA[series-8]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[How Long Does Local SEO Take in Bangladesh?]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[A realistic Local SEO timeline for Bangladesh: what happens in month one, by month three and by month six, what speeds results up, and what slows them down.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>How to Choose an SEO Specialist in Bangladesh</title>
+    <link>https://ratulroy.com/blog/how-to-choose-seo-specialist-bangladesh</link>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/how-to-choose-seo-specialist-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>To choose an SEO specialist in Bangladesh, check four things before price: verifiable results (Search Console or Google Business Profile data with dates), a clear answer about what they will measure, a contract without long lock-ins where you own every account, and someone who explains the work plainly. For a local business, Local SEO experience beats agency size.</p>
+<p>Hiring an SEO specialist in Bangladesh is difficult for one reason: the work is invisible until it is finished, and by then you have already paid. Anyone can produce a report. Far fewer can produce customers. These are the checks that separate the two, in the order they are worth doing. If you are not yet sure what the job involves, read <a href="/blog/what-does-seo-specialist-do">what an SEO specialist actually does</a> first.</p>
+<h2 id="ask-what-they-will-measure-first">Ask what they will measure first</h2>
+<p>A specialist should be able to tell you, in the first conversation, which numbers they expect to move and roughly when. Calls, direction requests, form submissions, booked jobs. If the answer is only rankings, be careful. A number one position that produces no calls is a screenshot, not a result.</p>
+<p>Ask specifically: what does month three look like, and what does month six look like? A practitioner who has done this before will answer that comfortably, with caveats about your competition. A reseller will change the subject to packages.</p>
+<h2 id="specialist-or-generalist">Specialist or generalist?</h2>
+<p>Bangladesh has plenty of agencies offering SEO alongside paid ads, social media, design and app development. That breadth is fine for some businesses, but it means SEO is one of six things competing for the same team’s attention.</p>
+<p>A specialist does one thing repeatedly and sees the same patterns across accounts. For a local service business, that pattern recognition matters more than agency size. I compare the two honestly in <a href="/blog/seo-specialist-vs-agency-bangladesh">SEO specialist vs SEO agency in Bangladesh</a>.</p>
+<ul>
+<li>Ask what percentage of their work is SEO versus other services</li>
+<li>Ask which industries they work in most often</li>
+<li>Ask what they have stopped offering, and why</li>
+</ul>
+<h2 id="look-for-proof-you-can-verify">Look for proof you can verify</h2>
+<p>Case studies with round numbers and no source are decoration. Ask for screenshots from Google Search Console or Google Business Profile Performance, with the date range visible. Those are harder to massage than a designed report. Public reviews on platforms like Fiverr or Google, from clients you could in principle contact, add a second layer.</p>
+<p>You can see what that should look like on my <a href="/case-studies">case studies page</a>. For example, the <a href="/case-studies/gbp-calls-growth">GBP calls case study</a> shows the Business Profile screenshot behind 461 calls from April to August 2024.</p>
+<h2 id="what-are-the-red-flags-when-hiring-an-seo-specialist">What are the red flags when hiring an SEO specialist?</h2>
+<ul>
+<li>Guaranteed first position or “page one in 30 days”</li>
+<li>Bulk packages of hundreds of backlinks or directory submissions</li>
+<li>Offers to write or buy reviews for you</li>
+<li>Keyword-stuffed business names or fake addresses on your Google Business Profile</li>
+<li>Refusing to give you admin access to your own accounts</li>
+<li>Reports full of rankings for keywords nobody searches</li>
+</ul>
+<p>Any one of these is enough to walk away. They produce a short-term chart and a long-term problem, sometimes a suspended profile.</p>
+<h2 id="understand-the-contract-first">Understand the contract first</h2>
+<p>Long lock-in contracts exist to protect the provider, not you. A specialist confident in the work earns the next month by delivering this one.</p>
+<p>Ask what happens if you want to stop after ninety days. Ask who owns the Google Business Profile, the website, the Google Analytics 4 property and the Search Console account when the relationship ends. The answer should be: you do, always.</p>
+<h2 id="test-how-they-explain-things">Test how they explain things</h2>
+<p>You are hiring someone whose work you cannot directly inspect, so the ability to explain it plainly is not a soft skill here; it is the main safeguard you have.</p>
+<p>If a first conversation leaves you more confused than when you started, that will not improve once money changes hands.</p>
+<h2 id="realistic-price-and-timeline">Realistic price and timeline</h2>
+<p>Local SEO is not instant. Three to six months to measurable movement is normal, with compounding gains after that, and the starting condition of your profile and website changes everything. I break that down in <a href="/blog/how-long-local-seo-takes-bangladesh">how long Local SEO takes in Bangladesh</a>.</p>
+<p>On price, published entry figures in this market start around a few hundred dollars a month and rise with competition and the number of areas you need to cover. Anyone quoting a firm number before seeing your profile is quoting a package, not a plan. The full breakdown is in <a href="/blog/local-seo-cost-bangladesh">how much SEO costs in Bangladesh</a>.</p>
+<p>The best signal is simple: does this person tell you things you did not want to hear? Someone willing to say a keyword is unrealistic, or that your site needs work before rankings will move, is someone worth hiring. You can read <a href="/about">my background</a>, see <a href="/local-seo-service">how my Local SEO service works</a>, or <a href="/book-strategy-call">book a call</a> and put these questions to me directly.</p>
+<h2>Frequently asked questions</h2>
+<h3>How do I know if an SEO specialist is genuine?</h3>
+<p>Ask for results you can verify: Google Search Console or Google Business Profile screenshots with dates visible, or a live call where they show the data. Genuine specialists explain what they will measure, admit what they cannot promise, and let you own every account.</p>
+<h3>What questions should I ask an SEO specialist before hiring?</h3>
+<p>Ask who does the work, what they will measure in months three and six, what month one includes, who owns the accounts, what happens if you stop after 90 days, and which industries they know best. Vague answers to any of these are a warning.</p>
+<h3>Is it a red flag if an SEO specialist guarantees first position?</h3>
+<p>Yes. Nobody controls Google's rankings, and Google itself says there is no way to pay for a better local ranking. Guarantees usually mean low-value keywords, short-lived tactics like bought links, or a contract written so the promise never has to be kept.</p>
+<h3>Should I hire a local SEO specialist in Bangladesh or someone abroad?</h3>
+<p>For a Bangladesh business, a specialist who understands local search behaviour helps: searches in English, Bangla and Banglish, landmark-style addresses, mobile-first users and competition in areas like Gulshan or Uttara. Many Bangladeshi specialists also serve clients abroad, so location matters less than proof.</p>
+<h3>How long before an SEO specialist shows results?</h3>
+<p>For Local SEO, 3 to 6 months to measurable movement is normal, with gains compounding after that. Quick wins, such as fixing a wrong Google Business Profile category, can show sooner. Anyone promising page one in weeks is skipping the hard parts.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Hiring an SEO specialist in Bangladesh is difficult because the work is invisible until it is finished, and by then you have already paid. These are the checks that separate real practitioners from resellers.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-06 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-06 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[how-to-choose-seo-specialist-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="seo-tips"><![CDATA[SEO Tips]]></category>
+    <category domain="post_tag" nicename="seo-specialist"><![CDATA[SEO Specialist]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="hiring"><![CDATA[Hiring]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[How to Choose an SEO Specialist in Bangladesh]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[What to check before hiring an SEO specialist in Bangladesh: verifiable proof, reporting, contracts, account ownership and the red flags that mark a reseller.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Local Citations and NAP Consistency: A Practical Guide</title>
+    <link>https://ratulroy.com/blog/local-citations-nap-consistency-guide</link>
+    <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-citations-nap-consistency-guide</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>A local citation is any online mention of your business name, address and phone number (NAP), such as a Bing Places, Apple Maps, Facebook or directory listing. NAP consistency means those details match your Google Business Profile exactly everywhere. Consistent citations help Google trust your location and details, which supports Map Pack rankings; volume alone does very little.</p>
+<p>Citations are one of the most oversold services in local SEO. Bulk packages promise hundreds of listings, most on sites nobody visits. The underlying signal is real, but the way it is usually sold is not. Here is the honest version.</p>
+<h2 id="what-a-citation-actually-is">What a citation actually is</h2>
+<p>A citation is any mention of your business name, address and phone number on another website. It does not need to link to you. Google uses these mentions to corroborate that your business exists, where it operates, and how to reach it. Structured citations sit in directory fields (Bing Places, Yelp, industry directories); unstructured ones appear inside articles, news sites or blog posts.</p>
+<p>The value is corroboration, not volume. Ten consistent listings on sites Google trusts beat three hundred on directories it ignores.</p>
+<h2 id="why-consistency-beats-count">Why consistency beats count</h2>
+<p>If one directory lists “Suite 4” and another lists “Unit 4”, and a third has an old phone number, Google has to decide which is correct. That uncertainty reduces confidence in your listing, and confidence feeds prominence, one of Google’s three local ranking factors alongside relevance and distance. The bigger picture is in <a href="/blog/local-seo-helps-businesses-rank-google-maps">how Local SEO helps businesses rank on Google Maps</a>.</p>
+<p>Pick one exact format, down to punctuation, and use it everywhere. Then match it to your Google Business Profile exactly. In Bangladesh this needs extra care, because addresses are often written several ways (road number or name, house number, landmark, area). Choose one, for example “House 12, Road 5, Dhanmondi, Dhaka 1205”, and stop improvising.</p>
+<h2 id="how-to-audit-without-buying-tools">How to audit without buying tools</h2>
+<p>Search your business name in quotes, then your phone number in quotes, then any old address or number. Work through the results and record every variation you find in a simple spreadsheet. It is tedious and it works.</p>
+<p>Fix the largest and most-trusted sources first: the major directories, your industry bodies, and anything already ranking on page one for your brand name.</p>
+<ul>
+<li>Correct the big directories before chasing obscure ones</li>
+<li>Claim listings where possible rather than submitting duplicates</li>
+<li>Remove or merge genuine duplicates of your own listing, including duplicate Google profiles</li>
+</ul>
+<p>Duplicate Google listings are a common reason a business drops out of Maps; I cover that in <a href="/blog/why-my-business-not-showing-google-maps">why your business is not showing on Google Maps</a>.</p>
+<h2 id="when-citations-stop-helping">When citations stop helping</h2>
+<p>Once your core listings are consistent, additional citations produce sharply diminishing returns. At that point your effort is better spent on reviews, content and links.</p>
+<p>Anyone selling you a monthly citation package after that point is selling activity, not results.</p>
+<h2 id="which-directories-are-worth-the-effort">Which directories are worth the effort?</h2>
+<p>The list is shorter than most agencies imply. Your Google Business Profile, Apple Business Connect, Bing Places for Business, Facebook, and the two or three directories that genuinely rank for your industry in your country. That covers the overwhelming majority of the value.</p>
+<p>Beyond that you are into sites with no traffic, no editorial standards, and often no real users. Google knows which is which.</p>
+<ul>
+<li>Data aggregators (in markets that have them) and the major mapping platforms first</li>
+<li>Industry bodies and trade associations you actually belong to</li>
+<li>Local chambers of commerce or city directories with real editorial oversight</li>
+</ul>
+<h2 id="citations-also-feed-ai-answers">Citations also feed AI answers</h2>
+<p>AI assistants such as ChatGPT search, Gemini and Perplexity build their picture of a business from the same web sources. If your directory listings disagree, they have no reliable fact to state. More on that in <a href="/blog/ai-search-visibility-local-business">AI search visibility for local businesses</a>.</p>
+<h2 id="structured-data-reinforces-citations">Structured data reinforces citations</h2>
+<p>Citations describe you elsewhere. LocalBusiness schema states the same facts in machine-readable form on the site you control, with <code>sameAs</code> links pointing to your main profiles. When the two agree, confidence rises.</p>
+<p>The name, address and phone in your schema must match your profile exactly. A mismatch there undermines the consistency you spent effort building. Schema setup is part of my <a href="/technical-seo">technical SEO service</a>.</p>
+<h2 id="moving-premises-without-losing-rankings">Moving premises without losing rankings</h2>
+<p>A move is the most disruptive event for local rankings, because every citation you built now points at the wrong place. Handled badly it costs months.</p>
+<p>Update the Google Business Profile first, then the site, then the major directories, then the long tail. Reverse that order and you create a window where the web disagrees with Google about where you are.</p>
+<p>Clean up what exists, standardise the format, then move on. Citations are a foundation, not a growth lever. Your NAP should match the profile you set up using the <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile checklist</a>, and the growth comes from the wider <a href="/local-seo-service">Local SEO system</a>. If you want your listings audited, <a href="/book-strategy-call">book a strategy call</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>What does NAP stand for in local SEO?</h3>
+<p>NAP stands for name, address and phone number. NAP consistency means those three details appear in exactly the same form on your Google Business Profile, your website and every directory that lists you. Some people add a W for website (NAPW).</p>
+<h3>How many citations does a local business need?</h3>
+<p>There is no target number. A clean, consistent set on the platforms that matter (Google, Apple Business Connect, Bing Places, Facebook and the main directories for your industry and country) covers most of the value. After that, extra listings bring sharply diminishing returns.</p>
+<h3>Do citations still help Google Maps rankings?</h3>
+<p>Yes, but less than they used to. Consistent citations help Google trust that your business exists where you say it does, which supports prominence. Reviews, your profile, website content and links now move rankings more. Inconsistent citations can still hold you back.</p>
+<h3>Should I buy a bulk citation package?</h3>
+<p>Usually not. Bulk packages submit you to hundreds of low-traffic directories Google largely ignores, and they can create duplicates you later have to clean up. Fixing and claiming the listings that already exist is cheaper and does more.</p>
+<h3>What should I do with old addresses and phone numbers online?</h3>
+<p>Update them, starting with your Google Business Profile and website, then the major directories, then smaller sites. Where you cannot edit a listing, contact the site or request removal. Search your old phone number in quotes to find listings you have forgotten.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Citations are one of the most oversold services in local SEO. The underlying signal is real, but the way it is usually sold is not. Here is the honest version.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-07-21 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-07-21 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-citations-nap-consistency-guide]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="citations"><![CDATA[Citations]]></category>
+    <category domain="post_tag" nicename="nap"><![CDATA[NAP]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Local Citations and NAP Consistency Guide]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[What local citations are, why NAP consistency affects Google Maps rankings, and how to audit and fix listings yourself without paying for bulk submissions.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Local SEO in Bangladesh: The Complete Guide for Local Businesses</title>
+    <link>https://ratulroy.com/blog/local-seo-bangladesh-guide</link>
+    <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-bangladesh-guide</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO in Bangladesh is the work of getting your business into the Google Maps 3-pack and local search results when nearby customers search, in English, Bangla or Banglish, for what you sell. It rests on four things: an accurate Google Business Profile, one consistent address, genuine reviews, and a website that confirms what the profile says.</p>
+<p>More and more customers here find local businesses the same way: they pick up a phone, search Google or open Google Maps, and call one of the first few names they see. Local SEO is the work of making sure your business is one of those names. This guide covers the whole picture for a business operating here: how Google decides who appears, the problems specific to Bangladeshi addresses and search habits, what to fix first, and what it realistically costs and takes. It is part 1 of an eight-part series, and each section links to the deeper guide when you want the detail.</p>
+<h2 id="what-local-seo-means-in-bangladesh">What Local SEO means in Bangladesh</h2>
+<p>Local SEO is the process of improving how visible your business is in searches with local intent: ‘dentist in Dhanmondi’, ‘AC repair near me’, ‘best restaurant in Sylhet’, ‘car service Chattogram’. Those searches show a map with three businesses underneath, usually called the local pack, map pack or 3-pack, followed by ordinary website results and, more and more often, an AI Overview. Local SEO covers both, but the map pack is where most of the calls come from.</p>
+<p>It is different from general SEO because the competition is bounded by geography. A clinic in Uttara is not competing with every clinic in the country, only with the ones Google considers relevant and close to the person searching. That makes it one of the most achievable forms of search marketing for a small business, provided the basics are done properly. Part 2, <a href="/blog/what-is-local-seo-bangladesh">What Is Local SEO?</a>, covers the definition and the parts in more detail.</p>
+<h2 id="how-people-in-bangladesh-search">How people in Bangladesh search</h2>
+<p>Search habits here have a few features that shape the work. Nearly all local searching happens on phones, often on mobile data, so a slow website or a profile without a working call button loses people quickly. Queries are typed in English, in Bangla and in romanised Bangla, and the same person may switch between them. Area names carry a lot of weight: people search ‘Gulshan’, ‘Mirpur 10’, ‘Bashundhara R/A’ or ‘Agrabad’ far more naturally than a postcode. If most of your customers are in the capital, the <a href="/local-seo-dhaka">Local SEO Dhaka page</a> shows how this plays out area by area.</p>
+<p>Google Maps itself is familiar to most smartphone users through ride-hailing and delivery apps, so people are used to looking at a map, checking reviews, and tapping to call or get directions. The business that makes those actions easy tends to win the customer.</p>
+<ul>
+<li><strong>Mobile first:</strong> the profile and the website are judged on a phone screen, usually on mobile data</li>
+<li><strong>Mixed language:</strong> English, Bangla and romanised Bangla queries for the same service</li>
+<li><strong>Neighbourhood names instead of postcodes:</strong> ‘dentist Dhanmondi’, ‘hotel near Zindabazar’</li>
+<li><strong>Action driven:</strong> calls and direction requests matter more than website visits</li>
+</ul>
+<h2 id="the-three-things-google-ranks-you-on">The three things Google ranks you on</h2>
+<p>Google states that local results are based mainly on relevance, distance and prominence. It also states there is no way to pay for or request a better local ranking. Every tactic in Local SEO feeds one of these three.</p>
+<ul>
+<li><strong>Relevance:</strong> how well your profile and website match what was searched. Categories, services, descriptions, website content and review text all contribute.</li>
+<li><strong>Distance:</strong> how far your business is from the searcher, or from the area named in the search. You cannot change where you are, but you can make sure Google has your location right.</li>
+<li><strong>Prominence:</strong> how well known and trusted Google thinks you are, judged from reviews, links, mentions across the web, and how people interact with your listing.</li>
+</ul>
+<p>The step-by-step mechanics and the ranking system are covered in part 3, <a href="/blog/local-seo-helps-businesses-rank-google-maps">How Local SEO Works: Rank Higher on Google Maps</a>.</p>
+<h2 id="start-with-your-google-business-profile">Start with your Google Business Profile</h2>
+<p>Your Google Business Profile (formerly Google My Business) is the listing that actually appears in the map pack, so it is the first thing to get right. It is free, and a fully completed profile already puts you ahead of competitors who set up a listing years ago and never returned to it.</p>
+<p>Verification is often the first hurdle here. Google chooses the method, and for many businesses in Bangladesh that now means recording a short video showing the signage, the premises and proof that you manage the business. Postal verification, where offered, can be slow. If a profile is suspended, fix the cause and request reinstatement through Google rather than starting again. Plan for it rather than being surprised by it, and do not create a second listing if the first one stalls, because duplicates cause more problems than they solve.</p>
+<ul>
+<li>Business name exactly as it appears on your signage, with no added keywords or locations</li>
+<li>The most specific primary category available, plus secondary categories that genuinely apply</li>
+<li>Opening hours that reflect reality, including Friday hours and special hours for Ramadan and Eid</li>
+<li>Every service you offer listed, with a plain description, plus attributes and a booking link if you take appointments</li>
+<li>Real photos of the premises, team and work, added regularly</li>
+<li>A phone number that is answered during the hours you list</li>
+</ul>
+<p>The <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile optimization checklist</a> goes through every field, and the <a href="/google-business-profile-optimization">GBP optimization service page</a> explains how it is handled for clients.</p>
+<h2 id="addresses-the-bangladesh-specific-problem">Addresses: the Bangladesh-specific problem</h2>
+<p>Inconsistent addresses are one of the most common reasons Bangladeshi businesses underperform on Maps. The same shop might be listed as ‘House 12, Road 5, Dhanmondi’, ‘H-12, R-5, Dhanmondi R/A’ and ‘Opposite the Road 5 market’ on three different sites, in two languages. People can usually work out that these are the same place. Search engines are less forgiving, and mismatched details weaken the trust Google places in your listing.</p>
+<p>City and area spellings add another layer. Chittagong became Chattogram, Comilla became Cumilla and Barisal became Barishal in official use, yet customers still search with both spellings. Area names vary too: Mirpur 10, Mirpur-10 and Mirpur Section 10 all appear in the wild.</p>
+<ul>
+<li>Choose one address format and use it everywhere: profile, website, Facebook page and directories</li>
+<li>Place the map pin on the actual entrance, not the centre of the building or the road</li>
+<li>If there is no formal address, use the Plus Code Google Maps generates for your location</li>
+<li>Mention the landmark in your description and website, not inside the address field</li>
+<li>Service-area businesses that visit customers can hide their address and list up to 20 service areas instead</li>
+</ul>
+<p>The <a href="/blog/local-citations-nap-consistency-guide">local citations and NAP consistency guide</a> explains how to find and clean up the versions of your details that already exist.</p>
+<h2 id="reviews-the-most-underused-signal">Reviews: the most underused signal</h2>
+<p>Satisfied customers in Bangladesh rarely leave a Google review on their own. They will tell friends, message you on Facebook and come back, but the review only happens if you ask. That makes a simple, consistent request process one of the most valuable things you can set up.</p>
+<ul>
+<li>Send your Google review link by SMS or WhatsApp right after the job or visit, or print it as a QR code at the counter</li>
+<li>Ask every customer, not only the ones you expect to be happy; selective asking breaks Google’s rules</li>
+<li>Reviews written in Bangla are just as valuable as reviews in English</li>
+<li>Reply to every review, briefly and specifically, including the negative ones</li>
+<li>Never buy reviews or offer discounts in exchange for them; Google removes them and can suspend the profile</li>
+</ul>
+<p>Recency matters as much as the total. A steady few reviews every month tells Google and customers more than forty that arrived in one week two years ago.</p>
+<h2 id="your-website-still-matters">Your website still matters</h2>
+<p>For many businesses in Bangladesh, the Facebook page is the main online presence, and it may bring in most of the enquiries today. It does little for Google Maps, though. Google uses your website to confirm what your profile claims: that you offer these services, in this area, at this address. A profile linked to a thin or missing website has less to support it.</p>
+<p>The site does not need to be large. It needs a clear page for each main service, the same name, address and phone number as your profile, contact details that work on a phone, and fast loading on mobile data, which is what Google’s Core Web Vitals (LCP, INP and CLS) measure. Structured data, using schema.org LocalBusiness or a specific subtype such as Dentist or MedicalClinic, helps search engines read your name, address, hours and service area without guessing. If you suspect the site has deeper problems, the <a href="/technical-seo">technical SEO service page</a> lists the usual culprits.</p>
+<h2 id="citations-fewer-cleaner-listings">Citations: fewer, cleaner listings</h2>
+<p>Citations are listings of your business on other websites. In Bangladesh the list that matters is short: your Facebook page, Bing Places for Business, Apple Business Connect (which feeds Apple Maps on iPhones), relevant industry or association directories (for example BASIS for software firms or e-CAB for e-commerce businesses), your local chamber of commerce if you are a member, and any directories specific to your trade. Accuracy matters much more than volume. A handful of consistent listings beats a hundred automated submissions to sites nobody visits.</p>
+<p>Mentions in local news sites, event listings and partner websites also count toward prominence, and they tend to come from doing something worth mentioning rather than from outreach alone.</p>
+<h2 id="ai-search-is-already-reading-your-profile">AI search is already reading your profile</h2>
+<p>Google’s AI Overviews and assistants like ChatGPT and Gemini increasingly answer local questions directly. They draw on the same sources Local SEO improves: your Business Profile, your reviews, your website and consistent mentions elsewhere. A business with clear, consistent facts is easier for these systems to recommend. The <a href="/blog/ai-search-visibility-local-business">AI search visibility guide</a> and the <a href="/generative-engine-optimization">generative engine optimization service</a> cover this in depth.</p>
+<h2 id="cost-and-timelines">Cost and timelines</h2>
+<p>Cost depends on competition, the number of locations or areas you need to rank in, the state of your current profile and website, and whether you want advice or full implementation. Packages here start from $299. The full breakdown is in part 7, <a href="/blog/local-seo-cost-bangladesh">How Much Does Local SEO Cost in Bangladesh?</a></p>
+<p>Time follows the same factors. Profile fixes can show early movement within weeks, while competitive categories in Dhaka usually need three to six months of consistent work before results settle. Part 8, <a href="/blog/how-long-local-seo-takes-bangladesh">How Long Does Local SEO Take to Work in Bangladesh?</a>, sets out what to expect month by month. For a real before and after, the <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a> shows 461 calls from Apr–Aug 2024, up 205% on the year before.</p>
+<p>If you are weighing Local SEO against other channels, part 6, <a href="/blog/local-seo-vs-google-ads-bangladesh">Local SEO vs Google Ads</a>, and part 5, <a href="/blog/local-seo-vs-traditional-seo">Local SEO vs Traditional SEO</a>, compare them directly.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Adding keywords or area names to the business name on the profile</li>
+<li>Two or three duplicate listings for the same location, often created by staff or customers</li>
+<li>A map pin placed on the wrong building or the wrong side of a main road</li>
+<li>Phone numbers that change or go unanswered, which frustrates customers and weakens trust</li>
+<li>Relying entirely on Facebook, with no website for Google to verify against</li>
+<li>Paying for bulk citation or backlink packages that produce nothing measurable</li>
+<li>Judging progress by one keyword checked from the office, instead of across the whole service area</li>
+<li>Leaving Friday, Ramadan and Eid hours unchanged, so the profile shows ‘Open now’ when the shutter is down</li>
+</ul>
+<h2 id="a-simple-order-of-work">A simple order of work</h2>
+<p>If you are starting from scratch or from a neglected profile, this order avoids wasted effort. Each step makes the next one count for more.</p>
+<ul>
+<li><strong>Week one:</strong> claim or verify the profile, then fix the name, category, hours, pin and phone number</li>
+<li><strong>Weeks two to four:</strong> complete every profile field, add photos, and align the website and Facebook details</li>
+<li><strong>Month two:</strong> clean up citations and duplicates, and start a steady review request routine</li>
+<li><strong>Month three onward:</strong> build service and area content, earn local mentions, and track visibility across your area with a geo-grid</li>
+</ul>
+<p>Why this matters for your business specifically is covered in part 4, <a href="/blog/why-local-seo-important-bangladesh">Why Local SEO Is Important for Businesses in Bangladesh</a>.</p>
+<blockquote>
+<p>Local SEO in Bangladesh rewards the businesses that get the fundamentals right and keep them right: one accurate profile, one consistent address, a steady flow of genuine reviews, and a website that confirms what the profile says. None of it is complicated, but it does need doing properly and in the right order. If you would rather have it handled, see the <a href="/local-seo-service">Local SEO service</a> or <a href="/book-strategy-call">book a strategy call</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>Does Local SEO work in Bangladesh?</h3>
+<p>Yes. Google Maps and local search work the same way here as elsewhere, and customers use them for everything from clinics and restaurants to repair services. What differs is the detail: address formats, verification, mixed-language searches, and competition that varies a lot between Dhaka and smaller cities.</p>
+<h3>Can I rank on Google Maps without a physical shop?</h3>
+<p>Yes, if you serve customers at their location. Set up the profile as a service-area business, hide the address and list the areas you cover. You still need a real address for verification, but it is not shown publicly.</p>
+<h3>Should my Google Business Profile be in Bangla or English?</h3>
+<p>Use the business name exactly as it appears on your signage. For the description and services, write in the language your customers search in; for most commercial categories that is English, with Bangla terms where customers genuinely use them. Avoid stuffing both versions of every keyword.</p>
+<h3>How do I know if Local SEO is working?</h3>
+<p>Watch the actions in your Business Profile performance report: calls, direction requests and website clicks. Rankings checked from one spot are misleading; a geo-grid scan shows visibility across your whole service area. The Google Business Profile itself is free, so the real measure is whether those actions grow month on month.</p>
+<h3>How much does Local SEO cost in Bangladesh?</h3>
+<p>Packages start from $299 for a single-location Google Business Profile. The final figure depends on how competitive your category and area are, how many locations or service areas you need, the state of your current profile and website, and whether you want advice or full implementation.</p>
+<h3>How long does Local SEO take to work in Bangladesh?</h3>
+<p>Profile fixes can show early movement within a few weeks. Competitive categories in Dhaka usually need three to six months of consistent work before rankings and calls settle. Quieter categories and smaller cities often move faster because fewer competitors have properly optimised profiles.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[More and more customers in Bangladesh find local businesses by searching Google or Google Maps and calling one of the first few names they see. Local SEO is the work of making sure your business is one of those names.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-11 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-11 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-bangladesh-guide]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <category domain="post_tag" nicename="guide"><![CDATA[Guide]]></category>
+    <category domain="post_tag" nicename="series-1"><![CDATA[series-1]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO in Bangladesh: The Complete Guide]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO in Bangladesh explained: Google Business Profile, Maps ranking, addresses, reviews, citations, cost from $299 and realistic timelines.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>How Much Does SEO and Local SEO Cost in Bangladesh?</title>
+    <link>https://ratulroy.com/blog/local-seo-cost-bangladesh</link>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-cost-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO in Bangladesh starts from $299 for a single-location Google Business Profile package, with larger scopes quoted after an audit. The price depends on four things: how competitive your category and area are, how many locations or service areas you cover, the state of your profile and website, and how much you want done for you.</p>
+<p>Pricing in the market runs from cheap one-off profile setups to monthly retainers for multi-branch businesses. The range is wide because the work varies so much. This guide explains what you are actually paying for, what pushes the price up or down, and how to judge whether a quote is fair. It is part 7 of the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh series</a>. It covers Local SEO pricing first, then how full website SEO and Google Ads compare.</p>
+<h2 id="the-honest-answer-first">The honest answer first</h2>
+<p>There is no single price for Local SEO, and anyone quoting a firm figure before looking at your profile, website and competitors is quoting a package, not a plan. What can be said honestly is what the work involves and what makes it bigger or smaller.</p>
+<p>For reference, Local SEO packages here start from <strong>$299</strong>, and the final figure depends on the factors below. If you are still deciding between paying for SEO and paying for clicks, read part 6, <a href="/blog/local-seo-vs-google-ads-bangladesh">Local SEO vs Google Ads</a>, first.</p>
+<h2 id="what-you-are-paying-for">What you are paying for</h2>
+<p>Local SEO is a set of jobs. A proper engagement includes most of these, and understanding them makes quotes much easier to compare:</p>
+<ul>
+<li><strong>Audit:</strong> reviewing your Business Profile, website, citations, reviews and competitors, with a baseline geo-grid scan</li>
+<li><strong>Profile optimisation:</strong> categories, services, description, attributes, hours, photos and posts</li>
+<li><strong>Location clean-up:</strong> pin placement, duplicate listings and a consistent address format</li>
+<li><strong>Citations:</strong> correcting and building consistent listings on the directories that matter</li>
+<li><strong>Website work:</strong> service pages, location signals, LocalBusiness schema and mobile speed</li>
+<li><strong>Reviews:</strong> a system for asking consistently, and replying</li>
+<li><strong>Tracking and reporting:</strong> calls, direction requests and website clicks from GBP Performance, plus geo-grid visibility, explained plainly</li>
+</ul>
+<h2 id="the-four-things-that-change-the-price">The four things that change the price</h2>
+<ul>
+<li><strong>Competition:</strong> a dentist in Gulshan or Dhanmondi faces far more competition than one in a district town</li>
+<li><strong>Coverage:</strong> one location and a small area costs less than several branches or a city-wide service area</li>
+<li><strong>Starting condition:</strong> a suspended profile, duplicates or a broken website mean more work up front</li>
+<li><strong>Scope:</strong> advice and a plan you implement yourself costs less than done-for-you implementation</li>
+</ul>
+<h2 id="one-off-setup-versus-ongoing-work">One-off setup versus ongoing work</h2>
+<p>Some businesses need a one-time fix: a profile that was never properly set up, a wrong category, duplicate listings, an inconsistent address. That work has a clear end. Others are in competitive categories where rankings depend on a steady flow of reviews, content and local mentions, which needs ongoing effort.</p>
+<p>A sensible approach is to start with an audit and the foundation fixes, then decide whether ongoing work is justified by the competition you face. Not every business needs a monthly retainer.</p>
+<h2 id="diy-the-real-cost-is-time">DIY: the real cost is time</h2>
+<p>Much of the foundational work can be done by an owner willing to learn: completing the profile, fixing details, uploading photos and asking for reviews. The <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile optimization checklist</a> is a good starting point.</p>
+<p>The cost is your time and the risk of mistakes, such as editing the business name in a way that triggers a suspension, or creating a duplicate while trying to fix verification. Where DIY usually stalls is diagnosis: working out why a well-completed profile still does not rank, and what to do about the competitors above you.</p>
+<h2 id="freelancer-specialist-or-agency">Freelancer, specialist or agency</h2>
+<p>In Bangladesh you can hire general freelancers, specialists who focus on Local SEO, or full-service agencies. Price is not the only difference. A specialist sees the same local ranking problems repeatedly; an agency may offer more services, spread across more clients and a larger team. The trade-offs are covered in <a href="/blog/seo-specialist-vs-agency-bangladesh">SEO Specialist vs Agency in Bangladesh</a>.</p>
+<h2 id="why-cheap-packages-cost-more">Why cheap packages cost more</h2>
+<p>At the bottom of the market, packages promise hundreds of citations, a set number of backlinks and guaranteed rankings for a price that cannot cover real work. What they usually deliver is automated directory submissions, generic content and a report of rankings for terms nobody searches. Worse, some tactics, such as keyword-stuffed business names, fake reviews or listings at virtual addresses, put the profile at risk of suspension.</p>
+<blockquote>
+<p>A cheap package that produces nothing is expensive. A package that gets your profile suspended is very expensive.</p>
+</blockquote>
+<h2 id="judge-value-one-customer-at-a-time">Judge value one customer at a time</h2>
+<p>The most useful way to think about Local SEO cost is against the value of a single new customer. Work out what one new patient, client or booking is worth to you over a year. Then ask how many extra customers a month would cover the fee. For many businesses the answer is only a handful, which is what makes Local SEO good value when it is done properly.</p>
+<p>For an example of the kind of change that is possible, the <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a> shows calls from a Business Profile before and after optimisation. Results vary with category and area, so treat it as an illustration rather than a forecast.</p>
+<h2 id="local-seo-or-full-website-seo">Local SEO or full website SEO?</h2>
+<p>Local SEO pricing covers what wins the Map Pack: your Google Business Profile, reviews, citations and the service and location pages behind them. Full website SEO, for an online shop or a business that sells nationwide, adds keyword research at scale, content production, technical work across many pages and link earning, so it usually costs more per month. If your customers come from a city or service area, Local SEO is the part to pay for first.</p>
+<h2 id="seo-cost-compared-with-google-ads">SEO cost compared with Google Ads</h2>
+<p>Google Ads charges per click and stops the day the budget stops. SEO costs more effort up front, but Map Pack and organic visibility keeps producing calls without a per-click charge. Many businesses use ads to fill the gap while SEO builds. I compare the two properly in <a href="/blog/local-seo-vs-google-ads-bangladesh">Local SEO vs Google Ads</a>.</p>
+<h2 id="questions-to-ask-before-you-pay">Questions to ask before you pay</h2>
+<ul>
+<li>What exactly happens in the first month?</li>
+<li>Which numbers will you report, and how can I see them myself?</li>
+<li>Who will own the Google Business Profile and any accounts you create?</li>
+<li>What happens if I stop after three months?</li>
+<li>Do you guarantee rankings? The right answer is no. Google states there is no way to pay for or request a better local ranking.</li>
+</ul>
+<h2 id="what-the-starting-package-covers">What the starting package covers</h2>
+<p>For transparency: the entry Google Business Profile package starts from $299 for a single location and covers the profile itself: a full audit, categories, services and products, description, attributes and hours, and photos and posts.</p>
+<p>Keyword and geo mapping, citation clean-up, review strategy, geo-grid tracking, monthly reporting and multiple locations are scoped separately, after the profile and competition have been looked at. Details are on the <a href="/google-business-profile-optimization">GBP optimization page</a>, and the wider scope is on the <a href="/local-seo-service">Local SEO service page</a>.</p>
+<blockquote>
+<p>Local SEO in Bangladesh costs what the work in front of you requires, and that depends on competition, coverage, your starting point and how much you want done for you. Judge any quote by the specific work it describes and the value of the customers it could bring, never by price alone. The final part of this series covers <a href="/blog/how-long-local-seo-takes-bangladesh">how long Local SEO takes to work</a>. For a specific figure, <a href="/book-strategy-call">book a strategy call</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>How much does Local SEO cost in Bangladesh?</h3>
+<p>It depends on competition, the number of locations or areas, the current state of your profile and website, and whether you want advice or full implementation. Packages here start from $299, with larger scopes quoted after an audit.</p>
+<h3>Is Local SEO a monthly cost?</h3>
+<p>Not always. Some businesses need only a one-time setup and clean-up. Businesses in competitive categories usually benefit from ongoing work, because rankings depend on a continuing flow of reviews, content and local signals, and competitors keep improving.</p>
+<h3>Can I pay for Local SEO once and stop?</h3>
+<p>You can stop at any time, and the foundation work keeps its value. What fades without ongoing effort is momentum: reviews slow down, details go out of date and competitors catch up and close the gap you built.</p>
+<h3>Why do some Local SEO packages cost so little?</h3>
+<p>Very cheap packages usually rely on automation: bulk directory submissions, template content and reports of rankings for untargeted terms. Some use tactics that risk suspending your profile. Price should reflect real work on your specific business.</p>
+<h3>What is included in a Local SEO package?</h3>
+<p>A proper package covers an audit with a baseline geo-grid scan, Google Business Profile optimisation, location and duplicate clean-up, citation work, website fixes such as service pages and LocalBusiness schema, a review routine, and reporting on calls and direction requests. Check that each item is named in the quote.</p>
+<h3>Does the Local SEO fee include Google Ads spend?</h3>
+<p>No. Local SEO fees pay for work on your profile, website and listings. Google Ads spend is a separate cost paid to Google per click, and Google states there is no way to pay for a better local ranking, so ad spend never buys a map pack position.</p>
+<h3>Is SEO cheaper than Google Ads?</h3>
+<p>Over time, usually yes per lead, because Map Pack and organic visibility keeps working without paying per click. Google Ads delivers traffic immediately but stops when the budget stops. Many businesses run ads short term while SEO builds.</p>
+<h3>Do SEO contracts in Bangladesh require a long lock-in?</h3>
+<p>Some do, but be wary of them. Long lock-ins protect the provider, not you. I work without lock-in contracts, so each month has to earn the next one. Whoever you choose, make sure you own the accounts if you leave.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Local SEO pricing in Bangladesh runs from cheap one-off profile setups to monthly retainers for multi-branch businesses. This guide explains what you are actually paying for, what moves the price, and how to judge whether a quote is fair.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-17 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-17 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-cost-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="seo-cost"><![CDATA[SEO Cost]]></category>
+    <category domain="post_tag" nicename="pricing"><![CDATA[Pricing]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="series-7"><![CDATA[series-7]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[How Much Does SEO Cost in Bangladesh? Local SEO Pricing]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[What SEO and Local SEO cost in Bangladesh: what you pay for, what changes the price, SEO vs Google Ads, and where packages start.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Local SEO for Home Service Businesses: What Actually Drives Calls</title>
+    <link>https://ratulroy.com/blog/local-seo-for-home-service-businesses</link>
+    <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-for-home-service-businesses</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO for home service businesses means getting plumbers, electricians, HVAC, roofing, cleaning and pest control companies into the Google Maps 3-pack and local results across their whole service area, for urgent and planned searches alike. The essentials are the right primary category, honest service-area pages, steady reviews and call tracking tied to booked jobs.</p>
+<p>Home service searches carry the highest intent in local search. Nobody googles “emergency plumber near me” out of curiosity. The businesses that win are not the ones with the prettiest sites; they are the ones structured to be found across an entire service area at the moment of need. For the full picture of how I approach trades, see <a href="/seo-for-home-services">SEO for home service companies</a>.</p>
+<h2 id="emergency-intent-behaves-differently">Emergency intent behaves differently</h2>
+<p>Urgent searches (“24-hour electrician”, “AC not cooling”, “blocked drain open now”) convert on the first result that answers instantly. Phone number visible, hours clear, service area obvious. A beautiful site that buries the number below the fold loses to a plainer competitor that does not.</p>
+<p>Check your own site on a phone, at arm’s length, on mobile data, and count the seconds before the number is tappable.</p>
+<h2 id="set-up-the-profile-as-a-service-area-business">Set up the profile as a service-area business</h2>
+<p>Most trades do not receive customers at their premises, so the Google Business Profile should be set up as a service-area business: address hidden, up to 20 real areas listed. Choose the primary category that matches your main revenue (for example “Plumber”, “Electrician”, “HVAC contractor” or “Roofing contractor”) and add others only for services you genuinely provide.</p>
+<p>Then fill the services list in customer language (AC servicing, gas refill, pipe leak repair, roof leak repair) and keep hours accurate, including whether you take emergency calls. My <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile checklist</a> covers every field.</p>
+<h2 id="service-area-pages-done-honestly">Service-area pages, done honestly</h2>
+<p>You cannot rank across a whole region from a single homepage. You need pages that genuinely address each area you serve, with real detail about the work you do there.</p>
+<p>The dishonest version of this is spinning fifty near-identical pages with the town name swapped. Google has recognised that pattern for years and treats it as a doorway. Build fewer pages with real substance instead.</p>
+<ul>
+<li>One page per area you actively serve, not per postcode you could reach</li>
+<li>Genuine local detail: jobs done, response times, landmarks you actually cover</li>
+<li>Distinct copy, not a template with the name swapped</li>
+<li>LocalBusiness schema with the right subtype (Plumber, Electrician, HVACBusiness, RoofingContractor) and <code>areaServed</code></li>
+</ul>
+<h2 id="trade-specific-relevance-beats-generic-seo">Trade-specific relevance beats generic SEO</h2>
+<p>An electrician and a roofer need different content architectures because their customers search differently. Roofing is seasonal, storm-driven and high-consideration. Electrical splits between emergencies and planned work, which is why <a href="/industries/local-seo-for-electricians">local SEO for electricians</a> needs separate pages for emergency repairs and for projects like panel upgrades. HVAC swings between installation, servicing and summer breakdowns.</p>
+<p>That is why I build the trade pages separately rather than as one generic service. See how it plays out for <a href="/industries/hvac-seo">HVAC companies</a>, <a href="/industries/plumbing-seo">plumbing businesses</a> and <a href="/industries/roofing-seo">roofing contractors</a>.</p>
+<h2 id="track-calls-not-rankings">Track calls, not rankings</h2>
+<p>Position is a proxy. Booked jobs are the outcome. Use call tracking so you can tell which pages and which areas actually produce revenue, then invest where it is working. Pair it with the calls and direction requests in your GBP Performance report and a geo-grid scan of each service area.</p>
+<p>Plenty of businesses rank well in places that never convert, and poorly in the two neighbourhoods that pay the bills. On one home service account, mapping that by area led to <a href="/case-studies/map-pack-service-areas">+38% Map Pack visibility and +27% more direction requests</a>.</p>
+<h2 id="seasonality-is-a-content-calendar">Seasonality is a content calendar</h2>
+<p>Every trade has a demand curve. AC repair and servicing spike before summer, roofing after storms and the monsoon, drainage in heavy rain, pest control in the wet season. Rankings take weeks to build, so content published when demand arrives is already too late.</p>
+<p>Work backwards. Publish and strengthen seasonal pages six to eight weeks ahead, so they are ranking when the searches start.</p>
+<ul>
+<li>Map your demand curve from last year’s job records, not guesswork</li>
+<li>Strengthen seasonal pages before the season, not during it</li>
+<li>Keep them live year round; rebuilding rank every season is wasted effort</li>
+</ul>
+<h2 id="reviews-that-mention-the-job-and-place">Reviews that mention the job and place</h2>
+<p>A review saying “great service” helps less than one saying “they fixed our AC in Mirpur the same day.” The second contains the service and the location in the customer’s own words, which is exactly the association you want reinforced.</p>
+<p>You cannot script reviews and should not try, and offering discounts for them breaks Google’s policies. But asking a specific question (what did we do, and where?) tends to produce specific answers.</p>
+<h2 id="response-speed-multiplies-conversions">Response speed multiplies conversions</h2>
+<p>Ranking first is worth little if the phone rings out. For urgent trades, the business that answers wins the job regardless of who ranked above them.</p>
+<p>Before spending on visibility, check what happens to a call at 7pm on a Saturday. Fixing that often returns more than any ranking gain.</p>
+<p>Get the profile, service-area structure and call tracking right and home services compounds faster than almost any other local vertical. The mechanics behind it are in <a href="/blog/local-seo-helps-businesses-rank-google-maps">how Local SEO helps businesses rank on Google Maps</a>. If you want it done for you, see my <a href="/local-seo-service">Local SEO service for small businesses</a> or <a href="/book-strategy-call">book a call</a> to map your service area.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is the best way for a home service business to get more calls from Google?</h3>
+<p>Rank in the Google Maps 3-pack for your main services across the areas you serve, then make calling effortless. That means the right primary category, a hidden address with real service areas, steady reviews, one page per core service and a phone number that is answered.</p>
+<h3>Should a plumber or electrician hide their address on Google Business Profile?</h3>
+<p>Yes, if customers do not visit your premises. Google expects service-area businesses to hide the street address and list up to 20 areas served. Showing a home address as a shopfront, or using a virtual office, risks suspension.</p>
+<h3>Do home service businesses need a separate page for each area?</h3>
+<p>Only for areas you genuinely serve and want more work from. Each page needs real local detail: jobs completed there, response times, the neighbourhoods covered. Fifty near-identical pages with the town name swapped are treated as doorway pages and can hold the whole site back.</p>
+<h3>Which schema type should a home service business use?</h3>
+<p>Use the most specific LocalBusiness subtype that fits, such as Plumber, Electrician, HVACBusiness or RoofingContractor, with name, address or areaServed, telephone, openingHoursSpecification and sameAs links to your profiles. Add Service markup on individual service pages.</p>
+<h3>How long does Local SEO take for a home service company?</h3>
+<p>Expect measurable movement in about 3 to 6 months. Quick fixes like a corrected category or a merged duplicate can help within weeks, but winning competitive terms such as "AC repair near me" across a whole city takes steady review growth and content over several months.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Home service searches carry the highest intent in local search. The businesses that win are the ones structured to be found across an entire service area at the moment of need.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-07-04 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-07-04 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-for-home-service-businesses]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="home-services"><![CDATA[Home Services]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="service-area"><![CDATA[Service Area]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO for Home Service Businesses]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[How plumbers, electricians, HVAC and roofing companies win local search: service-area pages, emergency intent, GBP setup and call tracking for booked jobs.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>How Local SEO Works and Helps Businesses Rank Higher on Google Maps</title>
+    <link>https://ratulroy.com/blog/local-seo-helps-businesses-rank-google-maps</link>
+    <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-helps-businesses-rank-google-maps</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO helps a business rank higher on Google Maps by strengthening the three things Google uses to order local results: relevance, distance and prominence. In practice that means a complete Google Business Profile, a website that confirms what the profile claims, consistent citations and a steady flow of genuine reviews.</p>
+<p>If you run a service business, Google Maps is usually the largest source of high-intent calls and visits. Yet most owners only ever see the top three results (the Map Pack) and never understand why their competitors keep showing up there instead of them. This guide covers how Local SEO works, what Google measures, and the system I use with clients to climb the Map Pack and stay there. If you want the wider background first, start with the <a href="/blog/local-seo-bangladesh-guide">complete guide to Local SEO in Bangladesh</a>.</p>
+<h2 id="what-local-seo-actually-is">What Local SEO actually is</h2>
+<p>Local SEO is the practice of optimizing your Google Business Profile, your website and your off-site signals so that Google treats your business as the most relevant, most trustworthy and most conveniently located option for searches in a specific area. That includes “near me” searches, “in [city]” searches like “dentist in Dhanmondi”, and implicit ones where Google simply knows the searcher wants something close.</p>
+<p>Unlike traditional SEO, which competes on a national or global keyword, Local SEO competes inside a radius. Two businesses with identical websites can rank completely differently three blocks apart, because proximity, category match and engagement change at every point on the map.</p>
+<h2 id="what-are-googles-three-local-ranking-factors">What are Google’s three local ranking factors?</h2>
+<p>Google’s own Business Profile help documentation names three factors that decide Local Pack and Maps rankings. Every tactic in this article feeds one of them:</p>
+<ul>
+<li><strong>Relevance:</strong> how well your profile and website match what the searcher typed. Driven by primary category, additional categories, services, on-page content and reviews that mention the service.</li>
+<li><strong>Distance:</strong> how far your business location is from the searcher, or from the place named in the search. You cannot fake this, but you can win nearby areas with stronger relevance and prominence.</li>
+<li><strong>Prominence:</strong> how well known and trusted Google thinks you are. Built from reviews and ratings, citations, backlinks, press and brand mentions, and how people interact with your listing.</li>
+</ul>
+<h2 id="google-business-profile-the-foundation">Google Business Profile: the foundation</h2>
+<p>Your Google Business Profile (formerly Google My Business) is the most important asset in Local SEO. It is the listing Google ranks; your website supports it. A weak profile cannot be rescued by a great website, but a strong profile can rank even when the website is mediocre.</p>
+<p>The non-negotiables I check on every audit:</p>
+<ul>
+<li>Primary category set to the most specific accurate option. “Dentist” or “Air conditioning repair service” beats a broad label like “Contractor” when it describes the business.</li>
+<li>Additional categories added only where they describe real services.</li>
+<li>A complete services list, each with a description written in the words customers use.</li>
+<li>NAP (name, address, phone) that exactly matches the website and major citations: no abbreviations, no stuffed keywords in the name.</li>
+<li>Real photos added regularly: job sites, team, storefront, vehicles, before and after.</li>
+<li>Google Posts published every 7 to 14 days with a clear call to action.</li>
+<li>Regular and special hours kept accurate, so you show for “open now” searches.</li>
+</ul>
+<p>The full field-by-field version lives in my <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile optimization checklist</a>.</p>
+<h2 id="reviews-the-prominence-multiplier">Reviews: the prominence multiplier</h2>
+<p>Reviews are the fastest lever you have for prominence. Google looks at quantity, rating, recency and what reviews say. A steady stream of recent reviews that naturally mention the job and the area outperforms a one-time burst of generic 5-stars.</p>
+<p>Build a simple system: a short follow-up message after every completed job with a direct review link or QR code, then reply to every review, good or bad, within 48 hours. Mention the job naturally in replies; don’t stuff keywords into them. Never offer discounts or gifts for reviews and never filter who gets asked. Google’s policies prohibit both.</p>
+<h2 id="citations-and-nap-consistency">Citations and NAP consistency</h2>
+<p>Citations are mentions of your business on directories, industry sites and data aggregators. They no longer move rankings the way they did a decade ago, but inconsistent NAP across them still erodes trust. The goal is not “get 200 citations”; it is “make sure the ones that exist are clean and identical.”</p>
+<p>Prioritise the platforms that matter: Apple Business Connect (Apple Maps), Bing Places for Business, Facebook, and your top 3 to 5 industry or country directories. Fix duplicates first, then expand. My <a href="/blog/local-citations-nap-consistency-guide">guide to local citations and NAP consistency</a> shows how to audit them without paid tools.</p>
+<h2 id="website-seo-that-supports-the-map-pack">Website SEO that supports the Map Pack</h2>
+<p>Your website is where Google checks the claims your profile is making. If your profile says you are a roofing contractor in Chattogram, your site needs to prove it with a real service page, a clear location signal and real content depth.</p>
+<p>The pages that matter most for local rankings:</p>
+<ul>
+<li>A dedicated service page for every main service, not a single “Services” page listing them all.</li>
+<li>A location or service-area page for each city or neighbourhood you target, with unique content, not spun copy.</li>
+<li>LocalBusiness schema (or the right subtype, such as Dentist or Plumber) on the homepage and Service schema on service pages, with <code>sameAs</code> pointing to your profiles.</li>
+<li>An embedded Google Map and your full NAP on the contact page and footer.</li>
+<li>Internal links from blog content and service pages to the relevant location page, using natural anchor text.</li>
+<li>Fast, mobile-friendly pages. Most local searches happen on a phone, often on mobile data.</li>
+</ul>
+<h2 id="engagement-signals-the-modern-tiebreaker">Engagement signals: the modern tiebreaker</h2>
+<p>Once your profile and site are sound, what people do with your listing starts to matter. Calls, website clicks, direction requests, photo views and bookings all show Google that searchers find you useful. Two listings with similar fundamentals often diverge on engagement.</p>
+<p>Practical lever: every photo, post and service description should be written to earn the click or the call. Boring profiles get ignored, and ignored profiles slide down the pack.</p>
+<h2 id="where-it-breaks-down-in-bangladesh">Where it breaks down in Bangladesh</h2>
+<ul>
+<li>Verification stalls, and the owner creates a second listing instead of resolving the first</li>
+<li>Staff or agencies create listings under their own Google accounts, and access is lost when they leave</li>
+<li>The business name is padded with keywords, triggering a suspension</li>
+<li>The address is written differently on every platform</li>
+<li>Nobody owns the profile day to day, so reviews go unanswered and hours go stale</li>
+</ul>
+<p>Ownership is worth stressing: make sure the business owner, not a staff member or agency, is the primary owner of the profile. The <a href="/blog/google-business-profile-optimization-checklist">GBP optimization checklist</a> covers the full setup.</p>
+<h2 id="how-do-you-track-google-maps-rankings-properly">How do you track Google Maps rankings properly?</h2>
+<p>Because distance is part of the calculation, there is no single ranking for your business: checking from your office shows only the best case. Average position in a tool like Ahrefs tells you little about local performance, because rankings change at every point on the map, sometimes street to street. Use a geo-grid tracker (Local Falcon, BrightLocal or GMB Crush) to map visibility across a 7x7 or 9x9 grid centred on your service area. On one home service account, that grid view is how we lifted <a href="/case-studies/map-pack-service-areas">Map Pack visibility by +38% and got 5x more areas into the Top 3</a>.</p>
+<p>Then watch the GBP Performance metrics that correlate with revenue: calls, direction requests, website clicks and bookings. Rankings are a leading indicator; these are the result. For one client, profile work produced <a href="/case-studies/gbp-calls-growth">461 calls from the Business Profile between April and August 2024</a>.</p>
+<h2 id="the-90-day-local-seo-system">The 90-day Local SEO system</h2>
+<ul>
+<li><strong>Days 1–15:</strong> full audit of the profile, citations, on-page SEO, schema, reviews and competitors, plus a baseline geo-grid scan.</li>
+<li><strong>Days 16–45:</strong> foundation fixes: category and services rewrite, NAP cleanup, schema deployment, service and location page rebuilds.</li>
+<li><strong>Days 46–75:</strong> prominence push: a review request routine, weekly Google Posts, regular real photos, and targeted local link building.</li>
+<li><strong>Days 76–90:</strong> measure, double down on what moved the grid, and lock in the weekly routine.</li>
+</ul>
+<p>Ninety days builds the foundation; how far rankings move in that window depends on competition, which I cover in <a href="/blog/how-long-local-seo-takes-bangladesh">how long Local SEO takes to work</a>.</p>
+<p>Ranking in the Map Pack is not a trick or a one-time optimization. It is a system. Get the foundation right, run the prominence loop consistently, and measure with a geo-grid instead of vanity keywords. If you would rather have it run for you, see how my <a href="/local-seo-service">Local SEO service</a> and <a href="/google-business-profile-optimization">Google Business Profile optimization</a> work, or <a href="/book-strategy-call">book a strategy call</a>.</p>
+<p>Next in the Local SEO in Bangladesh series: <a href="/blog/why-local-seo-important-bangladesh">Why Local SEO Is Important for Businesses in Bangladesh</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>How long does it take to rank on Google Maps?</h3>
+<p>Most businesses see measurable movement in 3 to 6 months. Fixing a wrong category or a duplicate listing can show results within weeks, while competitive categories in busy areas take longer because prominence (reviews, links, mentions) builds gradually. Your starting point matters more than any fixed timeline.</p>
+<h3>Can I pay Google to rank higher on Google Maps?</h3>
+<p>No. Google states there is no way to pay for or request a better local ranking. Ads can appear above the Map Pack, but they are labelled as sponsored and do not affect organic Maps positions. Organic visibility comes from relevance, distance and prominence.</p>
+<h3>Do I need a website to rank on Google Maps?</h3>
+<p>You can appear on Maps without one, but a website makes ranking much easier. Google reads the linked site to confirm what your profile claims. Dedicated service pages, area pages and LocalBusiness schema give it far more evidence than a profile alone.</p>
+<h3>Why do my Google Maps rankings change from street to street?</h3>
+<p>Distance from the searcher is one of Google's three local ranking factors, so results are recalculated for every location. You can rank first near your office and not appear two kilometres away. A geo-grid scan shows that pattern across your whole service area.</p>
+<h3>What is the difference between the Map Pack and Google Maps?</h3>
+<p>The Map Pack (or 3-pack) is the block of three local listings shown inside normal Google search results. Google Maps is the separate app and website, where more listings appear as the user scrolls. Both draw on the same Google Business Profile data and ranking factors.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[If you run a service business, Google Maps is usually the largest source of high-intent calls and visits. This guide breaks down how Local SEO works, what Google measures, and the repeatable system I use with clients to climb the Map Pack and stay there.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-05-12 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-05-12 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-helps-businesses-rank-google-maps]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <category domain="post_tag" nicename="gbp-optimization"><![CDATA[GBP Optimization]]></category>
+    <category domain="post_tag" nicename="map-pack"><![CDATA[Map Pack]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="series-3"><![CDATA[series-3]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[How Local SEO Works: Rank Higher on Google Maps]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[How Local SEO works and moves a business into the Google Maps 3-pack: relevance, distance and prominence, Bangladesh pitfalls, and a 90-day system.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Local SEO vs Google Ads: Which Is Better for Bangladesh Businesses?</title>
+    <link>https://ratulroy.com/blog/local-seo-vs-google-ads-bangladesh</link>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-vs-google-ads-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Google Ads is better when you need customers immediately, are testing demand or have a short-term offer. Local SEO is better for steady, long-term customer flow at a lower cost per customer, because map pack calls have no per-click charge. For most local businesses in Bangladesh, Local SEO is the foundation and ads go selectively on top.</p>
+<p>When a business here wants more customers from Google, it faces a choice: pay for ads and appear tomorrow, or invest in Local SEO and appear without paying per click, but later. Both have their place. This guide, part 6 of the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh series</a>, compares them on the things that actually matter to a business owner: cost, speed, trust, control, and what you are left with when you stop.</p>
+<h2 id="how-google-ads-works-locally">How Google Ads works locally</h2>
+<p>With Google Ads you bid to appear in the sponsored positions for chosen searches, usually above the map pack. You pay each time someone clicks. You can target by location, time of day and device, link your Business Profile as a location asset so ads show your address and distance, and switch campaigns on the same day. Results are fast and measurable, and they stop the moment the budget does.</p>
+<p>Google also offers a pay-per-lead format called Local Services Ads in some countries, but it is not available in Bangladesh, so for local businesses here paid search means standard search ads.</p>
+<h2 id="how-local-seo-compares">How Local SEO compares</h2>
+<p>Local SEO earns a position in the map pack and the ordinary results without paying per click. You invest in your Google Business Profile, reviews, website and local reputation, either with your own time or by hiring help. Results build over weeks and months and, once established, continue without a per-click cost. The mechanics are covered in <a href="/blog/local-seo-helps-businesses-rank-google-maps">how Local SEO works and ranks you on Google Maps</a>, and the wider SEO comparison in part 5, <a href="/blog/local-seo-vs-traditional-seo">Local SEO vs Traditional SEO</a>.</p>
+<h2 id="cost-renting-versus-owning">Cost: renting versus owning</h2>
+<p>Ads are like renting a shop on a busy street: you are visible for as long as you keep paying. Local SEO is closer to buying one: slower and more effort up front, but the asset remains yours. Every click on an ad costs money; every call from your map listing costs nothing extra.</p>
+<p>That does not make Local SEO free. It costs time or fees. But its cost per customer generally falls over time as rankings and reviews accumulate, while the cost per customer from ads tends to stay flat or rise as more competitors bid on the same searches.</p>
+<h2 id="speed">Speed</h2>
+<p>Ads win on speed without question. A campaign can be running within a day. Local SEO usually shows early movement within weeks from profile fixes, with substantial results in three to six months depending on competition. See <a href="/blog/how-long-local-seo-takes-bangladesh">How Long Does Local SEO Take to Work in Bangladesh?</a> for the full timeline.</p>
+<h2 id="trust-and-attention">Trust and attention</h2>
+<p>Many searchers recognise sponsored results, and some deliberately scroll past them to the map and the reviews. A map listing with strong reviews carries a credibility an ad cannot buy, because customers know it was earned. That said, ads appear first, and for urgent needs some people simply call the first number they see. Google also states that there is no way to pay for a better local ranking, so ad spend never buys you a place in the map pack itself.</p>
+<p>The map pack also shows more at a glance: star rating, number of reviews, opening hours, distance and photos. An ad shows a headline and a line of text. For a customer choosing between local providers, that difference matters. In the <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a>, an optimised profile produced 461 calls in five months without a per-click cost.</p>
+<h2 id="bangladesh-specific-considerations">Bangladesh-specific considerations</h2>
+<ul>
+<li><strong>Payment:</strong> Google Ads needs a payment method Google accepts, usually a credit or debit card, and some local cards need international transactions enabled first</li>
+<li>Facebook ads are more familiar to many business owners here, but they interrupt people scrolling rather than answering people searching</li>
+<li>In smaller cities and towns, local competition on Maps is often light, so Local SEO can pay back quickly</li>
+<li>In crowded Dhaka categories, click costs rise with competition, which makes an organic position more valuable</li>
+<li>Local Services Ads is not offered here, so the paid alternative is standard pay-per-click</li>
+</ul>
+<h2 id="when-google-ads-is-better">When Google Ads is better</h2>
+<ul>
+<li>You have just opened and need customers before organic rankings build</li>
+<li>You are running a time-limited offer, seasonal service or event</li>
+<li>You want to test whether a new service or area has demand before investing further</li>
+<li>Your category is so competitive that the map pack will take many months to reach</li>
+</ul>
+<h2 id="when-local-seo-is-better">When Local SEO is better</h2>
+<ul>
+<li>You want steady customer flow without a monthly ad budget that never ends</li>
+<li>Customers in your category compare reviews before choosing</li>
+<li>Your profile and website have obvious gaps that are cheap to fix</li>
+<li>You serve a defined area and want to be the default name in it</li>
+<li>You have tried ads and found the cost per customer too high</li>
+</ul>
+<h2 id="using-both-together">Using both together</h2>
+<p>The two work well in combination. Ads can cover the searches and areas where your organic visibility is still weak while Local SEO builds. Ads data shows which searches actually convert, which guides the Local SEO work. And as the map listing strengthens, you can reduce ad spend in the areas where you already rank, rather than paying for clicks you would have received anyway. If you would rather have the organic side handled while you run the ads, see the <a href="/local-seo-service">Local SEO service</a>.</p>
+<h2 id="mistakes-to-avoid">Mistakes to avoid</h2>
+<ul>
+<li>Running ads to a profile with poor reviews, which wastes the click</li>
+<li>Sending ad traffic to a slow website, or a Facebook page with no clear way to call</li>
+<li>Stopping Local SEO work once ads start producing, then facing a cliff when the budget ends</li>
+<li>Judging Local SEO after one month against ads that were bought to deliver instantly</li>
+</ul>
+<blockquote>
+<p>Google Ads buys attention by the click; Local SEO builds a position you keep. For most businesses in Bangladesh, the sensible plan is to build the Local SEO foundation, then use ads tactically for speed, testing and gaps. Next in the series: <a href="/blog/local-seo-cost-bangladesh">How Much Does Local SEO Cost in Bangladesh?</a> To see which mix suits your business, <a href="/book-strategy-call">book a strategy call</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>Is Local SEO cheaper than Google Ads?</h3>
+<p>Over time, usually yes. Local SEO has an up-front cost in time or fees but no per-click charge, so the cost per customer tends to fall as results build. Ads charge for every click, indefinitely.</p>
+<h3>Can I run Google Ads from Bangladesh?</h3>
+<p>Yes. You need a Google Ads account and a payment method Google accepts, usually a credit or debit card. Some local cards need international transactions enabled before they work, so check with your bank before launching a campaign around a deadline.</p>
+<h3>Do Google Ads improve my Google Maps ranking?</h3>
+<p>No. Paid ads and organic local rankings are separate systems. Ads can bring more people to your business, but paying for ads does not raise your map pack position. Google states plainly that there is no way to pay for a better local ranking.</p>
+<h3>Should a new business start with ads or Local SEO?</h3>
+<p>Often both. Use ads for immediate customers while the Google Business Profile is set up, verified and starts collecting reviews, then shift budget toward Local SEO as organic visibility builds and the map pack starts producing calls on its own.</p>
+<h3>Can I stop Google Ads once my Local SEO is working?</h3>
+<p>Often you can reduce them. Once your Business Profile holds a Top 3 map pack position in an area, paying for clicks on the same searches there adds less. Many businesses keep a smaller budget for areas, services or seasons where organic visibility is still weak.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Pay for ads and appear tomorrow, or invest in Local SEO and appear without paying per click, but later. This guide compares them on cost, speed, trust, control, and what you are left with when you stop.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-16 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-16 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-vs-google-ads-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="google-ads"><![CDATA[Google Ads]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="comparison"><![CDATA[Comparison]]></category>
+    <category domain="post_tag" nicename="series-6"><![CDATA[series-6]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO vs Google Ads for Bangladesh Businesses]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO or Google Ads? Compare cost, speed, trust and long-term value for businesses in Bangladesh, and see when each one makes sense, or both together.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Local SEO vs Traditional SEO: What's the Difference?</title>
+    <link>https://ratulroy.com/blog/local-seo-vs-traditional-seo</link>
+    <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/local-seo-vs-traditional-seo</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO ranks a business, mainly through its Google Business Profile, in the map pack and on Google Maps for searches tied to a place, such as ‘dentist in Uttara’ or ‘AC repair near me’. Traditional SEO ranks web pages in the ordinary results for searches with no location attached. Most local businesses in Bangladesh need Local SEO first.</p>
+<p>Business owners often hear ‘SEO’ and ‘Local SEO’ used as if they were the same service. They overlap, but they rank different things, in different places, for different kinds of search. Choosing the wrong one wastes months. This guide, part 5 of the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh series</a>, sets out the differences plainly and helps you decide which your business needs first.</p>
+<h2 id="the-core-difference">The core difference</h2>
+<p>Traditional SEO, sometimes called organic or national SEO, is about ranking web pages in the ordinary list of search results for searches with no particular location attached: ‘how to choose a laptop’, ‘best accounting software’, ‘IELTS preparation tips’. Local SEO is about ranking a business, mainly through its Google Business Profile, for searches where the location matters: ‘laptop repair Elephant Road’, ‘accountant in Motijheel’, ‘IELTS coaching near me’.</p>
+<blockquote>
+<p>Put simply, traditional SEO competes to be the best page on a subject. Local SEO competes to be the best business in a place.</p>
+</blockquote>
+<h2 id="where-the-results-appear">Where the results appear</h2>
+<ul>
+<li><strong>Local SEO:</strong> the map pack of three businesses, the full local finder list, and Google Maps itself</li>
+<li><strong>Traditional SEO:</strong> the ordinary blue-link results, and increasingly the sources cited in AI Overviews</li>
+<li><strong>Both:</strong> ordinary results for local searches, where your website competes against other local sites and directories</li>
+</ul>
+<p>For a search like ‘dentist in Uttara’, the map pack usually appears above the ordinary results, which is why local businesses get most of their calls from Local SEO rather than from their website’s organic position.</p>
+<h2 id="what-each-one-ranks">What each one ranks</h2>
+<p>Traditional SEO ranks pages. Each page competes on its own merits for the searches it targets, and a strong site can have hundreds of pages ranking for different topics.</p>
+<p>Local SEO ranks listings. Your Google Business Profile is one entity, tied to one location, competing for every local search in your category. The website supports it but is not what appears in the map pack.</p>
+<h2 id="ranking-signals-compared">Ranking signals compared</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Signal</th><th>Local SEO</th><th>Traditional SEO</th></tr></thead><tbody><tr><td>Location</td><td>Central (distance from the searcher)</td><td>Largely irrelevant</td></tr><tr><td>Google Business Profile</td><td>The main asset</td><td>Not a factor</td></tr><tr><td>Reviews</td><td>A major signal</td><td>Minor</td></tr><tr><td>Citations and NAP consistency</td><td>Important</td><td>Barely relevant</td></tr><tr><td>Content depth</td><td>Important</td><td>The main factor</td></tr><tr><td>Backlinks</td><td>Important, with local relevance counting for more</td><td>Important</td></tr><tr><td>Technical health</td><td>Important; a broken site hurts</td><td>Important; a broken site hurts</td></tr><tr><td>Structured data</td><td>LocalBusiness schema and subtypes such as Dentist</td><td>Article, Product and FAQPage schema</td></tr><tr><td>Main measurement</td><td>Calls and direction requests in GBP Performance</td><td>Clicks and impressions in Google Search Console</td></tr></tbody></table>
+<h2 id="keywords-with-and-without-a-place">Keywords: with and without a place</h2>
+<p>Local keywords carry a place, either stated (‘in Chattogram’, ‘Dhanmondi’) or implied (‘near me’, or simply ‘pharmacy’ typed on a phone, which Google often treats as local). Traditional keywords do not. Volumes differ enormously as a result. A local keyword might be searched a few dozen times a month, but almost every one of those searches is a potential customer nearby. A national keyword may be searched thousands of times by people who will never buy from you.</p>
+<p>This is also why keyword research tools often undersell local opportunity. The low numbers they show for area-specific searches hide very high purchase intent.</p>
+<h2 id="how-success-is-measured">How success is measured</h2>
+<ul>
+<li><strong>Local SEO:</strong> calls, direction requests, website clicks from the profile, and visibility across a geo-grid of your area</li>
+<li><strong>Traditional SEO:</strong> organic traffic, rankings for target pages, and conversions from that traffic</li>
+</ul>
+<p>Mixing these up leads to bad decisions. A local business judged only on website traffic may look like it is failing while the profile quietly produces most of its calls.</p>
+<h2 id="timelines-and-cost">Timelines and cost</h2>
+<p>Local SEO tends to show movement sooner, because the competition is limited to an area and profile fixes take effect relatively quickly. Traditional SEO is usually slower, because you compete nationally or globally and content needs time to earn links and trust. The <a href="/case-studies/data-driven-organic-growth">data-driven organic growth case study</a> shows a realistic pace: a near-invisible site taken from almost zero to 3.93K clicks and 47.4K impressions over six months.</p>
+<p>Cost follows scope in both cases. The local side is covered in detail in <a href="/blog/local-seo-cost-bangladesh">How Much Does Local SEO Cost in Bangladesh?</a> and <a href="/blog/how-long-local-seo-takes-bangladesh">How Long Does Local SEO Take to Work in Bangladesh?</a></p>
+<h2 id="which-one-does-your-business-need">Which one does your business need?</h2>
+<ul>
+<li><strong>Clinics, restaurants, salons, repair services, showrooms and coaching centres:</strong> Local SEO first</li>
+<li><strong>Home service businesses that visit customers:</strong> Local SEO first, set up as a service-area business</li>
+<li><strong>E-commerce shops delivering nationwide across Dhaka, Chattogram and beyond:</strong> traditional SEO first</li>
+<li><strong>Software, IT and export businesses selling abroad:</strong> traditional SEO first</li>
+<li><strong>Businesses with branches in several cities:</strong> Local SEO for each branch, plus traditional SEO for the brand</li>
+<li><strong>Professional firms such as lawyers and accountants:</strong> both, with Local SEO usually paying back sooner</li>
+</ul>
+<h2 id="why-most-need-both">Why most need both</h2>
+<p>Part 4, <a href="/blog/why-local-seo-important-bangladesh">Why Local SEO Is Important</a>, covers the business case for the local side. The two disciplines support each other. Google has said that a business’s position in ordinary web results contributes to its local prominence, so a stronger website helps the profile. And content written for traditional SEO, answering customers’ questions, brings in people earlier in their decision who later search locally.</p>
+<p>The right order for most local businesses is Local SEO first, because it produces calls soonest, followed by website content and technical work that strengthen both. The <a href="/local-seo-service">Local SEO service</a> covers the local side, and the <a href="/technical-seo">technical SEO service</a> covers the website foundations: crawling, indexing and Core Web Vitals.</p>
+<h2 id="a-quick-decision-checklist">A quick decision checklist</h2>
+<ul>
+<li>Do customers come to you, or you to them, within a particular area? <strong>Local SEO.</strong></li>
+<li>Do you sell to anyone in the country or the world, with no local element? <strong>Traditional SEO.</strong></li>
+<li>Do people search for your service with a place name or ‘near me’? <strong>Local SEO.</strong></li>
+<li>Do people research your topic before buying, without a place in mind? <strong>Traditional SEO content.</strong></li>
+<li>Answered yes to both groups? <strong>You need both, local first.</strong></li>
+</ul>
+<blockquote>
+<p>Local SEO and traditional SEO are related disciplines aimed at different targets: one ranks a business in a place, the other ranks pages on a subject. For most businesses serving customers in Bangladesh, Local SEO comes first because it reaches the people ready to buy nearby. Next in the series: <a href="/blog/local-seo-vs-google-ads-bangladesh">Local SEO vs Google Ads</a>. To find out which your business needs, <a href="/book-strategy-call">book a strategy call</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>Is Local SEO part of SEO?</h3>
+<p>Yes. Local SEO is a branch of SEO focused on searches with local intent. It shares techniques such as content, links and technical health, and adds its own, such as Google Business Profile optimisation, reviews and citation consistency.</p>
+<h3>Can my business rank locally and nationally at the same time?</h3>
+<p>Yes. Your Business Profile competes in local results while your website's pages compete in ordinary results. Strong pages help the profile, and a strong profile brings brand searches that help the site. Most local businesses end up running both side by side.</p>
+<h3>Which is cheaper, Local SEO or traditional SEO?</h3>
+<p>Local SEO is usually cheaper for a single-location business, because the competition is limited to an area. Traditional SEO for competitive national terms generally needs more content and link building over a longer period, so the monthly effort and total cost are usually higher.</p>
+<h3>Do I need a website for traditional SEO?</h3>
+<p>Yes. Traditional SEO ranks web pages, so there is nothing to rank without one. Local SEO can work partly without a website, though a site makes it considerably stronger because it confirms your services and location.</p>
+<h3>Are 'near me' searches part of Local SEO or traditional SEO?</h3>
+<p>They are Local SEO. A search like 'dentist near me' or 'laptop repair near me' tells Google to use the searcher's location, so it shows the map pack and ranks Business Profiles by relevance, distance and prominence. Traditional SEO only affects the website results below the map.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[SEO and Local SEO overlap, but they rank different things, in different places, for different kinds of search. This guide sets out the differences plainly and helps you decide which your business needs first.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-15 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-15 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[local-seo-vs-traditional-seo]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="seo"><![CDATA[SEO]]></category>
+    <category domain="post_tag" nicename="comparison"><![CDATA[Comparison]]></category>
+    <category domain="post_tag" nicename="series-5"><![CDATA[series-5]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO vs Traditional SEO: The Real Difference]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Local SEO and traditional SEO rank different things, in different places, on different signals. See how they compare and which one your business needs first.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>SEO Specialist vs SEO Agency in Bangladesh: Which Fits Your Business?</title>
+    <link>https://ratulroy.com/blog/seo-specialist-vs-agency-bangladesh</link>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/seo-specialist-vs-agency-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>An independent SEO specialist usually suits a local service business that needs Google Maps and search to make the phone ring: you work directly with the person doing the work, and they focus on one discipline. An agency suits businesses needing several marketing channels at once, many locations, or guaranteed cover when one person is away.</p>
+<p>This comparison is usually written by one side to attack the other. I run as an independent specialist, so read this knowing that, and note where I say an agency is the better choice, because sometimes it plainly is.</p>
+<h2 id="specialist-vs-agency-at-a-glance">Specialist vs agency at a glance</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Independent specialist</th><th>SEO agency</th></tr></thead><tbody><tr><td>Who does the work</td><td>The person you hired</td><td>Often a team member assigned after the sale</td></tr><tr><td>Focus</td><td>One discipline, such as Local SEO</td><td>Several services under one roof</td></tr><tr><td>Communication</td><td>Direct</td><td>Usually through an account manager</td></tr><tr><td>Cover for leave or illness</td><td>Limited</td><td>Built in</td></tr><tr><td>Best fit</td><td>Local service businesses, one or a few areas</td><td>Multi-channel or multi-location operations</td></tr></tbody></table>
+<h2 id="where-an-agency-genuinely-wins">Where an agency genuinely wins</h2>
+<p>If you need SEO, Google Ads, social media, design and content produced simultaneously, an agency coordinates that under one roof. Managing five freelancers yourself is a job.</p>
+<p>Agencies also survive holidays and illness. One person cannot. If your business would be damaged by two weeks of no activity, that is a real risk to weigh.</p>
+<ul>
+<li>Multiple channels needed at once</li>
+<li>Large or multi-location operations</li>
+<li>Internal teams needing formal reporting structures</li>
+<li>Continuity matters more than specialisation</li>
+</ul>
+<h2 id="where-a-specialist-wins">Where a specialist wins</h2>
+<p>You talk to the person doing the work. Nothing is translated through an account manager into a brief for a junior executor, and nothing is lost in that translation.</p>
+<p>The other advantage is focus. Someone who only does Local SEO (Google Business Profile, Map Pack rankings, service-area pages, reviews, citations) sees the same failure patterns repeatedly across accounts. That pattern recognition is difficult to buy from a generalist team spread across six disciplines. If you want to see what that daily work involves, read <a href="/blog/what-does-seo-specialist-do">what an SEO specialist actually does</a>.</p>
+<h2 id="the-junior-executor-problem">The junior-executor problem</h2>
+<p>This is the specific risk with agencies, and it is worth naming plainly. The person who sells you the work is frequently not the person who does it. You are impressed in the meeting, then the account is handed to whoever has capacity.</p>
+<p>It is not always the case, and good agencies avoid it. But it is worth asking directly: who will actually be working on my account, and how many other accounts do they hold?</p>
+<h2 id="is-a-specialist-cheaper-than-an-agency">Is a specialist cheaper than an agency?</h2>
+<p>Specialists are often assumed to be cheaper. Sometimes true, sometimes not. An experienced independent may charge more per hour than an agency junior, and be better value because fewer hours are wasted.</p>
+<p>Compare what is actually delivered per month rather than headline rates. Ask both what specifically happens in month one. My <a href="/blog/local-seo-cost-bangladesh">honest breakdown of SEO cost in Bangladesh</a> covers what moves the price.</p>
+<h2 id="questions-that-work-on-both">Questions that work on both</h2>
+<p>The same questions expose weak providers regardless of structure. Who does the work. What gets measured. What happens if I leave in ninety days. Who owns the accounts. Show me a result with the source visible, like the ones on my <a href="/case-studies">case studies page</a>.</p>
+<p>A strong answer to all five matters more than whether the answer comes from one person or twelve. The full checklist is in <a href="/blog/how-to-choose-seo-specialist-bangladesh">how to choose an SEO specialist in Bangladesh</a>.</p>
+<p>Choose the structure that matches the problem. Multi-channel and multi-location, an agency probably fits. Local service business that needs the phone to ring, a specialist usually goes deeper for less. If that is you, read <a href="/about">how I work</a>, see <a href="/local-seo-service">what my Local SEO service covers</a>, or <a href="/book-strategy-call">book a strategy call</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is a freelance SEO specialist cheaper than an agency in Bangladesh?</h3>
+<p>Often, but not always. An independent specialist has lower overheads, yet an experienced one may charge more per hour than an agency junior. Compare what is delivered each month, and who delivers it, rather than the headline rate.</p>
+<h3>When should a business choose an SEO agency over a specialist?</h3>
+<p>Choose an agency when you need several channels at once (SEO, Google Ads, social media, design), run many locations, need formal reporting for an internal team, or cannot risk a pause when one person is ill or on leave.</p>
+<h3>When is an independent SEO specialist the better choice?</h3>
+<p>When you are a local service business that needs calls from Google Maps and search, want to speak directly to the person doing the work, and value deep experience in one discipline over a broad team. Most single-location and small multi-area businesses fit this.</p>
+<h3>What should I ask both a specialist and an agency?</h3>
+<p>Who will actually work on my account and how many others they handle, what gets measured, what happens in month one, what happens if I stop after 90 days, who owns the accounts, and can you show a result with the source visible.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[This comparison is usually written by one side to attack the other. I run as an independent specialist, so read this knowing that, and note where I say an agency is the better choice.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-06 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-06 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[seo-specialist-vs-agency-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="seo-tips"><![CDATA[SEO Tips]]></category>
+    <category domain="post_tag" nicename="seo-specialist"><![CDATA[SEO Specialist]]></category>
+    <category domain="post_tag" nicename="agency"><![CDATA[Agency]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="hiring"><![CDATA[Hiring]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[SEO Specialist vs SEO Agency in Bangladesh]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Independent SEO specialist or agency in Bangladesh? An honest comparison of cost, focus and continuity, including where an agency is the better choice.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>What Does an SEO Specialist Actually Do All Day?</title>
+    <link>https://ratulroy.com/blog/what-does-seo-specialist-do</link>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/what-does-seo-specialist-do</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>An SEO specialist improves how often a business appears in Google search and Google Maps for the searches that bring customers. The work runs in a cycle: audit the website and Google Business Profile, fix technical problems, build relevant pages, strengthen reviews and citations, then measure calls and enquiries. For local businesses, the profile and Map Pack come first.</p>
+<p>Business owners rarely get a straight answer about what SEO work consists of. Partly because it varies, and partly because vagueness protects margins. This is the honest version: what the work is, roughly in the order it happens. It is written from the Local SEO side, because that is what I do; if the term is new to you, start with <a href="/blog/what-is-local-seo-bangladesh">what Local SEO is</a>.</p>
+<h2 id="weeks-one-and-two-the-diagnosis">Weeks one and two: the diagnosis</h2>
+<p>Nothing gets fixed before the diagnosis. That means auditing the Google Business Profile field by field, checking the website for technical faults (crawling, indexing, mobile speed, Core Web Vitals), mapping which keywords you already rank for in Google Search Console, and running a geo-grid to see your visibility across the whole service area rather than from one address.</p>
+<p>Keyword research happens here too: what customers actually type, including “near me”, “in [area]”, “cost” and “emergency” variations, and in Bangladesh the Bangla and Banglish versions.</p>
+<p>Most audits surface the same handful of problems: wrong primary category, incomplete profile fields, inconsistent business details across the web, and a website with no pages targeting the services people actually search for.</p>
+<h2 id="the-google-business-profile-work">The Google Business Profile work</h2>
+<p>For a local business this is the part with the most impact, and the part most often left half-finished. Categories, services with written descriptions, products, attributes, opening hours, holiday hours, photos, posts and service areas.</p>
+<p>It is unglamorous and it moves rankings. The full field-by-field list is in the <a href="/blog/google-business-profile-optimization-checklist">GBP optimization checklist</a>.</p>
+<ul>
+<li>Primary category correct, additional categories genuine</li>
+<li>Every service listed with a description in customer language</li>
+<li>Real photos of the business, not stock</li>
+<li>Hours and special hours accurate, suggested edits checked monthly</li>
+</ul>
+<h2 id="the-website-work">The website work</h2>
+<p>Maps rankings are not decided by the profile alone. Google reads the linked website to judge relevance and trust, so a one-page site gives it very little to work with.</p>
+<p>That means service pages that go into genuine depth, area pages where you truly operate, title tags and H1s that say what each page is about, internal links that connect them, LocalBusiness schema stating the business facts in machine-readable form, and fixing whatever technical faults the audit found. That last part is covered in detail on my <a href="/technical-seo">technical SEO service page</a>.</p>
+<h2 id="off-site-citations-reviews-mentions">Off-site: citations, reviews, mentions</h2>
+<p>Your business details need to agree across the directories Google trusts. Inconsistency there reduces its confidence in your listing, and confidence feeds prominence. The audit method is in my <a href="/blog/local-citations-nap-consistency-guide">citations and NAP consistency guide</a>.</p>
+<p>Reviews are the other half. Not buying them, which is both against policy and obvious, but building a repeatable habit of asking. Steady beats sudden. Local links and mentions (suppliers, associations, local news) round it out.</p>
+<h2 id="ongoing-measure-adjust-repeat">Ongoing: measure, adjust, repeat</h2>
+<p>After the foundations, the work becomes a loop. Check the geo-grid for weak zones, look at which searches are surfacing the profile, see which pages produce calls, and put effort where the data points. That loop is how one home service client reached <a href="/case-studies/map-pack-service-areas">+38% Map Pack visibility across its service areas</a>.</p>
+<p>The reporting should be readable in two minutes and tie rankings to calls, direction requests and form leads from GBP Performance and GA4. If it takes an analyst to interpret, it is not reporting; it is decoration.</p>
+<h2 id="what-a-specialist-should-not-do">What a specialist should not do</h2>
+<p>Buying links. Buying reviews. Spinning fifty near-identical location pages with the town name swapped. Stuffing keywords into the business name. Promising a number one position. Any of these will produce a short-term chart and a long-term problem.</p>
+<p>If someone offers guaranteed rankings, they either misunderstand how Google ranks results or are counting on you not checking. Google says plainly that nobody can pay for a better local ranking. My <a href="/blog/how-to-choose-seo-specialist-bangladesh">guide to choosing an SEO specialist</a> lists the other red flags.</p>
+<p>None of this is secret. It is just laborious, and doing it consistently is what separates results from activity. Whether one person or a team should do it is covered in <a href="/blog/seo-specialist-vs-agency-bangladesh">specialist vs agency</a>. To see how I package the work, look at my <a href="/local-seo-service">Local SEO service</a> or <a href="/book-strategy-call">book a strategy call</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is the main job of an SEO specialist?</h3>
+<p>To get a business found by the people searching for what it sells, and turn that into enquiries. Day to day that means auditing the site and Google Business Profile, researching keywords, fixing technical problems, improving content, building trust signals and reporting on calls, leads and traffic.</p>
+<h3>What is the difference between an SEO specialist and a Local SEO specialist?</h3>
+<p>A general SEO specialist focuses on organic rankings for a website, often nationally. A Local SEO specialist also works on the Google Business Profile, Map Pack rankings, service areas, reviews and citations, because local results depend on distance and prominence as well as the website.</p>
+<h3>What tools does an SEO specialist use?</h3>
+<p>Google Search Console, Google Analytics 4 and the Google Business Profile dashboard are the core free tools. Most specialists add a crawler for technical audits, a keyword research tool and, for local work, a geo-grid rank tracker. Tools support the work; they do not replace judgement.</p>
+<h3>How many hours does SEO take each month?</h3>
+<p>It depends on competition and scope. The first one or two months are heaviest because of auditing and fixing foundations. After that the work becomes a steady loop of content, profile updates, review follow-up and measurement. Ask any provider what specific tasks month one includes.</p>
+<h3>Can I do SEO myself instead of hiring a specialist?</h3>
+<p>Yes, for the basics. Completing your Google Business Profile, asking for reviews and keeping NAP consistent need time more than expertise. Technical fixes, competitive keyword strategy and diagnosing ranking drops are where a specialist usually saves more time and money than they cost.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Business owners rarely get a straight answer about what SEO work consists of. This is the honest version: what the work is, roughly in the order it happens.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-06 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-06 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[what-does-seo-specialist-do]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="seo-tips"><![CDATA[SEO Tips]]></category>
+    <category domain="post_tag" nicename="seo-specialist"><![CDATA[SEO Specialist]]></category>
+    <category domain="post_tag" nicename="process"><![CDATA[Process]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[What Does an SEO Specialist Actually Do?]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[The real work of an SEO specialist, step by step: audits, keyword research, Google Business Profile, technical fixes, content, citations, reviews and reporting.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>What Is Local SEO? A Practical Guide for Bangladesh Businesses</title>
+    <link>https://ratulroy.com/blog/what-is-local-seo-bangladesh</link>
+    <pubDate>Sat, 12 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/what-is-local-seo-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO (local search engine optimization) is the work of making your business appear, and look like the right choice, when someone nearby searches Google or Google Maps for what you sell. In Bangladesh that means a verified Google Business Profile, an accurate address and map pin, genuine reviews, consistent listings and a website that backs them up.</p>
+<p>Local SEO gets described in so much jargon that many business owners here assume it is either very technical or a kind of advertising. It is neither. This guide explains what Local SEO actually is, what it is made of, what it is not, and which businesses benefit most, with examples from the way people here really search.</p>
+<h2 id="being-found-and-being-chosen">Being found and being chosen</h2>
+<p>The definition above has two halves and both matter. Appearing is about ranking: being one of the businesses Google shows. Looking like the right choice is about what the searcher sees when you do appear: your reviews, photos, hours, and whether calling you is one tap away. Ranking without the second half produces views but not customers.</p>
+<h2 id="what-a-local-search-result-looks-like">What a local search result looks like</h2>
+<p>Search ‘dentist near me’ or ‘AC servicing Mirpur’ on your phone and you will usually see three kinds of result. At the top there may be ads, marked as sponsored. Below them sits a map with three businesses listed underneath, known as the local pack or map pack. Below that come the ordinary website results. Tapping ‘more places’ opens the full list on Google Maps, called the local finder. On many searches an AI Overview now sits above all of it, summarising options drawn from the same profiles and reviews.</p>
+<p>Local SEO targets the map pack and the local finder first, because that is where people call, ask for directions and compare reviews. It also targets the ordinary results below, where your website competes.</p>
+<ul>
+<li><strong>Ads:</strong> paid placement, gone the moment the budget stops</li>
+<li><strong>Map pack:</strong> the three businesses under the map, earned through Local SEO</li>
+<li><strong>Organic results:</strong> website listings, earned through website SEO</li>
+<li><strong>Google Maps app:</strong> the same local rankings, searched directly inside Maps</li>
+</ul>
+<h2 id="the-parts-that-make-up-local-seo">The parts that make up Local SEO</h2>
+<p>Local SEO is a collection of related jobs rather than one task. For a typical business in Bangladesh they are:</p>
+<ul>
+<li><strong>Google Business Profile:</strong> the listing itself (formerly Google My Business), with categories, services, attributes, hours, photos and posts</li>
+<li><strong>Location accuracy:</strong> a correct address, map pin and service area, written the same way everywhere</li>
+<li><strong>Reviews:</strong> a steady flow of genuine customer reviews, with replies</li>
+<li><strong>Website:</strong> pages that confirm your services and location, LocalBusiness schema markup, and fast loading on a phone</li>
+<li><strong>Citations:</strong> consistent listings on Facebook, Bing Places and relevant directories</li>
+<li><strong>Local prominence:</strong> mentions and links from local news, associations and partners</li>
+<li><strong>Measurement:</strong> tracking calls, direction requests and visibility across your area</li>
+</ul>
+<p>The <a href="/blog/local-seo-bangladesh-guide">complete Local SEO in Bangladesh guide</a>, part 1 of this series, goes through each of these in order. If you want a single field-by-field list for the profile, use the <a href="/blog/google-business-profile-optimization-checklist">Google Business Profile optimization checklist</a>.</p>
+<h2 id="what-local-seo-is-not">What Local SEO is not</h2>
+<ul>
+<li>It is not social media marketing. A busy Facebook page helps your business, but it does not rank you on Google Maps.</li>
+<li>It is not advertising. You do not pay Google per click, and results do not stop when a budget runs out.</li>
+<li>It is not a one-time listing. Profiles, reviews and competitors change constantly.</li>
+<li>It is not a trick. Fake reviews, keyword-stuffed business names and fake addresses get profiles suspended.</li>
+<li>It is not the same as ranking a website nationally. The competition is limited to your area.</li>
+</ul>
+<p>The difference from general website SEO is explained fully in <a href="/blog/local-seo-vs-traditional-seo">Local SEO vs Traditional SEO</a>.</p>
+<h2 id="which-businesses-need-it-most">Which businesses need it most</h2>
+<p>Any business that serves customers in a particular place benefits. It matters most where people search with urgency, or compare options nearby before choosing:</p>
+<ul>
+<li>Clinics, diagnostic centres, <a href="/industries/dental-seo">dentists</a> and pharmacies</li>
+<li>Restaurants, cafes, bakeries and sweet shops</li>
+<li>Salons, parlours, gyms and spas</li>
+<li>Coaching centres, language schools and training institutes</li>
+<li>Repair and home services: <a href="/industries/hvac-seo">AC</a>, <a href="/industries/local-seo-for-electricians">electrical</a>, <a href="/industries/plumbing-seo">plumbing</a>, pest control, <a href="/industries/auto-repair-seo">car repair</a>, mobile and laptop repair</li>
+<li>Showrooms: furniture, electronics, motorcycles, tiles and sanitary ware</li>
+<li>Hotels, resorts and community centres</li>
+<li>Law firms, accountants, travel agencies and real estate offices</li>
+</ul>
+<h2 id="businesses-without-a-shopfront">Businesses without a shopfront</h2>
+<p>Many Bangladeshi businesses serve customers at home: technicians, cleaners, tutors, caterers, event decorators. Google supports this. You set the profile up as a service-area business, hide your address from the public, and list the areas you cover (up to 20).</p>
+<p>You still compete on relevance and prominence, and your real base still influences where you rank strongest, so be realistic about how far from it you can compete. A technician based in Mohammadpur will find it easier to rank there than in Uttara, however the service area is set.</p>
+<h2 id="an-example-of-how-it-plays-out">An example of how it plays out</h2>
+<p>Take a hypothetical dental clinic in Dhanmondi. Someone two roads away searches ‘dentist near me’ at nine in the evening. Google looks for dental businesses that are relevant (the right category, services and reviews mentioning treatment), close to that phone’s location, and prominent (well reviewed and widely referenced). It also considers whether the clinic is open right now.</p>
+<p>If the clinic’s profile lists ‘Medical clinic’ instead of ‘Dentist’, shows no evening hours, and has its map pin on the wrong street, it may not appear at all, even though it is the nearest dentist. Fix those three things and it becomes a real candidate. That, in miniature, is Local SEO.</p>
+<h2 id="how-to-tell-whether-it-is-working">How to tell whether it is working</h2>
+<p>Your Google Business Profile has a performance report that shows how many people found your profile, what they searched, and what they did next. The numbers that matter most are the actions: calls, direction requests and website clicks. Compare them month on month.</p>
+<p>Rankings are useful as a leading indicator, but checking one keyword from your own shop tells you very little, because results change with the searcher’s location. A geo-grid scan checks your position across a grid of points covering your service area and gives a far more honest picture. The <a href="/case-studies/map-pack-service-areas">service-area visibility case study</a> shows what that looks like in practice: 5x more areas in the Top 3 and +38% Map Pack visibility.</p>
+<h2 id="where-to-start-this-week">Where to start this week</h2>
+<ul>
+<li>Search for your business on Google Maps and check that the name, pin, hours and phone number are right</li>
+<li>Look for duplicate listings of your business and note them</li>
+<li>Compare your primary category with the top three competitors in your area</li>
+<li>Add ten real photos of your premises, team or work</li>
+<li>Send your review link to five recent customers</li>
+</ul>
+<p>If your business does not appear at all, <a href="/blog/why-my-business-not-showing-google-maps">why your business is not showing on Google Maps</a> covers the usual causes.</p>
+<blockquote>
+<p>Local SEO is the discipline of being findable and choosable in your own area. For a business in Bangladesh it starts with an accurate, complete Google Business Profile and grows through reviews, a supporting website and consistency across the web. Next in the series: <a href="/blog/local-seo-helps-businesses-rank-google-maps">How Local SEO Works: Rank Higher on Google Maps</a>. Or see <a href="/local-seo-service">how the Local SEO service works</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>What is the difference between Local SEO and Google Maps SEO?</h3>
+<p>They are mostly the same thing. Google Maps SEO usually refers to ranking in the map pack and on Maps, which is the core of Local SEO. Local SEO also includes the website work that helps you rank in ordinary local results.</p>
+<h3>Is Local SEO only for big cities like Dhaka?</h3>
+<p>No. It often works faster in smaller cities and towns, where fewer businesses have optimised profiles. The same principles of relevance, distance and prominence apply in Khulna, Rajshahi, Sylhet, Barishal or a district town, and the competition there is usually lighter than in Gulshan or Dhanmondi.</p>
+<h3>Do I need a website for Local SEO?</h3>
+<p>You can appear on Google Maps without one, but a website strengthens your profile considerably. It confirms your services and location to Google, carries your LocalBusiness schema, and gives customers somewhere to check you before they call.</p>
+<h3>Can I do Local SEO myself?</h3>
+<p>The basics, yes: completing your profile, fixing your details and asking for reviews. The harder parts are diagnosing why you are not ranking, cleaning up duplicates and citations, and sustaining the work every month without letting it slide.</p>
+<h3>Is Local SEO the same as Google My Business?</h3>
+<p>No. Google My Business is the old name for Google Business Profile, the free listing that appears on Maps. Optimising that profile is the biggest single part of Local SEO, but Local SEO also covers reviews, citations, your website, schema markup and how visibility is measured across your area.</p>
+<h3>Does Local SEO work for 'near me' searches?</h3>
+<p>Yes, that is exactly what it targets. When someone types 'dentist near me' or 'AC repair near me', Google uses the phone's location and shows nearby businesses it finds relevant and trustworthy. You do not need 'near me' written anywhere; you need an accurate profile and location.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Many business owners in Bangladesh assume Local SEO is either very technical or a kind of advertising. It is neither. This guide explains what it actually is, what it is made of, and which businesses benefit most.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-12 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-12 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[what-is-local-seo-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="beginner-guide"><![CDATA[Beginner Guide]]></category>
+    <category domain="post_tag" nicename="series-2"><![CDATA[series-2]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[What Is Local SEO? A Guide for Bangladesh Businesses]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[What Local SEO is, what it is made of, what it is not, and which businesses in Bangladesh benefit most, explained in plain language with real search examples.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Why Local SEO Is Important for Businesses in Bangladesh</title>
+    <link>https://ratulroy.com/blog/why-local-seo-important-bangladesh</link>
+    <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/why-local-seo-important-bangladesh</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>Local SEO is important for businesses in Bangladesh because customers already search Google and Google Maps for nearby services, mostly on their phones, and call one of the first three businesses they see. A well-run Google Business Profile captures that ready-to-buy demand without paying per click, and the results keep building over time.</p>
+<p>Every day, people in your area search Google for exactly what you sell. Some of them find you. Most of them, unless you have done something about it, find the three businesses Google shows first. This guide, part 4 of the <a href="/blog/local-seo-bangladesh-guide">Local SEO in Bangladesh series</a>, explains why Local SEO has become one of the most important marketing investments for businesses here, and, just as usefully, when it is not the priority.</p>
+<h2 id="customers-are-already-searching">Customers are already searching</h2>
+<p>Local SEO does not create demand. It captures demand that already exists. Someone searching ‘AC repair Mirpur’ in May, ‘pharmacy open now’ late at night, or ‘best biryani near me’ at lunchtime, has already decided to buy. The same intent shows up in Bangla and romanised Bangla searches too. The only open question is from whom. The businesses in the map pack get the first look, the first call and usually the sale.</p>
+<p>That makes Local SEO fundamentally different from most marketing, which interrupts people who were not looking. Here you are answering people who asked. Part 3, <a href="/blog/local-seo-helps-businesses-rank-google-maps">How Local SEO Works: Rank Higher on Google Maps</a>, explains how Google picks the three businesses that get that first look.</p>
+<h2 id="local-searches-carry-high-intent">Local searches carry high intent</h2>
+<p>A search with a place in it, or typed on a phone for something nearby, usually comes from someone close to a decision. They are not researching a topic for later. They want a clinic that is open, a technician who can come today, a restaurant for tonight. That is why a small number of local searches can be worth more to a business than a large volume of general website traffic.</p>
+<h2 id="google-maps-is-the-default-directory">Google Maps is the default directory</h2>
+<p>For a generation of smartphone users in Bangladesh, Google Maps is where you check where something is, whether it is open, and what other people thought of it. The printed directories and signboard-only discovery that once worked have faded. If your business is not on Maps, or looks neglected there, you are invisible at exactly the moment customers are choosing.</p>
+<h2 id="facebook-alone-is-not-enough">Facebook alone is not enough</h2>
+<p>Facebook is a strong channel in Bangladesh and many businesses rely on it. But a Facebook page mainly reaches people who already follow you, see a shared post, or are shown an ad. Someone searching Google for a service near them does not see your Facebook activity at all. Local SEO reaches the customers who have never heard of you, at the moment they are ready.</p>
+<p>The two work well together. Customers who find you on Maps often check your Facebook page before calling, so keeping both accurate and consistent pays twice.</p>
+<h2 id="results-compound-instead-of-stopping">Results compound instead of stopping</h2>
+<p>Paid ads stop the moment you stop paying. The work that improves your Local SEO keeps working: a well-built profile, a body of genuine reviews, a website Google trusts and consistent listings across the web all accumulate. Each month builds on the last. That is why Local SEO is often described as an asset rather than an expense. The comparison is laid out in full in <a href="/blog/local-seo-vs-google-ads-bangladesh">Local SEO vs Google Ads</a>.</p>
+<h2 id="trust-is-decided-before-the-first-call">Trust is decided before the first call</h2>
+<p>Customers in Bangladesh are cautious with new providers, and reasonably so. Before they call, they check reviews, look at photos and see how the business responds to complaints. A profile with recent reviews, a solid star rating, real photos of the premises and thoughtful owner replies does much of the selling before any conversation happens. Local SEO builds exactly those signals.</p>
+<h2 id="uneven-competition-is-an-opportunity">Uneven competition is an opportunity</h2>
+<p>In many categories and areas, especially outside central Dhaka, it is common to find competing profiles with the wrong category, missing hours, few photos and unanswered reviews. Doing the fundamentals properly can be enough to move ahead of competitors who have been in business far longer.</p>
+<p>In crowded categories in Dhaka the bar is higher and the work takes longer. Even there, the businesses that invest consistently tend to pull ahead of those that do not.</p>
+<h2 id="it-also-feeds-ai-search">It also feeds AI search</h2>
+<p>Google’s AI Overviews and assistants such as ChatGPT and Gemini now answer questions like ‘which clinic in Gulshan is good for children’. They rely on the same sources Local SEO strengthens: Business Profiles, reviews, websites and consistent mentions. Investing in Local SEO now also positions you for how people will search next. See <a href="/blog/ai-search-visibility-local-business">AI search visibility for local businesses</a>.</p>
+<h2 id="the-business-case">The business case</h2>
+<p>The clearest way to judge Local SEO is against the value of a single customer. If one new patient, client or booking is worth a meaningful amount to you over time, then even a handful of extra calls a month covers the cost of the work. That is the calculation to make, rather than comparing providers’ prices in isolation.</p>
+<p>Results vary widely with category, area and starting point. For a real example of what the change can look like, the <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a> shows a profile’s call volume taken from the Business Profile performance report.</p>
+<h2 id="when-it-is-not-the-priority">When it is not the priority</h2>
+<ul>
+<li>You sell only online, nationwide, with no local presence or service area</li>
+<li>Nobody searches for what you offer yet, because the product or service is new to the market</li>
+<li>Your business cannot answer the phone or take on more customers right now</li>
+<li>Your operations have problems that reviews will expose; fix those first</li>
+</ul>
+<p>In those cases other channels may do more, and it is better to say so than to sell work that will not pay back.</p>
+<blockquote>
+<p>Local SEO matters in Bangladesh because it puts you in front of people who are already looking, builds trust before the first conversation, and keeps paying back long after the work is done. For most businesses serving a local area, it is one of the highest-return marketing investments available. Next in the series: <a href="/blog/local-seo-vs-traditional-seo">Local SEO vs Traditional SEO</a>. Or see <a href="/local-seo-service">what the Local SEO service includes</a>.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>Is Local SEO worth it for a small business in Bangladesh?</h3>
+<p>For most small businesses that serve a local area, yes. The core tool, a Google Business Profile, is free, and the work compounds over time. It is worth it when the value of a few extra customers each month exceeds the cost of the work.</p>
+<h3>Is Facebook enough, or do I need Google as well?</h3>
+<p>Facebook reaches your followers and people shown your posts or ads. Google reaches people actively searching for a service near them, including those who have never heard of you. Most local businesses benefit from both.</p>
+<h3>Which businesses benefit most from Local SEO in Bangladesh?</h3>
+<p>Businesses where customers search with urgency or compare options nearby benefit most: clinics, dentists, restaurants, salons, coaching centres, AC and electrical repair services, showrooms, hotels and professional services such as lawyers and accountants. If people search for you with an area name or 'near me', Local SEO is worth doing.</p>
+<h3>Can Local SEO help if my business is in a small town?</h3>
+<p>Yes, often more than in big cities. Competition in district towns and smaller cities such as Bogura, Jashore or Rangpur is usually lighter, and many rival profiles have the wrong category or no reviews, so a properly optimised profile can stand out quickly.</p>
+<h3>Do I need Local SEO if customers already know my business?</h3>
+<p>Yes, if you want new customers. People who already know you search your name, but new customers search the service: 'diagnostic centre near me' or 'AC servicing Uttara'. Local SEO is what puts you in those category searches, where you compete with every nearby alternative.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Every day, people in your area search Google for exactly what you sell. This guide explains why Local SEO has become one of the most important marketing investments for businesses in Bangladesh, and when it is not the priority.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-14 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-14 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[why-local-seo-important-bangladesh]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="business-growth"><![CDATA[Business Growth]]></category>
+    <category domain="post_tag" nicename="series-4"><![CDATA[series-4]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Why Local SEO Matters for Businesses in Bangladesh]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Why Local SEO matters in Bangladesh: high-intent Google Maps searches, results that compound, trust built by reviews, and when it is not the priority.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Why Your Business Is Not Showing Up on Google Maps</title>
+    <link>https://ratulroy.com/blog/why-my-business-not-showing-google-maps</link>
+    <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/why-my-business-not-showing-google-maps</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>If your business is not showing on Google Maps, the cause is usually one of a short list: the profile is unverified or suspended, the primary category is wrong, a duplicate listing is splitting signals, your details are inconsistent across the web, the website is too thin, or you are checking from the wrong place. Diagnose which applies first.</p>
+<p>Not showing up on Google Maps feels like one problem, but it is at least nine different ones with different fixes. Diagnosing the right cause first saves months. Here is how I work through it, starting with the quickest checks.</p>
+<h2 id="are-you-checking-from-the-wrong-place">Are you checking from the wrong place?</h2>
+<p>Map Pack results change street by street. Searching from your office and seeing yourself ranked first tells you almost nothing, because distance to the searcher is a ranking factor you cannot control. The reverse is also true: searching from home and not seeing yourself does not mean you are invisible everywhere.</p>
+<p>Use a geo-grid tool that samples results across your whole service area instead of a single point. Almost every business that believes it ranks well is looking at one favourable pin. That grid view is also how we tracked <a href="/case-studies/map-pack-service-areas">5x more service areas reaching the Top 3</a> on one home service account.</p>
+<h2 id="the-profile-is-unverified-or-suspended">The profile is unverified or suspended</h2>
+<p>Unverified profiles do not rank. Verification can stall if Google asks for live video verification and it is never completed. Suspended profiles vanish entirely, often without an obvious notification. Check the status in your dashboard before assuming a ranking problem.</p>
+<p>Common suspension triggers: a virtual office address, a keyword-stuffed business name, or a service-area business displaying a street address it does not operate from. Reinstatement means fixing the cause first, then submitting a request with proof such as a trade licence, signage photos and utility bills.</p>
+<h2 id="your-primary-category-is-wrong">Your primary category is wrong</h2>
+<p>Covered in the <a href="/blog/google-business-profile-optimization-checklist">GBP optimization checklist</a>, but worth repeating because it is the most common silent killer. A wrong primary category means you are invisible for the searches that matter, no matter how strong everything else is. A dental practice set to “Medical clinic” will struggle to appear for “dentist near me”.</p>
+<h2 id="inconsistent-nap-across-the-web">Inconsistent NAP across the web</h2>
+<p>Name, address and phone number appearing differently across directories weakens Google’s confidence that those listings describe the same business. That uncertainty costs you prominence.</p>
+<p>Audit your citations, pick one canonical format, and fix the largest directories first. The process is laid out in my <a href="/blog/local-citations-nap-consistency-guide">local citations and NAP consistency guide</a>.</p>
+<h2 id="the-website-underneath-is-too-weak">The website underneath is too weak</h2>
+<p>Maps ranking is not decided by the profile alone. Google reads the linked website for topical relevance and trust. A one-page site with no service or location pages gives it very little to work with. Slow mobile pages, blocked crawling or pages missing from Google’s index make it worse.</p>
+<p>This is where Maps work and website SEO stop being separate projects. If the site has indexing or speed problems, <a href="/technical-seo">technical SEO fixes</a> come before content.</p>
+<h2 id="you-are-new-and-prominence-takes-time">You are new, and prominence takes time</h2>
+<p>Prominence builds from reviews, citations, links and engagement. A profile created last month competing against one that has been active for eight years is not losing on optimization; it is losing on history. That gap closes, but not in a fortnight. For realistic expectations, see <a href="/blog/how-long-local-seo-takes-bangladesh">how long Local SEO takes to work</a>.</p>
+<h2 id="duplicate-listings-are-splitting-signals">Duplicate listings are splitting signals</h2>
+<p>Businesses that have moved, rebranded, or been listed by a previous agency often have two or three profiles competing with each other. Google splits reviews and signals between them, and sometimes ranks the wrong one.</p>
+<p>Search your business name, your old name and your phone number in Maps directly. Claim or merge anything you find. This alone has recovered rankings for businesses that assumed they had a content problem.</p>
+<h2 id="google-is-filtering-you-out">Google is filtering you out</h2>
+<p>When several similar businesses share an address or building (common in Dhaka plazas and medical centres), Google often shows one and filters the rest for the same search. Zoom into the map or open the Local Finder: if you appear there but not in the 3-pack, filtering is a likely cause. Stronger relevance and prominence for your own listing is the fix, not a fake suite number.</p>
+<h2 id="your-service-area-is-drawn-wrong">Your service area is drawn wrong</h2>
+<p>Service-area businesses list up to 20 areas. Too wide and you spread relevance across places you will never realistically serve. Too narrow and you disappear from areas you want. Remember that the service area does not override distance: Google still measures from your verified location.</p>
+<p>Define it honestly around where you actually take jobs. Twenty genuine neighbourhoods beats a hundred aspirational ones.</p>
+<h2 id="a-competitor-is-filing-edits-against-you">A competitor is filing edits against you</h2>
+<p>Anyone can suggest an edit to your profile, and Google sometimes applies it without asking. Hours changed, category swapped, marked permanently closed. It happens more than most owners realise, and occasionally it is deliberate.</p>
+<p>Check your profile monthly. If something changed that you did not change, revert it and report it.</p>
+<p>Work through these in order rather than fixing everything at once, or you will never know what moved. Once the cause is fixed, <a href="/blog/local-seo-helps-businesses-rank-google-maps">how Local SEO lifts Maps rankings</a> explains what to build next. If you would rather have it diagnosed properly, <a href="/#free-audit">get a free visibility audit</a>, see my <a href="/google-business-profile-optimization">Google Business Profile optimization service</a>, or look at <a href="/local-seo-service">how the full Local SEO system works</a>.</p>
+<h2>Frequently asked questions</h2>
+<h3>Why can I find my business by name but not by service on Google Maps?</h3>
+<p>Because a name search only proves the listing exists. Showing for a service search like "plumber near me" depends on relevance, distance and prominence. A wrong primary category, a thin website or few reviews usually explains the gap, and so does checking from only one location.</p>
+<h3>How long does it take for a new Google Business Profile to show on Maps?</h3>
+<p>A verified profile usually appears for its own name within days. Ranking for competitive service searches takes longer, often 3 to 6 months, because prominence (reviews, links, mentions) has to build up. Verification problems or duplicate listings can delay it further.</p>
+<h3>How do I know if my Google Business Profile is suspended?</h3>
+<p>Sign in to the profile and check its status. A suspended profile shows a notice and either disappears from Maps or can no longer be edited. Fix the cause (often a keyword-stuffed name or an address you do not serve customers from), then submit a reinstatement request with evidence.</p>
+<h3>Can a competitor make my business disappear from Google Maps?</h3>
+<p>They can try. Anyone can suggest edits, such as marking you closed or changing your category, and Google sometimes applies them. Fake reviews and spam reports also happen. Check your profile monthly, revert unwanted changes and report clear abuse through Google's support channels.</p>
+<h3>Why did my business suddenly drop off Google Maps?</h3>
+<p>The usual causes are a suspension, an accepted suggested edit, a new duplicate listing, a change of address or category, or Google filtering similar listings in the same building. Check the profile status and recent edits first, then search your phone number for duplicates.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Not showing up on Google Maps feels like one problem, but it is at least nine different ones with different fixes. Diagnosing the right cause first saves months.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-06-18 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-06-18 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[why-my-business-not-showing-google-maps]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="google-maps-ranking"><![CDATA[Google Maps Ranking]]></category>
+    <category domain="post_tag" nicename="google-maps"><![CDATA[Google Maps]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="troubleshooting"><![CDATA[Troubleshooting]]></category>
+    <category domain="post_tag" nicename="google-business-profile"><![CDATA[Google Business Profile]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Why Your Business Is Not Showing on Google Maps]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Not showing on Google Maps? The common causes, from verification and suspension to wrong categories and duplicates, how to diagnose each, and what to fix first.]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title>Starting at 16: What Being the Youngest SEO Expert in Bangladesh Taught Me</title>
+    <link>https://ratulroy.com/blog/youngest-seo-expert-bangladesh-story</link>
+    <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <guid isPermaLink="false">https://ratulroy.com/blog/youngest-seo-expert-bangladesh-story</guid>
+    <description></description>
+    <content:encoded><![CDATA[<p>I’m Ratul Roy. I started working on SEO at sixteen, which is why people call me the youngest SEO expert in Bangladesh. Today I work as an independent Local SEO expert in Bangladesh, I founded DigiPolli, and I am a Fiverr Level 2 seller with a 4.9★ rating from 243 reviews.</p>
+<p>That age gets described as being the youngest SEO expert in Bangladesh, which is a label other people applied rather than one I chose. What matters more than the age is what starting that early actually changes about how you work.</p>
+<h2 id="no-formal-training-meant-no-inherited-assumptions">No formal training meant no inherited assumptions</h2>
+<p>I did not learn SEO from a course that was already out of date when it was recorded. I learned by changing something on a real site and watching what happened, which is slower and produces fewer confident opinions.</p>
+<p>That turns out to be an advantage in a field where much of the received wisdom is several algorithm updates behind. If you never learned the old rule, you do not have to unlearn it.</p>
+<h2 id="balancing-education-with-client-work">Balancing education with client work</h2>
+<p>I studied at Gov PC College and later ICT at Islamic University while taking freelance projects. That is a difficult combination and I would not pretend otherwise, but it forced a habit that stuck: only work on what demonstrably moves a number, because there is no spare time for anything else.</p>
+<p>Two years working as an SEO Strategist on competitive campaigns filled in what solo freelancing could not teach, mainly how larger accounts fail and how they are structured. If you are curious what that work looks like day to day, I wrote it up in <a href="/blog/what-does-seo-specialist-do">what an SEO specialist actually does</a>.</p>
+<h2 id="why-i-narrowed-to-local-seo">Why I narrowed to Local SEO</h2>
+<p>The early work covered everything: e-commerce, content sites, general organic growth. Some of that produced results I am still proud of, and you can see them on the <a href="/case-studies">case studies page</a>.</p>
+<p>But local work suited me better, because the feedback loop is short and honest. A business either gets more calls or it does not. There is no arguing with a phone that rings more than it did last month. The <a href="/case-studies/gbp-calls-growth">GBP calls growth case study</a> is the clearest example: 461 calls from one Google Business Profile between April and August 2024.</p>
+<p>That focus is now the whole of my <a href="/local-seo-service">Local SEO service</a>: Google Business Profile, Maps rankings, citations, reviews and the website pages that support them, for businesses in Bangladesh and abroad.</p>
+<h2 id="what-being-young-cost-and-what-it-did-not">What being young cost, and what it did not</h2>
+<p>It cost credibility in first conversations. People make assumptions, reasonably, about experience and age. The only answer is showing verifiable results rather than arguing about it.</p>
+<p>It did not cost quality of work, and I would push back on the idea that it might. Search does not know how old you are. It responds to whether the profile is complete, the site is sound, and the signals are consistent.</p>
+<h2 id="what-i-would-tell-a-business-owner">What I would tell a business owner</h2>
+<p>Do not hire on age in either direction. Hire on whether the person can show you a result with the source visible, explain their plan without jargon, and tell you something you did not want to hear.</p>
+<p>Those three hold regardless of who is sitting across from you. I set out the rest of the checks in <a href="/blog/how-to-choose-seo-specialist-bangladesh">how to choose an SEO specialist in Bangladesh</a>.</p>
+<blockquote>
+<p>The label matters less than the record. Read more about the <a href="/about">background</a>, or <a href="/book-strategy-call">book a call</a> and judge from the conversation.</p>
+</blockquote>
+<h2>Frequently asked questions</h2>
+<h3>Who is called the youngest SEO expert in Bangladesh?</h3>
+<p>The label is often applied to me, Ratul Roy, because I started working on SEO at sixteen. I did not choose it. Today I am an independent Local SEO expert in Bangladesh and the founder of DigiPolli.</p>
+<h3>Where is Ratul Roy based, and who does he work with?</h3>
+<p>I am a Local SEO expert in Bangladesh. I work directly with local businesses in Bangladesh and with service businesses worldwide, mostly on Google Business Profile, Google Maps rankings and the websites that support them.</p>
+<h3>Is Ratul Roy a verified Fiverr seller?</h3>
+<p>Yes. I am a Fiverr Level 2 seller with a 4.9★ rating from 243 reviews. Those reviews are public on the platform, which is one of the simplest ways to check a freelancer's record before hiring.</p>
+<h3>Does age matter when hiring an SEO specialist?</h3>
+<p>Not in either direction. Google does not know how old you are. Judge any specialist on whether they can show results with the source visible, explain their plan without jargon, and tell you something you did not want to hear.</p>
+<h3>What does Ratul Roy specialise in now?</h3>
+<p>Local SEO: Google Business Profile optimisation, Google Maps and map pack rankings, citations and NAP consistency, review systems, and the technical and on-page website work that supports them. Packages start from $299, with no lock-in contracts and white-hat methods only.</p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[I started working on SEO at sixteen. What matters more than the age is what starting that early actually changes about how you work.]]></excerpt:encoded>
+    <wp:post_date><![CDATA[2026-09-06 00:00:00]]></wp:post_date>
+    <wp:post_date_gmt><![CDATA[2026-09-06 00:00:00]]></wp:post_date_gmt>
+    <wp:post_name><![CDATA[youngest-seo-expert-bangladesh-story]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_type><![CDATA[post]]></wp:post_type>
+    <category domain="category" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="local-seo"><![CDATA[Local SEO]]></category>
+    <category domain="post_tag" nicename="bangladesh"><![CDATA[Bangladesh]]></category>
+    <category domain="post_tag" nicename="experience"><![CDATA[Experience]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_title]]></wp:meta_key><wp:meta_value><![CDATA[Youngest SEO Expert in Bangladesh: The Story]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_yoast_wpseo_metadesc]]></wp:meta_key><wp:meta_value><![CDATA[Starting SEO at sixteen in Bangladesh, what testing on real client work taught me, and why focusing entirely on Local SEO produced better results.]]></wp:meta_value></wp:postmeta>
+  </item>
+</channel>
+</rss>

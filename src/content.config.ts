@@ -1,6 +1,11 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { wpBlogLoader } from "./lib/wp-loader";
+
+// Set WP_URL (e.g. https://cms.ratulroy.com) to read the blog from headless WordPress.
+// Unset = the markdown files in src/content/blog, so the site keeps building without a CMS.
+const WP_URL = process.env.WP_URL;
 
 // ---------- Shared building blocks ----------
 const link = z.object({ label: z.string(), href: z.string(), style: z.enum(["dark", "ghost", "text"]).optional() });
@@ -112,7 +117,7 @@ export const collections = {
   industries: defineCollection({ loader: glob({ pattern: "**/*.yaml", base: "./src/content/industries" }), schema: page }),
   cases: defineCollection({ loader: glob({ pattern: "**/*.yaml", base: "./src/content/cases" }), schema: page }),
   blog: defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+    loader: WP_URL ? wpBlogLoader(WP_URL) : glob({ pattern: "**/*.md", base: "./src/content/blog" }),
     schema: z.object({
       title: z.string(),
       description: z.string(),
